@@ -1,0 +1,56 @@
+{
+  "generic": {
+    "app_name": "Toolbox",
+    "error": "Erreur"
+  },
+  "tools": {
+    "clock": {
+      "title": "Horloge"
+    },
+    "metronome": {
+      "title": "Métronome",
+      "bpm": "BPM",
+      "beats_per_measure": "Battements par mesure",
+      "start": "Démarrer",
+      "stop": "Arrêter"
+    },
+    "micspeak": {
+      "title": "MicSpeak"
+    },
+    "nslookup": {
+      "title": "NSLookup",
+      "enter_a_domain_name": "Entrez un nom de domaine",
+      "lookup": "Rechercher",
+      "error": {
+        "please_enter_a_domain_name": "Veuillez entrer un nom de domaine",
+        "no_address_associated_with_domain": "Aucune adresse IP n'est associée au nom d'hôte.\nVérifiez votre saisie et votre connexion internet puis réessayez."
+      }
+    },
+    "ping": {
+      "title": "Ping",
+      "ping": "Ping",
+      "enter_a_domain_name_or_ip": "Entrez un nom de domaine ou une adresse IP",
+      "reply_from_host_time_ttl": "Réponse de $host : temps=${time}ms TTL=$ttl",
+      "x_packets_transmitted_y": "$transmitted paquets transmis, $received paquets reçus",
+      "error": {
+        "please_enter_a_domain_name_or_ip": "Veuillez entrer un nom de domaine ou une adresse IP",
+        "request_timeout": "Délai d'attente de la demande dépassé",
+        "unkown_host": "Hôte inconnu",
+        "no_reply": "Pas de réponse",
+        "unkown_error": "Erreur inconnue"
+      }
+    }
+  },
+  "credits": {
+    "title": "Crédits",
+    "app_icon": "Icône de l'application par $author",
+    "app_license": "Application sous licence $license",
+    "tools_icons": "Icônes des outils par $author",
+    "contribute_on_github": "Contribuez sur GitHub",
+    "translations": {
+      "title": "Traductions",
+      "english": "Anglais par $author",
+      "french": "Français par $author"
+    }
+  }
+}

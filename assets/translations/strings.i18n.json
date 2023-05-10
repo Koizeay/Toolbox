@@ -1,0 +1,56 @@
+{
+  "generic": {
+    "app_name": "Toolbox",
+    "error": "Error"
+  },
+  "tools": {
+    "clock": {
+      "title": "Clock"
+    },
+    "metronome": {
+      "title": "Metronome",
+      "bpm": "BPM",
+      "beats_per_measure": "Beats per measure",
+      "start": "Start",
+      "stop": "Stop"
+    },
+    "micspeak": {
+      "title": "MicSpeak"
+    },
+    "nslookup": {
+      "title": "NSLookup",
+      "enter_a_domain_name": "Enter a domain name",
+      "lookup": "Lookup",
+      "error": {
+        "please_enter_a_domain_name": "Please enter a domain name",
+        "no_address_associated_with_domain": "There is no address associated with the host name.\nCheck your input and your internet connection then try again."
+      }
+    },
+    "ping": {
+      "title": "Ping",
+      "ping": "Ping",
+      "enter_a_domain_name_or_ip": "Enter a domain name or IP address",
+      "reply_from_host_time_ttl": "Reply from $host: time=${time}ms TTL=$ttl",
+      "x_packets_transmitted_y": "$transmitted packets transmitted, $received packets received",
+      "error": {
+        "please_enter_a_domain_name_or_ip": "Please enter a domain name or IP address",
+        "request_timeout": "Request timeout",
+        "unkown_host": "Unknown host",
+        "no_reply": "No reply",
+        "unkown_error": "Unknown error"
+      }
+    }
+  },
+  "credits": {
+    "title": "Credits",
+    "app_icon": "App icon by $author",
+    "app_license": "The app is licensed under the $license license",
+    "tools_icons": "Tools icons by $author",
+    "contribute_on_github": "Contribute on GitHub",
+    "translations": {
+      "title": "Translations",
+      "english": "English by $author",
+      "french": "French by $author"
+    }
+  }
+}
