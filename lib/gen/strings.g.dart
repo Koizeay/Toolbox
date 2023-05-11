@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 2
-/// Strings: 64 (32 per locale)
+/// Strings: 72 (36 per locale)
 ///
-/// Built on 2023-05-10 at 16:27 UTC
+/// Built on 2023-05-11 at 15:18 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -175,6 +175,7 @@ class _StringsToolsEn {
 	late final _StringsToolsMicspeakEn micspeak = _StringsToolsMicspeakEn._(_root);
 	late final _StringsToolsNslookupEn nslookup = _StringsToolsNslookupEn._(_root);
 	late final _StringsToolsPingEn ping = _StringsToolsPingEn._(_root);
+	late final _StringsToolsSoundmeterEn soundmeter = _StringsToolsSoundmeterEn._(_root);
 }
 
 // Path: credits
@@ -254,6 +255,18 @@ class _StringsToolsPingEn {
 	late final _StringsToolsPingErrorEn error = _StringsToolsPingErrorEn._(_root);
 }
 
+// Path: tools.soundmeter
+class _StringsToolsSoundmeterEn {
+	_StringsToolsSoundmeterEn._(this._root);
+
+	final _StringsEn _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'Sound meter';
+	String get decibels => 'dB';
+	late final _StringsToolsSoundmeterErrorEn error = _StringsToolsSoundmeterErrorEn._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsEn._(this._root);
@@ -289,6 +302,17 @@ class _StringsToolsPingErrorEn {
 	String get unkown_host => 'Unknown host';
 	String get no_reply => 'No reply';
 	String get unkown_error => 'Unknown error';
+}
+
+// Path: tools.soundmeter.error
+class _StringsToolsSoundmeterErrorEn {
+	_StringsToolsSoundmeterErrorEn._(this._root);
+
+	final _StringsEn _root; // ignore: unused_field
+
+	// Translations
+	String get impossible_to_start_the_sound_meter => 'Impossible to start the sound meter';
+	String get no_sound_detected => 'No sound detected, check that the application has access to the microphone in the settings of your device.';
 }
 
 // Path: <root>
@@ -344,6 +368,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsMicspeakFr micspeak = _StringsToolsMicspeakFr._(_root);
 	@override late final _StringsToolsNslookupFr nslookup = _StringsToolsNslookupFr._(_root);
 	@override late final _StringsToolsPingFr ping = _StringsToolsPingFr._(_root);
+	@override late final _StringsToolsSoundmeterFr soundmeter = _StringsToolsSoundmeterFr._(_root);
 }
 
 // Path: credits
@@ -423,6 +448,18 @@ class _StringsToolsPingFr implements _StringsToolsPingEn {
 	@override late final _StringsToolsPingErrorFr error = _StringsToolsPingErrorFr._(_root);
 }
 
+// Path: tools.soundmeter
+class _StringsToolsSoundmeterFr implements _StringsToolsSoundmeterEn {
+	_StringsToolsSoundmeterFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Sonomètre';
+	@override String get decibels => 'dB';
+	@override late final _StringsToolsSoundmeterErrorFr error = _StringsToolsSoundmeterErrorFr._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsFr implements _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsFr._(this._root);
@@ -460,6 +497,17 @@ class _StringsToolsPingErrorFr implements _StringsToolsPingErrorEn {
 	@override String get unkown_error => 'Erreur inconnue';
 }
 
+// Path: tools.soundmeter.error
+class _StringsToolsSoundmeterErrorFr implements _StringsToolsSoundmeterErrorEn {
+	_StringsToolsSoundmeterErrorFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get impossible_to_start_the_sound_meter => 'Impossible de démarrer le sonomètre';
+	@override String get no_sound_detected => 'Aucun son détecté, vérifiez que l\'application a accès au micro dans les paramètres de votre appareil.';
+}
+
 /// Flat map(s) containing all translations.
 /// Only for edge cases! For simple maps, use the map function of this library.
 
@@ -490,6 +538,10 @@ extension on _StringsEn {
 			case 'tools.ping.error.unkown_host': return 'Unknown host';
 			case 'tools.ping.error.no_reply': return 'No reply';
 			case 'tools.ping.error.unkown_error': return 'Unknown error';
+			case 'tools.soundmeter.title': return 'Sound meter';
+			case 'tools.soundmeter.decibels': return 'dB';
+			case 'tools.soundmeter.error.impossible_to_start_the_sound_meter': return 'Impossible to start the sound meter';
+			case 'tools.soundmeter.error.no_sound_detected': return 'No sound detected, check that the application has access to the microphone in the settings of your device.';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -530,6 +582,10 @@ extension on _StringsFr {
 			case 'tools.ping.error.unkown_host': return 'Hôte inconnu';
 			case 'tools.ping.error.no_reply': return 'Pas de réponse';
 			case 'tools.ping.error.unkown_error': return 'Erreur inconnue';
+			case 'tools.soundmeter.title': return 'Sonomètre';
+			case 'tools.soundmeter.decibels': return 'dB';
+			case 'tools.soundmeter.error.impossible_to_start_the_sound_meter': return 'Impossible de démarrer le sonomètre';
+			case 'tools.soundmeter.error.no_sound_detected': return 'Aucun son détecté, vérifiez que l\'application a accès au micro dans les paramètres de votre appareil.';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';

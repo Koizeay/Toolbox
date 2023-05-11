@@ -39,6 +39,14 @@
         "no_reply": "Pas de réponse",
         "unkown_error": "Erreur inconnue"
       }
+    },
+    "soundmeter": {
+      "title": "Sonomètre",
+      "decibels": "dB",
+      "error": {
+        "impossible_to_start_the_sound_meter": "Impossible de démarrer le sonomètre",
+        "no_sound_detected": "Aucun son détecté, vérifiez que l'application a accès au micro dans les paramètres de votre appareil."
+      }
     }
   },
   "credits": {

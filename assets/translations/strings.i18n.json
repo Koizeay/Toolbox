@@ -39,6 +39,14 @@
         "no_reply": "No reply",
         "unkown_error": "Unknown error"
       }
+    },
+    "soundmeter": {
+      "title": "Sound meter",
+      "decibels": "dB",
+      "error": {
+        "impossible_to_start_the_sound_meter": "Impossible to start the sound meter",
+        "no_sound_detected": "No sound detected, check that the application has access to the microphone in the settings of your device."
+      }
     }
   },
   "credits": {

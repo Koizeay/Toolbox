@@ -8,6 +8,7 @@ import 'package:toolbox/pages/metronome_page.dart';
 import 'package:toolbox/pages/micspeak_page.dart';
 import 'package:toolbox/pages/nslookup_page.dart';
 import 'package:toolbox/pages/ping_page.dart';
+import 'package:toolbox/pages/soundmeter_page.dart';
 import 'package:toolbox/widgets/tool_card.dart';
 import 'package:yaru/yaru.dart';
 
@@ -38,6 +39,8 @@ class _HomePage extends State<HomePage> {
           const NslookupPage()),
       Tool(
           t.tools.ping.title, "assets/images/tools/ping.png", const PingPage()),
+      Tool(t.tools.soundmeter.title, "assets/images/tools/soundmeter.png",
+          const SoundMeterPage())
     ];
   }
 
