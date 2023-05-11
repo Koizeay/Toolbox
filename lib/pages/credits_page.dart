@@ -19,7 +19,7 @@ class _CreditsPage extends State<CreditsPage> {
 
   Future<void> _launchUrl(String url) async {
     try {
-      if (!await launchUrl(Uri.parse(url))) {
+      if (!await launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication)) {
         throw Exception('Could not launch $url');
       }
     } catch (e) {
