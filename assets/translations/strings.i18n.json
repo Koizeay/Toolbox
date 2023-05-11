@@ -47,6 +47,10 @@
         "impossible_to_start_the_sound_meter": "Impossible to start the sound meter",
         "no_sound_detected": "No sound detected, check that the application has access to the microphone in the settings of your device."
       }
+    },
+    "qrreader": {
+      "title": "QR reader",
+      "scanned": "Scanned"
     }
   },
   "credits": {

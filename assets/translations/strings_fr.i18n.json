@@ -47,6 +47,10 @@
         "impossible_to_start_the_sound_meter": "Impossible de démarrer le sonomètre",
         "no_sound_detected": "Aucun son détecté, vérifiez que l'application a accès au micro dans les paramètres de votre appareil."
       }
+    },
+    "qrreader": {
+      "title": "Lecteur de QR",
+      "scanned": "Scanné"
     }
   },
   "credits": {

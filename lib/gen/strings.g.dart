@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 2
-/// Strings: 72 (36 per locale)
+/// Strings: 76 (38 per locale)
 ///
-/// Built on 2023-05-11 at 15:18 UTC
+/// Built on 2023-05-11 at 19:07 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -176,6 +176,7 @@ class _StringsToolsEn {
 	late final _StringsToolsNslookupEn nslookup = _StringsToolsNslookupEn._(_root);
 	late final _StringsToolsPingEn ping = _StringsToolsPingEn._(_root);
 	late final _StringsToolsSoundmeterEn soundmeter = _StringsToolsSoundmeterEn._(_root);
+	late final _StringsToolsQrreaderEn qrreader = _StringsToolsQrreaderEn._(_root);
 }
 
 // Path: credits
@@ -265,6 +266,17 @@ class _StringsToolsSoundmeterEn {
 	String get title => 'Sound meter';
 	String get decibels => 'dB';
 	late final _StringsToolsSoundmeterErrorEn error = _StringsToolsSoundmeterErrorEn._(_root);
+}
+
+// Path: tools.qrreader
+class _StringsToolsQrreaderEn {
+	_StringsToolsQrreaderEn._(this._root);
+
+	final _StringsEn _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'QR reader';
+	String get scanned => 'Scanned';
 }
 
 // Path: credits.translations
@@ -369,6 +381,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsNslookupFr nslookup = _StringsToolsNslookupFr._(_root);
 	@override late final _StringsToolsPingFr ping = _StringsToolsPingFr._(_root);
 	@override late final _StringsToolsSoundmeterFr soundmeter = _StringsToolsSoundmeterFr._(_root);
+	@override late final _StringsToolsQrreaderFr qrreader = _StringsToolsQrreaderFr._(_root);
 }
 
 // Path: credits
@@ -460,6 +473,17 @@ class _StringsToolsSoundmeterFr implements _StringsToolsSoundmeterEn {
 	@override late final _StringsToolsSoundmeterErrorFr error = _StringsToolsSoundmeterErrorFr._(_root);
 }
 
+// Path: tools.qrreader
+class _StringsToolsQrreaderFr implements _StringsToolsQrreaderEn {
+	_StringsToolsQrreaderFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Lecteur de QR';
+	@override String get scanned => 'Scanné';
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsFr implements _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsFr._(this._root);
@@ -542,6 +566,8 @@ extension on _StringsEn {
 			case 'tools.soundmeter.decibels': return 'dB';
 			case 'tools.soundmeter.error.impossible_to_start_the_sound_meter': return 'Impossible to start the sound meter';
 			case 'tools.soundmeter.error.no_sound_detected': return 'No sound detected, check that the application has access to the microphone in the settings of your device.';
+			case 'tools.qrreader.title': return 'QR reader';
+			case 'tools.qrreader.scanned': return 'Scanned';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -586,6 +612,8 @@ extension on _StringsFr {
 			case 'tools.soundmeter.decibels': return 'dB';
 			case 'tools.soundmeter.error.impossible_to_start_the_sound_meter': return 'Impossible de démarrer le sonomètre';
 			case 'tools.soundmeter.error.no_sound_detected': return 'Aucun son détecté, vérifiez que l\'application a accès au micro dans les paramètres de votre appareil.';
+			case 'tools.qrreader.title': return 'Lecteur de QR';
+			case 'tools.qrreader.scanned': return 'Scanné';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';

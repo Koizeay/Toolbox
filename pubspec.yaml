@@ -53,6 +53,7 @@ dependencies:
   noise_meter: ^3.2.0
   gauges: ^1.0.0
   wakelock: ^0.6.2
+  mobile_scanner: ^3.2.0
 
 dev_dependencies:
   flutter_test:
