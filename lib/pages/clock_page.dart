@@ -56,6 +56,7 @@ class _ClockPage extends State<ClockPage> {
     setState(() {
       isFullscreen = !isFullscreen;
     });
+    SystemChrome.setEnabledSystemUIMode(isFullscreen ? SystemUiMode.immersiveSticky : SystemUiMode.edgeToEdge);
   }
 
   @override
