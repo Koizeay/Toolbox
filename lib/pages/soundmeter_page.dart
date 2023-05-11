@@ -3,6 +3,7 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:gauges/gauges.dart';
 import 'package:noise_meter/noise_meter.dart';
 import 'package:toolbox/core/dialogs.dart';
@@ -29,13 +30,31 @@ class _SoundMeterPage extends State<SoundMeterPage> {
     _noiseMeter = NoiseMeter(onError);
     startListening();
     checkIfDecibelIsZeroDuring(_checkIfDecibelIsZeroDuring);
+    lockScreenRotation();
     super.initState();
   }
 
   @override
   void dispose() {
     stopRecorder();
+    unlockScreenRotation();
     super.dispose();
+  }
+
+  void lockScreenRotation() {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitDown,
+      DeviceOrientation.portraitUp,
+    ]);
+  }
+
+  void unlockScreenRotation() {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.landscapeRight,
+      DeviceOrientation.landscapeLeft,
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
   }
 
   void startListening() async {
@@ -100,59 +119,65 @@ class _SoundMeterPage extends State<SoundMeterPage> {
       ),
       body: SafeArea(
         child: Center(
-            child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(22.0),
-                    child: RadialGauge(
-                      axes: [
-                        RadialGaugeAxis(
-                          minValue: 10,
-                          maxValue: 120,
-                          color: Colors.transparent,
-                          pointers: [
-                            RadialNeedlePointer(
-                              value: meanDecibel,
-                              thicknessStart: 20,
-                              thicknessEnd: 0,
-                              length: 0.6,
-                              knobRadiusAbsolute: 10,
-                              gradient: const LinearGradient(
-                                  colors: [YaruColors.success],
-                                  stops: [0.0]
-                              ),
-                            )
-                          ],
-                          ticks: [
-                            RadialTicks(
-                                interval: 20,
-                                alignment: RadialTickAxisAlignment.inside,
-                                color: YaruColors.success,
-                                length: 0.2,
-                                children: [
+            child: SingleChildScrollView(
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      child: Padding(
+                        padding: const EdgeInsets.all(22.0),
+                        child: SizedBox(
+                          child: RadialGauge(
+                            axes: [
+                              RadialGaugeAxis(
+                                minValue: 10,
+                                maxValue: 120,
+                                color: Colors.transparent,
+                                pointers: [
+                                  RadialNeedlePointer(
+                                    value: meanDecibel,
+                                    thicknessStart: 20,
+                                    thicknessEnd: 0,
+                                    length: 0.6,
+                                    knobRadiusAbsolute: 10,
+                                    gradient: const LinearGradient(
+                                        colors: [YaruColors.success],
+                                        stops: [0.0]
+                                    ),
+                                  )
+                                ],
+                                ticks: [
                                   RadialTicks(
-                                      ticksInBetween: 5,
-                                      length: 0.1,
-                                      color: YaruColors.textGrey),
-                                ]
-                            )
-                          ],
+                                      interval: 20,
+                                      alignment: RadialTickAxisAlignment.inside,
+                                      color: YaruColors.success,
+                                      length: 0.2,
+                                      children: [
+                                        RadialTicks(
+                                            ticksInBetween: 5,
+                                            length: 0.1,
+                                            color: YaruColors.textGrey),
+                                      ]
+                                  )
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
-                      ],
+                      ),
                     ),
-                  ),
-                  Text(
-                    "${meanDecibel.toStringAsFixed(2)} ${t.tools.soundmeter
-                        .decibels}",
-                    style: const TextStyle(fontSize: 24),
-                  ),
-                  Text(
-                    "${maxDecibel.toStringAsFixed(2)} ${t.tools.soundmeter
-                        .decibels}",
-                    style: const TextStyle(fontSize: 18),
-                  ),
-                ]
+                    Text(
+                      "${meanDecibel.toStringAsFixed(2)} ${t.tools.soundmeter
+                          .decibels}",
+                      style: const TextStyle(fontSize: 24),
+                    ),
+                    Text(
+                      "${maxDecibel.toStringAsFixed(2)} ${t.tools.soundmeter
+                          .decibels}",
+                      style: const TextStyle(fontSize: 18),
+                    ),
+                  ]
+              ),
             )
         ),
       ),);
