@@ -2,6 +2,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 import 'package:toolbox/gen/strings.g.dart';
 
@@ -25,7 +26,30 @@ class _ClockPage extends State<ClockPage> {
         formattedTime = DateFormat('kk:mm:ss').format(DateTime.now());
       });
     });
+    lockScreenRotation();
     super.initState();
+  }
+
+  @override
+  void dispose() {
+    unlockScreenRotation();
+    super.dispose();
+  }
+
+  void lockScreenRotation() {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.landscapeLeft,
+      DeviceOrientation.landscapeRight,
+    ]);
+  }
+
+  void unlockScreenRotation() {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.landscapeRight,
+      DeviceOrientation.landscapeLeft,
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
   }
 
   void toggleFullscreen() {
