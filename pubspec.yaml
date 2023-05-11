@@ -52,6 +52,7 @@ dependencies:
   url_launcher: ^6.1.11
   noise_meter: ^3.2.0
   gauges: ^1.0.0
+  wakelock: ^0.6.2
 
 dev_dependencies:
   flutter_test:

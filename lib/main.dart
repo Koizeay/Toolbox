@@ -7,10 +7,12 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:toolbox/gen/strings.g.dart';
 import 'package:toolbox/pages/home_page.dart';
+import 'package:wakelock/wakelock.dart';
 import 'package:yaru/yaru.dart';
 
 void main() {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  Wakelock.enable();
   LocaleSettings.useDeviceLocale();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   runApp(TranslationProvider(child: const MyApp(),));
