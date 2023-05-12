@@ -1,8 +1,8 @@
-// Note: This is a template for creating new tools
 
 import 'package:flutter/material.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 import 'package:toolbox/core/dialogs.dart';
+import 'package:toolbox/core/url.dart';
 import 'package:toolbox/gen/strings.g.dart';
 import 'package:yaru/yaru.dart';
 
@@ -30,7 +30,8 @@ class _QrReaderPage extends State<QrReaderPage> {
           } else {
             _flashIcon = const Icon(Icons.flash_off, color: YaruColors.success);
           }
-        }));
+        })
+    );
   }
 
   void flipCamera() {
@@ -41,12 +42,36 @@ class _QrReaderPage extends State<QrReaderPage> {
   }
 
   void onScanned(BarcodeCapture capture) {
-    _controller.stop();
-    showCustomActionOkTextDialog(
-        context, t.tools.qrreader.scanned,
-        capture.barcodes.first.rawValue ?? "", () {
-      _controller.start();
-    });
+    if (capture.barcodes.first.format == BarcodeFormat.qrCode) {
+      _controller.stop();
+      if (capture.barcodes.first.type == BarcodeType.url) {
+        List<TextButton> buttons = [
+          TextButton(
+              onPressed: () {
+                Navigator.pop(context);
+                _controller.start();
+                launchUrlInBrowser(capture.barcodes.first.rawValue ?? "");
+              },
+              child: Text(t.tools.qrreader.openurl)
+          ),
+          TextButton(
+              onPressed: () {
+                Navigator.pop(context);
+                _controller.start();
+              },
+              child: Text(t.generic.ok)
+          ),
+        ];
+        showCustomButtonsTextDialog(context, t.tools.qrreader.scanned,
+            capture.barcodes.first.rawValue ?? "", buttons);
+      } else {
+        showCustomActionOkTextDialog(
+            context, t.tools.qrreader.scanned,
+            capture.barcodes.first.rawValue ?? "", () {
+          _controller.start();
+        });
+      }
+    }
   }
 
   @override

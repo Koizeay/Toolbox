@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 2
-/// Strings: 76 (38 per locale)
+/// Strings: 80 (40 per locale)
 ///
-/// Built on 2023-05-11 at 19:07 UTC
+/// Built on 2023-05-12 at 19:11 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -161,6 +161,7 @@ class _StringsGenericEn {
 	// Translations
 	String get app_name => 'Toolbox';
 	String get error => 'Error';
+	String get ok => 'OK';
 }
 
 // Path: tools
@@ -277,6 +278,7 @@ class _StringsToolsQrreaderEn {
 	// Translations
 	String get title => 'QR reader';
 	String get scanned => 'Scanned';
+	String get openurl => 'Open link';
 }
 
 // Path: credits.translations
@@ -366,6 +368,7 @@ class _StringsGenericFr implements _StringsGenericEn {
 	// Translations
 	@override String get app_name => 'Toolbox';
 	@override String get error => 'Erreur';
+	@override String get ok => 'OK';
 }
 
 // Path: tools
@@ -482,6 +485,7 @@ class _StringsToolsQrreaderFr implements _StringsToolsQrreaderEn {
 	// Translations
 	@override String get title => 'Lecteur de QR';
 	@override String get scanned => 'Scanné';
+	@override String get openurl => 'Ouvrir le lien';
 }
 
 // Path: credits.translations
@@ -540,6 +544,7 @@ extension on _StringsEn {
 		switch (path) {
 			case 'generic.app_name': return 'Toolbox';
 			case 'generic.error': return 'Error';
+			case 'generic.ok': return 'OK';
 			case 'tools.clock.title': return 'Clock';
 			case 'tools.metronome.title': return 'Metronome';
 			case 'tools.metronome.bpm': return 'BPM';
@@ -568,6 +573,7 @@ extension on _StringsEn {
 			case 'tools.soundmeter.error.no_sound_detected': return 'No sound detected, check that the application has access to the microphone in the settings of your device.';
 			case 'tools.qrreader.title': return 'QR reader';
 			case 'tools.qrreader.scanned': return 'Scanned';
+			case 'tools.qrreader.openurl': return 'Open link';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -586,6 +592,7 @@ extension on _StringsFr {
 		switch (path) {
 			case 'generic.app_name': return 'Toolbox';
 			case 'generic.error': return 'Erreur';
+			case 'generic.ok': return 'OK';
 			case 'tools.clock.title': return 'Horloge';
 			case 'tools.metronome.title': return 'Métronome';
 			case 'tools.metronome.bpm': return 'BPM';
@@ -614,6 +621,7 @@ extension on _StringsFr {
 			case 'tools.soundmeter.error.no_sound_detected': return 'Aucun son détecté, vérifiez que l\'application a accès au micro dans les paramètres de votre appareil.';
 			case 'tools.qrreader.title': return 'Lecteur de QR';
 			case 'tools.qrreader.scanned': return 'Scanné';
+			case 'tools.qrreader.openurl': return 'Ouvrir le lien';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';

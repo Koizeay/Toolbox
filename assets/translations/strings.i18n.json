@@ -1,7 +1,8 @@
 {
   "generic": {
     "app_name": "Toolbox",
-    "error": "Error"
+    "error": "Error",
+    "ok": "OK"
   },
   "tools": {
     "clock": {
@@ -50,7 +51,8 @@
     },
     "qrreader": {
       "title": "QR reader",
-      "scanned": "Scanned"
+      "scanned": "Scanned",
+      "openurl": "Open link"
     }
   },
   "credits": {

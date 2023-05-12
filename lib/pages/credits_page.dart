@@ -1,6 +1,7 @@
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:toolbox/core/url.dart';
 import 'package:toolbox/gen/strings.g.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:yaru/yaru.dart';
@@ -16,19 +17,6 @@ class _CreditsPage extends State<CreditsPage> {
   void initState() {
     super.initState();
   }
-
-  Future<void> _launchUrl(String url) async {
-    try {
-      if (!await launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication)) {
-        throw Exception('Could not launch $url');
-      }
-    } catch (e) {
-      if (kDebugMode) {
-        print(e);
-      }
-    }
-  }
-
 
   @override
   void dispose() {
@@ -123,7 +111,7 @@ class _CreditsPage extends State<CreditsPage> {
               ),
               GestureDetector(
                 onTap: () {
-                  _launchUrl("https://github.com/Koizeay/Toolbox");
+                  launchUrlInBrowser("https://github.com/Koizeay/Toolbox");
                 },
                 child: SizedBox(
                   width: double.infinity,
