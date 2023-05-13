@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 2
-/// Strings: 80 (40 per locale)
+/// Strings: 86 (43 per locale)
 ///
-/// Built on 2023-05-12 at 19:11 UTC
+/// Built on 2023-05-13 at 17:44 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -178,6 +178,7 @@ class _StringsToolsEn {
 	late final _StringsToolsPingEn ping = _StringsToolsPingEn._(_root);
 	late final _StringsToolsSoundmeterEn soundmeter = _StringsToolsSoundmeterEn._(_root);
 	late final _StringsToolsQrreaderEn qrreader = _StringsToolsQrreaderEn._(_root);
+	late final _StringsToolsTimerEn timer = _StringsToolsTimerEn._(_root);
 }
 
 // Path: credits
@@ -279,6 +280,18 @@ class _StringsToolsQrreaderEn {
 	String get title => 'QR reader';
 	String get scanned => 'Scanned';
 	String get openurl => 'Open link';
+}
+
+// Path: tools.timer
+class _StringsToolsTimerEn {
+	_StringsToolsTimerEn._(this._root);
+
+	final _StringsEn _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'Timer';
+	String get start => 'Start';
+	String get stop => 'Stop';
 }
 
 // Path: credits.translations
@@ -385,6 +398,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsPingFr ping = _StringsToolsPingFr._(_root);
 	@override late final _StringsToolsSoundmeterFr soundmeter = _StringsToolsSoundmeterFr._(_root);
 	@override late final _StringsToolsQrreaderFr qrreader = _StringsToolsQrreaderFr._(_root);
+	@override late final _StringsToolsTimerFr timer = _StringsToolsTimerFr._(_root);
 }
 
 // Path: credits
@@ -488,6 +502,18 @@ class _StringsToolsQrreaderFr implements _StringsToolsQrreaderEn {
 	@override String get openurl => 'Ouvrir le lien';
 }
 
+// Path: tools.timer
+class _StringsToolsTimerFr implements _StringsToolsTimerEn {
+	_StringsToolsTimerFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Minuteur';
+	@override String get start => 'Démarrer';
+	@override String get stop => 'Arrêter';
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsFr implements _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsFr._(this._root);
@@ -574,6 +600,9 @@ extension on _StringsEn {
 			case 'tools.qrreader.title': return 'QR reader';
 			case 'tools.qrreader.scanned': return 'Scanned';
 			case 'tools.qrreader.openurl': return 'Open link';
+			case 'tools.timer.title': return 'Timer';
+			case 'tools.timer.start': return 'Start';
+			case 'tools.timer.stop': return 'Stop';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -622,6 +651,9 @@ extension on _StringsFr {
 			case 'tools.qrreader.title': return 'Lecteur de QR';
 			case 'tools.qrreader.scanned': return 'Scanné';
 			case 'tools.qrreader.openurl': return 'Ouvrir le lien';
+			case 'tools.timer.title': return 'Minuteur';
+			case 'tools.timer.start': return 'Démarrer';
+			case 'tools.timer.stop': return 'Arrêter';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';

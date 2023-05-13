@@ -53,6 +53,11 @@
       "title": "Lecteur de QR",
       "scanned": "Scanné",
       "openurl": "Ouvrir le lien"
+    },
+    "timer": {
+      "title": "Minuteur",
+      "start": "Démarrer",
+      "stop": "Arrêter"
     }
   },
   "credits": {

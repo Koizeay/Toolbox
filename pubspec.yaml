@@ -54,6 +54,8 @@ dependencies:
   gauges: ^1.0.0
   wakelock: ^0.6.2
   mobile_scanner: ^3.2.0
+  timer_count_down: ^2.2.2
+  vibration: ^1.7.7
 
 dev_dependencies:
   flutter_test:

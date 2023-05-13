@@ -10,6 +10,7 @@ import 'package:toolbox/pages/nslookup_page.dart';
 import 'package:toolbox/pages/ping_page.dart';
 import 'package:toolbox/pages/qrreader_page.dart';
 import 'package:toolbox/pages/soundmeter_page.dart';
+import 'package:toolbox/pages/timer_page.dart';
 import 'package:toolbox/widgets/tool_card.dart';
 import 'package:yaru/yaru.dart';
 
@@ -43,7 +44,9 @@ class _HomePage extends State<HomePage> {
       Tool(t.tools.qrreader.title, "assets/images/tools/qrreader.png",
           const QrReaderPage()),
       Tool(t.tools.soundmeter.title, "assets/images/tools/soundmeter.png",
-          const SoundMeterPage())
+          const SoundMeterPage()),
+      Tool(t.tools.timer.title, "assets/images/tools/timer.png",
+          const TimerPage())
     ];
   }
 
