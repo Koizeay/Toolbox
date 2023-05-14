@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 2
-/// Strings: 96 (48 per locale)
+/// Strings: 126 (63 per locale)
 ///
-/// Built on 2023-05-14 at 11:51 UTC
+/// Built on 2023-05-14 at 17:50 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -161,7 +161,9 @@ class _StringsGenericEn {
 	// Translations
 	String get app_name => 'Toolbox';
 	String get error => 'Error';
+	String get warning => 'Warning';
 	String get ok => 'OK';
+	String get cancel => 'Cancel';
 }
 
 // Path: tools
@@ -180,6 +182,7 @@ class _StringsToolsEn {
 	late final _StringsToolsQrreaderEn qrreader = _StringsToolsQrreaderEn._(_root);
 	late final _StringsToolsTimerEn timer = _StringsToolsTimerEn._(_root);
 	late final _StringsToolsStopwatchEn stopwatch = _StringsToolsStopwatchEn._(_root);
+	late final _StringsToolsRouletteEn roulette = _StringsToolsRouletteEn._(_root);
 }
 
 // Path: credits
@@ -309,6 +312,26 @@ class _StringsToolsStopwatchEn {
 	String get lap => 'Lap';
 }
 
+// Path: tools.roulette
+class _StringsToolsRouletteEn {
+	_StringsToolsRouletteEn._(this._root);
+
+	final _StringsEn _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'Roulette';
+	String get tap_to_roll_info => 'Tap the wheel to roll it';
+	String get default_1 => 'Study';
+	String get default_2 => 'Play';
+	String get default_3 => 'Sleep';
+	String get add => 'Add';
+	String get remove => 'Remove';
+	String get add_item => 'Add an item';
+	String get item_name => 'Item name';
+	String get remove_an_item => 'Remove an item';
+	late final _StringsToolsRouletteWarningEn warning = _StringsToolsRouletteWarningEn._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsEn._(this._root);
@@ -357,6 +380,18 @@ class _StringsToolsSoundmeterErrorEn {
 	String get no_sound_detected => 'No sound detected, check that the application has access to the microphone in the settings of your device.';
 }
 
+// Path: tools.roulette.warning
+class _StringsToolsRouletteWarningEn {
+	_StringsToolsRouletteWarningEn._(this._root);
+
+	final _StringsEn _root; // ignore: unused_field
+
+	// Translations
+	String you_cant_add_more_than_x_items({required Object numberOfItems}) => 'You can\'t have more than ${numberOfItems} items in the roulette.';
+	String you_must_have_at_least_x_items({required Object numberOfItems}) => 'You must have at least ${numberOfItems} items in the roulette.';
+	String get you_must_enter_an_item_name => 'You must enter an item name.';
+}
+
 // Path: <root>
 class _StringsFr implements _StringsEn {
 
@@ -396,7 +431,9 @@ class _StringsGenericFr implements _StringsGenericEn {
 	// Translations
 	@override String get app_name => 'Toolbox';
 	@override String get error => 'Erreur';
+	@override String get warning => 'Attention';
 	@override String get ok => 'OK';
+	@override String get cancel => 'Annuler';
 }
 
 // Path: tools
@@ -415,6 +452,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsQrreaderFr qrreader = _StringsToolsQrreaderFr._(_root);
 	@override late final _StringsToolsTimerFr timer = _StringsToolsTimerFr._(_root);
 	@override late final _StringsToolsStopwatchFr stopwatch = _StringsToolsStopwatchFr._(_root);
+	@override late final _StringsToolsRouletteFr roulette = _StringsToolsRouletteFr._(_root);
 }
 
 // Path: credits
@@ -544,6 +582,26 @@ class _StringsToolsStopwatchFr implements _StringsToolsStopwatchEn {
 	@override String get lap => 'Tour';
 }
 
+// Path: tools.roulette
+class _StringsToolsRouletteFr implements _StringsToolsRouletteEn {
+	_StringsToolsRouletteFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Roulette';
+	@override String get tap_to_roll_info => 'Touchez la roue pour la faire tourner';
+	@override String get default_1 => 'Étudier';
+	@override String get default_2 => 'Jouer';
+	@override String get default_3 => 'Dormir';
+	@override String get add => 'Ajouter';
+	@override String get remove => 'Supprimer';
+	@override String get add_item => 'Ajouter un item';
+	@override String get item_name => 'Nom de l\'item';
+	@override String get remove_an_item => 'Supprimer un item';
+	@override late final _StringsToolsRouletteWarningFr warning = _StringsToolsRouletteWarningFr._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsFr implements _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsFr._(this._root);
@@ -592,6 +650,18 @@ class _StringsToolsSoundmeterErrorFr implements _StringsToolsSoundmeterErrorEn {
 	@override String get no_sound_detected => 'Aucun son détecté, vérifiez que l\'application a accès au micro dans les paramètres de votre appareil.';
 }
 
+// Path: tools.roulette.warning
+class _StringsToolsRouletteWarningFr implements _StringsToolsRouletteWarningEn {
+	_StringsToolsRouletteWarningFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String you_cant_add_more_than_x_items({required Object numberOfItems}) => 'Vous ne pouvez pas ajouter plus de ${numberOfItems} items dans la roulette';
+	@override String you_must_have_at_least_x_items({required Object numberOfItems}) => 'Vous devez avoir au moins ${numberOfItems} items dans la roulette';
+	@override String get you_must_enter_an_item_name => 'Vous devez entrer un nom d\'item';
+}
+
 /// Flat map(s) containing all translations.
 /// Only for edge cases! For simple maps, use the map function of this library.
 
@@ -600,7 +670,9 @@ extension on _StringsEn {
 		switch (path) {
 			case 'generic.app_name': return 'Toolbox';
 			case 'generic.error': return 'Error';
+			case 'generic.warning': return 'Warning';
 			case 'generic.ok': return 'OK';
+			case 'generic.cancel': return 'Cancel';
 			case 'tools.clock.title': return 'Clock';
 			case 'tools.metronome.title': return 'Metronome';
 			case 'tools.metronome.bpm': return 'BPM';
@@ -638,6 +710,19 @@ extension on _StringsEn {
 			case 'tools.stopwatch.stop': return 'Stop';
 			case 'tools.stopwatch.reset': return 'Reset';
 			case 'tools.stopwatch.lap': return 'Lap';
+			case 'tools.roulette.title': return 'Roulette';
+			case 'tools.roulette.tap_to_roll_info': return 'Tap the wheel to roll it';
+			case 'tools.roulette.default_1': return 'Study';
+			case 'tools.roulette.default_2': return 'Play';
+			case 'tools.roulette.default_3': return 'Sleep';
+			case 'tools.roulette.add': return 'Add';
+			case 'tools.roulette.remove': return 'Remove';
+			case 'tools.roulette.add_item': return 'Add an item';
+			case 'tools.roulette.item_name': return 'Item name';
+			case 'tools.roulette.remove_an_item': return 'Remove an item';
+			case 'tools.roulette.warning.you_cant_add_more_than_x_items': return ({required Object numberOfItems}) => 'You can\'t have more than ${numberOfItems} items in the roulette.';
+			case 'tools.roulette.warning.you_must_have_at_least_x_items': return ({required Object numberOfItems}) => 'You must have at least ${numberOfItems} items in the roulette.';
+			case 'tools.roulette.warning.you_must_enter_an_item_name': return 'You must enter an item name.';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -656,7 +741,9 @@ extension on _StringsFr {
 		switch (path) {
 			case 'generic.app_name': return 'Toolbox';
 			case 'generic.error': return 'Erreur';
+			case 'generic.warning': return 'Attention';
 			case 'generic.ok': return 'OK';
+			case 'generic.cancel': return 'Annuler';
 			case 'tools.clock.title': return 'Horloge';
 			case 'tools.metronome.title': return 'Métronome';
 			case 'tools.metronome.bpm': return 'BPM';
@@ -694,6 +781,19 @@ extension on _StringsFr {
 			case 'tools.stopwatch.stop': return 'Stop';
 			case 'tools.stopwatch.reset': return 'Effacer';
 			case 'tools.stopwatch.lap': return 'Tour';
+			case 'tools.roulette.title': return 'Roulette';
+			case 'tools.roulette.tap_to_roll_info': return 'Touchez la roue pour la faire tourner';
+			case 'tools.roulette.default_1': return 'Étudier';
+			case 'tools.roulette.default_2': return 'Jouer';
+			case 'tools.roulette.default_3': return 'Dormir';
+			case 'tools.roulette.add': return 'Ajouter';
+			case 'tools.roulette.remove': return 'Supprimer';
+			case 'tools.roulette.add_item': return 'Ajouter un item';
+			case 'tools.roulette.item_name': return 'Nom de l\'item';
+			case 'tools.roulette.remove_an_item': return 'Supprimer un item';
+			case 'tools.roulette.warning.you_cant_add_more_than_x_items': return ({required Object numberOfItems}) => 'Vous ne pouvez pas ajouter plus de ${numberOfItems} items dans la roulette';
+			case 'tools.roulette.warning.you_must_have_at_least_x_items': return ({required Object numberOfItems}) => 'Vous devez avoir au moins ${numberOfItems} items dans la roulette';
+			case 'tools.roulette.warning.you_must_enter_an_item_name': return 'Vous devez entrer un nom d\'item';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';

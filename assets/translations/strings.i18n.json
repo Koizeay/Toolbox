@@ -2,7 +2,9 @@
   "generic": {
     "app_name": "Toolbox",
     "error": "Error",
-    "ok": "OK"
+    "warning": "Warning",
+    "ok": "OK",
+    "cancel": "Cancel"
   },
   "tools": {
     "clock": {
@@ -65,6 +67,23 @@
       "stop": "Stop",
       "reset": "Reset",
       "lap": "Lap"
+    },
+    "roulette": {
+      "title": "Roulette",
+      "tap_to_roll_info": "Tap the wheel to roll it",
+      "default_1": "Study",
+      "default_2": "Play",
+      "default_3": "Sleep",
+      "add": "Add",
+      "remove": "Remove",
+      "add_item": "Add an item",
+      "item_name": "Item name",
+      "remove_an_item": "Remove an item",
+      "warning": {
+        "you_cant_add_more_than_x_items": "You can't have more than $numberOfItems items in the roulette.",
+        "you_must_have_at_least_x_items": "You must have at least $numberOfItems items in the roulette.",
+        "you_must_enter_an_item_name": "You must enter an item name."
+      }
     }
   },
   "credits": {
