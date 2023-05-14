@@ -29,6 +29,7 @@ class _HomePage extends State<HomePage> {
   void initState() {
     super.initState();
     initTools();
+    sortTools();
     setOnlyPortraitUp();
   }
 
@@ -46,13 +47,17 @@ class _HomePage extends State<HomePage> {
           t.tools.ping.title, "assets/images/tools/ping.png", const PingPage()),
       Tool(t.tools.qrreader.title, "assets/images/tools/qrreader.png",
           const QrReaderPage()),
-      Tool(t.tools.stopwatch.title, "assets/images/tools/stopwatch.png",
-          const StopwatchPage()),
       Tool(t.tools.soundmeter.title, "assets/images/tools/soundmeter.png",
           const SoundMeterPage()),
+      Tool(t.tools.stopwatch.title, "assets/images/tools/stopwatch.png",
+          const StopwatchPage()),
       Tool(t.tools.timer.title, "assets/images/tools/timer.png",
           const TimerPage())
     ];
+  }
+
+  void sortTools() {
+    tools.sort((a, b) => a.name.compareTo(b.name));
   }
 
   @override
