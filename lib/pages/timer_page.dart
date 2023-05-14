@@ -3,6 +3,7 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:timer_count_down/timer_controller.dart';
 import 'package:timer_count_down/timer_count_down.dart';
+import 'package:toolbox/core/time.dart';
 import 'package:toolbox/gen/strings.g.dart';
 import 'package:vibration/vibration.dart';
 
@@ -82,26 +83,6 @@ class _TimerPage extends State<TimerPage> {
     }
   }
 
-  String getFormattedTime(double time) {
-    Duration duration = Duration(
-        milliseconds: ((time * 1000).round()));
-    String twoDigits(int n) => n.toString().padLeft(2, "0");
-    String twoDigitMinutes = twoDigits(
-        duration.inMinutes.remainder(60));
-    String twoDigitSeconds = twoDigits(
-        duration.inSeconds.remainder(60));
-    String twoDigitMilliseconds = twoDigits(
-        duration.inMilliseconds.remainder(1000));
-    if (twoDigitMilliseconds.endsWith("0")) {
-      twoDigitMilliseconds = twoDigitMilliseconds.substring(
-          0, twoDigitMilliseconds.length - 1);
-    }
-    if (twoDigitMilliseconds.length == 1) {
-      twoDigitMilliseconds = "0$twoDigitMilliseconds";
-    }
-    return "$twoDigitMinutes:$twoDigitSeconds:$twoDigitMilliseconds";
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -135,7 +116,7 @@ class _TimerPage extends State<TimerPage> {
                         seconds: _seconds,
                         controller: controller,
                         build: (BuildContext context, double time) {
-                          String formattedTime = getFormattedTime(time);
+                          String formattedTime = getFormattedTimeFromSeconds(time);
                           return FittedBox(
                             fit: BoxFit.fitHeight,
                             child: Text(

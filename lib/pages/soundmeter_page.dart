@@ -7,6 +7,7 @@ import 'package:flutter/services.dart';
 import 'package:gauges/gauges.dart';
 import 'package:noise_meter/noise_meter.dart';
 import 'package:toolbox/core/dialogs.dart';
+import 'package:toolbox/core/rotations.dart';
 import 'package:toolbox/gen/strings.g.dart';
 import 'package:yaru/yaru.dart';
 
@@ -37,24 +38,12 @@ class _SoundMeterPage extends State<SoundMeterPage> {
   @override
   void dispose() {
     stopRecorder();
-    unlockScreenRotation();
+    setHomePageRotation();
     super.dispose();
   }
 
   void lockScreenRotation() {
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.portraitDown,
-      DeviceOrientation.portraitUp,
-    ]);
-  }
-
-  void unlockScreenRotation() {
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.landscapeRight,
-      DeviceOrientation.landscapeLeft,
-      DeviceOrientation.portraitUp,
-      DeviceOrientation.portraitDown,
-    ]);
+    setOnlyPortraitUp();
   }
 
   void startListening() async {

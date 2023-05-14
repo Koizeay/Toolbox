@@ -4,6 +4,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
+import 'package:toolbox/core/rotations.dart';
 import 'package:toolbox/gen/strings.g.dart';
 
 class ClockPage extends StatefulWidget {
@@ -32,24 +33,12 @@ class _ClockPage extends State<ClockPage> {
 
   @override
   void dispose() {
-    unlockScreenRotation();
+    setHomePageRotation();
     super.dispose();
   }
 
   void lockScreenRotation() {
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.landscapeLeft,
-      DeviceOrientation.landscapeRight,
-    ]);
-  }
-
-  void unlockScreenRotation() {
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.landscapeRight,
-      DeviceOrientation.landscapeLeft,
-      DeviceOrientation.portraitUp,
-      DeviceOrientation.portraitDown,
-    ]);
+    setOnlyLandscape();
   }
 
   void toggleFullscreen() {

@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 2
-/// Strings: 86 (43 per locale)
+/// Strings: 96 (48 per locale)
 ///
-/// Built on 2023-05-13 at 17:44 UTC
+/// Built on 2023-05-14 at 11:51 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -179,6 +179,7 @@ class _StringsToolsEn {
 	late final _StringsToolsSoundmeterEn soundmeter = _StringsToolsSoundmeterEn._(_root);
 	late final _StringsToolsQrreaderEn qrreader = _StringsToolsQrreaderEn._(_root);
 	late final _StringsToolsTimerEn timer = _StringsToolsTimerEn._(_root);
+	late final _StringsToolsStopwatchEn stopwatch = _StringsToolsStopwatchEn._(_root);
 }
 
 // Path: credits
@@ -294,6 +295,20 @@ class _StringsToolsTimerEn {
 	String get stop => 'Stop';
 }
 
+// Path: tools.stopwatch
+class _StringsToolsStopwatchEn {
+	_StringsToolsStopwatchEn._(this._root);
+
+	final _StringsEn _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'Stopwatch';
+	String get start => 'Start';
+	String get stop => 'Stop';
+	String get reset => 'Reset';
+	String get lap => 'Lap';
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsEn._(this._root);
@@ -399,6 +414,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsSoundmeterFr soundmeter = _StringsToolsSoundmeterFr._(_root);
 	@override late final _StringsToolsQrreaderFr qrreader = _StringsToolsQrreaderFr._(_root);
 	@override late final _StringsToolsTimerFr timer = _StringsToolsTimerFr._(_root);
+	@override late final _StringsToolsStopwatchFr stopwatch = _StringsToolsStopwatchFr._(_root);
 }
 
 // Path: credits
@@ -514,6 +530,20 @@ class _StringsToolsTimerFr implements _StringsToolsTimerEn {
 	@override String get stop => 'Arrêter';
 }
 
+// Path: tools.stopwatch
+class _StringsToolsStopwatchFr implements _StringsToolsStopwatchEn {
+	_StringsToolsStopwatchFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Chronomètre';
+	@override String get start => 'Go';
+	@override String get stop => 'Stop';
+	@override String get reset => 'Effacer';
+	@override String get lap => 'Tour';
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsFr implements _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsFr._(this._root);
@@ -603,6 +633,11 @@ extension on _StringsEn {
 			case 'tools.timer.title': return 'Timer';
 			case 'tools.timer.start': return 'Start';
 			case 'tools.timer.stop': return 'Stop';
+			case 'tools.stopwatch.title': return 'Stopwatch';
+			case 'tools.stopwatch.start': return 'Start';
+			case 'tools.stopwatch.stop': return 'Stop';
+			case 'tools.stopwatch.reset': return 'Reset';
+			case 'tools.stopwatch.lap': return 'Lap';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -654,6 +689,11 @@ extension on _StringsFr {
 			case 'tools.timer.title': return 'Minuteur';
 			case 'tools.timer.start': return 'Démarrer';
 			case 'tools.timer.stop': return 'Arrêter';
+			case 'tools.stopwatch.title': return 'Chronomètre';
+			case 'tools.stopwatch.start': return 'Go';
+			case 'tools.stopwatch.stop': return 'Stop';
+			case 'tools.stopwatch.reset': return 'Effacer';
+			case 'tools.stopwatch.lap': return 'Tour';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';

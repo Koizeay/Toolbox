@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:toolbox/core/rotations.dart';
 import 'package:toolbox/gen/strings.g.dart';
 import 'package:toolbox/models/tool.dart';
 import 'package:toolbox/pages/clock_page.dart';
@@ -10,6 +11,7 @@ import 'package:toolbox/pages/nslookup_page.dart';
 import 'package:toolbox/pages/ping_page.dart';
 import 'package:toolbox/pages/qrreader_page.dart';
 import 'package:toolbox/pages/soundmeter_page.dart';
+import 'package:toolbox/pages/stopwatch_page.dart';
 import 'package:toolbox/pages/timer_page.dart';
 import 'package:toolbox/widgets/tool_card.dart';
 import 'package:yaru/yaru.dart';
@@ -25,8 +27,9 @@ class _HomePage extends State<HomePage> {
 
   @override
   void initState() {
-    initTools();
     super.initState();
+    initTools();
+    setOnlyPortraitUp();
   }
 
   void initTools() {
@@ -43,6 +46,8 @@ class _HomePage extends State<HomePage> {
           t.tools.ping.title, "assets/images/tools/ping.png", const PingPage()),
       Tool(t.tools.qrreader.title, "assets/images/tools/qrreader.png",
           const QrReaderPage()),
+      Tool(t.tools.stopwatch.title, "assets/images/tools/stopwatch.png",
+          const StopwatchPage()),
       Tool(t.tools.soundmeter.title, "assets/images/tools/soundmeter.png",
           const SoundMeterPage()),
       Tool(t.tools.timer.title, "assets/images/tools/timer.png",

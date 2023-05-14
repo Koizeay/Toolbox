@@ -58,6 +58,13 @@
       "title": "Minuteur",
       "start": "Démarrer",
       "stop": "Arrêter"
+    },
+    "stopwatch": {
+      "title": "Chronomètre",
+      "start": "Go",
+      "stop": "Stop",
+      "reset": "Effacer",
+      "lap": "Tour"
     }
   },
   "credits": {

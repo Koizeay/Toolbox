@@ -58,6 +58,13 @@
       "title": "Timer",
       "start": "Start",
       "stop": "Stop"
+    },
+    "stopwatch": {
+      "title": "Stopwatch",
+      "start": "Start",
+      "stop": "Stop",
+      "reset": "Reset",
+      "lap": "Lap"
     }
   },
   "credits": {
