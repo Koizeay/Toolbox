@@ -87,6 +87,16 @@
     },
     "flipcoins": {
       "title": "Pile ou face"
+    },
+    "randomnumber": {
+      "title": "Nombre aléatoire",
+      "min": "Min",
+      "max": "Max",
+      "error": {
+        "invalid_number": "Nombre invalide, veuillez réessayer.",
+        "min_must_be_lower_than_max": "Le nombre minimum doit être inférieur au nombre maximum.",
+        "min_and_max_must_be_between_x_and_y": "Les nombres minimum et maximum doivent être compris entre $minNumberLimit et $maxNumberLimit."
+      }
     }
   },
   "credits": {

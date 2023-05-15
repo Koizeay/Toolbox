@@ -87,6 +87,16 @@
     },
     "flipcoins": {
       "title": "Flip a coin"
+    },
+    "randomnumber": {
+      "title": "Random number",
+      "min": "Min",
+      "max": "Max",
+      "error": {
+        "invalid_number": "Invalid number, please try again.",
+        "min_must_be_lower_than_max": "The minimum number must be lower than the maximum number.",
+        "min_and_max_must_be_between_x_and_y": "The minimum and maximum numbers must be between $minNumberLimit and $maxNumberLimit."
+      }
     }
   },
   "credits": {

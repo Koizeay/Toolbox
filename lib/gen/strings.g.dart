@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 2
-/// Strings: 128 (64 per locale)
+/// Strings: 140 (70 per locale)
 ///
-/// Built on 2023-05-14 at 19:15 UTC
+/// Built on 2023-05-15 at 16:05 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -184,6 +184,7 @@ class _StringsToolsEn {
 	late final _StringsToolsStopwatchEn stopwatch = _StringsToolsStopwatchEn._(_root);
 	late final _StringsToolsRouletteEn roulette = _StringsToolsRouletteEn._(_root);
 	late final _StringsToolsFlipcoinsEn flipcoins = _StringsToolsFlipcoinsEn._(_root);
+	late final _StringsToolsRandomnumberEn randomnumber = _StringsToolsRandomnumberEn._(_root);
 }
 
 // Path: credits
@@ -343,6 +344,19 @@ class _StringsToolsFlipcoinsEn {
 	String get title => 'Flip a coin';
 }
 
+// Path: tools.randomnumber
+class _StringsToolsRandomnumberEn {
+	_StringsToolsRandomnumberEn._(this._root);
+
+	final _StringsEn _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'Random number';
+	String get min => 'Min';
+	String get max => 'Max';
+	late final _StringsToolsRandomnumberErrorEn error = _StringsToolsRandomnumberErrorEn._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsEn._(this._root);
@@ -401,6 +415,18 @@ class _StringsToolsRouletteWarningEn {
 	String you_cant_add_more_than_x_items({required Object numberOfItems}) => 'You can\'t have more than ${numberOfItems} items in the roulette.';
 	String you_must_have_at_least_x_items({required Object numberOfItems}) => 'You must have at least ${numberOfItems} items in the roulette.';
 	String get you_must_enter_an_item_name => 'You must enter an item name.';
+}
+
+// Path: tools.randomnumber.error
+class _StringsToolsRandomnumberErrorEn {
+	_StringsToolsRandomnumberErrorEn._(this._root);
+
+	final _StringsEn _root; // ignore: unused_field
+
+	// Translations
+	String get invalid_number => 'Invalid number, please try again.';
+	String get min_must_be_lower_than_max => 'The minimum number must be lower than the maximum number.';
+	String min_and_max_must_be_between_x_and_y({required Object minNumberLimit, required Object maxNumberLimit}) => 'The minimum and maximum numbers must be between ${minNumberLimit} and ${maxNumberLimit}.';
 }
 
 // Path: <root>
@@ -465,6 +491,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsStopwatchFr stopwatch = _StringsToolsStopwatchFr._(_root);
 	@override late final _StringsToolsRouletteFr roulette = _StringsToolsRouletteFr._(_root);
 	@override late final _StringsToolsFlipcoinsFr flipcoins = _StringsToolsFlipcoinsFr._(_root);
+	@override late final _StringsToolsRandomnumberFr randomnumber = _StringsToolsRandomnumberFr._(_root);
 }
 
 // Path: credits
@@ -624,6 +651,19 @@ class _StringsToolsFlipcoinsFr implements _StringsToolsFlipcoinsEn {
 	@override String get title => 'Pile ou face';
 }
 
+// Path: tools.randomnumber
+class _StringsToolsRandomnumberFr implements _StringsToolsRandomnumberEn {
+	_StringsToolsRandomnumberFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Nombre aléatoire';
+	@override String get min => 'Min';
+	@override String get max => 'Max';
+	@override late final _StringsToolsRandomnumberErrorFr error = _StringsToolsRandomnumberErrorFr._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsFr implements _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsFr._(this._root);
@@ -682,6 +722,18 @@ class _StringsToolsRouletteWarningFr implements _StringsToolsRouletteWarningEn {
 	@override String you_cant_add_more_than_x_items({required Object numberOfItems}) => 'Vous ne pouvez pas ajouter plus de ${numberOfItems} items dans la roulette';
 	@override String you_must_have_at_least_x_items({required Object numberOfItems}) => 'Vous devez avoir au moins ${numberOfItems} items dans la roulette';
 	@override String get you_must_enter_an_item_name => 'Vous devez entrer un nom d\'item';
+}
+
+// Path: tools.randomnumber.error
+class _StringsToolsRandomnumberErrorFr implements _StringsToolsRandomnumberErrorEn {
+	_StringsToolsRandomnumberErrorFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get invalid_number => 'Nombre invalide, veuillez réessayer.';
+	@override String get min_must_be_lower_than_max => 'Le nombre minimum doit être inférieur au nombre maximum.';
+	@override String min_and_max_must_be_between_x_and_y({required Object minNumberLimit, required Object maxNumberLimit}) => 'Les nombres minimum et maximum doivent être compris entre ${minNumberLimit} et ${maxNumberLimit}.';
 }
 
 /// Flat map(s) containing all translations.
@@ -746,6 +798,12 @@ extension on _StringsEn {
 			case 'tools.roulette.warning.you_must_have_at_least_x_items': return ({required Object numberOfItems}) => 'You must have at least ${numberOfItems} items in the roulette.';
 			case 'tools.roulette.warning.you_must_enter_an_item_name': return 'You must enter an item name.';
 			case 'tools.flipcoins.title': return 'Flip a coin';
+			case 'tools.randomnumber.title': return 'Random number';
+			case 'tools.randomnumber.min': return 'Min';
+			case 'tools.randomnumber.max': return 'Max';
+			case 'tools.randomnumber.error.invalid_number': return 'Invalid number, please try again.';
+			case 'tools.randomnumber.error.min_must_be_lower_than_max': return 'The minimum number must be lower than the maximum number.';
+			case 'tools.randomnumber.error.min_and_max_must_be_between_x_and_y': return ({required Object minNumberLimit, required Object maxNumberLimit}) => 'The minimum and maximum numbers must be between ${minNumberLimit} and ${maxNumberLimit}.';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -818,6 +876,12 @@ extension on _StringsFr {
 			case 'tools.roulette.warning.you_must_have_at_least_x_items': return ({required Object numberOfItems}) => 'Vous devez avoir au moins ${numberOfItems} items dans la roulette';
 			case 'tools.roulette.warning.you_must_enter_an_item_name': return 'Vous devez entrer un nom d\'item';
 			case 'tools.flipcoins.title': return 'Pile ou face';
+			case 'tools.randomnumber.title': return 'Nombre aléatoire';
+			case 'tools.randomnumber.min': return 'Min';
+			case 'tools.randomnumber.max': return 'Max';
+			case 'tools.randomnumber.error.invalid_number': return 'Nombre invalide, veuillez réessayer.';
+			case 'tools.randomnumber.error.min_must_be_lower_than_max': return 'Le nombre minimum doit être inférieur au nombre maximum.';
+			case 'tools.randomnumber.error.min_and_max_must_be_between_x_and_y': return ({required Object minNumberLimit, required Object maxNumberLimit}) => 'Les nombres minimum et maximum doivent être compris entre ${minNumberLimit} et ${maxNumberLimit}.';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';

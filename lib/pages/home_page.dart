@@ -11,6 +11,7 @@ import 'package:toolbox/pages/micspeak_page.dart';
 import 'package:toolbox/pages/nslookup_page.dart';
 import 'package:toolbox/pages/ping_page.dart';
 import 'package:toolbox/pages/qrreader_page.dart';
+import 'package:toolbox/pages/randomnumber_page.dart';
 import 'package:toolbox/pages/roulette_page.dart';
 import 'package:toolbox/pages/soundmeter_page.dart';
 import 'package:toolbox/pages/stopwatch_page.dart';
@@ -51,6 +52,8 @@ class _HomePage extends State<HomePage> {
           t.tools.ping.title, "assets/images/tools/ping.png", const PingPage()),
       Tool(t.tools.qrreader.title, "assets/images/tools/qrreader.png",
           const QrReaderPage()),
+      Tool(t.tools.randomnumber.title, "assets/images/tools/randomnumber.png",
+          const RandomNumberPage()),
       Tool(t.tools.roulette.title, "assets/images/tools/roulette.png",
           const RoulettePage()),
       Tool(t.tools.soundmeter.title, "assets/images/tools/soundmeter.png",
