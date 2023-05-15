@@ -84,6 +84,9 @@
         "you_must_have_at_least_x_items": "You must have at least $numberOfItems items in the roulette.",
         "you_must_enter_an_item_name": "You must enter an item name."
       }
+    },
+    "flipcoins": {
+      "title": "Flip a coin"
     }
   },
   "credits": {

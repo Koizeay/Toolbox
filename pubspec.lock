@@ -209,6 +209,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.1.4"
+  flippy:
+    dependency: "direct main"
+    description:
+      name: flippy
+      sha256: bb45065ee9590a31765f817e1b8db172d8d551fbb274f096dbf67156d2d78b21
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.1.1"
   flutter:
     dependency: "direct main"
     description: flutter

@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 2
-/// Strings: 126 (63 per locale)
+/// Strings: 128 (64 per locale)
 ///
-/// Built on 2023-05-14 at 17:50 UTC
+/// Built on 2023-05-14 at 19:15 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -183,6 +183,7 @@ class _StringsToolsEn {
 	late final _StringsToolsTimerEn timer = _StringsToolsTimerEn._(_root);
 	late final _StringsToolsStopwatchEn stopwatch = _StringsToolsStopwatchEn._(_root);
 	late final _StringsToolsRouletteEn roulette = _StringsToolsRouletteEn._(_root);
+	late final _StringsToolsFlipcoinsEn flipcoins = _StringsToolsFlipcoinsEn._(_root);
 }
 
 // Path: credits
@@ -332,6 +333,16 @@ class _StringsToolsRouletteEn {
 	late final _StringsToolsRouletteWarningEn warning = _StringsToolsRouletteWarningEn._(_root);
 }
 
+// Path: tools.flipcoins
+class _StringsToolsFlipcoinsEn {
+	_StringsToolsFlipcoinsEn._(this._root);
+
+	final _StringsEn _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'Flip a coin';
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsEn._(this._root);
@@ -453,6 +464,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsTimerFr timer = _StringsToolsTimerFr._(_root);
 	@override late final _StringsToolsStopwatchFr stopwatch = _StringsToolsStopwatchFr._(_root);
 	@override late final _StringsToolsRouletteFr roulette = _StringsToolsRouletteFr._(_root);
+	@override late final _StringsToolsFlipcoinsFr flipcoins = _StringsToolsFlipcoinsFr._(_root);
 }
 
 // Path: credits
@@ -602,6 +614,16 @@ class _StringsToolsRouletteFr implements _StringsToolsRouletteEn {
 	@override late final _StringsToolsRouletteWarningFr warning = _StringsToolsRouletteWarningFr._(_root);
 }
 
+// Path: tools.flipcoins
+class _StringsToolsFlipcoinsFr implements _StringsToolsFlipcoinsEn {
+	_StringsToolsFlipcoinsFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Pile ou face';
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsFr implements _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsFr._(this._root);
@@ -723,6 +745,7 @@ extension on _StringsEn {
 			case 'tools.roulette.warning.you_cant_add_more_than_x_items': return ({required Object numberOfItems}) => 'You can\'t have more than ${numberOfItems} items in the roulette.';
 			case 'tools.roulette.warning.you_must_have_at_least_x_items': return ({required Object numberOfItems}) => 'You must have at least ${numberOfItems} items in the roulette.';
 			case 'tools.roulette.warning.you_must_enter_an_item_name': return 'You must enter an item name.';
+			case 'tools.flipcoins.title': return 'Flip a coin';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -794,6 +817,7 @@ extension on _StringsFr {
 			case 'tools.roulette.warning.you_cant_add_more_than_x_items': return ({required Object numberOfItems}) => 'Vous ne pouvez pas ajouter plus de ${numberOfItems} items dans la roulette';
 			case 'tools.roulette.warning.you_must_have_at_least_x_items': return ({required Object numberOfItems}) => 'Vous devez avoir au moins ${numberOfItems} items dans la roulette';
 			case 'tools.roulette.warning.you_must_enter_an_item_name': return 'Vous devez entrer un nom d\'item';
+			case 'tools.flipcoins.title': return 'Pile ou face';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';

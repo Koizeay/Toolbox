@@ -84,6 +84,9 @@
         "you_must_have_at_least_x_items": "Vous devez avoir au moins $numberOfItems items dans la roulette",
         "you_must_enter_an_item_name": "Vous devez entrer un nom d'item"
       }
+    },
+    "flipcoins": {
+      "title": "Pile ou face"
     }
   },
   "credits": {

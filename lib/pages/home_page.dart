@@ -5,6 +5,7 @@ import 'package:toolbox/gen/strings.g.dart';
 import 'package:toolbox/models/tool.dart';
 import 'package:toolbox/pages/clock_page.dart';
 import 'package:toolbox/pages/credits_page.dart';
+import 'package:toolbox/pages/flipcoins_page.dart';
 import 'package:toolbox/pages/metronome_page.dart';
 import 'package:toolbox/pages/micspeak_page.dart';
 import 'package:toolbox/pages/nslookup_page.dart';
@@ -38,6 +39,8 @@ class _HomePage extends State<HomePage> {
     tools = [
       Tool(t.tools.clock.title, "assets/images/tools/clock.png",
           const ClockPage()),
+      Tool(t.tools.flipcoins.title, "assets/images/tools/flipcoins.png",
+          const FlipCoinsPage()),
       Tool(t.tools.metronome.title, "assets/images/tools/metronome.png",
           const MetronomePage()),
       Tool(t.tools.micspeak.title, "assets/images/tools/micspeak.png",
