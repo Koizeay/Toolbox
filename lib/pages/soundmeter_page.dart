@@ -37,7 +37,9 @@ class _SoundMeterPage extends State<SoundMeterPage> {
 
   @override
   void dispose() {
-    stopRecorder();
+    if (mounted) {
+      stopRecorder();
+    }
     setHomePageRotation();
     super.dispose();
   }
@@ -61,7 +63,10 @@ class _SoundMeterPage extends State<SoundMeterPage> {
   void onData(NoiseReading noiseReading) {
     setState(() {
       meanDecibel = noiseReading.meanDecibel;
-      if (noiseReading.meanDecibel > maxDecibel) {
+      if (meanDecibel == double.infinity || meanDecibel == double.negativeInfinity) {
+        meanDecibel = 0.0;
+      }
+      if (meanDecibel > maxDecibel) {
         maxDecibel = noiseReading.meanDecibel;
       }
     });
@@ -79,9 +84,7 @@ class _SoundMeterPage extends State<SoundMeterPage> {
         _noiseSubscription?.cancel();
         _noiseSubscription = null;
       }
-      setState(() {
-        meanDecibel = 0.0;
-      });
+      meanDecibel = 0.0;
     } catch (err) {
       if (kDebugMode) {
         print('stopRecorder error: $err');
