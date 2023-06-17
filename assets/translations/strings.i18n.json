@@ -97,6 +97,11 @@
         "min_must_be_lower_than_max": "The minimum number must be lower than the maximum number.",
         "min_and_max_must_be_between_x_and_y": "The minimum and maximum numbers must be between $minNumberLimit and $maxNumberLimit."
       }
+    },
+    "randomcolor": {
+      "title": "Random color",
+      "hint": "Tap the color to change it",
+      "copied_to_clipboard": "Copied to clipboard"
     }
   },
   "credits": {

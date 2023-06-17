@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 2
-/// Strings: 140 (70 per locale)
+/// Strings: 146 (73 per locale)
 ///
-/// Built on 2023-05-15 at 16:05 UTC
+/// Built on 2023-06-17 at 16:11 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -185,6 +185,7 @@ class _StringsToolsEn {
 	late final _StringsToolsRouletteEn roulette = _StringsToolsRouletteEn._(_root);
 	late final _StringsToolsFlipcoinsEn flipcoins = _StringsToolsFlipcoinsEn._(_root);
 	late final _StringsToolsRandomnumberEn randomnumber = _StringsToolsRandomnumberEn._(_root);
+	late final _StringsToolsRandomcolorEn randomcolor = _StringsToolsRandomcolorEn._(_root);
 }
 
 // Path: credits
@@ -357,6 +358,18 @@ class _StringsToolsRandomnumberEn {
 	late final _StringsToolsRandomnumberErrorEn error = _StringsToolsRandomnumberErrorEn._(_root);
 }
 
+// Path: tools.randomcolor
+class _StringsToolsRandomcolorEn {
+	_StringsToolsRandomcolorEn._(this._root);
+
+	final _StringsEn _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'Random color';
+	String get hint => 'Tap the color to change it';
+	String get copied_to_clipboard => 'Copied to clipboard';
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsEn._(this._root);
@@ -492,6 +505,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsRouletteFr roulette = _StringsToolsRouletteFr._(_root);
 	@override late final _StringsToolsFlipcoinsFr flipcoins = _StringsToolsFlipcoinsFr._(_root);
 	@override late final _StringsToolsRandomnumberFr randomnumber = _StringsToolsRandomnumberFr._(_root);
+	@override late final _StringsToolsRandomcolorFr randomcolor = _StringsToolsRandomcolorFr._(_root);
 }
 
 // Path: credits
@@ -664,6 +678,18 @@ class _StringsToolsRandomnumberFr implements _StringsToolsRandomnumberEn {
 	@override late final _StringsToolsRandomnumberErrorFr error = _StringsToolsRandomnumberErrorFr._(_root);
 }
 
+// Path: tools.randomcolor
+class _StringsToolsRandomcolorFr implements _StringsToolsRandomcolorEn {
+	_StringsToolsRandomcolorFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Couleur aléatoire';
+	@override String get hint => 'Toucher la couleur pour la changer';
+	@override String get copied_to_clipboard => 'Copié dans le presse-papier';
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsFr implements _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsFr._(this._root);
@@ -804,6 +830,9 @@ extension on _StringsEn {
 			case 'tools.randomnumber.error.invalid_number': return 'Invalid number, please try again.';
 			case 'tools.randomnumber.error.min_must_be_lower_than_max': return 'The minimum number must be lower than the maximum number.';
 			case 'tools.randomnumber.error.min_and_max_must_be_between_x_and_y': return ({required Object minNumberLimit, required Object maxNumberLimit}) => 'The minimum and maximum numbers must be between ${minNumberLimit} and ${maxNumberLimit}.';
+			case 'tools.randomcolor.title': return 'Random color';
+			case 'tools.randomcolor.hint': return 'Tap the color to change it';
+			case 'tools.randomcolor.copied_to_clipboard': return 'Copied to clipboard';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -882,6 +911,9 @@ extension on _StringsFr {
 			case 'tools.randomnumber.error.invalid_number': return 'Nombre invalide, veuillez réessayer.';
 			case 'tools.randomnumber.error.min_must_be_lower_than_max': return 'Le nombre minimum doit être inférieur au nombre maximum.';
 			case 'tools.randomnumber.error.min_and_max_must_be_between_x_and_y': return ({required Object minNumberLimit, required Object maxNumberLimit}) => 'Les nombres minimum et maximum doivent être compris entre ${minNumberLimit} et ${maxNumberLimit}.';
+			case 'tools.randomcolor.title': return 'Couleur aléatoire';
+			case 'tools.randomcolor.hint': return 'Toucher la couleur pour la changer';
+			case 'tools.randomcolor.copied_to_clipboard': return 'Copié dans le presse-papier';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';
