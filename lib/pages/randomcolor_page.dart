@@ -32,43 +32,48 @@ class _RandomColorPage extends State<RandomColorPage> {
           title: Text("${t.generic.app_name} - ${t.tools.randomcolor.title}"),
         ),
         body: SafeArea(
-          child: Column(
-            children: [
-              Text(t.tools.randomcolor.hint, style: const TextStyle(fontSize: 20),),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: SizedBox(
-                  width: double.infinity,
-                  height: 200,
-                  child: GestureDetector(
-                    onTap: () {
-                      changeColor();
-                    },
-                    child: Container(
-                      clipBehavior: Clip.hardEdge,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15.0),
-                      ),
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(4.0),
+                  child: Text(t.tools.randomcolor.hint, style: const TextStyle(fontSize: 20), textAlign: TextAlign.center,),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    width: double.infinity,
+                    height: 200,
+                    child: GestureDetector(
+                      onTap: () {
+                        changeColor();
+                      },
                       child: Container(
-                        color: _color,
+                        clipBehavior: Clip.hardEdge,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15.0),
+                        ),
+                        child: Container(
+                          color: _color,
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  Clipboard.setData(ClipboardData(text: "#${_color.value.toRadixString(16).toUpperCase().substring(2)}"));
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(content: Text(t.tools.randomcolor.copied_to_clipboard)),
-                  );
-                },
-                child: Text(
-                  "#${_color.value.toRadixString(16).toUpperCase().substring(2)}",
-                  style: const TextStyle(fontSize: 20),
+                GestureDetector(
+                  onTap: () {
+                    Clipboard.setData(ClipboardData(text: "#${_color.value.toRadixString(16).toUpperCase().substring(2)}"));
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(content: Text(t.tools.randomcolor.copied_to_clipboard)),
+                    );
+                  },
+                  child: Text(
+                    "#${_color.value.toRadixString(16).toUpperCase().substring(2)}",
+                    style: const TextStyle(fontSize: 20),
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         )
     );
