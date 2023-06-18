@@ -29,7 +29,7 @@ class _MetronomePage extends State<MetronomePage> {
   @override
   void dispose() {
     player.dispose();
-    stopMetronome();
+    stopMetronome(isDispose: true);
     super.dispose();
   }
 
@@ -56,12 +56,14 @@ class _MetronomePage extends State<MetronomePage> {
     });
   }
 
-  void stopMetronome() {
+  void stopMetronome({isDispose = false}) {
     timer?.cancel();
     beatIndex = 0;
-    setState(() {
-      isPlaying = false;
-    });
+    if (!isDispose) {
+      setState(() {
+        isPlaying = false;
+      });
+    }
   }
 
   @override
@@ -71,7 +73,8 @@ class _MetronomePage extends State<MetronomePage> {
         title: Text("${t.generic.app_name} - ${t.tools.metronome.title}"),
       ),
       body: SafeArea(
-        child: Center(
+        child: SingleChildScrollView(
+          child: Center(
             child: Column(
               children: [
                 Text(
@@ -113,6 +116,7 @@ class _MetronomePage extends State<MetronomePage> {
                 ),
               ],
             ),
+          ),
         ),
       ),
     );
