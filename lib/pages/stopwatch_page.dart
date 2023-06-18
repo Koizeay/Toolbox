@@ -28,7 +28,7 @@ class _StopwatchPage extends State<StopwatchPage> {
   @override
   void dispose() {
     setHomePageRotation();
-    stopTimer();
+    stopTimer(isDispose: true);
     super.dispose();
   }
 
@@ -45,8 +45,8 @@ class _StopwatchPage extends State<StopwatchPage> {
     });
   }
 
-  void stopTimer() {
-    if (mounted) {
+  void stopTimer({bool isDispose = false}) {
+    if (mounted && !isDispose) {
       setState(() {
         isRunning = false;
       });
@@ -77,8 +77,7 @@ class _StopwatchPage extends State<StopwatchPage> {
               .app_name} - ${t.tools.stopwatch.title}"),
         ),
         body: SafeArea(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
+          child: ListView(
             children: [
               Padding(
                 padding: const EdgeInsets.all(16.0),
