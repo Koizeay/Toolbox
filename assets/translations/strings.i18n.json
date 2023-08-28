@@ -102,6 +102,20 @@
       "title": "Random color",
       "hint": "Tap the color to change it",
       "copied_to_clipboard": "Copied to clipboard"
+    },
+    "sshclient": {
+      "title": "SSH client",
+      "host": "Host",
+      "port": "Port",
+      "username": "Username",
+      "password": "Password",
+      "connect": "Connect",
+      "note_key_auth_not_supported": "Note: Key authentication is not yet supported. It will be added in a future update.",
+      "error": {
+        "invalid_port": "Invalid port",
+        "authentication_failed": "Authentication failed",
+        "connection_failed": "Could not connect to host"
+      }
     }
   },
   "credits": {

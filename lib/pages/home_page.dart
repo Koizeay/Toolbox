@@ -15,6 +15,7 @@ import 'package:toolbox/pages/randomcolor_page.dart';
 import 'package:toolbox/pages/randomnumber_page.dart';
 import 'package:toolbox/pages/roulette_page.dart';
 import 'package:toolbox/pages/soundmeter_page.dart';
+import 'package:toolbox/pages/sshclient_page.dart';
 import 'package:toolbox/pages/stopwatch_page.dart';
 import 'package:toolbox/pages/timer_page.dart';
 import 'package:toolbox/widgets/tool_card.dart';
@@ -59,6 +60,8 @@ class _HomePage extends State<HomePage> {
           const RandomNumberPage()),
       Tool(t.tools.roulette.title, "assets/images/tools/roulette.png",
           const RoulettePage()),
+      Tool(t.tools.sshclient.title, "assets/images/tools/sshclient.png",
+          const SshClientPage()),
       Tool(t.tools.soundmeter.title, "assets/images/tools/soundmeter.png",
           const SoundMeterPage()),
       Tool(t.tools.stopwatch.title, "assets/images/tools/stopwatch.png",

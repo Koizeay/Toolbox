@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 2
-/// Strings: 146 (73 per locale)
+/// Strings: 166 (83 per locale)
 ///
-/// Built on 2023-06-17 at 16:11 UTC
+/// Built on 2023-08-28 at 18:11 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -186,6 +186,7 @@ class _StringsToolsEn {
 	late final _StringsToolsFlipcoinsEn flipcoins = _StringsToolsFlipcoinsEn._(_root);
 	late final _StringsToolsRandomnumberEn randomnumber = _StringsToolsRandomnumberEn._(_root);
 	late final _StringsToolsRandomcolorEn randomcolor = _StringsToolsRandomcolorEn._(_root);
+	late final _StringsToolsSshclientEn sshclient = _StringsToolsSshclientEn._(_root);
 }
 
 // Path: credits
@@ -370,6 +371,23 @@ class _StringsToolsRandomcolorEn {
 	String get copied_to_clipboard => 'Copied to clipboard';
 }
 
+// Path: tools.sshclient
+class _StringsToolsSshclientEn {
+	_StringsToolsSshclientEn._(this._root);
+
+	final _StringsEn _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'SSH client';
+	String get host => 'Host';
+	String get port => 'Port';
+	String get username => 'Username';
+	String get password => 'Password';
+	String get connect => 'Connect';
+	String get note_key_auth_not_supported => 'Note: Key authentication is not yet supported. It will be added in a future update.';
+	late final _StringsToolsSshclientErrorEn error = _StringsToolsSshclientErrorEn._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsEn._(this._root);
@@ -442,6 +460,18 @@ class _StringsToolsRandomnumberErrorEn {
 	String min_and_max_must_be_between_x_and_y({required Object minNumberLimit, required Object maxNumberLimit}) => 'The minimum and maximum numbers must be between ${minNumberLimit} and ${maxNumberLimit}.';
 }
 
+// Path: tools.sshclient.error
+class _StringsToolsSshclientErrorEn {
+	_StringsToolsSshclientErrorEn._(this._root);
+
+	final _StringsEn _root; // ignore: unused_field
+
+	// Translations
+	String get invalid_port => 'Invalid port';
+	String get authentication_failed => 'Authentication failed';
+	String get connection_failed => 'Could not connect to host';
+}
+
 // Path: <root>
 class _StringsFr implements _StringsEn {
 
@@ -506,6 +536,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsFlipcoinsFr flipcoins = _StringsToolsFlipcoinsFr._(_root);
 	@override late final _StringsToolsRandomnumberFr randomnumber = _StringsToolsRandomnumberFr._(_root);
 	@override late final _StringsToolsRandomcolorFr randomcolor = _StringsToolsRandomcolorFr._(_root);
+	@override late final _StringsToolsSshclientFr sshclient = _StringsToolsSshclientFr._(_root);
 }
 
 // Path: credits
@@ -690,6 +721,23 @@ class _StringsToolsRandomcolorFr implements _StringsToolsRandomcolorEn {
 	@override String get copied_to_clipboard => 'Copié dans le presse-papier';
 }
 
+// Path: tools.sshclient
+class _StringsToolsSshclientFr implements _StringsToolsSshclientEn {
+	_StringsToolsSshclientFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Client SSH';
+	@override String get host => 'Hôte';
+	@override String get port => 'Port';
+	@override String get username => 'Nom d\'utilisateur';
+	@override String get password => 'Mot de passe';
+	@override String get connect => 'Se connecter';
+	@override String get note_key_auth_not_supported => 'Note : L\'authentification par clé n\'est pas encore prise en charge. Ce sera ajouté dans une prochaine mise à jour.';
+	@override late final _StringsToolsSshclientErrorFr error = _StringsToolsSshclientErrorFr._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsFr implements _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsFr._(this._root);
@@ -760,6 +808,18 @@ class _StringsToolsRandomnumberErrorFr implements _StringsToolsRandomnumberError
 	@override String get invalid_number => 'Nombre invalide, veuillez réessayer.';
 	@override String get min_must_be_lower_than_max => 'Le nombre minimum doit être inférieur au nombre maximum.';
 	@override String min_and_max_must_be_between_x_and_y({required Object minNumberLimit, required Object maxNumberLimit}) => 'Les nombres minimum et maximum doivent être compris entre ${minNumberLimit} et ${maxNumberLimit}.';
+}
+
+// Path: tools.sshclient.error
+class _StringsToolsSshclientErrorFr implements _StringsToolsSshclientErrorEn {
+	_StringsToolsSshclientErrorFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get invalid_port => 'Port invalide';
+	@override String get authentication_failed => 'Échec de l\'authentification';
+	@override String get connection_failed => 'Impossible de se connecter à l\'hôte';
 }
 
 /// Flat map(s) containing all translations.
@@ -833,6 +893,16 @@ extension on _StringsEn {
 			case 'tools.randomcolor.title': return 'Random color';
 			case 'tools.randomcolor.hint': return 'Tap the color to change it';
 			case 'tools.randomcolor.copied_to_clipboard': return 'Copied to clipboard';
+			case 'tools.sshclient.title': return 'SSH client';
+			case 'tools.sshclient.host': return 'Host';
+			case 'tools.sshclient.port': return 'Port';
+			case 'tools.sshclient.username': return 'Username';
+			case 'tools.sshclient.password': return 'Password';
+			case 'tools.sshclient.connect': return 'Connect';
+			case 'tools.sshclient.note_key_auth_not_supported': return 'Note: Key authentication is not yet supported. It will be added in a future update.';
+			case 'tools.sshclient.error.invalid_port': return 'Invalid port';
+			case 'tools.sshclient.error.authentication_failed': return 'Authentication failed';
+			case 'tools.sshclient.error.connection_failed': return 'Could not connect to host';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -914,6 +984,16 @@ extension on _StringsFr {
 			case 'tools.randomcolor.title': return 'Couleur aléatoire';
 			case 'tools.randomcolor.hint': return 'Toucher la couleur pour la changer';
 			case 'tools.randomcolor.copied_to_clipboard': return 'Copié dans le presse-papier';
+			case 'tools.sshclient.title': return 'Client SSH';
+			case 'tools.sshclient.host': return 'Hôte';
+			case 'tools.sshclient.port': return 'Port';
+			case 'tools.sshclient.username': return 'Nom d\'utilisateur';
+			case 'tools.sshclient.password': return 'Mot de passe';
+			case 'tools.sshclient.connect': return 'Se connecter';
+			case 'tools.sshclient.note_key_auth_not_supported': return 'Note : L\'authentification par clé n\'est pas encore prise en charge. Ce sera ajouté dans une prochaine mise à jour.';
+			case 'tools.sshclient.error.invalid_port': return 'Port invalide';
+			case 'tools.sshclient.error.authentication_failed': return 'Échec de l\'authentification';
+			case 'tools.sshclient.error.connection_failed': return 'Impossible de se connecter à l\'hôte';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';

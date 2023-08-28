@@ -102,6 +102,20 @@
       "title": "Couleur aléatoire",
       "hint": "Toucher la couleur pour la changer",
       "copied_to_clipboard": "Copié dans le presse-papier"
+    },
+    "sshclient": {
+      "title": "Client SSH",
+      "host": "Hôte",
+      "port": "Port",
+      "username": "Nom d'utilisateur",
+      "password": "Mot de passe",
+      "connect": "Se connecter",
+      "note_key_auth_not_supported": "Note : L'authentification par clé n'est pas encore prise en charge. Ce sera ajouté dans une prochaine mise à jour.",
+      "error": {
+        "invalid_port": "Port invalide",
+        "authentication_failed": "Échec de l'authentification",
+        "connection_failed": "Impossible de se connecter à l'hôte"
+      }
     }
   },
   "credits": {

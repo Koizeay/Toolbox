@@ -58,6 +58,8 @@ dependencies:
   vibration: ^1.7.7
   roulette: ^0.1.3+1
   flippy: ^0.1.1
+  dartssh2: ^2.8.2
+  xterm: ^3.5.0
 
 dev_dependencies:
   flutter_test:
