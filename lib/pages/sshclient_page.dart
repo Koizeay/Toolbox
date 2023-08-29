@@ -111,65 +111,67 @@ class _SshClientPage extends State<SshClientPage> {
               : loading ? const Center(child: CircularProgressIndicator())
               : Padding(
             padding: const EdgeInsets.all(16.0),
-            child: Column(
-              children: [
-                TextField(
-                  controller: hostController,
-                  autocorrect: false,
-                  enableSuggestions: false,
-                  decoration: InputDecoration(
-                    hintText: t.tools.sshclient.host
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  TextField(
+                    controller: hostController,
+                    autocorrect: false,
+                    enableSuggestions: false,
+                    decoration: InputDecoration(
+                      hintText: t.tools.sshclient.host
+                    ),
                   ),
-                ),
-                const SizedBox(height: 8),
-                TextField(
-                  controller: portController,
-                  keyboardType: TextInputType.number,
-                  inputFormatters: <TextInputFormatter>[
-                    FilteringTextInputFormatter.digitsOnly
-                  ],
-                  autocorrect: false,
-                  enableSuggestions: false,
-                  decoration: InputDecoration(
-                    hintText: t.tools.sshclient.port,
+                  const SizedBox(height: 8),
+                  TextField(
+                    controller: portController,
+                    keyboardType: TextInputType.number,
+                    inputFormatters: <TextInputFormatter>[
+                      FilteringTextInputFormatter.digitsOnly
+                    ],
+                    autocorrect: false,
+                    enableSuggestions: false,
+                    decoration: InputDecoration(
+                      hintText: t.tools.sshclient.port,
+                    ),
                   ),
-                ),
-                const SizedBox(height: 8),
-                TextField(
-                  controller: usernameController,
-                  autocorrect: false,
-                  enableSuggestions: false,
-                  decoration: InputDecoration(
-                    hintText: t.tools.sshclient.username,
+                  const SizedBox(height: 8),
+                  TextField(
+                    controller: usernameController,
+                    autocorrect: false,
+                    enableSuggestions: false,
+                    decoration: InputDecoration(
+                      hintText: t.tools.sshclient.username,
+                    ),
                   ),
-                ),
-                const SizedBox(height: 8),
-                TextField(
-                  controller: passwordController,
-                  obscureText: true,
-                  autocorrect: false,
-                  enableSuggestions: false,
-                  decoration: InputDecoration(
-                    hintText: t.tools.sshclient.password,
+                  const SizedBox(height: 8),
+                  TextField(
+                    controller: passwordController,
+                    obscureText: true,
+                    autocorrect: false,
+                    enableSuggestions: false,
+                    decoration: InputDecoration(
+                      hintText: t.tools.sshclient.password,
+                    ),
                   ),
-                ),
-                const SizedBox(height: 8),
-                ElevatedButton(
-                  onPressed: () async {
-                    setState(() {
-                      loading = true;
-                    });
-                    connectToSsh();
-                  },
-                  child: Text(t.tools.sshclient.connect),
-                ),
-                const SizedBox(height: 8),
-                Text(
-                    t.tools.sshclient.note_key_auth_not_supported,
-                    style: TextStyle(color: Colors.grey[600], fontSize: 12, fontStyle: FontStyle.italic),
-                    textAlign: TextAlign.center,
-                )
-              ],
+                  const SizedBox(height: 8),
+                  ElevatedButton(
+                    onPressed: () async {
+                      setState(() {
+                        loading = true;
+                      });
+                      connectToSsh();
+                    },
+                    child: Text(t.tools.sshclient.connect),
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                      t.tools.sshclient.note_key_auth_not_supported,
+                      style: TextStyle(color: Colors.grey[600], fontSize: 12, fontStyle: FontStyle.italic),
+                      textAlign: TextAlign.center,
+                  )
+                ],
+              ),
             ),
           ),
         )
