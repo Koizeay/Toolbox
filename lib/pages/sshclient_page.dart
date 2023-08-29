@@ -3,7 +3,9 @@ import 'dart:typed_data';
 import 'package:dartssh2/dartssh2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:toolbox/core/dialogs.dart';
+import 'package:toolbox/core/shared_preferences.dart';
 import 'package:toolbox/gen/strings.g.dart';
 import 'package:xterm/core.dart';
 import 'package:xterm/ui.dart';
@@ -27,10 +29,26 @@ class _SshClientPage extends State<SshClientPage> {
   SSHSession? shell;
 
   @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_){
+      loadPreferences();
+    });
+  }
+
+  @override
   void dispose() {
     shell?.kill(SSHSignal.QUIT);
     client?.close();
     super.dispose();
+  }
+
+  Future<void> loadPreferences() async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+
+    hostController.text = prefs.getString(SHARED_PREFERENCES_TOOL_SSHCLIENT_HOST) ?? "";
+    usernameController.text = prefs.getString(SHARED_PREFERENCES_TOOL_SSHCLIENT_USERNAME) ?? "";
+    portController.text = prefs.getInt(SHARED_PREFERENCES_TOOL_SSHCLIENT_PORT)?.toString() ?? "22";
   }
 
   void initTerminal() {
@@ -60,29 +78,46 @@ class _SshClientPage extends State<SshClientPage> {
   }
 
   Future<void> connectToSsh() async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+
     String host = hostController.text;
     String username = usernameController.text;
     String password = passwordController.text;
     int port = 22;
+
     try {
       port = int.parse(portController.text);
     } catch (e) {
-      showOkTextDialog(context, t.generic.error, t.tools.sshclient.error.invalid_port);
+      if (mounted) {
+        showOkTextDialog(
+            context, t.generic.error, t.tools.sshclient.error.invalid_port);
+      }
       return;
     }
     try {
       await initSshClient(host, username, password, port);
       terminal = Terminal();
       initTerminal();
+
+      await prefs.setString(SHARED_PREFERENCES_TOOL_SSHCLIENT_HOST, host);
+      await prefs.setString(SHARED_PREFERENCES_TOOL_SSHCLIENT_USERNAME, username);
+      await prefs.setInt(SHARED_PREFERENCES_TOOL_SSHCLIENT_PORT, port);
+
       if (mounted) {
         setState(() {
           isConnected = true;
         });
       }
     } on SSHAuthFailError catch (e) {
-      showOkTextDialog(context, t.generic.error, t.tools.sshclient.error.authentication_failed);
+      if (mounted) {
+        showOkTextDialog(context, t.generic.error,
+            t.tools.sshclient.error.authentication_failed);
+      }
     } catch (e) {
-      showOkTextDialog(context, t.generic.error, t.tools.sshclient.error.connection_failed);
+      if (mounted) {
+        showOkTextDialog(context, t.generic.error,
+            t.tools.sshclient.error.connection_failed);
+      }
     } finally {
       if (mounted) {
         setState(() {

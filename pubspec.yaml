@@ -60,6 +60,7 @@ dependencies:
   flippy: ^0.1.1
   dartssh2: ^2.8.2
   xterm: ^3.5.0
+  shared_preferences: ^2.2.0
 
 dev_dependencies:
   flutter_test:
