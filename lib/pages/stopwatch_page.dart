@@ -77,91 +77,98 @@ class _StopwatchPage extends State<StopwatchPage> {
               .app_name} - ${t.tools.stopwatch.title}"),
         ),
         body: SafeArea(
-          child: ListView(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: FittedBox(
-                  fit: BoxFit.fitHeight,
-                  child: Text(
-                      getFormattedTimeFromMilliseconds(
-                          duration.inMilliseconds.toDouble()),
-                      style: const TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 100,
-                      )
-                  ),
-                ),
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+          child: SizedBox(
+            width: double.infinity,
+            height: double.infinity,
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisSize:MainAxisSize.min,
                 children: [
-                  isRunning ?
-                  Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.fromLTRB(16, 0, 4, 0),
-                      child: ElevatedButton(
-                        onPressed: () {
-                          stopTimer();
-                        },
-                        child: Text(t.tools.stopwatch.stop),
-                      ),
-                    ),
-                  ) : Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.fromLTRB(16, 0, 4, 0),
-                      child: ElevatedButton(
-                        onPressed: () {
-                          startTimer();
-                        },
-                        child: Text(t.tools.stopwatch.start),
+                  Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: FittedBox(
+                      fit: BoxFit.fitHeight,
+                      child: Text(
+                          getFormattedTimeFromMilliseconds(
+                              duration.inMilliseconds.toDouble()),
+                          style: const TextStyle(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 100,
+                          )
                       ),
                     ),
                   ),
-                  Expanded(
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      isRunning ?
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(16, 0, 4, 0),
+                          child: ElevatedButton(
+                            onPressed: () {
+                              stopTimer();
+                            },
+                            child: Text(t.tools.stopwatch.stop),
+                          ),
+                        ),
+                      ) : Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(16, 0, 4, 0),
+                          child: ElevatedButton(
+                            onPressed: () {
+                              startTimer();
+                            },
+                            child: Text(t.tools.stopwatch.start),
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(4, 0, 16, 0),
+                          child: ElevatedButton(
+                            onPressed: () {
+                              resetTimer();
+                            },
+                            child: Text(t.tools.stopwatch.reset),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    width: double.infinity,
                     child: Padding(
-                      padding: const EdgeInsets.fromLTRB(4, 0, 16, 0),
+                      padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
                       child: ElevatedButton(
                         onPressed: () {
-                          resetTimer();
+                          addLap();
                         },
-                        child: Text(t.tools.stopwatch.reset),
+                        child: Text(t.tools.stopwatch.lap),
                       ),
                     ),
+                  ),
+                  ListView.builder(
+                    physics: const NeverScrollableScrollPhysics(),
+                    itemBuilder: (context, index) {
+                    return ListTile(
+                      title: Text(
+                          "${index + 1}) ${getFormattedTimeFromMilliseconds(
+                              laps[index].inMilliseconds.toDouble())}",
+                          style: const TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 25,
+                              color: YaruColors.kubuntuBlue
+                          )
+                      ),
+                    );
+                  },
+                    itemCount: laps.length,
+                    shrinkWrap: true,
                   ),
                 ],
               ),
-              SizedBox(
-                width: double.infinity,
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      addLap();
-                    },
-                    child: Text(t.tools.stopwatch.lap),
-                  ),
-                ),
-              ),
-              Expanded(
-                child: ListView.builder(itemBuilder: (context, index) {
-                  return ListTile(
-                    title: Text(
-                        "${index + 1}) ${getFormattedTimeFromMilliseconds(
-                            laps[index].inMilliseconds.toDouble())}",
-                        style: const TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 25,
-                            color: YaruColors.kubuntuBlue
-                        )
-                    ),
-                  );
-                },
-                  itemCount: laps.length,
-                  shrinkWrap: true,
-                ),
-              ),
-            ],
+            ),
           ),
         )
     );
