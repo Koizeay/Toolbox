@@ -4,7 +4,9 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_fortune_wheel/flutter_fortune_wheel.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:toolbox/core/dialogs.dart';
+import 'package:toolbox/core/shared_preferences.dart';
 import 'package:toolbox/gen/strings.g.dart';
 import 'package:yaru/yaru.dart';
 
@@ -33,8 +35,10 @@ class _RoulettePage extends State<RoulettePage> with TickerProviderStateMixin {
 
   @override
   void initState() {
-    initDefaultRouletteUnits();
     super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      initSavedRouletteUnits();
+    });
   }
 
   @override
@@ -43,10 +47,23 @@ class _RoulettePage extends State<RoulettePage> with TickerProviderStateMixin {
     super.dispose();
   }
 
-  void initDefaultRouletteUnits() {
-    addRouletteUnit(t.tools.roulette.default_1);
-    addRouletteUnit(t.tools.roulette.default_2);
-    addRouletteUnit(t.tools.roulette.default_3);
+  Future<void> initSavedRouletteUnits() async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    List<String> savedRouletteItems =
+        prefs.getStringList(SHARED_PREFERENCES_TOOL_ROULETTE_ITEMS) ?? [];
+    if (savedRouletteItems.length >= 2 && savedRouletteItems.length <= 8) {
+      for (String item in savedRouletteItems) {
+        await addRouletteUnit(item);
+      }
+    } else {
+      await initDefaultRouletteUnits();
+    }
+  }
+
+  Future<void> initDefaultRouletteUnits() async {
+    await addRouletteUnit(t.tools.roulette.default_1);
+    await addRouletteUnit(t.tools.roulette.default_2);
+    await addRouletteUnit(t.tools.roulette.default_3);
   }
 
   void rollRoulette() {
@@ -68,7 +85,17 @@ class _RoulettePage extends State<RoulettePage> with TickerProviderStateMixin {
     return text;
   }
 
-  void addRouletteUnit(String text) {
+  Future<void> saveRouletteUnitsToSharedPreferences() async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    List<String> rouletteItemsToSave = [];
+    for (FortuneItem item in rouletteItems) {
+      rouletteItemsToSave.add((item.child as Text).data ?? "?");
+    }
+    prefs.setStringList(
+        SHARED_PREFERENCES_TOOL_ROULETTE_ITEMS, rouletteItemsToSave);
+  }
+
+  Future<void> addRouletteUnit(String text) async {
     if (rouletteItems.length >= 8) {
       showOkTextDialog(context, t.generic.warning,
           t.tools.roulette.warning.you_cant_add_more_than_x_items(
@@ -91,9 +118,10 @@ class _RoulettePage extends State<RoulettePage> with TickerProviderStateMixin {
         ),
       ));
     });
+    await saveRouletteUnitsToSharedPreferences();
   }
 
-  void removeRouletteUnit(int index) {
+  Future<void> removeRouletteUnit(int index) async {
     if (rouletteItems.length <= 2) {
       showOkTextDialog(context, t.generic.warning,
           t.tools.roulette.warning.you_must_have_at_least_x_items(
@@ -103,6 +131,7 @@ class _RoulettePage extends State<RoulettePage> with TickerProviderStateMixin {
     setState(() {
       rouletteItems.removeAt(index);
     });
+    await saveRouletteUnitsToSharedPreferences();
   }
 
   void showAddRouletteUnitDialog() {
@@ -127,7 +156,7 @@ class _RoulettePage extends State<RoulettePage> with TickerProviderStateMixin {
               child: Text(t.generic.cancel),
             ),
             TextButton(
-              onPressed: () {
+              onPressed: () async {
                 Navigator.pop(context);
                 if (textController.text.isEmpty) {
                   showOkTextDialog(
@@ -135,7 +164,7 @@ class _RoulettePage extends State<RoulettePage> with TickerProviderStateMixin {
                       t.tools.roulette.warning.you_must_enter_an_item_name);
                   return;
                 }
-                addRouletteUnit(textController.text);
+                await addRouletteUnit(textController.text);
               },
               child: Text(t.tools.roulette.add),
             ),
@@ -161,9 +190,9 @@ class _RoulettePage extends State<RoulettePage> with TickerProviderStateMixin {
                   title: Text(
                       "${index + 1}) ${(rouletteItems[index].child as Text).data
                           .toString()}"),
-                  onTap: () {
+                  onTap: () async {
                     Navigator.pop(context);
-                    removeRouletteUnit(index);
+                    await removeRouletteUnit(index);
                   },
                 );
               },
