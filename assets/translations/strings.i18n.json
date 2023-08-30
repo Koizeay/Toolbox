@@ -105,16 +105,23 @@
     },
     "sshclient": {
       "title": "SSH client",
+      "use_password": "Use password",
+      "use_ssh_key": "Use SSH key",
       "host": "Host",
       "port": "Port",
       "username": "Username",
       "password": "Password",
       "connect": "Connect",
-      "note_key_auth_not_supported": "Note: Key authentication is not yet supported. It will be added in a future update.",
+      "select_private_key": "Select private key",
+      "no_private_key_selected": "No private key selected",
+      "passphrase": "Passphrase (leave empty if none)",
       "error": {
         "invalid_port": "Invalid port",
+        "invalid_passphrase": "You may have entered a passphrase when your key is not encrypted, or vice versa",
+        "invalid_private_key": "The key you provided is not a valid private key",
         "authentication_failed": "Authentication failed",
-        "connection_failed": "Could not connect to host"
+        "connection_failed": "Could not connect to host",
+        "unknown_error": "An unknown error occurred. Please try again"
       }
     }
   },

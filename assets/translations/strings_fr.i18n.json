@@ -105,16 +105,23 @@
     },
     "sshclient": {
       "title": "Client SSH",
+      "use_password": "Utiliser un mot de passe",
+      "use_ssh_key": "Utiliser une clé SSH",
       "host": "Hôte",
       "port": "Port",
       "username": "Nom d'utilisateur",
       "password": "Mot de passe",
       "connect": "Se connecter",
-      "note_key_auth_not_supported": "Note : L'authentification par clé n'est pas encore prise en charge. Ce sera ajouté dans une prochaine mise à jour.",
+      "select_private_key": "Sélectionner une clé privée",
+      "no_private_key_selected": "Aucune clé privée sélectionnée",
+      "passphrase": "Phrase secrète (laisser vide si aucune)",
       "error": {
         "invalid_port": "Port invalide",
+        "invalid_passphrase": "Vous avez peut-être saisi une phrase de passe alors que votre clé n'est pas cryptée, ou inversement",
+        "invalid_private_key": "La clé que vous avez fournie n'est pas une clé privée valide",
         "authentication_failed": "Échec de l'authentification",
-        "connection_failed": "Impossible de se connecter à l'hôte"
+        "connection_failed": "Impossible de se connecter à l'hôte",
+        "unknown_error": "Une erreur inconnue s'est produite, veuillez réessayer"
       }
     }
   },

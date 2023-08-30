@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 2
-/// Strings: 166 (83 per locale)
+/// Strings: 180 (90 per locale)
 ///
-/// Built on 2023-08-28 at 18:11 UTC
+/// Built on 2023-08-30 at 17:21 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -379,12 +379,16 @@ class _StringsToolsSshclientEn {
 
 	// Translations
 	String get title => 'SSH client';
+	String get use_password => 'Use password';
+	String get use_ssh_key => 'Use SSH key';
 	String get host => 'Host';
 	String get port => 'Port';
 	String get username => 'Username';
 	String get password => 'Password';
 	String get connect => 'Connect';
-	String get note_key_auth_not_supported => 'Note: Key authentication is not yet supported. It will be added in a future update.';
+	String get select_private_key => 'Select private key';
+	String get no_private_key_selected => 'No private key selected';
+	String get passphrase => 'Passphrase (leave empty if none)';
 	late final _StringsToolsSshclientErrorEn error = _StringsToolsSshclientErrorEn._(_root);
 }
 
@@ -468,8 +472,11 @@ class _StringsToolsSshclientErrorEn {
 
 	// Translations
 	String get invalid_port => 'Invalid port';
+	String get invalid_passphrase => 'You may have entered a passphrase when your key is not encrypted, or vice versa';
+	String get invalid_private_key => 'The key you provided is not a valid private key';
 	String get authentication_failed => 'Authentication failed';
 	String get connection_failed => 'Could not connect to host';
+	String get unknown_error => 'An unknown error occurred. Please try again';
 }
 
 // Path: <root>
@@ -729,12 +736,16 @@ class _StringsToolsSshclientFr implements _StringsToolsSshclientEn {
 
 	// Translations
 	@override String get title => 'Client SSH';
+	@override String get use_password => 'Utiliser un mot de passe';
+	@override String get use_ssh_key => 'Utiliser une clé SSH';
 	@override String get host => 'Hôte';
 	@override String get port => 'Port';
 	@override String get username => 'Nom d\'utilisateur';
 	@override String get password => 'Mot de passe';
 	@override String get connect => 'Se connecter';
-	@override String get note_key_auth_not_supported => 'Note : L\'authentification par clé n\'est pas encore prise en charge. Ce sera ajouté dans une prochaine mise à jour.';
+	@override String get select_private_key => 'Sélectionner une clé privée';
+	@override String get no_private_key_selected => 'Aucune clé privée sélectionnée';
+	@override String get passphrase => 'Phrase secrète (laisser vide si aucune)';
 	@override late final _StringsToolsSshclientErrorFr error = _StringsToolsSshclientErrorFr._(_root);
 }
 
@@ -818,8 +829,11 @@ class _StringsToolsSshclientErrorFr implements _StringsToolsSshclientErrorEn {
 
 	// Translations
 	@override String get invalid_port => 'Port invalide';
+	@override String get invalid_passphrase => 'Vous avez peut-être saisi une phrase de passe alors que votre clé n\'est pas cryptée, ou inversement';
+	@override String get invalid_private_key => 'La clé que vous avez fournie n\'est pas une clé privée valide';
 	@override String get authentication_failed => 'Échec de l\'authentification';
 	@override String get connection_failed => 'Impossible de se connecter à l\'hôte';
+	@override String get unknown_error => 'Une erreur inconnue s\'est produite, veuillez réessayer';
 }
 
 /// Flat map(s) containing all translations.
@@ -894,15 +908,22 @@ extension on _StringsEn {
 			case 'tools.randomcolor.hint': return 'Tap the color to change it';
 			case 'tools.randomcolor.copied_to_clipboard': return 'Copied to clipboard';
 			case 'tools.sshclient.title': return 'SSH client';
+			case 'tools.sshclient.use_password': return 'Use password';
+			case 'tools.sshclient.use_ssh_key': return 'Use SSH key';
 			case 'tools.sshclient.host': return 'Host';
 			case 'tools.sshclient.port': return 'Port';
 			case 'tools.sshclient.username': return 'Username';
 			case 'tools.sshclient.password': return 'Password';
 			case 'tools.sshclient.connect': return 'Connect';
-			case 'tools.sshclient.note_key_auth_not_supported': return 'Note: Key authentication is not yet supported. It will be added in a future update.';
+			case 'tools.sshclient.select_private_key': return 'Select private key';
+			case 'tools.sshclient.no_private_key_selected': return 'No private key selected';
+			case 'tools.sshclient.passphrase': return 'Passphrase (leave empty if none)';
 			case 'tools.sshclient.error.invalid_port': return 'Invalid port';
+			case 'tools.sshclient.error.invalid_passphrase': return 'You may have entered a passphrase when your key is not encrypted, or vice versa';
+			case 'tools.sshclient.error.invalid_private_key': return 'The key you provided is not a valid private key';
 			case 'tools.sshclient.error.authentication_failed': return 'Authentication failed';
 			case 'tools.sshclient.error.connection_failed': return 'Could not connect to host';
+			case 'tools.sshclient.error.unknown_error': return 'An unknown error occurred. Please try again';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -985,15 +1006,22 @@ extension on _StringsFr {
 			case 'tools.randomcolor.hint': return 'Toucher la couleur pour la changer';
 			case 'tools.randomcolor.copied_to_clipboard': return 'Copié dans le presse-papier';
 			case 'tools.sshclient.title': return 'Client SSH';
+			case 'tools.sshclient.use_password': return 'Utiliser un mot de passe';
+			case 'tools.sshclient.use_ssh_key': return 'Utiliser une clé SSH';
 			case 'tools.sshclient.host': return 'Hôte';
 			case 'tools.sshclient.port': return 'Port';
 			case 'tools.sshclient.username': return 'Nom d\'utilisateur';
 			case 'tools.sshclient.password': return 'Mot de passe';
 			case 'tools.sshclient.connect': return 'Se connecter';
-			case 'tools.sshclient.note_key_auth_not_supported': return 'Note : L\'authentification par clé n\'est pas encore prise en charge. Ce sera ajouté dans une prochaine mise à jour.';
+			case 'tools.sshclient.select_private_key': return 'Sélectionner une clé privée';
+			case 'tools.sshclient.no_private_key_selected': return 'Aucune clé privée sélectionnée';
+			case 'tools.sshclient.passphrase': return 'Phrase secrète (laisser vide si aucune)';
 			case 'tools.sshclient.error.invalid_port': return 'Port invalide';
+			case 'tools.sshclient.error.invalid_passphrase': return 'Vous avez peut-être saisi une phrase de passe alors que votre clé n\'est pas cryptée, ou inversement';
+			case 'tools.sshclient.error.invalid_private_key': return 'La clé que vous avez fournie n\'est pas une clé privée valide';
 			case 'tools.sshclient.error.authentication_failed': return 'Échec de l\'authentification';
 			case 'tools.sshclient.error.connection_failed': return 'Impossible de se connecter à l\'hôte';
+			case 'tools.sshclient.error.unknown_error': return 'Une erreur inconnue s\'est produite, veuillez réessayer';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';
