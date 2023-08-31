@@ -123,6 +123,11 @@
         "connection_failed": "Impossible de se connecter à l'hôte",
         "unknown_error": "Une erreur inconnue s'est produite, veuillez réessayer"
       }
+    },
+    "whiteboard": {
+      "title": "Tableau blanc",
+      "clear": "Effacer",
+      "undo": "Annuler"
     }
   },
   "credits": {

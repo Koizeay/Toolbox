@@ -123,6 +123,11 @@
         "connection_failed": "Could not connect to host",
         "unknown_error": "An unknown error occurred. Please try again"
       }
+    },
+    "whiteboard": {
+      "title": "Whiteboard",
+      "clear": "Clear",
+      "undo": "Undo"
     }
   },
   "credits": {

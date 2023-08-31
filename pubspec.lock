@@ -299,6 +299,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.2.19"
+  flutter_painting_tools:
+    dependency: "direct main"
+    description:
+      name: flutter_painting_tools
+      sha256: "6db162bf59c3f7c640203fc42041a02853a5b3fb3e977b07c661576141606808"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.3.0"
   flutter_plugin_android_lifecycle:
     dependency: transitive
     description:

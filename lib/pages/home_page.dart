@@ -18,6 +18,7 @@ import 'package:toolbox/pages/soundmeter_page.dart';
 import 'package:toolbox/pages/sshclient_page.dart';
 import 'package:toolbox/pages/stopwatch_page.dart';
 import 'package:toolbox/pages/timer_page.dart';
+import 'package:toolbox/pages/whiteboard_page.dart';
 import 'package:toolbox/widgets/tool_card.dart';
 import 'package:yaru/yaru.dart';
 
@@ -50,8 +51,8 @@ class _HomePage extends State<HomePage> {
           const MicSpeakPage()),
       Tool(t.tools.nslookup.title, "assets/images/tools/nslookup.png",
           const NslookupPage()),
-      Tool(
-          t.tools.ping.title, "assets/images/tools/ping.png", const PingPage()),
+      Tool(t.tools.ping.title, "assets/images/tools/ping.png",
+          const PingPage()),
       Tool(t.tools.qrreader.title, "assets/images/tools/qrreader.png",
           const QrReaderPage()),
       Tool(t.tools.randomcolor.title, "assets/images/tools/randomcolor.png",
@@ -67,7 +68,9 @@ class _HomePage extends State<HomePage> {
       Tool(t.tools.stopwatch.title, "assets/images/tools/stopwatch.png",
           const StopwatchPage()),
       Tool(t.tools.timer.title, "assets/images/tools/timer.png",
-          const TimerPage())
+          const TimerPage()),
+      Tool(t.tools.whiteboard.title, "assets/images/tools/whiteboard.png",
+          const WhiteBoardPage())
     ];
   }
 

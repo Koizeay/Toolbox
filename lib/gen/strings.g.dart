@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 2
-/// Strings: 180 (90 per locale)
+/// Strings: 186 (93 per locale)
 ///
-/// Built on 2023-08-30 at 17:21 UTC
+/// Built on 2023-08-31 at 18:40 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -187,6 +187,7 @@ class _StringsToolsEn {
 	late final _StringsToolsRandomnumberEn randomnumber = _StringsToolsRandomnumberEn._(_root);
 	late final _StringsToolsRandomcolorEn randomcolor = _StringsToolsRandomcolorEn._(_root);
 	late final _StringsToolsSshclientEn sshclient = _StringsToolsSshclientEn._(_root);
+	late final _StringsToolsWhiteboardEn whiteboard = _StringsToolsWhiteboardEn._(_root);
 }
 
 // Path: credits
@@ -392,6 +393,18 @@ class _StringsToolsSshclientEn {
 	late final _StringsToolsSshclientErrorEn error = _StringsToolsSshclientErrorEn._(_root);
 }
 
+// Path: tools.whiteboard
+class _StringsToolsWhiteboardEn {
+	_StringsToolsWhiteboardEn._(this._root);
+
+	final _StringsEn _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'Whiteboard';
+	String get clear => 'Clear';
+	String get undo => 'Undo';
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsEn._(this._root);
@@ -544,6 +557,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsRandomnumberFr randomnumber = _StringsToolsRandomnumberFr._(_root);
 	@override late final _StringsToolsRandomcolorFr randomcolor = _StringsToolsRandomcolorFr._(_root);
 	@override late final _StringsToolsSshclientFr sshclient = _StringsToolsSshclientFr._(_root);
+	@override late final _StringsToolsWhiteboardFr whiteboard = _StringsToolsWhiteboardFr._(_root);
 }
 
 // Path: credits
@@ -749,6 +763,18 @@ class _StringsToolsSshclientFr implements _StringsToolsSshclientEn {
 	@override late final _StringsToolsSshclientErrorFr error = _StringsToolsSshclientErrorFr._(_root);
 }
 
+// Path: tools.whiteboard
+class _StringsToolsWhiteboardFr implements _StringsToolsWhiteboardEn {
+	_StringsToolsWhiteboardFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Tableau blanc';
+	@override String get clear => 'Effacer';
+	@override String get undo => 'Annuler';
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsFr implements _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsFr._(this._root);
@@ -924,6 +950,9 @@ extension on _StringsEn {
 			case 'tools.sshclient.error.authentication_failed': return 'Authentication failed';
 			case 'tools.sshclient.error.connection_failed': return 'Could not connect to host';
 			case 'tools.sshclient.error.unknown_error': return 'An unknown error occurred. Please try again';
+			case 'tools.whiteboard.title': return 'Whiteboard';
+			case 'tools.whiteboard.clear': return 'Clear';
+			case 'tools.whiteboard.undo': return 'Undo';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -1022,6 +1051,9 @@ extension on _StringsFr {
 			case 'tools.sshclient.error.authentication_failed': return 'Échec de l\'authentification';
 			case 'tools.sshclient.error.connection_failed': return 'Impossible de se connecter à l\'hôte';
 			case 'tools.sshclient.error.unknown_error': return 'Une erreur inconnue s\'est produite, veuillez réessayer';
+			case 'tools.whiteboard.title': return 'Tableau blanc';
+			case 'tools.whiteboard.clear': return 'Effacer';
+			case 'tools.whiteboard.undo': return 'Annuler';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';
