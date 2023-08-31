@@ -1,7 +1,6 @@
 
-import 'dart:async';
-
 import 'package:flutter/material.dart';
+import 'package:reliable_interval_timer/reliable_interval_timer.dart';
 import 'package:toolbox/core/rotations.dart';
 import 'package:toolbox/core/time.dart';
 import 'package:toolbox/gen/strings.g.dart';
@@ -14,9 +13,10 @@ class StopwatchPage extends StatefulWidget {
 }
 
 class _StopwatchPage extends State<StopwatchPage> {
+  bool isLoading = false;
   bool isRunning = false;
   Duration duration = const Duration();
-  Timer? timer;
+  ReliableIntervalTimer? timer;
   List<Duration> laps = [];
 
   @override
@@ -33,25 +33,44 @@ class _StopwatchPage extends State<StopwatchPage> {
   }
 
   void startTimer() {
+    if (isLoading) {
+      return;
+    }
+    isLoading = true;
     setState(() {
       isRunning = true;
     });
-    timer = Timer.periodic(const Duration(milliseconds: 10), (timer) {
-      if (mounted) {
-        setState(() {
-          duration += const Duration(milliseconds: 10);
-        });
-      }
-    });
+    timer = ReliableIntervalTimer(
+      interval: const Duration(milliseconds: 10),
+      callback: (elapsedMilliseconds) {
+        updateDuration(Duration(milliseconds: elapsedMilliseconds));
+      },
+    );
+    timer?.start().then((value) => isLoading = false);
+  }
+
+  void updateDuration(Duration newDuration) {
+    if (mounted) {
+      setState(() {
+        duration += newDuration;
+      });
+    }
   }
 
   void stopTimer({bool isDispose = false}) {
+    if (isLoading) {
+      return;
+    }
+    isLoading = true;
     if (mounted && !isDispose) {
       setState(() {
         isRunning = false;
       });
     }
-    timer?.cancel();
+    if (timer != null) {
+      timer?.stop().then((value) => isLoading = false);
+      timer = null;
+    }
   }
 
   void resetTimer() {
