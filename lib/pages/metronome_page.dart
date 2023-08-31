@@ -4,6 +4,7 @@ import 'dart:async';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:numberpicker/numberpicker.dart';
+import 'package:reliable_interval_timer/reliable_interval_timer.dart';
 import 'package:toolbox/gen/strings.g.dart';
 
 class MetronomePage extends StatefulWidget {
@@ -13,9 +14,10 @@ class MetronomePage extends StatefulWidget {
 }
 
 class _MetronomePage extends State<MetronomePage> {
+  bool isLoading = false;
   bool isPlaying = false;
   final player = AudioPlayer();
-  Timer? timer;
+  ReliableIntervalTimer? timer;
   int beatIndex = 0;
 
   int _currentBpm = 120;
@@ -33,31 +35,36 @@ class _MetronomePage extends State<MetronomePage> {
     super.dispose();
   }
 
-  void startMetronome() {
+  Future<void> startMetronome() async {
     int currentBpm = _currentBpm;
     if (timer != null) {
-      stopMetronome();
+      await stopMetronome();
     }
-    timer = Timer.periodic(Duration(milliseconds: (60000 / _currentBpm).round()), (timer) {
-      if (currentBpm != _currentBpm) {
-        stopMetronome();
-        startMetronome();
-        return;
-      }
-      if (beatIndex == 0) {
-        player.play(AssetSource('audios/metronome_click0.wav'));
-      } else {
-        player.play(AssetSource('audios/metronome_click.wav'));
-      }
-      beatIndex = (beatIndex + 1) % _currentBeatsPerMeasure;
-    });
+    timer = ReliableIntervalTimer(
+        interval: Duration(milliseconds: (60000 / _currentBpm).round()),
+        callback: (elapsedMilliseconds) async {
+          if (currentBpm != _currentBpm) {
+            await stopMetronome();
+            await startMetronome();
+            return;
+          }
+          if (beatIndex == 0) {
+            player.play(AssetSource('audios/metronome_click0.wav'));
+          } else {
+            player.play(AssetSource('audios/metronome_click.wav'));
+          }
+          beatIndex = (beatIndex + 1) % _currentBeatsPerMeasure;
+        }
+    );
     setState(() {
       isPlaying = true;
     });
+    await timer?.start();
   }
 
-  void stopMetronome({isDispose = false}) {
-    timer?.cancel();
+  Future<void> stopMetronome({isDispose = false}) async {
+    await timer?.stop();
+    timer = null;
     beatIndex = 0;
     if (!isDispose) {
       setState(() {
@@ -104,13 +111,21 @@ class _MetronomePage extends State<MetronomePage> {
                 isPlaying ?
                 ElevatedButton(
                   onPressed: () {
-                    stopMetronome();
+                    if (isLoading) {
+                      return;
+                    }
+                    isLoading = true;
+                    stopMetronome().then((value) => isLoading = false);
                   },
                   child: Text(t.tools.metronome.stop),
                 ) :
                 ElevatedButton(
                   onPressed: () {
-                    startMetronome();
+                    if (isLoading) {
+                      return;
+                    }
+                    isLoading = true;
+                    startMetronome().then((value) => isLoading = false);
                   },
                   child: Text(t.tools.metronome.start),
                 ),
