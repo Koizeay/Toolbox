@@ -128,6 +128,19 @@
       "title": "Whiteboard",
       "clear": "Clear",
       "undo": "Undo"
+    },
+    "networkinfo": {
+      "title": "Network info",
+      "loading": "Loading...",
+      "location_permission_required": "Location permission is required to get some WiFi info (this is an OS limitation).\nYou could get incorrect info if you don't grant it.",
+      "public_ip": "Public IP address",
+      "local_ip": "Local IP address",
+      "local_subnet_mask": "Local netowrk subnet mask",
+      "local_gateway_ip": "Local network gateway IP",
+      "local_broadcast_ip": "Local network broadcast IP",
+      "wifi_name": "WiFi name",
+      "wifi_bssid": "WiFi BSSID",
+      "note_location_permission": "Note: some information may be incorrect if you didn't grant precise location permission."
     }
   },
   "credits": {

@@ -128,6 +128,19 @@
       "title": "Tableau blanc",
       "clear": "Effacer",
       "undo": "Annuler"
+    },
+    "networkinfo": {
+      "title": "Informations réseau",
+      "loading": "Chargement...",
+      "location_permission_required": "La permission de localisation est nécessaire pour obtenir certaines informations sur le WiFi (il s'agit d'une limitation du système d'exploitation).\nVous risquez d'obtenir des informations erronées si vous ne l'autorisez pas.",
+      "public_ip": "Adresse IP publique",
+      "local_ip": "Adresse IP locale",
+      "local_subnet_mask": "Masque de sous-réseau local",
+      "local_gateway_ip": "Adresse IP de passerelle locale",
+      "local_broadcast_ip": "Adresse IP de diffusion locale",
+      "wifi_name": "Nom du WiFi",
+      "wifi_bssid": "BSSID du WiFi",
+      "note_location_permission": "Remarque : certaines informations peuvent être incorrectes si vous n'avez pas autorisé la permission de localisation précise."
     }
   },
   "credits": {

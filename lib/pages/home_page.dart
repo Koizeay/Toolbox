@@ -22,6 +22,8 @@ import 'package:toolbox/pages/whiteboard_page.dart';
 import 'package:toolbox/widgets/tool_card.dart';
 import 'package:yaru/yaru.dart';
 
+import 'networkinfo_page.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({ Key? key }) : super(key: key);
   @override
@@ -49,6 +51,8 @@ class _HomePage extends State<HomePage> {
           const MetronomePage()),
       Tool(t.tools.micspeak.title, "assets/images/tools/micspeak.png",
           const MicSpeakPage()),
+      Tool(t.tools.networkinfo.title, "assets/images/tools/networkinfo.png",
+          const NetworkInfoPage()),
       Tool(t.tools.nslookup.title, "assets/images/tools/nslookup.png",
           const NslookupPage()),
       Tool(t.tools.ping.title, "assets/images/tools/ping.png",

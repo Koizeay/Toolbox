@@ -1,4 +1,3 @@
-// Note: This is a template for creating new tools
 
 import 'package:flutter/material.dart';
 import 'package:flutter_painting_tools/flutter_painting_tools.dart';

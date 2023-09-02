@@ -60,5 +60,9 @@
 	<false/>
     <key>NSCameraUsageDescription</key>
     <string>Camera access required to use some tools</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>Location access required to use some tools</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Location access required to use some tools</string>
 </dict>
 </plist>

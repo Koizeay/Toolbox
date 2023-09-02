@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 2
-/// Strings: 186 (93 per locale)
+/// Strings: 208 (104 per locale)
 ///
-/// Built on 2023-08-31 at 18:40 UTC
+/// Built on 2023-09-02 at 16:02 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -188,6 +188,7 @@ class _StringsToolsEn {
 	late final _StringsToolsRandomcolorEn randomcolor = _StringsToolsRandomcolorEn._(_root);
 	late final _StringsToolsSshclientEn sshclient = _StringsToolsSshclientEn._(_root);
 	late final _StringsToolsWhiteboardEn whiteboard = _StringsToolsWhiteboardEn._(_root);
+	late final _StringsToolsNetworkinfoEn networkinfo = _StringsToolsNetworkinfoEn._(_root);
 }
 
 // Path: credits
@@ -405,6 +406,26 @@ class _StringsToolsWhiteboardEn {
 	String get undo => 'Undo';
 }
 
+// Path: tools.networkinfo
+class _StringsToolsNetworkinfoEn {
+	_StringsToolsNetworkinfoEn._(this._root);
+
+	final _StringsEn _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'Network info';
+	String get loading => 'Loading...';
+	String get location_permission_required => 'Location permission is required to get some WiFi info (this is an OS limitation).\nYou could get incorrect info if you don\'t grant it.';
+	String get public_ip => 'Public IP address';
+	String get local_ip => 'Local IP address';
+	String get local_subnet_mask => 'Local netowrk subnet mask';
+	String get local_gateway_ip => 'Local network gateway IP';
+	String get local_broadcast_ip => 'Local network broadcast IP';
+	String get wifi_name => 'WiFi name';
+	String get wifi_bssid => 'WiFi BSSID';
+	String get note_location_permission => 'Note: some information may be incorrect if you didn\'t grant precise location permission.';
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsEn._(this._root);
@@ -558,6 +579,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsRandomcolorFr randomcolor = _StringsToolsRandomcolorFr._(_root);
 	@override late final _StringsToolsSshclientFr sshclient = _StringsToolsSshclientFr._(_root);
 	@override late final _StringsToolsWhiteboardFr whiteboard = _StringsToolsWhiteboardFr._(_root);
+	@override late final _StringsToolsNetworkinfoFr networkinfo = _StringsToolsNetworkinfoFr._(_root);
 }
 
 // Path: credits
@@ -775,6 +797,26 @@ class _StringsToolsWhiteboardFr implements _StringsToolsWhiteboardEn {
 	@override String get undo => 'Annuler';
 }
 
+// Path: tools.networkinfo
+class _StringsToolsNetworkinfoFr implements _StringsToolsNetworkinfoEn {
+	_StringsToolsNetworkinfoFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Informations réseau';
+	@override String get loading => 'Chargement...';
+	@override String get location_permission_required => 'La permission de localisation est nécessaire pour obtenir certaines informations sur le WiFi (il s\'agit d\'une limitation du système d\'exploitation).\nVous risquez d\'obtenir des informations erronées si vous ne l\'autorisez pas.';
+	@override String get public_ip => 'Adresse IP publique';
+	@override String get local_ip => 'Adresse IP locale';
+	@override String get local_subnet_mask => 'Masque de sous-réseau local';
+	@override String get local_gateway_ip => 'Adresse IP de passerelle locale';
+	@override String get local_broadcast_ip => 'Adresse IP de diffusion locale';
+	@override String get wifi_name => 'Nom du WiFi';
+	@override String get wifi_bssid => 'BSSID du WiFi';
+	@override String get note_location_permission => 'Remarque : certaines informations peuvent être incorrectes si vous n\'avez pas autorisé la permission de localisation précise.';
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsFr implements _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsFr._(this._root);
@@ -953,6 +995,17 @@ extension on _StringsEn {
 			case 'tools.whiteboard.title': return 'Whiteboard';
 			case 'tools.whiteboard.clear': return 'Clear';
 			case 'tools.whiteboard.undo': return 'Undo';
+			case 'tools.networkinfo.title': return 'Network info';
+			case 'tools.networkinfo.loading': return 'Loading...';
+			case 'tools.networkinfo.location_permission_required': return 'Location permission is required to get some WiFi info (this is an OS limitation).\nYou could get incorrect info if you don\'t grant it.';
+			case 'tools.networkinfo.public_ip': return 'Public IP address';
+			case 'tools.networkinfo.local_ip': return 'Local IP address';
+			case 'tools.networkinfo.local_subnet_mask': return 'Local netowrk subnet mask';
+			case 'tools.networkinfo.local_gateway_ip': return 'Local network gateway IP';
+			case 'tools.networkinfo.local_broadcast_ip': return 'Local network broadcast IP';
+			case 'tools.networkinfo.wifi_name': return 'WiFi name';
+			case 'tools.networkinfo.wifi_bssid': return 'WiFi BSSID';
+			case 'tools.networkinfo.note_location_permission': return 'Note: some information may be incorrect if you didn\'t grant precise location permission.';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -1054,6 +1107,17 @@ extension on _StringsFr {
 			case 'tools.whiteboard.title': return 'Tableau blanc';
 			case 'tools.whiteboard.clear': return 'Effacer';
 			case 'tools.whiteboard.undo': return 'Annuler';
+			case 'tools.networkinfo.title': return 'Informations réseau';
+			case 'tools.networkinfo.loading': return 'Chargement...';
+			case 'tools.networkinfo.location_permission_required': return 'La permission de localisation est nécessaire pour obtenir certaines informations sur le WiFi (il s\'agit d\'une limitation du système d\'exploitation).\nVous risquez d\'obtenir des informations erronées si vous ne l\'autorisez pas.';
+			case 'tools.networkinfo.public_ip': return 'Adresse IP publique';
+			case 'tools.networkinfo.local_ip': return 'Adresse IP locale';
+			case 'tools.networkinfo.local_subnet_mask': return 'Masque de sous-réseau local';
+			case 'tools.networkinfo.local_gateway_ip': return 'Adresse IP de passerelle locale';
+			case 'tools.networkinfo.local_broadcast_ip': return 'Adresse IP de diffusion locale';
+			case 'tools.networkinfo.wifi_name': return 'Nom du WiFi';
+			case 'tools.networkinfo.wifi_bssid': return 'BSSID du WiFi';
+			case 'tools.networkinfo.note_location_permission': return 'Remarque : certaines informations peuvent être incorrectes si vous n\'avez pas autorisé la permission de localisation précise.';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';
