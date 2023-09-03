@@ -221,95 +221,97 @@ class _RoulettePage extends State<RoulettePage> with TickerProviderStateMixin {
         body: SafeArea(
             child: Padding(
               padding: const EdgeInsets.all(16.0),
-              child: GestureDetector(
-                onTap: () {
-                  rollRoulette();
-                },
-                child: SingleChildScrollView(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Text(
-                        t.tools.roulette.tap_to_roll_info,
-                        textAlign: TextAlign.center,
-                        style: const TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
+              child: Center(
+                child: GestureDetector(
+                  onTap: () {
+                    rollRoulette();
+                  },
+                  child: SingleChildScrollView(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(
+                          t.tools.roulette.tap_to_roll_info,
+                          textAlign: TextAlign.center,
+                          style: const TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
-                      ),
-                      const SizedBox(height: 8),
-                      ConstrainedBox(
-                        constraints: BoxConstraints(
-                          maxHeight: MediaQuery
-                              .of(context)
-                              .size
-                              .height * 0.5,
-                          maxWidth: MediaQuery
-                              .of(context)
-                              .size
-                              .height * 0.5,
-                        ),
-                        child: GestureDetector(
-                          onTap: () {
-                            rollRoulette();
-                          },
-                          child: FortuneWheel(
-                            physics: CircularPanPhysics(
-                              duration: const Duration(seconds: 1),
-                              curve: Curves.decelerate,
-                            ),
-                            onFling: () {
+                        const SizedBox(height: 8),
+                        ConstrainedBox(
+                          constraints: BoxConstraints(
+                            maxHeight: MediaQuery
+                                .of(context)
+                                .size
+                                .height * 0.5,
+                            maxWidth: MediaQuery
+                                .of(context)
+                                .size
+                                .height * 0.5,
+                          ),
+                          child: GestureDetector(
+                            onTap: () {
                               rollRoulette();
                             },
-                            onAnimationEnd: () {
-                              isSpinning = false;
-                            },
-                            onAnimationStart: () {
-                              isSpinning = true;
-                            },
-                            selected: selected.stream,
-                            items: rouletteItems,
-                            indicators: const [
-                              FortuneIndicator(
-                                alignment: Alignment.topCenter,
-                                child: TriangleIndicator(
-                                  color: Colors.white,
+                            child: FortuneWheel(
+                              physics: CircularPanPhysics(
+                                duration: const Duration(seconds: 1),
+                                curve: Curves.decelerate,
+                              ),
+                              onFling: () {
+                                rollRoulette();
+                              },
+                              onAnimationEnd: () {
+                                isSpinning = false;
+                              },
+                              onAnimationStart: () {
+                                isSpinning = true;
+                              },
+                              selected: selected.stream,
+                              items: rouletteItems,
+                              indicators: const [
+                                FortuneIndicator(
+                                  alignment: Alignment.topCenter,
+                                  child: TriangleIndicator(
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 16,),
+                        SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(4.0),
+                                child: ElevatedButton(
+                                  onPressed: () {
+                                    showAddRouletteUnitDialog();
+                                  },
+                                  child: Text(t.tools.roulette.add),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(4.0),
+                                child: ElevatedButton(
+                                  onPressed: () {
+                                    showRemoveRouletteChoiceListDialog();
+                                  },
+                                  child: Text(t.tools.roulette.remove),
                                 ),
                               ),
                             ],
                           ),
-                        ),
-                      ),
-                      const SizedBox(height: 16,),
-                      SingleChildScrollView(
-                        scrollDirection: Axis.horizontal,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(4.0),
-                              child: ElevatedButton(
-                                onPressed: () {
-                                  showAddRouletteUnitDialog();
-                                },
-                                child: Text(t.tools.roulette.add),
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(4.0),
-                              child: ElevatedButton(
-                                onPressed: () {
-                                  showRemoveRouletteChoiceListDialog();
-                                },
-                                child: Text(t.tools.roulette.remove),
-                              ),
-                            ),
-                          ],
-                        ),
-                      )
-                    ],
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ),
