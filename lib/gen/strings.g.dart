@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 2
-/// Strings: 208 (104 per locale)
+/// Strings: 210 (105 per locale)
 ///
-/// Built on 2023-09-02 at 16:02 UTC
+/// Built on 2023-09-03 at 11:13 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -418,11 +418,12 @@ class _StringsToolsNetworkinfoEn {
 	String get location_permission_required => 'Location permission is required to get some WiFi info (this is an OS limitation).\nYou could get incorrect info if you don\'t grant it.';
 	String get public_ip => 'Public IP address';
 	String get local_ip => 'Local IP address';
-	String get local_subnet_mask => 'Local netowrk subnet mask';
+	String get local_subnet_mask => 'Local network subnet mask';
 	String get local_gateway_ip => 'Local network gateway IP';
 	String get local_broadcast_ip => 'Local network broadcast IP';
 	String get wifi_name => 'WiFi name';
 	String get wifi_bssid => 'WiFi BSSID';
+	String get not_available_on_ios => 'Not available on iOS';
 	String get note_location_permission => 'Note: some information may be incorrect if you didn\'t grant precise location permission.';
 }
 
@@ -814,6 +815,7 @@ class _StringsToolsNetworkinfoFr implements _StringsToolsNetworkinfoEn {
 	@override String get local_broadcast_ip => 'Adresse IP de diffusion locale';
 	@override String get wifi_name => 'Nom du WiFi';
 	@override String get wifi_bssid => 'BSSID du WiFi';
+	@override String get not_available_on_ios => 'Non disponible sur iOS';
 	@override String get note_location_permission => 'Remarque : certaines informations peuvent être incorrectes si vous n\'avez pas autorisé la permission de localisation précise.';
 }
 
@@ -1000,11 +1002,12 @@ extension on _StringsEn {
 			case 'tools.networkinfo.location_permission_required': return 'Location permission is required to get some WiFi info (this is an OS limitation).\nYou could get incorrect info if you don\'t grant it.';
 			case 'tools.networkinfo.public_ip': return 'Public IP address';
 			case 'tools.networkinfo.local_ip': return 'Local IP address';
-			case 'tools.networkinfo.local_subnet_mask': return 'Local netowrk subnet mask';
+			case 'tools.networkinfo.local_subnet_mask': return 'Local network subnet mask';
 			case 'tools.networkinfo.local_gateway_ip': return 'Local network gateway IP';
 			case 'tools.networkinfo.local_broadcast_ip': return 'Local network broadcast IP';
 			case 'tools.networkinfo.wifi_name': return 'WiFi name';
 			case 'tools.networkinfo.wifi_bssid': return 'WiFi BSSID';
+			case 'tools.networkinfo.not_available_on_ios': return 'Not available on iOS';
 			case 'tools.networkinfo.note_location_permission': return 'Note: some information may be incorrect if you didn\'t grant precise location permission.';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
@@ -1117,6 +1120,7 @@ extension on _StringsFr {
 			case 'tools.networkinfo.local_broadcast_ip': return 'Adresse IP de diffusion locale';
 			case 'tools.networkinfo.wifi_name': return 'Nom du WiFi';
 			case 'tools.networkinfo.wifi_bssid': return 'BSSID du WiFi';
+			case 'tools.networkinfo.not_available_on_ios': return 'Non disponible sur iOS';
 			case 'tools.networkinfo.note_location_permission': return 'Remarque : certaines informations peuvent être incorrectes si vous n\'avez pas autorisé la permission de localisation précise.';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';

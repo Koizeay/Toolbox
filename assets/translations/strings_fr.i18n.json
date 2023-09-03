@@ -140,6 +140,7 @@
       "local_broadcast_ip": "Adresse IP de diffusion locale",
       "wifi_name": "Nom du WiFi",
       "wifi_bssid": "BSSID du WiFi",
+      "not_available_on_ios": "Non disponible sur iOS",
       "note_location_permission": "Remarque : certaines informations peuvent être incorrectes si vous n'avez pas autorisé la permission de localisation précise."
     }
   },

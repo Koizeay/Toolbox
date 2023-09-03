@@ -1,5 +1,5 @@
 import 'dart:convert';
-
+import 'dart:io' show Platform;
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:toolbox/gen/strings.g.dart';
@@ -23,14 +23,17 @@ class _NetworkInfoPage extends State<NetworkInfoPage> {
 
   @override
   void initState() {
-    askForPermission().then((value) {
+    askForLocationPermission().then((value) {
       getIpAddress();
       getWifiInfo();
     });
     super.initState();
   }
 
-  Future<void> askForPermission() async {
+  Future<void> askForLocationPermission() async {
+    if (Platform.isIOS) {
+      return;
+    }
     if (await Permission.location
         .request()
         .isDenied &&
@@ -69,6 +72,10 @@ class _NetworkInfoPage extends State<NetworkInfoPage> {
     localBroadcastIP = await networkInfo.getWifiBroadcast() ?? "?";
     wifiName = await networkInfo.getWifiName() ?? "?";
     wifiBSSID = await networkInfo.getWifiBSSID() ?? "?";
+    if (Platform.isIOS) {
+      wifiName = "Not available on iOS";
+      wifiBSSID = "Not available on iOS";
+    }
     if (mounted) {
       setState(() {});
     }
@@ -170,7 +177,7 @@ class _NetworkInfoPage extends State<NetworkInfoPage> {
                       ),
                     ),
                     const SizedBox(height: 8,),
-                    Text(
+                    Platform.isIOS ? Container() : Text(
                         t.tools.networkinfo.note_location_permission,
                         textAlign: TextAlign.center,
                         style: const TextStyle(
