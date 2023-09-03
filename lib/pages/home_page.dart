@@ -79,7 +79,7 @@ class _HomePage extends State<HomePage> {
   }
 
   void sortTools() {
-    tools.sort((a, b) => a.name.compareTo(b.name));
+    tools.sort((a, b) => a.name.toLowerCase().compareTo(b.name.toLowerCase()));
   }
 
   @override
