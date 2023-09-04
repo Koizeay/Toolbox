@@ -54,8 +54,14 @@ You can write your code as you want but please respect these rules:
 ## Contact
 If you have any question, you can contact me by email at [me@koizeay.com](mailto:me@koizeay.com)
 
-## Screenshot
-![Home Page]("https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot01.png")
+## Screenshots
+<p float="left">
+  <img src="https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot01.jpg" alt="Home page screenshot" height="400">
+  <img src="https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot02.jpg" alt="Home page screenshot" height="400">
+  <img src="https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot03.jpg" alt="Home page screenshot" height="400">
+  <img src="https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot04.jpg" alt="Home page screenshot" height="400">
+  <img src="https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot05.jpg" alt="Home page screenshot" height="400">
+</p>
 
 ## License
 This project is under the [GNU GPLv3 License](https://www.gnu.org/licenses/gpl-3.0.en.html)
