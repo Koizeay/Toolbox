@@ -142,6 +142,21 @@
       "wifi_bssid": "BSSID du WiFi",
       "not_available_on_ios": "Non disponible sur iOS",
       "note_location_permission": "Remarque : certaines informations peuvent être incorrectes si vous n'avez pas autorisé la permission de localisation précise."
+    },
+    "uuidgenerator": {
+      "title": "Générateur d'UUID",
+      "generate": "Générer",
+      "default_uuid_text": "Appuyer sur un bouton pour générer un UUID",
+      "copied_to_clipboard": "Copié dans le presse-papiers",
+      "v1_uuid": "v1 (basé sur le temps)",
+      "v4_uuid": "v4 (aléatoire)",
+      "v5_uuid": "v5 (basé sur sha1)",
+      "v5_generate_title": "Générer un UUID v5",
+      "v5_namespace": "Espace de noms (laisser vide pour aléatoire)",
+      "v5_name": "Nom (laisser vide si aucun)",
+      "error": {
+        "invalid_namespace": "L'espace de noms n'est pas un UUID valide"
+      }
     }
   },
   "credits": {

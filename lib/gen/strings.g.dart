@@ -1,9 +1,12 @@
 /// Generated file. Do not edit.
 ///
-/// Locales: 2
-/// Strings: 210 (105 per locale)
+/// Original: assets/translations
+/// To regenerate, run: `dart run slang`
 ///
-/// Built on 2023-09-03 at 11:13 UTC
+/// Locales: 2
+/// Strings: 232 (116 per locale)
+///
+/// Built on 2023-09-07 at 17:09 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -189,6 +192,7 @@ class _StringsToolsEn {
 	late final _StringsToolsSshclientEn sshclient = _StringsToolsSshclientEn._(_root);
 	late final _StringsToolsWhiteboardEn whiteboard = _StringsToolsWhiteboardEn._(_root);
 	late final _StringsToolsNetworkinfoEn networkinfo = _StringsToolsNetworkinfoEn._(_root);
+	late final _StringsToolsUuidgeneratorEn uuidgenerator = _StringsToolsUuidgeneratorEn._(_root);
 }
 
 // Path: credits
@@ -427,6 +431,26 @@ class _StringsToolsNetworkinfoEn {
 	String get note_location_permission => 'Note: some information may be incorrect if you didn\'t grant precise location permission.';
 }
 
+// Path: tools.uuidgenerator
+class _StringsToolsUuidgeneratorEn {
+	_StringsToolsUuidgeneratorEn._(this._root);
+
+	final _StringsEn _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'UUID generator';
+	String get generate => 'Generate';
+	String get default_uuid_text => 'Press a button to generate a UUID';
+	String get copied_to_clipboard => 'Copied to clipboard';
+	String get v1_uuid => 'v1 (time-based)';
+	String get v4_uuid => 'v4 (random)';
+	String get v5_uuid => 'v5 (sha1-based)';
+	String get v5_generate_title => 'Generate v5 UUID';
+	String get v5_namespace => 'Namespace (leave blank for random)';
+	String get v5_name => 'Name (leave blank for none)';
+	late final _StringsToolsUuidgeneratorErrorEn error = _StringsToolsUuidgeneratorErrorEn._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsEn._(this._root);
@@ -514,6 +538,16 @@ class _StringsToolsSshclientErrorEn {
 	String get unknown_error => 'An unknown error occurred. Please try again';
 }
 
+// Path: tools.uuidgenerator.error
+class _StringsToolsUuidgeneratorErrorEn {
+	_StringsToolsUuidgeneratorErrorEn._(this._root);
+
+	final _StringsEn _root; // ignore: unused_field
+
+	// Translations
+	String get invalid_namespace => 'The namespace is not a valid UUID';
+}
+
 // Path: <root>
 class _StringsFr implements _StringsEn {
 
@@ -581,6 +615,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsSshclientFr sshclient = _StringsToolsSshclientFr._(_root);
 	@override late final _StringsToolsWhiteboardFr whiteboard = _StringsToolsWhiteboardFr._(_root);
 	@override late final _StringsToolsNetworkinfoFr networkinfo = _StringsToolsNetworkinfoFr._(_root);
+	@override late final _StringsToolsUuidgeneratorFr uuidgenerator = _StringsToolsUuidgeneratorFr._(_root);
 }
 
 // Path: credits
@@ -819,6 +854,26 @@ class _StringsToolsNetworkinfoFr implements _StringsToolsNetworkinfoEn {
 	@override String get note_location_permission => 'Remarque : certaines informations peuvent être incorrectes si vous n\'avez pas autorisé la permission de localisation précise.';
 }
 
+// Path: tools.uuidgenerator
+class _StringsToolsUuidgeneratorFr implements _StringsToolsUuidgeneratorEn {
+	_StringsToolsUuidgeneratorFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Générateur d\'UUID';
+	@override String get generate => 'Générer';
+	@override String get default_uuid_text => 'Appuyer sur un bouton pour générer un UUID';
+	@override String get copied_to_clipboard => 'Copié dans le presse-papiers';
+	@override String get v1_uuid => 'v1 (basé sur le temps)';
+	@override String get v4_uuid => 'v4 (aléatoire)';
+	@override String get v5_uuid => 'v5 (basé sur sha1)';
+	@override String get v5_generate_title => 'Générer un UUID v5';
+	@override String get v5_namespace => 'Espace de noms (laisser vide pour aléatoire)';
+	@override String get v5_name => 'Nom (laisser vide si aucun)';
+	@override late final _StringsToolsUuidgeneratorErrorFr error = _StringsToolsUuidgeneratorErrorFr._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsFr implements _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsFr._(this._root);
@@ -904,6 +959,16 @@ class _StringsToolsSshclientErrorFr implements _StringsToolsSshclientErrorEn {
 	@override String get authentication_failed => 'Échec de l\'authentification';
 	@override String get connection_failed => 'Impossible de se connecter à l\'hôte';
 	@override String get unknown_error => 'Une erreur inconnue s\'est produite, veuillez réessayer';
+}
+
+// Path: tools.uuidgenerator.error
+class _StringsToolsUuidgeneratorErrorFr implements _StringsToolsUuidgeneratorErrorEn {
+	_StringsToolsUuidgeneratorErrorFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get invalid_namespace => 'L\'espace de noms n\'est pas un UUID valide';
 }
 
 /// Flat map(s) containing all translations.
@@ -1009,6 +1074,17 @@ extension on _StringsEn {
 			case 'tools.networkinfo.wifi_bssid': return 'WiFi BSSID';
 			case 'tools.networkinfo.not_available_on_ios': return 'Not available on iOS';
 			case 'tools.networkinfo.note_location_permission': return 'Note: some information may be incorrect if you didn\'t grant precise location permission.';
+			case 'tools.uuidgenerator.title': return 'UUID generator';
+			case 'tools.uuidgenerator.generate': return 'Generate';
+			case 'tools.uuidgenerator.default_uuid_text': return 'Press a button to generate a UUID';
+			case 'tools.uuidgenerator.copied_to_clipboard': return 'Copied to clipboard';
+			case 'tools.uuidgenerator.v1_uuid': return 'v1 (time-based)';
+			case 'tools.uuidgenerator.v4_uuid': return 'v4 (random)';
+			case 'tools.uuidgenerator.v5_uuid': return 'v5 (sha1-based)';
+			case 'tools.uuidgenerator.v5_generate_title': return 'Generate v5 UUID';
+			case 'tools.uuidgenerator.v5_namespace': return 'Namespace (leave blank for random)';
+			case 'tools.uuidgenerator.v5_name': return 'Name (leave blank for none)';
+			case 'tools.uuidgenerator.error.invalid_namespace': return 'The namespace is not a valid UUID';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -1122,6 +1198,17 @@ extension on _StringsFr {
 			case 'tools.networkinfo.wifi_bssid': return 'BSSID du WiFi';
 			case 'tools.networkinfo.not_available_on_ios': return 'Non disponible sur iOS';
 			case 'tools.networkinfo.note_location_permission': return 'Remarque : certaines informations peuvent être incorrectes si vous n\'avez pas autorisé la permission de localisation précise.';
+			case 'tools.uuidgenerator.title': return 'Générateur d\'UUID';
+			case 'tools.uuidgenerator.generate': return 'Générer';
+			case 'tools.uuidgenerator.default_uuid_text': return 'Appuyer sur un bouton pour générer un UUID';
+			case 'tools.uuidgenerator.copied_to_clipboard': return 'Copié dans le presse-papiers';
+			case 'tools.uuidgenerator.v1_uuid': return 'v1 (basé sur le temps)';
+			case 'tools.uuidgenerator.v4_uuid': return 'v4 (aléatoire)';
+			case 'tools.uuidgenerator.v5_uuid': return 'v5 (basé sur sha1)';
+			case 'tools.uuidgenerator.v5_generate_title': return 'Générer un UUID v5';
+			case 'tools.uuidgenerator.v5_namespace': return 'Espace de noms (laisser vide pour aléatoire)';
+			case 'tools.uuidgenerator.v5_name': return 'Nom (laisser vide si aucun)';
+			case 'tools.uuidgenerator.error.invalid_namespace': return 'L\'espace de noms n\'est pas un UUID valide';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';

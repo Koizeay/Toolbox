@@ -67,6 +67,7 @@ dependencies:
   http: ^0.13.6
   network_info_plus: ^3.0.5
   permission_handler: ^10.4.3
+  uuid: ^3.0.7
 
 dev_dependencies:
   flutter_test:

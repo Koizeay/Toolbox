@@ -18,6 +18,7 @@ import 'package:toolbox/pages/soundmeter_page.dart';
 import 'package:toolbox/pages/sshclient_page.dart';
 import 'package:toolbox/pages/stopwatch_page.dart';
 import 'package:toolbox/pages/timer_page.dart';
+import 'package:toolbox/pages/uuidgenerator_page.dart';
 import 'package:toolbox/pages/whiteboard_page.dart';
 import 'package:toolbox/widgets/tool_card.dart';
 import 'package:yaru/yaru.dart';
@@ -73,6 +74,8 @@ class _HomePage extends State<HomePage> {
           const StopwatchPage()),
       Tool(t.tools.timer.title, "assets/images/tools/timer.png",
           const TimerPage()),
+      Tool(t.tools.uuidgenerator.title, "assets/images/tools/uuidgenerator.png",
+          const UuidGeneratorPage()),
       Tool(t.tools.whiteboard.title, "assets/images/tools/whiteboard.png",
           const WhiteBoardPage())
     ];
