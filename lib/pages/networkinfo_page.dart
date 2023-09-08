@@ -105,7 +105,7 @@ class _NetworkInfoPage extends State<NetworkInfoPage> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                                "${t.tools.networkinfo.public_ip} :\n$publicIpAddress",
+                                "${t.tools.networkinfo.public_ip}\n$publicIpAddress",
                                 style: const TextStyle(
                                     fontSize: 18,
                                     fontWeight: FontWeight.bold,
@@ -115,7 +115,7 @@ class _NetworkInfoPage extends State<NetworkInfoPage> {
                             const Divider(
                               color: Colors.greenAccent, thickness: 3,),
                             Text(
-                                "${t.tools.networkinfo.local_ip} :\n$localIpAddress",
+                                "${t.tools.networkinfo.local_ip}\n$localIpAddress",
                                 style: const TextStyle(
                                     fontSize: 14,
                                     fontWeight: FontWeight.bold,
@@ -125,7 +125,7 @@ class _NetworkInfoPage extends State<NetworkInfoPage> {
                             const Divider(
                               color: Colors.greenAccent, thickness: 0.5,),
                             Text(
-                                "${t.tools.networkinfo.local_subnet_mask} :\n$localSubmask",
+                                "${t.tools.networkinfo.local_subnet_mask}\n$localSubmask",
                                 style: const TextStyle(
                                     fontSize: 14,
                                     fontWeight: FontWeight.bold,
@@ -135,7 +135,7 @@ class _NetworkInfoPage extends State<NetworkInfoPage> {
                             const Divider(
                               color: Colors.greenAccent, thickness: 0.5,),
                             Text(
-                                "${t.tools.networkinfo.local_gateway_ip} :\n$localGatewayIP",
+                                "${t.tools.networkinfo.local_gateway_ip}\n$localGatewayIP",
                                 style: const TextStyle(
                                     fontSize: 14,
                                     fontWeight: FontWeight.bold,
@@ -145,7 +145,7 @@ class _NetworkInfoPage extends State<NetworkInfoPage> {
                             const Divider(
                               color: Colors.greenAccent, thickness: 0.5,),
                             Text(
-                                "${t.tools.networkinfo.local_broadcast_ip} :\n$localBroadcastIP",
+                                "${t.tools.networkinfo.local_broadcast_ip}\n$localBroadcastIP",
                                 style: const TextStyle(
                                     fontSize: 14,
                                     fontWeight: FontWeight.bold,
@@ -155,7 +155,7 @@ class _NetworkInfoPage extends State<NetworkInfoPage> {
                             const Divider(
                               color: Colors.greenAccent, thickness: 0.5,),
                             Text(
-                                "${t.tools.networkinfo.wifi_name} :\n$wifiName",
+                                "${t.tools.networkinfo.wifi_name}\n$wifiName",
                                 style: const TextStyle(
                                     fontSize: 14,
                                     fontWeight: FontWeight.bold,
@@ -165,7 +165,7 @@ class _NetworkInfoPage extends State<NetworkInfoPage> {
                             const Divider(
                               color: Colors.greenAccent, thickness: 0.5,),
                             Text(
-                                "${t.tools.networkinfo.wifi_bssid} :\n$wifiBSSID",
+                                "${t.tools.networkinfo.wifi_bssid}\n$wifiBSSID",
                                 style: const TextStyle(
                                     fontSize: 14,
                                     fontWeight: FontWeight.bold,
