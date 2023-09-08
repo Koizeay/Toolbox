@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 232 (116 per locale)
+/// Strings: 250 (125 per locale)
 ///
-/// Built on 2023-09-07 at 17:09 UTC
+/// Built on 2023-09-08 at 19:13 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -193,6 +193,7 @@ class _StringsToolsEn {
 	late final _StringsToolsWhiteboardEn whiteboard = _StringsToolsWhiteboardEn._(_root);
 	late final _StringsToolsNetworkinfoEn networkinfo = _StringsToolsNetworkinfoEn._(_root);
 	late final _StringsToolsUuidgeneratorEn uuidgenerator = _StringsToolsUuidgeneratorEn._(_root);
+	late final _StringsToolsTexttospeechEn texttospeech = _StringsToolsTexttospeechEn._(_root);
 }
 
 // Path: credits
@@ -451,6 +452,23 @@ class _StringsToolsUuidgeneratorEn {
 	late final _StringsToolsUuidgeneratorErrorEn error = _StringsToolsUuidgeneratorErrorEn._(_root);
 }
 
+// Path: tools.texttospeech
+class _StringsToolsTexttospeechEn {
+	_StringsToolsTexttospeechEn._(this._root);
+
+	final _StringsEn _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'Text to speech';
+	String get choose_a_language => 'Choose a language';
+	String get text_to_speak => 'Text to speak';
+	String get pitch => 'Pitch';
+	String get rate => 'Rate';
+	String get play => 'Play';
+	String get stop => 'Stop';
+	late final _StringsToolsTexttospeechErrorEn error = _StringsToolsTexttospeechErrorEn._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsEn._(this._root);
@@ -548,6 +566,17 @@ class _StringsToolsUuidgeneratorErrorEn {
 	String get invalid_namespace => 'The namespace is not a valid UUID';
 }
 
+// Path: tools.texttospeech.error
+class _StringsToolsTexttospeechErrorEn {
+	_StringsToolsTexttospeechErrorEn._(this._root);
+
+	final _StringsEn _root; // ignore: unused_field
+
+	// Translations
+	String get please_try_again => 'Please try again later.\nIf it\'s the first time you\'re using this language, please wait a few seconds and try again.';
+	String get please_select_a_language => 'Please select a language';
+}
+
 // Path: <root>
 class _StringsFr implements _StringsEn {
 
@@ -616,6 +645,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsWhiteboardFr whiteboard = _StringsToolsWhiteboardFr._(_root);
 	@override late final _StringsToolsNetworkinfoFr networkinfo = _StringsToolsNetworkinfoFr._(_root);
 	@override late final _StringsToolsUuidgeneratorFr uuidgenerator = _StringsToolsUuidgeneratorFr._(_root);
+	@override late final _StringsToolsTexttospeechFr texttospeech = _StringsToolsTexttospeechFr._(_root);
 }
 
 // Path: credits
@@ -874,6 +904,23 @@ class _StringsToolsUuidgeneratorFr implements _StringsToolsUuidgeneratorEn {
 	@override late final _StringsToolsUuidgeneratorErrorFr error = _StringsToolsUuidgeneratorErrorFr._(_root);
 }
 
+// Path: tools.texttospeech
+class _StringsToolsTexttospeechFr implements _StringsToolsTexttospeechEn {
+	_StringsToolsTexttospeechFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Synthèse vocale';
+	@override String get choose_a_language => 'Choisir une langue';
+	@override String get text_to_speak => 'Texte à prononcer';
+	@override String get pitch => 'Hauteur';
+	@override String get rate => 'Débit';
+	@override String get play => 'Play';
+	@override String get stop => 'Stop';
+	@override late final _StringsToolsTexttospeechErrorFr error = _StringsToolsTexttospeechErrorFr._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsFr implements _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsFr._(this._root);
@@ -969,6 +1016,17 @@ class _StringsToolsUuidgeneratorErrorFr implements _StringsToolsUuidgeneratorErr
 
 	// Translations
 	@override String get invalid_namespace => 'L\'espace de noms n\'est pas un UUID valide';
+}
+
+// Path: tools.texttospeech.error
+class _StringsToolsTexttospeechErrorFr implements _StringsToolsTexttospeechErrorEn {
+	_StringsToolsTexttospeechErrorFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get please_try_again => 'Veuillez réessayer plus tard.\nSi vous utilisez cette langue pour la première fois, veuillez patienter quelques secondes et réessayer.';
+	@override String get please_select_a_language => 'Veuillez sélectionner une langue';
 }
 
 /// Flat map(s) containing all translations.
@@ -1085,6 +1143,15 @@ extension on _StringsEn {
 			case 'tools.uuidgenerator.v5_namespace': return 'Namespace (leave blank for random)';
 			case 'tools.uuidgenerator.v5_name': return 'Name (leave blank for none)';
 			case 'tools.uuidgenerator.error.invalid_namespace': return 'The namespace is not a valid UUID';
+			case 'tools.texttospeech.title': return 'Text to speech';
+			case 'tools.texttospeech.choose_a_language': return 'Choose a language';
+			case 'tools.texttospeech.text_to_speak': return 'Text to speak';
+			case 'tools.texttospeech.pitch': return 'Pitch';
+			case 'tools.texttospeech.rate': return 'Rate';
+			case 'tools.texttospeech.play': return 'Play';
+			case 'tools.texttospeech.stop': return 'Stop';
+			case 'tools.texttospeech.error.please_try_again': return 'Please try again later.\nIf it\'s the first time you\'re using this language, please wait a few seconds and try again.';
+			case 'tools.texttospeech.error.please_select_a_language': return 'Please select a language';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -1209,6 +1276,15 @@ extension on _StringsFr {
 			case 'tools.uuidgenerator.v5_namespace': return 'Espace de noms (laisser vide pour aléatoire)';
 			case 'tools.uuidgenerator.v5_name': return 'Nom (laisser vide si aucun)';
 			case 'tools.uuidgenerator.error.invalid_namespace': return 'L\'espace de noms n\'est pas un UUID valide';
+			case 'tools.texttospeech.title': return 'Synthèse vocale';
+			case 'tools.texttospeech.choose_a_language': return 'Choisir une langue';
+			case 'tools.texttospeech.text_to_speak': return 'Texte à prononcer';
+			case 'tools.texttospeech.pitch': return 'Hauteur';
+			case 'tools.texttospeech.rate': return 'Débit';
+			case 'tools.texttospeech.play': return 'Play';
+			case 'tools.texttospeech.stop': return 'Stop';
+			case 'tools.texttospeech.error.please_try_again': return 'Veuillez réessayer plus tard.\nSi vous utilisez cette langue pour la première fois, veuillez patienter quelques secondes et réessayer.';
+			case 'tools.texttospeech.error.please_select_a_language': return 'Veuillez sélectionner une langue';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';

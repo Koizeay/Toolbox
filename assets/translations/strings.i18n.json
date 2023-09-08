@@ -157,6 +157,19 @@
       "error": {
         "invalid_namespace": "The namespace is not a valid UUID"
       }
+    },
+    "texttospeech": {
+      "title": "Text to speech",
+      "choose_a_language": "Choose a language",
+      "text_to_speak": "Text to speak",
+      "pitch": "Pitch",
+      "rate": "Rate",
+      "play": "Play",
+      "stop": "Stop",
+      "error": {
+        "please_try_again": "Please try again later.\nIf it's the first time you're using this language, please wait a few seconds and try again.",
+        "please_select_a_language": "Please select a language"
+      }
     }
   },
   "credits": {

@@ -352,6 +352,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_tts:
+    dependency: "direct main"
+    description:
+      name: flutter_tts
+      sha256: "00a7af85ba2b53847028efc175029764240ab980b984eb0eae8386e2c3f7c460"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.8.2"
   flutter_web_plugins:
     dependency: transitive
     description: flutter

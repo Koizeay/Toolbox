@@ -157,6 +157,19 @@
       "error": {
         "invalid_namespace": "L'espace de noms n'est pas un UUID valide"
       }
+    },
+    "texttospeech": {
+      "title": "Synthèse vocale",
+      "choose_a_language": "Choisir une langue",
+      "text_to_speak": "Texte à prononcer",
+      "pitch": "Hauteur",
+      "rate": "Débit",
+      "play": "Play",
+      "stop": "Stop",
+      "error": {
+        "please_try_again": "Veuillez réessayer plus tard.\nSi vous utilisez cette langue pour la première fois, veuillez patienter quelques secondes et réessayer.",
+        "please_select_a_language": "Veuillez sélectionner une langue"
+      }
     }
   },
   "credits": {
