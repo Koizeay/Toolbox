@@ -127,7 +127,9 @@
     "whiteboard": {
       "title": "Tableau blanc",
       "clear": "Effacer",
-      "undo": "Annuler"
+      "undo": "Annuler",
+      "share": "Partager",
+      "share_success": "Votre tableau blanc a été partagé avec succès"
     },
     "networkinfo": {
       "title": "Informations réseau",

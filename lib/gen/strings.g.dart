@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 250 (125 per locale)
+/// Strings: 254 (127 per locale)
 ///
-/// Built on 2023-09-08 at 19:13 UTC
+/// Built on 2023-09-09 at 11:16 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -409,6 +409,8 @@ class _StringsToolsWhiteboardEn {
 	String get title => 'Whiteboard';
 	String get clear => 'Clear';
 	String get undo => 'Undo';
+	String get share => 'Share';
+	String get share_success => 'Your whiteboard has been shared successfully';
 }
 
 // Path: tools.networkinfo
@@ -861,6 +863,8 @@ class _StringsToolsWhiteboardFr implements _StringsToolsWhiteboardEn {
 	@override String get title => 'Tableau blanc';
 	@override String get clear => 'Effacer';
 	@override String get undo => 'Annuler';
+	@override String get share => 'Partager';
+	@override String get share_success => 'Votre tableau blanc a été partagé avec succès';
 }
 
 // Path: tools.networkinfo
@@ -1120,6 +1124,8 @@ extension on _StringsEn {
 			case 'tools.whiteboard.title': return 'Whiteboard';
 			case 'tools.whiteboard.clear': return 'Clear';
 			case 'tools.whiteboard.undo': return 'Undo';
+			case 'tools.whiteboard.share': return 'Share';
+			case 'tools.whiteboard.share_success': return 'Your whiteboard has been shared successfully';
 			case 'tools.networkinfo.title': return 'Network info';
 			case 'tools.networkinfo.loading': return 'Loading...';
 			case 'tools.networkinfo.location_permission_required': return 'Location permission is required to get some WiFi info (this is an OS limitation).\nYou could get incorrect info if you don\'t grant it.';
@@ -1253,6 +1259,8 @@ extension on _StringsFr {
 			case 'tools.whiteboard.title': return 'Tableau blanc';
 			case 'tools.whiteboard.clear': return 'Effacer';
 			case 'tools.whiteboard.undo': return 'Annuler';
+			case 'tools.whiteboard.share': return 'Partager';
+			case 'tools.whiteboard.share_success': return 'Votre tableau blanc a été partagé avec succès';
 			case 'tools.networkinfo.title': return 'Informations réseau';
 			case 'tools.networkinfo.loading': return 'Chargement...';
 			case 'tools.networkinfo.location_permission_required': return 'La permission de localisation est nécessaire pour obtenir certaines informations sur le WiFi (il s\'agit d\'une limitation du système d\'exploitation).\nVous risquez d\'obtenir des informations erronées si vous ne l\'autorisez pas.';

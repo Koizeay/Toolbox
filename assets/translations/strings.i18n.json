@@ -127,7 +127,9 @@
     "whiteboard": {
       "title": "Whiteboard",
       "clear": "Clear",
-      "undo": "Undo"
+      "undo": "Undo",
+      "share": "Share",
+      "share_success": "Your whiteboard has been shared successfully"
     },
     "networkinfo": {
       "title": "Network info",
