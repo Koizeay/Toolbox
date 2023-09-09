@@ -34,6 +34,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePage extends State<HomePage> {
   late List<Tool> tools;
+  late List<Tool> toolsFiltered;
 
   @override
   void initState() {
@@ -41,6 +42,7 @@ class _HomePage extends State<HomePage> {
     initTools();
     sortTools();
     setOnlyPortraitUp();
+    toolsFiltered = tools;
   }
 
   void initTools() {
@@ -88,52 +90,90 @@ class _HomePage extends State<HomePage> {
     tools.sort((a, b) => a.name.toLowerCase().compareTo(b.name.toLowerCase()));
   }
 
+  void filterSearchResults(String query) {
+    toolsFiltered = [];
+    if (query.isNotEmpty) {
+      for (var tool in tools) {
+        if (tool.name.toLowerCase().contains(query.toLowerCase())) {
+          toolsFiltered.add(tool);
+        }
+      }
+    } else {
+      toolsFiltered = tools;
+    }
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title: Text(t.generic.app_name),
-          actions: [
-            IconButton(
-              icon: const Icon(Icons.info_outline),
-              color: YaruColors.textGrey,
-              tooltip: t.credits.title,
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const CreditsPage()
-                  ),
-                );
-              },
-            ),
-          ],
-        ),
-        body: SafeArea(
-          child: Center(
-              child: GridView.builder(
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  childAspectRatio: 2,
-                ),
-                itemCount: tools.length,
-                itemBuilder: (context, index) {
-                  return ToolCard(
-                      title: tools[index].name,
-                      imageAssetPath: tools[index].image,
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => tools[index].page
-                          ),
-                        );
-                      }
+    return GestureDetector(
+      onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
+      child: Scaffold(
+          appBar: AppBar(
+            title: Text(t.generic.app_name),
+            actions: [
+              IconButton(
+                icon: const Icon(Icons.info_outline),
+                color: YaruColors.textGrey,
+                tooltip: t.credits.title,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const CreditsPage()
+                    ),
                   );
                 },
-              )
+              ),
+            ],
           ),
-        )
+          body: SafeArea(
+            child: Center(
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: TextField(
+                        onChanged: (value) {
+                          filterSearchResults(value);
+                        },
+                        decoration: InputDecoration(
+                          hintText: "Search",
+                          prefixIcon: const Icon(Icons.search),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: GridView.builder(
+                        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 2,
+                          childAspectRatio: 2,
+                        ),
+                        itemCount: toolsFiltered.length,
+                        itemBuilder: (context, index) {
+                          return ToolCard(
+                              title: toolsFiltered[index].name,
+                              imageAssetPath: toolsFiltered[index].image,
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => toolsFiltered[index].page
+                                  ),
+                                );
+                              }
+                          );
+                        },
+                      ),
+                    ),
+                  ],
+                )
+            ),
+          )
+      ),
     );
   }
 }
