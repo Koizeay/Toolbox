@@ -4,7 +4,8 @@
     "error": "Error",
     "warning": "Warning",
     "ok": "OK",
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "search": "Search"
   },
   "tools": {
     "clock": {

@@ -138,7 +138,7 @@ class _HomePage extends State<HomePage> {
                           filterSearchResults(value);
                         },
                         decoration: InputDecoration(
-                          hintText: "Search",
+                          hintText: t.generic.search,
                           prefixIcon: const Icon(Icons.search),
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10),

@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 254 (127 per locale)
+/// Strings: 256 (128 per locale)
 ///
-/// Built on 2023-09-09 at 11:16 UTC
+/// Built on 2023-09-09 at 11:31 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -167,6 +167,7 @@ class _StringsGenericEn {
 	String get warning => 'Warning';
 	String get ok => 'OK';
 	String get cancel => 'Cancel';
+	String get search => 'Search';
 }
 
 // Path: tools
@@ -621,6 +622,7 @@ class _StringsGenericFr implements _StringsGenericEn {
 	@override String get warning => 'Attention';
 	@override String get ok => 'OK';
 	@override String get cancel => 'Annuler';
+	@override String get search => 'Rechercher';
 }
 
 // Path: tools
@@ -1044,6 +1046,7 @@ extension on _StringsEn {
 			case 'generic.warning': return 'Warning';
 			case 'generic.ok': return 'OK';
 			case 'generic.cancel': return 'Cancel';
+			case 'generic.search': return 'Search';
 			case 'tools.clock.title': return 'Clock';
 			case 'tools.metronome.title': return 'Metronome';
 			case 'tools.metronome.bpm': return 'BPM';
@@ -1179,6 +1182,7 @@ extension on _StringsFr {
 			case 'generic.warning': return 'Attention';
 			case 'generic.ok': return 'OK';
 			case 'generic.cancel': return 'Annuler';
+			case 'generic.search': return 'Rechercher';
 			case 'tools.clock.title': return 'Horloge';
 			case 'tools.metronome.title': return 'Métronome';
 			case 'tools.metronome.bpm': return 'BPM';
