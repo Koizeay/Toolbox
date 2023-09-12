@@ -1,3 +1,5 @@
 ## Tools icons license
 
-All icons come from [Flaticon](https://www.flaticon.com/), and are licensed under [CC 3.0 BY](https://creativecommons.org/licenses/by/3.0/).
+All icons come from [Icon8](https://www.icon8.com/).
+You can not use the icon without permission from [Icons8](https://www.icons8.com/).
+These files have been kindly provided by [Icons8](https://www.icons8.com/) for the needs of this project, it is forbidden to use them for any other purpose without authorization from [Icons8](https://www.icons8.com/).

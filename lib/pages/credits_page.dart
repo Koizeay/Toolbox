@@ -53,7 +53,7 @@ class _CreditsPage extends State<CreditsPage> {
                   child: Padding(
                     padding: const EdgeInsets.all(10),
                     child: Text(
-                      t.credits.app_icon(author: "Koizeay + Flaticon"),
+                      t.credits.app_icon(author: "Koizeay + Icons8"),
                       style: const TextStyle(fontSize: 20),
                       textAlign: TextAlign.center,
                     ),
@@ -68,14 +68,19 @@ class _CreditsPage extends State<CreditsPage> {
                     child: Column(
                       children: [
                         Text(
-                          t.credits.tools_icons(author: "Flaticon"),
+                          t.credits.tools_icons(author: "Icons8"),
                           style: const TextStyle(fontSize: 20),
                           textAlign: TextAlign.center,
                         ),
-                        const Text(
-                          "https://www.flaticon.com/",
-                          style: TextStyle(fontSize: 15),
-                          textAlign: TextAlign.center,
+                        GestureDetector(
+                          onTap: () {
+                            launchUrlInBrowser("https://www.icons8.com/");
+                          },
+                          child: const Text(
+                            "https://www.icons8.com/",
+                            style: TextStyle(fontSize: 15),
+                            textAlign: TextAlign.center,
+                          ),
                         ),
                       ],
                     ),
