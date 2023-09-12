@@ -68,5 +68,4 @@ This project is under the [GNU GPLv3 License](https://www.gnu.org/licenses/gpl-3
 
 ## Credits
 - [Koizeay](https://koizeay.com) - Developer
-- [Flaticon](https://www.flaticon.com/) - Tools icons
-- [Icons8](https://www.icons8.com/) - App icon
+- [Icons8](https://www.icons8.com/) - Tools icons + App icon
