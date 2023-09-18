@@ -1,8 +1,11 @@
 
+import 'dart:io';
+
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:timer_count_down/timer_controller.dart';
 import 'package:timer_count_down/timer_count_down.dart';
+import 'package:toolbox/core/dialogs.dart';
 import 'package:toolbox/core/time.dart';
 import 'package:toolbox/gen/strings.g.dart';
 import 'package:vibration/vibration.dart';
@@ -26,7 +29,18 @@ class _TimerPage extends State<TimerPage> {
     super.dispose();
   }
 
+  void showIosAlert() {
+      showOkTextDialog(
+          context,
+          t.generic.warning,
+          t.tools.timer.ios_warning_message,
+      );
+  }
+
   void startTimer() {
+    if (Platform.isIOS) {
+      showIosAlert();
+    }
     if (!isCounting) {
       stopAlarm();
       controller.start();

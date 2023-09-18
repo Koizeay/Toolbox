@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 258 (129 per locale)
+/// Strings: 260 (130 per locale)
 ///
-/// Built on 2023-09-18 at 10:50 UTC
+/// Built on 2023-09-18 at 11:08 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -309,6 +309,7 @@ class _StringsToolsTimerEn {
 	String get title => 'Timer';
 	String get start => 'Start';
 	String get stop => 'Stop';
+	String get ios_warning_message => 'For the timer to ring on iOS, you must not quit the application or switch off your iPhone screen. Otherwise iOS will prevent the timer from ringing when it reaches zero.';
 }
 
 // Path: tools.stopwatch
@@ -775,6 +776,7 @@ class _StringsToolsTimerFr implements _StringsToolsTimerEn {
 	@override String get title => 'Minuteur';
 	@override String get start => 'Démarrer';
 	@override String get stop => 'Arrêter';
+	@override String get ios_warning_message => 'Pour que le minuteur sonne sur iOS, vous ne devez pas quitter l\'application ni éteindre l\'écran de votre iPhone. Sinon, iOS empêchera le minuteur de sonner lorsqu\'il atteindra zéro.';
 }
 
 // Path: tools.stopwatch
@@ -1102,6 +1104,7 @@ extension on _StringsEn {
 			case 'tools.timer.title': return 'Timer';
 			case 'tools.timer.start': return 'Start';
 			case 'tools.timer.stop': return 'Stop';
+			case 'tools.timer.ios_warning_message': return 'For the timer to ring on iOS, you must not quit the application or switch off your iPhone screen. Otherwise iOS will prevent the timer from ringing when it reaches zero.';
 			case 'tools.stopwatch.title': return 'Stopwatch';
 			case 'tools.stopwatch.start': return 'Start';
 			case 'tools.stopwatch.stop': return 'Stop';
@@ -1239,6 +1242,7 @@ extension on _StringsFr {
 			case 'tools.timer.title': return 'Minuteur';
 			case 'tools.timer.start': return 'Démarrer';
 			case 'tools.timer.stop': return 'Arrêter';
+			case 'tools.timer.ios_warning_message': return 'Pour que le minuteur sonne sur iOS, vous ne devez pas quitter l\'application ni éteindre l\'écran de votre iPhone. Sinon, iOS empêchera le minuteur de sonner lorsqu\'il atteindra zéro.';
 			case 'tools.stopwatch.title': return 'Chronomètre';
 			case 'tools.stopwatch.start': return 'Go';
 			case 'tools.stopwatch.stop': return 'Stop';

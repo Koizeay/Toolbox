@@ -63,7 +63,8 @@
     "timer": {
       "title": "Timer",
       "start": "Start",
-      "stop": "Stop"
+      "stop": "Stop",
+      "ios_warning_message": "For the timer to ring on iOS, you must not quit the application or switch off your iPhone screen. Otherwise iOS will prevent the timer from ringing when it reaches zero."
     },
     "stopwatch": {
       "title": "Stopwatch",
