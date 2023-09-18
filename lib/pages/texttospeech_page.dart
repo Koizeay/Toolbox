@@ -14,7 +14,7 @@ class TextToSpeechPage extends StatefulWidget {
 }
 
 class _TextToSpeechPage extends State<TextToSpeechPage> {
-  String defaultLanguageString = t.tools.texttospeech.title;
+  String defaultLanguageString = t.tools.texttospeech.choose_a_language;
   TextEditingController inputTextController = TextEditingController();
   bool loading = true;
   FlutterTts flutterTts = FlutterTts();
