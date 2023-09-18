@@ -104,33 +104,36 @@ class _RandomNumberPage extends State<RandomNumberPage> {
                         ),
                       ),
                       const SizedBox(height: 16),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                            width: 140,
-                            child: TextField(
-                              controller: minNumberController,
-                              keyboardType: TextInputType.number,
-                              decoration: InputDecoration(
-                                labelText: t.tools.randomnumber.min,
-                                border: const OutlineInputBorder(),
+                      SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            SizedBox(
+                              width: 140,
+                              child: TextField(
+                                controller: minNumberController,
+                                keyboardType: TextInputType.number,
+                                decoration: InputDecoration(
+                                  labelText: t.tools.randomnumber.min,
+                                  border: const OutlineInputBorder(),
+                                ),
                               ),
                             ),
-                          ),
-                          const SizedBox(width: 16),
-                          SizedBox(
-                            width: 140,
-                            child: TextField(
-                              controller: maxNumberController,
-                              keyboardType: TextInputType.number,
-                              decoration: InputDecoration(
-                                labelText: t.tools.randomnumber.max,
-                                border: const OutlineInputBorder(),
+                            const SizedBox(width: 16),
+                            SizedBox(
+                              width: 140,
+                              child: TextField(
+                                controller: maxNumberController,
+                                keyboardType: TextInputType.number,
+                                decoration: InputDecoration(
+                                  labelText: t.tools.randomnumber.max,
+                                  border: const OutlineInputBorder(),
+                                ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ],
                   ),
