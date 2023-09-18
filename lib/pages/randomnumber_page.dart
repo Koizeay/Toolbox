@@ -76,8 +76,8 @@ class _RandomNumberPage extends State<RandomNumberPage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       SizedBox(
-                        width: 140,
-                        height: 140,
+                        width: 150,
+                        height: 150,
                         child: GestureDetector(
                           onTap: () {
                             FocusManager.instance.primaryFocus?.unfocus();
