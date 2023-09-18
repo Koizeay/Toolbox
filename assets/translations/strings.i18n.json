@@ -19,7 +19,10 @@
       "stop": "Stop"
     },
     "megaphone": {
-      "title": "Megaphone"
+      "title": "Megaphone",
+      "error": {
+        "microphone_permission_denied": "Permission denied, please allow the application to access the microphone in your device settings"
+      }
     },
     "nslookup": {
       "title": "NSLookup",

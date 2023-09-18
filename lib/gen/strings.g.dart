@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 256 (128 per locale)
+/// Strings: 258 (129 per locale)
 ///
-/// Built on 2023-09-18 at 10:36 UTC
+/// Built on 2023-09-18 at 10:50 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -244,6 +244,7 @@ class _StringsToolsMegaphoneEn {
 
 	// Translations
 	String get title => 'Megaphone';
+	late final _StringsToolsMegaphoneErrorEn error = _StringsToolsMegaphoneErrorEn._(_root);
 }
 
 // Path: tools.nslookup
@@ -484,6 +485,16 @@ class _StringsCreditsTranslationsEn {
 	String french({required Object author}) => 'French by ${author}';
 }
 
+// Path: tools.megaphone.error
+class _StringsToolsMegaphoneErrorEn {
+	_StringsToolsMegaphoneErrorEn._(this._root);
+
+	final _StringsEn _root; // ignore: unused_field
+
+	// Translations
+	String get microphone_permission_denied => 'Permission denied, please allow the application to access the microphone in your device settings';
+}
+
 // Path: tools.nslookup.error
 class _StringsToolsNslookupErrorEn {
 	_StringsToolsNslookupErrorEn._(this._root);
@@ -699,6 +710,7 @@ class _StringsToolsMegaphoneFr implements _StringsToolsMegaphoneEn {
 
 	// Translations
 	@override String get title => 'Mégaphone';
+	@override late final _StringsToolsMegaphoneErrorFr error = _StringsToolsMegaphoneErrorFr._(_root);
 }
 
 // Path: tools.nslookup
@@ -939,6 +951,16 @@ class _StringsCreditsTranslationsFr implements _StringsCreditsTranslationsEn {
 	@override String french({required Object author}) => 'Français par ${author}';
 }
 
+// Path: tools.megaphone.error
+class _StringsToolsMegaphoneErrorFr implements _StringsToolsMegaphoneErrorEn {
+	_StringsToolsMegaphoneErrorFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get microphone_permission_denied => 'Permission refusée, veuillez autoriser l\'application à accéder au micro dans les paramètres de votre appareil';
+}
+
 // Path: tools.nslookup.error
 class _StringsToolsNslookupErrorFr implements _StringsToolsNslookupErrorEn {
 	_StringsToolsNslookupErrorFr._(this._root);
@@ -1054,6 +1076,7 @@ extension on _StringsEn {
 			case 'tools.metronome.start': return 'Start';
 			case 'tools.metronome.stop': return 'Stop';
 			case 'tools.megaphone.title': return 'Megaphone';
+			case 'tools.megaphone.error.microphone_permission_denied': return 'Permission denied, please allow the application to access the microphone in your device settings';
 			case 'tools.nslookup.title': return 'NSLookup';
 			case 'tools.nslookup.enter_a_domain_name': return 'Enter a domain name';
 			case 'tools.nslookup.lookup': return 'Lookup';
@@ -1190,6 +1213,7 @@ extension on _StringsFr {
 			case 'tools.metronome.start': return 'Démarrer';
 			case 'tools.metronome.stop': return 'Arrêter';
 			case 'tools.megaphone.title': return 'Mégaphone';
+			case 'tools.megaphone.error.microphone_permission_denied': return 'Permission refusée, veuillez autoriser l\'application à accéder au micro dans les paramètres de votre appareil';
 			case 'tools.nslookup.title': return 'NSLookup';
 			case 'tools.nslookup.enter_a_domain_name': return 'Entrez un nom de domaine';
 			case 'tools.nslookup.lookup': return 'Rechercher';

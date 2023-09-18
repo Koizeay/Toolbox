@@ -4,6 +4,7 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_sound/flutter_sound.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:toolbox/gen/strings.g.dart';
 
 class MegaphonePage extends StatefulWidget {
@@ -32,11 +33,32 @@ class _MegaphonePage extends State<MegaphonePage> {
     setState(() {
       isRecording = !isRecording;
     });
+    bool isMicrophoneGranted = await askForMicrophonePermission();
+    if (!isMicrophoneGranted) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(t.tools.megaphone.error.microphone_permission_denied)
+          ),
+        );
+        setState(() {
+          isRecording = false;
+        });
+      }
+    }
     if (isRecording) {
       player.openPlayer().then((value) => player.startPlayerFromMic());
     } else {
       player.stopPlayer();
       player.closePlayer();
+    }
+  }
+
+  Future<bool> askForMicrophonePermission() async {
+    if (await Permission.microphone.request().isGranted) {
+      return true;
+    } else {
+      return false;
     }
   }
 
