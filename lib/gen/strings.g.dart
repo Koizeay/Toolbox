@@ -6,7 +6,7 @@
 /// Locales: 2
 /// Strings: 256 (128 per locale)
 ///
-/// Built on 2023-09-09 at 11:31 UTC
+/// Built on 2023-09-18 at 10:36 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -179,7 +179,7 @@ class _StringsToolsEn {
 	// Translations
 	late final _StringsToolsClockEn clock = _StringsToolsClockEn._(_root);
 	late final _StringsToolsMetronomeEn metronome = _StringsToolsMetronomeEn._(_root);
-	late final _StringsToolsMicspeakEn micspeak = _StringsToolsMicspeakEn._(_root);
+	late final _StringsToolsMegaphoneEn megaphone = _StringsToolsMegaphoneEn._(_root);
 	late final _StringsToolsNslookupEn nslookup = _StringsToolsNslookupEn._(_root);
 	late final _StringsToolsPingEn ping = _StringsToolsPingEn._(_root);
 	late final _StringsToolsSoundmeterEn soundmeter = _StringsToolsSoundmeterEn._(_root);
@@ -236,14 +236,14 @@ class _StringsToolsMetronomeEn {
 	String get stop => 'Stop';
 }
 
-// Path: tools.micspeak
-class _StringsToolsMicspeakEn {
-	_StringsToolsMicspeakEn._(this._root);
+// Path: tools.megaphone
+class _StringsToolsMegaphoneEn {
+	_StringsToolsMegaphoneEn._(this._root);
 
 	final _StringsEn _root; // ignore: unused_field
 
 	// Translations
-	String get title => 'MicSpeak';
+	String get title => 'Megaphone';
 }
 
 // Path: tools.nslookup
@@ -634,7 +634,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	// Translations
 	@override late final _StringsToolsClockFr clock = _StringsToolsClockFr._(_root);
 	@override late final _StringsToolsMetronomeFr metronome = _StringsToolsMetronomeFr._(_root);
-	@override late final _StringsToolsMicspeakFr micspeak = _StringsToolsMicspeakFr._(_root);
+	@override late final _StringsToolsMegaphoneFr megaphone = _StringsToolsMegaphoneFr._(_root);
 	@override late final _StringsToolsNslookupFr nslookup = _StringsToolsNslookupFr._(_root);
 	@override late final _StringsToolsPingFr ping = _StringsToolsPingFr._(_root);
 	@override late final _StringsToolsSoundmeterFr soundmeter = _StringsToolsSoundmeterFr._(_root);
@@ -691,14 +691,14 @@ class _StringsToolsMetronomeFr implements _StringsToolsMetronomeEn {
 	@override String get stop => 'Arrêter';
 }
 
-// Path: tools.micspeak
-class _StringsToolsMicspeakFr implements _StringsToolsMicspeakEn {
-	_StringsToolsMicspeakFr._(this._root);
+// Path: tools.megaphone
+class _StringsToolsMegaphoneFr implements _StringsToolsMegaphoneEn {
+	_StringsToolsMegaphoneFr._(this._root);
 
 	@override final _StringsFr _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'MicSpeak';
+	@override String get title => 'Mégaphone';
 }
 
 // Path: tools.nslookup
@@ -1053,7 +1053,7 @@ extension on _StringsEn {
 			case 'tools.metronome.beats_per_measure': return 'Beats per measure';
 			case 'tools.metronome.start': return 'Start';
 			case 'tools.metronome.stop': return 'Stop';
-			case 'tools.micspeak.title': return 'MicSpeak';
+			case 'tools.megaphone.title': return 'Megaphone';
 			case 'tools.nslookup.title': return 'NSLookup';
 			case 'tools.nslookup.enter_a_domain_name': return 'Enter a domain name';
 			case 'tools.nslookup.lookup': return 'Lookup';
@@ -1189,7 +1189,7 @@ extension on _StringsFr {
 			case 'tools.metronome.beats_per_measure': return 'Battements par mesure';
 			case 'tools.metronome.start': return 'Démarrer';
 			case 'tools.metronome.stop': return 'Arrêter';
-			case 'tools.micspeak.title': return 'MicSpeak';
+			case 'tools.megaphone.title': return 'Mégaphone';
 			case 'tools.nslookup.title': return 'NSLookup';
 			case 'tools.nslookup.enter_a_domain_name': return 'Entrez un nom de domaine';
 			case 'tools.nslookup.lookup': return 'Rechercher';

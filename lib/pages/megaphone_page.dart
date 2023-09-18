@@ -6,13 +6,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_sound/flutter_sound.dart';
 import 'package:toolbox/gen/strings.g.dart';
 
-class MicSpeakPage extends StatefulWidget {
-  const MicSpeakPage({ Key? key }) : super(key: key);
+class MegaphonePage extends StatefulWidget {
+  const MegaphonePage({ Key? key }) : super(key: key);
   @override
-  State<MicSpeakPage> createState() => _MicSpeakPage();
+  State<MegaphonePage> createState() => _MegaphonePage();
 }
 
-class _MicSpeakPage extends State<MicSpeakPage> {
+class _MegaphonePage extends State<MegaphonePage> {
   bool isRecording = false;
   FlutterSoundPlayer player = FlutterSoundPlayer();
 
@@ -28,7 +28,7 @@ class _MicSpeakPage extends State<MicSpeakPage> {
     super.dispose();
   }
 
-  Future<void> toggleMicSpeak() async {
+  Future<void> toggleMegaphone() async {
     setState(() {
       isRecording = !isRecording;
     });
@@ -44,7 +44,7 @@ class _MicSpeakPage extends State<MicSpeakPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("${t.generic.app_name} - ${t.tools.micspeak.title}"),
+        title: Text("${t.generic.app_name} - ${t.tools.megaphone.title}"),
       ),
       body: SafeArea(
         child: Center(
@@ -53,11 +53,11 @@ class _MicSpeakPage extends State<MicSpeakPage> {
                 children: [
                   GestureDetector(
                     onTap: () {
-                      toggleMicSpeak();
+                      toggleMegaphone();
                     },
                     child: Image.asset(
-                      isRecording ? "assets/images/specific/micspeak_mic_on.png"
-                          : "assets/images/specific/micspeak_mic_off.png",
+                      isRecording ? "assets/images/specific/megaphone_mic_on.png"
+                          : "assets/images/specific/megaphone_mic_off.png",
                         width: 120,
                         height: 120
                     ),

@@ -7,7 +7,7 @@ import 'package:toolbox/pages/clock_page.dart';
 import 'package:toolbox/pages/credits_page.dart';
 import 'package:toolbox/pages/flipcoins_page.dart';
 import 'package:toolbox/pages/metronome_page.dart';
-import 'package:toolbox/pages/micspeak_page.dart';
+import 'package:toolbox/pages/megaphone_page.dart';
 import 'package:toolbox/pages/nslookup_page.dart';
 import 'package:toolbox/pages/ping_page.dart';
 import 'package:toolbox/pages/qrreader_page.dart';
@@ -53,8 +53,8 @@ class _HomePage extends State<HomePage> {
           const FlipCoinsPage()),
       Tool(t.tools.metronome.title, "assets/images/tools/metronome.png",
           const MetronomePage()),
-      Tool(t.tools.micspeak.title, "assets/images/tools/micspeak.png",
-          const MicSpeakPage()),
+      Tool(t.tools.megaphone.title, "assets/images/tools/megaphone.png",
+          const MegaphonePage()),
       Tool(t.tools.networkinfo.title, "assets/images/tools/networkinfo.png",
           const NetworkInfoPage()),
       Tool(t.tools.nslookup.title, "assets/images/tools/nslookup.png",

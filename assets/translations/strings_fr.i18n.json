@@ -18,8 +18,8 @@
       "start": "Démarrer",
       "stop": "Arrêter"
     },
-    "micspeak": {
-      "title": "MicSpeak"
+    "megaphone": {
+      "title": "Mégaphone"
     },
     "nslookup": {
       "title": "NSLookup",
