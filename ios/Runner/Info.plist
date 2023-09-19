@@ -31,8 +31,6 @@
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>Microphone access required to use some tools</string>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
@@ -54,13 +52,15 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>The application uses the microphone to let you use specific tools, such as the "Megaphone" tool, which requires access to your microphone to transmit sound back to your speakers.</string>
     <key>NSCameraUsageDescription</key>
-    <string>Camera access required to use some tools</string>
+    <string>The application uses the camera to let you use specific tools, such as the 'QR reader' tool, which requires access to your camera to scan QR code and show you the content of it.</string>
     <key>NSPhotoLibraryUsageDescription</key>
-    <string>Access required to use some tools</string>
+    <string>The application uses the library access to let you use specific tools.</string>
     <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-    <string>Location access required to use some tools</string>
+    <string>The application uses the location access to let you use specific tools.</string>
     <key>NSLocationWhenInUseUsageDescription</key>
-    <string>Location access required to use some tools</string>
+    <string>The application uses the location access to let you use specific tools.</string>
 </dict>
 </plist>
