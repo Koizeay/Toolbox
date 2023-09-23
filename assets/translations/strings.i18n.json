@@ -177,6 +177,22 @@
         "please_try_again": "Please try again later.\nIf it's the first time you're using this language, please wait a few seconds and try again.",
         "please_select_a_language": "Please select a language"
       }
+    },
+    "nearbypublictransportstops": {
+      "title": "Nearby transport stops",
+      "refresh": "Refresh",
+      "data_source": "Data source",
+      "initial_dialog_title": "Information",
+      "initial_dialog_message": "This tool is intended to be used in Switzerland. It uses the data from \"$source\"",
+      "data_license_dialog_open": "Open",
+      "data_license_dialog_title": "Data source",
+      "data_license_dialog_message": "The data used in this tool comes from \"$source\".\n$url",
+      "error": {
+        "location_permission_denied": "Location permission denied, please enable it in settings in order to to make full use of this tool.",
+        "download_stops_failed": "Failed to download stops, you need to be connected to the internet to download stops for the first time or to update them.",
+        "read_stops_failed": "Failed to read stops, please try again later with an active internet connection.",
+        "parse_stops_failed": "Failed to parse stops, please try again later with an active internet connection."
+      }
     }
   },
   "credits": {

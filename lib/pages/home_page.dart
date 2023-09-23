@@ -8,6 +8,7 @@ import 'package:toolbox/pages/credits_page.dart';
 import 'package:toolbox/pages/flipcoins_page.dart';
 import 'package:toolbox/pages/metronome_page.dart';
 import 'package:toolbox/pages/megaphone_page.dart';
+import 'package:toolbox/pages/nearbypublictransportstops_page.dart';
 import 'package:toolbox/pages/nslookup_page.dart';
 import 'package:toolbox/pages/ping_page.dart';
 import 'package:toolbox/pages/qrreader_page.dart';
@@ -57,6 +58,8 @@ class _HomePage extends State<HomePage> {
           const MegaphonePage()),
       Tool(t.tools.networkinfo.title, "assets/images/tools/networkinfo.png",
           const NetworkInfoPage()),
+      Tool(t.tools.nearbypublictransportstops.title, "assets/images/tools/nearbypublictransportstops.png",
+          const NearbyPublicTransportStopsPage()),
       Tool(t.tools.nslookup.title, "assets/images/tools/nslookup.png",
           const NslookupPage()),
       Tool(t.tools.ping.title, "assets/images/tools/ping.png",

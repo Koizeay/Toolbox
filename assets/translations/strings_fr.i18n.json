@@ -177,6 +177,22 @@
         "please_try_again": "Veuillez réessayer plus tard.\nSi vous utilisez cette langue pour la première fois, veuillez patienter quelques secondes et réessayer.",
         "please_select_a_language": "Veuillez sélectionner une langue"
       }
+    },
+    "nearbypublictransportstops": {
+      "title": "Arrêts de transport",
+      "refresh": "Rafraîchir",
+      "data_source": "Source des données",
+      "initial_dialog_title": "Information",
+      "initial_dialog_message": "Cet outil est destiné à être utilisé en Suisse. Il utilise les données de \"$source\"",
+      "data_license_dialog_open": "Ouvrir",
+      "data_license_dialog_title": "Source des données",
+      "data_license_dialog_message": "Les données utilisées dans cet outil proviennent de \"$source\".\n$url",
+      "error": {
+        "location_permission_denied": "La permission de localisation a été refusée, veuillez l'activer dans les paramètres afin d'utiliser pleinement cet outil.",
+        "download_stops_failed": "Échec du téléchargement des arrêts, vous devez être connecté à internet pour télécharger les arrêts pour la première fois ou pour les mettre à jour.",
+        "read_stops_failed": "La lecture des arrêts a échoué, veuillez réessayer plus tard avec une connexion internet active.",
+        "parse_stops_failed": "Le traitement des arrêts a échoué, veuillez réessayer plus tard avec une connexion Internet active."
+      }
     }
   },
   "credits": {

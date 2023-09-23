@@ -71,6 +71,11 @@ dependencies:
   flutter_tts: ^3.8.2
   widgets_to_image: ^0.0.2
   share_plus: ^6.3.4
+  fast_csv: ^0.1.44
+  maps_launcher: ^2.2.0
+  geolocator: ^10.0.1
+  path_provider: ^2.1.1
+  connectivity_plus: ^4.0.2
 
 dev_dependencies:
   flutter_test:

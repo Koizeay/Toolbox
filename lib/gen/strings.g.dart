@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 260 (130 per locale)
+/// Strings: 284 (142 per locale)
 ///
-/// Built on 2023-09-18 at 11:08 UTC
+/// Built on 2023-09-23 at 14:19 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -195,6 +195,7 @@ class _StringsToolsEn {
 	late final _StringsToolsNetworkinfoEn networkinfo = _StringsToolsNetworkinfoEn._(_root);
 	late final _StringsToolsUuidgeneratorEn uuidgenerator = _StringsToolsUuidgeneratorEn._(_root);
 	late final _StringsToolsTexttospeechEn texttospeech = _StringsToolsTexttospeechEn._(_root);
+	late final _StringsToolsNearbypublictransportstopsEn nearbypublictransportstops = _StringsToolsNearbypublictransportstopsEn._(_root);
 }
 
 // Path: credits
@@ -474,6 +475,24 @@ class _StringsToolsTexttospeechEn {
 	late final _StringsToolsTexttospeechErrorEn error = _StringsToolsTexttospeechErrorEn._(_root);
 }
 
+// Path: tools.nearbypublictransportstops
+class _StringsToolsNearbypublictransportstopsEn {
+	_StringsToolsNearbypublictransportstopsEn._(this._root);
+
+	final _StringsEn _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'Nearby transport stops';
+	String get refresh => 'Refresh';
+	String get data_source => 'Data source';
+	String get initial_dialog_title => 'Information';
+	String initial_dialog_message({required Object source}) => 'This tool is intended to be used in Switzerland. It uses the data from "${source}"';
+	String get data_license_dialog_open => 'Open';
+	String get data_license_dialog_title => 'Data source';
+	String data_license_dialog_message({required Object source, required Object url}) => 'The data used in this tool comes from "${source}".\n${url}';
+	late final _StringsToolsNearbypublictransportstopsErrorEn error = _StringsToolsNearbypublictransportstopsErrorEn._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsEn._(this._root);
@@ -592,6 +611,19 @@ class _StringsToolsTexttospeechErrorEn {
 	String get please_select_a_language => 'Please select a language';
 }
 
+// Path: tools.nearbypublictransportstops.error
+class _StringsToolsNearbypublictransportstopsErrorEn {
+	_StringsToolsNearbypublictransportstopsErrorEn._(this._root);
+
+	final _StringsEn _root; // ignore: unused_field
+
+	// Translations
+	String get location_permission_denied => 'Location permission denied, please enable it in settings in order to to make full use of this tool.';
+	String get download_stops_failed => 'Failed to download stops, you need to be connected to the internet to download stops for the first time or to update them.';
+	String get read_stops_failed => 'Failed to read stops, please try again later with an active internet connection.';
+	String get parse_stops_failed => 'Failed to parse stops, please try again later with an active internet connection.';
+}
+
 // Path: <root>
 class _StringsFr implements _StringsEn {
 
@@ -662,6 +694,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsNetworkinfoFr networkinfo = _StringsToolsNetworkinfoFr._(_root);
 	@override late final _StringsToolsUuidgeneratorFr uuidgenerator = _StringsToolsUuidgeneratorFr._(_root);
 	@override late final _StringsToolsTexttospeechFr texttospeech = _StringsToolsTexttospeechFr._(_root);
+	@override late final _StringsToolsNearbypublictransportstopsFr nearbypublictransportstops = _StringsToolsNearbypublictransportstopsFr._(_root);
 }
 
 // Path: credits
@@ -941,6 +974,24 @@ class _StringsToolsTexttospeechFr implements _StringsToolsTexttospeechEn {
 	@override late final _StringsToolsTexttospeechErrorFr error = _StringsToolsTexttospeechErrorFr._(_root);
 }
 
+// Path: tools.nearbypublictransportstops
+class _StringsToolsNearbypublictransportstopsFr implements _StringsToolsNearbypublictransportstopsEn {
+	_StringsToolsNearbypublictransportstopsFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Arrêts de transport';
+	@override String get refresh => 'Rafraîchir';
+	@override String get data_source => 'Source des données';
+	@override String get initial_dialog_title => 'Information';
+	@override String initial_dialog_message({required Object source}) => 'Cet outil est destiné à être utilisé en Suisse. Il utilise les données de "${source}"';
+	@override String get data_license_dialog_open => 'Ouvrir';
+	@override String get data_license_dialog_title => 'Source des données';
+	@override String data_license_dialog_message({required Object source, required Object url}) => 'Les données utilisées dans cet outil proviennent de "${source}".\n${url}';
+	@override late final _StringsToolsNearbypublictransportstopsErrorFr error = _StringsToolsNearbypublictransportstopsErrorFr._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsFr implements _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsFr._(this._root);
@@ -1057,6 +1108,19 @@ class _StringsToolsTexttospeechErrorFr implements _StringsToolsTexttospeechError
 	// Translations
 	@override String get please_try_again => 'Veuillez réessayer plus tard.\nSi vous utilisez cette langue pour la première fois, veuillez patienter quelques secondes et réessayer.';
 	@override String get please_select_a_language => 'Veuillez sélectionner une langue';
+}
+
+// Path: tools.nearbypublictransportstops.error
+class _StringsToolsNearbypublictransportstopsErrorFr implements _StringsToolsNearbypublictransportstopsErrorEn {
+	_StringsToolsNearbypublictransportstopsErrorFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get location_permission_denied => 'La permission de localisation a été refusée, veuillez l\'activer dans les paramètres afin d\'utiliser pleinement cet outil.';
+	@override String get download_stops_failed => 'Échec du téléchargement des arrêts, vous devez être connecté à internet pour télécharger les arrêts pour la première fois ou pour les mettre à jour.';
+	@override String get read_stops_failed => 'La lecture des arrêts a échoué, veuillez réessayer plus tard avec une connexion internet active.';
+	@override String get parse_stops_failed => 'Le traitement des arrêts a échoué, veuillez réessayer plus tard avec une connexion Internet active.';
 }
 
 /// Flat map(s) containing all translations.
@@ -1187,6 +1251,18 @@ extension on _StringsEn {
 			case 'tools.texttospeech.stop': return 'Stop';
 			case 'tools.texttospeech.error.please_try_again': return 'Please try again later.\nIf it\'s the first time you\'re using this language, please wait a few seconds and try again.';
 			case 'tools.texttospeech.error.please_select_a_language': return 'Please select a language';
+			case 'tools.nearbypublictransportstops.title': return 'Nearby transport stops';
+			case 'tools.nearbypublictransportstops.refresh': return 'Refresh';
+			case 'tools.nearbypublictransportstops.data_source': return 'Data source';
+			case 'tools.nearbypublictransportstops.initial_dialog_title': return 'Information';
+			case 'tools.nearbypublictransportstops.initial_dialog_message': return ({required Object source}) => 'This tool is intended to be used in Switzerland. It uses the data from "${source}"';
+			case 'tools.nearbypublictransportstops.data_license_dialog_open': return 'Open';
+			case 'tools.nearbypublictransportstops.data_license_dialog_title': return 'Data source';
+			case 'tools.nearbypublictransportstops.data_license_dialog_message': return ({required Object source, required Object url}) => 'The data used in this tool comes from "${source}".\n${url}';
+			case 'tools.nearbypublictransportstops.error.location_permission_denied': return 'Location permission denied, please enable it in settings in order to to make full use of this tool.';
+			case 'tools.nearbypublictransportstops.error.download_stops_failed': return 'Failed to download stops, you need to be connected to the internet to download stops for the first time or to update them.';
+			case 'tools.nearbypublictransportstops.error.read_stops_failed': return 'Failed to read stops, please try again later with an active internet connection.';
+			case 'tools.nearbypublictransportstops.error.parse_stops_failed': return 'Failed to parse stops, please try again later with an active internet connection.';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -1325,6 +1401,18 @@ extension on _StringsFr {
 			case 'tools.texttospeech.stop': return 'Stop';
 			case 'tools.texttospeech.error.please_try_again': return 'Veuillez réessayer plus tard.\nSi vous utilisez cette langue pour la première fois, veuillez patienter quelques secondes et réessayer.';
 			case 'tools.texttospeech.error.please_select_a_language': return 'Veuillez sélectionner une langue';
+			case 'tools.nearbypublictransportstops.title': return 'Arrêts de transport';
+			case 'tools.nearbypublictransportstops.refresh': return 'Rafraîchir';
+			case 'tools.nearbypublictransportstops.data_source': return 'Source des données';
+			case 'tools.nearbypublictransportstops.initial_dialog_title': return 'Information';
+			case 'tools.nearbypublictransportstops.initial_dialog_message': return ({required Object source}) => 'Cet outil est destiné à être utilisé en Suisse. Il utilise les données de "${source}"';
+			case 'tools.nearbypublictransportstops.data_license_dialog_open': return 'Ouvrir';
+			case 'tools.nearbypublictransportstops.data_license_dialog_title': return 'Source des données';
+			case 'tools.nearbypublictransportstops.data_license_dialog_message': return ({required Object source, required Object url}) => 'Les données utilisées dans cet outil proviennent de "${source}".\n${url}';
+			case 'tools.nearbypublictransportstops.error.location_permission_denied': return 'La permission de localisation a été refusée, veuillez l\'activer dans les paramètres afin d\'utiliser pleinement cet outil.';
+			case 'tools.nearbypublictransportstops.error.download_stops_failed': return 'Échec du téléchargement des arrêts, vous devez être connecté à internet pour télécharger les arrêts pour la première fois ou pour les mettre à jour.';
+			case 'tools.nearbypublictransportstops.error.read_stops_failed': return 'La lecture des arrêts a échoué, veuillez réessayer plus tard avec une connexion internet active.';
+			case 'tools.nearbypublictransportstops.error.parse_stops_failed': return 'Le traitement des arrêts a échoué, veuillez réessayer plus tard avec une connexion Internet active.';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';

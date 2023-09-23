@@ -59,8 +59,8 @@
     <key>NSPhotoLibraryUsageDescription</key>
     <string>The application uses the library access to let you use specific tools.</string>
     <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-    <string>The application uses the location access to let you use specific tools.</string>
+    <string>The application uses the location to let you use specific tools, such as the "Nearby transport stops" tool, which requires access to your location to show you nearby public transport stops.</string>
     <key>NSLocationWhenInUseUsageDescription</key>
-    <string>The application uses the location access to let you use specific tools.</string>
+    <string>The application uses the location to let you use specific tools, such as the "Nearby transport stops" tool, which requires access to your location to show you nearby public transport stops.</string>
 </dict>
 </plist>
