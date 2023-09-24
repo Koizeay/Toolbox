@@ -124,7 +124,13 @@ class _NearbyPublicTransportStopsPage
         permission == LocationPermission.denied) {
       return;
     }
-    currentLocation = await Geolocator.getCurrentPosition();
+    try {
+      currentLocation = await Geolocator.getCurrentPosition();
+    } catch (e) {
+      if (kDebugMode) {
+        print(e);
+      }
+    }
   }
 
   Future<void> initPublicTransportStops() async {
@@ -298,7 +304,7 @@ class _NearbyPublicTransportStopsPage
                             openMaps(stops[index].lat, stops[index].lon);
                           },
                           title: Text(stops[index].name),
-                          subtitle: Text(
+                          subtitle: currentLocation == null ? Container() : Text(
                               "${(stops[index].distance / 1000).toStringAsFixed(
                                   2)} km"
                           ),
