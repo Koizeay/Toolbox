@@ -216,7 +216,7 @@ class _SshClientPage extends State<SshClientPage> {
     return Scaffold(
         appBar: AppBar(
           title: Text("${t.generic.app_name} - ${t.tools.sshclient.title}"),
-          actions: [ isConnected
+          actions: [ isConnected || loading
               ? Container()
               : IconButton(
               icon: Icon(usingSshKey ? Icons.password : Icons.key),
