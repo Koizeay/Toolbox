@@ -73,8 +73,8 @@ class _NetworkInfoPage extends State<NetworkInfoPage> {
     wifiName = await networkInfo.getWifiName() ?? "?";
     wifiBSSID = await networkInfo.getWifiBSSID() ?? "?";
     if (Platform.isIOS) {
-      wifiName = "Not available on iOS";
-      wifiBSSID = "Not available on iOS";
+      wifiName = t.tools.networkinfo.not_available_on_ios;
+      wifiBSSID = t.tools.networkinfo.not_available_on_ios;
     }
     if (mounted) {
       setState(() {});
