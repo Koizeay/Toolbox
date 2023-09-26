@@ -52,6 +52,10 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>LSSupportsOpeningDocumentsInPlace</key>
+    <true/>
+    <key>UIFileSharingEnabled</key>
+    <true/>
     <key>NSMicrophoneUsageDescription</key>
     <string>The application uses the microphone to let you use specific tools, such as the "Megaphone" tool, which requires access to your microphone to transmit sound back to your speakers.</string>
     <key>NSCameraUsageDescription</key>

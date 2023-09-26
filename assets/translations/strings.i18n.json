@@ -193,6 +193,22 @@
         "read_stops_failed": "Failed to read stops, please try again later with an active internet connection.",
         "parse_stops_failed": "Failed to parse stops, please try again later with an active internet connection."
       }
+    },
+    "fileencryption": {
+      "title": "File encryption",
+      "home_hint": "Pick a file to encrypt it. If you want to decrypt a file, pick an encrypted file with the .aes extension",
+      "no_file_selected": "No file selected",
+      "enter_password": "Please enter a password",
+      "file_saved_successfully": "File saved successfully",
+      "pick_a_file": "Pick a file",
+      "encryption_password": "Encryption password",
+      "encrypt": "Encrypt",
+      "decrypt": "Decrypt",
+      "error": {
+        "failed_to_read_file": "Failed to read the file",
+        "failed_to_decrypt_file": "Failed to decrypt the file, please check the password",
+        "please_enter_a_password": "Please enter a password"
+      }
     }
   },
   "credits": {

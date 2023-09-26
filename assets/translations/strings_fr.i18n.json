@@ -193,6 +193,22 @@
         "read_stops_failed": "La lecture des arrêts a échoué, veuillez réessayer plus tard avec une connexion internet active.",
         "parse_stops_failed": "Le traitement des arrêts a échoué, veuillez réessayer plus tard avec une connexion Internet active."
       }
+    },
+    "fileencryption": {
+      "title": "Chiffrement de fichiers",
+      "home_hint": "Choisissez un fichier pour le chiffrer. Si vous souhaitez déchiffrer un fichier, choisissez un fichier chiffré ayant l'extension .aes.",
+      "no_file_selected": "Aucun fichier sélectionné",
+      "enter_password": "Veuillez entrer un mot de passe",
+      "file_saved_successfully": "Fichier enregistré avec succès",
+      "pick_a_file": "Choisir un fichier",
+      "encryption_password": "Mot de passe de chiffrement",
+      "encrypt": "Chiffrer",
+      "decrypt": "Déchiffrer",
+      "error": {
+        "failed_to_read_file": "Échec de la lecture du fichier",
+        "failed_to_decrypt_file": "Échec de déchiffrement du fichier, veuillez vérifier le mot de passe",
+        "please_enter_a_password": "Veuillez entrer un mot de passe"
+      }
     }
   },
   "credits": {

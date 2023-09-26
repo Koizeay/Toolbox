@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 284 (142 per locale)
+/// Strings: 308 (154 per locale)
 ///
-/// Built on 2023-09-23 at 14:19 UTC
+/// Built on 2023-09-26 at 16:05 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -196,6 +196,7 @@ class _StringsToolsEn {
 	late final _StringsToolsUuidgeneratorEn uuidgenerator = _StringsToolsUuidgeneratorEn._(_root);
 	late final _StringsToolsTexttospeechEn texttospeech = _StringsToolsTexttospeechEn._(_root);
 	late final _StringsToolsNearbypublictransportstopsEn nearbypublictransportstops = _StringsToolsNearbypublictransportstopsEn._(_root);
+	late final _StringsToolsFileencryptionEn fileencryption = _StringsToolsFileencryptionEn._(_root);
 }
 
 // Path: credits
@@ -493,6 +494,25 @@ class _StringsToolsNearbypublictransportstopsEn {
 	late final _StringsToolsNearbypublictransportstopsErrorEn error = _StringsToolsNearbypublictransportstopsErrorEn._(_root);
 }
 
+// Path: tools.fileencryption
+class _StringsToolsFileencryptionEn {
+	_StringsToolsFileencryptionEn._(this._root);
+
+	final _StringsEn _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'File encryption';
+	String get home_hint => 'Pick a file to encrypt it. If you want to decrypt a file, pick an encrypted file with the .aes extension';
+	String get no_file_selected => 'No file selected';
+	String get enter_password => 'Please enter a password';
+	String get file_saved_successfully => 'File saved successfully';
+	String get pick_a_file => 'Pick a file';
+	String get encryption_password => 'Encryption password';
+	String get encrypt => 'Encrypt';
+	String get decrypt => 'Decrypt';
+	late final _StringsToolsFileencryptionErrorEn error = _StringsToolsFileencryptionErrorEn._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsEn._(this._root);
@@ -624,6 +644,18 @@ class _StringsToolsNearbypublictransportstopsErrorEn {
 	String get parse_stops_failed => 'Failed to parse stops, please try again later with an active internet connection.';
 }
 
+// Path: tools.fileencryption.error
+class _StringsToolsFileencryptionErrorEn {
+	_StringsToolsFileencryptionErrorEn._(this._root);
+
+	final _StringsEn _root; // ignore: unused_field
+
+	// Translations
+	String get failed_to_read_file => 'Failed to read the file';
+	String get failed_to_decrypt_file => 'Failed to decrypt the file, please check the password';
+	String get please_enter_a_password => 'Please enter a password';
+}
+
 // Path: <root>
 class _StringsFr implements _StringsEn {
 
@@ -695,6 +727,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsUuidgeneratorFr uuidgenerator = _StringsToolsUuidgeneratorFr._(_root);
 	@override late final _StringsToolsTexttospeechFr texttospeech = _StringsToolsTexttospeechFr._(_root);
 	@override late final _StringsToolsNearbypublictransportstopsFr nearbypublictransportstops = _StringsToolsNearbypublictransportstopsFr._(_root);
+	@override late final _StringsToolsFileencryptionFr fileencryption = _StringsToolsFileencryptionFr._(_root);
 }
 
 // Path: credits
@@ -992,6 +1025,25 @@ class _StringsToolsNearbypublictransportstopsFr implements _StringsToolsNearbypu
 	@override late final _StringsToolsNearbypublictransportstopsErrorFr error = _StringsToolsNearbypublictransportstopsErrorFr._(_root);
 }
 
+// Path: tools.fileencryption
+class _StringsToolsFileencryptionFr implements _StringsToolsFileencryptionEn {
+	_StringsToolsFileencryptionFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Chiffrement de fichiers';
+	@override String get home_hint => 'Choisissez un fichier pour le chiffrer. Si vous souhaitez déchiffrer un fichier, choisissez un fichier chiffré ayant l\'extension .aes.';
+	@override String get no_file_selected => 'Aucun fichier sélectionné';
+	@override String get enter_password => 'Veuillez entrer un mot de passe';
+	@override String get file_saved_successfully => 'Fichier enregistré avec succès';
+	@override String get pick_a_file => 'Choisir un fichier';
+	@override String get encryption_password => 'Mot de passe de chiffrement';
+	@override String get encrypt => 'Chiffrer';
+	@override String get decrypt => 'Déchiffrer';
+	@override late final _StringsToolsFileencryptionErrorFr error = _StringsToolsFileencryptionErrorFr._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsFr implements _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsFr._(this._root);
@@ -1121,6 +1173,18 @@ class _StringsToolsNearbypublictransportstopsErrorFr implements _StringsToolsNea
 	@override String get download_stops_failed => 'Échec du téléchargement des arrêts, vous devez être connecté à internet pour télécharger les arrêts pour la première fois ou pour les mettre à jour.';
 	@override String get read_stops_failed => 'La lecture des arrêts a échoué, veuillez réessayer plus tard avec une connexion internet active.';
 	@override String get parse_stops_failed => 'Le traitement des arrêts a échoué, veuillez réessayer plus tard avec une connexion Internet active.';
+}
+
+// Path: tools.fileencryption.error
+class _StringsToolsFileencryptionErrorFr implements _StringsToolsFileencryptionErrorEn {
+	_StringsToolsFileencryptionErrorFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get failed_to_read_file => 'Échec de la lecture du fichier';
+	@override String get failed_to_decrypt_file => 'Échec de déchiffrement du fichier, veuillez vérifier le mot de passe';
+	@override String get please_enter_a_password => 'Veuillez entrer un mot de passe';
 }
 
 /// Flat map(s) containing all translations.
@@ -1263,6 +1327,18 @@ extension on _StringsEn {
 			case 'tools.nearbypublictransportstops.error.download_stops_failed': return 'Failed to download stops, you need to be connected to the internet to download stops for the first time or to update them.';
 			case 'tools.nearbypublictransportstops.error.read_stops_failed': return 'Failed to read stops, please try again later with an active internet connection.';
 			case 'tools.nearbypublictransportstops.error.parse_stops_failed': return 'Failed to parse stops, please try again later with an active internet connection.';
+			case 'tools.fileencryption.title': return 'File encryption';
+			case 'tools.fileencryption.home_hint': return 'Pick a file to encrypt it. If you want to decrypt a file, pick an encrypted file with the .aes extension';
+			case 'tools.fileencryption.no_file_selected': return 'No file selected';
+			case 'tools.fileencryption.enter_password': return 'Please enter a password';
+			case 'tools.fileencryption.file_saved_successfully': return 'File saved successfully';
+			case 'tools.fileencryption.pick_a_file': return 'Pick a file';
+			case 'tools.fileencryption.encryption_password': return 'Encryption password';
+			case 'tools.fileencryption.encrypt': return 'Encrypt';
+			case 'tools.fileencryption.decrypt': return 'Decrypt';
+			case 'tools.fileencryption.error.failed_to_read_file': return 'Failed to read the file';
+			case 'tools.fileencryption.error.failed_to_decrypt_file': return 'Failed to decrypt the file, please check the password';
+			case 'tools.fileencryption.error.please_enter_a_password': return 'Please enter a password';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -1413,6 +1489,18 @@ extension on _StringsFr {
 			case 'tools.nearbypublictransportstops.error.download_stops_failed': return 'Échec du téléchargement des arrêts, vous devez être connecté à internet pour télécharger les arrêts pour la première fois ou pour les mettre à jour.';
 			case 'tools.nearbypublictransportstops.error.read_stops_failed': return 'La lecture des arrêts a échoué, veuillez réessayer plus tard avec une connexion internet active.';
 			case 'tools.nearbypublictransportstops.error.parse_stops_failed': return 'Le traitement des arrêts a échoué, veuillez réessayer plus tard avec une connexion Internet active.';
+			case 'tools.fileencryption.title': return 'Chiffrement de fichiers';
+			case 'tools.fileencryption.home_hint': return 'Choisissez un fichier pour le chiffrer. Si vous souhaitez déchiffrer un fichier, choisissez un fichier chiffré ayant l\'extension .aes.';
+			case 'tools.fileencryption.no_file_selected': return 'Aucun fichier sélectionné';
+			case 'tools.fileencryption.enter_password': return 'Veuillez entrer un mot de passe';
+			case 'tools.fileencryption.file_saved_successfully': return 'Fichier enregistré avec succès';
+			case 'tools.fileencryption.pick_a_file': return 'Choisir un fichier';
+			case 'tools.fileencryption.encryption_password': return 'Mot de passe de chiffrement';
+			case 'tools.fileencryption.encrypt': return 'Chiffrer';
+			case 'tools.fileencryption.decrypt': return 'Déchiffrer';
+			case 'tools.fileencryption.error.failed_to_read_file': return 'Échec de la lecture du fichier';
+			case 'tools.fileencryption.error.failed_to_decrypt_file': return 'Échec de déchiffrement du fichier, veuillez vérifier le mot de passe';
+			case 'tools.fileencryption.error.please_enter_a_password': return 'Veuillez entrer un mot de passe';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';

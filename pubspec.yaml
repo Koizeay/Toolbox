@@ -76,6 +76,8 @@ dependencies:
   geolocator: ^10.0.1
   path_provider: ^2.1.1
   connectivity_plus: ^4.0.2
+  aes_crypt_null_safe: ^2.0.2
+  flutter_file_dialog: ^3.0.2
 
 dev_dependencies:
   flutter_test:
