@@ -249,6 +249,7 @@ class _FileEncryptionPage extends State<FileEncryptionPage> {
                         padding: const EdgeInsets.fromLTRB(0, 8, 0, 4),
                         child: TextField(
                           controller: passwordController,
+                          obscureText: true,
                           decoration: InputDecoration(
                             border: const OutlineInputBorder(),
                             labelText: t.tools.fileencryption
