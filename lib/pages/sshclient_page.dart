@@ -243,7 +243,7 @@ class _SshClientPage extends State<SshClientPage> {
                     autocorrect: false,
                     enableSuggestions: false,
                     decoration: InputDecoration(
-                        hintText: t.tools.sshclient.host
+                        labelText: t.tools.sshclient.host
                     ),
                   ),
                   const SizedBox(height: 8),
@@ -256,7 +256,7 @@ class _SshClientPage extends State<SshClientPage> {
                     autocorrect: false,
                     enableSuggestions: false,
                     decoration: InputDecoration(
-                      hintText: t.tools.sshclient.port,
+                      labelText: t.tools.sshclient.port,
                     ),
                   ),
                   const SizedBox(height: 8),
@@ -265,7 +265,7 @@ class _SshClientPage extends State<SshClientPage> {
                     autocorrect: false,
                     enableSuggestions: false,
                     decoration: InputDecoration(
-                      hintText: t.tools.sshclient.username,
+                      labelText: t.tools.sshclient.username,
                     ),
                   ),
                   const SizedBox(height: 8),
@@ -303,7 +303,7 @@ class _SshClientPage extends State<SshClientPage> {
                         autocorrect: false,
                         enableSuggestions: false,
                         decoration: InputDecoration(
-                          hintText: t.tools.sshclient.passphrase,
+                          labelText: t.tools.sshclient.passphrase,
                         ),
                       ),
                     ],
@@ -314,7 +314,7 @@ class _SshClientPage extends State<SshClientPage> {
                     autocorrect: false,
                     enableSuggestions: false,
                     decoration: InputDecoration(
-                      hintText: t.tools.sshclient.password,
+                      labelText: t.tools.sshclient.password,
                     ),
                   ),
                   const SizedBox(height: 8),
