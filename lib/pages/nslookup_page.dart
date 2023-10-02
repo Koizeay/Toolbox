@@ -27,6 +27,28 @@ class _NslookupPage extends State<NslookupPage> {
     super.initState();
   }
 
+  void lookup() {
+    if (_domainController.text.isEmpty) {
+      showOkTextDialog(context, t.generic.error, t.tools.nslookup.error.please_enter_a_domain_name);
+      return;
+    }
+    setState(() {
+      loading = true;
+      _ipAddresses.clear();
+    });
+    getIpAddresses(_domainController.text).then((value) {
+      setState(() {
+        _ipAddresses = value;
+        loading = false;
+      });
+    }).catchError((error) {
+      setState(() {
+        loading = false;
+      });
+      showOkTextDialog(context, t.generic.error, t.tools.nslookup.error.no_address_associated_with_domain);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +60,7 @@ class _NslookupPage extends State<NslookupPage> {
             child: Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(16.0),
+                  padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
                   child: TextField(
                     decoration: InputDecoration(
                       labelText: t.tools.nslookup.enter_a_domain_name
@@ -46,29 +68,17 @@ class _NslookupPage extends State<NslookupPage> {
                     controller: _domainController,
                   ),
                 ),
-                ElevatedButton(
-                    child: Text(t.tools.nslookup.lookup),
-                    onPressed: () {
-                      if (_domainController.text.isEmpty) {
-                        showOkTextDialog(context, t.generic.error, t.tools.nslookup.error.please_enter_a_domain_name);
-                        return;
-                      }
-                      setState(() {
-                        loading = true;
-                        _ipAddresses.clear();
-                      });
-                      getIpAddresses(_domainController.text).then((value) {
-                        setState(() {
-                          _ipAddresses = value;
-                          loading = false;
-                        });
-                      }).catchError((error) {
-                        setState(() {
-                          loading = false;
-                        });
-                        showOkTextDialog(context, t.generic.error, t.tools.nslookup.error.no_address_associated_with_domain);
-                      });
-                    }
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    width: double.infinity,
+                    child: ElevatedButton(
+                        child: Text(t.tools.nslookup.lookup),
+                        onPressed: () {
+                          lookup();
+                        }
+                    ),
+                  ),
                 ),
                 loading ? const Center(child: Padding(
                   padding: EdgeInsets.all(20.0),

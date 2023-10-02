@@ -105,32 +105,35 @@ class _FlipCoinsPage extends State<FlipCoinsPage> {
                     ),
                   ),
                   const SizedBox(height: 20),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(4.0),
-                        child: ElevatedButton(
-                            onPressed: () {
-                              setState(() {
-                                setCoinAsset("chf");
-                              });
-                            },
-                            child: const Text("CHF")
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Expanded(
+                          child: ElevatedButton(
+                              onPressed: () {
+                                setState(() {
+                                  setCoinAsset("chf");
+                                });
+                              },
+                              child: const Text("CHF")
+                          ),
                         ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(4.0),
-                        child: ElevatedButton(
-                            onPressed: () {
-                              setState(() {
-                                setCoinAsset("eur");
-                              });
-                            },
-                            child: const Text("€")
+                        const SizedBox(width: 4),
+                        Expanded(
+                          child: ElevatedButton(
+                              onPressed: () {
+                                setState(() {
+                                  setCoinAsset("eur");
+                                });
+                              },
+                              child: const Text("€")
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   )
                 ],
               ),

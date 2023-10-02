@@ -284,31 +284,28 @@ class _RoulettePage extends State<RoulettePage> with TickerProviderStateMixin {
                           ),
                         ),
                         const SizedBox(height: 16,),
-                        SingleChildScrollView(
-                          scrollDirection: Axis.horizontal,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.all(4.0),
-                                child: ElevatedButton(
-                                  onPressed: () {
-                                    showAddRouletteUnitDialog();
-                                  },
-                                  child: Text(t.tools.roulette.add),
-                                ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Expanded(
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  showAddRouletteUnitDialog();
+                                },
+                                child: Text(t.tools.roulette.add),
                               ),
-                              Padding(
-                                padding: const EdgeInsets.all(4.0),
-                                child: ElevatedButton(
-                                  onPressed: () {
-                                    showRemoveRouletteChoiceListDialog();
-                                  },
-                                  child: Text(t.tools.roulette.remove),
-                                ),
+                            ),
+                            const SizedBox(width: 8,),
+                            Expanded(
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  showRemoveRouletteChoiceListDialog();
+                                },
+                                child: Text(t.tools.roulette.remove),
                               ),
-                            ],
-                          ),
+                            ),
+                          ],
                         )
                       ],
                     ),

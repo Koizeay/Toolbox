@@ -108,26 +108,25 @@ class _MetronomePage extends State<MetronomePage> {
                   onChanged: (value) => setState(() => _currentBeatsPerMeasure = value),
                 ),
                 const SizedBox(height: 20),
-                isPlaying ?
-                ElevatedButton(
-                  onPressed: () {
-                    if (isLoading) {
-                      return;
-                    }
-                    isLoading = true;
-                    stopMetronome().then((value) => isLoading = false);
-                  },
-                  child: Text(t.tools.metronome.stop),
-                ) :
-                ElevatedButton(
-                  onPressed: () {
-                    if (isLoading) {
-                      return;
-                    }
-                    isLoading = true;
-                    startMetronome().then((value) => isLoading = false);
-                  },
-                  child: Text(t.tools.metronome.start),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    width: double.infinity,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        if (isLoading) {
+                          return;
+                        }
+                        isLoading = true;
+                        if (isPlaying) {
+                          stopMetronome().then((value) => isLoading = false);
+                          return;
+                        }
+                        startMetronome().then((value) => isLoading = false);
+                      },
+                      child: Text(isPlaying ? t.tools.metronome.stop : t.tools.metronome.start),
+                    ),
+                  ),
                 ),
               ],
             ),

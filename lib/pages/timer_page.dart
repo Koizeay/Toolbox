@@ -30,11 +30,11 @@ class _TimerPage extends State<TimerPage> {
   }
 
   void showIosAlert() {
-      showOkTextDialog(
-          context,
-          t.generic.warning,
-          t.tools.timer.ios_warning_message,
-      );
+    showOkTextDialog(
+      context,
+      t.generic.warning,
+      t.tools.timer.ios_warning_message,
+    );
   }
 
   void startTimer() {
@@ -130,7 +130,8 @@ class _TimerPage extends State<TimerPage> {
                         seconds: _seconds,
                         controller: controller,
                         build: (BuildContext context, double time) {
-                          String formattedTime = getFormattedTimeFromSeconds(time);
+                          String formattedTime = getFormattedTimeFromSeconds(
+                              time);
                           return FittedBox(
                             fit: BoxFit.fitHeight,
                             child: Text(
@@ -147,13 +148,13 @@ class _TimerPage extends State<TimerPage> {
                           onFinish();
                         },
                       ),
-                      FittedBox(
-                        fit: BoxFit.fitHeight,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.all(4.0),
                               child: ElevatedButton(
                                   onPressed: () {
                                     addTime(-1);
@@ -161,8 +162,10 @@ class _TimerPage extends State<TimerPage> {
                                   child: const Text("-1s")
                               ),
                             ),
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
+                          ),
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.all(4.0),
                               child: ElevatedButton(
                                   onPressed: () {
                                     addTime(1);
@@ -170,8 +173,10 @@ class _TimerPage extends State<TimerPage> {
                                   child: const Text("+1s")
                               ),
                             ),
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
+                          ),
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.all(4.0),
                               child: ElevatedButton(
                                   onPressed: () {
                                     addTime(-60);
@@ -179,8 +184,10 @@ class _TimerPage extends State<TimerPage> {
                                   child: const Text("-1m")
                               ),
                             ),
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
+                          ),
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.all(4.0),
                               child: ElevatedButton(
                                   onPressed: () {
                                     addTime(60);
@@ -188,23 +195,24 @@ class _TimerPage extends State<TimerPage> {
                                   child: const Text("+1m")
                               ),
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
-                      FittedBox(
-                        fit: BoxFit.fitHeight,
+                      SizedBox(
+                        width: double.infinity,
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: !isCounting ? ElevatedButton(
+                          padding: const EdgeInsets.all(4.0),
+                          child: ElevatedButton(
                               onPressed: () {
+                                if (isCounting) {
+                                  stopTimer();
+                                  return;
+                                }
                                 startTimer();
                               },
-                              child: Text(t.tools.timer.start)
-                          ) : ElevatedButton(
-                              onPressed: () {
-                                stopTimer();
-                              },
-                              child: Text(t.tools.timer.stop)
+                              child: Text(
+                                  isCounting ? t.tools.timer.stop : t.tools
+                                      .timer.start)
                           ),
                         ),
                       ),

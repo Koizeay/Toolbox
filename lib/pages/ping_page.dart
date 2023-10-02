@@ -64,6 +64,19 @@ class _PingPage extends State<PingPage> {
     });
   }
 
+  void pingPressed() {
+    pingListener?.cancel();
+    setState(() {
+      _results.clear();
+    });
+    if (_hostController.text.isEmpty) {
+      showOkTextDialog(context, t.generic.error,
+          t.tools.ping.error.please_enter_a_domain_name_or_ip);
+      return;
+    }
+    pingHost(_hostController.text);
+  }
+
   @override
   void initState() {
     DartPingIOS.register();
@@ -81,7 +94,7 @@ class _PingPage extends State<PingPage> {
             child: Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(16.0),
+                  padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
                   child: TextField(
                     decoration: InputDecoration(
                       labelText: t.tools.ping.enter_a_domain_name_or_ip,
@@ -89,20 +102,17 @@ class _PingPage extends State<PingPage> {
                     controller: _hostController,
                   ),
                 ),
-                ElevatedButton(
-                    child: Text(t.tools.ping.ping),
-                    onPressed: () {
-                      pingListener?.cancel();
-                      setState(() {
-                        _results.clear();
-                      });
-                      if (_hostController.text.isEmpty) {
-                        showOkTextDialog(context, t.generic.error,
-                            t.tools.ping.error.please_enter_a_domain_name_or_ip);
-                        return;
-                      }
-                      pingHost(_hostController.text);
-                    }
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    width: double.infinity,
+                    child: ElevatedButton(
+                        child: Text(t.tools.ping.ping),
+                        onPressed: () {
+                          pingPressed();
+                        }
+                    ),
+                  ),
                 ),
                 Expanded(
                   child: ListView.builder(
