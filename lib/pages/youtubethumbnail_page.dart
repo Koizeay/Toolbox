@@ -58,7 +58,6 @@ class _YouTubeThumbnailPage extends State<YouTubeThumbnailPage> {
       onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
       child: Scaffold(
           appBar: AppBar(
-            // TODO: Replace this with the app name + tool's name
             title: Text("${t.generic.app_name} - ${t.tools.youtubethumbnail.title}"),
           ),
           body: SafeArea(
