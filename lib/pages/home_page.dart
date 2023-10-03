@@ -23,6 +23,7 @@ import 'package:toolbox/pages/texttospeech_page.dart';
 import 'package:toolbox/pages/timer_page.dart';
 import 'package:toolbox/pages/uuidgenerator_page.dart';
 import 'package:toolbox/pages/whiteboard_page.dart';
+import 'package:toolbox/pages/youtubethumbnail_page.dart';
 import 'package:toolbox/widgets/tool_card.dart';
 import 'package:yaru/yaru.dart';
 
@@ -88,7 +89,9 @@ class _HomePage extends State<HomePage> {
       Tool(t.tools.uuidgenerator.title, "assets/images/tools/uuidgenerator.png",
           const UuidGeneratorPage()),
       Tool(t.tools.whiteboard.title, "assets/images/tools/whiteboard.png",
-          const WhiteBoardPage())
+          const WhiteBoardPage()),
+      Tool(t.tools.youtubethumbnail.title, "assets/images/tools/youtubethumbnail.png",
+          const YouTubeThumbnailPage())
     ];
   }
 

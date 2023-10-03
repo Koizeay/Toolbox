@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 308 (154 per locale)
+/// Strings: 320 (160 per locale)
 ///
-/// Built on 2023-09-26 at 16:05 UTC
+/// Built on 2023-10-03 at 11:40 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -197,6 +197,7 @@ class _StringsToolsEn {
 	late final _StringsToolsTexttospeechEn texttospeech = _StringsToolsTexttospeechEn._(_root);
 	late final _StringsToolsNearbypublictransportstopsEn nearbypublictransportstops = _StringsToolsNearbypublictransportstopsEn._(_root);
 	late final _StringsToolsFileencryptionEn fileencryption = _StringsToolsFileencryptionEn._(_root);
+	late final _StringsToolsYoutubethumbnailEn youtubethumbnail = _StringsToolsYoutubethumbnailEn._(_root);
 }
 
 // Path: credits
@@ -513,6 +514,20 @@ class _StringsToolsFileencryptionEn {
 	late final _StringsToolsFileencryptionErrorEn error = _StringsToolsFileencryptionErrorEn._(_root);
 }
 
+// Path: tools.youtubethumbnail
+class _StringsToolsYoutubethumbnailEn {
+	_StringsToolsYoutubethumbnailEn._(this._root);
+
+	final _StringsEn _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'YouTube thumbnail';
+	String get saved => 'Thumbnail saved to device';
+	String get youtube_video_id => 'YouTube video ID';
+	String get save_thumbnail => 'Save thumbnail';
+	late final _StringsToolsYoutubethumbnailErrorEn error = _StringsToolsYoutubethumbnailErrorEn._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsEn._(this._root);
@@ -656,6 +671,17 @@ class _StringsToolsFileencryptionErrorEn {
 	String get please_enter_a_password => 'Please enter a password';
 }
 
+// Path: tools.youtubethumbnail.error
+class _StringsToolsYoutubethumbnailErrorEn {
+	_StringsToolsYoutubethumbnailErrorEn._(this._root);
+
+	final _StringsEn _root; // ignore: unused_field
+
+	// Translations
+	String get failed_to_download => 'Failed to download thumbnail from YouTube';
+	String get please_enter_a_video_id => 'Please enter a valid YouTube video ID\n\nExample: dQw4w9WgXcQ\n\nYou can find the video ID in the URL of the video\nhttps://www.youtube.com/watch?v=dQw4w9WgXcQ\n\nYou also need an internet connection to download the thumbnail from YouTube';
+}
+
 // Path: <root>
 class _StringsFr implements _StringsEn {
 
@@ -728,6 +754,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsTexttospeechFr texttospeech = _StringsToolsTexttospeechFr._(_root);
 	@override late final _StringsToolsNearbypublictransportstopsFr nearbypublictransportstops = _StringsToolsNearbypublictransportstopsFr._(_root);
 	@override late final _StringsToolsFileencryptionFr fileencryption = _StringsToolsFileencryptionFr._(_root);
+	@override late final _StringsToolsYoutubethumbnailFr youtubethumbnail = _StringsToolsYoutubethumbnailFr._(_root);
 }
 
 // Path: credits
@@ -1044,6 +1071,20 @@ class _StringsToolsFileencryptionFr implements _StringsToolsFileencryptionEn {
 	@override late final _StringsToolsFileencryptionErrorFr error = _StringsToolsFileencryptionErrorFr._(_root);
 }
 
+// Path: tools.youtubethumbnail
+class _StringsToolsYoutubethumbnailFr implements _StringsToolsYoutubethumbnailEn {
+	_StringsToolsYoutubethumbnailFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Miniature YouTube';
+	@override String get saved => 'Miniature enregistrée avec succès';
+	@override String get youtube_video_id => 'ID de la vidéo YouTube';
+	@override String get save_thumbnail => 'Enregistrer la miniature';
+	@override late final _StringsToolsYoutubethumbnailErrorFr error = _StringsToolsYoutubethumbnailErrorFr._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsFr implements _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsFr._(this._root);
@@ -1185,6 +1226,17 @@ class _StringsToolsFileencryptionErrorFr implements _StringsToolsFileencryptionE
 	@override String get failed_to_read_file => 'Échec de la lecture du fichier';
 	@override String get failed_to_decrypt_file => 'Échec de déchiffrement du fichier, veuillez vérifier le mot de passe';
 	@override String get please_enter_a_password => 'Veuillez entrer un mot de passe';
+}
+
+// Path: tools.youtubethumbnail.error
+class _StringsToolsYoutubethumbnailErrorFr implements _StringsToolsYoutubethumbnailErrorEn {
+	_StringsToolsYoutubethumbnailErrorFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get failed_to_download => 'Impossible de télécharger la miniature depuis YouTube';
+	@override String get please_enter_a_video_id => 'Veuillez saisir un ID de vidéo YouTube valide\n\nExemple : dQw4w9WgXcQ\n\nVous trouverez l\'ID de la vidéo dans l\'URL de la vidéo\nhttps://www.youtube.com/watch?v=dQw4w9WgXcQ\n\nVous avez également besoin d\'une connexion internet pour télécharger la miniature à partir de YouTube.';
 }
 
 /// Flat map(s) containing all translations.
@@ -1339,6 +1391,12 @@ extension on _StringsEn {
 			case 'tools.fileencryption.error.failed_to_read_file': return 'Failed to read the file';
 			case 'tools.fileencryption.error.failed_to_decrypt_file': return 'Failed to decrypt the file, please check the password';
 			case 'tools.fileencryption.error.please_enter_a_password': return 'Please enter a password';
+			case 'tools.youtubethumbnail.title': return 'YouTube thumbnail';
+			case 'tools.youtubethumbnail.saved': return 'Thumbnail saved to device';
+			case 'tools.youtubethumbnail.youtube_video_id': return 'YouTube video ID';
+			case 'tools.youtubethumbnail.save_thumbnail': return 'Save thumbnail';
+			case 'tools.youtubethumbnail.error.failed_to_download': return 'Failed to download thumbnail from YouTube';
+			case 'tools.youtubethumbnail.error.please_enter_a_video_id': return 'Please enter a valid YouTube video ID\n\nExample: dQw4w9WgXcQ\n\nYou can find the video ID in the URL of the video\nhttps://www.youtube.com/watch?v=dQw4w9WgXcQ\n\nYou also need an internet connection to download the thumbnail from YouTube';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -1501,6 +1559,12 @@ extension on _StringsFr {
 			case 'tools.fileencryption.error.failed_to_read_file': return 'Échec de la lecture du fichier';
 			case 'tools.fileencryption.error.failed_to_decrypt_file': return 'Échec de déchiffrement du fichier, veuillez vérifier le mot de passe';
 			case 'tools.fileencryption.error.please_enter_a_password': return 'Veuillez entrer un mot de passe';
+			case 'tools.youtubethumbnail.title': return 'Miniature YouTube';
+			case 'tools.youtubethumbnail.saved': return 'Miniature enregistrée avec succès';
+			case 'tools.youtubethumbnail.youtube_video_id': return 'ID de la vidéo YouTube';
+			case 'tools.youtubethumbnail.save_thumbnail': return 'Enregistrer la miniature';
+			case 'tools.youtubethumbnail.error.failed_to_download': return 'Impossible de télécharger la miniature depuis YouTube';
+			case 'tools.youtubethumbnail.error.please_enter_a_video_id': return 'Veuillez saisir un ID de vidéo YouTube valide\n\nExemple : dQw4w9WgXcQ\n\nVous trouverez l\'ID de la vidéo dans l\'URL de la vidéo\nhttps://www.youtube.com/watch?v=dQw4w9WgXcQ\n\nVous avez également besoin d\'une connexion internet pour télécharger la miniature à partir de YouTube.';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';

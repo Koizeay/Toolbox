@@ -209,6 +209,16 @@
         "failed_to_decrypt_file": "Failed to decrypt the file, please check the password",
         "please_enter_a_password": "Please enter a password"
       }
+    },
+    "youtubethumbnail": {
+      "title": "YouTube thumbnail",
+      "saved": "Thumbnail saved to device",
+      "youtube_video_id": "YouTube video ID",
+      "save_thumbnail": "Save thumbnail",
+      "error": {
+        "failed_to_download": "Failed to download thumbnail from YouTube",
+        "please_enter_a_video_id": "Please enter a valid YouTube video ID\n\nExample: dQw4w9WgXcQ\n\nYou can find the video ID in the URL of the video\nhttps://www.youtube.com/watch?v=dQw4w9WgXcQ\n\nYou also need an internet connection to download the thumbnail from YouTube"
+      }
     }
   },
   "credits": {

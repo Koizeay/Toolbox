@@ -209,6 +209,16 @@
         "failed_to_decrypt_file": "Échec de déchiffrement du fichier, veuillez vérifier le mot de passe",
         "please_enter_a_password": "Veuillez entrer un mot de passe"
       }
+    },
+    "youtubethumbnail": {
+      "title": "Miniature YouTube",
+      "saved": "Miniature enregistrée avec succès",
+      "youtube_video_id": "ID de la vidéo YouTube",
+      "save_thumbnail": "Enregistrer la miniature",
+      "error": {
+        "failed_to_download": "Impossible de télécharger la miniature depuis YouTube",
+        "please_enter_a_video_id": "Veuillez saisir un ID de vidéo YouTube valide\n\nExemple : dQw4w9WgXcQ\n\nVous trouverez l'ID de la vidéo dans l'URL de la vidéo\nhttps://www.youtube.com/watch?v=dQw4w9WgXcQ\n\nVous avez également besoin d'une connexion internet pour télécharger la miniature à partir de YouTube."
+      }
     }
   },
   "credits": {
