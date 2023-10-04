@@ -13,7 +13,7 @@ import 'package:toolbox/core/file_download.dart';
 import 'package:toolbox/core/shared_preferences.dart';
 import 'package:toolbox/core/url.dart';
 import 'package:toolbox/gen/strings.g.dart';
-import 'package:toolbox/models/nearbypublictransportstops_stops.dart';
+import 'package:toolbox/models/nearbypublictransportstops_stop.dart';
 
 
 class NearbyPublicTransportStopsPage extends StatefulWidget {
