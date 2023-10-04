@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 320 (160 per locale)
+/// Strings: 330 (165 per locale)
 ///
-/// Built on 2023-10-03 at 11:40 UTC
+/// Built on 2023-10-04 at 19:03 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -198,6 +198,7 @@ class _StringsToolsEn {
 	late final _StringsToolsNearbypublictransportstopsEn nearbypublictransportstops = _StringsToolsNearbypublictransportstopsEn._(_root);
 	late final _StringsToolsFileencryptionEn fileencryption = _StringsToolsFileencryptionEn._(_root);
 	late final _StringsToolsYoutubethumbnailEn youtubethumbnail = _StringsToolsYoutubethumbnailEn._(_root);
+	late final _StringsToolsNationalanthemsEn nationalanthems = _StringsToolsNationalanthemsEn._(_root);
 }
 
 // Path: credits
@@ -528,6 +529,19 @@ class _StringsToolsYoutubethumbnailEn {
 	late final _StringsToolsYoutubethumbnailErrorEn error = _StringsToolsYoutubethumbnailErrorEn._(_root);
 }
 
+// Path: tools.nationalanthems
+class _StringsToolsNationalanthemsEn {
+	_StringsToolsNationalanthemsEn._(this._root);
+
+	final _StringsEn _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'National anthems';
+	String get stop => 'Stop the anthem';
+	String get search => 'Search (English name)';
+	late final _StringsToolsNationalanthemsErrorEn error = _StringsToolsNationalanthemsErrorEn._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsEn._(this._root);
@@ -682,6 +696,17 @@ class _StringsToolsYoutubethumbnailErrorEn {
 	String get please_enter_a_video_id => 'Please enter a valid YouTube video ID\n\nExample: dQw4w9WgXcQ\n\nYou can find the video ID in the URL of the video\nhttps://www.youtube.com/watch?v=dQw4w9WgXcQ\n\nYou also need an internet connection to download the thumbnail from YouTube';
 }
 
+// Path: tools.nationalanthems.error
+class _StringsToolsNationalanthemsErrorEn {
+	_StringsToolsNationalanthemsErrorEn._(this._root);
+
+	final _StringsEn _root; // ignore: unused_field
+
+	// Translations
+	String get failed_to_load_list => 'Impossible to load the list of anthems. Please check your internet connection and try again.';
+	String get failed_to_play_anthem => 'Impossible to play the anthem. Please check your internet connection and try again.';
+}
+
 // Path: <root>
 class _StringsFr implements _StringsEn {
 
@@ -755,6 +780,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsNearbypublictransportstopsFr nearbypublictransportstops = _StringsToolsNearbypublictransportstopsFr._(_root);
 	@override late final _StringsToolsFileencryptionFr fileencryption = _StringsToolsFileencryptionFr._(_root);
 	@override late final _StringsToolsYoutubethumbnailFr youtubethumbnail = _StringsToolsYoutubethumbnailFr._(_root);
+	@override late final _StringsToolsNationalanthemsFr nationalanthems = _StringsToolsNationalanthemsFr._(_root);
 }
 
 // Path: credits
@@ -1085,6 +1111,19 @@ class _StringsToolsYoutubethumbnailFr implements _StringsToolsYoutubethumbnailEn
 	@override late final _StringsToolsYoutubethumbnailErrorFr error = _StringsToolsYoutubethumbnailErrorFr._(_root);
 }
 
+// Path: tools.nationalanthems
+class _StringsToolsNationalanthemsFr implements _StringsToolsNationalanthemsEn {
+	_StringsToolsNationalanthemsFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Hymnes nationaux';
+	@override String get stop => 'Arrêter l\'hymne';
+	@override String get search => 'Rechercher (en anglais)';
+	@override late final _StringsToolsNationalanthemsErrorFr error = _StringsToolsNationalanthemsErrorFr._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsFr implements _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsFr._(this._root);
@@ -1237,6 +1276,17 @@ class _StringsToolsYoutubethumbnailErrorFr implements _StringsToolsYoutubethumbn
 	// Translations
 	@override String get failed_to_download => 'Impossible de télécharger la miniature depuis YouTube';
 	@override String get please_enter_a_video_id => 'Veuillez saisir un ID de vidéo YouTube valide\n\nExemple : dQw4w9WgXcQ\n\nVous trouverez l\'ID de la vidéo dans l\'URL de la vidéo\nhttps://www.youtube.com/watch?v=dQw4w9WgXcQ\n\nVous avez également besoin d\'une connexion internet pour télécharger la miniature à partir de YouTube.';
+}
+
+// Path: tools.nationalanthems.error
+class _StringsToolsNationalanthemsErrorFr implements _StringsToolsNationalanthemsErrorEn {
+	_StringsToolsNationalanthemsErrorFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get failed_to_load_list => 'Impossible de charger la liste des hymnes. Veuillez vérifier votre connexion internet et réessayer.';
+	@override String get failed_to_play_anthem => 'Impossible de jouer l\'hymne. Veuillez vérifier votre connexion internet et réessayer.';
 }
 
 /// Flat map(s) containing all translations.
@@ -1397,6 +1447,11 @@ extension on _StringsEn {
 			case 'tools.youtubethumbnail.save_thumbnail': return 'Save thumbnail';
 			case 'tools.youtubethumbnail.error.failed_to_download': return 'Failed to download thumbnail from YouTube';
 			case 'tools.youtubethumbnail.error.please_enter_a_video_id': return 'Please enter a valid YouTube video ID\n\nExample: dQw4w9WgXcQ\n\nYou can find the video ID in the URL of the video\nhttps://www.youtube.com/watch?v=dQw4w9WgXcQ\n\nYou also need an internet connection to download the thumbnail from YouTube';
+			case 'tools.nationalanthems.title': return 'National anthems';
+			case 'tools.nationalanthems.stop': return 'Stop the anthem';
+			case 'tools.nationalanthems.search': return 'Search (English name)';
+			case 'tools.nationalanthems.error.failed_to_load_list': return 'Impossible to load the list of anthems. Please check your internet connection and try again.';
+			case 'tools.nationalanthems.error.failed_to_play_anthem': return 'Impossible to play the anthem. Please check your internet connection and try again.';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -1565,6 +1620,11 @@ extension on _StringsFr {
 			case 'tools.youtubethumbnail.save_thumbnail': return 'Enregistrer la miniature';
 			case 'tools.youtubethumbnail.error.failed_to_download': return 'Impossible de télécharger la miniature depuis YouTube';
 			case 'tools.youtubethumbnail.error.please_enter_a_video_id': return 'Veuillez saisir un ID de vidéo YouTube valide\n\nExemple : dQw4w9WgXcQ\n\nVous trouverez l\'ID de la vidéo dans l\'URL de la vidéo\nhttps://www.youtube.com/watch?v=dQw4w9WgXcQ\n\nVous avez également besoin d\'une connexion internet pour télécharger la miniature à partir de YouTube.';
+			case 'tools.nationalanthems.title': return 'Hymnes nationaux';
+			case 'tools.nationalanthems.stop': return 'Arrêter l\'hymne';
+			case 'tools.nationalanthems.search': return 'Rechercher (en anglais)';
+			case 'tools.nationalanthems.error.failed_to_load_list': return 'Impossible de charger la liste des hymnes. Veuillez vérifier votre connexion internet et réessayer.';
+			case 'tools.nationalanthems.error.failed_to_play_anthem': return 'Impossible de jouer l\'hymne. Veuillez vérifier votre connexion internet et réessayer.';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';

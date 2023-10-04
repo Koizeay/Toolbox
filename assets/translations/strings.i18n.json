@@ -219,6 +219,15 @@
         "failed_to_download": "Failed to download thumbnail from YouTube",
         "please_enter_a_video_id": "Please enter a valid YouTube video ID\n\nExample: dQw4w9WgXcQ\n\nYou can find the video ID in the URL of the video\nhttps://www.youtube.com/watch?v=dQw4w9WgXcQ\n\nYou also need an internet connection to download the thumbnail from YouTube"
       }
+    },
+    "nationalanthems": {
+      "title": "National anthems",
+      "stop": "Stop the anthem",
+      "search": "Search (English name)",
+      "error": {
+        "failed_to_load_list": "Impossible to load the list of anthems. Please check your internet connection and try again.",
+        "failed_to_play_anthem": "Impossible to play the anthem. Please check your internet connection and try again."
+      }
     }
   },
   "credits": {
