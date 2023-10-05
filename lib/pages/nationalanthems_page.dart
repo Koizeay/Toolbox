@@ -5,6 +5,7 @@ import 'dart:io';
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 import 'package:toolbox/core/dialogs.dart';
+import 'package:toolbox/core/url.dart';
 import 'package:toolbox/gen/strings.g.dart';
 import 'package:toolbox/models/nationalanthems_anthem.dart';
 
@@ -123,6 +124,31 @@ class _NationalAnthemsPage extends State<NationalAnthemsPage> {
     }
   }
 
+  void showLicenseDialog() {
+    List<TextButton> buttons = [
+      TextButton(
+        onPressed: () => Navigator.pop(context),
+        child: Text(t.generic.ok),
+      ),
+      TextButton(
+          onPressed: () => launchUrlInBrowser("https://nationalanthems.info/"),
+          child: Text(t.tools.nationalanthems.open)
+      ),
+      TextButton(
+          onPressed: () =>
+              launchUrlInBrowser(
+                  "https://creativecommons.org/licenses/by/3.0/"),
+          child: Text(t.tools.nationalanthems.view_license)
+      )
+    ];
+    showCustomButtonsTextDialog(
+      context,
+      t.tools.nationalanthems.license,
+      t.tools.nationalanthems.license_text(source: "nationalanthems.info", license: "Creative Commons Attribution 3.0 Unported License"),
+      buttons,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -138,6 +164,10 @@ class _NationalAnthemsPage extends State<NationalAnthemsPage> {
                     assetsAudioPlayer.stop();
                   }
               ),
+              IconButton(
+                  onPressed: () => showLicenseDialog(),
+                  icon: const Icon(Icons.copyright)
+              )
             ],
           ),
           body: SafeArea(

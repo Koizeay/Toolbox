@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 330 (165 per locale)
+/// Strings: 338 (169 per locale)
 ///
-/// Built on 2023-10-04 at 19:03 UTC
+/// Built on 2023-10-05 at 10:50 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -539,6 +539,10 @@ class _StringsToolsNationalanthemsEn {
 	String get title => 'National anthems';
 	String get stop => 'Stop the anthem';
 	String get search => 'Search (English name)';
+	String get license => 'License';
+	String license_text({required Object source, required Object license}) => 'The audio files are provided by "${source}" under the ${license} license';
+	String get open => 'Open';
+	String get view_license => 'View license';
 	late final _StringsToolsNationalanthemsErrorEn error = _StringsToolsNationalanthemsErrorEn._(_root);
 }
 
@@ -1121,6 +1125,10 @@ class _StringsToolsNationalanthemsFr implements _StringsToolsNationalanthemsEn {
 	@override String get title => 'Hymnes nationaux';
 	@override String get stop => 'Arrêter l\'hymne';
 	@override String get search => 'Rechercher (en anglais)';
+	@override String get license => 'Licence';
+	@override String license_text({required Object source, required Object license}) => 'Les fichiers audio sont fournis par "${source}" sous la licence ${license}';
+	@override String get open => 'Ouvrir';
+	@override String get view_license => 'Voir la licence';
 	@override late final _StringsToolsNationalanthemsErrorFr error = _StringsToolsNationalanthemsErrorFr._(_root);
 }
 
@@ -1450,6 +1458,10 @@ extension on _StringsEn {
 			case 'tools.nationalanthems.title': return 'National anthems';
 			case 'tools.nationalanthems.stop': return 'Stop the anthem';
 			case 'tools.nationalanthems.search': return 'Search (English name)';
+			case 'tools.nationalanthems.license': return 'License';
+			case 'tools.nationalanthems.license_text': return ({required Object source, required Object license}) => 'The audio files are provided by "${source}" under the ${license} license';
+			case 'tools.nationalanthems.open': return 'Open';
+			case 'tools.nationalanthems.view_license': return 'View license';
 			case 'tools.nationalanthems.error.failed_to_load_list': return 'Impossible to load the list of anthems. Please check your internet connection and try again.';
 			case 'tools.nationalanthems.error.failed_to_play_anthem': return 'Impossible to play the anthem. Please check your internet connection and try again.';
 			case 'credits.title': return 'Credits';
@@ -1623,6 +1635,10 @@ extension on _StringsFr {
 			case 'tools.nationalanthems.title': return 'Hymnes nationaux';
 			case 'tools.nationalanthems.stop': return 'Arrêter l\'hymne';
 			case 'tools.nationalanthems.search': return 'Rechercher (en anglais)';
+			case 'tools.nationalanthems.license': return 'Licence';
+			case 'tools.nationalanthems.license_text': return ({required Object source, required Object license}) => 'Les fichiers audio sont fournis par "${source}" sous la licence ${license}';
+			case 'tools.nationalanthems.open': return 'Ouvrir';
+			case 'tools.nationalanthems.view_license': return 'Voir la licence';
 			case 'tools.nationalanthems.error.failed_to_load_list': return 'Impossible de charger la liste des hymnes. Veuillez vérifier votre connexion internet et réessayer.';
 			case 'tools.nationalanthems.error.failed_to_play_anthem': return 'Impossible de jouer l\'hymne. Veuillez vérifier votre connexion internet et réessayer.';
 			case 'credits.title': return 'Crédits';
