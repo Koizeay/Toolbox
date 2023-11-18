@@ -7,6 +7,7 @@ import 'package:toolbox/pages/clock_page.dart';
 import 'package:toolbox/pages/credits_page.dart';
 import 'package:toolbox/pages/fileencryption_page.dart';
 import 'package:toolbox/pages/flipcoins_page.dart';
+import 'package:toolbox/pages/httprequest_page.dart';
 import 'package:toolbox/pages/metronome_page.dart';
 import 'package:toolbox/pages/megaphone_page.dart';
 import 'package:toolbox/pages/nationalanthems_page.dart';
@@ -57,6 +58,8 @@ class _HomePage extends State<HomePage> {
           const FlipCoinsPage()),
       Tool(t.tools.fileencryption.title, "assets/images/tools/fileencryption.png",
           const FileEncryptionPage()),
+      Tool(t.tools.httprequest.title, "assets/images/tools/httprequest.png",
+          const HttpRequestPage()),
       Tool(t.tools.metronome.title, "assets/images/tools/metronome.png",
           const MetronomePage()),
       Tool(t.tools.megaphone.title, "assets/images/tools/megaphone.png",

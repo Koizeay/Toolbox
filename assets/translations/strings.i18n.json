@@ -232,6 +232,22 @@
         "failed_to_load_list": "Impossible to load the list of anthems. Please check your internet connection and try again.",
         "failed_to_play_anthem": "Impossible to play the anthem. Please check your internet connection and try again."
       }
+    },
+    "httprequest": {
+      "title": "HTTP request",
+      "method": "Method",
+      "url": "URL",
+      "headers": "Headers",
+      "body": "Body",
+      "send_request": "Send request",
+      "response": "Response",
+      "status_code": "Status code",
+      "error": {
+        "url_cannot_be_empty": "The URL cannot be empty",
+        "invalid_url": "Invalid URL",
+        "invalid_headers": "Invalid headers",
+        "other_error": "An error occurred while sending the request.\nPlease check your input and your internet connection then try again."
+      }
     }
   },
   "credits": {

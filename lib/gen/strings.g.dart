@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 338 (169 per locale)
+/// Strings: 362 (181 per locale)
 ///
-/// Built on 2023-10-05 at 10:50 UTC
+/// Built on 2023-11-18 at 20:33 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -199,6 +199,7 @@ class _StringsToolsEn {
 	late final _StringsToolsFileencryptionEn fileencryption = _StringsToolsFileencryptionEn._(_root);
 	late final _StringsToolsYoutubethumbnailEn youtubethumbnail = _StringsToolsYoutubethumbnailEn._(_root);
 	late final _StringsToolsNationalanthemsEn nationalanthems = _StringsToolsNationalanthemsEn._(_root);
+	late final _StringsToolsHttprequestEn httprequest = _StringsToolsHttprequestEn._(_root);
 }
 
 // Path: credits
@@ -546,6 +547,24 @@ class _StringsToolsNationalanthemsEn {
 	late final _StringsToolsNationalanthemsErrorEn error = _StringsToolsNationalanthemsErrorEn._(_root);
 }
 
+// Path: tools.httprequest
+class _StringsToolsHttprequestEn {
+	_StringsToolsHttprequestEn._(this._root);
+
+	final _StringsEn _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'HTTP request';
+	String get method => 'Method';
+	String get url => 'URL';
+	String get headers => 'Headers';
+	String get body => 'Body';
+	String get send_request => 'Send request';
+	String get response => 'Response';
+	String get status_code => 'Status code';
+	late final _StringsToolsHttprequestErrorEn error = _StringsToolsHttprequestErrorEn._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsEn._(this._root);
@@ -711,6 +730,19 @@ class _StringsToolsNationalanthemsErrorEn {
 	String get failed_to_play_anthem => 'Impossible to play the anthem. Please check your internet connection and try again.';
 }
 
+// Path: tools.httprequest.error
+class _StringsToolsHttprequestErrorEn {
+	_StringsToolsHttprequestErrorEn._(this._root);
+
+	final _StringsEn _root; // ignore: unused_field
+
+	// Translations
+	String get url_cannot_be_empty => 'The URL cannot be empty';
+	String get invalid_url => 'Invalid URL';
+	String get invalid_headers => 'Invalid headers';
+	String get other_error => 'An error occurred while sending the request.\nPlease check your input and your internet connection then try again.';
+}
+
 // Path: <root>
 class _StringsFr implements _StringsEn {
 
@@ -785,6 +817,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsFileencryptionFr fileencryption = _StringsToolsFileencryptionFr._(_root);
 	@override late final _StringsToolsYoutubethumbnailFr youtubethumbnail = _StringsToolsYoutubethumbnailFr._(_root);
 	@override late final _StringsToolsNationalanthemsFr nationalanthems = _StringsToolsNationalanthemsFr._(_root);
+	@override late final _StringsToolsHttprequestFr httprequest = _StringsToolsHttprequestFr._(_root);
 }
 
 // Path: credits
@@ -1132,6 +1165,24 @@ class _StringsToolsNationalanthemsFr implements _StringsToolsNationalanthemsEn {
 	@override late final _StringsToolsNationalanthemsErrorFr error = _StringsToolsNationalanthemsErrorFr._(_root);
 }
 
+// Path: tools.httprequest
+class _StringsToolsHttprequestFr implements _StringsToolsHttprequestEn {
+	_StringsToolsHttprequestFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Requête HTTP';
+	@override String get method => 'Méthode';
+	@override String get url => 'URL';
+	@override String get headers => 'En-têtes (headers)';
+	@override String get body => 'Corps (body)';
+	@override String get send_request => 'Envoyer la requête';
+	@override String get response => 'Réponse';
+	@override String get status_code => 'Code d\'état';
+	@override late final _StringsToolsHttprequestErrorFr error = _StringsToolsHttprequestErrorFr._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsFr implements _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsFr._(this._root);
@@ -1295,6 +1346,19 @@ class _StringsToolsNationalanthemsErrorFr implements _StringsToolsNationalanthem
 	// Translations
 	@override String get failed_to_load_list => 'Impossible de charger la liste des hymnes. Veuillez vérifier votre connexion internet et réessayer.';
 	@override String get failed_to_play_anthem => 'Impossible de jouer l\'hymne. Veuillez vérifier votre connexion internet et réessayer.';
+}
+
+// Path: tools.httprequest.error
+class _StringsToolsHttprequestErrorFr implements _StringsToolsHttprequestErrorEn {
+	_StringsToolsHttprequestErrorFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get url_cannot_be_empty => 'L\'URL ne peut pas être vide';
+	@override String get invalid_url => 'URL invalide';
+	@override String get invalid_headers => 'En-têtes invalides';
+	@override String get other_error => 'Une erreur s\'est produite lors de l\'envoi de la requête.\nVeuillez vérifier votre saisie et votre connexion internet, puis réessayez.';
 }
 
 /// Flat map(s) containing all translations.
@@ -1464,6 +1528,18 @@ extension on _StringsEn {
 			case 'tools.nationalanthems.view_license': return 'View license';
 			case 'tools.nationalanthems.error.failed_to_load_list': return 'Impossible to load the list of anthems. Please check your internet connection and try again.';
 			case 'tools.nationalanthems.error.failed_to_play_anthem': return 'Impossible to play the anthem. Please check your internet connection and try again.';
+			case 'tools.httprequest.title': return 'HTTP request';
+			case 'tools.httprequest.method': return 'Method';
+			case 'tools.httprequest.url': return 'URL';
+			case 'tools.httprequest.headers': return 'Headers';
+			case 'tools.httprequest.body': return 'Body';
+			case 'tools.httprequest.send_request': return 'Send request';
+			case 'tools.httprequest.response': return 'Response';
+			case 'tools.httprequest.status_code': return 'Status code';
+			case 'tools.httprequest.error.url_cannot_be_empty': return 'The URL cannot be empty';
+			case 'tools.httprequest.error.invalid_url': return 'Invalid URL';
+			case 'tools.httprequest.error.invalid_headers': return 'Invalid headers';
+			case 'tools.httprequest.error.other_error': return 'An error occurred while sending the request.\nPlease check your input and your internet connection then try again.';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -1641,6 +1717,18 @@ extension on _StringsFr {
 			case 'tools.nationalanthems.view_license': return 'Voir la licence';
 			case 'tools.nationalanthems.error.failed_to_load_list': return 'Impossible de charger la liste des hymnes. Veuillez vérifier votre connexion internet et réessayer.';
 			case 'tools.nationalanthems.error.failed_to_play_anthem': return 'Impossible de jouer l\'hymne. Veuillez vérifier votre connexion internet et réessayer.';
+			case 'tools.httprequest.title': return 'Requête HTTP';
+			case 'tools.httprequest.method': return 'Méthode';
+			case 'tools.httprequest.url': return 'URL';
+			case 'tools.httprequest.headers': return 'En-têtes (headers)';
+			case 'tools.httprequest.body': return 'Corps (body)';
+			case 'tools.httprequest.send_request': return 'Envoyer la requête';
+			case 'tools.httprequest.response': return 'Réponse';
+			case 'tools.httprequest.status_code': return 'Code d\'état';
+			case 'tools.httprequest.error.url_cannot_be_empty': return 'L\'URL ne peut pas être vide';
+			case 'tools.httprequest.error.invalid_url': return 'URL invalide';
+			case 'tools.httprequest.error.invalid_headers': return 'En-têtes invalides';
+			case 'tools.httprequest.error.other_error': return 'Une erreur s\'est produite lors de l\'envoi de la requête.\nVeuillez vérifier votre saisie et votre connexion internet, puis réessayez.';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';
