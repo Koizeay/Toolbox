@@ -289,7 +289,7 @@ class _RoulettePage extends State<RoulettePage> with TickerProviderStateMixin {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Expanded(
-                              child: ElevatedButton(
+                              child: FilledButton(
                                 onPressed: () {
                                   showAddRouletteUnitDialog();
                                 },
@@ -298,7 +298,7 @@ class _RoulettePage extends State<RoulettePage> with TickerProviderStateMixin {
                             ),
                             const SizedBox(width: 8,),
                             Expanded(
-                              child: ElevatedButton(
+                              child: FilledButton(
                                 onPressed: () {
                                   showRemoveRouletteChoiceListDialog();
                                 },

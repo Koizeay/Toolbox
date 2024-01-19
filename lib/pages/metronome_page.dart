@@ -112,7 +112,7 @@ class _MetronomePage extends State<MetronomePage> {
                   padding: const EdgeInsets.all(8.0),
                   child: SizedBox(
                     width: double.infinity,
-                    child: ElevatedButton(
+                    child: FilledButton(
                       onPressed: () {
                         if (isLoading) {
                           return;

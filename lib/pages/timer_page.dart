@@ -155,7 +155,7 @@ class _TimerPage extends State<TimerPage> {
                           Expanded(
                             child: Padding(
                               padding: const EdgeInsets.all(4.0),
-                              child: ElevatedButton(
+                              child: FilledButton(
                                   onPressed: () {
                                     addTime(-1);
                                   },
@@ -166,7 +166,7 @@ class _TimerPage extends State<TimerPage> {
                           Expanded(
                             child: Padding(
                               padding: const EdgeInsets.all(4.0),
-                              child: ElevatedButton(
+                              child: FilledButton(
                                   onPressed: () {
                                     addTime(1);
                                   },
@@ -177,7 +177,7 @@ class _TimerPage extends State<TimerPage> {
                           Expanded(
                             child: Padding(
                               padding: const EdgeInsets.all(4.0),
-                              child: ElevatedButton(
+                              child: FilledButton(
                                   onPressed: () {
                                     addTime(-60);
                                   },
@@ -188,7 +188,7 @@ class _TimerPage extends State<TimerPage> {
                           Expanded(
                             child: Padding(
                               padding: const EdgeInsets.all(4.0),
-                              child: ElevatedButton(
+                              child: FilledButton(
                                   onPressed: () {
                                     addTime(60);
                                   },
@@ -202,7 +202,7 @@ class _TimerPage extends State<TimerPage> {
                         width: double.infinity,
                         child: Padding(
                           padding: const EdgeInsets.all(4.0),
-                          child: ElevatedButton(
+                          child: FilledButton(
                               onPressed: () {
                                 if (isCounting) {
                                   stopTimer();

@@ -24,15 +24,20 @@ class _ToolTemplate extends State<ToolTemplate> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          // TODO: Replace this with the app name + tool's name
-          title: Text("${t.generic.app_name} - REPLACE THIS WITH THE TRANSLATED TOOL NAME"),
-        ),
-        body: SafeArea(
-          // TODO: Replace this with the tool's page content
-          child: Container(),
-        )
+    return GestureDetector(
+      onTap: () {
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
+      child: Scaffold(
+          appBar: AppBar(
+            // TODO: Replace this with the app name + tool's name
+            title: Text("${t.generic.app_name} - REPLACE THIS WITH THE TRANSLATED TOOL NAME"),
+          ),
+          body: SafeArea(
+            // TODO: Replace this with the tool's page content
+            child: Container(),
+          )
+      ),
     );
   }
 }

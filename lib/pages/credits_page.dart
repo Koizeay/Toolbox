@@ -125,7 +125,7 @@ class _CreditsPage extends State<CreditsPage> {
                       padding: const EdgeInsets.all(10),
                       child: Text(
                         t.credits.contribute_on_github,
-                        style: const TextStyle(fontSize: 20, color: Colors.green, fontWeight: FontWeight.bold),
+                        style: TextStyle(fontSize: 20, color: Theme.of(context).colorScheme.primary, fontWeight: FontWeight.bold),
                         textAlign: TextAlign.center,
                       ),
                     ),

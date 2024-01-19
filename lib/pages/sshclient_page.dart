@@ -213,128 +213,138 @@ class _SshClientPage extends State<SshClientPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title: Text("${t.generic.app_name} - ${t.tools.sshclient.title}"),
-          actions: [ isConnected || loading
-              ? Container()
-              : IconButton(
-              icon: Icon(usingSshKey ? Icons.password : Icons.key),
-              tooltip: usingSshKey ? t.tools.sshclient.use_password : t.tools.sshclient.use_ssh_key,
-              onPressed: () {
-                setState(() {
-                  usingSshKey = !usingSshKey;
-                });
-              },
-            )
-          ],
-        ),
-        body: SafeArea(
-          child: isConnected
-              ? TerminalView(terminal ?? Terminal())
-              : loading ? const Center(child: CircularProgressIndicator())
-              : Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  TextField(
-                    controller: hostController,
-                    autocorrect: false,
-                    enableSuggestions: false,
-                    decoration: InputDecoration(
-                        labelText: t.tools.sshclient.host
-                    ),
-                  ),
-                  const SizedBox(height: 8),
-                  TextField(
-                    controller: portController,
-                    keyboardType: TextInputType.number,
-                    inputFormatters: <TextInputFormatter>[
-                      FilteringTextInputFormatter.digitsOnly
-                    ],
-                    autocorrect: false,
-                    enableSuggestions: false,
-                    decoration: InputDecoration(
-                      labelText: t.tools.sshclient.port,
-                    ),
-                  ),
-                  const SizedBox(height: 8),
-                  TextField(
-                    controller: usernameController,
-                    autocorrect: false,
-                    enableSuggestions: false,
-                    decoration: InputDecoration(
-                      labelText: t.tools.sshclient.username,
-                    ),
-                  ),
-                  const SizedBox(height: 8),
-                  usingSshKey
-                      ? Column(
-                    children: [
-                      SizedBox(
-                        width: double.infinity,
-                        child: ElevatedButton(
-                            onPressed: () {
-                              selectSshPrivateKey().then((value) {
-                                if (mounted) {
-                                  setState(() {
-                                    sshPrivateKey = value;
-                                  });
-                                }
-                              });
-                            },
-                            child: Text(t.tools.sshclient.select_private_key)
-                        ),
+    return GestureDetector(
+      onTap: () {
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
+      child: Scaffold(
+          appBar: AppBar(
+            title: Text("${t.generic.app_name} - ${t.tools.sshclient.title}"),
+            actions: [ isConnected || loading
+                ? Container()
+                : IconButton(
+                icon: Icon(usingSshKey ? Icons.password : Icons.key),
+                tooltip: usingSshKey ? t.tools.sshclient.use_password : t.tools.sshclient.use_ssh_key,
+                onPressed: () {
+                  setState(() {
+                    usingSshKey = !usingSshKey;
+                  });
+                },
+              )
+            ],
+          ),
+          body: SafeArea(
+            child: isConnected
+                ? TerminalView(terminal ?? Terminal())
+                : loading ? const Center(child: CircularProgressIndicator())
+                : Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    TextField(
+                      controller: hostController,
+                      autocorrect: false,
+                      enableSuggestions: false,
+                      decoration: InputDecoration(
+                          border: const OutlineInputBorder(),
+                          labelText: t.tools.sshclient.host
                       ),
-                      Text(
-                        sshPrivateKeyFileName ?? t.tools.sshclient.no_private_key_selected,
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            color: Colors.grey[600],
-                            fontSize: 12,
-                            fontStyle: FontStyle.italic
-                        ),
-                      ),
-                      const SizedBox(height: 8),
-                      TextField(
-                        controller: passphraseController,
-                        obscureText: true,
-                        autocorrect: false,
-                        enableSuggestions: false,
-                        decoration: InputDecoration(
-                          labelText: t.tools.sshclient.passphrase,
-                        ),
-                      ),
-                    ],
-                  )
-                      : TextField(
-                    controller: passwordController,
-                    obscureText: true,
-                    autocorrect: false,
-                    enableSuggestions: false,
-                    decoration: InputDecoration(
-                      labelText: t.tools.sshclient.password,
                     ),
-                  ),
-                  const SizedBox(height: 8),
-                  SizedBox(
-                    width: double.infinity,
-                    child: ElevatedButton(
-                      onPressed: () async {
-                        setState(() {
-                          loading = true;
-                        });
-                        connectToSsh();
-                      },
-                      child: Text(t.tools.sshclient.connect),
+                    const SizedBox(height: 8),
+                    TextField(
+                      controller: portController,
+                      keyboardType: TextInputType.number,
+                      inputFormatters: <TextInputFormatter>[
+                        FilteringTextInputFormatter.digitsOnly
+                      ],
+                      autocorrect: false,
+                      enableSuggestions: false,
+                      decoration: InputDecoration(
+                        border: const OutlineInputBorder(),
+                        labelText: t.tools.sshclient.port,
+                      ),
                     ),
-                  ),
-                ],
+                    const SizedBox(height: 8),
+                    TextField(
+                      controller: usernameController,
+                      autocorrect: false,
+                      enableSuggestions: false,
+                      decoration: InputDecoration(
+                        border: const OutlineInputBorder(),
+                        labelText: t.tools.sshclient.username,
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                    usingSshKey
+                        ? Column(
+                      children: [
+                        SizedBox(
+                          width: double.infinity,
+                          child: FilledButton(
+                              onPressed: () {
+                                selectSshPrivateKey().then((value) {
+                                  if (mounted) {
+                                    setState(() {
+                                      sshPrivateKey = value;
+                                    });
+                                  }
+                                });
+                              },
+                              child: Text(t.tools.sshclient.select_private_key)
+                          ),
+                        ),
+                        Text(
+                          sshPrivateKeyFileName ?? t.tools.sshclient.no_private_key_selected,
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: Colors.grey[600],
+                              fontSize: 12,
+                              fontStyle: FontStyle.italic
+                          ),
+                        ),
+                        const SizedBox(height: 8),
+                        TextField(
+                          controller: passphraseController,
+                          obscureText: true,
+                          autocorrect: false,
+                          enableSuggestions: false,
+                          decoration: InputDecoration(
+                            border: const OutlineInputBorder(),
+                            labelText: t.tools.sshclient.passphrase,
+                          ),
+                        ),
+                      ],
+                    )
+                        : TextField(
+                      controller: passwordController,
+                      obscureText: true,
+                      autocorrect: false,
+                      enableSuggestions: false,
+                      decoration: InputDecoration(
+                        border: const OutlineInputBorder(),
+                        labelText: t.tools.sshclient.password,
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                    SizedBox(
+                      width: double.infinity,
+                      child: FilledButton(
+                        onPressed: () async {
+                          setState(() {
+                            loading = true;
+                          });
+                          connectToSsh();
+                        },
+                        child: Text(t.tools.sshclient.connect),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
-          ),
-        )
+          )
+      ),
     );
   }
 }

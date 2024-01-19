@@ -44,7 +44,7 @@ You can write your code as you want but please respect these rules:
 - Please use the `camelCase` notation for the variables and the functions.
 - Please use the `PascalCase` notation for the classes.
 - Please use the `snake_case` notation for the files.
-- Please use the `ElevatedButton` widget for the buttons.
+- Please use the `FilledButton` widget for the buttons.
 - Please keep the `SafeArea` widget in the pages.
 - Please respect the naming of the shared preferences keys (can be found in `lib/core/shared_preferences.dart`).
 - Please don't change the color of the app widgets, a theme is already defined.

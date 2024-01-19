@@ -51,54 +51,60 @@ class _NslookupPage extends State<NslookupPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title: Text("${t.generic.app_name} - ${t.tools.nslookup.title}"),
-        ),
-        body: SafeArea(
-          child: Center(
-            child: Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      labelText: t.tools.nslookup.enter_a_domain_name
-                    ),
-                    controller: _domainController,
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: SizedBox(
-                    width: double.infinity,
-                    child: ElevatedButton(
-                        child: Text(t.tools.nslookup.lookup),
-                        onPressed: () {
-                          lookup();
-                        }
-                    ),
-                  ),
-                ),
-                loading ? const Center(child: Padding(
-                  padding: EdgeInsets.all(20.0),
-                  child: CircularProgressIndicator(),
-                )) :
-                Expanded(
-                  child: ListView.builder(
-                    scrollDirection: Axis.vertical,
-                    itemCount: _ipAddresses.length,
-                    itemBuilder: (context, index) {
-                      return ListTile(
-                        title: Text(_ipAddresses[index]),
-                      );
-                    },
-                  ),
-                ),
-              ],
-            ),
+    return GestureDetector(
+      onTap: () {
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
+      child: Scaffold(
+          appBar: AppBar(
+            title: Text("${t.generic.app_name} - ${t.tools.nslookup.title}"),
           ),
-        )
+          body: SafeArea(
+            child: Center(
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        border: const OutlineInputBorder(),
+                        labelText: t.tools.nslookup.enter_a_domain_name
+                      ),
+                      controller: _domainController,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: SizedBox(
+                      width: double.infinity,
+                      child: FilledButton(
+                          child: Text(t.tools.nslookup.lookup),
+                          onPressed: () {
+                            lookup();
+                          }
+                      ),
+                    ),
+                  ),
+                  loading ? const Center(child: Padding(
+                    padding: EdgeInsets.all(20.0),
+                    child: CircularProgressIndicator(),
+                  )) :
+                  Expanded(
+                    child: ListView.builder(
+                      scrollDirection: Axis.vertical,
+                      itemCount: _ipAddresses.length,
+                      itemBuilder: (context, index) {
+                        return ListTile(
+                          title: Text(_ipAddresses[index]),
+                        );
+                      },
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          )
+      ),
     );
   }
 }

@@ -179,7 +179,8 @@ class _NationalAnthemsPage extends State<NationalAnthemsPage> {
                   padding: const EdgeInsets.all(4.0),
                   child: TextField(
                     decoration: InputDecoration(
-                      hintText: t.tools.nationalanthems.search,
+                      border: const OutlineInputBorder(),
+                      labelText: t.tools.nationalanthems.search,
                       prefixIcon: const Icon(Icons.search),
                     ),
                     onChanged: (String filter) {

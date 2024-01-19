@@ -82,9 +82,9 @@ class _ClockPage extends State<ClockPage> {
           backgroundColor: isFullscreen ? Colors.grey[800] : Theme
               .of(context)
               .colorScheme
-              .secondary,
-          child: isFullscreen ? const Icon(Icons.fullscreen_exit) : const Icon(
-              Icons.fullscreen),
+              .primary,
+          child: isFullscreen ? const Icon(Icons.fullscreen_exit, color: Colors.white,) : const Icon(
+              Icons.fullscreen, color: Colors.white,),
           onPressed: () {
             toggleFullscreen();
           },

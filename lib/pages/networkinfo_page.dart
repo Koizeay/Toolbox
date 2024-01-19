@@ -96,8 +96,17 @@ class _NetworkInfoPage extends State<NetworkInfoPage> {
                 child: Column(
                   children: [
                     Container(
-                      decoration: const BoxDecoration(
-                        color: Colors.black,
+                      decoration: BoxDecoration(
+                          color: Theme.of(context).colorScheme.surface,
+                          borderRadius: BorderRadius.circular(8),
+                          boxShadow: [
+                            BoxShadow(
+                                color: Theme.of(context).colorScheme.secondary,
+                                blurRadius: 2,
+                                spreadRadius: 0.5,
+                                offset: const Offset(0, 0)
+                            )
+                          ]
                       ),
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
@@ -106,70 +115,64 @@ class _NetworkInfoPage extends State<NetworkInfoPage> {
                           children: [
                             Text(
                                 "${t.tools.networkinfo.public_ip}\n$publicIpAddress",
-                                style: const TextStyle(
+                                style: TextStyle(
                                     fontSize: 18,
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.greenAccent
+                                    color: Theme.of(context).colorScheme.primary
                                 )
                             ),
-                            const Divider(
-                              color: Colors.greenAccent, thickness: 3,),
+                            Divider(thickness: 2, color: Theme.of(context).colorScheme.secondary),
                             Text(
                                 "${t.tools.networkinfo.local_ip}\n$localIpAddress",
-                                style: const TextStyle(
+                                style: TextStyle(
                                     fontSize: 14,
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.greenAccent
+                                    color: Theme.of(context).colorScheme.primary
                                 )
                             ),
-                            const Divider(
-                              color: Colors.greenAccent, thickness: 0.5,),
+                            Divider(thickness: 0.5, color: Theme.of(context).colorScheme.secondary),
                             Text(
                                 "${t.tools.networkinfo.local_subnet_mask}\n$localSubmask",
-                                style: const TextStyle(
+                                style: TextStyle(
                                     fontSize: 14,
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.greenAccent
+                                    color: Theme.of(context).colorScheme.primary
                                 )
                             ),
-                            const Divider(
-                              color: Colors.greenAccent, thickness: 0.5,),
+                            Divider(thickness: 0.5, color: Theme.of(context).colorScheme.secondary),
                             Text(
                                 "${t.tools.networkinfo.local_gateway_ip}\n$localGatewayIP",
-                                style: const TextStyle(
+                                style: TextStyle(
                                     fontSize: 14,
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.greenAccent
+                                    color: Theme.of(context).colorScheme.primary
                                 )
                             ),
-                            const Divider(
-                              color: Colors.greenAccent, thickness: 0.5,),
+                            Divider(thickness: 0.5, color: Theme.of(context).colorScheme.secondary),
                             Text(
                                 "${t.tools.networkinfo.local_broadcast_ip}\n$localBroadcastIP",
-                                style: const TextStyle(
+                                style: TextStyle(
                                     fontSize: 14,
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.greenAccent
+                                    color: Theme.of(context).colorScheme.primary
                                 )
                             ),
-                            const Divider(
-                              color: Colors.greenAccent, thickness: 0.5,),
+                            Divider(thickness: 0.5, color: Theme.of(context).colorScheme.secondary),
                             Text(
                                 "${t.tools.networkinfo.wifi_name}\n$wifiName",
-                                style: const TextStyle(
+                                style: TextStyle(
                                     fontSize: 14,
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.greenAccent
+                                    color: Theme.of(context).colorScheme.primary
                                 )
                             ),
-                            const Divider(
-                              color: Colors.greenAccent, thickness: 0.5,),
+                            Divider(thickness: 0.5, color: Theme.of(context).colorScheme.secondary),
                             Text(
                                 "${t.tools.networkinfo.wifi_bssid}\n$wifiBSSID",
-                                style: const TextStyle(
+                                style: TextStyle(
                                     fontSize: 14,
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.greenAccent
+                                    color: Theme.of(context).colorScheme.primary
                                 )
                             ),
                           ],

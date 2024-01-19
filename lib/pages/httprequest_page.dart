@@ -291,7 +291,7 @@ class _HttpRequestPage extends State<HttpRequestPage> {
                         padding: const EdgeInsets.all(8.0),
                         child: SizedBox(
                           width: double.infinity,
-                          child: ElevatedButton(
+                          child: FilledButton(
                               child: Text(t.tools.httprequest.send_request),
                               onPressed: () async {
                                 setState(() {

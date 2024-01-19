@@ -24,14 +24,15 @@ class _UuidGeneratorPage extends State<UuidGeneratorPage> {
           return AlertDialog(
             title: Text(t.tools.uuidgenerator.v5_generate_title),
             content: SizedBox(
-              height: 130,
+              height: 140,
               child: Column(
                 children: [
                   TextField(
                     controller: namespaceController,
                     decoration: InputDecoration(
-                      hintText: t.tools.uuidgenerator.v5_namespace,
-                      hintStyle: const TextStyle(
+                      border: const OutlineInputBorder(),
+                      labelText: t.tools.uuidgenerator.v5_namespace,
+                      labelStyle: const TextStyle(
                         fontSize: 12,
                       ),
                     ),
@@ -40,7 +41,8 @@ class _UuidGeneratorPage extends State<UuidGeneratorPage> {
                   TextField(
                     controller: nameController,
                     decoration: InputDecoration(
-                      hintText: t.tools.uuidgenerator.v5_name,
+                      border: const OutlineInputBorder(),
+                      labelText: t.tools.uuidgenerator.v5_name,
                     ),
                   ),
                 ],
@@ -110,7 +112,7 @@ class _UuidGeneratorPage extends State<UuidGeneratorPage> {
                     const SizedBox(height: 16,),
                     SizedBox(
                       width: double.infinity,
-                      child: ElevatedButton(
+                      child: FilledButton(
                         onPressed: () {
                           setState(() {
                             uuidString = uuid.v1();
@@ -121,7 +123,7 @@ class _UuidGeneratorPage extends State<UuidGeneratorPage> {
                     ),
                     SizedBox(
                       width: double.infinity,
-                      child: ElevatedButton(
+                      child: FilledButton(
                         onPressed: () {
                           setState(() {
                             uuidString = uuid.v4();
@@ -132,7 +134,7 @@ class _UuidGeneratorPage extends State<UuidGeneratorPage> {
                     ),
                     SizedBox(
                       width: double.infinity,
-                      child: ElevatedButton(
+                      child: FilledButton(
                         onPressed: () {
                           setState(() {
                             showV5UuidDialog();

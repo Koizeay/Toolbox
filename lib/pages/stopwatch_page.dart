@@ -124,7 +124,7 @@ class _StopwatchPage extends State<StopwatchPage> {
                       Expanded(
                         child: Padding(
                           padding: const EdgeInsets.fromLTRB(16, 0, 4, 0),
-                          child: ElevatedButton(
+                          child: FilledButton(
                             onPressed: () {
                               stopTimer();
                             },
@@ -134,7 +134,7 @@ class _StopwatchPage extends State<StopwatchPage> {
                       ) : Expanded(
                         child: Padding(
                           padding: const EdgeInsets.fromLTRB(16, 0, 4, 0),
-                          child: ElevatedButton(
+                          child: FilledButton(
                             onPressed: () {
                               startTimer();
                             },
@@ -145,7 +145,7 @@ class _StopwatchPage extends State<StopwatchPage> {
                       Expanded(
                         child: Padding(
                           padding: const EdgeInsets.fromLTRB(4, 0, 16, 0),
-                          child: ElevatedButton(
+                          child: FilledButton(
                             onPressed: () {
                               resetTimer();
                             },
@@ -159,7 +159,7 @@ class _StopwatchPage extends State<StopwatchPage> {
                     width: double.infinity,
                     child: Padding(
                       padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-                      child: ElevatedButton(
+                      child: FilledButton(
                         onPressed: () {
                           addLap();
                         },
@@ -174,10 +174,10 @@ class _StopwatchPage extends State<StopwatchPage> {
                       title: Text(
                           "${index + 1}) ${getFormattedTimeFromMilliseconds(
                               laps[index].inMilliseconds.toDouble())}",
-                          style: const TextStyle(
+                          style: TextStyle(
                               fontWeight: FontWeight.w500,
                               fontSize: 25,
-                              color: YaruColors.kubuntuBlue
+                              color: Theme.of(context).colorScheme.secondary
                           )
                       ),
                     );

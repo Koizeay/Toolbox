@@ -273,7 +273,7 @@ class _TextToSpeechPage extends State<TextToSpeechPage> {
                   const SizedBox(height: 8,),
                   SizedBox(
                     width: double.infinity,
-                    child: ElevatedButton(
+                    child: FilledButton(
                         onPressed: () async {
                           await playText();
                         },

@@ -4,7 +4,6 @@ import 'package:mobile_scanner/mobile_scanner.dart';
 import 'package:toolbox/core/dialogs.dart';
 import 'package:toolbox/core/url.dart';
 import 'package:toolbox/gen/strings.g.dart';
-import 'package:yaru/yaru.dart';
 
 class QrReaderPage extends StatefulWidget {
   const QrReaderPage({ Key? key }) : super(key: key);
@@ -13,8 +12,13 @@ class QrReaderPage extends StatefulWidget {
 }
 
 class _QrReaderPage extends State<QrReaderPage> {
-  Icon _flashIcon = const Icon(Icons.flash_off, color: YaruColors.success);
+  IconData _flashIcon = Icons.flash_off;
   final MobileScannerController _controller = MobileScannerController();
+
+  @override
+  void initState() {
+    super.initState();
+  }
 
   @override
   void dispose() {
@@ -25,10 +29,10 @@ class _QrReaderPage extends State<QrReaderPage> {
   void toggleFlash() {
     _controller.toggleTorch().then((value) =>
         setState(() {
-          if (_flashIcon.icon == Icons.flash_off) {
-            _flashIcon = const Icon(Icons.flash_on, color: YaruColors.success);
+          if (_flashIcon == Icons.flash_off) {
+            _flashIcon = Icons.flash_on;
           } else {
-            _flashIcon = const Icon(Icons.flash_off, color: YaruColors.success);
+            _flashIcon = Icons.flash_off;
           }
         })
     );
@@ -37,7 +41,7 @@ class _QrReaderPage extends State<QrReaderPage> {
   void flipCamera() {
     _controller.switchCamera().then((value) =>
         setState(() {
-          _flashIcon = const Icon(Icons.flash_off, color: YaruColors.success);
+          _flashIcon = Icons.flash_off;
         }));
   }
 
@@ -118,15 +122,15 @@ class _QrReaderPage extends State<QrReaderPage> {
                         onPressed: () {
                           toggleFlash();
                         },
-                        icon: _flashIcon,
+                        icon: Icon(_flashIcon, color: Theme.of(context).colorScheme.primary),
                         iconSize: 48,
                       ),
                       IconButton(
                         onPressed: () {
                           flipCamera();
                         },
-                        icon: const Icon(Icons.flip_camera_android,
-                            color: YaruColors.success),
+                        icon: Icon(Icons.flip_camera_android,
+                            color: Theme.of(context).colorScheme.primary),
                         iconSize: 48,
                       ),
                     ],

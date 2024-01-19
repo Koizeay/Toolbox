@@ -73,11 +73,14 @@ class _YouTubeThumbnailPage extends State<YouTubeThumbnailPage> {
                               width: double.infinity,
                               errorBuilder: (context, error, stackTrace) {
                                 return Container(
-                                  color: Colors.grey,
+                                  color: Theme.of(context).colorScheme.secondary,
                                   child: Center(
                                       child: Text(
                                         t.tools.youtubethumbnail.error.please_enter_a_video_id,
                                         textAlign: TextAlign.center,
+                                        style: const TextStyle(
+                                          color: Colors.white,
+                                        )
                                       )
                                   ),
                                 );
@@ -103,7 +106,7 @@ class _YouTubeThumbnailPage extends State<YouTubeThumbnailPage> {
                         padding: const EdgeInsets.all(4.0),
                         child: SizedBox(
                           width: double.infinity,
-                          child: ElevatedButton(
+                          child: FilledButton(
                             onPressed: () {
                               saveThumbnailToDisk();
                             },

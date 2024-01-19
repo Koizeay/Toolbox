@@ -85,50 +85,56 @@ class _PingPage extends State<PingPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title: Text("${t.generic.app_name} - ${t.tools.ping.title}"),
-        ),
-        body: SafeArea(
-          child: Center(
-            child: Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      labelText: t.tools.ping.enter_a_domain_name_or_ip,
-                    ),
-                    controller: _hostController,
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: SizedBox(
-                    width: double.infinity,
-                    child: ElevatedButton(
-                        child: Text(t.tools.ping.ping),
-                        onPressed: () {
-                          pingPressed();
-                        }
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: ListView.builder(
-                    scrollDirection: Axis.vertical,
-                    itemCount: _results.length,
-                    itemBuilder: (context, index) {
-                      return ListTile(
-                        title: Text(_results[index]),
-                      );
-                    },
-                  ),
-                ),
-              ],
-            ),
+    return GestureDetector(
+      onTap: () {
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
+      child: Scaffold(
+          appBar: AppBar(
+            title: Text("${t.generic.app_name} - ${t.tools.ping.title}"),
           ),
-        )
+          body: SafeArea(
+            child: Center(
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        border: const OutlineInputBorder(),
+                        labelText: t.tools.ping.enter_a_domain_name_or_ip,
+                      ),
+                      controller: _hostController,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: SizedBox(
+                      width: double.infinity,
+                      child: FilledButton(
+                          child: Text(t.tools.ping.ping),
+                          onPressed: () {
+                            pingPressed();
+                          }
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: ListView.builder(
+                      scrollDirection: Axis.vertical,
+                      itemCount: _results.length,
+                      itemBuilder: (context, index) {
+                        return ListTile(
+                          title: Text(_results[index]),
+                        );
+                      },
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          )
+      ),
     );
   }
 }

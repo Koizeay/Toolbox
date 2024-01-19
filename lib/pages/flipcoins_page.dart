@@ -112,7 +112,7 @@ class _FlipCoinsPage extends State<FlipCoinsPage> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Expanded(
-                          child: ElevatedButton(
+                          child: FilledButton(
                               onPressed: () {
                                 setState(() {
                                   setCoinAsset("chf");
@@ -123,7 +123,7 @@ class _FlipCoinsPage extends State<FlipCoinsPage> {
                         ),
                         const SizedBox(width: 4),
                         Expanded(
-                          child: ElevatedButton(
+                          child: FilledButton(
                               onPressed: () {
                                 setState(() {
                                   setCoinAsset("eur");

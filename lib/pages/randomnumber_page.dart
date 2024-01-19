@@ -1,10 +1,8 @@
 
 import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:toolbox/core/dialogs.dart';
 import 'package:toolbox/gen/strings.g.dart';
-import 'package:yaru/yaru.dart';
 
 class RandomNumberPage extends StatefulWidget {
   const RandomNumberPage({ Key? key }) : super(key: key);
@@ -85,7 +83,7 @@ class _RandomNumberPage extends State<RandomNumberPage> {
                           },
                           child: Card(
                             shape: const CircleBorder(),
-                            color: YaruColors.success,
+                            color: Theme.of(context).colorScheme.primary,
                             child: Padding(
                               padding: const EdgeInsets.all(16.0),
                               child: Center(

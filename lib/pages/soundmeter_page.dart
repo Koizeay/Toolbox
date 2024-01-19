@@ -3,7 +3,6 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:gauges/gauges.dart';
 import 'package:noise_meter/noise_meter.dart';
 import 'package:toolbox/core/dialogs.dart';
@@ -19,7 +18,6 @@ class SoundMeterPage extends StatefulWidget {
 
 class _SoundMeterPage extends State<SoundMeterPage> {
   StreamSubscription<NoiseReading>? _noiseSubscription;
-  late NoiseMeter _noiseMeter;
 
   final _checkIfDecibelIsZeroDuring = const Duration(seconds: 4);
 
@@ -28,7 +26,6 @@ class _SoundMeterPage extends State<SoundMeterPage> {
 
   @override
   void initState() {
-    _noiseMeter = NoiseMeter(onError);
     startListening();
     checkIfDecibelIsZeroDuring(_checkIfDecibelIsZeroDuring);
     lockScreenRotation();
@@ -51,7 +48,7 @@ class _SoundMeterPage extends State<SoundMeterPage> {
   void startListening() async {
     try {
       _noiseSubscription =
-          _noiseMeter.noiseStream.listen(onData, cancelOnError: true);
+          NoiseMeter().noise.listen(onData, onError: onError, cancelOnError: true);
     } catch (exception) {
       showOkTextDialog(context, t.generic.error, t.tools.soundmeter.error.impossible_to_start_the_sound_meter);
       if (kDebugMode) {
@@ -132,8 +129,8 @@ class _SoundMeterPage extends State<SoundMeterPage> {
                                     thicknessEnd: 0,
                                     length: 0.6,
                                     knobRadiusAbsolute: 10,
-                                    gradient: const LinearGradient(
-                                        colors: [YaruColors.success],
+                                    gradient: LinearGradient(
+                                        colors: [Theme.of(context).colorScheme.primary],
                                         stops: [0.0]
                                     ),
                                   )
@@ -142,7 +139,7 @@ class _SoundMeterPage extends State<SoundMeterPage> {
                                   RadialTicks(
                                       interval: 20,
                                       alignment: RadialTickAxisAlignment.inside,
-                                      color: YaruColors.success,
+                                      color: Theme.of(context).colorScheme.primary,
                                       length: 0.2,
                                       children: [
                                         RadialTicks(

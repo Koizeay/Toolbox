@@ -223,7 +223,7 @@ class _FileEncryptionPage extends State<FileEncryptionPage> {
                       ),
                       SizedBox(
                         width: double.infinity,
-                        child: ElevatedButton(
+                        child: FilledButton(
                             onPressed: () {
                               setState(() {
                                 selectedFile = null;
@@ -261,7 +261,7 @@ class _FileEncryptionPage extends State<FileEncryptionPage> {
                           ? Container()
                           : SizedBox(
                         width: double.infinity,
-                        child: ElevatedButton(
+                        child: FilledButton(
                             onPressed: () {
                               setState(() {
                                 isEncrypting = true;
