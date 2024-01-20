@@ -62,8 +62,8 @@ class _HomePage extends State<HomePage> {
           const HttpRequestPage()),
       Tool(t.tools.metronome.title, "assets/images/tools/metronome.png",
           const MetronomePage()),
-      Tool(t.tools.megaphone.title, "assets/images/tools/megaphone.png",
-          const MegaphonePage()),
+      /*Tool(t.tools.megaphone.title, "assets/images/tools/megaphone.png",
+          const MegaphonePage()),*/
       Tool(t.tools.networkinfo.title, "assets/images/tools/networkinfo.png",
           const NetworkInfoPage()),
       Tool(t.tools.nationalanthems.title, "assets/images/tools/nationalanthems.png",
