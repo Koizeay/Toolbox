@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 362 (181 per locale)
+/// Strings: 376 (188 per locale)
 ///
-/// Built on 2023-11-18 at 20:33 UTC
+/// Built on 2024-01-20 at 13:25 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -24,8 +24,8 @@ const AppLocale _baseLocale = AppLocale.en;
 /// - LocaleSettings.setLocale(AppLocale.en) // set locale
 /// - Locale locale = AppLocale.en.flutterLocale // get flutter locale from enum
 /// - if (LocaleSettings.currentLocale == AppLocale.en) // locale check
-enum AppLocale with BaseAppLocale<AppLocale, _StringsEn> {
-	en(languageCode: 'en', build: _StringsEn.build),
+enum AppLocale with BaseAppLocale<AppLocale, Translations> {
+	en(languageCode: 'en', build: Translations.build),
 	fr(languageCode: 'fr', build: _StringsFr.build);
 
 	const AppLocale({required this.languageCode, this.scriptCode, this.countryCode, required this.build}); // ignore: unused_element
@@ -33,10 +33,10 @@ enum AppLocale with BaseAppLocale<AppLocale, _StringsEn> {
 	@override final String languageCode;
 	@override final String? scriptCode;
 	@override final String? countryCode;
-	@override final TranslationBuilder<AppLocale, _StringsEn> build;
+	@override final TranslationBuilder<AppLocale, Translations> build;
 
 	/// Gets current instance managed by [LocaleSettings].
-	_StringsEn get translations => LocaleSettings.instance.translationMap[this]!;
+	Translations get translations => LocaleSettings.instance.translationMap[this]!;
 }
 
 /// Method A: Simple
@@ -48,7 +48,7 @@ enum AppLocale with BaseAppLocale<AppLocale, _StringsEn> {
 /// Usage:
 /// String a = t.someKey.anotherKey;
 /// String b = t['someKey.anotherKey']; // Only for edge cases!
-_StringsEn get t => LocaleSettings.instance.currentTranslations;
+Translations get t => LocaleSettings.instance.currentTranslations;
 
 /// Method B: Advanced
 ///
@@ -65,17 +65,10 @@ _StringsEn get t => LocaleSettings.instance.currentTranslations;
 /// final t = Translations.of(context); // Get t variable.
 /// String a = t.someKey.anotherKey; // Use t variable.
 /// String b = t['someKey.anotherKey']; // Only for edge cases!
-class Translations {
-	Translations._(); // no constructor
-
-	static _StringsEn of(BuildContext context) => InheritedLocaleData.of<AppLocale, _StringsEn>(context).translations;
-}
-
-/// The provider for method B
-class TranslationProvider extends BaseTranslationProvider<AppLocale, _StringsEn> {
+class TranslationProvider extends BaseTranslationProvider<AppLocale, Translations> {
 	TranslationProvider({required super.child}) : super(settings: LocaleSettings.instance);
 
-	static InheritedLocaleData<AppLocale, _StringsEn> of(BuildContext context) => InheritedLocaleData.of<AppLocale, _StringsEn>(context);
+	static InheritedLocaleData<AppLocale, Translations> of(BuildContext context) => InheritedLocaleData.of<AppLocale, Translations>(context);
 }
 
 /// Method B shorthand via [BuildContext] extension method.
@@ -84,11 +77,11 @@ class TranslationProvider extends BaseTranslationProvider<AppLocale, _StringsEn>
 /// Usage (e.g. in a widget's build method):
 /// context.t.someKey.anotherKey
 extension BuildContextTranslationsExtension on BuildContext {
-	_StringsEn get t => TranslationProvider.of(this).translations;
+	Translations get t => TranslationProvider.of(this).translations;
 }
 
 /// Manages all translation instances and the current locale
-class LocaleSettings extends BaseFlutterLocaleSettings<AppLocale, _StringsEn> {
+class LocaleSettings extends BaseFlutterLocaleSettings<AppLocale, Translations> {
 	LocaleSettings._() : super(utils: AppLocaleUtils.instance);
 
 	static final instance = LocaleSettings._();
@@ -110,7 +103,7 @@ class LocaleSettings extends BaseFlutterLocaleSettings<AppLocale, _StringsEn> {
 }
 
 /// Provides utility functions without any side effects.
-class AppLocaleUtils extends BaseAppLocaleUtils<AppLocale, _StringsEn> {
+class AppLocaleUtils extends BaseAppLocaleUtils<AppLocale, Translations> {
 	AppLocaleUtils._() : super(baseLocale: _baseLocale, locales: AppLocale.values);
 
 	static final instance = AppLocaleUtils._();
@@ -126,11 +119,16 @@ class AppLocaleUtils extends BaseAppLocaleUtils<AppLocale, _StringsEn> {
 // translations
 
 // Path: <root>
-class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
+class Translations implements BaseTranslations<AppLocale, Translations> {
+	/// Returns the current translations of the given [context].
+	///
+	/// Usage:
+	/// final t = Translations.of(context);
+	static Translations of(BuildContext context) => InheritedLocaleData.of<AppLocale, Translations>(context).translations;
 
 	/// You can call this constructor and build your own translation instance of this locale.
 	/// Constructing via the enum [AppLocale.build] is preferred.
-	_StringsEn.build({Map<String, Node>? overrides, PluralResolver? cardinalResolver, PluralResolver? ordinalResolver})
+	Translations.build({Map<String, Node>? overrides, PluralResolver? cardinalResolver, PluralResolver? ordinalResolver})
 		: assert(overrides == null, 'Set "translation_overrides: true" in order to enable this feature.'),
 		  $meta = TranslationMetadata(
 		    locale: AppLocale.en,
@@ -142,12 +140,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
 	}
 
 	/// Metadata for the translations of <en>.
-	@override final TranslationMetadata<AppLocale, _StringsEn> $meta;
+	@override final TranslationMetadata<AppLocale, Translations> $meta;
 
 	/// Access flat map
 	dynamic operator[](String key) => $meta.getTranslation(key);
 
-	late final _StringsEn _root = this; // ignore: unused_field
+	late final Translations _root = this; // ignore: unused_field
 
 	// Translations
 	late final _StringsGenericEn generic = _StringsGenericEn._(_root);
@@ -159,7 +157,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
 class _StringsGenericEn {
 	_StringsGenericEn._(this._root);
 
-	final _StringsEn _root; // ignore: unused_field
+	final Translations _root; // ignore: unused_field
 
 	// Translations
 	String get app_name => 'Toolbox';
@@ -174,7 +172,7 @@ class _StringsGenericEn {
 class _StringsToolsEn {
 	_StringsToolsEn._(this._root);
 
-	final _StringsEn _root; // ignore: unused_field
+	final Translations _root; // ignore: unused_field
 
 	// Translations
 	late final _StringsToolsClockEn clock = _StringsToolsClockEn._(_root);
@@ -200,13 +198,14 @@ class _StringsToolsEn {
 	late final _StringsToolsYoutubethumbnailEn youtubethumbnail = _StringsToolsYoutubethumbnailEn._(_root);
 	late final _StringsToolsNationalanthemsEn nationalanthems = _StringsToolsNationalanthemsEn._(_root);
 	late final _StringsToolsHttprequestEn httprequest = _StringsToolsHttprequestEn._(_root);
+	late final _StringsToolsMorsecodeEn morsecode = _StringsToolsMorsecodeEn._(_root);
 }
 
 // Path: credits
 class _StringsCreditsEn {
 	_StringsCreditsEn._(this._root);
 
-	final _StringsEn _root; // ignore: unused_field
+	final Translations _root; // ignore: unused_field
 
 	// Translations
 	String get title => 'Credits';
@@ -221,7 +220,7 @@ class _StringsCreditsEn {
 class _StringsToolsClockEn {
 	_StringsToolsClockEn._(this._root);
 
-	final _StringsEn _root; // ignore: unused_field
+	final Translations _root; // ignore: unused_field
 
 	// Translations
 	String get title => 'Clock';
@@ -231,7 +230,7 @@ class _StringsToolsClockEn {
 class _StringsToolsMetronomeEn {
 	_StringsToolsMetronomeEn._(this._root);
 
-	final _StringsEn _root; // ignore: unused_field
+	final Translations _root; // ignore: unused_field
 
 	// Translations
 	String get title => 'Metronome';
@@ -245,7 +244,7 @@ class _StringsToolsMetronomeEn {
 class _StringsToolsMegaphoneEn {
 	_StringsToolsMegaphoneEn._(this._root);
 
-	final _StringsEn _root; // ignore: unused_field
+	final Translations _root; // ignore: unused_field
 
 	// Translations
 	String get title => 'Megaphone';
@@ -256,7 +255,7 @@ class _StringsToolsMegaphoneEn {
 class _StringsToolsNslookupEn {
 	_StringsToolsNslookupEn._(this._root);
 
-	final _StringsEn _root; // ignore: unused_field
+	final Translations _root; // ignore: unused_field
 
 	// Translations
 	String get title => 'NSLookup';
@@ -269,7 +268,7 @@ class _StringsToolsNslookupEn {
 class _StringsToolsPingEn {
 	_StringsToolsPingEn._(this._root);
 
-	final _StringsEn _root; // ignore: unused_field
+	final Translations _root; // ignore: unused_field
 
 	// Translations
 	String get title => 'Ping';
@@ -284,7 +283,7 @@ class _StringsToolsPingEn {
 class _StringsToolsSoundmeterEn {
 	_StringsToolsSoundmeterEn._(this._root);
 
-	final _StringsEn _root; // ignore: unused_field
+	final Translations _root; // ignore: unused_field
 
 	// Translations
 	String get title => 'Sound meter';
@@ -296,7 +295,7 @@ class _StringsToolsSoundmeterEn {
 class _StringsToolsQrreaderEn {
 	_StringsToolsQrreaderEn._(this._root);
 
-	final _StringsEn _root; // ignore: unused_field
+	final Translations _root; // ignore: unused_field
 
 	// Translations
 	String get title => 'QR reader';
@@ -308,7 +307,7 @@ class _StringsToolsQrreaderEn {
 class _StringsToolsTimerEn {
 	_StringsToolsTimerEn._(this._root);
 
-	final _StringsEn _root; // ignore: unused_field
+	final Translations _root; // ignore: unused_field
 
 	// Translations
 	String get title => 'Timer';
@@ -321,7 +320,7 @@ class _StringsToolsTimerEn {
 class _StringsToolsStopwatchEn {
 	_StringsToolsStopwatchEn._(this._root);
 
-	final _StringsEn _root; // ignore: unused_field
+	final Translations _root; // ignore: unused_field
 
 	// Translations
 	String get title => 'Stopwatch';
@@ -335,7 +334,7 @@ class _StringsToolsStopwatchEn {
 class _StringsToolsRouletteEn {
 	_StringsToolsRouletteEn._(this._root);
 
-	final _StringsEn _root; // ignore: unused_field
+	final Translations _root; // ignore: unused_field
 
 	// Translations
 	String get title => 'Roulette';
@@ -355,7 +354,7 @@ class _StringsToolsRouletteEn {
 class _StringsToolsFlipcoinsEn {
 	_StringsToolsFlipcoinsEn._(this._root);
 
-	final _StringsEn _root; // ignore: unused_field
+	final Translations _root; // ignore: unused_field
 
 	// Translations
 	String get title => 'Flip a coin';
@@ -365,7 +364,7 @@ class _StringsToolsFlipcoinsEn {
 class _StringsToolsRandomnumberEn {
 	_StringsToolsRandomnumberEn._(this._root);
 
-	final _StringsEn _root; // ignore: unused_field
+	final Translations _root; // ignore: unused_field
 
 	// Translations
 	String get title => 'Random number';
@@ -378,7 +377,7 @@ class _StringsToolsRandomnumberEn {
 class _StringsToolsRandomcolorEn {
 	_StringsToolsRandomcolorEn._(this._root);
 
-	final _StringsEn _root; // ignore: unused_field
+	final Translations _root; // ignore: unused_field
 
 	// Translations
 	String get title => 'Random color';
@@ -390,7 +389,7 @@ class _StringsToolsRandomcolorEn {
 class _StringsToolsSshclientEn {
 	_StringsToolsSshclientEn._(this._root);
 
-	final _StringsEn _root; // ignore: unused_field
+	final Translations _root; // ignore: unused_field
 
 	// Translations
 	String get title => 'SSH client';
@@ -411,7 +410,7 @@ class _StringsToolsSshclientEn {
 class _StringsToolsWhiteboardEn {
 	_StringsToolsWhiteboardEn._(this._root);
 
-	final _StringsEn _root; // ignore: unused_field
+	final Translations _root; // ignore: unused_field
 
 	// Translations
 	String get title => 'Whiteboard';
@@ -425,7 +424,7 @@ class _StringsToolsWhiteboardEn {
 class _StringsToolsNetworkinfoEn {
 	_StringsToolsNetworkinfoEn._(this._root);
 
-	final _StringsEn _root; // ignore: unused_field
+	final Translations _root; // ignore: unused_field
 
 	// Translations
 	String get title => 'Network info';
@@ -446,7 +445,7 @@ class _StringsToolsNetworkinfoEn {
 class _StringsToolsUuidgeneratorEn {
 	_StringsToolsUuidgeneratorEn._(this._root);
 
-	final _StringsEn _root; // ignore: unused_field
+	final Translations _root; // ignore: unused_field
 
 	// Translations
 	String get title => 'UUID generator';
@@ -466,7 +465,7 @@ class _StringsToolsUuidgeneratorEn {
 class _StringsToolsTexttospeechEn {
 	_StringsToolsTexttospeechEn._(this._root);
 
-	final _StringsEn _root; // ignore: unused_field
+	final Translations _root; // ignore: unused_field
 
 	// Translations
 	String get title => 'Text to speech';
@@ -483,7 +482,7 @@ class _StringsToolsTexttospeechEn {
 class _StringsToolsNearbypublictransportstopsEn {
 	_StringsToolsNearbypublictransportstopsEn._(this._root);
 
-	final _StringsEn _root; // ignore: unused_field
+	final Translations _root; // ignore: unused_field
 
 	// Translations
 	String get title => 'Nearby transport stops';
@@ -501,7 +500,7 @@ class _StringsToolsNearbypublictransportstopsEn {
 class _StringsToolsFileencryptionEn {
 	_StringsToolsFileencryptionEn._(this._root);
 
-	final _StringsEn _root; // ignore: unused_field
+	final Translations _root; // ignore: unused_field
 
 	// Translations
 	String get title => 'File encryption';
@@ -520,7 +519,7 @@ class _StringsToolsFileencryptionEn {
 class _StringsToolsYoutubethumbnailEn {
 	_StringsToolsYoutubethumbnailEn._(this._root);
 
-	final _StringsEn _root; // ignore: unused_field
+	final Translations _root; // ignore: unused_field
 
 	// Translations
 	String get title => 'YouTube thumbnail';
@@ -534,7 +533,7 @@ class _StringsToolsYoutubethumbnailEn {
 class _StringsToolsNationalanthemsEn {
 	_StringsToolsNationalanthemsEn._(this._root);
 
-	final _StringsEn _root; // ignore: unused_field
+	final Translations _root; // ignore: unused_field
 
 	// Translations
 	String get title => 'National anthems';
@@ -551,7 +550,7 @@ class _StringsToolsNationalanthemsEn {
 class _StringsToolsHttprequestEn {
 	_StringsToolsHttprequestEn._(this._root);
 
-	final _StringsEn _root; // ignore: unused_field
+	final Translations _root; // ignore: unused_field
 
 	// Translations
 	String get title => 'HTTP request';
@@ -565,11 +564,27 @@ class _StringsToolsHttprequestEn {
 	late final _StringsToolsHttprequestErrorEn error = _StringsToolsHttprequestErrorEn._(_root);
 }
 
+// Path: tools.morsecode
+class _StringsToolsMorsecodeEn {
+	_StringsToolsMorsecodeEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'Morse code';
+	String get alphabet_field => 'Alphabet (A-Z, 0-9)';
+	String get morse_field => 'Morse code (. and -)';
+	String get note_spaces => 'Note: Use 1 space between letters, 3 spaces between words.';
+	String get alphabet_to_morse => 'Alphabet to morse';
+	String get morse_to_alphabet => 'Morse to alphabet';
+	String get play_audio => 'Play audio';
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsEn._(this._root);
 
-	final _StringsEn _root; // ignore: unused_field
+	final Translations _root; // ignore: unused_field
 
 	// Translations
 	String get title => 'Translations';
@@ -581,7 +596,7 @@ class _StringsCreditsTranslationsEn {
 class _StringsToolsMegaphoneErrorEn {
 	_StringsToolsMegaphoneErrorEn._(this._root);
 
-	final _StringsEn _root; // ignore: unused_field
+	final Translations _root; // ignore: unused_field
 
 	// Translations
 	String get microphone_permission_denied => 'Permission denied, please allow the application to access the microphone in your device settings';
@@ -591,7 +606,7 @@ class _StringsToolsMegaphoneErrorEn {
 class _StringsToolsNslookupErrorEn {
 	_StringsToolsNslookupErrorEn._(this._root);
 
-	final _StringsEn _root; // ignore: unused_field
+	final Translations _root; // ignore: unused_field
 
 	// Translations
 	String get please_enter_a_domain_name => 'Please enter a domain name';
@@ -602,7 +617,7 @@ class _StringsToolsNslookupErrorEn {
 class _StringsToolsPingErrorEn {
 	_StringsToolsPingErrorEn._(this._root);
 
-	final _StringsEn _root; // ignore: unused_field
+	final Translations _root; // ignore: unused_field
 
 	// Translations
 	String get please_enter_a_domain_name_or_ip => 'Please enter a domain name or IP address';
@@ -616,7 +631,7 @@ class _StringsToolsPingErrorEn {
 class _StringsToolsSoundmeterErrorEn {
 	_StringsToolsSoundmeterErrorEn._(this._root);
 
-	final _StringsEn _root; // ignore: unused_field
+	final Translations _root; // ignore: unused_field
 
 	// Translations
 	String get impossible_to_start_the_sound_meter => 'Impossible to start the sound meter';
@@ -627,7 +642,7 @@ class _StringsToolsSoundmeterErrorEn {
 class _StringsToolsRouletteWarningEn {
 	_StringsToolsRouletteWarningEn._(this._root);
 
-	final _StringsEn _root; // ignore: unused_field
+	final Translations _root; // ignore: unused_field
 
 	// Translations
 	String you_cant_add_more_than_x_items({required Object numberOfItems}) => 'You can\'t have more than ${numberOfItems} items in the roulette.';
@@ -639,7 +654,7 @@ class _StringsToolsRouletteWarningEn {
 class _StringsToolsRandomnumberErrorEn {
 	_StringsToolsRandomnumberErrorEn._(this._root);
 
-	final _StringsEn _root; // ignore: unused_field
+	final Translations _root; // ignore: unused_field
 
 	// Translations
 	String get invalid_number => 'Invalid number, please try again.';
@@ -651,7 +666,7 @@ class _StringsToolsRandomnumberErrorEn {
 class _StringsToolsSshclientErrorEn {
 	_StringsToolsSshclientErrorEn._(this._root);
 
-	final _StringsEn _root; // ignore: unused_field
+	final Translations _root; // ignore: unused_field
 
 	// Translations
 	String get invalid_port => 'Invalid port';
@@ -666,7 +681,7 @@ class _StringsToolsSshclientErrorEn {
 class _StringsToolsUuidgeneratorErrorEn {
 	_StringsToolsUuidgeneratorErrorEn._(this._root);
 
-	final _StringsEn _root; // ignore: unused_field
+	final Translations _root; // ignore: unused_field
 
 	// Translations
 	String get invalid_namespace => 'The namespace is not a valid UUID';
@@ -676,7 +691,7 @@ class _StringsToolsUuidgeneratorErrorEn {
 class _StringsToolsTexttospeechErrorEn {
 	_StringsToolsTexttospeechErrorEn._(this._root);
 
-	final _StringsEn _root; // ignore: unused_field
+	final Translations _root; // ignore: unused_field
 
 	// Translations
 	String get please_try_again => 'Please try again later.\nIf it\'s the first time you\'re using this language, please wait a few seconds and try again.';
@@ -687,7 +702,7 @@ class _StringsToolsTexttospeechErrorEn {
 class _StringsToolsNearbypublictransportstopsErrorEn {
 	_StringsToolsNearbypublictransportstopsErrorEn._(this._root);
 
-	final _StringsEn _root; // ignore: unused_field
+	final Translations _root; // ignore: unused_field
 
 	// Translations
 	String get location_permission_denied => 'Location permission denied, please enable it in settings in order to to make full use of this tool.';
@@ -700,7 +715,7 @@ class _StringsToolsNearbypublictransportstopsErrorEn {
 class _StringsToolsFileencryptionErrorEn {
 	_StringsToolsFileencryptionErrorEn._(this._root);
 
-	final _StringsEn _root; // ignore: unused_field
+	final Translations _root; // ignore: unused_field
 
 	// Translations
 	String get failed_to_read_file => 'Failed to read the file';
@@ -712,7 +727,7 @@ class _StringsToolsFileencryptionErrorEn {
 class _StringsToolsYoutubethumbnailErrorEn {
 	_StringsToolsYoutubethumbnailErrorEn._(this._root);
 
-	final _StringsEn _root; // ignore: unused_field
+	final Translations _root; // ignore: unused_field
 
 	// Translations
 	String get failed_to_download => 'Failed to download thumbnail from YouTube';
@@ -723,7 +738,7 @@ class _StringsToolsYoutubethumbnailErrorEn {
 class _StringsToolsNationalanthemsErrorEn {
 	_StringsToolsNationalanthemsErrorEn._(this._root);
 
-	final _StringsEn _root; // ignore: unused_field
+	final Translations _root; // ignore: unused_field
 
 	// Translations
 	String get failed_to_load_list => 'Impossible to load the list of anthems. Please check your internet connection and try again.';
@@ -734,7 +749,7 @@ class _StringsToolsNationalanthemsErrorEn {
 class _StringsToolsHttprequestErrorEn {
 	_StringsToolsHttprequestErrorEn._(this._root);
 
-	final _StringsEn _root; // ignore: unused_field
+	final Translations _root; // ignore: unused_field
 
 	// Translations
 	String get url_cannot_be_empty => 'The URL cannot be empty';
@@ -744,8 +759,7 @@ class _StringsToolsHttprequestErrorEn {
 }
 
 // Path: <root>
-class _StringsFr implements _StringsEn {
-
+class _StringsFr implements Translations {
 	/// You can call this constructor and build your own translation instance of this locale.
 	/// Constructing via the enum [AppLocale.build] is preferred.
 	_StringsFr.build({Map<String, Node>? overrides, PluralResolver? cardinalResolver, PluralResolver? ordinalResolver})
@@ -760,7 +774,7 @@ class _StringsFr implements _StringsEn {
 	}
 
 	/// Metadata for the translations of <fr>.
-	@override final TranslationMetadata<AppLocale, _StringsEn> $meta;
+	@override final TranslationMetadata<AppLocale, Translations> $meta;
 
 	/// Access flat map
 	@override dynamic operator[](String key) => $meta.getTranslation(key);
@@ -818,6 +832,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsYoutubethumbnailFr youtubethumbnail = _StringsToolsYoutubethumbnailFr._(_root);
 	@override late final _StringsToolsNationalanthemsFr nationalanthems = _StringsToolsNationalanthemsFr._(_root);
 	@override late final _StringsToolsHttprequestFr httprequest = _StringsToolsHttprequestFr._(_root);
+	@override late final _StringsToolsMorsecodeFr morsecode = _StringsToolsMorsecodeFr._(_root);
 }
 
 // Path: credits
@@ -1183,6 +1198,22 @@ class _StringsToolsHttprequestFr implements _StringsToolsHttprequestEn {
 	@override late final _StringsToolsHttprequestErrorFr error = _StringsToolsHttprequestErrorFr._(_root);
 }
 
+// Path: tools.morsecode
+class _StringsToolsMorsecodeFr implements _StringsToolsMorsecodeEn {
+	_StringsToolsMorsecodeFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Code Morse';
+	@override String get alphabet_field => 'Alphabet (A-Z, 0-9)';
+	@override String get morse_field => 'Code Morse (. and -)';
+	@override String get note_spaces => 'Note : Utilisez 1 espace entre les lettres et 3 espaces entre les mots.';
+	@override String get alphabet_to_morse => 'Alphabet vers morse';
+	@override String get morse_to_alphabet => 'Morse vers alphabet';
+	@override String get play_audio => 'Écouter l\'audio';
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsFr implements _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsFr._(this._root);
@@ -1364,7 +1395,7 @@ class _StringsToolsHttprequestErrorFr implements _StringsToolsHttprequestErrorEn
 /// Flat map(s) containing all translations.
 /// Only for edge cases! For simple maps, use the map function of this library.
 
-extension on _StringsEn {
+extension on Translations {
 	dynamic _flatMapFunction(String path) {
 		switch (path) {
 			case 'generic.app_name': return 'Toolbox';
@@ -1540,6 +1571,13 @@ extension on _StringsEn {
 			case 'tools.httprequest.error.invalid_url': return 'Invalid URL';
 			case 'tools.httprequest.error.invalid_headers': return 'Invalid headers';
 			case 'tools.httprequest.error.other_error': return 'An error occurred while sending the request.\nPlease check your input and your internet connection then try again.';
+			case 'tools.morsecode.title': return 'Morse code';
+			case 'tools.morsecode.alphabet_field': return 'Alphabet (A-Z, 0-9)';
+			case 'tools.morsecode.morse_field': return 'Morse code (. and -)';
+			case 'tools.morsecode.note_spaces': return 'Note: Use 1 space between letters, 3 spaces between words.';
+			case 'tools.morsecode.alphabet_to_morse': return 'Alphabet to morse';
+			case 'tools.morsecode.morse_to_alphabet': return 'Morse to alphabet';
+			case 'tools.morsecode.play_audio': return 'Play audio';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -1729,6 +1767,13 @@ extension on _StringsFr {
 			case 'tools.httprequest.error.invalid_url': return 'URL invalide';
 			case 'tools.httprequest.error.invalid_headers': return 'En-têtes invalides';
 			case 'tools.httprequest.error.other_error': return 'Une erreur s\'est produite lors de l\'envoi de la requête.\nVeuillez vérifier votre saisie et votre connexion internet, puis réessayez.';
+			case 'tools.morsecode.title': return 'Code Morse';
+			case 'tools.morsecode.alphabet_field': return 'Alphabet (A-Z, 0-9)';
+			case 'tools.morsecode.morse_field': return 'Code Morse (. and -)';
+			case 'tools.morsecode.note_spaces': return 'Note : Utilisez 1 espace entre les lettres et 3 espaces entre les mots.';
+			case 'tools.morsecode.alphabet_to_morse': return 'Alphabet vers morse';
+			case 'tools.morsecode.morse_to_alphabet': return 'Morse vers alphabet';
+			case 'tools.morsecode.play_audio': return 'Écouter l\'audio';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';

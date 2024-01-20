@@ -10,6 +10,7 @@ import 'package:toolbox/pages/flipcoins_page.dart';
 import 'package:toolbox/pages/httprequest_page.dart';
 import 'package:toolbox/pages/metronome_page.dart';
 import 'package:toolbox/pages/megaphone_page.dart';
+import 'package:toolbox/pages/morsecode_page.dart';
 import 'package:toolbox/pages/nationalanthems_page.dart';
 import 'package:toolbox/pages/nearbypublictransportstops_page.dart';
 import 'package:toolbox/pages/nslookup_page.dart';
@@ -64,6 +65,8 @@ class _HomePage extends State<HomePage> {
           const MetronomePage()),
       /*Tool(t.tools.megaphone.title, "assets/images/tools/megaphone.png",
           const MegaphonePage()),*/
+      Tool(t.tools.morsecode.title, "assets/images/tools/morsecode.png",
+          const MorseCodePage()),
       Tool(t.tools.networkinfo.title, "assets/images/tools/networkinfo.png",
           const NetworkInfoPage()),
       Tool(t.tools.nationalanthems.title, "assets/images/tools/nationalanthems.png",

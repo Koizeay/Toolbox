@@ -248,6 +248,15 @@
         "invalid_headers": "Invalid headers",
         "other_error": "An error occurred while sending the request.\nPlease check your input and your internet connection then try again."
       }
+    },
+    "morsecode": {
+      "title": "Morse code",
+      "alphabet_field": "Alphabet (A-Z, 0-9)",
+      "morse_field": "Morse code (. and -)",
+      "note_spaces": "Note: Use 1 space between letters, 3 spaces between words.",
+      "alphabet_to_morse": "Alphabet to morse",
+      "morse_to_alphabet": "Morse to alphabet",
+      "play_audio": "Play audio"
     }
   },
   "credits": {

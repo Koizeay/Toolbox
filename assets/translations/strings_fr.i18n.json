@@ -248,6 +248,15 @@
         "invalid_headers": "En-têtes invalides",
         "other_error": "Une erreur s'est produite lors de l'envoi de la requête.\nVeuillez vérifier votre saisie et votre connexion internet, puis réessayez."
       }
+    },
+    "morsecode": {
+      "title": "Code Morse",
+      "alphabet_field": "Alphabet (A-Z, 0-9)",
+      "morse_field": "Code Morse (. and -)",
+      "note_spaces": "Note : Utilisez 1 espace entre les lettres et 3 espaces entre les mots.",
+      "alphabet_to_morse": "Alphabet vers morse",
+      "morse_to_alphabet": "Morse vers alphabet",
+      "play_audio": "Écouter l'audio"
     }
   },
   "credits": {
