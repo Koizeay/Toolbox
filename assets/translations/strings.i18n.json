@@ -5,7 +5,8 @@
     "warning": "Warning",
     "ok": "OK",
     "cancel": "Cancel",
-    "search": "Search"
+    "search": "Search",
+    "enable": "Enable"
   },
   "tools": {
     "clock": {
@@ -257,6 +258,14 @@
       "alphabet_to_morse": "Alphabet to morse",
       "morse_to_alphabet": "Morse to alphabet",
       "play_audio": "Play audio"
+    },
+    "osm": {
+      "title": "Map (OSM)",
+      "go_to_my_location": "Go to my location",
+      "error": {
+        "location_permission_denied": "You need to grant location permissions to use this feature",
+        "location_services_disabled": "Location services are disabled"
+      }
     }
   },
   "credits": {

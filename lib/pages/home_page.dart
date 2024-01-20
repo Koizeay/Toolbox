@@ -14,6 +14,7 @@ import 'package:toolbox/pages/morsecode_page.dart';
 import 'package:toolbox/pages/nationalanthems_page.dart';
 import 'package:toolbox/pages/nearbypublictransportstops_page.dart';
 import 'package:toolbox/pages/nslookup_page.dart';
+import 'package:toolbox/pages/osm_page.dart';
 import 'package:toolbox/pages/ping_page.dart';
 import 'package:toolbox/pages/qrreader_page.dart';
 import 'package:toolbox/pages/randomcolor_page.dart';
@@ -75,6 +76,8 @@ class _HomePage extends State<HomePage> {
           const NearbyPublicTransportStopsPage()),
       Tool(t.tools.nslookup.title, "assets/images/tools/nslookup.png",
           const NslookupPage()),
+      Tool("Map (OSM)", "assets/images/tools/osm.png",
+          const OsmPage()),
       Tool(t.tools.ping.title, "assets/images/tools/ping.png",
           const PingPage()),
       Tool(t.tools.qrreader.title, "assets/images/tools/qrreader.png",

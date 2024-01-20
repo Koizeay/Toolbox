@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (5.8.1)
   - assets_audio_player (0.0.1):
     - Flutter
   - assets_audio_player_web (0.0.1):
@@ -51,6 +52,12 @@ PODS:
     - Flutter
   - flutter_native_splash (0.0.1):
     - Flutter
+  - flutter_osm_plugin (0.0.1):
+    - Alamofire
+    - Flutter
+    - Polyline
+    - Tangram-es
+    - Yams
   - flutter_sound (9.2.13):
     - Flutter
     - flutter_sound_core (= 9.2.13)
@@ -124,6 +131,7 @@ PODS:
     - FlutterMacOS
   - permission_handler_apple (9.1.1):
     - Flutter
+  - Polyline (5.1.0)
   - PromisesObjC (2.2.0)
   - ReachabilitySwift (5.0.0)
   - SDWebImage (5.17.0):
@@ -135,12 +143,14 @@ PODS:
     - Flutter
     - FlutterMacOS
   - SwiftyGif (5.4.4)
+  - Tangram-es (0.17.1)
   - url_launcher_ios (0.0.1):
     - Flutter
   - vibration (1.7.5):
     - Flutter
   - wakelock (0.0.1):
     - Flutter
+  - Yams (5.0.6)
 
 DEPENDENCIES:
   - assets_audio_player (from `.symlinks/plugins/assets_audio_player/ios`)
@@ -153,6 +163,7 @@ DEPENDENCIES:
   - flutter_file_dialog (from `.symlinks/plugins/flutter_file_dialog/ios`)
   - flutter_icmp_ping (from `.symlinks/plugins/flutter_icmp_ping/ios`)
   - flutter_native_splash (from `.symlinks/plugins/flutter_native_splash/ios`)
+  - flutter_osm_plugin (from `.symlinks/plugins/flutter_osm_plugin/ios`)
   - flutter_sound (from `.symlinks/plugins/flutter_sound/ios`)
   - flutter_tts (from `.symlinks/plugins/flutter_tts/ios`)
   - geolocator_apple (from `.symlinks/plugins/geolocator_apple/ios`)
@@ -169,6 +180,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - DKImagePickerController
     - DKPhotoGallery
     - flutter_sound_core
@@ -183,10 +195,13 @@ SPEC REPOS:
     - MLKitCommon
     - MLKitVision
     - nanopb
+    - Polyline
     - PromisesObjC
     - ReachabilitySwift
     - SDWebImage
     - SwiftyGif
+    - Tangram-es
+    - Yams
 
 EXTERNAL SOURCES:
   assets_audio_player:
@@ -209,6 +224,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/flutter_icmp_ping/ios"
   flutter_native_splash:
     :path: ".symlinks/plugins/flutter_native_splash/ios"
+  flutter_osm_plugin:
+    :path: ".symlinks/plugins/flutter_osm_plugin/ios"
   flutter_sound:
     :path: ".symlinks/plugins/flutter_sound/ios"
   flutter_tts:
@@ -237,6 +254,7 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/wakelock/ios"
 
 SPEC CHECKSUMS:
+  Alamofire: 3ca42e259043ee0dc5c0cdd76c4bc568b8e42af7
   assets_audio_player: edee322b9cb625571b830b35872ead1a295fd917
   assets_audio_player_web: 19826380c44375761aa0b9053665c1e3fbc3b86b
   audio_streamer: af49e73eb66f71c4eeabb4bbcb05f122d03a6709
@@ -249,6 +267,7 @@ SPEC CHECKSUMS:
   flutter_file_dialog: 4c014a45b105709a27391e266c277d7e588e9299
   flutter_icmp_ping: 2b159955eee0c487c766ad83fec224ae35e7c935
   flutter_native_splash: 52501b97d1c0a5f898d687f1646226c1f93c56ef
+  flutter_osm_plugin: a661df71d2a3d1698ee410dd2272c8536f9e46f4
   flutter_sound: c60effa2a350fb977885f0db2fbc4c1ad5160900
   flutter_sound_core: 26c10e5832e76aaacfae252d8925232281c486ae
   flutter_tts: 0f492aab6accf87059b72354fcb4ba934304771d
@@ -269,15 +288,18 @@ SPEC CHECKSUMS:
   network_info_plus: b78876159360f5580608c2cea620d6ceffabd0ad
   path_provider_foundation: 3784922295ac71e43754bd15e0653ccfd36a147c
   permission_handler_apple: e76247795d700c14ea09e3a2d8855d41ee80a2e6
+  Polyline: 2a1f29f87f8d9b7de868940f4f76deb8c678a5b1
   PromisesObjC: 09985d6d70fbe7878040aa746d78236e6946d2ef
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   SDWebImage: 750adf017a315a280c60fde706ab1e552a3ae4e9
   share_plus: 056a1e8ac890df3e33cb503afffaf1e9b4fbae68
   shared_preferences_foundation: b4c3b4cddf1c21f02770737f147a3f5da9d39695
   SwiftyGif: 93a1cc87bf3a51916001cf8f3d63835fb64c819f
+  Tangram-es: 628b634f7fc09d2217469b9914de00d9de49ff9d
   url_launcher_ios: bbd758c6e7f9fd7b5b1d4cde34d2b95fcce5e812
   vibration: 7d883d141656a1c1a6d8d238616b2042a51a1241
   wakelock: d0fc7c864128eac40eba1617cb5264d9c940b46f
+  Yams: e10dae147f517ed57ecae37c5e8681bdf8fcab65
 
 PODFILE CHECKSUM: eee683ceeb24aed5f8c2b9f190527456a10c77e4
 

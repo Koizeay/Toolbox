@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 376 (188 per locale)
+/// Strings: 386 (193 per locale)
 ///
-/// Built on 2024-01-20 at 13:25 UTC
+/// Built on 2024-01-20 at 15:21 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -166,6 +166,7 @@ class _StringsGenericEn {
 	String get ok => 'OK';
 	String get cancel => 'Cancel';
 	String get search => 'Search';
+	String get enable => 'Enable';
 }
 
 // Path: tools
@@ -199,6 +200,7 @@ class _StringsToolsEn {
 	late final _StringsToolsNationalanthemsEn nationalanthems = _StringsToolsNationalanthemsEn._(_root);
 	late final _StringsToolsHttprequestEn httprequest = _StringsToolsHttprequestEn._(_root);
 	late final _StringsToolsMorsecodeEn morsecode = _StringsToolsMorsecodeEn._(_root);
+	late final _StringsToolsOsmEn osm = _StringsToolsOsmEn._(_root);
 }
 
 // Path: credits
@@ -580,6 +582,18 @@ class _StringsToolsMorsecodeEn {
 	String get play_audio => 'Play audio';
 }
 
+// Path: tools.osm
+class _StringsToolsOsmEn {
+	_StringsToolsOsmEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'Map (OSM)';
+	String get go_to_my_location => 'Go to my location';
+	late final _StringsToolsOsmErrorEn error = _StringsToolsOsmErrorEn._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsEn._(this._root);
@@ -758,6 +772,17 @@ class _StringsToolsHttprequestErrorEn {
 	String get other_error => 'An error occurred while sending the request.\nPlease check your input and your internet connection then try again.';
 }
 
+// Path: tools.osm.error
+class _StringsToolsOsmErrorEn {
+	_StringsToolsOsmErrorEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get location_permission_denied => 'You need to grant location permissions to use this feature';
+	String get location_services_disabled => 'Location services are disabled';
+}
+
 // Path: <root>
 class _StringsFr implements Translations {
 	/// You can call this constructor and build your own translation instance of this locale.
@@ -800,6 +825,7 @@ class _StringsGenericFr implements _StringsGenericEn {
 	@override String get ok => 'OK';
 	@override String get cancel => 'Annuler';
 	@override String get search => 'Rechercher';
+	@override String get enable => 'Activer';
 }
 
 // Path: tools
@@ -833,6 +859,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsNationalanthemsFr nationalanthems = _StringsToolsNationalanthemsFr._(_root);
 	@override late final _StringsToolsHttprequestFr httprequest = _StringsToolsHttprequestFr._(_root);
 	@override late final _StringsToolsMorsecodeFr morsecode = _StringsToolsMorsecodeFr._(_root);
+	@override late final _StringsToolsOsmFr osm = _StringsToolsOsmFr._(_root);
 }
 
 // Path: credits
@@ -1214,6 +1241,18 @@ class _StringsToolsMorsecodeFr implements _StringsToolsMorsecodeEn {
 	@override String get play_audio => 'Écouter l\'audio';
 }
 
+// Path: tools.osm
+class _StringsToolsOsmFr implements _StringsToolsOsmEn {
+	_StringsToolsOsmFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Plan (OSM)';
+	@override String get go_to_my_location => 'Aller à ma position';
+	@override late final _StringsToolsOsmErrorFr error = _StringsToolsOsmErrorFr._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsFr implements _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsFr._(this._root);
@@ -1392,6 +1431,17 @@ class _StringsToolsHttprequestErrorFr implements _StringsToolsHttprequestErrorEn
 	@override String get other_error => 'Une erreur s\'est produite lors de l\'envoi de la requête.\nVeuillez vérifier votre saisie et votre connexion internet, puis réessayez.';
 }
 
+// Path: tools.osm.error
+class _StringsToolsOsmErrorFr implements _StringsToolsOsmErrorEn {
+	_StringsToolsOsmErrorFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get location_permission_denied => 'Vous devez autoriser l\'accès à la position pour utiliser cette fonction';
+	@override String get location_services_disabled => 'Les services de localisation sont désactivés';
+}
+
 /// Flat map(s) containing all translations.
 /// Only for edge cases! For simple maps, use the map function of this library.
 
@@ -1404,6 +1454,7 @@ extension on Translations {
 			case 'generic.ok': return 'OK';
 			case 'generic.cancel': return 'Cancel';
 			case 'generic.search': return 'Search';
+			case 'generic.enable': return 'Enable';
 			case 'tools.clock.title': return 'Clock';
 			case 'tools.metronome.title': return 'Metronome';
 			case 'tools.metronome.bpm': return 'BPM';
@@ -1578,6 +1629,10 @@ extension on Translations {
 			case 'tools.morsecode.alphabet_to_morse': return 'Alphabet to morse';
 			case 'tools.morsecode.morse_to_alphabet': return 'Morse to alphabet';
 			case 'tools.morsecode.play_audio': return 'Play audio';
+			case 'tools.osm.title': return 'Map (OSM)';
+			case 'tools.osm.go_to_my_location': return 'Go to my location';
+			case 'tools.osm.error.location_permission_denied': return 'You need to grant location permissions to use this feature';
+			case 'tools.osm.error.location_services_disabled': return 'Location services are disabled';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -1600,6 +1655,7 @@ extension on _StringsFr {
 			case 'generic.ok': return 'OK';
 			case 'generic.cancel': return 'Annuler';
 			case 'generic.search': return 'Rechercher';
+			case 'generic.enable': return 'Activer';
 			case 'tools.clock.title': return 'Horloge';
 			case 'tools.metronome.title': return 'Métronome';
 			case 'tools.metronome.bpm': return 'BPM';
@@ -1774,6 +1830,10 @@ extension on _StringsFr {
 			case 'tools.morsecode.alphabet_to_morse': return 'Alphabet vers morse';
 			case 'tools.morsecode.morse_to_alphabet': return 'Morse vers alphabet';
 			case 'tools.morsecode.play_audio': return 'Écouter l\'audio';
+			case 'tools.osm.title': return 'Plan (OSM)';
+			case 'tools.osm.go_to_my_location': return 'Aller à ma position';
+			case 'tools.osm.error.location_permission_denied': return 'Vous devez autoriser l\'accès à la position pour utiliser cette fonction';
+			case 'tools.osm.error.location_services_disabled': return 'Les services de localisation sont désactivés';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';

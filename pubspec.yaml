@@ -73,7 +73,7 @@ dependencies:
   share_plus: ^6.3.4
   fast_csv: ^0.2.11
   maps_launcher: ^2.2.0
-  geolocator: ^10.0.1
+  geolocator: ^10.1.0
   path_provider: ^2.1.1
   connectivity_plus:
     git:
@@ -82,6 +82,7 @@ dependencies:
   aes_crypt_null_safe: ^2.0.2
   flutter_file_dialog: ^3.0.2
   assets_audio_player: ^3.1.1
+  flutter_osm_plugin: ^0.70.1
 
 dev_dependencies:
   flutter_test:

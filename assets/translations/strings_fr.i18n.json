@@ -5,7 +5,8 @@
     "warning": "Attention",
     "ok": "OK",
     "cancel": "Annuler",
-    "search": "Rechercher"
+    "search": "Rechercher",
+    "enable": "Activer"
   },
   "tools": {
     "clock": {
@@ -257,6 +258,14 @@
       "alphabet_to_morse": "Alphabet vers morse",
       "morse_to_alphabet": "Morse vers alphabet",
       "play_audio": "Écouter l'audio"
+    },
+    "osm": {
+      "title": "Plan (OSM)",
+      "go_to_my_location": "Aller à ma position",
+      "error": {
+        "location_permission_denied": "Vous devez autoriser l'accès à la position pour utiliser cette fonction",
+        "location_services_disabled": "Les services de position sont désactivés"
+      }
     }
   },
   "credits": {
