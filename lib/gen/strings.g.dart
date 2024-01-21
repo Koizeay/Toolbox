@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 386 (193 per locale)
+/// Strings: 406 (203 per locale)
 ///
-/// Built on 2024-01-20 at 15:21 UTC
+/// Built on 2024-01-21 at 18:14 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -201,6 +201,7 @@ class _StringsToolsEn {
 	late final _StringsToolsHttprequestEn httprequest = _StringsToolsHttprequestEn._(_root);
 	late final _StringsToolsMorsecodeEn morsecode = _StringsToolsMorsecodeEn._(_root);
 	late final _StringsToolsOsmEn osm = _StringsToolsOsmEn._(_root);
+	late final _StringsToolsGameoflifeEn gameoflife = _StringsToolsGameoflifeEn._(_root);
 }
 
 // Path: credits
@@ -594,6 +595,23 @@ class _StringsToolsOsmEn {
 	late final _StringsToolsOsmErrorEn error = _StringsToolsOsmErrorEn._(_root);
 }
 
+// Path: tools.gameoflife
+class _StringsToolsGameoflifeEn {
+	_StringsToolsGameoflifeEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'Game of life';
+	String get grid_size => 'Grid size';
+	String current_size_is_x({required Object size}) => 'Current size is ${size}';
+	String get stop_simulation => 'Stop simulation';
+	String get start_simulation => 'Start simulation';
+	String get randomize_grid => 'Randomize grid';
+	String get clear_grid => 'Clear grid';
+	late final _StringsToolsGameoflifeErrorEn error = _StringsToolsGameoflifeErrorEn._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsEn._(this._root);
@@ -783,6 +801,18 @@ class _StringsToolsOsmErrorEn {
 	String get location_services_disabled => 'Location services are disabled';
 }
 
+// Path: tools.gameoflife.error
+class _StringsToolsGameoflifeErrorEn {
+	_StringsToolsGameoflifeErrorEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get no_alive_cells => 'No alive cells';
+	String get no_alive_cells_description => 'There are no alive cells.\nPlease tap on the grid to add some.';
+	String get please_stop_simulation => 'Please stop the simulation first';
+}
+
 // Path: <root>
 class _StringsFr implements Translations {
 	/// You can call this constructor and build your own translation instance of this locale.
@@ -860,6 +890,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsHttprequestFr httprequest = _StringsToolsHttprequestFr._(_root);
 	@override late final _StringsToolsMorsecodeFr morsecode = _StringsToolsMorsecodeFr._(_root);
 	@override late final _StringsToolsOsmFr osm = _StringsToolsOsmFr._(_root);
+	@override late final _StringsToolsGameoflifeFr gameoflife = _StringsToolsGameoflifeFr._(_root);
 }
 
 // Path: credits
@@ -1253,6 +1284,23 @@ class _StringsToolsOsmFr implements _StringsToolsOsmEn {
 	@override late final _StringsToolsOsmErrorFr error = _StringsToolsOsmErrorFr._(_root);
 }
 
+// Path: tools.gameoflife
+class _StringsToolsGameoflifeFr implements _StringsToolsGameoflifeEn {
+	_StringsToolsGameoflifeFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Jeu de la vie';
+	@override String get grid_size => 'Taille de la grille';
+	@override String current_size_is_x({required Object size}) => 'La taille actuelle est ${size}';
+	@override String get stop_simulation => 'Arrêter la simulation';
+	@override String get start_simulation => 'Démarrer la simulation';
+	@override String get randomize_grid => 'Randomiser la grille';
+	@override String get clear_grid => 'Effacer la grille';
+	@override late final _StringsToolsGameoflifeErrorFr error = _StringsToolsGameoflifeErrorFr._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsFr implements _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsFr._(this._root);
@@ -1439,7 +1487,19 @@ class _StringsToolsOsmErrorFr implements _StringsToolsOsmErrorEn {
 
 	// Translations
 	@override String get location_permission_denied => 'Vous devez autoriser l\'accès à la position pour utiliser cette fonction';
-	@override String get location_services_disabled => 'Les services de localisation sont désactivés';
+	@override String get location_services_disabled => 'Les services de position sont désactivés';
+}
+
+// Path: tools.gameoflife.error
+class _StringsToolsGameoflifeErrorFr implements _StringsToolsGameoflifeErrorEn {
+	_StringsToolsGameoflifeErrorFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get no_alive_cells => 'Pas de cellules vivantes';
+	@override String get no_alive_cells_description => 'Il n\'y a pas de cellules vivantes.\nVeuillez toucher la grille pour en ajouter.';
+	@override String get please_stop_simulation => 'Veuillez d\'abord arrêter la simulation';
 }
 
 /// Flat map(s) containing all translations.
@@ -1633,6 +1693,16 @@ extension on Translations {
 			case 'tools.osm.go_to_my_location': return 'Go to my location';
 			case 'tools.osm.error.location_permission_denied': return 'You need to grant location permissions to use this feature';
 			case 'tools.osm.error.location_services_disabled': return 'Location services are disabled';
+			case 'tools.gameoflife.title': return 'Game of life';
+			case 'tools.gameoflife.grid_size': return 'Grid size';
+			case 'tools.gameoflife.current_size_is_x': return ({required Object size}) => 'Current size is ${size}';
+			case 'tools.gameoflife.stop_simulation': return 'Stop simulation';
+			case 'tools.gameoflife.start_simulation': return 'Start simulation';
+			case 'tools.gameoflife.randomize_grid': return 'Randomize grid';
+			case 'tools.gameoflife.clear_grid': return 'Clear grid';
+			case 'tools.gameoflife.error.no_alive_cells': return 'No alive cells';
+			case 'tools.gameoflife.error.no_alive_cells_description': return 'There are no alive cells.\nPlease tap on the grid to add some.';
+			case 'tools.gameoflife.error.please_stop_simulation': return 'Please stop the simulation first';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -1833,7 +1903,17 @@ extension on _StringsFr {
 			case 'tools.osm.title': return 'Plan (OSM)';
 			case 'tools.osm.go_to_my_location': return 'Aller à ma position';
 			case 'tools.osm.error.location_permission_denied': return 'Vous devez autoriser l\'accès à la position pour utiliser cette fonction';
-			case 'tools.osm.error.location_services_disabled': return 'Les services de localisation sont désactivés';
+			case 'tools.osm.error.location_services_disabled': return 'Les services de position sont désactivés';
+			case 'tools.gameoflife.title': return 'Jeu de la vie';
+			case 'tools.gameoflife.grid_size': return 'Taille de la grille';
+			case 'tools.gameoflife.current_size_is_x': return ({required Object size}) => 'La taille actuelle est ${size}';
+			case 'tools.gameoflife.stop_simulation': return 'Arrêter la simulation';
+			case 'tools.gameoflife.start_simulation': return 'Démarrer la simulation';
+			case 'tools.gameoflife.randomize_grid': return 'Randomiser la grille';
+			case 'tools.gameoflife.clear_grid': return 'Effacer la grille';
+			case 'tools.gameoflife.error.no_alive_cells': return 'Pas de cellules vivantes';
+			case 'tools.gameoflife.error.no_alive_cells_description': return 'Il n\'y a pas de cellules vivantes.\nVeuillez toucher la grille pour en ajouter.';
+			case 'tools.gameoflife.error.please_stop_simulation': return 'Veuillez d\'abord arrêter la simulation';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';

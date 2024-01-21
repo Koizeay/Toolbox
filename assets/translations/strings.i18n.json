@@ -266,6 +266,20 @@
         "location_permission_denied": "You need to grant location permissions to use this feature",
         "location_services_disabled": "Location services are disabled"
       }
+    },
+    "gameoflife": {
+      "title": "Game of life",
+      "grid_size": "Grid size",
+      "current_size_is_x": "Current size is $size",
+      "stop_simulation": "Stop simulation",
+      "start_simulation": "Start simulation",
+      "randomize_grid": "Randomize grid",
+      "clear_grid": "Clear grid",
+      "error": {
+        "no_alive_cells": "No alive cells",
+        "no_alive_cells_description": "There are no alive cells.\nPlease tap on the grid to add some.",
+        "please_stop_simulation": "Please stop the simulation first"
+      }
     }
   },
   "credits": {

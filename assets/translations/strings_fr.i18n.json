@@ -266,6 +266,20 @@
         "location_permission_denied": "Vous devez autoriser l'accès à la position pour utiliser cette fonction",
         "location_services_disabled": "Les services de position sont désactivés"
       }
+    },
+    "gameoflife": {
+      "title": "Jeu de la vie",
+      "grid_size": "Taille de la grille",
+      "current_size_is_x": "La taille actuelle est $size",
+      "stop_simulation": "Arrêter la simulation",
+      "start_simulation": "Démarrer la simulation",
+      "randomize_grid": "Randomiser la grille",
+      "clear_grid": "Effacer la grille",
+      "error": {
+        "no_alive_cells": "Pas de cellules vivantes",
+        "no_alive_cells_description": "Il n'y a pas de cellules vivantes.\nVeuillez toucher la grille pour en ajouter.",
+        "please_stop_simulation": "Veuillez d'abord arrêter la simulation"
+      }
     }
   },
   "credits": {
