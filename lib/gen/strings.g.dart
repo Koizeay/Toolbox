@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 406 (203 per locale)
+/// Strings: 408 (204 per locale)
 ///
-/// Built on 2024-01-21 at 18:14 UTC
+/// Built on 2024-01-23 at 16:14 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -605,6 +605,7 @@ class _StringsToolsGameoflifeEn {
 	String get title => 'Game of life';
 	String get grid_size => 'Grid size';
 	String current_size_is_x({required Object size}) => 'Current size is ${size}';
+	String get waiting => 'Waiting';
 	String get stop_simulation => 'Stop simulation';
 	String get start_simulation => 'Start simulation';
 	String get randomize_grid => 'Randomize grid';
@@ -1294,6 +1295,7 @@ class _StringsToolsGameoflifeFr implements _StringsToolsGameoflifeEn {
 	@override String get title => 'Jeu de la vie';
 	@override String get grid_size => 'Taille de la grille';
 	@override String current_size_is_x({required Object size}) => 'La taille actuelle est ${size}';
+	@override String get waiting => 'Attente';
 	@override String get stop_simulation => 'Arrêter la simulation';
 	@override String get start_simulation => 'Démarrer la simulation';
 	@override String get randomize_grid => 'Randomiser la grille';
@@ -1696,6 +1698,7 @@ extension on Translations {
 			case 'tools.gameoflife.title': return 'Game of life';
 			case 'tools.gameoflife.grid_size': return 'Grid size';
 			case 'tools.gameoflife.current_size_is_x': return ({required Object size}) => 'Current size is ${size}';
+			case 'tools.gameoflife.waiting': return 'Waiting';
 			case 'tools.gameoflife.stop_simulation': return 'Stop simulation';
 			case 'tools.gameoflife.start_simulation': return 'Start simulation';
 			case 'tools.gameoflife.randomize_grid': return 'Randomize grid';
@@ -1907,6 +1910,7 @@ extension on _StringsFr {
 			case 'tools.gameoflife.title': return 'Jeu de la vie';
 			case 'tools.gameoflife.grid_size': return 'Taille de la grille';
 			case 'tools.gameoflife.current_size_is_x': return ({required Object size}) => 'La taille actuelle est ${size}';
+			case 'tools.gameoflife.waiting': return 'Attente';
 			case 'tools.gameoflife.stop_simulation': return 'Arrêter la simulation';
 			case 'tools.gameoflife.start_simulation': return 'Démarrer la simulation';
 			case 'tools.gameoflife.randomize_grid': return 'Randomiser la grille';

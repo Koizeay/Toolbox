@@ -271,6 +271,7 @@
       "title": "Jeu de la vie",
       "grid_size": "Taille de la grille",
       "current_size_is_x": "La taille actuelle est $size",
+      "waiting": "Attente",
       "stop_simulation": "Arrêter la simulation",
       "start_simulation": "Démarrer la simulation",
       "randomize_grid": "Randomiser la grille",

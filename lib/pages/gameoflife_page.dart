@@ -15,6 +15,8 @@ class _GameOfLifePage extends State<GameOfLifePage> {
   late List<List<bool>> grid;
   int _gridSize = 10;
 
+  int _waitTime = 500;
+
   bool _isRunning = false;
 
   @override
@@ -77,7 +79,7 @@ class _GameOfLifePage extends State<GameOfLifePage> {
     _isRunning = !_isRunning;
     if (_isRunning) {
       Future.doWhile(() async {
-        await Future.delayed(const Duration(milliseconds: 500));
+        await Future.delayed(Duration(milliseconds: _waitTime));
         updateGrid();
         if (!stillAliveCells() && mounted) {
           setState(() {
@@ -110,6 +112,7 @@ class _GameOfLifePage extends State<GameOfLifePage> {
           duration: const Duration(seconds: 1),
         ),
       );
+      return;
     }
     final random = Random();
     for (int i = 0; i < _gridSize; i++) {
@@ -248,6 +251,35 @@ class _GameOfLifePage extends State<GameOfLifePage> {
                 Column(
                   children: [
                     const SizedBox(height: 20),
+                    SizedBox(
+                      width: double.infinity,
+                      child: Row(
+                        children: [
+                          const SizedBox(width: 5,),
+                          Text(t.tools.gameoflife.waiting, textAlign: TextAlign.center,),
+                          const SizedBox(width: 5,),
+                          Expanded(
+                            child: Slider(
+                              value: _waitTime.toDouble(),
+                              onChanged: (value) {
+                                setState(() {
+                                  _waitTime = value.toInt();
+                                });
+                              },
+                              onChangeEnd: (value) {
+                                if (_isRunning) {
+                                  startOrStopSimulation();
+                                }
+                              },
+                              min: 100,
+                              max: 1000,
+                              divisions: 9,
+                              label: "$_waitTime ms",
+                            ),
+                          ),
+                        ],
+                      )
+                    ),
                     SizedBox(
                       width: double.infinity,
                       child: FilledButton(

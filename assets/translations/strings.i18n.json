@@ -271,6 +271,7 @@
       "title": "Game of life",
       "grid_size": "Grid size",
       "current_size_is_x": "Current size is $size",
+      "waiting": "Waiting",
       "stop_simulation": "Stop simulation",
       "start_simulation": "Start simulation",
       "randomize_grid": "Randomize grid",
