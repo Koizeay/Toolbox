@@ -215,119 +215,122 @@ class _GameOfLifePage extends State<GameOfLifePage> {
         body: SafeArea(
           child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                const SizedBox(),
-                Column(
-                  children: [
-                    for (int i = 0; i < _gridSize; i++)
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          for (int j = 0; j < _gridSize; j++)
-                            GestureDetector(
-                              onTap: () {
-                                setState(() {
-                                  grid[i][j] = !grid[i][j];
-                                });
-                              },
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  color: grid[i][j] ? Theme.of(context).colorScheme.primary : Colors.white,
-                                  border: Border.all(
-                                    color: Colors.black,
-                                    width: 0.5,
+            child: SingleChildScrollView(
+              scrollDirection: Axis.vertical,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const SizedBox(),
+                  Column(
+                    children: [
+                      for (int i = 0; i < _gridSize; i++)
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            for (int j = 0; j < _gridSize; j++)
+                              GestureDetector(
+                                onTap: () {
+                                  setState(() {
+                                    grid[i][j] = !grid[i][j];
+                                  });
+                                },
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    color: grid[i][j] ? Theme.of(context).colorScheme.primary : Colors.white,
+                                    border: Border.all(
+                                      color: Colors.black,
+                                      width: 0.5,
+                                    ),
                                   ),
+                                  width: (MediaQuery.of(context).size.width - 16) / _gridSize,
+                                  height: (MediaQuery.of(context).size.width - 16) / _gridSize,
                                 ),
-                                width: (MediaQuery.of(context).size.width - 16) / _gridSize,
-                                height: (MediaQuery.of(context).size.width - 16) / _gridSize,
+                              ),
+                          ],
+                        ),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      const SizedBox(height: 20),
+                      SizedBox(
+                        width: double.infinity,
+                        child: Row(
+                          children: [
+                            const SizedBox(width: 5,),
+                            Text(t.tools.gameoflife.waiting, textAlign: TextAlign.center,),
+                            const SizedBox(width: 5,),
+                            Expanded(
+                              child: Slider(
+                                value: _waitTime.toDouble(),
+                                onChanged: (value) {
+                                  setState(() {
+                                    _waitTime = value.toInt();
+                                  });
+                                },
+                                onChangeEnd: (value) {
+                                  if (_isRunning) {
+                                    startOrStopSimulation();
+                                  }
+                                },
+                                min: 100,
+                                max: 1000,
+                                divisions: 9,
+                                label: "$_waitTime ms",
                               ),
                             ),
-                        ],
+                          ],
+                        )
                       ),
-                  ],
-                ),
-                Column(
-                  children: [
-                    const SizedBox(height: 20),
-                    SizedBox(
-                      width: double.infinity,
-                      child: Row(
-                        children: [
-                          const SizedBox(width: 5,),
-                          Text(t.tools.gameoflife.waiting, textAlign: TextAlign.center,),
-                          const SizedBox(width: 5,),
-                          Expanded(
-                            child: Slider(
-                              value: _waitTime.toDouble(),
-                              onChanged: (value) {
-                                setState(() {
-                                  _waitTime = value.toInt();
-                                });
-                              },
-                              onChangeEnd: (value) {
-                                if (_isRunning) {
-                                  startOrStopSimulation();
-                                }
-                              },
-                              min: 100,
-                              max: 1000,
-                              divisions: 9,
-                              label: "$_waitTime ms",
-                            ),
+                      SizedBox(
+                        width: double.infinity,
+                        child: FilledButton(
+                          onPressed: () {
+                            startOrStopSimulation();
+                          },
+                          child: Text(
+                            _isRunning
+                                ? t.tools.gameoflife.stop_simulation
+                                : t.tools.gameoflife.start_simulation,
+                            textAlign: TextAlign.center,),
+                        ),
+                      ),
+                      SizedBox(
+                        width: double.infinity,
+                        child: FilledButton(
+                          onPressed: () {
+                            setState(() {
+                              randomizeGrid();
+                            });
+                          },
+                          child: Text(
+                            t.tools.gameoflife.randomize_grid,
+                            textAlign: TextAlign.center,
                           ),
-                        ],
-                      )
-                    ),
-                    SizedBox(
-                      width: double.infinity,
-                      child: FilledButton(
-                        onPressed: () {
-                          startOrStopSimulation();
-                        },
-                        child: Text(
-                          _isRunning
-                              ? t.tools.gameoflife.stop_simulation
-                              : t.tools.gameoflife.start_simulation,
-                          textAlign: TextAlign.center,),
-                      ),
-                    ),
-                    SizedBox(
-                      width: double.infinity,
-                      child: FilledButton(
-                        onPressed: () {
-                          setState(() {
-                            randomizeGrid();
-                          });
-                        },
-                        child: Text(
-                          t.tools.gameoflife.randomize_grid,
-                          textAlign: TextAlign.center,
                         ),
                       ),
-                    ),
-                    SizedBox(
-                      width: double.infinity,
-                      child: FilledButton(
-                        onPressed: () {
-                          setState(() {
-                            if (_isRunning) {
-                              startOrStopSimulation();
-                            }
-                            initializeGrid();
-                          });
-                        },
-                        child: Text(
-                          t.tools.gameoflife.clear_grid,
-                          textAlign: TextAlign.center,
+                      SizedBox(
+                        width: double.infinity,
+                        child: FilledButton(
+                          onPressed: () {
+                            setState(() {
+                              if (_isRunning) {
+                                startOrStopSimulation();
+                              }
+                              initializeGrid();
+                            });
+                          },
+                          child: Text(
+                            t.tools.gameoflife.clear_grid,
+                            textAlign: TextAlign.center,
+                          ),
                         ),
                       ),
-                    ),
-                    const SizedBox(height: 20),
-                  ],
-                ),
-              ],
+                      const SizedBox(height: 20),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         ),
