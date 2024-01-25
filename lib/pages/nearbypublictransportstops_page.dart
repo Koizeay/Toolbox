@@ -272,6 +272,14 @@ class _NearbyPublicTransportStopsPage
     });
   }
 
+  String getFormattedDistanceString(double distance) {
+    if (distance < 1000) {
+      return "${distance.toStringAsFixed(2)} m";
+    } else {
+      return "${(distance / 1000).toStringAsFixed(2)} km";
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -329,9 +337,10 @@ class _NearbyPublicTransportStopsPage
                             openMaps(stops[index].lat, stops[index].lon);
                           },
                           title: Text(stops[index].name),
-                          subtitle: currentLocation == null ? Container() : Text(
-                              "${(stops[index].distance / 1000).toStringAsFixed(
-                                  2)} km"
+                          subtitle: currentLocation == null
+                              ? Container()
+                              : Text(
+                              getFormattedDistanceString(stops[index].distance)
                           ),
                         );
                       },
