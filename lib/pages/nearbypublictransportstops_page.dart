@@ -9,7 +9,7 @@ import 'package:maps_launcher/maps_launcher.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:toolbox/core/dialogs.dart';
-import 'package:toolbox/core/file_download.dart';
+import 'package:toolbox/core/online_file.dart';
 import 'package:toolbox/core/shared_preferences.dart';
 import 'package:toolbox/core/url.dart';
 import 'package:toolbox/gen/strings.g.dart';
@@ -26,7 +26,12 @@ class NearbyPublicTransportStopsPage extends StatefulWidget {
 
 class _NearbyPublicTransportStopsPage
     extends State<NearbyPublicTransportStopsPage> {
-  String csvFileUrl = "https://raw.githubusercontent.com/Koizeay/Sharing/main/Toolbox/nearbypublictransportstops_stops.csv";
+  final String csvFileUrl = "https://raw.githubusercontent.com/Koizeay/Sharing/main/Toolbox/nearbypublictransportstops_stops.csv";
+  final String csvVersionFileUrl = "https://raw.githubusercontent.com/Koizeay/Sharing/main/Toolbox/nearbypublictransportstops_stops.version";
+
+  final String csvFileName = "nearbypublictransportstops_stops.csv";
+  final String csvVersionFileName = "nearbypublictransportstops_stops.version";
+
   bool isLoading = true;
   String error = "";
   List<NearbyPublicTransportStopsStop> stops = [];
@@ -61,18 +66,20 @@ class _NearbyPublicTransportStopsPage
   Future<void> downloadCsvFile() async {
     final connectivityResult = await (Connectivity().checkConnectivity());
     final directory = await getApplicationSupportDirectory();
-    final filePath = "${directory.path}/nearbypublictransportstops_stops.csv";
+    final filePath = "${directory.path}/$csvFileName";
+    final versionFilePath = "${directory.path}/$csvVersionFileName";
     var file = File(filePath);
     if (await file.exists()) {
-      if (connectivityResult == ConnectivityResult.none) {
+      if (connectivityResult == ConnectivityResult.none || await csvFileVersionIsUpToDate()) {
         csvFileContents = await file.readAsString();
         return;
       } else {
-        file.delete();
+        await file.delete();
       }
     }
     try {
       await downloadFile(csvFileUrl, filePath);
+      await downloadFile(csvVersionFileUrl, versionFilePath);
     } catch (e) {
       if (mounted) {
         setState(() {
@@ -93,6 +100,24 @@ class _NearbyPublicTransportStopsPage
         }
       }
     }
+  }
+
+  Future<bool> csvFileVersionIsUpToDate() async {
+    final directory = await getApplicationSupportDirectory();
+    final filePath = "${directory.path}/$csvVersionFileName";
+    var file = File(filePath);
+    if (await file.exists()) {
+      try {
+        String version = await file.readAsString();
+        String currentVersion = await getOnlineFileTextContent(csvVersionFileUrl);
+        return version == currentVersion;
+      } catch (e) {
+        if (kDebugMode) {
+          print(e);
+        }
+      }
+    }
+    return false;
   }
 
   Future<void> initShouldShowInitDialog() async {

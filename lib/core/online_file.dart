@@ -10,3 +10,11 @@ Future<void> downloadFile(String url, String filePath) async {
   var file = File(filePath);
   await file.writeAsBytes(bytes);
 }
+
+Future<String> getOnlineFileTextContent(String url) async {
+  var httpClient = HttpClient();
+  var request = await httpClient.getUrl(Uri.parse(url));
+  var response = await request.close();
+  var bytes = await consolidateHttpClientResponseBytes(response);
+  return String.fromCharCodes(bytes);
+}
