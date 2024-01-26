@@ -281,6 +281,21 @@
         "no_alive_cells_description": "There are no alive cells.\nPlease tap on the grid to add some.",
         "please_stop_simulation": "Please stop the simulation first"
       }
+    },
+    "speedometer": {
+      "title": "Speedometer",
+      "reset": "Reset",
+      "about_traveled_distance_title": "About traveled distance",
+      "about_traveled_distance_description": "Traveled distance is calculated using the speed detected by the GPS.\nThis means that the distance is not 100% accurate.",
+      "kmh": "km/h",
+      "km": "km",
+      "traveled_distance": "Traveled distance",
+      "error": {
+        "location_permission_denied_title": "Location required",
+        "location_permission_denied_description": "This tool requires location permission to determine your speed.",
+        "location_services_disabled_title": "Location services disabled",
+        "location_services_disabled_description": "This tool requires location services to be enabled to determine your speed."
+      }
     }
   },
   "credits": {

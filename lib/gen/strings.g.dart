@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 408 (204 per locale)
+/// Strings: 430 (215 per locale)
 ///
-/// Built on 2024-01-23 at 16:14 UTC
+/// Built on 2024-01-26 at 19:43 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -202,6 +202,7 @@ class _StringsToolsEn {
 	late final _StringsToolsMorsecodeEn morsecode = _StringsToolsMorsecodeEn._(_root);
 	late final _StringsToolsOsmEn osm = _StringsToolsOsmEn._(_root);
 	late final _StringsToolsGameoflifeEn gameoflife = _StringsToolsGameoflifeEn._(_root);
+	late final _StringsToolsSpeedometerEn speedometer = _StringsToolsSpeedometerEn._(_root);
 }
 
 // Path: credits
@@ -613,6 +614,23 @@ class _StringsToolsGameoflifeEn {
 	late final _StringsToolsGameoflifeErrorEn error = _StringsToolsGameoflifeErrorEn._(_root);
 }
 
+// Path: tools.speedometer
+class _StringsToolsSpeedometerEn {
+	_StringsToolsSpeedometerEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'Speedometer';
+	String get reset => 'Reset';
+	String get about_traveled_distance_title => 'About traveled distance';
+	String get about_traveled_distance_description => 'Traveled distance is calculated using the speed detected by the GPS.\nThis means that the distance is not 100% accurate.';
+	String get kmh => 'km/h';
+	String get km => 'km';
+	String get traveled_distance => 'Traveled distance';
+	late final _StringsToolsSpeedometerErrorEn error = _StringsToolsSpeedometerErrorEn._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsEn._(this._root);
@@ -814,6 +832,19 @@ class _StringsToolsGameoflifeErrorEn {
 	String get please_stop_simulation => 'Please stop the simulation first';
 }
 
+// Path: tools.speedometer.error
+class _StringsToolsSpeedometerErrorEn {
+	_StringsToolsSpeedometerErrorEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get location_permission_denied_title => 'Location required';
+	String get location_permission_denied_description => 'This tool requires location permission to determine your speed.';
+	String get location_services_disabled_title => 'Location services disabled';
+	String get location_services_disabled_description => 'This tool requires location services to be enabled to determine your speed.';
+}
+
 // Path: <root>
 class _StringsFr implements Translations {
 	/// You can call this constructor and build your own translation instance of this locale.
@@ -892,6 +923,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsMorsecodeFr morsecode = _StringsToolsMorsecodeFr._(_root);
 	@override late final _StringsToolsOsmFr osm = _StringsToolsOsmFr._(_root);
 	@override late final _StringsToolsGameoflifeFr gameoflife = _StringsToolsGameoflifeFr._(_root);
+	@override late final _StringsToolsSpeedometerFr speedometer = _StringsToolsSpeedometerFr._(_root);
 }
 
 // Path: credits
@@ -1303,6 +1335,23 @@ class _StringsToolsGameoflifeFr implements _StringsToolsGameoflifeEn {
 	@override late final _StringsToolsGameoflifeErrorFr error = _StringsToolsGameoflifeErrorFr._(_root);
 }
 
+// Path: tools.speedometer
+class _StringsToolsSpeedometerFr implements _StringsToolsSpeedometerEn {
+	_StringsToolsSpeedometerFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Compteur de vitesse';
+	@override String get reset => 'Réinitialiser';
+	@override String get about_traveled_distance_title => 'À propos de la distance parcourue';
+	@override String get about_traveled_distance_description => 'La distance parcourue est calculée à partir de la vitesse détectée par le GPS.\nCela signifie que la distance n\'est pas exacte à 100%.';
+	@override String get kmh => 'km/h';
+	@override String get km => 'km';
+	@override String get traveled_distance => 'Distance parcourue';
+	@override late final _StringsToolsSpeedometerErrorFr error = _StringsToolsSpeedometerErrorFr._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsFr implements _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsFr._(this._root);
@@ -1502,6 +1551,19 @@ class _StringsToolsGameoflifeErrorFr implements _StringsToolsGameoflifeErrorEn {
 	@override String get no_alive_cells => 'Pas de cellules vivantes';
 	@override String get no_alive_cells_description => 'Il n\'y a pas de cellules vivantes.\nVeuillez toucher la grille pour en ajouter.';
 	@override String get please_stop_simulation => 'Veuillez d\'abord arrêter la simulation';
+}
+
+// Path: tools.speedometer.error
+class _StringsToolsSpeedometerErrorFr implements _StringsToolsSpeedometerErrorEn {
+	_StringsToolsSpeedometerErrorFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get location_permission_denied_title => 'Position requise';
+	@override String get location_permission_denied_description => 'Cet outil nécessite l\'accès à la position pour déterminer votre vitesse.';
+	@override String get location_services_disabled_title => 'Services de position désactivés';
+	@override String get location_services_disabled_description => 'Cet outil nécessite que les services de localisation soient activés pour déterminer votre vitesse.';
 }
 
 /// Flat map(s) containing all translations.
@@ -1706,6 +1768,17 @@ extension on Translations {
 			case 'tools.gameoflife.error.no_alive_cells': return 'No alive cells';
 			case 'tools.gameoflife.error.no_alive_cells_description': return 'There are no alive cells.\nPlease tap on the grid to add some.';
 			case 'tools.gameoflife.error.please_stop_simulation': return 'Please stop the simulation first';
+			case 'tools.speedometer.title': return 'Speedometer';
+			case 'tools.speedometer.reset': return 'Reset';
+			case 'tools.speedometer.about_traveled_distance_title': return 'About traveled distance';
+			case 'tools.speedometer.about_traveled_distance_description': return 'Traveled distance is calculated using the speed detected by the GPS.\nThis means that the distance is not 100% accurate.';
+			case 'tools.speedometer.kmh': return 'km/h';
+			case 'tools.speedometer.km': return 'km';
+			case 'tools.speedometer.traveled_distance': return 'Traveled distance';
+			case 'tools.speedometer.error.location_permission_denied_title': return 'Location required';
+			case 'tools.speedometer.error.location_permission_denied_description': return 'This tool requires location permission to determine your speed.';
+			case 'tools.speedometer.error.location_services_disabled_title': return 'Location services disabled';
+			case 'tools.speedometer.error.location_services_disabled_description': return 'This tool requires location services to be enabled to determine your speed.';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -1918,6 +1991,17 @@ extension on _StringsFr {
 			case 'tools.gameoflife.error.no_alive_cells': return 'Pas de cellules vivantes';
 			case 'tools.gameoflife.error.no_alive_cells_description': return 'Il n\'y a pas de cellules vivantes.\nVeuillez toucher la grille pour en ajouter.';
 			case 'tools.gameoflife.error.please_stop_simulation': return 'Veuillez d\'abord arrêter la simulation';
+			case 'tools.speedometer.title': return 'Compteur de vitesse';
+			case 'tools.speedometer.reset': return 'Réinitialiser';
+			case 'tools.speedometer.about_traveled_distance_title': return 'À propos de la distance parcourue';
+			case 'tools.speedometer.about_traveled_distance_description': return 'La distance parcourue est calculée à partir de la vitesse détectée par le GPS.\nCela signifie que la distance n\'est pas exacte à 100%.';
+			case 'tools.speedometer.kmh': return 'km/h';
+			case 'tools.speedometer.km': return 'km';
+			case 'tools.speedometer.traveled_distance': return 'Distance parcourue';
+			case 'tools.speedometer.error.location_permission_denied_title': return 'Position requise';
+			case 'tools.speedometer.error.location_permission_denied_description': return 'Cet outil nécessite l\'accès à la position pour déterminer votre vitesse.';
+			case 'tools.speedometer.error.location_services_disabled_title': return 'Services de position désactivés';
+			case 'tools.speedometer.error.location_services_disabled_description': return 'Cet outil nécessite que les services de localisation soient activés pour déterminer votre vitesse.';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';

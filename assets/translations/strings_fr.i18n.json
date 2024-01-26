@@ -281,6 +281,21 @@
         "no_alive_cells_description": "Il n'y a pas de cellules vivantes.\nVeuillez toucher la grille pour en ajouter.",
         "please_stop_simulation": "Veuillez d'abord arrêter la simulation"
       }
+    },
+    "speedometer": {
+      "title": "Compteur de vitesse",
+      "reset": "Réinitialiser",
+      "about_traveled_distance_title": "À propos de la distance parcourue",
+      "about_traveled_distance_description": "La distance parcourue est calculée à partir de la vitesse détectée par le GPS.\nCela signifie que la distance n'est pas exacte à 100%.",
+      "kmh": "km/h",
+      "km": "km",
+      "traveled_distance": "Distance parcourue",
+      "error": {
+        "location_permission_denied_title": "Position requise",
+        "location_permission_denied_description": "Cet outil nécessite l'accès à la position pour déterminer votre vitesse.",
+        "location_services_disabled_title": "Services de position désactivés",
+        "location_services_disabled_description": "Cet outil nécessite que les services de localisation soient activés pour déterminer votre vitesse."
+      }
     }
   },
   "credits": {

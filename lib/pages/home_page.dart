@@ -22,6 +22,7 @@ import 'package:toolbox/pages/randomcolor_page.dart';
 import 'package:toolbox/pages/randomnumber_page.dart';
 import 'package:toolbox/pages/roulette_page.dart';
 import 'package:toolbox/pages/soundmeter_page.dart';
+import 'package:toolbox/pages/speedometer_page.dart';
 import 'package:toolbox/pages/sshclient_page.dart';
 import 'package:toolbox/pages/stopwatch_page.dart';
 import 'package:toolbox/pages/texttospeech_page.dart';
@@ -95,6 +96,8 @@ class _HomePage extends State<HomePage> {
           const SshClientPage()),
       Tool(t.tools.soundmeter.title, "assets/images/tools/soundmeter.png",
           const SoundMeterPage()),
+      Tool(t.tools.speedometer.title, "assets/images/tools/speedometer.png",
+          const SpeedometerPage()),
       Tool(t.tools.stopwatch.title, "assets/images/tools/stopwatch.png",
           const StopwatchPage()),
       Tool(t.tools.texttospeech.title, "assets/images/tools/texttospeech.png",
