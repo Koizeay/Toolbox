@@ -1,4 +1,5 @@
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -17,7 +18,8 @@ class _SpeedometerPage extends State<SpeedometerPage> {
   double _speedMps = 0.0;
   double _maxSpeedMps = 0.0;
   double traveledDistanceMeters = 0.0;
-  late Stream<Position>? positionStream;
+  late LocationSettings _locationSettings;
+  late Stream<Position>? _positionStream;
 
   @override
   void initState() {
@@ -33,13 +35,14 @@ class _SpeedometerPage extends State<SpeedometerPage> {
 
   @override
   void dispose() {
-    positionStream = null;
+    _positionStream = null;
     super.dispose();
   }
 
   Future<void> initTool() async {
     await initLocationPermission();
     await initLocationServices();
+    initLocationSettings();
     initSpeedometer();
   }
 
@@ -86,9 +89,29 @@ class _SpeedometerPage extends State<SpeedometerPage> {
     }
   }
 
+  void initLocationSettings() {
+    if (defaultTargetPlatform == TargetPlatform.android) {
+      _locationSettings = AndroidSettings(
+          accuracy: LocationAccuracy.high,
+          intervalDuration: const Duration(seconds: 1),
+      );
+    } else if (defaultTargetPlatform == TargetPlatform.iOS) {
+      _locationSettings = AppleSettings(
+          accuracy: LocationAccuracy.high,
+          distanceFilter: 1,
+      );
+    } else {
+      _locationSettings = const LocationSettings(
+          accuracy: LocationAccuracy.high,
+      );
+    }
+  }
+
   void initSpeedometer() {
-    positionStream = Geolocator.getPositionStream();
-    positionStream?.listen((position) {
+    _positionStream = Geolocator.getPositionStream(
+        locationSettings: _locationSettings
+    );
+    _positionStream?.listen((position) {
       if (mounted) {
         setState(() {
           traveledDistanceMeters += position.speed * 1;
