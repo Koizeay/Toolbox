@@ -98,7 +98,6 @@ class _SpeedometerPage extends State<SpeedometerPage> {
     } else if (defaultTargetPlatform == TargetPlatform.iOS) {
       _locationSettings = AppleSettings(
           accuracy: LocationAccuracy.high,
-          distanceFilter: 1,
       );
     } else {
       _locationSettings = const LocationSettings(
