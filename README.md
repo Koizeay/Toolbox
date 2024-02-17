@@ -56,11 +56,12 @@ If you have any question, you can contact me by email at [me@koizeay.com](mailto
 
 ## Screenshots
 <p float="left">
-  <img src="https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot01.jpg" alt="Home page screenshot" height="400">
-  <img src="https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot02.jpg" alt="Home page screenshot" height="400">
-  <img src="https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot03.jpg" alt="Home page screenshot" height="400">
-  <img src="https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot04.jpg" alt="Home page screenshot" height="400">
-  <img src="https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot05.jpg" alt="Home page screenshot" height="400">
+  <img src="https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot01.jpg" alt="Screenshot 01" height="400">
+  <img src="https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot02.jpg" alt="Screenshot 02" height="400">
+  <img src="https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot03.jpg" alt="Screenshot 03" height="400">
+  <img src="https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot04.jpg" alt="Screenshot 04" height="400">
+  <img src="https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot05.jpg" alt="Screenshot 05" height="400">
+  <img src="https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot06.jpg" alt="Screenshot 06" height="400">
 </p>
 
 ## License
