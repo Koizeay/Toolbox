@@ -181,6 +181,7 @@
     },
     "nearbypublictransportstops": {
       "title": "Nearby transport stops",
+      "loading": "Loading...",
       "refresh": "Refresh",
       "data_source": "Data source",
       "initial_dialog_title": "Information",
@@ -188,11 +189,16 @@
       "data_license_dialog_open": "Open",
       "data_license_dialog_title": "Data source",
       "data_license_dialog_message": "The data used in this tool comes from \"$source\".\n$url",
+      "no_departures": "No departures found",
+      "departure": "Departure",
+      "arrival": "Arrival",
+      "platform": "Platform",
+      "show_on_map": "Map",
       "error": {
-        "location_permission_denied": "Location permission denied, please enable it in settings in order to to make full use of this tool.",
-        "download_stops_failed": "Failed to download stops, you need to be connected to the internet to download stops for the first time or to update them.",
-        "read_stops_failed": "Failed to read stops, please try again later with an active internet connection.",
-        "parse_stops_failed": "Failed to parse stops, please try again later with an active internet connection."
+        "location_permission_denied": "Location permission denied or disabled, please enable it in settings in order to see nearby stops.",
+        "check_internet_connection": "Please check your internet connection and try again.",
+        "api_empty_response": "The API returned an empty response",
+        "api_error_xxx": "The API returned an error: $errorCode"
       }
     },
     "fileencryption": {

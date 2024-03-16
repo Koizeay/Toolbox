@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 430 (215 per locale)
+/// Strings: 442 (221 per locale)
 ///
-/// Built on 2024-01-26 at 19:43 UTC
+/// Built on 2024-03-16 at 12:58 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -490,6 +490,7 @@ class _StringsToolsNearbypublictransportstopsEn {
 
 	// Translations
 	String get title => 'Nearby transport stops';
+	String get loading => 'Loading...';
 	String get refresh => 'Refresh';
 	String get data_source => 'Data source';
 	String get initial_dialog_title => 'Information';
@@ -497,6 +498,11 @@ class _StringsToolsNearbypublictransportstopsEn {
 	String get data_license_dialog_open => 'Open';
 	String get data_license_dialog_title => 'Data source';
 	String data_license_dialog_message({required Object source, required Object url}) => 'The data used in this tool comes from "${source}".\n${url}';
+	String get no_departures => 'No departures found';
+	String get departure => 'Departure';
+	String get arrival => 'Arrival';
+	String get platform => 'Platform';
+	String get show_on_map => 'Map';
 	late final _StringsToolsNearbypublictransportstopsErrorEn error = _StringsToolsNearbypublictransportstopsErrorEn._(_root);
 }
 
@@ -756,10 +762,10 @@ class _StringsToolsNearbypublictransportstopsErrorEn {
 	final Translations _root; // ignore: unused_field
 
 	// Translations
-	String get location_permission_denied => 'Location permission denied, please enable it in settings in order to to make full use of this tool.';
-	String get download_stops_failed => 'Failed to download stops, you need to be connected to the internet to download stops for the first time or to update them.';
-	String get read_stops_failed => 'Failed to read stops, please try again later with an active internet connection.';
-	String get parse_stops_failed => 'Failed to parse stops, please try again later with an active internet connection.';
+	String get location_permission_denied => 'Location permission denied or disabled, please enable it in settings in order to see nearby stops.';
+	String get check_internet_connection => 'Please check your internet connection and try again.';
+	String get api_empty_response => 'The API returned an empty response';
+	String api_error_xxx({required Object errorCode}) => 'The API returned an error: ${errorCode}';
 }
 
 // Path: tools.fileencryption.error
@@ -1211,6 +1217,7 @@ class _StringsToolsNearbypublictransportstopsFr implements _StringsToolsNearbypu
 
 	// Translations
 	@override String get title => 'Arrêts de transport';
+	@override String get loading => 'Chargement...';
 	@override String get refresh => 'Rafraîchir';
 	@override String get data_source => 'Source des données';
 	@override String get initial_dialog_title => 'Information';
@@ -1218,6 +1225,11 @@ class _StringsToolsNearbypublictransportstopsFr implements _StringsToolsNearbypu
 	@override String get data_license_dialog_open => 'Ouvrir';
 	@override String get data_license_dialog_title => 'Source des données';
 	@override String data_license_dialog_message({required Object source, required Object url}) => 'Les données utilisées dans cet outil proviennent de "${source}".\n${url}';
+	@override String get no_departures => 'Aucun départ';
+	@override String get departure => 'Départ';
+	@override String get arrival => 'Arrivée';
+	@override String get platform => 'Voie';
+	@override String get show_on_map => 'Plan';
 	@override late final _StringsToolsNearbypublictransportstopsErrorFr error = _StringsToolsNearbypublictransportstopsErrorFr._(_root);
 }
 
@@ -1477,10 +1489,10 @@ class _StringsToolsNearbypublictransportstopsErrorFr implements _StringsToolsNea
 	@override final _StringsFr _root; // ignore: unused_field
 
 	// Translations
-	@override String get location_permission_denied => 'La permission de localisation a été refusée, veuillez l\'activer dans les paramètres afin d\'utiliser pleinement cet outil.';
-	@override String get download_stops_failed => 'Échec du téléchargement des arrêts, vous devez être connecté à internet pour télécharger les arrêts pour la première fois ou pour les mettre à jour.';
-	@override String get read_stops_failed => 'La lecture des arrêts a échoué, veuillez réessayer plus tard avec une connexion internet active.';
-	@override String get parse_stops_failed => 'Le traitement des arrêts a échoué, veuillez réessayer plus tard avec une connexion Internet active.';
+	@override String get location_permission_denied => 'La permission de localisation a été refusée ou désactivée, veuillez l\'activer dans les paramètres afin de voir les arrêts de transport public à proximité.';
+	@override String get check_internet_connection => 'Vérifiez votre connexion internet et réessayez.';
+	@override String get api_empty_response => 'L\'API a renvoyé une réponse vide';
+	@override String api_error_xxx({required Object errorCode}) => 'L\'API a renvoyé une erreur ${errorCode}';
 }
 
 // Path: tools.fileencryption.error
@@ -1696,6 +1708,7 @@ extension on Translations {
 			case 'tools.texttospeech.error.please_try_again': return 'Please try again later.\nIf it\'s the first time you\'re using this language, please wait a few seconds and try again.';
 			case 'tools.texttospeech.error.please_select_a_language': return 'Please select a language';
 			case 'tools.nearbypublictransportstops.title': return 'Nearby transport stops';
+			case 'tools.nearbypublictransportstops.loading': return 'Loading...';
 			case 'tools.nearbypublictransportstops.refresh': return 'Refresh';
 			case 'tools.nearbypublictransportstops.data_source': return 'Data source';
 			case 'tools.nearbypublictransportstops.initial_dialog_title': return 'Information';
@@ -1703,10 +1716,15 @@ extension on Translations {
 			case 'tools.nearbypublictransportstops.data_license_dialog_open': return 'Open';
 			case 'tools.nearbypublictransportstops.data_license_dialog_title': return 'Data source';
 			case 'tools.nearbypublictransportstops.data_license_dialog_message': return ({required Object source, required Object url}) => 'The data used in this tool comes from "${source}".\n${url}';
-			case 'tools.nearbypublictransportstops.error.location_permission_denied': return 'Location permission denied, please enable it in settings in order to to make full use of this tool.';
-			case 'tools.nearbypublictransportstops.error.download_stops_failed': return 'Failed to download stops, you need to be connected to the internet to download stops for the first time or to update them.';
-			case 'tools.nearbypublictransportstops.error.read_stops_failed': return 'Failed to read stops, please try again later with an active internet connection.';
-			case 'tools.nearbypublictransportstops.error.parse_stops_failed': return 'Failed to parse stops, please try again later with an active internet connection.';
+			case 'tools.nearbypublictransportstops.no_departures': return 'No departures found';
+			case 'tools.nearbypublictransportstops.departure': return 'Departure';
+			case 'tools.nearbypublictransportstops.arrival': return 'Arrival';
+			case 'tools.nearbypublictransportstops.platform': return 'Platform';
+			case 'tools.nearbypublictransportstops.show_on_map': return 'Map';
+			case 'tools.nearbypublictransportstops.error.location_permission_denied': return 'Location permission denied or disabled, please enable it in settings in order to see nearby stops.';
+			case 'tools.nearbypublictransportstops.error.check_internet_connection': return 'Please check your internet connection and try again.';
+			case 'tools.nearbypublictransportstops.error.api_empty_response': return 'The API returned an empty response';
+			case 'tools.nearbypublictransportstops.error.api_error_xxx': return ({required Object errorCode}) => 'The API returned an error: ${errorCode}';
 			case 'tools.fileencryption.title': return 'File encryption';
 			case 'tools.fileencryption.home_hint': return 'Pick a file to encrypt it. If you want to decrypt a file, pick an encrypted file with the .aes extension';
 			case 'tools.fileencryption.no_file_selected': return 'No file selected';
@@ -1919,6 +1937,7 @@ extension on _StringsFr {
 			case 'tools.texttospeech.error.please_try_again': return 'Veuillez réessayer plus tard.\nSi vous utilisez cette langue pour la première fois, veuillez patienter quelques secondes et réessayer.';
 			case 'tools.texttospeech.error.please_select_a_language': return 'Veuillez sélectionner une langue';
 			case 'tools.nearbypublictransportstops.title': return 'Arrêts de transport';
+			case 'tools.nearbypublictransportstops.loading': return 'Chargement...';
 			case 'tools.nearbypublictransportstops.refresh': return 'Rafraîchir';
 			case 'tools.nearbypublictransportstops.data_source': return 'Source des données';
 			case 'tools.nearbypublictransportstops.initial_dialog_title': return 'Information';
@@ -1926,10 +1945,15 @@ extension on _StringsFr {
 			case 'tools.nearbypublictransportstops.data_license_dialog_open': return 'Ouvrir';
 			case 'tools.nearbypublictransportstops.data_license_dialog_title': return 'Source des données';
 			case 'tools.nearbypublictransportstops.data_license_dialog_message': return ({required Object source, required Object url}) => 'Les données utilisées dans cet outil proviennent de "${source}".\n${url}';
-			case 'tools.nearbypublictransportstops.error.location_permission_denied': return 'La permission de localisation a été refusée, veuillez l\'activer dans les paramètres afin d\'utiliser pleinement cet outil.';
-			case 'tools.nearbypublictransportstops.error.download_stops_failed': return 'Échec du téléchargement des arrêts, vous devez être connecté à internet pour télécharger les arrêts pour la première fois ou pour les mettre à jour.';
-			case 'tools.nearbypublictransportstops.error.read_stops_failed': return 'La lecture des arrêts a échoué, veuillez réessayer plus tard avec une connexion internet active.';
-			case 'tools.nearbypublictransportstops.error.parse_stops_failed': return 'Le traitement des arrêts a échoué, veuillez réessayer plus tard avec une connexion Internet active.';
+			case 'tools.nearbypublictransportstops.no_departures': return 'Aucun départ';
+			case 'tools.nearbypublictransportstops.departure': return 'Départ';
+			case 'tools.nearbypublictransportstops.arrival': return 'Arrivée';
+			case 'tools.nearbypublictransportstops.platform': return 'Voie';
+			case 'tools.nearbypublictransportstops.show_on_map': return 'Plan';
+			case 'tools.nearbypublictransportstops.error.location_permission_denied': return 'La permission de localisation a été refusée ou désactivée, veuillez l\'activer dans les paramètres afin de voir les arrêts de transport public à proximité.';
+			case 'tools.nearbypublictransportstops.error.check_internet_connection': return 'Vérifiez votre connexion internet et réessayez.';
+			case 'tools.nearbypublictransportstops.error.api_empty_response': return 'L\'API a renvoyé une réponse vide';
+			case 'tools.nearbypublictransportstops.error.api_error_xxx': return ({required Object errorCode}) => 'L\'API a renvoyé une erreur ${errorCode}';
 			case 'tools.fileencryption.title': return 'Chiffrement de fichiers';
 			case 'tools.fileencryption.home_hint': return 'Choisissez un fichier pour le chiffrer. Si vous souhaitez déchiffrer un fichier, choisissez un fichier chiffré ayant l\'extension .aes.';
 			case 'tools.fileencryption.no_file_selected': return 'Aucun fichier sélectionné';

@@ -181,6 +181,7 @@
     },
     "nearbypublictransportstops": {
       "title": "Arrêts de transport",
+      "loading": "Chargement...",
       "refresh": "Rafraîchir",
       "data_source": "Source des données",
       "initial_dialog_title": "Information",
@@ -188,11 +189,17 @@
       "data_license_dialog_open": "Ouvrir",
       "data_license_dialog_title": "Source des données",
       "data_license_dialog_message": "Les données utilisées dans cet outil proviennent de \"$source\".\n$url",
+      "no_departures": "Aucun départ",
+      "departure": "Départ",
+      "arrival": "Arrivée",
+      "platform": "Voie",
+      "show_on_map": "Plan",
       "error": {
-        "location_permission_denied": "La permission de localisation a été refusée, veuillez l'activer dans les paramètres afin d'utiliser pleinement cet outil.",
-        "download_stops_failed": "Échec du téléchargement des arrêts, vous devez être connecté à internet pour télécharger les arrêts pour la première fois ou pour les mettre à jour.",
-        "read_stops_failed": "La lecture des arrêts a échoué, veuillez réessayer plus tard avec une connexion internet active.",
-        "parse_stops_failed": "Le traitement des arrêts a échoué, veuillez réessayer plus tard avec une connexion Internet active."
+        "location_permission_denied": "La permission de localisation a été refusée ou désactivée, veuillez l'activer dans les paramètres afin de voir les arrêts de transport public à proximité.",
+        "check_internet_connection": "Vérifiez votre connexion internet et réessayez.",
+        "api_empty_response": "L'API a renvoyé une réponse vide",
+        "api_error_xxx": "L'API a renvoyé une erreur $errorCode"
+
       }
     },
     "fileencryption": {
