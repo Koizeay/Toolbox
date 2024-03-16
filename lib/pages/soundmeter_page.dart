@@ -5,6 +5,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:gauges/gauges.dart';
 import 'package:noise_meter/noise_meter.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:toolbox/core/dialogs.dart';
 import 'package:toolbox/core/rotations.dart';
 import 'package:toolbox/gen/strings.g.dart';
@@ -26,9 +27,10 @@ class _SoundMeterPage extends State<SoundMeterPage> {
 
   @override
   void initState() {
-    startListening();
-    checkIfDecibelIsZeroDuring(_checkIfDecibelIsZeroDuring);
-    lockScreenRotation();
+    initMicrophonePermission().then((_){
+      startListening();
+      checkIfDecibelIsZeroDuring(_checkIfDecibelIsZeroDuring);
+    });
     super.initState();
   }
 
@@ -41,8 +43,8 @@ class _SoundMeterPage extends State<SoundMeterPage> {
     super.dispose();
   }
 
-  void lockScreenRotation() {
-    setOnlyPortraitUp();
+  Future<bool> initMicrophonePermission() async {
+    return await Permission.microphone.request().isGranted;
   }
 
   void startListening() async {
