@@ -641,16 +641,17 @@ class _NearbyPublicTransportStopsPage extends State<NearbyPublicTransportStopsPa
                                   getFormattedDistanceString(
                                       stop.distance ?? 0))
                                   : null,
-                              trailing: Icon(
+                              trailing: Image.asset(
                                   stop.icon == "train"
-                                      ? Icons.train
+                                      ? "assets/images/specific/nearbypublictransportstops_train.png"
                                       : stop.icon == "bus"
-                                      ? Icons.directions_bus
+                                      ? "assets/images/specific/nearbypublictransportstops_bus.png"
                                       : stop.icon == "ship"
-                                      ? Icons.directions_boat
+                                      ? "assets/images/specific/nearbypublictransportstops_ship.png"
                                       : stop.icon == "tram"
-                                      ? Icons.tram
-                                      : Icons.directions_transit
+                                      ? "assets/images/specific/nearbypublictransportstops_tram.png"
+                                      : "assets/images/specific/nearbypublictransportstops_unknown.png",
+                                height: 40
                               ),
                             ),
                           ),
