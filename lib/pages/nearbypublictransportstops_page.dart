@@ -29,6 +29,8 @@ class _NearbyPublicTransportStopsPage extends State<NearbyPublicTransportStopsPa
 
   late LocationPermission permission;
 
+  final TextEditingController searchTextController = TextEditingController();
+
   bool isLoading = true;
   bool isLocationEnabled = false;
   String errorMessage = "";
@@ -614,6 +616,7 @@ class _NearbyPublicTransportStopsPage extends State<NearbyPublicTransportStopsPa
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextField(
+                      controller: searchTextController,
                       decoration: InputDecoration(
                         border: const OutlineInputBorder(),
                         labelText: t.generic.search,
@@ -624,7 +627,7 @@ class _NearbyPublicTransportStopsPage extends State<NearbyPublicTransportStopsPa
                     ),
                   ),
                   Expanded(
-                    child: shownStops.isNotEmpty && isLocationEnabled
+                    child: shownStops.isNotEmpty
                         ? ListView.builder(
                       itemCount: shownStops.length,
                       itemBuilder: (context, index) {
@@ -651,19 +654,40 @@ class _NearbyPublicTransportStopsPage extends State<NearbyPublicTransportStopsPa
                                       : stop.icon == "tram"
                                       ? "assets/images/specific/nearbypublictransportstops_tram.png"
                                       : "assets/images/specific/nearbypublictransportstops_unknown.png",
-                                height: 40
+                                  height: 40
                               ),
                             ),
                           ),
                         );
                       },
-                    ) : Center(
+                    ) : searchTextController.text.trim().isNotEmpty
+                        ? Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                            t.tools.nearbypublictransportstops.error
+                                .no_stops_found,
+                            textAlign: TextAlign.center
+                        ),
+                      ),
+                    )
+                        : !isLocationEnabled ? Center(
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
                             t.tools.nearbypublictransportstops.error
                                 .location_permission_denied,
-                            textAlign: TextAlign.center),
+                            textAlign: TextAlign.center
+                        ),
+                      ),
+                    ) : Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                            t.tools.nearbypublictransportstops.error
+                                .no_stops_found,
+                            textAlign: TextAlign.center
+                        ),
                       ),
                     ),
                   ),

@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 442 (221 per locale)
+/// Strings: 444 (222 per locale)
 ///
-/// Built on 2024-03-16 at 12:58 UTC
+/// Built on 2024-03-28 at 19:59 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -766,6 +766,7 @@ class _StringsToolsNearbypublictransportstopsErrorEn {
 	String get check_internet_connection => 'Please check your internet connection and try again.';
 	String get api_empty_response => 'The API returned an empty response';
 	String api_error_xxx({required Object errorCode}) => 'The API returned an error: ${errorCode}';
+	String get no_stops_found => 'No stops found for this search';
 }
 
 // Path: tools.fileencryption.error
@@ -1493,6 +1494,7 @@ class _StringsToolsNearbypublictransportstopsErrorFr implements _StringsToolsNea
 	@override String get check_internet_connection => 'Vérifiez votre connexion internet et réessayez.';
 	@override String get api_empty_response => 'L\'API a renvoyé une réponse vide';
 	@override String api_error_xxx({required Object errorCode}) => 'L\'API a renvoyé une erreur ${errorCode}';
+	@override String get no_stops_found => 'Aucun arrêt trouvé avec cette recherche';
 }
 
 // Path: tools.fileencryption.error
@@ -1725,6 +1727,7 @@ extension on Translations {
 			case 'tools.nearbypublictransportstops.error.check_internet_connection': return 'Please check your internet connection and try again.';
 			case 'tools.nearbypublictransportstops.error.api_empty_response': return 'The API returned an empty response';
 			case 'tools.nearbypublictransportstops.error.api_error_xxx': return ({required Object errorCode}) => 'The API returned an error: ${errorCode}';
+			case 'tools.nearbypublictransportstops.error.no_stops_found': return 'No stops found for this search';
 			case 'tools.fileencryption.title': return 'File encryption';
 			case 'tools.fileencryption.home_hint': return 'Pick a file to encrypt it. If you want to decrypt a file, pick an encrypted file with the .aes extension';
 			case 'tools.fileencryption.no_file_selected': return 'No file selected';
@@ -1954,6 +1957,7 @@ extension on _StringsFr {
 			case 'tools.nearbypublictransportstops.error.check_internet_connection': return 'Vérifiez votre connexion internet et réessayez.';
 			case 'tools.nearbypublictransportstops.error.api_empty_response': return 'L\'API a renvoyé une réponse vide';
 			case 'tools.nearbypublictransportstops.error.api_error_xxx': return ({required Object errorCode}) => 'L\'API a renvoyé une erreur ${errorCode}';
+			case 'tools.nearbypublictransportstops.error.no_stops_found': return 'Aucun arrêt trouvé avec cette recherche';
 			case 'tools.fileencryption.title': return 'Chiffrement de fichiers';
 			case 'tools.fileencryption.home_hint': return 'Choisissez un fichier pour le chiffrer. Si vous souhaitez déchiffrer un fichier, choisissez un fichier chiffré ayant l\'extension .aes.';
 			case 'tools.fileencryption.no_file_selected': return 'Aucun fichier sélectionné';
