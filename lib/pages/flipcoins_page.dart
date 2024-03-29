@@ -22,7 +22,7 @@ class _FlipCoinsPage extends State<FlipCoinsPage> {
 
   @override
   void initState() {
-    setCoinAsset("chf");
+    setCoinAsset("kz");
     super.initState();
   }
 
@@ -35,6 +35,10 @@ class _FlipCoinsPage extends State<FlipCoinsPage> {
   void setCoinAsset(String code) {
     code = code.toLowerCase();
     switch (code) {
+      case "kz":
+        frontAsset = "assets/images/specific/flipcoins_kz_front.png";
+        backAsset = "assets/images/specific/flipcoins_kz_back.png";
+        break;
       case "chf":
         frontAsset = "assets/images/specific/flipcoins_2chf_front.png";
         backAsset = "assets/images/specific/flipcoins_2chf_back.png";
@@ -44,8 +48,8 @@ class _FlipCoinsPage extends State<FlipCoinsPage> {
         backAsset = "assets/images/specific/flipcoins_2eur_back.png";
         break;
       default:
-        frontAsset = "assets/images/specific/flipcoins_2chf_front.png";
-        backAsset = "assets/images/specific/flipcoins_2chf_back.png";
+        frontAsset = "assets/images/specific/flipcoins_kz_front.png";
+        backAsset = "assets/images/specific/flipcoins_kz_back.png";
         break;
     }
   }
@@ -115,10 +119,21 @@ class _FlipCoinsPage extends State<FlipCoinsPage> {
                           child: FilledButton(
                               onPressed: () {
                                 setState(() {
+                                  setCoinAsset("kz");
+                                });
+                              },
+                              child: const Text("KZ", textAlign: TextAlign.center,)
+                          ),
+                        ),
+                        const SizedBox(width: 4),
+                        Expanded(
+                          child: FilledButton(
+                              onPressed: () {
+                                setState(() {
                                   setCoinAsset("chf");
                                 });
                               },
-                              child: const Text("CHF")
+                              child: const Text("CHF", textAlign: TextAlign.center,)
                           ),
                         ),
                         const SizedBox(width: 4),
@@ -129,7 +144,7 @@ class _FlipCoinsPage extends State<FlipCoinsPage> {
                                   setCoinAsset("eur");
                                 });
                               },
-                              child: const Text("€")
+                              child: const Text("€", textAlign: TextAlign.center,)
                           ),
                         ),
                       ],
