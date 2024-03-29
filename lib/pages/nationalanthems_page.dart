@@ -137,14 +137,14 @@ class _NationalAnthemsPage extends State<NationalAnthemsPage> {
       TextButton(
           onPressed: () =>
               launchUrlInBrowser(
-                  "https://creativecommons.org/licenses/by/3.0/"),
+                  "https://creativecommons.org/licenses/by/4.0/"),
           child: Text(t.tools.nationalanthems.view_license)
       )
     ];
     showCustomButtonsTextDialog(
       context,
       t.tools.nationalanthems.license,
-      t.tools.nationalanthems.license_text(source: "nationalanthems.info", license: "Creative Commons Attribution 3.0 Unported License"),
+      t.tools.nationalanthems.license_text(source: "nationalanthems.info", license: "Creative Commons Attribution 4.0 Unported License"),
       buttons,
     );
   }
