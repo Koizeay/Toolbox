@@ -1,10 +1,12 @@
 
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:maps_launcher/maps_launcher.dart';
+import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:toolbox/core/dialogs.dart';
 import 'package:toolbox/core/http_requests.dart';
@@ -56,11 +58,28 @@ class _NearbyPublicTransportStopsPage extends State<NearbyPublicTransportStopsPa
   }
 
   Future<void> initPage() async {
+    await deletePreviousVersionDownloadedFiles();
     await requestLocationPermission();
     await initCurrentPosition();
     await initPublicTransportNearbyStops();
     await sanitizePublicTransportShownStops();
     await initShouldShowInitDialog();
+  }
+
+  Future<void> deletePreviousVersionDownloadedFiles() async {
+    final directory = await getApplicationSupportDirectory();
+    const String csvFileName = "nearbypublictransportstops_stops.csv";
+    const String csvVersionFileName = "nearbypublictransportstops_stops.version";
+
+    final csvFile = File("${directory.path}/$csvFileName");
+    final csvVersionFile = File("${directory.path}/$csvVersionFileName");
+
+    if (await csvFile.exists()) {
+      await csvFile.delete();
+    }
+    if (await csvVersionFile.exists()) {
+      await csvVersionFile.delete();
+    }
   }
 
 
