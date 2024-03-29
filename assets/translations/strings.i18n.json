@@ -221,11 +221,11 @@
     "youtubethumbnail": {
       "title": "YouTube thumbnail",
       "saved": "Thumbnail saved to device",
-      "youtube_video_id": "YouTube video ID",
+      "youtube_video_id": "YouTube video URL",
       "save_thumbnail": "Save thumbnail",
       "error": {
         "failed_to_download": "Failed to download thumbnail from YouTube",
-        "please_enter_a_video_id": "Please enter a valid YouTube video ID\n\nExample: dQw4w9WgXcQ\n\nYou can find the video ID in the URL of the video\nhttps://www.youtube.com/watch?v=dQw4w9WgXcQ\n\nYou also need an internet connection to download the thumbnail from YouTube"
+        "please_enter_a_video_id": "Please enter a valid YouTube video URL\n\nExamples: \nhttps://www.youtube.com/watch?v=dQw4w9WgXcQ\nhttps://youtu.be/dQw4w9WgXcQ\n\nYou also need an internet connection to download the thumbnail from YouTube"
       }
     },
     "nationalanthems": {

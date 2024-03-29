@@ -52,6 +52,26 @@ class _YouTubeThumbnailPage extends State<YouTubeThumbnailPage> {
     httpClient.close();
   }
 
+  String extractVideoIdFromYoutubeUrl(String url) {
+    url = url.trim();
+    try {
+      Uri uri = Uri.parse(url);
+      if (uri.host.contains("youtu.be")) {
+        return uri.pathSegments.first;
+      } else if (uri.host.contains("youtube.com")) {
+        String? videoId = uri.queryParameters["v"];
+        if (videoId != null) {
+          return videoId;
+        }
+      }
+    } catch (e) {
+      if (kDebugMode) {
+        print(e);
+      }
+    }
+    return url;
+  }
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -97,7 +117,7 @@ class _YouTubeThumbnailPage extends State<YouTubeThumbnailPage> {
                           ),
                           onChanged: (value) {
                             setState(() {
-                              videoId = value;
+                              videoId = extractVideoIdFromYoutubeUrl(value);
                             });
                           },
                         ),

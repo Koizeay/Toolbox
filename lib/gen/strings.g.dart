@@ -6,7 +6,7 @@
 /// Locales: 2
 /// Strings: 444 (222 per locale)
 ///
-/// Built on 2024-03-28 at 19:59 UTC
+/// Built on 2024-03-29 at 10:20 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -534,7 +534,7 @@ class _StringsToolsYoutubethumbnailEn {
 	// Translations
 	String get title => 'YouTube thumbnail';
 	String get saved => 'Thumbnail saved to device';
-	String get youtube_video_id => 'YouTube video ID';
+	String get youtube_video_id => 'YouTube video URL';
 	String get save_thumbnail => 'Save thumbnail';
 	late final _StringsToolsYoutubethumbnailErrorEn error = _StringsToolsYoutubethumbnailErrorEn._(_root);
 }
@@ -789,7 +789,7 @@ class _StringsToolsYoutubethumbnailErrorEn {
 
 	// Translations
 	String get failed_to_download => 'Failed to download thumbnail from YouTube';
-	String get please_enter_a_video_id => 'Please enter a valid YouTube video ID\n\nExample: dQw4w9WgXcQ\n\nYou can find the video ID in the URL of the video\nhttps://www.youtube.com/watch?v=dQw4w9WgXcQ\n\nYou also need an internet connection to download the thumbnail from YouTube';
+	String get please_enter_a_video_id => 'Please enter a valid YouTube video URL\n\nExamples: \nhttps://www.youtube.com/watch?v=dQw4w9WgXcQ\nhttps://youtu.be/dQw4w9WgXcQ\n\nYou also need an internet connection to download the thumbnail from YouTube';
 }
 
 // Path: tools.nationalanthems.error
@@ -1262,7 +1262,7 @@ class _StringsToolsYoutubethumbnailFr implements _StringsToolsYoutubethumbnailEn
 	// Translations
 	@override String get title => 'Miniature YouTube';
 	@override String get saved => 'Miniature enregistrée avec succès';
-	@override String get youtube_video_id => 'ID de la vidéo YouTube';
+	@override String get youtube_video_id => 'URL de la vidéo YouTube';
 	@override String get save_thumbnail => 'Enregistrer la miniature';
 	@override late final _StringsToolsYoutubethumbnailErrorFr error = _StringsToolsYoutubethumbnailErrorFr._(_root);
 }
@@ -1517,7 +1517,7 @@ class _StringsToolsYoutubethumbnailErrorFr implements _StringsToolsYoutubethumbn
 
 	// Translations
 	@override String get failed_to_download => 'Impossible de télécharger la miniature depuis YouTube';
-	@override String get please_enter_a_video_id => 'Veuillez saisir un ID de vidéo YouTube valide\n\nExemple : dQw4w9WgXcQ\n\nVous trouverez l\'ID de la vidéo dans l\'URL de la vidéo\nhttps://www.youtube.com/watch?v=dQw4w9WgXcQ\n\nVous avez également besoin d\'une connexion internet pour télécharger la miniature à partir de YouTube.';
+	@override String get please_enter_a_video_id => 'Veuillez saisir l\'URL d\'une vidéo YouTube valide\n\nExemples : \nhttps://www.youtube.com/watch?v=dQw4w9WgXcQ\nhttps://youtu.be/dQw4w9WgXcQ\n\nVous avez également besoin d\'une connexion internet pour télécharger la miniature à partir de YouTube';
 }
 
 // Path: tools.nationalanthems.error
@@ -1742,10 +1742,10 @@ extension on Translations {
 			case 'tools.fileencryption.error.please_enter_a_password': return 'Please enter a password';
 			case 'tools.youtubethumbnail.title': return 'YouTube thumbnail';
 			case 'tools.youtubethumbnail.saved': return 'Thumbnail saved to device';
-			case 'tools.youtubethumbnail.youtube_video_id': return 'YouTube video ID';
+			case 'tools.youtubethumbnail.youtube_video_id': return 'YouTube video URL';
 			case 'tools.youtubethumbnail.save_thumbnail': return 'Save thumbnail';
 			case 'tools.youtubethumbnail.error.failed_to_download': return 'Failed to download thumbnail from YouTube';
-			case 'tools.youtubethumbnail.error.please_enter_a_video_id': return 'Please enter a valid YouTube video ID\n\nExample: dQw4w9WgXcQ\n\nYou can find the video ID in the URL of the video\nhttps://www.youtube.com/watch?v=dQw4w9WgXcQ\n\nYou also need an internet connection to download the thumbnail from YouTube';
+			case 'tools.youtubethumbnail.error.please_enter_a_video_id': return 'Please enter a valid YouTube video URL\n\nExamples: \nhttps://www.youtube.com/watch?v=dQw4w9WgXcQ\nhttps://youtu.be/dQw4w9WgXcQ\n\nYou also need an internet connection to download the thumbnail from YouTube';
 			case 'tools.nationalanthems.title': return 'National anthems';
 			case 'tools.nationalanthems.stop': return 'Stop the anthem';
 			case 'tools.nationalanthems.search': return 'Search (English name)';
@@ -1972,10 +1972,10 @@ extension on _StringsFr {
 			case 'tools.fileencryption.error.please_enter_a_password': return 'Veuillez entrer un mot de passe';
 			case 'tools.youtubethumbnail.title': return 'Miniature YouTube';
 			case 'tools.youtubethumbnail.saved': return 'Miniature enregistrée avec succès';
-			case 'tools.youtubethumbnail.youtube_video_id': return 'ID de la vidéo YouTube';
+			case 'tools.youtubethumbnail.youtube_video_id': return 'URL de la vidéo YouTube';
 			case 'tools.youtubethumbnail.save_thumbnail': return 'Enregistrer la miniature';
 			case 'tools.youtubethumbnail.error.failed_to_download': return 'Impossible de télécharger la miniature depuis YouTube';
-			case 'tools.youtubethumbnail.error.please_enter_a_video_id': return 'Veuillez saisir un ID de vidéo YouTube valide\n\nExemple : dQw4w9WgXcQ\n\nVous trouverez l\'ID de la vidéo dans l\'URL de la vidéo\nhttps://www.youtube.com/watch?v=dQw4w9WgXcQ\n\nVous avez également besoin d\'une connexion internet pour télécharger la miniature à partir de YouTube.';
+			case 'tools.youtubethumbnail.error.please_enter_a_video_id': return 'Veuillez saisir l\'URL d\'une vidéo YouTube valide\n\nExemples : \nhttps://www.youtube.com/watch?v=dQw4w9WgXcQ\nhttps://youtu.be/dQw4w9WgXcQ\n\nVous avez également besoin d\'une connexion internet pour télécharger la miniature à partir de YouTube';
 			case 'tools.nationalanthems.title': return 'Hymnes nationaux';
 			case 'tools.nationalanthems.stop': return 'Arrêter l\'hymne';
 			case 'tools.nationalanthems.search': return 'Rechercher (en anglais)';
