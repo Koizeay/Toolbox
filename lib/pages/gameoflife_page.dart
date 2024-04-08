@@ -185,7 +185,7 @@ class _GameOfLifePage extends State<GameOfLifePage> {
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                child: Text(t.generic.cancel),
+                child: Text(t.generic.ok),
               ),
             ],
           ),
