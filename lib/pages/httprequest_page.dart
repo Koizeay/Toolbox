@@ -140,7 +140,7 @@ class _HttpRequestPage extends State<HttpRequestPage> {
       }
     }
 
-    HttpClientResponse? response;
+    HttpClientResponse response;
     String method = _method;
     if (_method == "...") {
       method = methodController.text;
@@ -201,7 +201,11 @@ class _HttpRequestPage extends State<HttpRequestPage> {
 
     responseStatusCode = response.statusCode.toString();
     responseHeaders = response.headers.toString();
-    responseBody = await response.transform(utf8.decoder).join();
+    responseBody = "";
+    List<List<int>> responseBodyLists = await response.toList();
+    for (List<int> list in responseBodyLists) {
+      responseBody += utf8.decode(list, allowMalformed: true);
+    }
 
     if (mounted) {
       setState(() {});
