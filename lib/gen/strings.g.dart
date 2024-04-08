@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 444 (222 per locale)
+/// Strings: 474 (237 per locale)
 ///
-/// Built on 2024-03-29 at 10:20 UTC
+/// Built on 2024-04-08 at 18:18 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -203,6 +203,7 @@ class _StringsToolsEn {
 	late final _StringsToolsOsmEn osm = _StringsToolsOsmEn._(_root);
 	late final _StringsToolsGameoflifeEn gameoflife = _StringsToolsGameoflifeEn._(_root);
 	late final _StringsToolsSpeedometerEn speedometer = _StringsToolsSpeedometerEn._(_root);
+	late final _StringsToolsMcServerPingEn mc_server_ping = _StringsToolsMcServerPingEn._(_root);
 }
 
 // Path: credits
@@ -637,6 +638,28 @@ class _StringsToolsSpeedometerEn {
 	late final _StringsToolsSpeedometerErrorEn error = _StringsToolsSpeedometerErrorEn._(_root);
 }
 
+// Path: tools.mc_server_ping
+class _StringsToolsMcServerPingEn {
+	_StringsToolsMcServerPingEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'MC server ping';
+	String get java_edition => 'Java Edition';
+	String get information_java => 'Information';
+	String get information_java_description => 'Check this box if the server is available for the Java Edition of Minecraft. If not, unchecked it and the tool will use the Bedrock Edition API.';
+	String get server_ip => 'Minecraft server IP (or domain)';
+	String get ping => 'Ping server';
+	String get ping_another_server => 'Ping another server';
+	String get api_used => 'API used';
+	String get about_the_api => 'About the API';
+	String about_the_api_description({required Object source, required Object website}) => 'This tool uses the "${source}" from "${website}" to ping Minecraft servers.';
+	String get about_open => 'Open';
+	String the_server_id_is({required Object id}) => 'The server ID is "${id}"';
+	late final _StringsToolsMcServerPingErrorEn error = _StringsToolsMcServerPingErrorEn._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsEn._(this._root);
@@ -852,6 +875,18 @@ class _StringsToolsSpeedometerErrorEn {
 	String get location_services_disabled_description => 'This tool requires location services to be enabled to determine your speed.';
 }
 
+// Path: tools.mc_server_ping.error
+class _StringsToolsMcServerPingErrorEn {
+	_StringsToolsMcServerPingErrorEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get please_enter_a_server_ip => 'Please enter a server IP or domain';
+	String get server_offline_or_does_not_exist => 'The server is offline or does not exist';
+	String get please_check_your_internet_connection => 'Please check your internet connection and try again';
+}
+
 // Path: <root>
 class _StringsFr implements Translations {
 	/// You can call this constructor and build your own translation instance of this locale.
@@ -931,6 +966,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsOsmFr osm = _StringsToolsOsmFr._(_root);
 	@override late final _StringsToolsGameoflifeFr gameoflife = _StringsToolsGameoflifeFr._(_root);
 	@override late final _StringsToolsSpeedometerFr speedometer = _StringsToolsSpeedometerFr._(_root);
+	@override late final _StringsToolsMcServerPingFr mc_server_ping = _StringsToolsMcServerPingFr._(_root);
 }
 
 // Path: credits
@@ -1365,6 +1401,28 @@ class _StringsToolsSpeedometerFr implements _StringsToolsSpeedometerEn {
 	@override late final _StringsToolsSpeedometerErrorFr error = _StringsToolsSpeedometerErrorFr._(_root);
 }
 
+// Path: tools.mc_server_ping
+class _StringsToolsMcServerPingFr implements _StringsToolsMcServerPingEn {
+	_StringsToolsMcServerPingFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Ping serveur MC';
+	@override String get java_edition => 'Édition Java';
+	@override String get information_java => 'Information';
+	@override String get information_java_description => 'Cochez cette case si le serveur est disponible pour l\'édition Java de Minecraft. Si ce n\'est pas le cas, décochez-la et l\'outil utilisera l\'API de l\'édition Bedrock.';
+	@override String get server_ip => 'IP ou domaine du serveur Minecraft';
+	@override String get ping => 'Ping';
+	@override String get ping_another_server => 'Ping un autre serveur';
+	@override String get api_used => 'API utilisée';
+	@override String get about_the_api => 'À propos de l\'API';
+	@override String about_the_api_description({required Object source, required Object website}) => 'Cet outil utilise "${source}" du site "${website}" pour ping les serveurs Minecraft.';
+	@override String get about_open => 'Ouvrir';
+	@override String the_server_id_is({required Object id}) => 'L\'ID du serveur est "${id}"';
+	@override late final _StringsToolsMcServerPingErrorFr error = _StringsToolsMcServerPingErrorFr._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsFr implements _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsFr._(this._root);
@@ -1578,6 +1636,18 @@ class _StringsToolsSpeedometerErrorFr implements _StringsToolsSpeedometerErrorEn
 	@override String get location_permission_denied_description => 'Cet outil nécessite l\'accès à la position pour déterminer votre vitesse.';
 	@override String get location_services_disabled_title => 'Services de position désactivés';
 	@override String get location_services_disabled_description => 'Cet outil nécessite que les services de localisation soient activés pour déterminer votre vitesse.';
+}
+
+// Path: tools.mc_server_ping.error
+class _StringsToolsMcServerPingErrorFr implements _StringsToolsMcServerPingErrorEn {
+	_StringsToolsMcServerPingErrorFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get please_enter_a_server_ip => 'Veuillez entrer une adresse IP ou un nom de domaine valide';
+	@override String get server_offline_or_does_not_exist => 'Le serveur est hors ligne ou n\'existe pas';
+	@override String get please_check_your_internet_connection => 'Veuillez vérifier votre connexion internet et réessayer';
 }
 
 /// Flat map(s) containing all translations.
@@ -1800,6 +1870,21 @@ extension on Translations {
 			case 'tools.speedometer.error.location_permission_denied_description': return 'This tool requires location permission to determine your speed.';
 			case 'tools.speedometer.error.location_services_disabled_title': return 'Location services disabled';
 			case 'tools.speedometer.error.location_services_disabled_description': return 'This tool requires location services to be enabled to determine your speed.';
+			case 'tools.mc_server_ping.title': return 'MC server ping';
+			case 'tools.mc_server_ping.java_edition': return 'Java Edition';
+			case 'tools.mc_server_ping.information_java': return 'Information';
+			case 'tools.mc_server_ping.information_java_description': return 'Check this box if the server is available for the Java Edition of Minecraft. If not, unchecked it and the tool will use the Bedrock Edition API.';
+			case 'tools.mc_server_ping.server_ip': return 'Minecraft server IP (or domain)';
+			case 'tools.mc_server_ping.ping': return 'Ping server';
+			case 'tools.mc_server_ping.ping_another_server': return 'Ping another server';
+			case 'tools.mc_server_ping.api_used': return 'API used';
+			case 'tools.mc_server_ping.about_the_api': return 'About the API';
+			case 'tools.mc_server_ping.about_the_api_description': return ({required Object source, required Object website}) => 'This tool uses the "${source}" from "${website}" to ping Minecraft servers.';
+			case 'tools.mc_server_ping.about_open': return 'Open';
+			case 'tools.mc_server_ping.the_server_id_is': return ({required Object id}) => 'The server ID is "${id}"';
+			case 'tools.mc_server_ping.error.please_enter_a_server_ip': return 'Please enter a server IP or domain';
+			case 'tools.mc_server_ping.error.server_offline_or_does_not_exist': return 'The server is offline or does not exist';
+			case 'tools.mc_server_ping.error.please_check_your_internet_connection': return 'Please check your internet connection and try again';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -2030,6 +2115,21 @@ extension on _StringsFr {
 			case 'tools.speedometer.error.location_permission_denied_description': return 'Cet outil nécessite l\'accès à la position pour déterminer votre vitesse.';
 			case 'tools.speedometer.error.location_services_disabled_title': return 'Services de position désactivés';
 			case 'tools.speedometer.error.location_services_disabled_description': return 'Cet outil nécessite que les services de localisation soient activés pour déterminer votre vitesse.';
+			case 'tools.mc_server_ping.title': return 'Ping serveur MC';
+			case 'tools.mc_server_ping.java_edition': return 'Édition Java';
+			case 'tools.mc_server_ping.information_java': return 'Information';
+			case 'tools.mc_server_ping.information_java_description': return 'Cochez cette case si le serveur est disponible pour l\'édition Java de Minecraft. Si ce n\'est pas le cas, décochez-la et l\'outil utilisera l\'API de l\'édition Bedrock.';
+			case 'tools.mc_server_ping.server_ip': return 'IP ou domaine du serveur Minecraft';
+			case 'tools.mc_server_ping.ping': return 'Ping';
+			case 'tools.mc_server_ping.ping_another_server': return 'Ping un autre serveur';
+			case 'tools.mc_server_ping.api_used': return 'API utilisée';
+			case 'tools.mc_server_ping.about_the_api': return 'À propos de l\'API';
+			case 'tools.mc_server_ping.about_the_api_description': return ({required Object source, required Object website}) => 'Cet outil utilise "${source}" du site "${website}" pour ping les serveurs Minecraft.';
+			case 'tools.mc_server_ping.about_open': return 'Ouvrir';
+			case 'tools.mc_server_ping.the_server_id_is': return ({required Object id}) => 'L\'ID du serveur est "${id}"';
+			case 'tools.mc_server_ping.error.please_enter_a_server_ip': return 'Veuillez entrer une adresse IP ou un nom de domaine valide';
+			case 'tools.mc_server_ping.error.server_offline_or_does_not_exist': return 'Le serveur est hors ligne ou n\'existe pas';
+			case 'tools.mc_server_ping.error.please_check_your_internet_connection': return 'Veuillez vérifier votre connexion internet et réessayer';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';

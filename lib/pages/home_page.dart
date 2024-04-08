@@ -9,6 +9,7 @@ import 'package:toolbox/pages/fileencryption_page.dart';
 import 'package:toolbox/pages/flipcoins_page.dart';
 import 'package:toolbox/pages/gameoflife_page.dart';
 import 'package:toolbox/pages/httprequest_page.dart';
+import 'package:toolbox/pages/mc_server_ping.dart';
 import 'package:toolbox/pages/metronome_page.dart';
 import 'package:toolbox/pages/megaphone_page.dart';
 import 'package:toolbox/pages/morsecode_page.dart';
@@ -66,6 +67,8 @@ class _HomePage extends State<HomePage> {
           const GameOfLifePage()),
       Tool(t.tools.httprequest.title, "assets/images/tools/httprequest.png",
           const HttpRequestPage()),
+      Tool("MC server ping", "assets/images/tools/mc_server_ping.png",
+          const McServerPing()),
       Tool(t.tools.metronome.title, "assets/images/tools/metronome.png",
           const MetronomePage()),
       /*Tool(t.tools.megaphone.title, "assets/images/tools/megaphone.png",

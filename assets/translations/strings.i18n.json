@@ -303,6 +303,25 @@
         "location_services_disabled_title": "Location services disabled",
         "location_services_disabled_description": "This tool requires location services to be enabled to determine your speed."
       }
+    },
+    "mc_server_ping": {
+      "title": "MC server ping",
+      "java_edition": "Java Edition",
+      "information_java": "Information",
+      "information_java_description": "Check this box if the server is available for the Java Edition of Minecraft. If not, unchecked it and the tool will use the Bedrock Edition API.",
+      "server_ip": "Minecraft server IP (or domain)",
+      "ping": "Ping server",
+      "ping_another_server": "Ping another server",
+      "api_used": "API used",
+      "about_the_api": "About the API",
+      "about_the_api_description": "This tool uses the \"$source\" from \"$website\" to ping Minecraft servers.",
+      "about_open": "Open",
+      "the_server_id_is": "The server ID is \"$id\"",
+      "error": {
+        "please_enter_a_server_ip": "Please enter a server IP or domain",
+        "server_offline_or_does_not_exist": "The server is offline or does not exist",
+        "please_check_your_internet_connection": "Please check your internet connection and try again"
+      }
     }
   },
   "credits": {

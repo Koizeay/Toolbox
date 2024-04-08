@@ -304,6 +304,25 @@
         "location_services_disabled_title": "Services de position désactivés",
         "location_services_disabled_description": "Cet outil nécessite que les services de localisation soient activés pour déterminer votre vitesse."
       }
+    },
+    "mc_server_ping": {
+      "title": "Ping serveur MC",
+      "java_edition": "Édition Java",
+      "information_java": "Information",
+      "information_java_description": "Cochez cette case si le serveur est disponible pour l'édition Java de Minecraft. Si ce n'est pas le cas, décochez-la et l'outil utilisera l'API de l'édition Bedrock.",
+      "server_ip": "IP ou domaine du serveur Minecraft",
+      "ping": "Ping",
+      "ping_another_server": "Ping un autre serveur",
+      "api_used": "API utilisée",
+      "about_the_api": "À propos de l'API",
+      "about_the_api_description": "Cet outil utilise \"$source\" du site \"$website\" pour ping les serveurs Minecraft.",
+      "about_open": "Ouvrir",
+      "the_server_id_is": "L'ID du serveur est \"$id\"",
+      "error": {
+        "please_enter_a_server_ip": "Veuillez entrer une adresse IP ou un nom de domaine valide",
+        "server_offline_or_does_not_exist": "Le serveur est hors ligne ou n'existe pas",
+        "please_check_your_internet_connection": "Veuillez vérifier votre connexion internet et réessayer"
+      }
     }
   },
   "credits": {
