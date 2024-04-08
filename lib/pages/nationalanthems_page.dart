@@ -127,10 +127,6 @@ class _NationalAnthemsPage extends State<NationalAnthemsPage> {
   void showLicenseDialog() {
     List<TextButton> buttons = [
       TextButton(
-        onPressed: () => Navigator.pop(context),
-        child: Text(t.generic.ok),
-      ),
-      TextButton(
           onPressed: () => launchUrlInBrowser("https://nationalanthems.info/"),
           child: Text(t.tools.nationalanthems.open)
       ),
@@ -139,7 +135,11 @@ class _NationalAnthemsPage extends State<NationalAnthemsPage> {
               launchUrlInBrowser(
                   "https://creativecommons.org/licenses/by/4.0/"),
           child: Text(t.tools.nationalanthems.view_license)
-      )
+      ),
+      TextButton(
+        onPressed: () => Navigator.pop(context),
+        child: Text(t.generic.ok),
+      ),
     ];
     showCustomButtonsTextDialog(
       context,
