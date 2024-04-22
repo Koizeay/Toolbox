@@ -75,10 +75,6 @@ dependencies:
   maps_launcher: ^2.2.0
   geolocator: ^10.1.0
   path_provider: ^2.1.1
-  connectivity_plus:
-    git:
-      url: https://github.com/fluttercommunity/plus_plugins.git
-      path: packages/connectivity_plus/connectivity_plus
   aes_crypt_null_safe: ^2.0.2
   flutter_file_dialog: ^3.0.2
   assets_audio_player: ^3.1.1
