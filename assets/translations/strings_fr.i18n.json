@@ -250,6 +250,8 @@
       "body": "Corps (body)",
       "send_request": "Envoyer la requête",
       "response": "Réponse",
+      "render_html": "Rendre le HTML",
+      "back_to_details": "Retour aux détails",
       "status_code": "Code d'état",
       "error": {
         "url_cannot_be_empty": "L'URL ne peut pas être vide",

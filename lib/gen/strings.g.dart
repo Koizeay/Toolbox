@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 474 (237 per locale)
+/// Strings: 478 (239 per locale)
 ///
-/// Built on 2024-04-08 at 18:18 UTC
+/// Built on 2024-04-22 at 15:21 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -569,6 +569,8 @@ class _StringsToolsHttprequestEn {
 	String get url => 'URL';
 	String get headers => 'Headers';
 	String get body => 'Body';
+	String get render_html => 'Render HTML';
+	String get back_to_details => 'Back to details';
 	String get send_request => 'Send request';
 	String get response => 'Response';
 	String get status_code => 'Status code';
@@ -1334,6 +1336,8 @@ class _StringsToolsHttprequestFr implements _StringsToolsHttprequestEn {
 	@override String get body => 'Corps (body)';
 	@override String get send_request => 'Envoyer la requête';
 	@override String get response => 'Réponse';
+	@override String get render_html => 'Rendre le HTML';
+	@override String get back_to_details => 'Retour aux détails';
 	@override String get status_code => 'Code d\'état';
 	@override late final _StringsToolsHttprequestErrorFr error = _StringsToolsHttprequestErrorFr._(_root);
 }
@@ -1830,6 +1834,8 @@ extension on Translations {
 			case 'tools.httprequest.url': return 'URL';
 			case 'tools.httprequest.headers': return 'Headers';
 			case 'tools.httprequest.body': return 'Body';
+			case 'tools.httprequest.render_html': return 'Render HTML';
+			case 'tools.httprequest.back_to_details': return 'Back to details';
 			case 'tools.httprequest.send_request': return 'Send request';
 			case 'tools.httprequest.response': return 'Response';
 			case 'tools.httprequest.status_code': return 'Status code';
@@ -2077,6 +2083,8 @@ extension on _StringsFr {
 			case 'tools.httprequest.body': return 'Corps (body)';
 			case 'tools.httprequest.send_request': return 'Envoyer la requête';
 			case 'tools.httprequest.response': return 'Réponse';
+			case 'tools.httprequest.render_html': return 'Rendre le HTML';
+			case 'tools.httprequest.back_to_details': return 'Retour aux détails';
 			case 'tools.httprequest.status_code': return 'Code d\'état';
 			case 'tools.httprequest.error.url_cannot_be_empty': return 'L\'URL ne peut pas être vide';
 			case 'tools.httprequest.error.invalid_url': return 'URL invalide';

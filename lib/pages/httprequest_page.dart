@@ -2,9 +2,11 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:toolbox/gen/strings.g.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
 class HttpRequestPage extends StatefulWidget {
   const HttpRequestPage({ Key? key }) : super(key: key);
@@ -14,11 +16,26 @@ class HttpRequestPage extends StatefulWidget {
 
 class _HttpRequestPage extends State<HttpRequestPage> {
   bool isLoading = false;
+  bool renderHtml = false;
 
   TextEditingController methodController = TextEditingController();
   TextEditingController urlController = TextEditingController();
   TextEditingController bodyController = TextEditingController();
   TextEditingController headersController = TextEditingController();
+
+  UniqueKey webViewKey = UniqueKey();
+
+  WebViewController webViewController = WebViewController()
+    ..setJavaScriptMode(JavaScriptMode.disabled)
+    ..clearCache()
+    ..clearLocalStorage()
+    ..setNavigationDelegate(
+      NavigationDelegate(
+        onNavigationRequest: (NavigationRequest request) {
+          return NavigationDecision.prevent;
+        },
+      ),
+    );
 
   List<String> methods = [
     "GET",
@@ -219,10 +236,34 @@ class _HttpRequestPage extends State<HttpRequestPage> {
       child: Scaffold(
           appBar: AppBar(
             title: Text("${t.generic.app_name} - ${t.tools.httprequest.title}"),
+            actions: [
+              responseBody.isNotEmpty
+                  ? Tooltip(
+                message: renderHtml ? t.tools.httprequest.back_to_details : t.tools.httprequest.render_html,
+                child: IconButton(
+                  icon: renderHtml ? const Icon(Icons.short_text) : const Icon(Icons.html),
+                  onPressed: () {
+                    setState(() {
+                      renderHtml = !renderHtml;
+                      if (renderHtml) {
+                        webViewController.loadHtmlString(responseBody);
+                      }
+                    });
+                  },
+                ),
+              )
+                  : Container(),
+            ],
           ),
           body: SafeArea(
             child: isLoading
                 ? const Center(child: CircularProgressIndicator(),)
+                : renderHtml
+                ? Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: WebViewWidget(
+                controller: webViewController, key: webViewKey,),
+            )
                 : SingleChildScrollView(
               child: Center(
                 child: Column(
@@ -300,6 +341,10 @@ class _HttpRequestPage extends State<HttpRequestPage> {
                               onPressed: () async {
                                 setState(() {
                                   isLoading = true;
+                                  renderHtml = false;
+                                  webViewController.clearCache();
+                                  webViewController.clearLocalStorage();
+                                  webViewController.loadRequest(Uri.parse("about:blank"));
                                 });
                                 sendButtonPressed().then((value) {
                                   if (mounted) {

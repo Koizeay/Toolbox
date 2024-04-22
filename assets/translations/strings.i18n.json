@@ -247,6 +247,8 @@
       "url": "URL",
       "headers": "Headers",
       "body": "Body",
+      "render_html": "Render HTML",
+      "back_to_details": "Back to details",
       "send_request": "Send request",
       "response": "Response",
       "status_code": "Status code",
