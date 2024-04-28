@@ -116,6 +116,32 @@ class _CreditsPage extends State<CreditsPage> {
               ),
               GestureDetector(
                 onTap: () {
+                  showLicensePage(
+                    context: context,
+                    applicationName: t.generic.app_name,
+                    applicationLegalese: t.credits.app_license(license: "GNU GPLv3"),
+                    applicationIcon: const Padding(
+                      padding: EdgeInsets.all(4.0),
+                      child: Image(image: AssetImage("assets/images/icons/icon_rounded.png"), width: 50, height: 50),
+                    )
+                  );
+                },
+                child: SizedBox(
+                  width: double.infinity,
+                  child: Card(
+                    child: Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Text(
+                        t.credits.view_licenses,
+                        style: TextStyle(fontSize: 14, color: Theme.of(context).colorScheme.primary, fontWeight: FontWeight.bold),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
                   launchUrlInBrowser("https://github.com/Koizeay/Toolbox");
                 },
                 child: SizedBox(

@@ -332,6 +332,7 @@
     "app_icon": "Icône de l'application par $author",
     "app_license": "Application sous licence $license",
     "tools_icons": "Icônes des outils par $author",
+    "view_licenses": "Voir les licences",
     "contribute_on_github": "Contribuez sur GitHub",
     "translations": {
       "title": "Traductions",

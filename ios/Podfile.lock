@@ -8,9 +8,6 @@ PODS:
     - Flutter
   - audioplayers_darwin (0.0.1):
     - Flutter
-  - connectivity_plus (0.0.1):
-    - Flutter
-    - ReachabilitySwift
   - DKImagePickerController/Core (4.3.4):
     - DKImagePickerController/ImageDataManager
     - DKImagePickerController/Resource
@@ -133,7 +130,6 @@ PODS:
     - Flutter
   - Polyline (5.1.0)
   - PromisesObjC (2.2.0)
-  - ReachabilitySwift (5.0.0)
   - SDWebImage (5.17.0):
     - SDWebImage/Core (= 5.17.0)
   - SDWebImage/Core (5.17.0)
@@ -150,6 +146,8 @@ PODS:
     - Flutter
   - wakelock (0.0.1):
     - Flutter
+  - webview_flutter_wkwebview (0.0.1):
+    - Flutter
   - Yams (5.0.6)
 
 DEPENDENCIES:
@@ -157,7 +155,6 @@ DEPENDENCIES:
   - assets_audio_player_web (from `.symlinks/plugins/assets_audio_player_web/ios`)
   - audio_streamer (from `.symlinks/plugins/audio_streamer/ios`)
   - audioplayers_darwin (from `.symlinks/plugins/audioplayers_darwin/ios`)
-  - connectivity_plus (from `.symlinks/plugins/connectivity_plus/ios`)
   - file_picker (from `.symlinks/plugins/file_picker/ios`)
   - Flutter (from `Flutter`)
   - flutter_file_dialog (from `.symlinks/plugins/flutter_file_dialog/ios`)
@@ -177,6 +174,7 @@ DEPENDENCIES:
   - url_launcher_ios (from `.symlinks/plugins/url_launcher_ios/ios`)
   - vibration (from `.symlinks/plugins/vibration/ios`)
   - wakelock (from `.symlinks/plugins/wakelock/ios`)
+  - webview_flutter_wkwebview (from `.symlinks/plugins/webview_flutter_wkwebview/ios`)
 
 SPEC REPOS:
   trunk:
@@ -197,7 +195,6 @@ SPEC REPOS:
     - nanopb
     - Polyline
     - PromisesObjC
-    - ReachabilitySwift
     - SDWebImage
     - SwiftyGif
     - Tangram-es
@@ -212,8 +209,6 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/audio_streamer/ios"
   audioplayers_darwin:
     :path: ".symlinks/plugins/audioplayers_darwin/ios"
-  connectivity_plus:
-    :path: ".symlinks/plugins/connectivity_plus/ios"
   file_picker:
     :path: ".symlinks/plugins/file_picker/ios"
   Flutter:
@@ -252,6 +247,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/vibration/ios"
   wakelock:
     :path: ".symlinks/plugins/wakelock/ios"
+  webview_flutter_wkwebview:
+    :path: ".symlinks/plugins/webview_flutter_wkwebview/ios"
 
 SPEC CHECKSUMS:
   Alamofire: 3ca42e259043ee0dc5c0cdd76c4bc568b8e42af7
@@ -259,7 +256,6 @@ SPEC CHECKSUMS:
   assets_audio_player_web: 19826380c44375761aa0b9053665c1e3fbc3b86b
   audio_streamer: af49e73eb66f71c4eeabb4bbcb05f122d03a6709
   audioplayers_darwin: 877d9a4d06331c5c374595e46e16453ac7eafa40
-  connectivity_plus: bf0076dd84a130856aa636df1c71ccaff908fa1d
   DKImagePickerController: b512c28220a2b8ac7419f21c491fc8534b7601ac
   DKPhotoGallery: fdfad5125a9fdda9cc57df834d49df790dbb4179
   file_picker: ce3938a0df3cc1ef404671531facef740d03f920
@@ -290,7 +286,6 @@ SPEC CHECKSUMS:
   permission_handler_apple: e76247795d700c14ea09e3a2d8855d41ee80a2e6
   Polyline: 2a1f29f87f8d9b7de868940f4f76deb8c678a5b1
   PromisesObjC: 09985d6d70fbe7878040aa746d78236e6946d2ef
-  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   SDWebImage: 750adf017a315a280c60fde706ab1e552a3ae4e9
   share_plus: 056a1e8ac890df3e33cb503afffaf1e9b4fbae68
   shared_preferences_foundation: b4c3b4cddf1c21f02770737f147a3f5da9d39695
@@ -299,6 +294,7 @@ SPEC CHECKSUMS:
   url_launcher_ios: bbd758c6e7f9fd7b5b1d4cde34d2b95fcce5e812
   vibration: 7d883d141656a1c1a6d8d238616b2042a51a1241
   wakelock: d0fc7c864128eac40eba1617cb5264d9c940b46f
+  webview_flutter_wkwebview: be0f0d33777f1bfd0c9fdcb594786704dbf65f36
   Yams: e10dae147f517ed57ecae37c5e8681bdf8fcab65
 
 PODFILE CHECKSUM: eee683ceeb24aed5f8c2b9f190527456a10c77e4

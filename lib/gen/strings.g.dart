@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 478 (239 per locale)
+/// Strings: 480 (240 per locale)
 ///
-/// Built on 2024-04-22 at 15:21 UTC
+/// Built on 2024-04-28 at 14:26 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -217,6 +217,7 @@ class _StringsCreditsEn {
 	String app_icon({required Object author}) => 'App icon by ${author}';
 	String app_license({required Object license}) => 'The app is licensed under the ${license} license';
 	String tools_icons({required Object author}) => 'Tools icons by ${author}';
+	String get view_licenses => 'View licenses';
 	String get contribute_on_github => 'Contribute on GitHub';
 	late final _StringsCreditsTranslationsEn translations = _StringsCreditsTranslationsEn._(_root);
 }
@@ -982,6 +983,7 @@ class _StringsCreditsFr implements _StringsCreditsEn {
 	@override String app_icon({required Object author}) => 'Icône de l\'application par ${author}';
 	@override String app_license({required Object license}) => 'Application sous licence ${license}';
 	@override String tools_icons({required Object author}) => 'Icônes des outils par ${author}';
+	@override String get view_licenses => 'Voir les licences';
 	@override String get contribute_on_github => 'Contribuez sur GitHub';
 	@override late final _StringsCreditsTranslationsFr translations = _StringsCreditsTranslationsFr._(_root);
 }
@@ -1895,6 +1897,7 @@ extension on Translations {
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
 			case 'credits.tools_icons': return ({required Object author}) => 'Tools icons by ${author}';
+			case 'credits.view_licenses': return 'View licenses';
 			case 'credits.contribute_on_github': return 'Contribute on GitHub';
 			case 'credits.translations.title': return 'Translations';
 			case 'credits.translations.english': return ({required Object author}) => 'English by ${author}';
@@ -2142,6 +2145,7 @@ extension on _StringsFr {
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';
 			case 'credits.tools_icons': return ({required Object author}) => 'Icônes des outils par ${author}';
+			case 'credits.view_licenses': return 'Voir les licences';
 			case 'credits.contribute_on_github': return 'Contribuez sur GitHub';
 			case 'credits.translations.title': return 'Traductions';
 			case 'credits.translations.english': return ({required Object author}) => 'Anglais par ${author}';

@@ -331,6 +331,7 @@
     "app_icon": "App icon by $author",
     "app_license": "The app is licensed under the $license license",
     "tools_icons": "Tools icons by $author",
+    "view_licenses": "View licenses",
     "contribute_on_github": "Contribute on GitHub",
     "translations": {
       "title": "Translations",
