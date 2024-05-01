@@ -134,7 +134,7 @@ class _NearbyPublicTransportStopsPage extends State<NearbyPublicTransportStopsPa
           context,
           t.tools.nearbypublictransportstops.initial_dialog_title,
           t.tools.nearbypublictransportstops.initial_dialog_message(
-              source: "Open data platform mobility Switzerland")
+              source: "Opendata.ch (Transport)")
       );
       var prefs = await SharedPreferences.getInstance();
       prefs.setBool(
