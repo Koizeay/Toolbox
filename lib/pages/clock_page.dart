@@ -34,6 +34,9 @@ class _ClockPage extends State<ClockPage> {
   @override
   void dispose() {
     setHomePageRotation();
+    if (isFullscreen) {
+      SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+    }
     super.dispose();
   }
 
