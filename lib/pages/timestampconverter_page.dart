@@ -132,6 +132,7 @@ class _TimestampConverterPage extends State<TimestampConverterPage> {
                           Expanded(
                             child: TextField(
                               controller: unixTimestampController,
+                              keyboardType: TextInputType.number,
                               decoration: InputDecoration(
                                 labelText: t.tools.timestampconverter.unix_timestamp,
                                 border: const OutlineInputBorder(),
