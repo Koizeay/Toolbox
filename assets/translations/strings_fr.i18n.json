@@ -325,6 +325,20 @@
         "server_offline_or_does_not_exist": "Le serveur est hors ligne ou n'existe pas",
         "please_check_your_internet_connection": "Veuillez vérifier votre connexion internet et réessayer"
       }
+    },
+    "timestampconverter": {
+      "title": "Convertisseur de timestamp",
+      "now_tooltip": "Maintenant",
+      "utc": "UTC",
+      "local": "Local",
+      "local_or_utc_dialog_title": "Local ou UTC",
+      "local_or_utc_dialog_message": "Allez-vous selectionner une date et une heure locale ou UTC ?",
+      "unix_timestamp": "Timestamp Unix",
+      "convert_timestamp_to_date": "Convertir le timestamp en date",
+      "tap_the_date_to_change_it": "Appuyez sur la date pour la modifier",
+      "error": {
+        "invalid_timestamp": "Timestamp invalide"
+      }
     }
   },
   "credits": {

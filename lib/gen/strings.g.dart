@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 480 (240 per locale)
+/// Strings: 500 (250 per locale)
 ///
-/// Built on 2024-04-28 at 14:26 UTC
+/// Built on 2024-06-04 at 19:54 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -204,6 +204,7 @@ class _StringsToolsEn {
 	late final _StringsToolsGameoflifeEn gameoflife = _StringsToolsGameoflifeEn._(_root);
 	late final _StringsToolsSpeedometerEn speedometer = _StringsToolsSpeedometerEn._(_root);
 	late final _StringsToolsMcServerPingEn mc_server_ping = _StringsToolsMcServerPingEn._(_root);
+	late final _StringsToolsTimestampconverterEn timestampconverter = _StringsToolsTimestampconverterEn._(_root);
 }
 
 // Path: credits
@@ -663,6 +664,25 @@ class _StringsToolsMcServerPingEn {
 	late final _StringsToolsMcServerPingErrorEn error = _StringsToolsMcServerPingErrorEn._(_root);
 }
 
+// Path: tools.timestampconverter
+class _StringsToolsTimestampconverterEn {
+	_StringsToolsTimestampconverterEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'Timestamp converter';
+	String get now_tooltip => 'Now';
+	String get utc => 'UTC';
+	String get local => 'Local';
+	String get local_or_utc_dialog_title => 'Local or UTC';
+	String get local_or_utc_dialog_message => 'Do you want to pick a local or UTC date?';
+	String get unix_timestamp => 'Unix timestamp';
+	String get convert_timestamp_to_date => 'Convert timestamp to date';
+	String get tap_the_date_to_change_it => 'Tap the date to change it';
+	late final _StringsToolsTimestampconverterErrorEn error = _StringsToolsTimestampconverterErrorEn._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsEn._(this._root);
@@ -890,6 +910,16 @@ class _StringsToolsMcServerPingErrorEn {
 	String get please_check_your_internet_connection => 'Please check your internet connection and try again';
 }
 
+// Path: tools.timestampconverter.error
+class _StringsToolsTimestampconverterErrorEn {
+	_StringsToolsTimestampconverterErrorEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get invalid_timestamp => 'Invalid timestamp';
+}
+
 // Path: <root>
 class _StringsFr implements Translations {
 	/// You can call this constructor and build your own translation instance of this locale.
@@ -970,6 +1000,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsGameoflifeFr gameoflife = _StringsToolsGameoflifeFr._(_root);
 	@override late final _StringsToolsSpeedometerFr speedometer = _StringsToolsSpeedometerFr._(_root);
 	@override late final _StringsToolsMcServerPingFr mc_server_ping = _StringsToolsMcServerPingFr._(_root);
+	@override late final _StringsToolsTimestampconverterFr timestampconverter = _StringsToolsTimestampconverterFr._(_root);
 }
 
 // Path: credits
@@ -1429,6 +1460,25 @@ class _StringsToolsMcServerPingFr implements _StringsToolsMcServerPingEn {
 	@override late final _StringsToolsMcServerPingErrorFr error = _StringsToolsMcServerPingErrorFr._(_root);
 }
 
+// Path: tools.timestampconverter
+class _StringsToolsTimestampconverterFr implements _StringsToolsTimestampconverterEn {
+	_StringsToolsTimestampconverterFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Convertisseur de timestamp';
+	@override String get now_tooltip => 'Maintenant';
+	@override String get utc => 'UTC';
+	@override String get local => 'Local';
+	@override String get local_or_utc_dialog_title => 'Local ou UTC';
+	@override String get local_or_utc_dialog_message => 'Allez-vous selectionner une date et une heure locale ou UTC ?';
+	@override String get unix_timestamp => 'Timestamp Unix';
+	@override String get convert_timestamp_to_date => 'Convertir le timestamp en date';
+	@override String get tap_the_date_to_change_it => 'Appuyez sur la date pour la modifier';
+	@override late final _StringsToolsTimestampconverterErrorFr error = _StringsToolsTimestampconverterErrorFr._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsFr implements _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsFr._(this._root);
@@ -1654,6 +1704,16 @@ class _StringsToolsMcServerPingErrorFr implements _StringsToolsMcServerPingError
 	@override String get please_enter_a_server_ip => 'Veuillez entrer une adresse IP ou un nom de domaine valide';
 	@override String get server_offline_or_does_not_exist => 'Le serveur est hors ligne ou n\'existe pas';
 	@override String get please_check_your_internet_connection => 'Veuillez vérifier votre connexion internet et réessayer';
+}
+
+// Path: tools.timestampconverter.error
+class _StringsToolsTimestampconverterErrorFr implements _StringsToolsTimestampconverterErrorEn {
+	_StringsToolsTimestampconverterErrorFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get invalid_timestamp => 'Timestamp invalide';
 }
 
 /// Flat map(s) containing all translations.
@@ -1893,6 +1953,16 @@ extension on Translations {
 			case 'tools.mc_server_ping.error.please_enter_a_server_ip': return 'Please enter a server IP or domain';
 			case 'tools.mc_server_ping.error.server_offline_or_does_not_exist': return 'The server is offline or does not exist';
 			case 'tools.mc_server_ping.error.please_check_your_internet_connection': return 'Please check your internet connection and try again';
+			case 'tools.timestampconverter.title': return 'Timestamp converter';
+			case 'tools.timestampconverter.now_tooltip': return 'Now';
+			case 'tools.timestampconverter.utc': return 'UTC';
+			case 'tools.timestampconverter.local': return 'Local';
+			case 'tools.timestampconverter.local_or_utc_dialog_title': return 'Local or UTC';
+			case 'tools.timestampconverter.local_or_utc_dialog_message': return 'Do you want to pick a local or UTC date?';
+			case 'tools.timestampconverter.unix_timestamp': return 'Unix timestamp';
+			case 'tools.timestampconverter.convert_timestamp_to_date': return 'Convert timestamp to date';
+			case 'tools.timestampconverter.tap_the_date_to_change_it': return 'Tap the date to change it';
+			case 'tools.timestampconverter.error.invalid_timestamp': return 'Invalid timestamp';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -2141,6 +2211,16 @@ extension on _StringsFr {
 			case 'tools.mc_server_ping.error.please_enter_a_server_ip': return 'Veuillez entrer une adresse IP ou un nom de domaine valide';
 			case 'tools.mc_server_ping.error.server_offline_or_does_not_exist': return 'Le serveur est hors ligne ou n\'existe pas';
 			case 'tools.mc_server_ping.error.please_check_your_internet_connection': return 'Veuillez vérifier votre connexion internet et réessayer';
+			case 'tools.timestampconverter.title': return 'Convertisseur de timestamp';
+			case 'tools.timestampconverter.now_tooltip': return 'Maintenant';
+			case 'tools.timestampconverter.utc': return 'UTC';
+			case 'tools.timestampconverter.local': return 'Local';
+			case 'tools.timestampconverter.local_or_utc_dialog_title': return 'Local ou UTC';
+			case 'tools.timestampconverter.local_or_utc_dialog_message': return 'Allez-vous selectionner une date et une heure locale ou UTC ?';
+			case 'tools.timestampconverter.unix_timestamp': return 'Timestamp Unix';
+			case 'tools.timestampconverter.convert_timestamp_to_date': return 'Convertir le timestamp en date';
+			case 'tools.timestampconverter.tap_the_date_to_change_it': return 'Appuyez sur la date pour la modifier';
+			case 'tools.timestampconverter.error.invalid_timestamp': return 'Timestamp invalide';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';

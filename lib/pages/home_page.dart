@@ -5,6 +5,7 @@ import 'package:toolbox/gen/strings.g.dart';
 import 'package:toolbox/models/tool.dart';
 import 'package:toolbox/pages/clock_page.dart';
 import 'package:toolbox/pages/credits_page.dart';
+import 'package:toolbox/pages/timestampconverter_page.dart';
 import 'package:toolbox/pages/fileencryption_page.dart';
 import 'package:toolbox/pages/flipcoins_page.dart';
 import 'package:toolbox/pages/gameoflife_page.dart';
@@ -107,6 +108,8 @@ class _HomePage extends State<HomePage> {
           const TextToSpeechPage()),
       Tool(t.tools.timer.title, "assets/images/tools/timer.png",
           const TimerPage()),
+      Tool(t.tools.timestampconverter.title, "assets/images/tools/timestampconverter.png",
+          const TimestampConverterPage()),
       Tool(t.tools.uuidgenerator.title, "assets/images/tools/uuidgenerator.png",
           const UuidGeneratorPage()),
       Tool(t.tools.whiteboard.title, "assets/images/tools/whiteboard.png",
