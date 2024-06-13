@@ -21,12 +21,13 @@ class _TimestampConverterPage extends State<TimestampConverterPage> {
   @override
   void initState() {
     super.initState();
-    updateTime(DateTime.now());
+    updateTime(DateTime.now().millisecondsSinceEpoch ~/ 1000);
   }
 
-  void updateTime(DateTime dateTime) {
-    unixTimestamp = dateTime.millisecondsSinceEpoch;
+  void updateTime(int secondTimestamp) {
+    unixTimestamp = secondTimestamp;
     unixTimestampController.text = unixTimestamp.toString();
+    DateTime dateTime = DateTime.fromMillisecondsSinceEpoch(secondTimestamp * 1000);
     humanReadableDateUtc = "${DateFormat("yyyy-MM-dd HH:mm:ss").format(dateTime.toUtc())} (${t.tools.timestampconverter.utc})";
     humanReadableDateLocal = "${DateFormat("yyyy-MM-dd HH:mm:ss").format(dateTime.toLocal())} (${t.tools.timestampconverter.local})";
   }
@@ -48,14 +49,20 @@ class _TimestampConverterPage extends State<TimestampConverterPage> {
                   Navigator.of(context).pop();
                   isUtc = false;
                 },
-                child: Text(t.tools.timestampconverter.local, style: TextStyle(fontWeight: FontWeight.w800)),
+                child: Text(
+                    t.tools.timestampconverter.local,
+                    style: const TextStyle(fontWeight: FontWeight.w800)
+                ),
               ),
               TextButton(
                 onPressed: () {
                   Navigator.of(context).pop();
                   isUtc = true;
                 },
-                child: Text(t.tools.timestampconverter.utc, style: TextStyle(fontWeight: FontWeight.w800)),
+                child: Text(
+                    t.tools.timestampconverter.utc,
+                    style: const TextStyle(fontWeight: FontWeight.w800)
+                ),
               ),
               TextButton(
                 onPressed: () {
@@ -88,7 +95,7 @@ class _TimestampConverterPage extends State<TimestampConverterPage> {
             DateTime dateTime = DateFormat("yyyy-MM-dd HH:mm:ss").parse("${date.year}-${date.month}-${date.day} ${time.hour}:${time.minute}:00", pickUtc);
             if (mounted) {
               setState(() {
-                updateTime(dateTime);
+                updateTime(dateTime.millisecondsSinceEpoch ~/ 1000);
               });
             }
           }
@@ -114,7 +121,7 @@ class _TimestampConverterPage extends State<TimestampConverterPage> {
                   icon: const Icon(Icons.access_time),
                   onPressed: () {
                     setState(() {
-                      updateTime(DateTime.now());
+                      updateTime(DateTime.now().millisecondsSinceEpoch ~/ 1000);
                     });
                   },
                 ),
@@ -148,13 +155,11 @@ class _TimestampConverterPage extends State<TimestampConverterPage> {
                                 if (unixTimestampController.text.isNotEmpty) {
                                   int? timestamp = int.tryParse(unixTimestampController.text);
                                   if (timestamp != null &&
-                                      timestamp < 8640000000000000 &&
-                                      timestamp > -8640000000000000) {
+                                      timestamp < 8640000000000 &&
+                                      timestamp > -8640000000000) {
                                     setState(() {
                                       updateTime(
-                                          DateTime.fromMillisecondsSinceEpoch(
-                                              timestamp
-                                          )
+                                          timestamp
                                       );
                                     });
                                   } else {
