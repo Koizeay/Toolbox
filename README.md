@@ -5,6 +5,12 @@ The goal of this project is to create a toolbox mobile app with a lot of tools t
 
 The app is developed to support both Android and iOS, no web or desktop support is planned.
 
+## Download
+Youn can download **Toolbox** on Android and iOS via the following links
+
+- [Play Store (Android)](https://play.google.com/store/apps/details?id=com.koizeay.toolbox)
+- [App Store (iOS)](https://apps.apple.com/app/toolbox-by-koizeay/id6466197390)
+
 ## Contribute
 If you want to contribute to this project, you can do it by adding new tools or by improving the existing ones.
 You can also help by translating the app in your language.\
