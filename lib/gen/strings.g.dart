@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 500 (250 per locale)
+/// Strings: 530 (265 per locale)
 ///
-/// Built on 2024-06-04 at 19:54 UTC
+/// Built on 2024-10-03 at 17:22 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -205,6 +205,7 @@ class _StringsToolsEn {
 	late final _StringsToolsSpeedometerEn speedometer = _StringsToolsSpeedometerEn._(_root);
 	late final _StringsToolsMcServerPingEn mc_server_ping = _StringsToolsMcServerPingEn._(_root);
 	late final _StringsToolsTimestampconverterEn timestampconverter = _StringsToolsTimestampconverterEn._(_root);
+	late final _StringsToolsUrlshortenerEn urlshortener = _StringsToolsUrlshortenerEn._(_root);
 }
 
 // Path: credits
@@ -683,6 +684,28 @@ class _StringsToolsTimestampconverterEn {
 	late final _StringsToolsTimestampconverterErrorEn error = _StringsToolsTimestampconverterErrorEn._(_root);
 }
 
+// Path: tools.urlshortener
+class _StringsToolsUrlshortenerEn {
+	_StringsToolsUrlshortenerEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'URL shortener';
+	String get url => 'URL';
+	String get qr_code => 'QR code';
+	String get share => 'Share';
+	String get share_dialog_message => 'What do you want to share?';
+	String get your_shortened_url_is => 'Your shortened URL is';
+	String get copy_to_clipboard => 'Copy to clipboard';
+	String get shorten_another_url => 'Shorten another URL';
+	String get url_to_shorten => 'URL to shorten';
+	String by_clicking_you_accept({required Object url}) => 'By clicking the shorten button, you agree to the terms of service of "${url}" available via the link below.';
+	String get terms_of_service => 'Terms of service';
+	String get shorten => 'Shorten';
+	late final _StringsToolsUrlshortenerErrorEn error = _StringsToolsUrlshortenerErrorEn._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsEn._(this._root);
@@ -920,6 +943,18 @@ class _StringsToolsTimestampconverterErrorEn {
 	String get invalid_timestamp => 'Invalid timestamp';
 }
 
+// Path: tools.urlshortener.error
+class _StringsToolsUrlshortenerErrorEn {
+	_StringsToolsUrlshortenerErrorEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get failed_to_shorten_url => 'Failed to shorten the URL, please check your input and your internet connection.';
+	String get impossible_to_connect_to_the_server => 'Impossible to connect to the server';
+	String get impossible_to_connect_to_the_server_message => 'Failed to connect to the server, please check your internet connection and try again.';
+}
+
 // Path: <root>
 class _StringsFr implements Translations {
 	/// You can call this constructor and build your own translation instance of this locale.
@@ -1001,6 +1036,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsSpeedometerFr speedometer = _StringsToolsSpeedometerFr._(_root);
 	@override late final _StringsToolsMcServerPingFr mc_server_ping = _StringsToolsMcServerPingFr._(_root);
 	@override late final _StringsToolsTimestampconverterFr timestampconverter = _StringsToolsTimestampconverterFr._(_root);
+	@override late final _StringsToolsUrlshortenerFr urlshortener = _StringsToolsUrlshortenerFr._(_root);
 }
 
 // Path: credits
@@ -1479,6 +1515,28 @@ class _StringsToolsTimestampconverterFr implements _StringsToolsTimestampconvert
 	@override late final _StringsToolsTimestampconverterErrorFr error = _StringsToolsTimestampconverterErrorFr._(_root);
 }
 
+// Path: tools.urlshortener
+class _StringsToolsUrlshortenerFr implements _StringsToolsUrlshortenerEn {
+	_StringsToolsUrlshortenerFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Raccourcisseur d\'URL';
+	@override String get url => 'L\'URL';
+	@override String get qr_code => 'Le code QR';
+	@override String get share => 'Partager';
+	@override String get share_dialog_message => 'Que souhaitez-vous partager ?';
+	@override String get your_shortened_url_is => 'Votre URL raccourcie est';
+	@override String get copy_to_clipboard => 'Copier dans le presse-papiers';
+	@override String get shorten_another_url => 'Raccourcir une autre URL';
+	@override String get url_to_shorten => 'URL à raccourcir';
+	@override String by_clicking_you_accept({required Object url}) => 'En cliquant sur le bouton « raccourcir », vous acceptez les conditions d\'utilisation de "${url}" disponibles via le lien ci-dessous.';
+	@override String get terms_of_service => 'Conditions d\'utilisation (ToS)';
+	@override String get shorten => 'Raccourcir';
+	@override late final _StringsToolsUrlshortenerErrorFr error = _StringsToolsUrlshortenerErrorFr._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsFr implements _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsFr._(this._root);
@@ -1714,6 +1772,18 @@ class _StringsToolsTimestampconverterErrorFr implements _StringsToolsTimestampco
 
 	// Translations
 	@override String get invalid_timestamp => 'Timestamp invalide';
+}
+
+// Path: tools.urlshortener.error
+class _StringsToolsUrlshortenerErrorFr implements _StringsToolsUrlshortenerErrorEn {
+	_StringsToolsUrlshortenerErrorFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get failed_to_shorten_url => 'Le raccourcissement de l\'URL a échoué, veuillez vérifier votre saisie et votre connexion internet.';
+	@override String get impossible_to_connect_to_the_server => 'Impossible de se connecter au serveur';
+	@override String get impossible_to_connect_to_the_server_message => 'Échec de la connexion au serveur, veuillez vérifier votre connexion internet et réessayer.';
 }
 
 /// Flat map(s) containing all translations.
@@ -1963,6 +2033,21 @@ extension on Translations {
 			case 'tools.timestampconverter.convert_timestamp_to_date': return 'Convert timestamp to date';
 			case 'tools.timestampconverter.tap_the_date_to_change_it': return 'Tap the date to change it';
 			case 'tools.timestampconverter.error.invalid_timestamp': return 'Invalid timestamp';
+			case 'tools.urlshortener.title': return 'URL shortener';
+			case 'tools.urlshortener.url': return 'URL';
+			case 'tools.urlshortener.qr_code': return 'QR code';
+			case 'tools.urlshortener.share': return 'Share';
+			case 'tools.urlshortener.share_dialog_message': return 'What do you want to share?';
+			case 'tools.urlshortener.your_shortened_url_is': return 'Your shortened URL is';
+			case 'tools.urlshortener.copy_to_clipboard': return 'Copy to clipboard';
+			case 'tools.urlshortener.shorten_another_url': return 'Shorten another URL';
+			case 'tools.urlshortener.url_to_shorten': return 'URL to shorten';
+			case 'tools.urlshortener.by_clicking_you_accept': return ({required Object url}) => 'By clicking the shorten button, you agree to the terms of service of "${url}" available via the link below.';
+			case 'tools.urlshortener.terms_of_service': return 'Terms of service';
+			case 'tools.urlshortener.shorten': return 'Shorten';
+			case 'tools.urlshortener.error.failed_to_shorten_url': return 'Failed to shorten the URL, please check your input and your internet connection.';
+			case 'tools.urlshortener.error.impossible_to_connect_to_the_server': return 'Impossible to connect to the server';
+			case 'tools.urlshortener.error.impossible_to_connect_to_the_server_message': return 'Failed to connect to the server, please check your internet connection and try again.';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -2221,6 +2306,21 @@ extension on _StringsFr {
 			case 'tools.timestampconverter.convert_timestamp_to_date': return 'Convertir le timestamp en date';
 			case 'tools.timestampconverter.tap_the_date_to_change_it': return 'Appuyez sur la date pour la modifier';
 			case 'tools.timestampconverter.error.invalid_timestamp': return 'Timestamp invalide';
+			case 'tools.urlshortener.title': return 'Raccourcisseur d\'URL';
+			case 'tools.urlshortener.url': return 'L\'URL';
+			case 'tools.urlshortener.qr_code': return 'Le code QR';
+			case 'tools.urlshortener.share': return 'Partager';
+			case 'tools.urlshortener.share_dialog_message': return 'Que souhaitez-vous partager ?';
+			case 'tools.urlshortener.your_shortened_url_is': return 'Votre URL raccourcie est';
+			case 'tools.urlshortener.copy_to_clipboard': return 'Copier dans le presse-papiers';
+			case 'tools.urlshortener.shorten_another_url': return 'Raccourcir une autre URL';
+			case 'tools.urlshortener.url_to_shorten': return 'URL à raccourcir';
+			case 'tools.urlshortener.by_clicking_you_accept': return ({required Object url}) => 'En cliquant sur le bouton « raccourcir », vous acceptez les conditions d\'utilisation de "${url}" disponibles via le lien ci-dessous.';
+			case 'tools.urlshortener.terms_of_service': return 'Conditions d\'utilisation (ToS)';
+			case 'tools.urlshortener.shorten': return 'Raccourcir';
+			case 'tools.urlshortener.error.failed_to_shorten_url': return 'Le raccourcissement de l\'URL a échoué, veuillez vérifier votre saisie et votre connexion internet.';
+			case 'tools.urlshortener.error.impossible_to_connect_to_the_server': return 'Impossible de se connecter au serveur';
+			case 'tools.urlshortener.error.impossible_to_connect_to_the_server_message': return 'Échec de la connexion au serveur, veuillez vérifier votre connexion internet et réessayer.';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';

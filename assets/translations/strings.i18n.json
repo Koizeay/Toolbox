@@ -338,6 +338,25 @@
       "error": {
         "invalid_timestamp": "Invalid timestamp"
       }
+    },
+    "urlshortener": {
+      "title": "URL shortener",
+      "url": "URL",
+      "qr_code": "QR code",
+      "share": "Share",
+      "share_dialog_message": "What do you want to share?",
+      "your_shortened_url_is": "Your shortened URL is",
+      "copy_to_clipboard": "Copy to clipboard",
+      "shorten_another_url": "Shorten another URL",
+      "url_to_shorten": "URL to shorten",
+      "by_clicking_you_accept": "By clicking the shorten button, you agree to the terms of service of \"$url\" available via the link below.",
+      "terms_of_service": "Terms of service",
+      "shorten": "Shorten",
+      "error": {
+        "failed_to_shorten_url": "Failed to shorten the URL, please check your input and your internet connection.",
+        "impossible_to_connect_to_the_server": "Impossible to connect to the server",
+        "impossible_to_connect_to_the_server_message": "Failed to connect to the server, please check your internet connection and try again."
+      }
     }
   },
   "credits": {

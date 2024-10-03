@@ -13,3 +13,7 @@ Future<http.Response> httpGet(String url, Map<String, String> params) async {
   }
   return await http.get(Uri.parse(urlWithParams));
 }
+
+Future<http.Response> httpPost(String url, Map<String, String> params) async {
+  return await http.post(Uri.parse(url), body: params);
+}

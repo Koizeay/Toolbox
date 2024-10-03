@@ -339,6 +339,25 @@
       "error": {
         "invalid_timestamp": "Timestamp invalide"
       }
+    },
+    "urlshortener": {
+      "title": "Raccourcisseur d'URL",
+      "url": "L'URL",
+      "qr_code": "Le code QR",
+      "share": "Partager",
+      "share_dialog_message": "Que souhaitez-vous partager ?",
+      "your_shortened_url_is": "Votre URL raccourcie est",
+      "copy_to_clipboard": "Copier dans le presse-papiers",
+      "shorten_another_url": "Raccourcir une autre URL",
+      "url_to_shorten": "URL à raccourcir",
+      "by_clicking_you_accept": "En cliquant sur le bouton « raccourcir », vous acceptez les conditions d'utilisation de \"$url\" disponibles via le lien ci-dessous.",
+      "terms_of_service": "Conditions d'utilisation (ToS)",
+      "shorten": "Raccourcir",
+      "error": {
+        "failed_to_shorten_url": "Le raccourcissement de l'URL a échoué, veuillez vérifier votre saisie et votre connexion internet.",
+        "impossible_to_connect_to_the_server": "Impossible de se connecter au serveur",
+        "impossible_to_connect_to_the_server_message": "Échec de la connexion au serveur, veuillez vérifier votre connexion internet et réessayer."
+      }
     }
   },
   "credits": {

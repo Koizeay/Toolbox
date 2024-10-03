@@ -29,6 +29,7 @@ import 'package:toolbox/pages/sshclient_page.dart';
 import 'package:toolbox/pages/stopwatch_page.dart';
 import 'package:toolbox/pages/texttospeech_page.dart';
 import 'package:toolbox/pages/timer_page.dart';
+import 'package:toolbox/pages/url_shortener_page.dart';
 import 'package:toolbox/pages/uuidgenerator_page.dart';
 import 'package:toolbox/pages/whiteboard_page.dart';
 import 'package:toolbox/pages/youtubethumbnail_page.dart';
@@ -110,6 +111,8 @@ class _HomePage extends State<HomePage> {
           const TimerPage()),
       Tool(t.tools.timestampconverter.title, "assets/images/tools/timestampconverter.png",
           const TimestampConverterPage()),
+      Tool(t.tools.urlshortener.title, "assets/images/tools/urlshortener.png",
+          const UrlShortenerPage()),
       Tool(t.tools.uuidgenerator.title, "assets/images/tools/uuidgenerator.png",
           const UuidGeneratorPage()),
       Tool(t.tools.whiteboard.title, "assets/images/tools/whiteboard.png",
