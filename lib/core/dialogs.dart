@@ -1,33 +1,37 @@
 import 'package:flutter/material.dart';
 import 'package:toolbox/gen/strings.g.dart';
 
-void showOkTextDialog(BuildContext context, String title, String message) {
+void showOkTextDialog(BuildContext context, String title, String message, {bool barrierDismissible = true}) {
   showDialog(
       context: context,
+      barrierDismissible: barrierDismissible,
       builder: (context) {
-        return AlertDialog(
-          title: Text(title),
-          content: SingleChildScrollView(child: Text(message)),
-          actions: [
-            TextButton(
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-                child: Text(t.generic.ok)
-            )
-          ],
+        return PopScope(
+          canPop: barrierDismissible,
+          child: AlertDialog(
+            title: Text(title),
+            content: SingleChildScrollView(child: Text(message)),
+            actions: [
+              TextButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  child: Text(t.generic.ok)
+              )
+            ],
+          ),
         );
       }
   );
 }
 
-void showCustomActionOkTextDialog(BuildContext context, String title, String message, Function() buttonAction) {
+void showCustomActionOkTextDialog(BuildContext context, String title, String message, Function() buttonAction, {bool barrierDismissible = true}) {
   showDialog(
       context: context,
-      barrierDismissible: false,
+      barrierDismissible: barrierDismissible,
       builder: (context) {
-        return WillPopScope(
-          onWillPop: () async => false,
+        return PopScope(
+          canPop: barrierDismissible,
           child: AlertDialog(
             title: Text(title),
             content: SingleChildScrollView(child: Text(message)),
@@ -46,13 +50,13 @@ void showCustomActionOkTextDialog(BuildContext context, String title, String mes
   );
 }
 
-void showCustomButtonsTextDialog(BuildContext context, String title, String message, List<TextButton> buttons) {
+void showCustomButtonsTextDialog(BuildContext context, String title, String message, List<TextButton> buttons, {bool barrierDismissible = true}) {
   showDialog(
       context: context,
-      barrierDismissible: false,
+      barrierDismissible: barrierDismissible,
       builder: (context) {
-        return WillPopScope(
-          onWillPop: () async => false,
+        return PopScope(
+          canPop: barrierDismissible,
           child: AlertDialog(
             title: SingleChildScrollView(child: Text(title)),
             content: Text(message),

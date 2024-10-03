@@ -100,7 +100,7 @@ class _UrlShortenerPage extends State<UrlShortenerPage> {
       context,
       t.tools.urlshortener.share,
       t.tools.urlshortener.share_dialog_message,
-      actions,
+      actions
     );
   }
 

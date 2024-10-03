@@ -73,7 +73,7 @@ class _QrReaderPage extends State<QrReaderPage> {
             context, t.tools.qrreader.scanned,
             capture.barcodes.first.rawValue ?? "", () {
           _controller.start();
-        });
+        }, barrierDismissible: false,);
       }
     }
   }

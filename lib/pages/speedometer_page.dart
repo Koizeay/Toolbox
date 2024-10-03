@@ -82,7 +82,8 @@ class _SpeedometerPage extends State<SpeedometerPage> {
             context,
             t.tools.speedometer.error.location_services_disabled_title,
             t.tools.speedometer.error.location_services_disabled_description,
-            buttons
+            buttons,
+            barrierDismissible: false
         );
       }
       return;
