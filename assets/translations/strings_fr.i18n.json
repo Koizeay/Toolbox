@@ -363,6 +363,9 @@
         "impossible_to_connect_to_the_server": "Impossible de se connecter au serveur",
         "impossible_to_connect_to_the_server_message": "Échec de la connexion au serveur, veuillez vérifier votre connexion internet et réessayer."
       }
+    },
+    "counter": {
+      "title": "Compteur"
     }
   },
   "credits": {

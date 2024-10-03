@@ -362,6 +362,9 @@
         "impossible_to_connect_to_the_server": "Impossible to connect to the server",
         "impossible_to_connect_to_the_server_message": "Failed to connect to the server, please check your internet connection and try again."
       }
+    },
+    "counter": {
+      "title": "Counter"
     }
   },
   "credits": {

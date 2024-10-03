@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 540 (270 per locale)
+/// Strings: 542 (271 per locale)
 ///
-/// Built on 2024-10-03 at 18:17 UTC
+/// Built on 2024-10-03 at 18:39 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -206,6 +206,7 @@ class _StringsToolsEn {
 	late final _StringsToolsMcServerPingEn mc_server_ping = _StringsToolsMcServerPingEn._(_root);
 	late final _StringsToolsTimestampconverterEn timestampconverter = _StringsToolsTimestampconverterEn._(_root);
 	late final _StringsToolsUrlshortenerEn urlshortener = _StringsToolsUrlshortenerEn._(_root);
+	late final _StringsToolsCounterEn counter = _StringsToolsCounterEn._(_root);
 }
 
 // Path: credits
@@ -711,6 +712,16 @@ class _StringsToolsUrlshortenerEn {
 	late final _StringsToolsUrlshortenerErrorEn error = _StringsToolsUrlshortenerErrorEn._(_root);
 }
 
+// Path: tools.counter
+class _StringsToolsCounterEn {
+	_StringsToolsCounterEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'Counter';
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsEn._(this._root);
@@ -1042,6 +1053,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsMcServerPingFr mc_server_ping = _StringsToolsMcServerPingFr._(_root);
 	@override late final _StringsToolsTimestampconverterFr timestampconverter = _StringsToolsTimestampconverterFr._(_root);
 	@override late final _StringsToolsUrlshortenerFr urlshortener = _StringsToolsUrlshortenerFr._(_root);
+	@override late final _StringsToolsCounterFr counter = _StringsToolsCounterFr._(_root);
 }
 
 // Path: credits
@@ -1545,6 +1557,16 @@ class _StringsToolsUrlshortenerFr implements _StringsToolsUrlshortenerEn {
 	@override String get terms_of_service => 'Conditions d\'utilisation (ToS)';
 	@override String get shorten => 'Raccourcir';
 	@override late final _StringsToolsUrlshortenerErrorFr error = _StringsToolsUrlshortenerErrorFr._(_root);
+}
+
+// Path: tools.counter
+class _StringsToolsCounterFr implements _StringsToolsCounterEn {
+	_StringsToolsCounterFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Compteur';
 }
 
 // Path: credits.translations
@@ -2063,6 +2085,7 @@ extension on Translations {
 			case 'tools.urlshortener.error.failed_to_shorten_url': return 'Failed to shorten the URL, please check your input and your internet connection.';
 			case 'tools.urlshortener.error.impossible_to_connect_to_the_server': return 'Impossible to connect to the server';
 			case 'tools.urlshortener.error.impossible_to_connect_to_the_server_message': return 'Failed to connect to the server, please check your internet connection and try again.';
+			case 'tools.counter.title': return 'Counter';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -2341,6 +2364,7 @@ extension on _StringsFr {
 			case 'tools.urlshortener.error.failed_to_shorten_url': return 'Le raccourcissement de l\'URL a échoué, veuillez vérifier votre saisie et votre connexion internet.';
 			case 'tools.urlshortener.error.impossible_to_connect_to_the_server': return 'Impossible de se connecter au serveur';
 			case 'tools.urlshortener.error.impossible_to_connect_to_the_server_message': return 'Échec de la connexion au serveur, veuillez vérifier votre connexion internet et réessayer.';
+			case 'tools.counter.title': return 'Compteur';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';

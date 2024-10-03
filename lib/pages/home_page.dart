@@ -4,6 +4,7 @@ import 'package:toolbox/core/rotations.dart';
 import 'package:toolbox/gen/strings.g.dart';
 import 'package:toolbox/models/tool.dart';
 import 'package:toolbox/pages/clock_page.dart';
+import 'package:toolbox/pages/counter_page.dart';
 import 'package:toolbox/pages/credits_page.dart';
 import 'package:toolbox/pages/timestampconverter_page.dart';
 import 'package:toolbox/pages/fileencryption_page.dart';
@@ -61,6 +62,8 @@ class _HomePage extends State<HomePage> {
     tools = [
       Tool(t.tools.clock.title, "assets/images/tools/clock.png",
           const ClockPage()),
+      Tool(t.tools.counter.title, "assets/images/tools/counter.png",
+          const CounterPage()),
       Tool(t.tools.flipcoins.title, "assets/images/tools/flipcoins.png",
           const FlipCoinsPage()),
       Tool(t.tools.fileencryption.title, "assets/images/tools/fileencryption.png",
