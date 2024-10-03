@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 530 (265 per locale)
+/// Strings: 540 (270 per locale)
 ///
-/// Built on 2024-10-03 at 17:22 UTC
+/// Built on 2024-10-03 at 18:17 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -309,6 +309,11 @@ class _StringsToolsQrreaderEn {
 	String get title => 'QR reader';
 	String get scanned => 'Scanned';
 	String get openurl => 'Open link';
+	String get copy_password => 'Copy password';
+	String get copied_to_clipboard => 'Copied to clipboard';
+	String get wifi => 'WiFi';
+	String get wifi_ssid => 'SSID';
+	String get wifi_password => 'Password';
 }
 
 // Path: tools.timer
@@ -1140,6 +1145,11 @@ class _StringsToolsQrreaderFr implements _StringsToolsQrreaderEn {
 	@override String get title => 'Lecteur de QR';
 	@override String get scanned => 'Scanné';
 	@override String get openurl => 'Ouvrir le lien';
+	@override String get copy_password => 'Copy password';
+	@override String get copied_to_clipboard => 'Copié dans le presse-papiers';
+	@override String get wifi => 'WiFi';
+	@override String get wifi_ssid => 'SSID';
+	@override String get wifi_password => 'Mot de passe';
 }
 
 // Path: tools.timer
@@ -1829,6 +1839,11 @@ extension on Translations {
 			case 'tools.qrreader.title': return 'QR reader';
 			case 'tools.qrreader.scanned': return 'Scanned';
 			case 'tools.qrreader.openurl': return 'Open link';
+			case 'tools.qrreader.copy_password': return 'Copy password';
+			case 'tools.qrreader.copied_to_clipboard': return 'Copied to clipboard';
+			case 'tools.qrreader.wifi': return 'WiFi';
+			case 'tools.qrreader.wifi_ssid': return 'SSID';
+			case 'tools.qrreader.wifi_password': return 'Password';
 			case 'tools.timer.title': return 'Timer';
 			case 'tools.timer.start': return 'Start';
 			case 'tools.timer.stop': return 'Stop';
@@ -2102,6 +2117,11 @@ extension on _StringsFr {
 			case 'tools.qrreader.title': return 'Lecteur de QR';
 			case 'tools.qrreader.scanned': return 'Scanné';
 			case 'tools.qrreader.openurl': return 'Ouvrir le lien';
+			case 'tools.qrreader.copy_password': return 'Copy password';
+			case 'tools.qrreader.copied_to_clipboard': return 'Copié dans le presse-papiers';
+			case 'tools.qrreader.wifi': return 'WiFi';
+			case 'tools.qrreader.wifi_ssid': return 'SSID';
+			case 'tools.qrreader.wifi_password': return 'Mot de passe';
 			case 'tools.timer.title': return 'Minuteur';
 			case 'tools.timer.start': return 'Démarrer';
 			case 'tools.timer.stop': return 'Arrêter';

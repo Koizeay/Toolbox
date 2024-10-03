@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 import 'package:toolbox/core/dialogs.dart';
 import 'package:toolbox/core/url.dart';
@@ -48,32 +49,63 @@ class _QrReaderPage extends State<QrReaderPage> {
   void onScanned(BarcodeCapture capture) {
     if (capture.barcodes.first.format == BarcodeFormat.qrCode) {
       _controller.stop();
-      if (capture.barcodes.first.type == BarcodeType.url) {
-        List<TextButton> buttons = [
-          TextButton(
-              onPressed: () {
-                Navigator.pop(context);
-                _controller.start();
-                launchUrlInBrowser(capture.barcodes.first.rawValue ?? "");
-              },
-              child: Text(t.tools.qrreader.openurl)
-          ),
-          TextButton(
-              onPressed: () {
-                Navigator.pop(context);
-                _controller.start();
-              },
-              child: Text(t.generic.ok)
-          ),
-        ];
-        showCustomButtonsTextDialog(context, t.tools.qrreader.scanned,
-            capture.barcodes.first.rawValue ?? "", buttons);
-      } else {
-        showCustomActionOkTextDialog(
+      switch (capture.barcodes.first.type) {
+        case BarcodeType.url:
+          List<TextButton> buttons = [
+            TextButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                  _controller.start();
+                  launchUrlInBrowser(capture.barcodes.first.rawValue ?? "");
+                },
+                child: Text(t.tools.qrreader.openurl)
+            ),
+            TextButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                  _controller.start();
+                },
+                child: Text(t.generic.ok)
+            ),
+          ];
+          showCustomButtonsTextDialog(context, t.tools.qrreader.scanned,
+              capture.barcodes.first.rawValue ?? "", buttons);
+          break;
+        case BarcodeType.wifi:
+          var ssid = capture.barcodes.first.wifi?.ssid ?? "";
+          var password = capture.barcodes.first.wifi?.password ?? "";
+          List<TextButton> buttons = [
+            TextButton(
+                onPressed: () {
+                  Clipboard.setData(ClipboardData(text: password)).then((value) {
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                      content: Text(t.tools.qrreader.copied_to_clipboard),
+                      duration: const Duration(seconds: 2),
+                    ));
+                  });
+                },
+                child: Text(t.tools.qrreader.copy_password)
+            ),
+            TextButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                  _controller.start();
+                },
+                child: Text(t.generic.ok)
+            ),
+          ];
+          showCustomButtonsTextDialog(
+            context, "${t.tools.qrreader.scanned} (${t.tools.qrreader.wifi})",
+            "${t.tools.qrreader.wifi_ssid}\n$ssid\n\n${t.tools.qrreader
+                .wifi_password}\n$password", buttons, barrierDismissible: false,);
+          break;
+        default:
+          showCustomActionOkTextDialog(
             context, t.tools.qrreader.scanned,
             capture.barcodes.first.rawValue ?? "", () {
-          _controller.start();
-        }, barrierDismissible: false,);
+            _controller.start();
+          }, barrierDismissible: false,);
+          break;
       }
     }
   }

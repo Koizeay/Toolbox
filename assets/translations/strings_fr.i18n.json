@@ -59,7 +59,12 @@
     "qrreader": {
       "title": "Lecteur de QR",
       "scanned": "Scanné",
-      "openurl": "Ouvrir le lien"
+      "openurl": "Ouvrir le lien",
+      "copy_password": "Copy password",
+      "copied_to_clipboard": "Copié dans le presse-papiers",
+      "wifi": "WiFi",
+      "wifi_ssid": "SSID",
+      "wifi_password": "Mot de passe"
     },
     "timer": {
       "title": "Minuteur",
