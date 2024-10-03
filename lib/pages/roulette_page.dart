@@ -24,11 +24,12 @@ class _RoulettePage extends State<RoulettePage> with TickerProviderStateMixin {
   List<Color> rouletteColors = [
     YaruColors.ubuntuCinnamonBrown,
     YaruColors.olive,
-    YaruColors.orange,
+    YaruColors.ubuntuUnityPurple,
     YaruColors.ubuntuMateGreen,
     YaruColors.kubuntuBlue,
     YaruColors.prussianGreen,
-    YaruColors.warmGrey
+    YaruColors.warmGrey,
+    YaruColors.viridian
   ];
 
   List<FortuneItem> rouletteItems = [];
@@ -103,7 +104,11 @@ class _RoulettePage extends State<RoulettePage> with TickerProviderStateMixin {
       return;
     }
     text = cleanTextForRoulette(text);
-    Color color = rouletteColors[Random().nextInt(rouletteColors.length)];
+    List<Color> availableColors = List.from(rouletteColors);
+    for (FortuneItem item in rouletteItems) {
+      availableColors.remove((item.style as FortuneItemStyle).color);
+    }
+    Color color = availableColors[Random().nextInt(availableColors.length)];
     setState(() {
       rouletteItems.add(FortuneItem(
         child: Text(text),
