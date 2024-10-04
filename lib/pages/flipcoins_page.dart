@@ -79,6 +79,8 @@ class _FlipCoinsPage extends State<FlipCoinsPage> {
 
   @override
   Widget build(BuildContext context) {
+    double imageOpacity = Theme.of(context).brightness == Brightness.dark ? 0.8 : 1.0;
+
     return Scaffold(
         appBar: AppBar(
           title: Text("${t.generic
@@ -98,8 +100,14 @@ class _FlipCoinsPage extends State<FlipCoinsPage> {
                     },
                     child: FittedBox(
                       child: Flipper(
-                        front: Image.asset(frontAsset),
-                        back: Image.asset(backAsset),
+                        front: Image.asset(
+                            frontAsset,
+                            opacity: AlwaysStoppedAnimation(imageOpacity)
+                        ),
+                        back: Image.asset(
+                            backAsset,
+                            opacity: AlwaysStoppedAnimation(imageOpacity)
+                        ),
                         controller: controller,
                         shape: BoxShape.circle,
                         padding: const EdgeInsets.all(0),

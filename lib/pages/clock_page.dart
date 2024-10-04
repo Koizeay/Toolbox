@@ -54,11 +54,6 @@ class _ClockPage extends State<ClockPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor:
-        isFullscreen ? Colors.grey[900] : Theme
-            .of(context)
-            .colorScheme
-            .background,
         appBar:
         isFullscreen ? null :
         AppBar(
@@ -72,9 +67,8 @@ class _ClockPage extends State<ClockPage> {
                 padding: const EdgeInsets.all(100.0),
                 child: Text(
                     formattedTime,
-                    style: TextStyle(
-                        fontSize: 1000,
-                        color: isFullscreen ? Colors.white : Colors.grey[800]
+                    style: const TextStyle(
+                        fontSize: 1000
                     )
                 ),
               ),
@@ -82,7 +76,7 @@ class _ClockPage extends State<ClockPage> {
           ),
         ),
         floatingActionButton: FloatingActionButton(
-          backgroundColor: isFullscreen ? Colors.grey[800] : Theme
+          backgroundColor: Theme
               .of(context)
               .colorScheme
               .primary,

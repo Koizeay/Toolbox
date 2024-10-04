@@ -196,6 +196,10 @@ class _GameOfLifePage extends State<GameOfLifePage> {
 
   @override
   Widget build(BuildContext context) {
+    Color emptyGridBackgroundColor = Theme.of(context).brightness == Brightness.light
+        ? Colors.grey[200]!
+        : Colors.grey[800]!;
+
     return GestureDetector(
       onTap: () {
         FocusManager.instance.primaryFocus?.unfocus();
@@ -236,7 +240,7 @@ class _GameOfLifePage extends State<GameOfLifePage> {
                                 },
                                 child: Container(
                                   decoration: BoxDecoration(
-                                    color: grid[i][j] ? Theme.of(context).colorScheme.primary : Colors.white,
+                                    color: grid[i][j] ? Theme.of(context).colorScheme.primary : emptyGridBackgroundColor,
                                     border: Border.all(
                                       color: Colors.black,
                                       width: 0.5,

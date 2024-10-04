@@ -153,7 +153,6 @@ class _HomePage extends State<HomePage> {
             actions: [
               IconButton(
                 icon: const Icon(Icons.info_outline),
-                color: YaruColors.textGrey,
                 tooltip: t.credits.title,
                 onPressed: () {
                   Navigator.push(

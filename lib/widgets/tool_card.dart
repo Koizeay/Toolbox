@@ -9,6 +9,7 @@ class ToolCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    String themedImageAssetPath = Theme.of(context).brightness == Brightness.light ? imageAssetPath : imageAssetPath.replaceFirst('.png', '_white.png');
     return GestureDetector(
       onTap: onTap,
       child: Card(
@@ -18,7 +19,8 @@ class ToolCard extends StatelessWidget {
           child: Column(
             children: [
               Image.asset(
-                imageAssetPath,
+                themedImageAssetPath,
+                opacity: const AlwaysStoppedAnimation(0.8)
               ),
               Text(title, style: const TextStyle(fontSize: 100)),
             ],

@@ -48,7 +48,7 @@ class _OsmPage extends State<OsmPage> {
     }
     Position position = await Geolocator.getCurrentPosition();
     GeoPoint geoPoint = GeoPoint(latitude: position.latitude, longitude: position.longitude);
-    mapController.goToLocation(geoPoint);
+    mapController.moveTo(geoPoint);
     mapController.setZoom(zoomLevel: 18.0);
   }
 
@@ -74,7 +74,12 @@ class _OsmPage extends State<OsmPage> {
           body: SafeArea(
             child: OSMFlutter(
                 controller: mapController,
-                mapIsLoading: const Center(child: CircularProgressIndicator()),
+                mapIsLoading: Container(
+                    color: Theme.of(context).colorScheme.surface,
+                    child: const Center(
+                        child: CircularProgressIndicator()
+                    )
+                ),
                 osmOption: const OSMOption(
                   enableRotationByGesture: false,
                   showContributorBadgeForOSM: true,

@@ -185,8 +185,7 @@ class _NetworkInfoPage extends State<NetworkInfoPage> {
                         textAlign: TextAlign.center,
                         style: const TextStyle(
                             fontSize: 10,
-                            fontStyle: FontStyle.italic,
-                            color: Colors.black
+                            fontStyle: FontStyle.italic
                         )
                     ),
                   ],

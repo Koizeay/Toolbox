@@ -2,7 +2,7 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:assets_audio_player/assets_audio_player.dart';
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:toolbox/core/dialogs.dart';
 import 'package:toolbox/core/url.dart';
@@ -16,7 +16,7 @@ class NationalAnthemsPage extends StatefulWidget {
 }
 
 class _NationalAnthemsPage extends State<NationalAnthemsPage> {
-  final assetsAudioPlayer = AssetsAudioPlayer();
+  final audioPlayer = AudioPlayer();
 
   final String jsonListUrl = "https://raw.githubusercontent.com/Koizeay/Sharing/main/Toolbox/nationalanthems_list.json";
   final String remoteMp3Url = "https://nationalanthems.info/";
@@ -39,8 +39,7 @@ class _NationalAnthemsPage extends State<NationalAnthemsPage> {
 
   @override
   void dispose() {
-    assetsAudioPlayer.stop();
-    assetsAudioPlayer.dispose();
+    audioPlayer.dispose();
     super.dispose();
   }
 
@@ -78,7 +77,7 @@ class _NationalAnthemsPage extends State<NationalAnthemsPage> {
   }
 
   Future<void> playAnthems(NationalAnthemsAnthem anthem) async {
-    assetsAudioPlayer.stop();
+    await audioPlayer.stop();
     if (isLoading) {
       return;
     }
@@ -87,33 +86,12 @@ class _NationalAnthemsPage extends State<NationalAnthemsPage> {
     });
     String url = "$remoteMp3Url${anthem.code}.mp3";
     try {
-      await assetsAudioPlayer.open(
-        Audio.network(
-          url,
-          metas: Metas(
-            title: anthem.name,
-            artist: t.generic.app_name,
-            album: t.generic.app_name,
-            image: const MetasImage.asset(
-                "assets/images/specific/nationalanthems_cover.png"),
-          ),
-        ),
-        showNotification: true,
-        loopMode: LoopMode.single,
-        notificationSettings: const NotificationSettings(
-          seekBarEnabled: false,
-          prevEnabled: false,
-          nextEnabled: false,
-          stopEnabled: true,
-          playPauseEnabled: true,
-        ),
-      );
-      assetsAudioPlayer.play();
+      await audioPlayer.play(UrlSource(url,), mode: PlayerMode.mediaPlayer);
     } catch (e) {
       if (mounted) {
         showOkTextDialog(context, t.generic.error, t.tools.nationalanthems.error.failed_to_play_anthem);
       }
-      assetsAudioPlayer.stop();
+      await audioPlayer.stop();
     } finally {
       if (mounted) {
         filteredAnthemsList = anthemsList;
@@ -160,8 +138,8 @@ class _NationalAnthemsPage extends State<NationalAnthemsPage> {
               IconButton(
                   tooltip: t.tools.nationalanthems.stop,
                   icon: const Icon(Icons.music_off),
-                  onPressed: () {
-                    assetsAudioPlayer.stop();
+                  onPressed: () async {
+                    await audioPlayer.stop();
                   }
               ),
               IconButton(
@@ -197,7 +175,6 @@ class _NationalAnthemsPage extends State<NationalAnthemsPage> {
                         title: Text(anthem.name),
                         leading: const Icon(
                           Icons.music_note,
-                          color: Colors.black87,
                         ),
                         onTap: () {
                           playAnthems(anthem);

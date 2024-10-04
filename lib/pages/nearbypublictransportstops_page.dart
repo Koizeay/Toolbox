@@ -523,7 +523,10 @@ class _NearbyPublicTransportStopsPage extends State<NearbyPublicTransportStopsPa
                                     "+${board.passList?[i].delay}'",
                                     textAlign: TextAlign.left,
                                     style: TextStyle(
-                                      color: Colors.red[900],
+                                      color: Theme.of(context).brightness ==
+                                          Brightness.dark
+                                          ? Colors.red[400]
+                                          : Colors.red[900],
                                     ),
                                   ),
                                 ),

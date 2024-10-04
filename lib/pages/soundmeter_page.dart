@@ -147,7 +147,10 @@ class _SoundMeterPage extends State<SoundMeterPage> {
                                         RadialTicks(
                                             ticksInBetween: 5,
                                             length: 0.1,
-                                            color: YaruColors.textGrey),
+                                            color: Theme.of(context).brightness == Brightness.light
+                                                ? YaruColors.textGrey
+                                                : Colors.white70,
+                                        ),
                                       ]
                                   )
                                 ],
