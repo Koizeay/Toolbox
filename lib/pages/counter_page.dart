@@ -43,10 +43,10 @@ class _CounterPage extends State<CounterPage> {
                               child: FilledButton(
                                 onPressed: () {
                                   setState(() {
-                                    _counter++;
+                                    _counter--;
                                   });
                                 },
-                                child: const Icon(Icons.add),
+                                child: const Icon(Icons.remove),
                               ),
                             ),
                             const SizedBox(width: 10),
@@ -54,10 +54,10 @@ class _CounterPage extends State<CounterPage> {
                               child: FilledButton(
                                 onPressed: () {
                                   setState(() {
-                                    _counter--;
+                                    _counter++;
                                   });
                                 },
-                                child: const Icon(Icons.remove),
+                                child: const Icon(Icons.add),
                               ),
                             ),
                           ],
