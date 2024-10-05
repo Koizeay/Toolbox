@@ -32,13 +32,12 @@ class _WhiteBoardPage extends State<WhiteBoardPage> {
 
 
   Future<void> shareImage() async {
-    final box = context.findRenderObject() as RenderBox?;
     final bytes = await widgetsToImageController.capture();
-    if (bytes != null) {
+    if (bytes != null && mounted) {
       final result = await Share.shareXFiles(
           [XFile.fromData(bytes, name: "whiteboard.png", mimeType: "image/png")],
-          sharePositionOrigin: box!.localToGlobal(Offset.zero) & box.size,
-      );
+          sharePositionOrigin: Rect.fromLTWH(MediaQuery.of(context).size.width - 100, 0, 100, 100)
+          );
       if (result.status == ShareResultStatus.success) {
         if (mounted) {
           ScaffoldMessenger.of(context).showSnackBar(

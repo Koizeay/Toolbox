@@ -10,7 +10,7 @@ import 'package:toolbox/core/url.dart';
 import 'package:toolbox/gen/strings.g.dart';
 
 class UrlShortenerPage extends StatefulWidget {
-  const UrlShortenerPage({Key? key}) : super(key: key);
+  const UrlShortenerPage({super.key});
 
   @override
   State<UrlShortenerPage> createState() => _UrlShortenerPage();
@@ -81,7 +81,11 @@ class _UrlShortenerPage extends State<UrlShortenerPage> {
     List<TextButton> actions = [
       TextButton(
         onPressed: () {
-          Share.share(shortUrl);
+          Share.share(
+              shortUrl,
+              sharePositionOrigin:
+              Rect.fromLTWH(MediaQuery.of(context).size.width - 100, 0, 100, 100)
+          );
           Navigator.pop(context);
         },
         child: Text(t.tools.urlshortener.url),
@@ -90,7 +94,11 @@ class _UrlShortenerPage extends State<UrlShortenerPage> {
         onPressed: () {
           var qrXFile = XFile.fromData(base64Decode(qrBase64),
               name: "qr_code.png", mimeType: "image/png");
-          Share.shareXFiles([qrXFile]);
+          Share.shareXFiles(
+              [qrXFile],
+              sharePositionOrigin:
+                  Rect.fromLTWH(MediaQuery.of(context).size.width - 100, 0, 100, 100)
+          );
           Navigator.pop(context);
         },
         child: Text(t.tools.urlshortener.qr_code),
