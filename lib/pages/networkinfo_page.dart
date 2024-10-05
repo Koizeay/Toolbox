@@ -7,7 +7,7 @@ import 'package:http/http.dart' as http;
 import 'package:network_info_plus/network_info_plus.dart';
 
 class NetworkInfoPage extends StatefulWidget {
-  const NetworkInfoPage({ Key? key }) : super(key: key);
+  const NetworkInfoPage({ super.key });
   @override
   State<NetworkInfoPage> createState() => _NetworkInfoPage();
 }
@@ -85,7 +85,7 @@ class _NetworkInfoPage extends State<NetworkInfoPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("${t.generic.app_name} - ${t.tools.networkinfo.title}"),
+          title: Text("${t.tools.networkinfo.title}"),
         ),
         body: SafeArea(
           child: SingleChildScrollView(

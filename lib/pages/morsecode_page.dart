@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:toolbox/gen/strings.g.dart';
 
 class MorseCodePage extends StatefulWidget {
-  const MorseCodePage({ Key? key }) : super(key: key);
+  const MorseCodePage({ super.key });
   @override
   State<MorseCodePage> createState() => _MorseCodePage();
 }
@@ -135,8 +135,7 @@ class _MorseCodePage extends State<MorseCodePage> {
       onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
       child: Scaffold(
           appBar: AppBar(
-            title: Text("${t.generic
-                .app_name} - ${t.tools.morsecode.title}"),
+            title: Text(t.tools.morsecode.title),
           ),
           body: SafeArea(
             child: SingleChildScrollView(

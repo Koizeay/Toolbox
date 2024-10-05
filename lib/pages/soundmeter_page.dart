@@ -12,7 +12,7 @@ import 'package:toolbox/gen/strings.g.dart';
 import 'package:yaru/yaru.dart';
 
 class SoundMeterPage extends StatefulWidget {
-  const SoundMeterPage({ Key? key }) : super(key: key);
+  const SoundMeterPage({ super.key });
   @override
   State<SoundMeterPage> createState() => _SoundMeterPage();
 }
@@ -106,7 +106,7 @@ class _SoundMeterPage extends State<SoundMeterPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("${t.generic.app_name} - ${t.tools.soundmeter.title}"),
+        title: Text(t.tools.soundmeter.title),
       ),
       body: SafeArea(
         child: Center(

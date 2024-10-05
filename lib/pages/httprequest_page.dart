@@ -9,7 +9,7 @@ import 'package:toolbox/gen/strings.g.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class HttpRequestPage extends StatefulWidget {
-  const HttpRequestPage({ Key? key }) : super(key: key);
+  const HttpRequestPage({ super.key });
   @override
   State<HttpRequestPage> createState() => _HttpRequestPage();
 }
@@ -235,7 +235,7 @@ class _HttpRequestPage extends State<HttpRequestPage> {
       onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
       child: Scaffold(
           appBar: AppBar(
-            title: Text("${t.generic.app_name} - ${t.tools.httprequest.title}"),
+            title: Text(t.tools.httprequest.title),
             actions: [
               responseBody.isNotEmpty
                   ? Tooltip(

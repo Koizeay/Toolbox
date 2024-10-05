@@ -206,7 +206,7 @@ class _GameOfLifePage extends State<GameOfLifePage> {
       },
       child: Scaffold(
         appBar: AppBar(
-          title: Text("${t.generic.app_name} - ${t.tools.gameoflife.title}"),
+          title: Text(t.tools.gameoflife.title),
           actions: [
             IconButton(
               onPressed: () {

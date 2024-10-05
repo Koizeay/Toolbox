@@ -11,7 +11,7 @@ import 'package:toolbox/gen/strings.g.dart';
 import 'package:vibration/vibration.dart';
 
 class TimerPage extends StatefulWidget {
-  const TimerPage({ Key? key }) : super(key: key);
+  const TimerPage({ super.key });
   @override
   State<TimerPage> createState() => _TimerPage();
 }
@@ -101,8 +101,7 @@ class _TimerPage extends State<TimerPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("${t.generic
-              .app_name} - ${t.tools.timer.title}"),
+          title: Text(t.tools.timer.title),
         ),
         body: SafeArea(
           child: SingleChildScrollView(

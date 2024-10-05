@@ -6,7 +6,7 @@ import 'package:intl/intl.dart';
 import 'package:toolbox/gen/strings.g.dart';
 
 class TimestampConverterPage extends StatefulWidget {
-  const TimestampConverterPage({ Key? key }) : super(key: key);
+  const TimestampConverterPage({ super.key });
   @override
   State<TimestampConverterPage> createState() => _TimestampConverterPage();
 }
@@ -112,8 +112,7 @@ class _TimestampConverterPage extends State<TimestampConverterPage> {
       },
       child: Scaffold(
           appBar: AppBar(
-            title: Text("${t.generic
-                .app_name} - ${t.tools.timestampconverter.title}"),
+            title: Text(t.tools.timestampconverter.title),
             actions: [
               Tooltip(
                 message: t.tools.timestampconverter.now_tooltip,

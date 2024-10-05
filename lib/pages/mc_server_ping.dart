@@ -10,7 +10,7 @@ import 'package:toolbox/core/url.dart';
 import 'package:toolbox/gen/strings.g.dart';
 
 class McServerPing extends StatefulWidget {
-  const McServerPing({ Key? key }) : super(key: key);
+  const McServerPing({ super.key });
   @override
   State<McServerPing> createState() => _McServerPing();
 }
@@ -113,7 +113,7 @@ class _McServerPing extends State<McServerPing> {
       },
       child: Scaffold(
           appBar: AppBar(
-            title: Text("${t.generic.app_name} - ${t.tools.mc_server_ping.title}"),
+            title: Text(t.tools.mc_server_ping.title),
             actions: [
               Tooltip(
                 message: t.tools.mc_server_ping.api_used,

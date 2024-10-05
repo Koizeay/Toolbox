@@ -5,7 +5,7 @@ import 'package:toolbox/core/dialogs.dart';
 import 'package:toolbox/gen/strings.g.dart';
 
 class RandomNumberPage extends StatefulWidget {
-  const RandomNumberPage({ Key? key }) : super(key: key);
+  const RandomNumberPage({ super.key });
   @override
   State<RandomNumberPage> createState() => _RandomNumberPage();
 }
@@ -64,8 +64,7 @@ class _RandomNumberPage extends State<RandomNumberPage> {
       },
       child: Scaffold(
           appBar: AppBar(
-            title: Text("${t.generic
-                .app_name} - ${t.tools.randomnumber.title}"),
+            title: Text(t.tools.randomnumber.title),
           ),
           body: SafeArea(
               child: Center(

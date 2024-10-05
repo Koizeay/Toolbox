@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:toolbox/gen/strings.g.dart';
 
 class CounterPage extends StatefulWidget {
-  const CounterPage({ Key? key }) : super(key: key);
+  const CounterPage({ super.key });
   @override
   State<CounterPage> createState() => _CounterPage();
 }
@@ -19,7 +19,7 @@ class _CounterPage extends State<CounterPage> {
       },
       child: Scaffold(
           appBar: AppBar(
-            title: Text("${t.generic.app_name} - ${t.tools.counter.title}"),
+            title: Text(t.tools.counter.title),
           ),
           body: SafeArea(
             child: SingleChildScrollView(

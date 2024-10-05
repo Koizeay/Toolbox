@@ -8,7 +8,7 @@ import 'package:reliable_interval_timer/reliable_interval_timer.dart';
 import 'package:toolbox/gen/strings.g.dart';
 
 class MetronomePage extends StatefulWidget {
-  const MetronomePage({ Key? key }) : super(key: key);
+  const MetronomePage({ super.key });
   @override
   State<MetronomePage> createState() => _MetronomePage();
 }
@@ -77,7 +77,7 @@ class _MetronomePage extends State<MetronomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("${t.generic.app_name} - ${t.tools.metronome.title}"),
+        title: Text(t.tools.metronome.title),
       ),
       body: SafeArea(
         child: SingleChildScrollView(

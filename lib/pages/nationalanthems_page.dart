@@ -10,7 +10,7 @@ import 'package:toolbox/gen/strings.g.dart';
 import 'package:toolbox/models/nationalanthems_anthem.dart';
 
 class NationalAnthemsPage extends StatefulWidget {
-  const NationalAnthemsPage({ Key? key }) : super(key: key);
+  const NationalAnthemsPage({ super.key });
   @override
   State<NationalAnthemsPage> createState() => _NationalAnthemsPage();
 }
@@ -133,7 +133,7 @@ class _NationalAnthemsPage extends State<NationalAnthemsPage> {
       onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
       child: Scaffold(
           appBar: AppBar(
-            title: Text("${t.generic.app_name} - ${t.tools.nationalanthems.title}"),
+            title: Text(t.tools.nationalanthems.title),
             actions: [
               IconButton(
                   tooltip: t.tools.nationalanthems.stop,

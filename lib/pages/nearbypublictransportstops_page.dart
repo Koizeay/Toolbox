@@ -605,9 +605,7 @@ class _NearbyPublicTransportStopsPage extends State<NearbyPublicTransportStopsPa
       },
       child: Scaffold(
           appBar: AppBar(
-            title: Text(
-                "${t.generic.app_name} - ${t.tools.nearbypublictransportstops
-                    .title}"),
+            title: Text(t.tools.nearbypublictransportstops.title),
             actions: [
               IconButton(
                 icon: const Icon(Icons.refresh),

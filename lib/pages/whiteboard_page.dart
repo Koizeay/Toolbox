@@ -9,7 +9,7 @@ import 'package:widgets_to_image/widgets_to_image.dart';
 
 
 class WhiteBoardPage extends StatefulWidget {
-  const WhiteBoardPage({ Key? key }) : super(key: key);
+  const WhiteBoardPage({ super.key });
   @override
   State<WhiteBoardPage> createState() => _WhiteBoardPage();
 }
@@ -55,8 +55,7 @@ class _WhiteBoardPage extends State<WhiteBoardPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("${t.generic
-              .app_name} - ${t.tools.whiteboard.title}"),
+          title: Text(t.tools.whiteboard.title),
           actions: [
             IconButton(
               tooltip: t.tools.whiteboard.clear,

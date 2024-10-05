@@ -6,7 +6,7 @@ import 'package:permission_handler/permission_handler.dart';
 import 'package:toolbox/gen/strings.g.dart';
 
 class OsmPage extends StatefulWidget {
-  const OsmPage({ Key? key }) : super(key: key);
+  const OsmPage({ super.key });
   @override
   State<OsmPage> createState() => _OsmPage();
 }
@@ -60,7 +60,7 @@ class _OsmPage extends State<OsmPage> {
       },
       child: Scaffold(
           appBar: AppBar(
-            title: Text("${t.generic.app_name} - ${t.tools.osm.title}"),
+            title: Text(t.tools.osm.title),
             actions: [
               IconButton(
                 icon: const Icon(Icons.my_location),

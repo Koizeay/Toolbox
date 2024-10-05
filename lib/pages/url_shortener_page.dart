@@ -113,7 +113,7 @@ class _UrlShortenerPage extends State<UrlShortenerPage> {
       child: Scaffold(
           appBar: AppBar(
             title:
-                Text("${t.generic.app_name} - ${t.tools.urlshortener.title}"),
+                Text(t.tools.urlshortener.title),
           ),
           body: SafeArea(
             child: isLoading

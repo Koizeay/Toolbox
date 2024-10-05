@@ -5,7 +5,7 @@ import 'package:toolbox/gen/strings.g.dart';
 import 'package:uuid/uuid.dart';
 
 class UuidGeneratorPage extends StatefulWidget {
-  const UuidGeneratorPage({ Key? key }) : super(key: key);
+  const UuidGeneratorPage({ super.key });
   @override
   State<UuidGeneratorPage> createState() => _UuidGeneratorPage();
 }
@@ -82,8 +82,7 @@ class _UuidGeneratorPage extends State<UuidGeneratorPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("${t.generic
-              .app_name} - ${t.tools.uuidgenerator.title}"),
+          title: Text(t.tools.uuidgenerator.title),
         ),
         body: SafeArea(
           child: SingleChildScrollView(

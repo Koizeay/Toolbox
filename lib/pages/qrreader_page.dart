@@ -7,7 +7,7 @@ import 'package:toolbox/core/url.dart';
 import 'package:toolbox/gen/strings.g.dart';
 
 class QrReaderPage extends StatefulWidget {
-  const QrReaderPage({ Key? key }) : super(key: key);
+  const QrReaderPage({ super.key });
   @override
   State<QrReaderPage> createState() => _QrReaderPage();
 }
@@ -114,8 +114,7 @@ class _QrReaderPage extends State<QrReaderPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("${t.generic
-              .app_name} - ${t.tools.qrreader.title}"),
+          title: Text(t.tools.qrreader.title),
         ),
         body: SafeArea(
           child: SingleChildScrollView(

@@ -8,7 +8,7 @@ import 'package:permission_handler/permission_handler.dart';
 import 'package:toolbox/gen/strings.g.dart';
 
 class MegaphonePage extends StatefulWidget {
-  const MegaphonePage({ Key? key }) : super(key: key);
+  const MegaphonePage({ super.key });
   @override
   State<MegaphonePage> createState() => _MegaphonePage();
 }
@@ -66,7 +66,7 @@ class _MegaphonePage extends State<MegaphonePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("${t.generic.app_name} - ${t.tools.megaphone.title}"),
+        title: Text(t.tools.megaphone.title),
       ),
       body: SafeArea(
         child: Center(

@@ -7,7 +7,7 @@ import 'package:toolbox/gen/strings.g.dart';
 import 'package:yaru/yaru.dart';
 
 class StopwatchPage extends StatefulWidget {
-  const StopwatchPage({ Key? key }) : super(key: key);
+  const StopwatchPage({ super.key });
   @override
   State<StopwatchPage> createState() => _StopwatchPage();
 }
@@ -92,8 +92,7 @@ class _StopwatchPage extends State<StopwatchPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("${t.generic
-              .app_name} - ${t.tools.stopwatch.title}"),
+          title: Text(t.tools.stopwatch.title),
         ),
         body: SafeArea(
           child: SizedBox(

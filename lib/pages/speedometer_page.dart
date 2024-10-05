@@ -8,7 +8,7 @@ import 'package:toolbox/core/dialogs.dart';
 import 'package:toolbox/gen/strings.g.dart';
 
 class SpeedometerPage extends StatefulWidget {
-  const SpeedometerPage({ Key? key }) : super(key: key);
+  const SpeedometerPage({ super.key });
   @override
   State<SpeedometerPage> createState() => _SpeedometerPage();
 }
@@ -158,7 +158,7 @@ class _SpeedometerPage extends State<SpeedometerPage> {
       },
       child: Scaffold(
         appBar: AppBar(
-          title: Text("${t.generic.app_name} - ${t.tools.speedometer.title}"),
+          title: Text(t.tools.speedometer.title),
         ),
         body: SafeArea(
             child: Center(

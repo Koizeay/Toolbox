@@ -11,7 +11,7 @@ import 'package:toolbox/gen/strings.g.dart';
 import 'package:yaru/yaru.dart';
 
 class RoulettePage extends StatefulWidget {
-  const RoulettePage({ Key? key }) : super(key: key);
+  const RoulettePage({ super.key });
 
   @override
   State<RoulettePage> createState() => _RoulettePage();
@@ -220,8 +220,7 @@ class _RoulettePage extends State<RoulettePage> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("${t.generic
-              .app_name} - ${t.tools.roulette.title}"),
+          title: Text(t.tools.roulette.title),
         ),
         body: SafeArea(
             child: Padding(

@@ -8,7 +8,7 @@ import 'package:toolbox/core/rotations.dart';
 import 'package:toolbox/gen/strings.g.dart';
 
 class ClockPage extends StatefulWidget {
-  const ClockPage({ Key? key }) : super(key: key);
+  const ClockPage({ super.key });
   @override
   State<ClockPage> createState() => _ClockPage();
 }
@@ -57,7 +57,7 @@ class _ClockPage extends State<ClockPage> {
         appBar:
         isFullscreen ? null :
         AppBar(
-          title: Text("${t.generic.app_name} - ${t.tools.clock.title}"),
+          title: Text(t.tools.clock.title),
         ),
         body: SafeArea(
           child: Center(

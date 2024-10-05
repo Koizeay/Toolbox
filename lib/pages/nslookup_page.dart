@@ -6,7 +6,7 @@ import 'package:toolbox/core/dialogs.dart';
 import 'package:toolbox/gen/strings.g.dart';
 
 class NslookupPage extends StatefulWidget {
-  const NslookupPage({ Key? key }) : super(key: key);
+  const NslookupPage({ super.key });
   @override
   State<NslookupPage> createState() => _NslookupPage();
 }
@@ -57,7 +57,7 @@ class _NslookupPage extends State<NslookupPage> {
       },
       child: Scaffold(
           appBar: AppBar(
-            title: Text("${t.generic.app_name} - ${t.tools.nslookup.title}"),
+            title: Text(t.tools.nslookup.title),
           ),
           body: SafeArea(
             child: Center(

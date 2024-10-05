@@ -8,7 +8,7 @@ import 'package:flutter_file_dialog/flutter_file_dialog.dart';
 import 'package:toolbox/gen/strings.g.dart';
 
 class YouTubeThumbnailPage extends StatefulWidget {
-  const YouTubeThumbnailPage({ Key? key }) : super(key: key);
+  const YouTubeThumbnailPage({ super.key });
   @override
   State<YouTubeThumbnailPage> createState() => _YouTubeThumbnailPage();
 }
@@ -78,7 +78,7 @@ class _YouTubeThumbnailPage extends State<YouTubeThumbnailPage> {
       onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
       child: Scaffold(
           appBar: AppBar(
-            title: Text("${t.generic.app_name} - ${t.tools.youtubethumbnail.title}"),
+            title: Text(t.tools.youtubethumbnail.title),
           ),
           body: SafeArea(
             child: SingleChildScrollView(

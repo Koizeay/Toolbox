@@ -10,7 +10,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:toolbox/gen/strings.g.dart';
 
 class FileEncryptionPage extends StatefulWidget {
-  const FileEncryptionPage({ Key? key }) : super(key: key);
+  const FileEncryptionPage({ super.key });
   @override
   State<FileEncryptionPage> createState() => _FileEncryptionPage();
 }
@@ -205,9 +205,8 @@ class _FileEncryptionPage extends State<FileEncryptionPage> {
       },
       child: Scaffold(
           appBar: AppBar(
-            // TODO: Replace this with the app name + tool's name
             title: Text(
-                "${t.generic.app_name} - ${t.tools.fileencryption.title}"),
+                t.tools.fileencryption.title),
           ),
           body: SafeArea(
             child: isEncrypting

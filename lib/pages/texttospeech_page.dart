@@ -8,7 +8,7 @@ import 'package:toolbox/core/shared_preferences.dart';
 import 'package:toolbox/gen/strings.g.dart';
 
 class TextToSpeechPage extends StatefulWidget {
-  const TextToSpeechPage({ Key? key }) : super(key: key);
+  const TextToSpeechPage({ super.key });
   @override
   State<TextToSpeechPage> createState() => _TextToSpeechPage();
 }
@@ -186,8 +186,7 @@ class _TextToSpeechPage extends State<TextToSpeechPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("${t.generic
-              .app_name} - ${t.tools.texttospeech.title}"),
+          title: Text(t.tools.texttospeech.title),
         ),
         body: SafeArea(
           child: loading

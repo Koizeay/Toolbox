@@ -13,7 +13,7 @@ import 'package:xterm/core.dart';
 import 'package:xterm/ui.dart';
 
 class SshClientPage extends StatefulWidget {
-  const SshClientPage({ Key? key }) : super(key: key);
+  const SshClientPage({ super.key });
   @override
   State<SshClientPage> createState() => _SshClientPage();
 }
@@ -219,7 +219,7 @@ class _SshClientPage extends State<SshClientPage> {
       },
       child: Scaffold(
           appBar: AppBar(
-            title: Text("${t.generic.app_name} - ${t.tools.sshclient.title}"),
+            title: Text(t.tools.sshclient.title),
             actions: [ isConnected || loading
                 ? Container()
                 : IconButton(

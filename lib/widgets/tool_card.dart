@@ -5,7 +5,7 @@ class ToolCard extends StatelessWidget {
   final String imageAssetPath;
   final Function() onTap;
 
-  const ToolCard({Key? key, required this.title, required this.imageAssetPath, required this.onTap}) : super(key: key);
+  const ToolCard({super.key, required this.title, required this.imageAssetPath, required this.onTap});
 
   @override
   Widget build(BuildContext context) {

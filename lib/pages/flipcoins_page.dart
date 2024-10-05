@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:toolbox/gen/strings.g.dart';
 
 class FlipCoinsPage extends StatefulWidget {
-  const FlipCoinsPage({ Key? key }) : super(key: key);
+  const FlipCoinsPage({ super.key });
   @override
   State<FlipCoinsPage> createState() => _FlipCoinsPage();
 }
@@ -83,8 +83,7 @@ class _FlipCoinsPage extends State<FlipCoinsPage> {
 
     return Scaffold(
         appBar: AppBar(
-          title: Text("${t.generic
-              .app_name} - ${t.tools.flipcoins.title} "),
+          title: Text(t.tools.flipcoins.title),
         ),
         body: SafeArea(
           child: Center(

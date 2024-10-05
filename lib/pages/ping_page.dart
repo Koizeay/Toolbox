@@ -8,7 +8,7 @@ import 'package:toolbox/core/dialogs.dart';
 import 'package:toolbox/gen/strings.g.dart';
 
 class PingPage extends StatefulWidget {
-  const PingPage({ Key? key }) : super(key: key);
+  const PingPage({ super.key });
   @override
   State<PingPage> createState() => _PingPage();
 }
@@ -91,7 +91,7 @@ class _PingPage extends State<PingPage> {
       },
       child: Scaffold(
           appBar: AppBar(
-            title: Text("${t.generic.app_name} - ${t.tools.ping.title}"),
+            title: Text(t.tools.ping.title),
           ),
           body: SafeArea(
             child: Center(

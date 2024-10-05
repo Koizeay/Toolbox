@@ -7,7 +7,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:yaru/yaru.dart';
 
 class CreditsPage extends StatefulWidget {
-  const CreditsPage({ Key? key }) : super(key: key);
+  const CreditsPage({ super.key });
   @override
   State<CreditsPage> createState() => _CreditsPage();
 }
@@ -27,7 +27,7 @@ class _CreditsPage extends State<CreditsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("${t.generic.app_name} - ${t.credits.title}"),
+        title: Text(t.credits.title),
       ),
       body: SafeArea(
         child: SingleChildScrollView(

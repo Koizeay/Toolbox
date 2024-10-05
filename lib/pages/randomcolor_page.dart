@@ -4,7 +4,7 @@ import 'dart:math' as math;
 import 'package:flutter/services.dart';
 
 class RandomColorPage extends StatefulWidget {
-  const RandomColorPage({ Key? key }) : super(key: key);
+  const RandomColorPage({ super.key });
   @override
   State<RandomColorPage> createState() => _RandomColorPage();
 }
@@ -28,7 +28,7 @@ class _RandomColorPage extends State<RandomColorPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("${t.generic.app_name} - ${t.tools.randomcolor.title}"),
+          title: Text(t.tools.randomcolor.title),
         ),
         body: SafeArea(
           child: SingleChildScrollView(
