@@ -196,6 +196,10 @@ class _GameOfLifePage extends State<GameOfLifePage> {
 
   @override
   Widget build(BuildContext context) {
+    double scale = MediaQuery.of(context).orientation == Orientation.portrait
+        ? 1
+        : 0.4;
+
     Color emptyGridBackgroundColor = Theme.of(context).brightness == Brightness.light
         ? Colors.grey[200]!
         : Colors.grey[800]!;
@@ -224,7 +228,6 @@ class _GameOfLifePage extends State<GameOfLifePage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const SizedBox(),
                   Column(
                     children: [
                       for (int i = 0; i < _gridSize; i++)
@@ -246,8 +249,8 @@ class _GameOfLifePage extends State<GameOfLifePage> {
                                       width: 0.5,
                                     ),
                                   ),
-                                  width: (MediaQuery.of(context).size.width - 16) / _gridSize,
-                                  height: (MediaQuery.of(context).size.width - 16) / _gridSize,
+                                  width: ((MediaQuery.of(context).size.width - 16) / _gridSize) * scale,
+                                  height: ((MediaQuery.of(context).size.width - 16) / _gridSize) * scale,
                                 ),
                               ),
                           ],

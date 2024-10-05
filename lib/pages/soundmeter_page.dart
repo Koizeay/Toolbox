@@ -7,7 +7,6 @@ import 'package:gauges/gauges.dart';
 import 'package:noise_meter/noise_meter.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:toolbox/core/dialogs.dart';
-import 'package:toolbox/core/rotations.dart';
 import 'package:toolbox/gen/strings.g.dart';
 import 'package:yaru/yaru.dart';
 
@@ -39,7 +38,6 @@ class _SoundMeterPage extends State<SoundMeterPage> {
     if (mounted) {
       stopRecorder();
     }
-    setHomePageRotation();
     super.dispose();
   }
 
@@ -115,6 +113,8 @@ class _SoundMeterPage extends State<SoundMeterPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     SizedBox(
+                      height: MediaQuery.of(context).orientation == Orientation.landscape ? MediaQuery.of(context).size.height / 2 : null,
+                      width: MediaQuery.of(context).orientation == Orientation.landscape ? MediaQuery.of(context).size.width / 2 : null,
                       child: Padding(
                         padding: const EdgeInsets.all(22.0),
                         child: SizedBox(

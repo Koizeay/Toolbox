@@ -4,7 +4,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
-import 'package:toolbox/core/rotations.dart';
 import 'package:toolbox/gen/strings.g.dart';
 
 class ClockPage extends StatefulWidget {
@@ -27,21 +26,15 @@ class _ClockPage extends State<ClockPage> {
         formattedTime = DateFormat('kk:mm:ss').format(DateTime.now());
       });
     });
-    lockScreenRotation();
     super.initState();
   }
 
   @override
   void dispose() {
-    setHomePageRotation();
     if (isFullscreen) {
       SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
     }
     super.dispose();
-  }
-
-  void lockScreenRotation() {
-    setOnlyLandscape();
   }
 
   void toggleFullscreen() {

@@ -1,6 +1,5 @@
 
 import 'package:flutter/material.dart';
-import 'package:toolbox/core/rotations.dart';
 import 'package:toolbox/gen/strings.g.dart';
 import 'package:toolbox/models/tool.dart';
 import 'package:toolbox/pages/clock_page.dart';
@@ -54,7 +53,6 @@ class _HomePage extends State<HomePage> {
     super.initState();
     initTools();
     sortTools();
-    setOnlyPortraitUp();
     toolsFiltered = tools;
   }
 
@@ -184,8 +182,12 @@ class _HomePage extends State<HomePage> {
                     ),
                     Expanded(
                       child: GridView.builder(
-                        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 2,
+                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: MediaQuery.of(context).orientation == Orientation.portrait
+                              ? MediaQuery.of(context).size.width < 600
+                              ? 2
+                              : 3
+                              : 4,
                           childAspectRatio: 2,
                         ),
                         itemCount: toolsFiltered.length,

@@ -1,10 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:reliable_interval_timer/reliable_interval_timer.dart';
-import 'package:toolbox/core/rotations.dart';
 import 'package:toolbox/core/time.dart';
 import 'package:toolbox/gen/strings.g.dart';
-import 'package:yaru/yaru.dart';
 
 class StopwatchPage extends StatefulWidget {
   const StopwatchPage({ super.key });
@@ -22,12 +20,10 @@ class _StopwatchPage extends State<StopwatchPage> {
   @override
   void initState() {
     super.initState();
-    setOnlyPortraitUp();
   }
 
   @override
   void dispose() {
-    setHomePageRotation();
     stopTimer(isDispose: true);
     super.dispose();
   }
