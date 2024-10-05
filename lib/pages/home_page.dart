@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:toolbox/gen/strings.g.dart';
-import 'package:toolbox/models/tool.dart';
+import 'package:toolbox/models/home_tool.dart';
 import 'package:toolbox/pages/clock_page.dart';
 import 'package:toolbox/pages/counter_page.dart';
 import 'package:toolbox/pages/credits_page.dart';
