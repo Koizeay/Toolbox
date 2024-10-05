@@ -242,6 +242,8 @@
       "license_text": "Les fichiers audio sont fournis par \"$source\" sous la licence $license",
       "open": "Ouvrir",
       "view_license": "Voir la licence",
+      "loading_audio_title": "Chargement",
+      "loading_audio_text": "Chargement de l'hymne en cours...",
       "error": {
         "failed_to_load_list": "Impossible de charger la liste des hymnes. Veuillez vérifier votre connexion internet et réessayer.",
         "failed_to_play_anthem": "Impossible de jouer l'hymne. Veuillez vérifier votre connexion internet et réessayer."

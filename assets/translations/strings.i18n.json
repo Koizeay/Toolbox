@@ -241,6 +241,8 @@
       "license_text": "The audio files are provided by \"$source\" under the $license license",
       "open": "Open",
       "view_license": "View license",
+      "loading_audio_title": "Loading",
+      "loading_audio_text": "Loading the anthem, please wait...",
       "error": {
         "failed_to_load_list": "Impossible to load the list of anthems. Please check your internet connection and try again.",
         "failed_to_play_anthem": "Impossible to play the anthem. Please check your internet connection and try again."

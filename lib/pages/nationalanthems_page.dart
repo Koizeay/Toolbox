@@ -24,6 +24,7 @@ class _NationalAnthemsPage extends State<NationalAnthemsPage> {
   List<NationalAnthemsAnthem> filteredAnthemsList = [];
 
   bool isLoading = true;
+  bool isLoadingAudio = false;
 
   @override
   void initState() {
@@ -76,28 +77,49 @@ class _NationalAnthemsPage extends State<NationalAnthemsPage> {
     });
   }
 
+  void showLoadingDialog() {
+    showCustomButtonsTextDialog(
+        context,
+        t.tools.nationalanthems.loading_audio_title,
+        t.tools.nationalanthems.loading_audio_text,
+        [],
+        barrierDismissible: false
+    );
+  }
+
+  void hideLoadingDialog(BuildContext context) {
+    if (isLoadingAudio) {
+      Navigator.pop(context);
+    }
+  }
+
   Future<void> playAnthems(NationalAnthemsAnthem anthem) async {
     await audioPlayer.stop();
     if (isLoading) {
       return;
     }
+    isLoadingAudio = true;
     setState(() {
-      isLoading = true;
+      showLoadingDialog();
     });
     String url = "$remoteMp3Url${anthem.code}.mp3";
     try {
       await audioPlayer.play(UrlSource(url,), mode: PlayerMode.mediaPlayer);
+      if (mounted) {
+        hideLoadingDialog(context);
+      }
     } catch (e) {
       if (mounted) {
-        showOkTextDialog(context, t.generic.error, t.tools.nationalanthems.error.failed_to_play_anthem);
+        hideLoadingDialog(context);
+      }
+      if (mounted) {
+        showOkTextDialog(context, t.generic.error,
+            t.tools.nationalanthems.error.failed_to_play_anthem);
       }
       await audioPlayer.stop();
     } finally {
       if (mounted) {
-        filteredAnthemsList = anthemsList;
-        setState(() {
-          isLoading = false;
-        });
+        isLoadingAudio = false;
       }
     }
   }
