@@ -34,7 +34,6 @@ import 'package:toolbox/pages/uuidgenerator_page.dart';
 import 'package:toolbox/pages/whiteboard_page.dart';
 import 'package:toolbox/pages/youtubethumbnail_page.dart';
 import 'package:toolbox/widgets/tool_card.dart';
-import 'package:yaru/yaru.dart';
 
 import 'networkinfo_page.dart';
 

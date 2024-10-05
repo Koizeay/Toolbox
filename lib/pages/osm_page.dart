@@ -1,4 +1,6 @@
 
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_osm_plugin/flutter_osm_plugin.dart';
 import 'package:geolocator/geolocator.dart';
@@ -12,9 +14,52 @@ class OsmPage extends StatefulWidget {
 }
 
 class _OsmPage extends State<OsmPage> {
+  bool _loaded = false;
+
   MapController mapController = MapController(
     initPosition: GeoPoint(latitude: 47.0, longitude: 10.0),
   );
+
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(const Duration(milliseconds: 1), () {
+      _loaded = Platform.isIOS;
+      if (!_loaded) {
+        showLoadingDialog();
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    mapController.dispose();
+    super.dispose();
+  }
+
+  void showLoadingDialog() {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (BuildContext context) {
+        return const PopScope(
+          canPop: false,
+          child: AlertDialog(
+            content: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Padding(
+                  padding: EdgeInsets.all(16.0),
+                  child: CircularProgressIndicator(),
+                ),
+                Text("Loading"),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
 
   Future<void> goToUserLocation() async {
     if (!await Permission.location.request().isGranted) {
@@ -73,23 +118,25 @@ class _OsmPage extends State<OsmPage> {
           ),
           body: SafeArea(
             child: OSMFlutter(
-                controller: mapController,
-                mapIsLoading: Container(
-                    color: Theme.of(context).colorScheme.surface,
-                    child: const Center(
-                        child: CircularProgressIndicator()
-                    )
+              controller: mapController,
+              osmOption: const OSMOption(
+                enableRotationByGesture: false,
+                showContributorBadgeForOSM: true,
+                zoomOption: ZoomOption(
+                  initZoom: 3,
+                  minZoomLevel: 3,
+                  maxZoomLevel: 19,
+                  stepZoom: 1.0,
                 ),
-                osmOption: const OSMOption(
-                  enableRotationByGesture: false,
-                  showContributorBadgeForOSM: true,
-                  zoomOption: ZoomOption(
-                    initZoom: 3,
-                    minZoomLevel: 3,
-                    maxZoomLevel: 19,
-                    stepZoom: 1.0,
-                  ),
-                )
+              ),
+              onMapIsReady: (_) {
+                if(!_loaded) {
+                  Navigator.of(context).pop();
+                  _loaded = true;
+                } else {
+                  _loaded = true;
+                }
+              },
             ),
           )
       ),
