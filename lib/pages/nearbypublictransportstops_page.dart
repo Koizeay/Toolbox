@@ -530,6 +530,17 @@ class _NearbyPublicTransportStopsPage extends State<NearbyPublicTransportStopsPa
                                     ),
                                   ),
                                 ),
+                              if (board.passList?[i].arrival != null)
+                                SizedBox(
+                                  width: double.maxFinite,
+                                  child: Text(
+                                      "${t.tools.nearbypublictransportstops
+                                          .arrival} ${formatTimeStamp(
+                                          board.passList?[i].arrivalTimestamp ??
+                                              0, false)}",
+                                      textAlign: TextAlign.left
+                                  ),
+                                ),
                               if (board.passList?[i].departure != null)
                                 SizedBox(
                                   width: double.maxFinite,
@@ -539,17 +550,6 @@ class _NearbyPublicTransportStopsPage extends State<NearbyPublicTransportStopsPa
                                           board.passList?[i]
                                               .departureTimestamp ?? 0,
                                           false)}",
-                                      textAlign: TextAlign.left
-                                  ),
-                                ),
-                              if (board.passList?[i].arrival != null)
-                                SizedBox(
-                                  width: double.maxFinite,
-                                  child: Text(
-                                      "${t.tools.nearbypublictransportstops
-                                          .arrival} ${formatTimeStamp(
-                                          board.passList?[i].arrivalTimestamp ??
-                                              0, false)}",
                                       textAlign: TextAlign.left
                                   ),
                                 ),
