@@ -2,7 +2,6 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:toolbox/gen/strings.g.dart';
@@ -17,6 +16,7 @@ class HttpRequestPage extends StatefulWidget {
 class _HttpRequestPage extends State<HttpRequestPage> {
   bool isLoading = false;
   bool renderHtml = false;
+  bool htmlWebViewLoaded = false;
 
   TextEditingController methodController = TextEditingController();
   TextEditingController urlController = TextEditingController();
@@ -25,17 +25,7 @@ class _HttpRequestPage extends State<HttpRequestPage> {
 
   UniqueKey webViewKey = UniqueKey();
 
-  WebViewController webViewController = WebViewController()
-    ..setJavaScriptMode(JavaScriptMode.disabled)
-    ..clearCache()
-    ..clearLocalStorage()
-    ..setNavigationDelegate(
-      NavigationDelegate(
-        onNavigationRequest: (NavigationRequest request) {
-          return NavigationDecision.prevent;
-        },
-      ),
-    );
+  WebViewController webViewController = WebViewController();
 
   List<String> methods = [
     "GET",
@@ -55,6 +45,33 @@ class _HttpRequestPage extends State<HttpRequestPage> {
   String responseStatusCode = "";
   String responseHeaders = "";
   String responseBody = "";
+
+  @override
+  void initState() {
+    super.initState();
+    setWebViewSettings();
+  }
+
+  void setWebViewSettings() {
+    webViewController
+      ..setJavaScriptMode(JavaScriptMode.disabled)
+      ..clearCache()
+      ..clearLocalStorage()
+      ..setNavigationDelegate(
+        NavigationDelegate(
+          onNavigationRequest: (NavigationRequest request) {
+            if (request.url.startsWith("about:blank")) {
+              return NavigationDecision.navigate;
+            }
+            if (htmlWebViewLoaded) {
+              return NavigationDecision.prevent;
+            }
+            htmlWebViewLoaded = true;
+            return NavigationDecision.navigate;
+          },
+        ),
+      );
+  }
 
   Future<HttpClientResponse> sendRequest(String method, Uri url, String body,
       Map<String, String> headers) async {
