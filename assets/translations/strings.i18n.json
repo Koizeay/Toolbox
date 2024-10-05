@@ -278,6 +278,7 @@
     "osm": {
       "title": "Map (OSM)",
       "go_to_my_location": "Go to my location",
+      "loading_map": "Loading map...",
       "error": {
         "location_permission_denied": "You need to grant location permissions to use this feature",
         "location_services_disabled": "Location services are disabled"

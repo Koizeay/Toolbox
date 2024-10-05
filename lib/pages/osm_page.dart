@@ -42,17 +42,17 @@ class _OsmPage extends State<OsmPage> {
       context: context,
       barrierDismissible: false,
       builder: (BuildContext context) {
-        return const PopScope(
+        return PopScope(
           canPop: false,
           child: AlertDialog(
             content: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Padding(
+                const Padding(
                   padding: EdgeInsets.all(16.0),
                   child: CircularProgressIndicator(),
                 ),
-                Text("Loading"),
+                Text(t.tools.osm.loading_map),
               ],
             ),
           ),

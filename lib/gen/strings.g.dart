@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 546 (273 per locale)
+/// Strings: 548 (274 per locale)
 ///
-/// Built on 2024-10-05 at 18:33 UTC
+/// Built on 2024-10-05 at 18:35 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -613,6 +613,7 @@ class _StringsToolsOsmEn {
 	// Translations
 	String get title => 'Map (OSM)';
 	String get go_to_my_location => 'Go to my location';
+	String get loading_map => 'Loading map...';
 	late final _StringsToolsOsmErrorEn error = _StringsToolsOsmErrorEn._(_root);
 }
 
@@ -1462,6 +1463,7 @@ class _StringsToolsOsmFr implements _StringsToolsOsmEn {
 	// Translations
 	@override String get title => 'Plan (OSM)';
 	@override String get go_to_my_location => 'Aller à ma position';
+	@override String get loading_map => 'Chargement de la carte...';
 	@override late final _StringsToolsOsmErrorFr error = _StringsToolsOsmErrorFr._(_root);
 }
 
@@ -2027,6 +2029,7 @@ extension on Translations {
 			case 'tools.morsecode.play_audio': return 'Play audio';
 			case 'tools.osm.title': return 'Map (OSM)';
 			case 'tools.osm.go_to_my_location': return 'Go to my location';
+			case 'tools.osm.loading_map': return 'Loading map...';
 			case 'tools.osm.error.location_permission_denied': return 'You need to grant location permissions to use this feature';
 			case 'tools.osm.error.location_services_disabled': return 'Location services are disabled';
 			case 'tools.gameoflife.title': return 'Game of life';
@@ -2308,6 +2311,7 @@ extension on _StringsFr {
 			case 'tools.morsecode.play_audio': return 'Écouter l\'audio';
 			case 'tools.osm.title': return 'Plan (OSM)';
 			case 'tools.osm.go_to_my_location': return 'Aller à ma position';
+			case 'tools.osm.loading_map': return 'Chargement de la carte...';
 			case 'tools.osm.error.location_permission_denied': return 'Vous devez autoriser l\'accès à la position pour utiliser cette fonction';
 			case 'tools.osm.error.location_services_disabled': return 'Les services de position sont désactivés';
 			case 'tools.gameoflife.title': return 'Jeu de la vie';

@@ -279,6 +279,7 @@
     "osm": {
       "title": "Plan (OSM)",
       "go_to_my_location": "Aller à ma position",
+      "loading_map": "Chargement de la carte...",
       "error": {
         "location_permission_denied": "Vous devez autoriser l'accès à la position pour utiliser cette fonction",
         "location_services_disabled": "Les services de position sont désactivés"
