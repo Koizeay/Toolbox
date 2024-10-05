@@ -597,6 +597,24 @@ class _NearbyPublicTransportStopsPage extends State<NearbyPublicTransportStopsPa
     }
   }
 
+  String getStopIconImageAssetPath(NearbyPublicTransportStopsStation stop) {
+    switch (stop.icon) {
+      case "train":
+        return "assets/images/specific/nearbypublictransportstops_train.png";
+      case "bus":
+        return "assets/images/specific/nearbypublictransportstops_bus.png";
+      case "ship":
+        return "assets/images/specific/nearbypublictransportstops_ship.png";
+      case "tram":
+        return "assets/images/specific/nearbypublictransportstops_tram.png";
+      default:
+        if (stop.name?.toLowerCase().contains("(funi)") ?? false) {
+          return "assets/images/specific/nearbypublictransportstops_funi.png";
+        }
+        return "assets/images/specific/nearbypublictransportstops_unknown.png";
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -665,15 +683,7 @@ class _NearbyPublicTransportStopsPage extends State<NearbyPublicTransportStopsPa
                                       stop.distance ?? 0))
                                   : null,
                               trailing: Image.asset(
-                                  stop.icon == "train"
-                                      ? "assets/images/specific/nearbypublictransportstops_train.png"
-                                      : stop.icon == "bus"
-                                      ? "assets/images/specific/nearbypublictransportstops_bus.png"
-                                      : stop.icon == "ship"
-                                      ? "assets/images/specific/nearbypublictransportstops_ship.png"
-                                      : stop.icon == "tram"
-                                      ? "assets/images/specific/nearbypublictransportstops_tram.png"
-                                      : "assets/images/specific/nearbypublictransportstops_unknown.png",
+                                  getStopIconImageAssetPath(stop),
                                   height: 40
                               ),
                             ),
