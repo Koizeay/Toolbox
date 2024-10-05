@@ -111,7 +111,8 @@
     },
     "randomcolor": {
       "title": "Couleur aléatoire",
-      "hint": "Toucher la couleur pour la changer",
+      "hint": "Touchez la couleur pour la changer",
+      "tap_to_copy": "Cliquez pour copier",
       "copied_to_clipboard": "Copié dans le presse-papier"
     },
     "sshclient": {

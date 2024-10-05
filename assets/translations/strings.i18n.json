@@ -112,6 +112,7 @@
     "randomcolor": {
       "title": "Random color",
       "hint": "Tap the color to change it",
+      "tap_to_copy": "Tap to copy",
       "copied_to_clipboard": "Copied to clipboard"
     },
     "sshclient": {

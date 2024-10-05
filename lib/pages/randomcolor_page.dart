@@ -68,8 +68,12 @@ class _RandomColorPage extends State<RandomColorPage> {
                   },
                   child: Text(
                     "#${_color.value.toRadixString(16).toUpperCase().substring(2)}",
-                    style: const TextStyle(fontSize: 20),
+                    style: const TextStyle(fontSize: 24),
                   ),
+                ),
+                Text(
+                  t.tools.randomcolor.tap_to_copy,
+                  style: const TextStyle(fontSize: 14, fontStyle: FontStyle.italic),
                 ),
               ],
             ),

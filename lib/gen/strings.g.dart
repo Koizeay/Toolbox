@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 548 (274 per locale)
+/// Strings: 550 (275 per locale)
 ///
-/// Built on 2024-10-05 at 18:35 UTC
+/// Built on 2024-10-05 at 18:41 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -396,6 +396,7 @@ class _StringsToolsRandomcolorEn {
 	// Translations
 	String get title => 'Random color';
 	String get hint => 'Tap the color to change it';
+	String get tap_to_copy => 'Tap to copy';
 	String get copied_to_clipboard => 'Copied to clipboard';
 }
 
@@ -1245,7 +1246,8 @@ class _StringsToolsRandomcolorFr implements _StringsToolsRandomcolorEn {
 
 	// Translations
 	@override String get title => 'Couleur aléatoire';
-	@override String get hint => 'Toucher la couleur pour la changer';
+	@override String get hint => 'Touchez la couleur pour la changer';
+	@override String get tap_to_copy => 'Cliquez pour copier';
 	@override String get copied_to_clipboard => 'Copié dans le presse-papier';
 }
 
@@ -1903,6 +1905,7 @@ extension on Translations {
 			case 'tools.randomnumber.error.min_and_max_must_be_between_x_and_y': return ({required Object minNumberLimit, required Object maxNumberLimit}) => 'The minimum and maximum numbers must be between ${minNumberLimit} and ${maxNumberLimit}.';
 			case 'tools.randomcolor.title': return 'Random color';
 			case 'tools.randomcolor.hint': return 'Tap the color to change it';
+			case 'tools.randomcolor.tap_to_copy': return 'Tap to copy';
 			case 'tools.randomcolor.copied_to_clipboard': return 'Copied to clipboard';
 			case 'tools.sshclient.title': return 'SSH client';
 			case 'tools.sshclient.use_password': return 'Use password';
@@ -2184,7 +2187,8 @@ extension on _StringsFr {
 			case 'tools.randomnumber.error.min_must_be_lower_than_max': return 'Le nombre minimum doit être inférieur au nombre maximum.';
 			case 'tools.randomnumber.error.min_and_max_must_be_between_x_and_y': return ({required Object minNumberLimit, required Object maxNumberLimit}) => 'Les nombres minimum et maximum doivent être compris entre ${minNumberLimit} et ${maxNumberLimit}.';
 			case 'tools.randomcolor.title': return 'Couleur aléatoire';
-			case 'tools.randomcolor.hint': return 'Toucher la couleur pour la changer';
+			case 'tools.randomcolor.hint': return 'Touchez la couleur pour la changer';
+			case 'tools.randomcolor.tap_to_copy': return 'Cliquez pour copier';
 			case 'tools.randomcolor.copied_to_clipboard': return 'Copié dans le presse-papier';
 			case 'tools.sshclient.title': return 'Client SSH';
 			case 'tools.sshclient.use_password': return 'Utiliser un mot de passe';
