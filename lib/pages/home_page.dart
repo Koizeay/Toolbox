@@ -33,7 +33,7 @@ import 'package:toolbox/pages/url_shortener_page.dart';
 import 'package:toolbox/pages/uuidgenerator_page.dart';
 import 'package:toolbox/pages/whiteboard_page.dart';
 import 'package:toolbox/pages/youtubethumbnail_page.dart';
-import 'package:toolbox/widgets/tool_card.dart';
+import 'package:toolbox/widgets/home_toolcard.dart';
 
 import 'networkinfo_page.dart';
 
