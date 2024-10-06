@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 578 (289 per locale)
+/// Strings: 580 (290 per locale)
 ///
-/// Built on 2024-10-06 at 13:28 UTC
+/// Built on 2024-10-06 at 13:34 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -149,6 +149,7 @@ class Translations implements BaseTranslations<AppLocale, Translations> {
 
 	// Translations
 	late final _StringsGenericEn generic = _StringsGenericEn._(_root);
+	late final _StringsHomepageEn homepage = _StringsHomepageEn._(_root);
 	late final _StringsFoldersEn folders = _StringsFoldersEn._(_root);
 	late final _StringsToolsEn tools = _StringsToolsEn._(_root);
 	late final _StringsCreditsEn credits = _StringsCreditsEn._(_root);
@@ -167,8 +168,18 @@ class _StringsGenericEn {
 	String get ok => 'OK';
 	String get cancel => 'Cancel';
 	String get search => 'Search';
-	String get search_all_folders => 'Search in all folders';
 	String get enable => 'Enable';
+}
+
+// Path: homepage
+class _StringsHomepageEn {
+	_StringsHomepageEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get switch_view => 'Switch view';
+	String get search_all_folders => 'Search in all folders';
 }
 
 // Path: folders
@@ -1024,6 +1035,7 @@ class _StringsFr implements Translations {
 
 	// Translations
 	@override late final _StringsGenericFr generic = _StringsGenericFr._(_root);
+	@override late final _StringsHomepageFr homepage = _StringsHomepageFr._(_root);
 	@override late final _StringsFoldersFr folders = _StringsFoldersFr._(_root);
 	@override late final _StringsToolsFr tools = _StringsToolsFr._(_root);
 	@override late final _StringsCreditsFr credits = _StringsCreditsFr._(_root);
@@ -1042,8 +1054,18 @@ class _StringsGenericFr implements _StringsGenericEn {
 	@override String get ok => 'OK';
 	@override String get cancel => 'Annuler';
 	@override String get search => 'Rechercher';
-	@override String get search_all_folders => 'Search in all folders';
 	@override String get enable => 'Activer';
+}
+
+// Path: homepage
+class _StringsHomepageFr implements _StringsHomepageEn {
+	_StringsHomepageFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get switch_view => 'Changer de vue';
+	@override String get search_all_folders => 'Rechercher dans tous les dossiers';
 }
 
 // Path: folders
@@ -1886,8 +1908,9 @@ extension on Translations {
 			case 'generic.ok': return 'OK';
 			case 'generic.cancel': return 'Cancel';
 			case 'generic.search': return 'Search';
-			case 'generic.search_all_folders': return 'Search in all folders';
 			case 'generic.enable': return 'Enable';
+			case 'homepage.switch_view': return 'Switch view';
+			case 'homepage.search_all_folders': return 'Search in all folders';
 			case 'folders.audio': return 'Audio';
 			case 'folders.games': return 'Games';
 			case 'folders.geography': return 'Geography';
@@ -2183,8 +2206,9 @@ extension on _StringsFr {
 			case 'generic.ok': return 'OK';
 			case 'generic.cancel': return 'Annuler';
 			case 'generic.search': return 'Rechercher';
-			case 'generic.search_all_folders': return 'Search in all folders';
 			case 'generic.enable': return 'Activer';
+			case 'homepage.switch_view': return 'Changer de vue';
+			case 'homepage.search_all_folders': return 'Rechercher dans tous les dossiers';
 			case 'folders.audio': return 'Audio';
 			case 'folders.games': return 'Jeux';
 			case 'folders.geography': return 'Géographie';

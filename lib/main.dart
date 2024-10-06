@@ -5,22 +5,30 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:toolbox/core/shared_preferences.dart';
 import 'package:toolbox/gen/strings.g.dart';
 import 'package:toolbox/hierarchy.dart';
 import 'package:toolbox/pages/home_page.dart';
 import 'package:wakelock_plus/wakelock_plus.dart';
 import 'package:yaru/yaru.dart';
 
-void main() {
+Future<void> main() async {
+  final SharedPreferences prefs;
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   WakelockPlus.enable();
   LocaleSettings.useDeviceLocale();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
-  runApp(TranslationProvider(child: const MyApp(),));
+  prefs = await SharedPreferences.getInstance();
+  runApp(TranslationProvider(child: MyApp(
+      isFolderView: prefs.getBool(SHARED_PREFERENCES_CORE_HOMEPAGE_ISFOLDERVIEW)
+          ?? false
+  )));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final bool isFolderView;
+  const MyApp({super.key, required this.isFolderView});
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +57,11 @@ class MyApp extends StatelessWidget {
             ),
             debugShowCheckedModeBanner: false,
             title: t.generic.app_name,
-            home: HomePage(content: Hierarchy.hierarchy),
+            home: HomePage(
+                content: isFolderView
+                    ? Hierarchy.hierarchy
+                    : Hierarchy.getFlatHierarchy()
+            ),
           );
         }
     );

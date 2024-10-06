@@ -6,8 +6,11 @@
     "ok": "OK",
     "cancel": "Cancel",
     "search": "Search",
-    "search_all_folders": "Search in all folders",
     "enable": "Enable"
+  },
+  "homepage": {
+    "switch_view": "Switch view",
+    "search_all_folders": "Search in all folders"
   },
   "folders": {
     "audio": "Audio",

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:toolbox/core/shared_preferences.dart';
 import 'package:toolbox/gen/strings.g.dart';
 import 'package:toolbox/hierarchy.dart';
 import 'package:toolbox/pages/credits_page.dart';
@@ -51,6 +53,10 @@ class _HomePage extends State<HomePage> {
     return Navigator.canPop(context);
   }
 
+  bool isFolderView() {
+    return widget.content == Hierarchy.hierarchy;
+  }
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -59,6 +65,23 @@ class _HomePage extends State<HomePage> {
           appBar: AppBar(
             title: Text(t.generic.app_name),
             actions: hasPreviousPage() ? [] : [
+              IconButton(
+                icon: Icon(
+                    isFolderView() ? Icons.grid_view : Icons.folder_outlined),
+                tooltip: t.homepage.switch_view,
+                onPressed: () async {
+                  SharedPreferences prefs = await SharedPreferences.getInstance();
+                  await prefs.setBool(SHARED_PREFERENCES_CORE_HOMEPAGE_ISFOLDERVIEW, !isFolderView());
+                  Navigator.pushReplacement(
+                    context,
+                    PageRouteBuilder(
+                      pageBuilder: (context, animation1, animation2) =>
+                          HomePage(content: isFolderView() ? Hierarchy
+                              .getFlatHierarchy() : Hierarchy.hierarchy),
+                    ),
+                  );
+                },
+              ),
               IconButton(
                 icon: const Icon(Icons.info_outline),
                 tooltip: t.credits.title,
@@ -84,7 +107,8 @@ class _HomePage extends State<HomePage> {
                           filterSearchResults(value);
                         },
                         decoration: InputDecoration(
-                          labelText: hasPreviousPage() ? t.generic.search : t.generic.search_all_folders,
+                          labelText: hasPreviousPage() ? t.generic.search : t
+                              .homepage.search_all_folders,
                           prefixIcon: const Icon(Icons.search),
                           border: const OutlineInputBorder(),
                         ),
@@ -93,8 +117,13 @@ class _HomePage extends State<HomePage> {
                     Expanded(
                       child: GridView.builder(
                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: MediaQuery.of(context).orientation == Orientation.portrait
-                              ? MediaQuery.of(context).size.width < 600
+                          crossAxisCount: MediaQuery
+                              .of(context)
+                              .orientation == Orientation.portrait
+                              ? MediaQuery
+                              .of(context)
+                              .size
+                              .width < 600
                               ? 2
                               : 3
                               : 4,
@@ -109,7 +138,8 @@ class _HomePage extends State<HomePage> {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => hierarchyFiltered[index].page
+                                      builder: (context) =>
+                                      hierarchyFiltered[index].page
                                   ),
                                 );
                               }
