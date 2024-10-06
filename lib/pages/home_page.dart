@@ -6,9 +6,9 @@ import 'package:toolbox/widgets/home_tilecard.dart';
 
 
 class HomePage extends StatefulWidget {
-  List<dynamic> content;
+  final List<dynamic> content;
 
-  HomePage({ super.key, required this.content });
+  const HomePage({ super.key, required this.content });
   @override
   State<HomePage> createState() => _HomePage();
 }
