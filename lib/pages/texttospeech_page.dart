@@ -184,106 +184,111 @@ class _TextToSpeechPage extends State<TextToSpeechPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title: Text(t.tools.texttospeech.title),
-        ),
-        body: SafeArea(
-          child: loading
-              ? const Center(child: CircularProgressIndicator())
-              : SingleChildScrollView(
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                children: [
-                  TextField(
-                    controller: inputTextController,
-                    keyboardType: TextInputType.multiline,
-                    maxLines: null,
-                    decoration: InputDecoration(
-                        border: const OutlineInputBorder(),
-                        labelText: t.tools.texttospeech.text_to_speak
+    return GestureDetector(
+      onTap: () {
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
+      child: Scaffold(
+          appBar: AppBar(
+            title: Text(t.tools.texttospeech.title),
+          ),
+          body: SafeArea(
+            child: loading
+                ? const Center(child: CircularProgressIndicator())
+                : SingleChildScrollView(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  children: [
+                    TextField(
+                      controller: inputTextController,
+                      keyboardType: TextInputType.multiline,
+                      maxLines: null,
+                      decoration: InputDecoration(
+                          border: const OutlineInputBorder(),
+                          labelText: t.tools.texttospeech.text_to_speak
+                      ),
                     ),
-                  ),
-                  const SizedBox(height: 8,),
-                  SizedBox(
-                    child: DropdownButton(
-                      value: currentLanguage,
-                      items: languages,
-                      onChanged: (value) {
-                        loading = true;
-                        changeLanguage(value.toString()).then((value) =>
-                        loading = false);
-                      },
-                    ),
-                  ),
-                  const SizedBox(height: 8,),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Text(t.tools.texttospeech.pitch),
-                        Slider(
-                          value: currentPitch,
-                          onChanged: (value) {
-                            setState(() {
-                              currentPitch = value;
-                            });
-                          },
-                          onChangeEnd: (value) async {
-                            loading = true;
-                            await flutterTts.setPitch(value).then((value) => loading = false);
-                          },
-                          min: 0.5,
-                          max: 2.0,
-                        ),
-                        Text(currentPitch.toStringAsFixed(2)),
-                      ],
-                    ),
-                  ),
-                  const SizedBox(height: 8,),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Text(t.tools.texttospeech.rate),
-                        Slider(
-                          value: currentSpeechRate,
-                          onChanged: (value) {
-                            setState(() {
-                              currentSpeechRate = value;
-                            });
-                          },
-                          onChangeEnd: (value) async {
-                            loading = true;
-                            await flutterTts.setSpeechRate(value).then((value) => loading = false);
-                          },
-                          min: 0.01,
-                          max: 1.0,
-                        ),
-                        Text(currentSpeechRate.toStringAsFixed(2)),
-                      ],
-                    ),
-                  ),
-                  const SizedBox(height: 8,),
-                  SizedBox(
-                    width: double.infinity,
-                    child: FilledButton(
-                        onPressed: () async {
-                          await playText();
+                    const SizedBox(height: 8,),
+                    SizedBox(
+                      child: DropdownButton(
+                        value: currentLanguage,
+                        items: languages,
+                        onChanged: (value) {
+                          loading = true;
+                          changeLanguage(value.toString()).then((value) =>
+                          loading = false);
                         },
-                        child: Text(isPlaying ? t.tools.texttospeech.stop : t.tools.texttospeech.play)
+                      ),
                     ),
-                  ),
-                ],
+                    const SizedBox(height: 8,),
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text(t.tools.texttospeech.pitch),
+                          Slider(
+                            value: currentPitch,
+                            onChanged: (value) {
+                              setState(() {
+                                currentPitch = value;
+                              });
+                            },
+                            onChangeEnd: (value) async {
+                              loading = true;
+                              await flutterTts.setPitch(value).then((value) => loading = false);
+                            },
+                            min: 0.5,
+                            max: 2.0,
+                          ),
+                          Text(currentPitch.toStringAsFixed(2)),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 8,),
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text(t.tools.texttospeech.rate),
+                          Slider(
+                            value: currentSpeechRate,
+                            onChanged: (value) {
+                              setState(() {
+                                currentSpeechRate = value;
+                              });
+                            },
+                            onChangeEnd: (value) async {
+                              loading = true;
+                              await flutterTts.setSpeechRate(value).then((value) => loading = false);
+                            },
+                            min: 0.01,
+                            max: 1.0,
+                          ),
+                          Text(currentSpeechRate.toStringAsFixed(2)),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 8,),
+                    SizedBox(
+                      width: double.infinity,
+                      child: FilledButton(
+                          onPressed: () async {
+                            await playText();
+                          },
+                          child: Text(isPlaying ? t.tools.texttospeech.stop : t.tools.texttospeech.play)
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
-          ),
-        )
+          )
+      ),
     );
   }
 }
