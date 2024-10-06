@@ -36,7 +36,7 @@ class _HomePage extends State<HomePage> {
   void filterSearchResults(String query) {
     hierarchyFiltered = [];
     if (query.isNotEmpty) {
-      for (var tile in Hierarchy.getFlatHierarchy()) {
+      for (var tile in hasPreviousPage() ? hierarchy : Hierarchy.getFlatHierarchy()) {
         if (tile.name.toLowerCase().contains(query.toLowerCase())) {
           hierarchyFiltered.add(tile);
         }
@@ -47,6 +47,10 @@ class _HomePage extends State<HomePage> {
     setState(() {});
   }
 
+  bool hasPreviousPage() {
+    return Navigator.canPop(context);
+  }
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -54,7 +58,7 @@ class _HomePage extends State<HomePage> {
       child: Scaffold(
           appBar: AppBar(
             title: Text(t.generic.app_name),
-            actions: [
+            actions: hasPreviousPage() ? [] : [
               IconButton(
                 icon: const Icon(Icons.info_outline),
                 tooltip: t.credits.title,
@@ -80,9 +84,9 @@ class _HomePage extends State<HomePage> {
                           filterSearchResults(value);
                         },
                         decoration: InputDecoration(
-                          labelText: t.generic.search,
+                          labelText: hasPreviousPage() ? t.generic.search : t.generic.search_all_folders,
                           prefixIcon: const Icon(Icons.search),
-                          border: OutlineInputBorder(),
+                          border: const OutlineInputBorder(),
                         ),
                       ),
                     ),

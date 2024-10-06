@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 576 (288 per locale)
+/// Strings: 578 (289 per locale)
 ///
-/// Built on 2024-10-06 at 13:05 UTC
+/// Built on 2024-10-06 at 13:28 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -167,6 +167,7 @@ class _StringsGenericEn {
 	String get ok => 'OK';
 	String get cancel => 'Cancel';
 	String get search => 'Search';
+	String get search_all_folders => 'Search in all folders';
 	String get enable => 'Enable';
 }
 
@@ -1041,6 +1042,7 @@ class _StringsGenericFr implements _StringsGenericEn {
 	@override String get ok => 'OK';
 	@override String get cancel => 'Annuler';
 	@override String get search => 'Rechercher';
+	@override String get search_all_folders => 'Search in all folders';
 	@override String get enable => 'Activer';
 }
 
@@ -1884,6 +1886,7 @@ extension on Translations {
 			case 'generic.ok': return 'OK';
 			case 'generic.cancel': return 'Cancel';
 			case 'generic.search': return 'Search';
+			case 'generic.search_all_folders': return 'Search in all folders';
 			case 'generic.enable': return 'Enable';
 			case 'folders.audio': return 'Audio';
 			case 'folders.games': return 'Games';
@@ -2180,6 +2183,7 @@ extension on _StringsFr {
 			case 'generic.ok': return 'OK';
 			case 'generic.cancel': return 'Annuler';
 			case 'generic.search': return 'Rechercher';
+			case 'generic.search_all_folders': return 'Search in all folders';
 			case 'generic.enable': return 'Activer';
 			case 'folders.audio': return 'Audio';
 			case 'folders.games': return 'Jeux';
