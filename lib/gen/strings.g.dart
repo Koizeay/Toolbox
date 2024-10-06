@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 582 (291 per locale)
+/// Strings: 594 (297 per locale)
 ///
-/// Built on 2024-10-06 at 15:08 UTC
+/// Built on 2024-10-06 at 15:38 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -760,6 +760,10 @@ class _StringsToolsCounterEn {
 
 	// Translations
 	String get title => 'Counter';
+	String get add_button => 'Add button';
+	String get remove_button => 'Remove button';
+	String get enter_number => 'Enter a number';
+	late final _StringsToolsCounterErrorEn error = _StringsToolsCounterErrorEn._(_root);
 }
 
 // Path: credits.translations
@@ -1009,6 +1013,18 @@ class _StringsToolsUrlshortenerErrorEn {
 	String get failed_to_shorten_url => 'Failed to shorten the URL, please check your input and your internet connection.';
 	String get impossible_to_connect_to_the_server => 'Impossible to connect to the server';
 	String get impossible_to_connect_to_the_server_message => 'Failed to connect to the server, please check your internet connection and try again.';
+}
+
+// Path: tools.counter.error
+class _StringsToolsCounterErrorEn {
+	_StringsToolsCounterErrorEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get invalid_number => 'The number you entered is invalid';
+	String the_number_must_be_between_x_and_y({required Object minNumberLimit, required Object maxNumberLimit}) => 'The number must be between ${minNumberLimit} and ${maxNumberLimit}';
+	String get you_must_have_at_least_one_button => 'You must have at least one button';
 }
 
 // Path: <root>
@@ -1647,6 +1663,10 @@ class _StringsToolsCounterFr implements _StringsToolsCounterEn {
 
 	// Translations
 	@override String get title => 'Compteur';
+	@override String get add_button => 'Ajouter un bouton';
+	@override String get remove_button => 'Supprimer un bouton';
+	@override String get enter_number => 'Entrez un nombre';
+	@override late final _StringsToolsCounterErrorFr error = _StringsToolsCounterErrorFr._(_root);
 }
 
 // Path: credits.translations
@@ -1896,6 +1916,18 @@ class _StringsToolsUrlshortenerErrorFr implements _StringsToolsUrlshortenerError
 	@override String get failed_to_shorten_url => 'Le raccourcissement de l\'URL a échoué, veuillez vérifier votre saisie et votre connexion internet.';
 	@override String get impossible_to_connect_to_the_server => 'Impossible de se connecter au serveur';
 	@override String get impossible_to_connect_to_the_server_message => 'Échec de la connexion au serveur, veuillez vérifier votre connexion internet et réessayer.';
+}
+
+// Path: tools.counter.error
+class _StringsToolsCounterErrorFr implements _StringsToolsCounterErrorEn {
+	_StringsToolsCounterErrorFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get invalid_number => 'Le nombre que vous avez entré n\'est pas valide';
+	@override String the_number_must_be_between_x_and_y({required Object minNumberLimit, required Object maxNumberLimit}) => 'Le nombre doit être compris entre ${minNumberLimit} et ${maxNumberLimit}';
+	@override String get you_must_have_at_least_one_button => 'Vous devez avoir au moins un bouton';
 }
 
 /// Flat map(s) containing all translations.
@@ -2186,6 +2218,12 @@ extension on Translations {
 			case 'tools.urlshortener.error.impossible_to_connect_to_the_server': return 'Impossible to connect to the server';
 			case 'tools.urlshortener.error.impossible_to_connect_to_the_server_message': return 'Failed to connect to the server, please check your internet connection and try again.';
 			case 'tools.counter.title': return 'Counter';
+			case 'tools.counter.add_button': return 'Add button';
+			case 'tools.counter.remove_button': return 'Remove button';
+			case 'tools.counter.enter_number': return 'Enter a number';
+			case 'tools.counter.error.invalid_number': return 'The number you entered is invalid';
+			case 'tools.counter.error.the_number_must_be_between_x_and_y': return ({required Object minNumberLimit, required Object maxNumberLimit}) => 'The number must be between ${minNumberLimit} and ${maxNumberLimit}';
+			case 'tools.counter.error.you_must_have_at_least_one_button': return 'You must have at least one button';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -2485,6 +2523,12 @@ extension on _StringsFr {
 			case 'tools.urlshortener.error.impossible_to_connect_to_the_server': return 'Impossible de se connecter au serveur';
 			case 'tools.urlshortener.error.impossible_to_connect_to_the_server_message': return 'Échec de la connexion au serveur, veuillez vérifier votre connexion internet et réessayer.';
 			case 'tools.counter.title': return 'Compteur';
+			case 'tools.counter.add_button': return 'Ajouter un bouton';
+			case 'tools.counter.remove_button': return 'Supprimer un bouton';
+			case 'tools.counter.enter_number': return 'Entrez un nombre';
+			case 'tools.counter.error.invalid_number': return 'Le nombre que vous avez entré n\'est pas valide';
+			case 'tools.counter.error.the_number_must_be_between_x_and_y': return ({required Object minNumberLimit, required Object maxNumberLimit}) => 'Le nombre doit être compris entre ${minNumberLimit} et ${maxNumberLimit}';
+			case 'tools.counter.error.you_must_have_at_least_one_button': return 'Vous devez avoir au moins un bouton';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';
