@@ -107,8 +107,9 @@ class _HomePage extends State<HomePage> {
                           filterSearchResults(value);
                         },
                         decoration: InputDecoration(
-                          labelText: hasPreviousPage() ? t.generic.search : t
-                              .homepage.search_all_folders,
+                          labelText: hasPreviousPage() || !isFolderView()
+                              ? t.generic.search
+                              : t.homepage.search_all_folders,
                           prefixIcon: const Icon(Icons.search),
                           border: const OutlineInputBorder(),
                         ),
