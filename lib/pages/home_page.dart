@@ -1,42 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:toolbox/gen/strings.g.dart';
 import 'package:toolbox/hierarchy.dart';
-import 'package:toolbox/models/home_folder.dart';
-import 'package:toolbox/models/home_tool.dart';
-import 'package:toolbox/pages/clock_page.dart';
-import 'package:toolbox/pages/counter_page.dart';
 import 'package:toolbox/pages/credits_page.dart';
-import 'package:toolbox/pages/timestampconverter_page.dart';
-import 'package:toolbox/pages/fileencryption_page.dart';
-import 'package:toolbox/pages/flipcoins_page.dart';
-import 'package:toolbox/pages/gameoflife_page.dart';
-import 'package:toolbox/pages/httprequest_page.dart';
-import 'package:toolbox/pages/mc_server_ping.dart';
-import 'package:toolbox/pages/metronome_page.dart';
-import 'package:toolbox/pages/megaphone_page.dart';
-import 'package:toolbox/pages/morsecode_page.dart';
-import 'package:toolbox/pages/nationalanthems_page.dart';
-import 'package:toolbox/pages/nearbypublictransportstops_page.dart';
-import 'package:toolbox/pages/nslookup_page.dart';
-import 'package:toolbox/pages/osm_page.dart';
-import 'package:toolbox/pages/ping_page.dart';
-import 'package:toolbox/pages/qrreader_page.dart';
-import 'package:toolbox/pages/randomcolor_page.dart';
-import 'package:toolbox/pages/randomnumber_page.dart';
-import 'package:toolbox/pages/roulette_page.dart';
-import 'package:toolbox/pages/soundmeter_page.dart';
-import 'package:toolbox/pages/speedometer_page.dart';
-import 'package:toolbox/pages/sshclient_page.dart';
-import 'package:toolbox/pages/stopwatch_page.dart';
-import 'package:toolbox/pages/texttospeech_page.dart';
-import 'package:toolbox/pages/timer_page.dart';
-import 'package:toolbox/pages/url_shortener_page.dart';
-import 'package:toolbox/pages/uuidgenerator_page.dart';
-import 'package:toolbox/pages/whiteboard_page.dart';
-import 'package:toolbox/pages/youtubethumbnail_page.dart';
 import 'package:toolbox/widgets/home_tilecard.dart';
 
-import 'networkinfo_page.dart';
 
 class HomePage extends StatefulWidget {
   List<dynamic> content;
