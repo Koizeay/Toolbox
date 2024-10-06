@@ -91,4 +91,26 @@ class Hierarchy {
       Tool(t.tools.whiteboard.title, "assets/images/tools/whiteboard.png", const WhiteBoardPage()),
     ]),
   ];
+
+  static List<dynamic> getFlatHierarchy() {
+    List<dynamic> uniqueItems = [];
+    Set<String> uniqueNames = {};
+
+    List<dynamic> flatten(dynamic item) {
+      if (item is Folder) {
+        return item.content.expand(flatten).toList();
+      } else {
+        return [item];
+      }
+    }
+    List<dynamic> flat = hierarchy.expand(flatten).toList();
+
+    for (var item in flat) {
+      if (item is Tool && !uniqueNames.contains(item.name)) {
+        uniqueItems.add(item);
+        uniqueNames.add(item.name);
+      }
+    }
+    return uniqueItems;
+  }
 }

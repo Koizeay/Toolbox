@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:toolbox/gen/strings.g.dart';
+import 'package:toolbox/hierarchy.dart';
 import 'package:toolbox/models/home_folder.dart';
 import 'package:toolbox/models/home_tool.dart';
 import 'package:toolbox/pages/clock_page.dart';
@@ -68,7 +69,7 @@ class _HomePage extends State<HomePage> {
   void filterSearchResults(String query) {
     hierarchyFiltered = [];
     if (query.isNotEmpty) {
-      for (var tile in hierarchy) {
+      for (var tile in Hierarchy.getFlatHierarchy()) {
         if (tile.name.toLowerCase().contains(query.toLowerCase())) {
           hierarchyFiltered.add(tile);
         }
