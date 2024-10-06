@@ -4,8 +4,10 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:toolbox/core/dialogs.dart';
 import 'package:toolbox/core/http_requests.dart';
+import 'package:toolbox/core/shared_preferences.dart';
 import 'package:toolbox/core/url.dart';
 import 'package:toolbox/gen/strings.g.dart';
 
@@ -16,6 +18,8 @@ class McServerPingPage extends StatefulWidget {
 }
 
 class _McServerPing extends State<McServerPingPage> {
+  late SharedPreferences prefs;
+
   String apiJavaEndpoint = "https://api.mcsrvstat.us/3/";
   String apiBedrockEndpoint = "https://api.mcsrvstat.us/bedrock/3/";
   String apiIconEndpoint = "https://api.mcsrvstat.us/icon/";
@@ -34,7 +38,22 @@ class _McServerPing extends State<McServerPingPage> {
   String? serverId;
   String? serverIconUrl;
 
+  List<String> favoriteServers = [];
+
   TextEditingController ipController = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+    SharedPreferences.getInstance().then((value) {
+      prefs = value;
+      if (mounted) {
+        setState(() {
+          favoriteServers = prefs.getStringList(SHARED_PREFERENCES_TOOL_MCSERVERPING_FAVORITES) ?? [];
+        });
+      }
+    });
+  }
 
   Future<void> pingServer() async {
     setState(() {
@@ -103,6 +122,79 @@ class _McServerPing extends State<McServerPingPage> {
       });
       return;
     }
+  }
+
+  void addToFavorites(String ip) {
+    if (favoriteServers.contains(ip)) {
+      return;
+    }
+    favoriteServers.add(ip);
+    prefs.setStringList(SHARED_PREFERENCES_TOOL_MCSERVERPING_FAVORITES, favoriteServers);
+    showOkTextDialog(
+        context,
+        t.tools.mc_server_ping.added_to_favorites,
+        t.tools.mc_server_ping.added_to_favorites_description
+    );
+  }
+
+  void removeFromFavorites(String ip) {
+    if (!favoriteServers.contains(ip)) {
+      return;
+    }
+    favoriteServers.remove(ip);
+    prefs.setStringList(SHARED_PREFERENCES_TOOL_MCSERVERPING_FAVORITES, favoriteServers);
+    showOkTextDialog(
+        context,
+        t.tools.mc_server_ping.removed_from_favorites,
+        t.tools.mc_server_ping.removed_from_favorites_description
+    );
+  }
+
+  bool isFavorite(String ip) {
+    return favoriteServers.contains(ip);
+  }
+
+  void showPickFromFavoritesDialog() {
+    if (favoriteServers.isEmpty) {
+      showOkTextDialog(
+          context,
+          t.tools.mc_server_ping.no_favorites,
+          t.tools.mc_server_ping.no_favorites_description
+      );
+      return;
+    }
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text(t.tools.mc_server_ping.pick_from_favorites),
+          content: SizedBox(
+            width: double.maxFinite,
+            height: 150,
+            child: ListView.builder(
+              itemCount: favoriteServers.length,
+              itemBuilder: (context, index) {
+                return ListTile(
+                  title: Text(favoriteServers[index]),
+                  onTap: () {
+                    ipController.text = favoriteServers[index];
+                    Navigator.pop(context);
+                  },
+                );
+              },
+            ),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text(t.generic.cancel),
+            )
+          ],
+        );
+      }
+    );
   }
 
   @override
@@ -182,6 +274,26 @@ class _McServerPing extends State<McServerPingPage> {
                       width: double.infinity,
                       child: FilledButton(
                         onPressed: () {
+                          if (isFavorite(ipController.text)) {
+                            removeFromFavorites(ipController.text);
+                          } else {
+                            addToFavorites(ipController.text);
+                          }
+                          if (mounted) {
+                            setState(() {});
+                          }
+                        },
+                        child: Text(
+                            isFavorite(ipController.text)
+                                ? t.tools.mc_server_ping.remove_from_favorites
+                                : t.tools.mc_server_ping.add_to_favorites
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: double.infinity,
+                      child: FilledButton(
+                        onPressed: () {
                           setState(() {
                             serverOnline = false;
                             serverIp = null;
@@ -242,12 +354,29 @@ class _McServerPing extends State<McServerPingPage> {
                       ],
                     ),
                     const SizedBox(height: 4),
-                    TextField(
-                      controller: ipController,
-                      decoration: InputDecoration(
-                        labelText: t.tools.mc_server_ping.server_ip,
-                        border: const OutlineInputBorder(),
-                      ),
+                    Row(
+                      children: [
+                        Expanded(
+                          flex: 9,
+                          child: TextField(
+                            controller: ipController,
+                            decoration: InputDecoration(
+                              labelText: t.tools.mc_server_ping.server_ip,
+                              border: const OutlineInputBorder(),
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          flex: 1,
+                          child: IconButton(
+                            icon: const Icon(Icons.star_outline),
+                            tooltip: t.tools.mc_server_ping.from_favorites,
+                            onPressed: () {
+                              showPickFromFavoritesDialog();
+                            },
+                          ),
+                        )
+                      ],
                     ),
                     const SizedBox(height: 8),
                     SizedBox(

@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 594 (297 per locale)
+/// Strings: 614 (307 per locale)
 ///
-/// Built on 2024-10-06 at 15:38 UTC
+/// Built on 2024-10-06 at 16:33 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -708,6 +708,16 @@ class _StringsToolsMcServerPingEn {
 	String about_the_api_description({required Object source, required Object website}) => 'This tool uses the "${source}" from "${website}" to ping Minecraft servers.';
 	String get about_open => 'Open';
 	String the_server_id_is({required Object id}) => 'The server ID is "${id}"';
+	String get added_to_favorites => 'Added to favorites';
+	String get added_to_favorites_description => 'The server has been added to your favorites.';
+	String get removed_from_favorites => 'Removed from favorites';
+	String get removed_from_favorites_description => 'The server has been removed from your favorites.';
+	String get add_to_favorites => 'Add to favorite';
+	String get pick_from_favorites => 'Pick from favorites';
+	String get from_favorites => 'From favorites';
+	String get remove_from_favorites => 'Remove from favorite';
+	String get no_favorites => 'No favorites';
+	String get no_favorites_description => 'You don\'t have any favorite servers yet.';
 	late final _StringsToolsMcServerPingErrorEn error = _StringsToolsMcServerPingErrorEn._(_root);
 }
 
@@ -1611,6 +1621,16 @@ class _StringsToolsMcServerPingFr implements _StringsToolsMcServerPingEn {
 	@override String about_the_api_description({required Object source, required Object website}) => 'Cet outil utilise "${source}" du site "${website}" pour ping les serveurs Minecraft.';
 	@override String get about_open => 'Ouvrir';
 	@override String the_server_id_is({required Object id}) => 'L\'ID du serveur est "${id}"';
+	@override String get added_to_favorites => 'Ajouté aux favoris';
+	@override String get added_to_favorites_description => 'Le serveur a été ajouté aux favoris.';
+	@override String get removed_from_favorites => 'Retiré des favoris';
+	@override String get removed_from_favorites_description => 'Le serveur a été retiré des favoris.';
+	@override String get add_to_favorites => 'Ajouter aux favoris';
+	@override String get remove_from_favorites => 'Retirer des favoris';
+	@override String get from_favorites => 'Depuis les favoris';
+	@override String get pick_from_favorites => 'Choisir depuis les favoris';
+	@override String get no_favorites => 'Aucun favori';
+	@override String get no_favorites_description => 'Vous n\'avez pas encore ajouté de serveurs aux favoris.';
 	@override late final _StringsToolsMcServerPingErrorFr error = _StringsToolsMcServerPingErrorFr._(_root);
 }
 
@@ -2189,6 +2209,16 @@ extension on Translations {
 			case 'tools.mc_server_ping.about_the_api_description': return ({required Object source, required Object website}) => 'This tool uses the "${source}" from "${website}" to ping Minecraft servers.';
 			case 'tools.mc_server_ping.about_open': return 'Open';
 			case 'tools.mc_server_ping.the_server_id_is': return ({required Object id}) => 'The server ID is "${id}"';
+			case 'tools.mc_server_ping.added_to_favorites': return 'Added to favorites';
+			case 'tools.mc_server_ping.added_to_favorites_description': return 'The server has been added to your favorites.';
+			case 'tools.mc_server_ping.removed_from_favorites': return 'Removed from favorites';
+			case 'tools.mc_server_ping.removed_from_favorites_description': return 'The server has been removed from your favorites.';
+			case 'tools.mc_server_ping.add_to_favorites': return 'Add to favorite';
+			case 'tools.mc_server_ping.pick_from_favorites': return 'Pick from favorites';
+			case 'tools.mc_server_ping.from_favorites': return 'From favorites';
+			case 'tools.mc_server_ping.remove_from_favorites': return 'Remove from favorite';
+			case 'tools.mc_server_ping.no_favorites': return 'No favorites';
+			case 'tools.mc_server_ping.no_favorites_description': return 'You don\'t have any favorite servers yet.';
 			case 'tools.mc_server_ping.error.please_enter_a_server_ip': return 'Please enter a server IP or domain';
 			case 'tools.mc_server_ping.error.server_offline_or_does_not_exist': return 'The server is offline or does not exist';
 			case 'tools.mc_server_ping.error.please_check_your_internet_connection': return 'Please check your internet connection and try again';
@@ -2494,6 +2524,16 @@ extension on _StringsFr {
 			case 'tools.mc_server_ping.about_the_api_description': return ({required Object source, required Object website}) => 'Cet outil utilise "${source}" du site "${website}" pour ping les serveurs Minecraft.';
 			case 'tools.mc_server_ping.about_open': return 'Ouvrir';
 			case 'tools.mc_server_ping.the_server_id_is': return ({required Object id}) => 'L\'ID du serveur est "${id}"';
+			case 'tools.mc_server_ping.added_to_favorites': return 'Ajouté aux favoris';
+			case 'tools.mc_server_ping.added_to_favorites_description': return 'Le serveur a été ajouté aux favoris.';
+			case 'tools.mc_server_ping.removed_from_favorites': return 'Retiré des favoris';
+			case 'tools.mc_server_ping.removed_from_favorites_description': return 'Le serveur a été retiré des favoris.';
+			case 'tools.mc_server_ping.add_to_favorites': return 'Ajouter aux favoris';
+			case 'tools.mc_server_ping.remove_from_favorites': return 'Retirer des favoris';
+			case 'tools.mc_server_ping.from_favorites': return 'Depuis les favoris';
+			case 'tools.mc_server_ping.pick_from_favorites': return 'Choisir depuis les favoris';
+			case 'tools.mc_server_ping.no_favorites': return 'Aucun favori';
+			case 'tools.mc_server_ping.no_favorites_description': return 'Vous n\'avez pas encore ajouté de serveurs aux favoris.';
 			case 'tools.mc_server_ping.error.please_enter_a_server_ip': return 'Veuillez entrer une adresse IP ou un nom de domaine valide';
 			case 'tools.mc_server_ping.error.server_offline_or_does_not_exist': return 'Le serveur est hors ligne ou n\'existe pas';
 			case 'tools.mc_server_ping.error.please_check_your_internet_connection': return 'Veuillez vérifier votre connexion internet et réessayer';
