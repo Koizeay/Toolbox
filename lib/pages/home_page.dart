@@ -1,6 +1,6 @@
-
 import 'package:flutter/material.dart';
 import 'package:toolbox/gen/strings.g.dart';
+import 'package:toolbox/models/home_folder.dart';
 import 'package:toolbox/models/home_tool.dart';
 import 'package:toolbox/pages/clock_page.dart';
 import 'package:toolbox/pages/counter_page.dart';
@@ -33,109 +33,48 @@ import 'package:toolbox/pages/url_shortener_page.dart';
 import 'package:toolbox/pages/uuidgenerator_page.dart';
 import 'package:toolbox/pages/whiteboard_page.dart';
 import 'package:toolbox/pages/youtubethumbnail_page.dart';
-import 'package:toolbox/widgets/home_toolcard.dart';
+import 'package:toolbox/widgets/home_tilecard.dart';
 
 import 'networkinfo_page.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({ super.key });
+  List<dynamic> content;
+
+  HomePage({ super.key, required this.content });
   @override
   State<HomePage> createState() => _HomePage();
 }
 
 class _HomePage extends State<HomePage> {
-  late List<Tool> tools;
-  late List<Tool> toolsFiltered;
+  List<dynamic> hierarchy = [];
+  List<dynamic> hierarchyFiltered = [];
 
   @override
   void initState() {
     super.initState();
     initTools();
     sortTools();
-    toolsFiltered = tools;
+    hierarchyFiltered = hierarchy;
   }
 
   void initTools() {
-    tools = [
-      Tool(t.tools.clock.title, "assets/images/tools/clock.png",
-          const ClockPage()),
-      Tool(t.tools.counter.title, "assets/images/tools/counter.png",
-          const CounterPage()),
-      Tool(t.tools.flipcoins.title, "assets/images/tools/flipcoins.png",
-          const FlipCoinsPage()),
-      Tool(t.tools.fileencryption.title, "assets/images/tools/fileencryption.png",
-          const FileEncryptionPage()),
-      Tool(t.tools.gameoflife.title, "assets/images/tools/gameoflife.png",
-          const GameOfLifePage()),
-      Tool(t.tools.httprequest.title, "assets/images/tools/httprequest.png",
-          const HttpRequestPage()),
-      Tool(t.tools.mc_server_ping.title, "assets/images/tools/mc_server_ping.png",
-          const McServerPing()),
-      Tool(t.tools.metronome.title, "assets/images/tools/metronome.png",
-          const MetronomePage()),
-      /*Tool(t.tools.megaphone.title, "assets/images/tools/megaphone.png",
-          const MegaphonePage()),*/
-      Tool(t.tools.morsecode.title, "assets/images/tools/morsecode.png",
-          const MorseCodePage()),
-      Tool(t.tools.networkinfo.title, "assets/images/tools/networkinfo.png",
-          const NetworkInfoPage()),
-      Tool(t.tools.nationalanthems.title, "assets/images/tools/nationalanthems.png",
-          const NationalAnthemsPage()),
-      Tool(t.tools.nearbypublictransportstops.title, "assets/images/tools/nearbypublictransportstops.png",
-          const NearbyPublicTransportStopsPage()),
-      Tool(t.tools.nslookup.title, "assets/images/tools/nslookup.png",
-          const NslookupPage()),
-      Tool(t.tools.osm.title, "assets/images/tools/osm.png",
-          const OsmPage()),
-      Tool(t.tools.ping.title, "assets/images/tools/ping.png",
-          const PingPage()),
-      Tool(t.tools.qrreader.title, "assets/images/tools/qrreader.png",
-          const QrReaderPage()),
-      Tool(t.tools.randomcolor.title, "assets/images/tools/randomcolor.png",
-          const RandomColorPage()),
-      Tool(t.tools.randomnumber.title, "assets/images/tools/randomnumber.png",
-          const RandomNumberPage()),
-      Tool(t.tools.roulette.title, "assets/images/tools/roulette.png",
-          const RoulettePage()),
-      Tool(t.tools.sshclient.title, "assets/images/tools/sshclient.png",
-          const SshClientPage()),
-      Tool(t.tools.soundmeter.title, "assets/images/tools/soundmeter.png",
-          const SoundMeterPage()),
-      Tool(t.tools.speedometer.title, "assets/images/tools/speedometer.png",
-          const SpeedometerPage()),
-      Tool(t.tools.stopwatch.title, "assets/images/tools/stopwatch.png",
-          const StopwatchPage()),
-      Tool(t.tools.texttospeech.title, "assets/images/tools/texttospeech.png",
-          const TextToSpeechPage()),
-      Tool(t.tools.timer.title, "assets/images/tools/timer.png",
-          const TimerPage()),
-      Tool(t.tools.timestampconverter.title, "assets/images/tools/timestampconverter.png",
-          const TimestampConverterPage()),
-      Tool(t.tools.urlshortener.title, "assets/images/tools/urlshortener.png",
-          const UrlShortenerPage()),
-      Tool(t.tools.uuidgenerator.title, "assets/images/tools/uuidgenerator.png",
-          const UuidGeneratorPage()),
-      Tool(t.tools.whiteboard.title, "assets/images/tools/whiteboard.png",
-          const WhiteBoardPage()),
-      Tool(t.tools.youtubethumbnail.title, "assets/images/tools/youtubethumbnail.png",
-          const YouTubeThumbnailPage())
-    ];
+    hierarchy = widget.content;
   }
 
   void sortTools() {
-    tools.sort((a, b) => a.name.toLowerCase().compareTo(b.name.toLowerCase()));
+    hierarchy.sort((a, b) => a.name.toLowerCase().compareTo(b.name.toLowerCase()));
   }
 
   void filterSearchResults(String query) {
-    toolsFiltered = [];
+    hierarchyFiltered = [];
     if (query.isNotEmpty) {
-      for (var tool in tools) {
-        if (tool.name.toLowerCase().contains(query.toLowerCase())) {
-          toolsFiltered.add(tool);
+      for (var tile in hierarchy) {
+        if (tile.name.toLowerCase().contains(query.toLowerCase())) {
+          hierarchyFiltered.add(tile);
         }
       }
     } else {
-      toolsFiltered = tools;
+      hierarchyFiltered = hierarchy;
     }
     setState(() {});
   }
@@ -189,16 +128,16 @@ class _HomePage extends State<HomePage> {
                               : 4,
                           childAspectRatio: 2,
                         ),
-                        itemCount: toolsFiltered.length,
+                        itemCount: hierarchyFiltered.length,
                         itemBuilder: (context, index) {
-                          return ToolCard(
-                              title: toolsFiltered[index].name,
-                              imageAssetPath: toolsFiltered[index].image,
+                          return TileCard(
+                              title: hierarchyFiltered[index].name,
+                              imageAssetPath: hierarchyFiltered[index].image,
                               onTap: () {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => toolsFiltered[index].page
+                                      builder: (context) => hierarchyFiltered[index].page
                                   ),
                                 );
                               }

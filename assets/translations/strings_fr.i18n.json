@@ -206,7 +206,6 @@
         "api_empty_response": "L'API a renvoyé une réponse vide",
         "api_error_xxx": "L'API a renvoyé une erreur $errorCode",
         "no_stops_found": "Aucun arrêt trouvé avec cette recherche"
-
       }
     },
     "fileencryption": {
@@ -371,6 +370,17 @@
     "counter": {
       "title": "Compteur"
     }
+  },
+  "folders": {
+    "time": "Temps",
+    "network": "Réseau",
+    "random": "Aléatoire",
+    "converter": "Convertisseur",
+    "analyser": "Analyseur",
+    "geography": "Géographie",
+    "web": "Web",
+    "sound": "Son",
+    "miscellaneous": "Divers"
   },
   "credits": {
     "title": "Crédits",

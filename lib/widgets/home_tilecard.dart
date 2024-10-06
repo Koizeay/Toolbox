@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class ToolCard extends StatelessWidget {
+class TileCard extends StatelessWidget {
   final String title;
   final String imageAssetPath;
   final Function() onTap;
 
-  const ToolCard({super.key, required this.title, required this.imageAssetPath, required this.onTap});
+  const TileCard({super.key, required this.title, required this.imageAssetPath, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
