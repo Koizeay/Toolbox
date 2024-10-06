@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:toolbox/gen/strings.g.dart';
+import 'package:toolbox/hierarchy.dart';
 import 'package:toolbox/pages/home_page.dart';
 import 'package:wakelock_plus/wakelock_plus.dart';
 import 'package:yaru/yaru.dart';
@@ -48,7 +49,7 @@ class MyApp extends StatelessWidget {
             ),
             debugShowCheckedModeBanner: false,
             title: t.generic.app_name,
-            home: const HomePage(),
+            home: HomePage(content: Hierarchy.hierarchy),
           );
         }
     );

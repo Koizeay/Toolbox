@@ -376,6 +376,17 @@
       "title": "Counter"
     }
   },
+  "folders": {
+    "time": "Time",
+    "network": "Network",
+    "random": "Random",
+    "converter": "Converter",
+    "analyser": "Analyser",
+    "geography": "Geography",
+    "web": "Web",
+    "sound": "Sound",
+    "miscellaneous": "Miscellaneous"
+  },
   "credits": {
     "title": "Credits",
     "app_icon": "App icon by $author",
