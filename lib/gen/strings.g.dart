@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 550 (275 per locale)
+/// Strings: 560 (280 per locale)
 ///
-/// Built on 2024-10-05 at 18:41 UTC
+/// Built on 2024-10-06 at 11:20 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -233,6 +233,11 @@ class _StringsToolsClockEn {
 
 	// Translations
 	String get title => 'Clock';
+	String get loading => 'Loading';
+	String get change_timezone => 'Change timezone';
+	String get timezone => 'Timezone';
+	String get choose_a_timezone => 'Choose a timezone';
+	String get select_local => 'Local time';
 }
 
 // Path: tools.metronome
@@ -1084,6 +1089,11 @@ class _StringsToolsClockFr implements _StringsToolsClockEn {
 
 	// Translations
 	@override String get title => 'Horloge';
+	@override String get loading => 'Chargement';
+	@override String get change_timezone => 'Changer le fuseau horaire';
+	@override String get timezone => 'Fuseau horaire';
+	@override String get choose_a_timezone => 'Choisissez un fuseau horaire';
+	@override String get select_local => 'Heure locale';
 }
 
 // Path: tools.metronome
@@ -1840,6 +1850,11 @@ extension on Translations {
 			case 'generic.search': return 'Search';
 			case 'generic.enable': return 'Enable';
 			case 'tools.clock.title': return 'Clock';
+			case 'tools.clock.loading': return 'Loading';
+			case 'tools.clock.change_timezone': return 'Change timezone';
+			case 'tools.clock.timezone': return 'Timezone';
+			case 'tools.clock.choose_a_timezone': return 'Choose a timezone';
+			case 'tools.clock.select_local': return 'Local time';
 			case 'tools.metronome.title': return 'Metronome';
 			case 'tools.metronome.bpm': return 'BPM';
 			case 'tools.metronome.beats_per_measure': return 'Beats per measure';
@@ -2123,6 +2138,11 @@ extension on _StringsFr {
 			case 'generic.search': return 'Rechercher';
 			case 'generic.enable': return 'Activer';
 			case 'tools.clock.title': return 'Horloge';
+			case 'tools.clock.loading': return 'Chargement';
+			case 'tools.clock.change_timezone': return 'Changer le fuseau horaire';
+			case 'tools.clock.timezone': return 'Fuseau horaire';
+			case 'tools.clock.choose_a_timezone': return 'Choisissez un fuseau horaire';
+			case 'tools.clock.select_local': return 'Heure locale';
 			case 'tools.metronome.title': return 'Métronome';
 			case 'tools.metronome.bpm': return 'BPM';
 			case 'tools.metronome.beats_per_measure': return 'Battements par mesure';
