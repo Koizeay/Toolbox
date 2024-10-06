@@ -5,7 +5,7 @@ import 'package:toolbox/pages/fileencryption_page.dart';
 import 'package:toolbox/pages/flipcoins_page.dart';
 import 'package:toolbox/pages/gameoflife_page.dart';
 import 'package:toolbox/pages/httprequest_page.dart';
-import 'package:toolbox/pages/mc_server_ping.dart';
+import 'package:toolbox/pages/mcserverping_page.dart';
 import 'package:toolbox/pages/megaphone_page.dart';
 import 'package:toolbox/pages/metronome_page.dart';
 import 'package:toolbox/pages/morsecode_page.dart';
@@ -42,7 +42,7 @@ class Hierarchy {
     "flipcoins": Tool("Flip Coins", "assets/images/tools/flipcoins.png", const FlipCoinsPage()),
     "gameoflife": Tool("Game of Life", "assets/images/tools/gameoflife.png", const GameOfLifePage()),
     "httprequest": Tool("HTTP Request", "assets/images/tools/httprequest.png", const HttpRequestPage()),
-    "mc_server_ping": Tool("MC Server Ping", "assets/images/tools/mc_server_ping.png", const McServerPing()),
+    "mcserverping": Tool("MC Server Ping", "assets/images/tools/mcserverping.png", const McServerPingPage()),
     "megaphone": Tool("Megaphone", "assets/images/tools/megaphone.png", const MegaphonePage()),
     "metronome": Tool("Metronome", "assets/images/tools/metronome.png", const MetronomePage()),
     "morsecode": Tool("Morse Code", "assets/images/tools/morsecode.png", const MorseCodePage()),
@@ -79,7 +79,7 @@ class Hierarchy {
     ]),
     Folder(t.folders.games, "assets/images/folders/folder.png", [
       toolMap["gameoflife"],
-      toolMap["mc_server_ping"],
+      toolMap["mcserverping"],
     ]),
     Folder(t.folders.geography, "assets/images/folders/folder.png", [
       toolMap["osm"],
@@ -95,7 +95,7 @@ class Hierarchy {
     ]),
     Folder(t.folders.network, "assets/images/folders/folder.png", [
       toolMap["httprequest"],
-      toolMap["mc_server_ping"],
+      toolMap["mcserverping"],
       toolMap["networkinfo"],
       toolMap["nslookup"],
       toolMap["ping"],

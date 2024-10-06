@@ -9,13 +9,13 @@ import 'package:toolbox/core/http_requests.dart';
 import 'package:toolbox/core/url.dart';
 import 'package:toolbox/gen/strings.g.dart';
 
-class McServerPing extends StatefulWidget {
-  const McServerPing({ super.key });
+class McServerPingPage extends StatefulWidget {
+  const McServerPingPage({ super.key });
   @override
-  State<McServerPing> createState() => _McServerPing();
+  State<McServerPingPage> createState() => _McServerPing();
 }
 
-class _McServerPing extends State<McServerPing> {
+class _McServerPing extends State<McServerPingPage> {
   String apiJavaEndpoint = "https://api.mcsrvstat.us/3/";
   String apiBedrockEndpoint = "https://api.mcsrvstat.us/bedrock/3/";
   String apiIconEndpoint = "https://api.mcsrvstat.us/icon/";
