@@ -108,6 +108,10 @@ class _UuidGeneratorPage extends State<UuidGeneratorPage> {
                         textAlign: TextAlign.center,
                       ),
                     ),
+                    Text(
+                      t.tools.uuidgenerator.tap_to_copy,
+                      style: const TextStyle(fontSize: 14, fontStyle: FontStyle.italic),
+                    ),
                     const SizedBox(height: 16,),
                     SizedBox(
                       width: double.infinity,

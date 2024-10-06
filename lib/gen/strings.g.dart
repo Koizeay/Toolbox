@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 614 (307 per locale)
+/// Strings: 616 (308 per locale)
 ///
-/// Built on 2024-10-06 at 16:33 UTC
+/// Built on 2024-10-06 at 16:46 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -502,6 +502,7 @@ class _StringsToolsUuidgeneratorEn {
 	String get title => 'UUID generator';
 	String get generate => 'Generate';
 	String get default_uuid_text => 'Press a button to generate a UUID';
+	String get tap_to_copy => 'Tap to copy';
 	String get copied_to_clipboard => 'Copied to clipboard';
 	String get v1_uuid => 'v1 (time-based)';
 	String get v4_uuid => 'v4 (random)';
@@ -713,9 +714,9 @@ class _StringsToolsMcServerPingEn {
 	String get removed_from_favorites => 'Removed from favorites';
 	String get removed_from_favorites_description => 'The server has been removed from your favorites.';
 	String get add_to_favorites => 'Add to favorite';
-	String get pick_from_favorites => 'Pick from favorites';
-	String get from_favorites => 'From favorites';
 	String get remove_from_favorites => 'Remove from favorite';
+	String get from_favorites => 'From favorites';
+	String get pick_from_favorites => 'Pick from favorites';
 	String get no_favorites => 'No favorites';
 	String get no_favorites_description => 'You don\'t have any favorite servers yet.';
 	late final _StringsToolsMcServerPingErrorEn error = _StringsToolsMcServerPingErrorEn._(_root);
@@ -1415,6 +1416,7 @@ class _StringsToolsUuidgeneratorFr implements _StringsToolsUuidgeneratorEn {
 	@override String get title => 'Générateur d\'UUID';
 	@override String get generate => 'Générer';
 	@override String get default_uuid_text => 'Appuyer sur un bouton pour générer un UUID';
+	@override String get tap_to_copy => 'Cliquez pour copier';
 	@override String get copied_to_clipboard => 'Copié dans le presse-papiers';
 	@override String get v1_uuid => 'v1 (basé sur le temps)';
 	@override String get v4_uuid => 'v4 (aléatoire)';
@@ -2084,6 +2086,7 @@ extension on Translations {
 			case 'tools.uuidgenerator.title': return 'UUID generator';
 			case 'tools.uuidgenerator.generate': return 'Generate';
 			case 'tools.uuidgenerator.default_uuid_text': return 'Press a button to generate a UUID';
+			case 'tools.uuidgenerator.tap_to_copy': return 'Tap to copy';
 			case 'tools.uuidgenerator.copied_to_clipboard': return 'Copied to clipboard';
 			case 'tools.uuidgenerator.v1_uuid': return 'v1 (time-based)';
 			case 'tools.uuidgenerator.v4_uuid': return 'v4 (random)';
@@ -2214,9 +2217,9 @@ extension on Translations {
 			case 'tools.mc_server_ping.removed_from_favorites': return 'Removed from favorites';
 			case 'tools.mc_server_ping.removed_from_favorites_description': return 'The server has been removed from your favorites.';
 			case 'tools.mc_server_ping.add_to_favorites': return 'Add to favorite';
-			case 'tools.mc_server_ping.pick_from_favorites': return 'Pick from favorites';
-			case 'tools.mc_server_ping.from_favorites': return 'From favorites';
 			case 'tools.mc_server_ping.remove_from_favorites': return 'Remove from favorite';
+			case 'tools.mc_server_ping.from_favorites': return 'From favorites';
+			case 'tools.mc_server_ping.pick_from_favorites': return 'Pick from favorites';
 			case 'tools.mc_server_ping.no_favorites': return 'No favorites';
 			case 'tools.mc_server_ping.no_favorites_description': return 'You don\'t have any favorite servers yet.';
 			case 'tools.mc_server_ping.error.please_enter_a_server_ip': return 'Please enter a server IP or domain';
@@ -2399,6 +2402,7 @@ extension on _StringsFr {
 			case 'tools.uuidgenerator.title': return 'Générateur d\'UUID';
 			case 'tools.uuidgenerator.generate': return 'Générer';
 			case 'tools.uuidgenerator.default_uuid_text': return 'Appuyer sur un bouton pour générer un UUID';
+			case 'tools.uuidgenerator.tap_to_copy': return 'Cliquez pour copier';
 			case 'tools.uuidgenerator.copied_to_clipboard': return 'Copié dans le presse-papiers';
 			case 'tools.uuidgenerator.v1_uuid': return 'v1 (basé sur le temps)';
 			case 'tools.uuidgenerator.v4_uuid': return 'v4 (aléatoire)';

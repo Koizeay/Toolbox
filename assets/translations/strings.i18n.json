@@ -181,6 +181,7 @@
       "title": "UUID generator",
       "generate": "Generate",
       "default_uuid_text": "Press a button to generate a UUID",
+      "tap_to_copy": "Tap to copy",
       "copied_to_clipboard": "Copied to clipboard",
       "v1_uuid": "v1 (time-based)",
       "v4_uuid": "v4 (random)",
