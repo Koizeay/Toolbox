@@ -6,10 +6,11 @@ import 'package:toolbox/pages/home_page.dart';
 class Folder {
   String name;
   String image;
-  List<Tool> content;
+  List<Tool?> content;
   late Widget page;
 
   Folder(this.name, this.image, this.content) {
+    content.removeWhere((tool) => tool == null);
     page = HomePage(content: content);
   }
 }

@@ -6,6 +6,7 @@ import 'package:toolbox/pages/flipcoins_page.dart';
 import 'package:toolbox/pages/gameoflife_page.dart';
 import 'package:toolbox/pages/httprequest_page.dart';
 import 'package:toolbox/pages/mc_server_ping.dart';
+import 'package:toolbox/pages/megaphone_page.dart';
 import 'package:toolbox/pages/metronome_page.dart';
 import 'package:toolbox/pages/morsecode_page.dart';
 import 'package:toolbox/pages/networkinfo_page.dart';
@@ -34,169 +35,92 @@ import 'models/home_tool.dart';
 import 'package:toolbox/gen/strings.g.dart';
 
 class Hierarchy {
+  static final Map<String, Tool> toolMap = {
+    "clock": Tool("Clock", "assets/images/tools/clock.png", const ClockPage()),
+    "counter": Tool("Counter", "assets/images/tools/counter.png", const CounterPage()),
+    "fileencryption": Tool("File Encryption", "assets/images/tools/fileencryption.png", const FileEncryptionPage()),
+    "flipcoins": Tool("Flip Coins", "assets/images/tools/flipcoins.png", const FlipCoinsPage()),
+    "gameoflife": Tool("Game of Life", "assets/images/tools/gameoflife.png", const GameOfLifePage()),
+    "httprequest": Tool("HTTP Request", "assets/images/tools/httprequest.png", const HttpRequestPage()),
+    "mc_server_ping": Tool("MC Server Ping", "assets/images/tools/mc_server_ping.png", const McServerPing()),
+    "megaphone": Tool("Megaphone", "assets/images/tools/megaphone.png", const MegaphonePage()),
+    "metronome": Tool("Metronome", "assets/images/tools/metronome.png", const MetronomePage()),
+    "morsecode": Tool("Morse Code", "assets/images/tools/morsecode.png", const MorseCodePage()),
+    "nationalanthems": Tool("National Anthems", "assets/images/tools/nationalanthems.png", const NationalAnthemsPage()),
+    "nearbypublictransportstops": Tool("Nearby Public Transport Stops", "assets/images/tools/nearbypublictransportstops.png", const NearbyPublicTransportStopsPage()),
+    "networkinfo": Tool("Network Info", "assets/images/tools/networkinfo.png", const NetworkInfoPage()),
+    "nslookup": Tool("NS Lookup", "assets/images/tools/nslookup.png", const NslookupPage()),
+    "osm": Tool("OSM", "assets/images/tools/osm.png", const OsmPage()),
+    "ping": Tool("Ping", "assets/images/tools/ping.png", const PingPage()),
+    "qrreader": Tool("QR Reader", "assets/images/tools/qrreader.png", const QrReaderPage()),
+    "randomcolor": Tool("Random Color", "assets/images/tools/randomcolor.png", const RandomColorPage()),
+    "randomnumber": Tool("Random Number", "assets/images/tools/randomnumber.png", const RandomNumberPage()),
+    "roulette": Tool("Roulette", "assets/images/tools/roulette.png", const RoulettePage()),
+    "soundmeter": Tool("Sound Meter", "assets/images/tools/soundmeter.png", const SoundMeterPage()),
+    "speedometer": Tool("Speedometer", "assets/images/tools/speedometer.png", const SpeedometerPage()),
+    "sshclient": Tool("SSH Client", "assets/images/tools/sshclient.png", const SshClientPage()),
+    "stopwatch": Tool("Stopwatch", "assets/images/tools/stopwatch.png", const StopwatchPage()),
+    "texttospeech": Tool("Text to Speech", "assets/images/tools/texttospeech.png", const TextToSpeechPage()),
+    "timer": Tool("Timer", "assets/images/tools/timer.png", const TimerPage()),
+    "timestampconverter": Tool("Timestamp Converter", "assets/images/tools/timestampconverter.png", const TimestampConverterPage()),
+    "urlshortener": Tool("URL Shortener", "assets/images/tools/urlshortener.png", const UrlShortenerPage()),
+    "uuidgenerator": Tool("UUID Generator", "assets/images/tools/uuidgenerator.png", const UuidGeneratorPage()),
+    "whiteboard": Tool("Whiteboard", "assets/images/tools/whiteboard.png", const WhiteBoardPage()),
+    "youtubethumbnail": Tool("YouTube Thumbnail", "assets/images/tools/youtubethumbnail.png", const YouTubeThumbnailPage())
+  };
+
   static final List<dynamic> hierarchy = [
     Folder(t.folders.audio, "assets/images/folders/folder.png", [
-      /*Tool(t.tools.megaphone.title,
-          "assets/images/tools/megaphone.png",
-          const MegaphonePage()
-      ),*/
-      Tool(t.tools.metronome.title,
-          "assets/images/tools/metronome.png",
-          const MetronomePage()
-      ),
-      Tool(t.tools.morsecode.title,
-          "assets/images/tools/morsecode.png",
-          const MorseCodePage()
-      ),
-      Tool(t.tools.nationalanthems.title,
-          "assets/images/tools/nationalanthems.png",
-          const NationalAnthemsPage()
-      ),
-      Tool(t.tools.soundmeter.title,
-          "assets/images/tools/soundmeter.png",
-          const SoundMeterPage()
-      ),
-      Tool(t.tools.texttospeech.title,
-          "assets/images/tools/texttospeech.png",
-          const TextToSpeechPage()
-      ),
+      toolMap["metronome"],
+      toolMap["morsecode"],
+      toolMap["nationalanthems"],
+      toolMap["soundmeter"],
+      toolMap["texttospeech"],
     ]),
     Folder(t.folders.games, "assets/images/folders/folder.png", [
-      Tool(t.tools.gameoflife.title,
-          "assets/images/tools/gameoflife.png",
-          const GameOfLifePage()
-      ),
-      Tool(t.tools.mc_server_ping.title,
-          "assets/images/tools/mc_server_ping.png",
-          const McServerPing()
-      ),
+      toolMap["gameoflife"],
+      toolMap["mc_server_ping"],
     ]),
     Folder(t.folders.geography, "assets/images/folders/folder.png", [
-      Tool(t.tools.osm.title,
-          "assets/images/tools/osm.png",
-          const OsmPage()
-      ),
-      Tool(t.tools.nearbypublictransportstops.title,
-          "assets/images/tools/nearbypublictransportstops.png",
-          const NearbyPublicTransportStopsPage()
-      ),
-      Tool(t.tools.nationalanthems.title,
-          "assets/images/tools/nationalanthems.png",
-          const NationalAnthemsPage()
-      ),
-      Tool(t.tools.speedometer.title,
-          "assets/images/tools/speedometer.png",
-          const SpeedometerPage()
-      ),
+      toolMap["osm"],
+      toolMap["nearbypublictransportstops"],
+      toolMap["nationalanthems"],
+      toolMap["speedometer"],
     ]),
     Folder(t.folders.miscellaneous, "assets/images/folders/folder.png", [
-      Tool(t.tools.counter.title,
-          "assets/images/tools/counter.png",
-          const CounterPage()
-      ),
-      Tool(t.tools.fileencryption.title,
-          "assets/images/tools/fileencryption.png",
-          const FileEncryptionPage()
-      ),
-      Tool(t.tools.qrreader.title,
-          "assets/images/tools/qrreader.png",
-          const QrReaderPage()
-      ),
-      Tool(t.tools.whiteboard.title,
-          "assets/images/tools/whiteboard.png",
-          const WhiteBoardPage()
-      ),
+      toolMap["counter"],
+      toolMap["fileencryption"],
+      toolMap["qrreader"],
+      toolMap["whiteboard"],
     ]),
     Folder(t.folders.network, "assets/images/folders/folder.png", [
-      Tool(t.tools.httprequest.title,
-          "assets/images/tools/httprequest.png",
-          const HttpRequestPage()
-      ),
-      Tool(t.tools.mc_server_ping.title,
-          "assets/images/tools/mc_server_ping.png",
-          const McServerPing()
-      ),
-      Tool(t.tools.networkinfo.title,
-          "assets/images/tools/networkinfo.png",
-          const NetworkInfoPage()
-      ),
-      Tool(t.tools.nslookup.title,
-          "assets/images/tools/nslookup.png",
-          const NslookupPage()
-      ),
-      Tool(t.tools.ping.title,
-          "assets/images/tools/ping.png",
-          const PingPage()
-      ),
-      Tool(t.tools.sshclient.title,
-          "assets/images/tools/sshclient.png",
-          const SshClientPage()
-      ),
+      toolMap["httprequest"],
+      toolMap["mc_server_ping"],
+      toolMap["networkinfo"],
+      toolMap["nslookup"],
+      toolMap["ping"],
+      toolMap["sshclient"],
     ]),
     Folder(t.folders.random, "assets/images/folders/folder.png", [
-      Tool(t.tools.flipcoins.title,
-          "assets/images/tools/flipcoins.png",
-          const FlipCoinsPage()
-      ),
-      Tool(
-          t.tools.randomcolor.title,
-          "assets/images/tools/randomcolor.png",
-          const RandomColorPage()
-      ),
-      Tool(
-          t.tools.randomnumber.title,
-          "assets/images/tools/randomnumber.png",
-          const RandomNumberPage()
-      ),
-      Tool(
-          t.tools.roulette.title,
-          "assets/images/tools/roulette.png",
-          const RoulettePage()
-      ),
-      Tool(
-          t.tools.uuidgenerator.title,
-          "assets/images/tools/uuidgenerator.png",
-          const UuidGeneratorPage()
-      ),
+      toolMap["flipcoins"],
+      toolMap["randomcolor"],
+      toolMap["randomnumber"],
+      toolMap["roulette"],
+      toolMap["uuidgenerator"],
     ]),
     Folder(t.folders.time, "assets/images/folders/folder.png", [
-      Tool(t.tools.clock.title,
-          "assets/images/tools/clock.png",
-          const ClockPage()
-      ),
-      Tool(
-          t.tools.stopwatch.title,
-          "assets/images/tools/stopwatch.png",
-          const StopwatchPage()
-      ),
-      Tool(
-          t.tools.timer.title,
-          "assets/images/tools/timer.png",
-          const TimerPage()
-      ),
-      Tool(
-          t.tools.timestampconverter.title,
-          "assets/images/tools/timestampconverter.png",
-          const TimestampConverterPage()
-      ),
+      toolMap["clock"],
+      toolMap["stopwatch"],
+      toolMap["timer"],
+      toolMap["timestampconverter"],
     ]),
     Folder(t.folders.web, "assets/images/folders/folder.png", [
-      Tool(t.tools.httprequest.title,
-          "assets/images/tools/httprequest.png",
-          const HttpRequestPage()
-      ),
-      Tool(
-          t.tools.urlshortener.title,
-          "assets/images/tools/urlshortener.png",
-          const UrlShortenerPage()
-      ),
-      Tool(
-          t.tools.youtubethumbnail.title,
-          "assets/images/tools/youtubethumbnail.png",
-          const YouTubeThumbnailPage()
-      ),
+      toolMap["httprequest"],
+      toolMap["urlshortener"],
+      toolMap["youtubethumbnail"],
     ]),
   ];
+
 
   static List<Tool> getFlatHierarchy() {
     List<Tool> uniqueItems = [];
