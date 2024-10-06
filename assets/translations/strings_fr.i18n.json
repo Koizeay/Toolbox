@@ -6,7 +6,8 @@
     "ok": "OK",
     "cancel": "Annuler",
     "search": "Rechercher",
-    "enable": "Activer"
+    "enable": "Activer",
+    "reset": "Réinitialiser"
   },
   "homepage": {
     "switch_view": "Changer de vue",

@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 580 (290 per locale)
+/// Strings: 582 (291 per locale)
 ///
-/// Built on 2024-10-06 at 13:34 UTC
+/// Built on 2024-10-06 at 15:08 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -169,6 +169,7 @@ class _StringsGenericEn {
 	String get cancel => 'Cancel';
 	String get search => 'Search';
 	String get enable => 'Enable';
+	String get reset => 'Reset';
 }
 
 // Path: homepage
@@ -1055,6 +1056,7 @@ class _StringsGenericFr implements _StringsGenericEn {
 	@override String get cancel => 'Annuler';
 	@override String get search => 'Rechercher';
 	@override String get enable => 'Activer';
+	@override String get reset => 'Réinitialiser';
 }
 
 // Path: homepage
@@ -1909,6 +1911,7 @@ extension on Translations {
 			case 'generic.cancel': return 'Cancel';
 			case 'generic.search': return 'Search';
 			case 'generic.enable': return 'Enable';
+			case 'generic.reset': return 'Reset';
 			case 'homepage.switch_view': return 'Switch view';
 			case 'homepage.search_all_folders': return 'Search in all folders';
 			case 'folders.audio': return 'Audio';
@@ -2207,6 +2210,7 @@ extension on _StringsFr {
 			case 'generic.cancel': return 'Annuler';
 			case 'generic.search': return 'Rechercher';
 			case 'generic.enable': return 'Activer';
+			case 'generic.reset': return 'Réinitialiser';
 			case 'homepage.switch_view': return 'Changer de vue';
 			case 'homepage.search_all_folders': return 'Rechercher dans tous les dossiers';
 			case 'folders.audio': return 'Audio';

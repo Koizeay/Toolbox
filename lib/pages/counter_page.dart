@@ -1,5 +1,7 @@
 
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:toolbox/core/shared_preferences.dart';
 import 'package:toolbox/gen/strings.g.dart';
 
 class CounterPage extends StatefulWidget {
@@ -9,7 +11,36 @@ class CounterPage extends StatefulWidget {
 }
 
 class _CounterPage extends State<CounterPage> {
+  bool isLoading = true;
+
   int _counter = 0;
+  late SharedPreferences prefs;
+
+  @override
+  void initState() {
+    initCounter().then((_) {
+      if (mounted) {
+        setState(() {
+          isLoading = false;
+        });
+      }
+    });
+    super.initState();
+  }
+
+  Future<void> initCounter() async {
+    prefs = await SharedPreferences.getInstance();
+    setState(() {
+      _counter = prefs.getInt(SHARED_PREFERENCES_TOOL_COUNTER_VALUE) ?? 0;
+    });
+  }
+
+  void incrementCounter(int amount) {
+    setState(() {
+      _counter += amount;
+    });
+    prefs.setInt(SHARED_PREFERENCES_TOOL_COUNTER_VALUE, _counter);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,9 +51,23 @@ class _CounterPage extends State<CounterPage> {
       child: Scaffold(
           appBar: AppBar(
             title: Text(t.tools.counter.title),
+            actions: [
+              IconButton(
+                icon: const Icon(Icons.refresh),
+                tooltip: t.generic.reset,
+                onPressed: () {
+                  setState(() {
+                    _counter = 0;
+                  });
+                  prefs.setInt(SHARED_PREFERENCES_TOOL_COUNTER_VALUE, _counter);
+                },
+              ),
+            ],
           ),
           body: SafeArea(
-            child: SingleChildScrollView(
+            child: isLoading
+                ? const Center(child: CircularProgressIndicator())
+                : SingleChildScrollView(
               child: Center(
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -42,9 +87,7 @@ class _CounterPage extends State<CounterPage> {
                             Expanded(
                               child: FilledButton(
                                 onPressed: () {
-                                  setState(() {
-                                    _counter--;
-                                  });
+                                  incrementCounter(-1);
                                 },
                                 child: const Icon(Icons.remove),
                               ),
@@ -54,7 +97,7 @@ class _CounterPage extends State<CounterPage> {
                               child: FilledButton(
                                 onPressed: () {
                                   setState(() {
-                                    _counter++;
+                                    incrementCounter(1);
                                   });
                                 },
                                 child: const Icon(Icons.add),
