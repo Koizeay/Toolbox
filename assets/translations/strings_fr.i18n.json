@@ -8,6 +8,16 @@
     "search": "Rechercher",
     "enable": "Activer"
   },
+  "folders": {
+    "audio": "Audio",
+    "games": "Jeux",
+    "geography": "Géographie",
+    "miscellaneous": "Divers",
+    "network": "Réseau",
+    "random": "Aléatoire",
+    "time": "Temps",
+    "web": "Web"
+  },
   "tools": {
     "clock": {
       "title": "Horloge",
@@ -375,17 +385,6 @@
     "counter": {
       "title": "Compteur"
     }
-  },
-  "folders": {
-    "time": "Temps",
-    "network": "Réseau",
-    "random": "Aléatoire",
-    "converter": "Convertisseur",
-    "analyser": "Analyseur",
-    "geography": "Géographie",
-    "web": "Web",
-    "sound": "Son",
-    "miscellaneous": "Divers"
   },
   "credits": {
     "title": "Crédits",

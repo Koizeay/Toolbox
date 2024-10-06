@@ -8,6 +8,16 @@
     "search": "Search",
     "enable": "Enable"
   },
+  "folders": {
+    "audio": "Audio",
+    "games": "Games",
+    "geography": "Geography",
+    "miscellaneous": "Miscellaneous",
+    "network": "Network",
+    "random": "Random",
+    "time": "Time",
+    "web": "Web"
+  },
   "tools": {
     "clock": {
       "title": "Clock",
@@ -375,17 +385,6 @@
     "counter": {
       "title": "Counter"
     }
-  },
-  "folders": {
-    "time": "Time",
-    "network": "Network",
-    "random": "Random",
-    "converter": "Converter",
-    "analyser": "Analyser",
-    "geography": "Geography",
-    "web": "Web",
-    "sound": "Sound",
-    "miscellaneous": "Miscellaneous"
   },
   "credits": {
     "title": "Credits",

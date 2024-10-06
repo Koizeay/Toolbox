@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 560 (280 per locale)
+/// Strings: 576 (288 per locale)
 ///
-/// Built on 2024-10-06 at 11:20 UTC
+/// Built on 2024-10-06 at 13:05 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -149,8 +149,8 @@ class Translations implements BaseTranslations<AppLocale, Translations> {
 
 	// Translations
 	late final _StringsGenericEn generic = _StringsGenericEn._(_root);
-	late final _StringsToolsEn tools = _StringsToolsEn._(_root);
 	late final _StringsFoldersEn folders = _StringsFoldersEn._(_root);
+	late final _StringsToolsEn tools = _StringsToolsEn._(_root);
 	late final _StringsCreditsEn credits = _StringsCreditsEn._(_root);
 }
 
@@ -168,6 +168,23 @@ class _StringsGenericEn {
 	String get cancel => 'Cancel';
 	String get search => 'Search';
 	String get enable => 'Enable';
+}
+
+// Path: folders
+class _StringsFoldersEn {
+	_StringsFoldersEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get audio => 'Audio';
+	String get games => 'Games';
+	String get geography => 'Geography';
+	String get miscellaneous => 'Miscellaneous';
+	String get network => 'Network';
+	String get random => 'Random';
+	String get time => 'Time';
+	String get web => 'Web';
 }
 
 // Path: tools
@@ -208,24 +225,6 @@ class _StringsToolsEn {
 	late final _StringsToolsTimestampconverterEn timestampconverter = _StringsToolsTimestampconverterEn._(_root);
 	late final _StringsToolsUrlshortenerEn urlshortener = _StringsToolsUrlshortenerEn._(_root);
 	late final _StringsToolsCounterEn counter = _StringsToolsCounterEn._(_root);
-}
-
-// Path: folders
-class _StringsFoldersEn {
-	_StringsFoldersEn._(this._root);
-
-	final Translations _root; // ignore: unused_field
-
-	// Translations
-	String get time => 'Time';
-	String get network => 'Network';
-	String get random => 'Random';
-	String get converter => 'Converter';
-	String get analyser => 'Analyser';
-	String get geography => 'Geography';
-	String get web => 'Web';
-	String get sound => 'Sound';
-	String get miscellaneous => 'Miscellaneous';
 }
 
 // Path: credits
@@ -1024,8 +1023,8 @@ class _StringsFr implements Translations {
 
 	// Translations
 	@override late final _StringsGenericFr generic = _StringsGenericFr._(_root);
-	@override late final _StringsToolsFr tools = _StringsToolsFr._(_root);
 	@override late final _StringsFoldersFr folders = _StringsFoldersFr._(_root);
+	@override late final _StringsToolsFr tools = _StringsToolsFr._(_root);
 	@override late final _StringsCreditsFr credits = _StringsCreditsFr._(_root);
 }
 
@@ -1043,6 +1042,23 @@ class _StringsGenericFr implements _StringsGenericEn {
 	@override String get cancel => 'Annuler';
 	@override String get search => 'Rechercher';
 	@override String get enable => 'Activer';
+}
+
+// Path: folders
+class _StringsFoldersFr implements _StringsFoldersEn {
+	_StringsFoldersFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get audio => 'Audio';
+	@override String get games => 'Jeux';
+	@override String get geography => 'Géographie';
+	@override String get miscellaneous => 'Divers';
+	@override String get network => 'Réseau';
+	@override String get random => 'Aléatoire';
+	@override String get time => 'Temps';
+	@override String get web => 'Web';
 }
 
 // Path: tools
@@ -1083,24 +1099,6 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsTimestampconverterFr timestampconverter = _StringsToolsTimestampconverterFr._(_root);
 	@override late final _StringsToolsUrlshortenerFr urlshortener = _StringsToolsUrlshortenerFr._(_root);
 	@override late final _StringsToolsCounterFr counter = _StringsToolsCounterFr._(_root);
-}
-
-// Path: folders
-class _StringsFoldersFr implements _StringsFoldersEn {
-	_StringsFoldersFr._(this._root);
-
-	@override final _StringsFr _root; // ignore: unused_field
-
-	// Translations
-	@override String get time => 'Temps';
-	@override String get network => 'Réseau';
-	@override String get random => 'Aléatoire';
-	@override String get converter => 'Convertisseur';
-	@override String get analyser => 'Analyseur';
-	@override String get geography => 'Géographie';
-	@override String get web => 'Web';
-	@override String get sound => 'Son';
-	@override String get miscellaneous => 'Divers';
 }
 
 // Path: credits
@@ -1887,6 +1885,14 @@ extension on Translations {
 			case 'generic.cancel': return 'Cancel';
 			case 'generic.search': return 'Search';
 			case 'generic.enable': return 'Enable';
+			case 'folders.audio': return 'Audio';
+			case 'folders.games': return 'Games';
+			case 'folders.geography': return 'Geography';
+			case 'folders.miscellaneous': return 'Miscellaneous';
+			case 'folders.network': return 'Network';
+			case 'folders.random': return 'Random';
+			case 'folders.time': return 'Time';
+			case 'folders.web': return 'Web';
 			case 'tools.clock.title': return 'Clock';
 			case 'tools.clock.loading': return 'Loading';
 			case 'tools.clock.change_timezone': return 'Change timezone';
@@ -2151,15 +2157,6 @@ extension on Translations {
 			case 'tools.urlshortener.error.impossible_to_connect_to_the_server': return 'Impossible to connect to the server';
 			case 'tools.urlshortener.error.impossible_to_connect_to_the_server_message': return 'Failed to connect to the server, please check your internet connection and try again.';
 			case 'tools.counter.title': return 'Counter';
-			case 'folders.time': return 'Time';
-			case 'folders.network': return 'Network';
-			case 'folders.random': return 'Random';
-			case 'folders.converter': return 'Converter';
-			case 'folders.analyser': return 'Analyser';
-			case 'folders.geography': return 'Geography';
-			case 'folders.web': return 'Web';
-			case 'folders.sound': return 'Sound';
-			case 'folders.miscellaneous': return 'Miscellaneous';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -2184,6 +2181,14 @@ extension on _StringsFr {
 			case 'generic.cancel': return 'Annuler';
 			case 'generic.search': return 'Rechercher';
 			case 'generic.enable': return 'Activer';
+			case 'folders.audio': return 'Audio';
+			case 'folders.games': return 'Jeux';
+			case 'folders.geography': return 'Géographie';
+			case 'folders.miscellaneous': return 'Divers';
+			case 'folders.network': return 'Réseau';
+			case 'folders.random': return 'Aléatoire';
+			case 'folders.time': return 'Temps';
+			case 'folders.web': return 'Web';
 			case 'tools.clock.title': return 'Horloge';
 			case 'tools.clock.loading': return 'Chargement';
 			case 'tools.clock.change_timezone': return 'Changer le fuseau horaire';
@@ -2448,15 +2453,6 @@ extension on _StringsFr {
 			case 'tools.urlshortener.error.impossible_to_connect_to_the_server': return 'Impossible de se connecter au serveur';
 			case 'tools.urlshortener.error.impossible_to_connect_to_the_server_message': return 'Échec de la connexion au serveur, veuillez vérifier votre connexion internet et réessayer.';
 			case 'tools.counter.title': return 'Compteur';
-			case 'folders.time': return 'Temps';
-			case 'folders.network': return 'Réseau';
-			case 'folders.random': return 'Aléatoire';
-			case 'folders.converter': return 'Convertisseur';
-			case 'folders.analyser': return 'Analyseur';
-			case 'folders.geography': return 'Géographie';
-			case 'folders.web': return 'Web';
-			case 'folders.sound': return 'Son';
-			case 'folders.miscellaneous': return 'Divers';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';
