@@ -10,7 +10,12 @@
   },
   "tools": {
     "clock": {
-      "title": "Horloge"
+      "title": "Horloge",
+      "loading": "Chargement",
+      "change_timezone": "Changer le fuseau horaire",
+      "timezone": "Fuseau horaire",
+      "choose_a_timezone": "Choisissez un fuseau horaire",
+      "select_local": "Heure locale"
     },
     "metronome": {
       "title": "Métronome",
