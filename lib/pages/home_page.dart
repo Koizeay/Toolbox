@@ -3,6 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:toolbox/core/shared_preferences.dart';
 import 'package:toolbox/gen/strings.g.dart';
 import 'package:toolbox/hierarchy.dart';
+import 'package:toolbox/models/home_folder.dart';
 import 'package:toolbox/pages/credits_page.dart';
 import 'package:toolbox/widgets/home_tilecard.dart';
 
@@ -39,7 +40,7 @@ class _HomePage extends State<HomePage> {
     query = query.trim();
     hierarchyFiltered = [];
     if (query.isNotEmpty) {
-      for (var tile in hasPreviousPage() ? hierarchy : Hierarchy.getFlatHierarchy()) {
+      for (var tile in !isRootPage() ? hierarchy : Hierarchy.getFlatHierarchy()) {
         if (tile.name.toLowerCase().contains(query.toLowerCase())) {
           hierarchyFiltered.add(tile);
         }
@@ -50,12 +51,14 @@ class _HomePage extends State<HomePage> {
     setState(() {});
   }
 
-  bool hasPreviousPage() {
-    return Navigator.canPop(context);
+  bool isRootPage() {
+    return isFolderView()
+        ? widget.content.toSet().containsAll(Hierarchy.hierarchy.where((element) => element.runtimeType == Folder).toSet())
+        : widget.content.toSet().containsAll(Hierarchy.getFlatHierarchy().toSet());
   }
 
   bool isFolderView() {
-    return widget.content == Hierarchy.hierarchy;
+    return widget.content.toSet().containsAll(Hierarchy.hierarchy);
   }
 
   @override
@@ -65,7 +68,7 @@ class _HomePage extends State<HomePage> {
       child: Scaffold(
           appBar: AppBar(
             title: Text(t.generic.app_name),
-            actions: hasPreviousPage() ? [] : [
+            actions: !isRootPage() ? [] : [
               IconButton(
                 icon: Icon(
                     isFolderView() ? Icons.grid_view : Icons.folder_outlined),
@@ -108,9 +111,9 @@ class _HomePage extends State<HomePage> {
                           filterSearchResults(value);
                         },
                         decoration: InputDecoration(
-                          labelText: hasPreviousPage() || !isFolderView()
-                              ? t.generic.search
-                              : t.homepage.search_all_folders,
+                          labelText: isRootPage() && isFolderView()
+                              ? t.homepage.search_all_folders
+                              : t.generic.search,
                           prefixIcon: const Icon(Icons.search),
                           border: const OutlineInputBorder(),
                         ),
