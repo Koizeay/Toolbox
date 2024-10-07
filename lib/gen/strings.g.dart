@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 618 (309 per locale)
+/// Strings: 632 (316 per locale)
 ///
-/// Built on 2024-10-07 at 15:04 UTC
+/// Built on 2024-10-07 at 18:50 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -170,6 +170,8 @@ class _StringsGenericEn {
 	String get search => 'Search';
 	String get enable => 'Enable';
 	String get reset => 'Reset';
+	String get yes => 'Yes';
+	String get no => 'No';
 }
 
 // Path: homepage
@@ -181,6 +183,11 @@ class _StringsHomepageEn {
 	// Translations
 	String get switch_view => 'Switch view';
 	String get search_all_folders => 'Search in all folders';
+	String get add => 'Add';
+	String get remove => 'Remove';
+	String get favorites => 'Favorites';
+	String get would_you_like_to_add_this_tool_to_favorites => 'Would you like to add this tool to favorites?';
+	String get would_you_like_to_remove_this_tool_from_favorites => 'Would you like to remove this tool from favorites?';
 }
 
 // Path: folders
@@ -1085,6 +1092,8 @@ class _StringsGenericFr implements _StringsGenericEn {
 	@override String get search => 'Rechercher';
 	@override String get enable => 'Activer';
 	@override String get reset => 'Réinitialiser';
+	@override String get yes => 'Oui';
+	@override String get no => 'Non';
 }
 
 // Path: homepage
@@ -1096,6 +1105,11 @@ class _StringsHomepageFr implements _StringsHomepageEn {
 	// Translations
 	@override String get switch_view => 'Changer de vue';
 	@override String get search_all_folders => 'Rechercher dans tous les dossiers';
+	@override String get add => 'Ajouter';
+	@override String get remove => 'Supprimer';
+	@override String get favorites => 'Favoris';
+	@override String get would_you_like_to_add_this_tool_to_favorites => 'Voulez-vous ajouter cet outil aux favoris ?';
+	@override String get would_you_like_to_remove_this_tool_from_favorites => 'Voulez-vous retirer cet outils des favoris ?';
 }
 
 // Path: folders
@@ -1968,8 +1982,15 @@ extension on Translations {
 			case 'generic.search': return 'Search';
 			case 'generic.enable': return 'Enable';
 			case 'generic.reset': return 'Reset';
+			case 'generic.yes': return 'Yes';
+			case 'generic.no': return 'No';
 			case 'homepage.switch_view': return 'Switch view';
 			case 'homepage.search_all_folders': return 'Search in all folders';
+			case 'homepage.add': return 'Add';
+			case 'homepage.remove': return 'Remove';
+			case 'homepage.favorites': return 'Favorites';
+			case 'homepage.would_you_like_to_add_this_tool_to_favorites': return 'Would you like to add this tool to favorites?';
+			case 'homepage.would_you_like_to_remove_this_tool_from_favorites': return 'Would you like to remove this tool from favorites?';
 			case 'folders.audio': return 'Audio';
 			case 'folders.games': return 'Games';
 			case 'folders.geography': return 'Geography';
@@ -2285,8 +2306,15 @@ extension on _StringsFr {
 			case 'generic.search': return 'Rechercher';
 			case 'generic.enable': return 'Activer';
 			case 'generic.reset': return 'Réinitialiser';
+			case 'generic.yes': return 'Oui';
+			case 'generic.no': return 'Non';
 			case 'homepage.switch_view': return 'Changer de vue';
 			case 'homepage.search_all_folders': return 'Rechercher dans tous les dossiers';
+			case 'homepage.add': return 'Ajouter';
+			case 'homepage.remove': return 'Supprimer';
+			case 'homepage.favorites': return 'Favoris';
+			case 'homepage.would_you_like_to_add_this_tool_to_favorites': return 'Voulez-vous ajouter cet outil aux favoris ?';
+			case 'homepage.would_you_like_to_remove_this_tool_from_favorites': return 'Voulez-vous retirer cet outils des favoris ?';
 			case 'folders.audio': return 'Audio';
 			case 'folders.games': return 'Jeux';
 			case 'folders.geography': return 'Géographie';

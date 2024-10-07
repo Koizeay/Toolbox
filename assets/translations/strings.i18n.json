@@ -7,11 +7,18 @@
     "cancel": "Cancel",
     "search": "Search",
     "enable": "Enable",
-    "reset": "Reset"
+    "reset": "Reset",
+    "yes": "Yes",
+    "no": "No"
   },
   "homepage": {
     "switch_view": "Switch view",
-    "search_all_folders": "Search in all folders"
+    "search_all_folders": "Search in all folders",
+    "add": "Add",
+    "remove": "Remove",
+    "favorites": "Favorites",
+    "would_you_like_to_add_this_tool_to_favorites": "Would you like to add this tool to favorites?",
+    "would_you_like_to_remove_this_tool_from_favorites": "Would you like to remove this tool from favorites?"
   },
   "folders": {
     "audio": "Audio",

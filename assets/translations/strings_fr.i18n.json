@@ -7,11 +7,18 @@
     "cancel": "Annuler",
     "search": "Rechercher",
     "enable": "Activer",
-    "reset": "Réinitialiser"
+    "reset": "Réinitialiser",
+    "yes": "Oui",
+    "no": "Non"
   },
   "homepage": {
     "switch_view": "Changer de vue",
-    "search_all_folders": "Rechercher dans tous les dossiers"
+    "search_all_folders": "Rechercher dans tous les dossiers",
+    "add": "Ajouter",
+    "remove": "Supprimer",
+    "favorites": "Favoris",
+    "would_you_like_to_add_this_tool_to_favorites": "Voulez-vous ajouter cet outil aux favoris ?",
+    "would_you_like_to_remove_this_tool_from_favorites": "Voulez-vous retirer cet outils des favoris ?"
   },
   "folders": {
     "audio": "Audio",
