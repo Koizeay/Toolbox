@@ -6,11 +6,12 @@ import 'package:toolbox/pages/home_page.dart';
 class Folder {
   String name;
   String image;
+  bool isFavoriteFolder = false;
   List<Tool?> content;
   late Widget page;
 
-  Folder(this.name, this.image, this.content) {
+  Folder(this.name, this.image, this.content, {this.isFavoriteFolder = false}) {
     content.removeWhere((tool) => tool == null);
-    page = HomePage(content: content);
+    page = isFavoriteFolder ? HomePage(content: content, isFavoriteFolderShown: true) : HomePage(content: content);
   }
 }

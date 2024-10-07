@@ -11,8 +11,9 @@ import 'package:toolbox/widgets/home_tilecard.dart';
 
 class HomePage extends StatefulWidget {
   final List<dynamic> content;
+  final bool isFavoriteFolderShown;
 
-  const HomePage({ super.key, required this.content });
+  const HomePage({ super.key, required this.content, this.isFavoriteFolderShown = false });
   @override
   State<HomePage> createState() => _HomePage();
 }
@@ -103,9 +104,12 @@ class _HomePage extends State<HomePage> {
     favoriteTools = await Hierarchy.getFavoriteTools();
     if (isFolderView()) {
       List<Tool> favoriteToolsObjects = favoriteTools.map((toolId) => Hierarchy.toolMap[toolId]).toList().whereType<Tool>().toList();
+      widget.content.removeWhere((element) => element.runtimeType == Folder && (element as Folder).isFavoriteFolder);
       if (favoriteToolsObjects.isNotEmpty) {
         favoriteToolsObjects.sort((a, b) => a.name.toLowerCase().compareTo(b.name.toLowerCase()));
-        widget.content.insert(0, Folder(t.homepage.favorites, "assets/images/folders/folder.png", favoriteToolsObjects));
+        widget.content.insert(0, Folder(t.homepage.favorites, "assets/images/folders/folder.png", favoriteToolsObjects, isFavoriteFolder: true));
+      } else {
+        widget.content.removeWhere((element) => element.runtimeType == Folder && (element as Folder).isFavoriteFolder);
       }
     } else {
       List<Tool> favoriteToolsObjects = favoriteTools.map((toolId) => Hierarchy.toolMap[toolId]).toList().whereType<Tool>().toList();
@@ -203,6 +207,7 @@ class _HomePage extends State<HomePage> {
                                       .firstWhere((entry) => entry.value == hierarchyFiltered[index])
                                       .key),
                               onTap: () {
+                                refreshFavoritesInContent();
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
