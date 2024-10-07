@@ -289,7 +289,7 @@
       }
     },
     "morsecode": {
-      "title": "Code Morse",
+      "title": "Code morse",
       "alphabet_field": "Alphabet (A-Z, 0-9)",
       "morse_field": "Code Morse (. and -)",
       "note_spaces": "Note : Utilisez 1 espace entre les lettres et 3 espaces entre les mots.",

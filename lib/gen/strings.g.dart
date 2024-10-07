@@ -6,7 +6,7 @@
 /// Locales: 2
 /// Strings: 618 (309 per locale)
 ///
-/// Built on 2024-10-07 at 14:49 UTC
+/// Built on 2024-10-07 at 15:04 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1548,7 +1548,7 @@ class _StringsToolsMorsecodeFr implements _StringsToolsMorsecodeEn {
 	@override final _StringsFr _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => 'Code Morse';
+	@override String get title => 'Code morse';
 	@override String get alphabet_field => 'Alphabet (A-Z, 0-9)';
 	@override String get morse_field => 'Code Morse (. and -)';
 	@override String get note_spaces => 'Note : Utilisez 1 espace entre les lettres et 3 espaces entre les mots.';
@@ -2485,7 +2485,7 @@ extension on _StringsFr {
 			case 'tools.httprequest.error.invalid_url': return 'URL invalide';
 			case 'tools.httprequest.error.invalid_headers': return 'En-têtes invalides';
 			case 'tools.httprequest.error.other_error': return 'Une erreur s\'est produite lors de l\'envoi de la requête.\nVeuillez vérifier votre saisie et votre connexion internet, puis réessayez.';
-			case 'tools.morsecode.title': return 'Code Morse';
+			case 'tools.morsecode.title': return 'Code morse';
 			case 'tools.morsecode.alphabet_field': return 'Alphabet (A-Z, 0-9)';
 			case 'tools.morsecode.morse_field': return 'Code Morse (. and -)';
 			case 'tools.morsecode.note_spaces': return 'Note : Utilisez 1 espace entre les lettres et 3 espaces entre les mots.';
