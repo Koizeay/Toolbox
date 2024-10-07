@@ -14,17 +14,25 @@ class TileCard extends StatelessWidget {
       onTap: onTap,
       child: Card(
         clipBehavior: Clip.antiAliasWithSaveLayer,
-        child: FittedBox(
-          fit: BoxFit.contain,
-          child: Column(
-            children: [
-              Image.asset(
-                themedImageAssetPath,
-                opacity: const AlwaysStoppedAnimation(0.8)
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Expanded(
+              flex: 3,
+              child: Image(
+                image: AssetImage(themedImageAssetPath),
+                opacity: const AlwaysStoppedAnimation(0.8),
               ),
-              Text(title, style: const TextStyle(fontSize: 100)),
-            ],
-          ),
+            ),
+            Expanded(
+              flex: 1,
+              child: Text(
+                title,
+                style: const TextStyle(fontSize: 14),
+                overflow: TextOverflow.ellipsis,
+              ),
+            ),
+          ],
         ),
       ),
     );
