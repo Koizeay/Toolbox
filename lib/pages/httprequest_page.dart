@@ -16,7 +16,7 @@ class HttpRequestPage extends StatefulWidget {
 class _HttpRequestPage extends State<HttpRequestPage> {
   bool isLoading = false;
   bool renderHtml = false;
-  bool htmlWebViewLoaded = false;
+  bool htmlWebViewLoaded = Platform.isAndroid;
 
   TextEditingController methodController = TextEditingController();
   TextEditingController urlController = TextEditingController();
@@ -60,11 +60,11 @@ class _HttpRequestPage extends State<HttpRequestPage> {
       ..setNavigationDelegate(
         NavigationDelegate(
           onNavigationRequest: (NavigationRequest request) {
-            if (request.url.startsWith("about:blank")) {
-              return NavigationDecision.navigate;
-            }
             if (htmlWebViewLoaded) {
               return NavigationDecision.prevent;
+            }
+            if (request.url.startsWith("about:blank")) {
+              return NavigationDecision.navigate;
             }
             htmlWebViewLoaded = true;
             return NavigationDecision.navigate;
