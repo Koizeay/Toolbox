@@ -70,8 +70,6 @@ class _HomePage extends State<HomePage> {
                     isFolderView() ? Icons.grid_view : Icons.folder_outlined),
                 tooltip: t.homepage.switch_view,
                 onPressed: () async {
-                  SharedPreferences prefs = await SharedPreferences.getInstance();
-                  await prefs.setBool(SHARED_PREFERENCES_CORE_HOMEPAGE_ISFOLDERVIEW, !isFolderView());
                   Navigator.pushReplacement(
                     context,
                     PageRouteBuilder(
@@ -80,6 +78,8 @@ class _HomePage extends State<HomePage> {
                               .getFlatHierarchy() : Hierarchy.hierarchy),
                     ),
                   );
+                  SharedPreferences prefs = await SharedPreferences.getInstance();
+                  await prefs.setBool(SHARED_PREFERENCES_CORE_HOMEPAGE_ISFOLDERVIEW, !isFolderView());
                 },
               ),
               IconButton(
