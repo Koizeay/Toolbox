@@ -36,43 +36,32 @@ class _TimestampConverterPage extends State<TimestampConverterPage> {
     bool? isUtc;
     await showDialog(
       context: context,
-      barrierDismissible: false,
       builder: (BuildContext context) {
-        return PopScope(
-          canPop: false,
-          child: AlertDialog(
-            title: Text(t.tools.timestampconverter.local_or_utc_dialog_title),
-            content: Text(t.tools.timestampconverter.local_or_utc_dialog_message),
-            actions: [
-              TextButton(
-                onPressed: () {
-                  Navigator.of(context).pop();
-                  isUtc = false;
-                },
-                child: Text(
-                    t.tools.timestampconverter.local,
-                    style: const TextStyle(fontWeight: FontWeight.w800)
-                ),
+        return AlertDialog(
+          title: Text(t.tools.timestampconverter.local_or_utc_dialog_title),
+          content: Text(t.tools.timestampconverter.local_or_utc_dialog_message),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+                isUtc = false;
+              },
+              child: Text(
+                  t.tools.timestampconverter.local,
+                  style: const TextStyle(fontWeight: FontWeight.w800)
               ),
-              TextButton(
-                onPressed: () {
-                  Navigator.of(context).pop();
-                  isUtc = true;
-                },
-                child: Text(
-                    t.tools.timestampconverter.utc,
-                    style: const TextStyle(fontWeight: FontWeight.w800)
-                ),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+                isUtc = true;
+              },
+              child: Text(
+                  t.tools.timestampconverter.utc,
+                  style: const TextStyle(fontWeight: FontWeight.w800)
               ),
-              TextButton(
-                onPressed: () {
-                  Navigator.of(context).pop();
-                  isUtc = null;
-                },
-                child: Text(t.generic.cancel),
-              ),
-            ],
-          ),
+            ),
+          ],
         );
       },
     );
