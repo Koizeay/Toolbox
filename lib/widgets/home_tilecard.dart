@@ -26,10 +26,13 @@ class TileCard extends StatelessWidget {
             ),
             Expanded(
               flex: 1,
-              child: Text(
-                title,
-                style: const TextStyle(fontSize: 14),
-                overflow: TextOverflow.ellipsis,
+              child: FittedBox(
+                fit: BoxFit.fitWidth,
+                child: Text(
+                  title,
+                  style: const TextStyle(fontSize: 14),
+                  overflow: TextOverflow.ellipsis,
+                ),
               ),
             ),
           ],
