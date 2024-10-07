@@ -36,6 +36,7 @@ class _HomePage extends State<HomePage> {
   }
 
   void filterSearchResults(String query) {
+    query = query.trim();
     hierarchyFiltered = [];
     if (query.isNotEmpty) {
       for (var tile in hasPreviousPage() ? hierarchy : Hierarchy.getFlatHierarchy()) {
