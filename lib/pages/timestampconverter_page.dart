@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:intl/intl.dart';
+import 'package:numberpicker/numberpicker.dart';
 import 'package:toolbox/gen/strings.g.dart';
 
 class TimestampConverterPage extends StatefulWidget {
@@ -76,21 +77,81 @@ class _TimestampConverterPage extends State<TimestampConverterPage> {
       lastDate: pickUtc ? DateTime(2100).toUtc() : DateTime(2100),
     ).then((DateTime? date) {
       if (date != null) {
-        showTimePicker(
-          context: context,
-          initialTime: const TimeOfDay(hour: 0, minute: 0),
-        ).then((TimeOfDay? time) {
-          if (time != null) {
-            DateTime dateTime = DateFormat("yyyy-MM-dd HH:mm:ss").parse("${date.year}-${date.month}-${date.day} ${time.hour}:${time.minute}:00", pickUtc);
-            if (mounted) {
-              setState(() {
-                updateTime(dateTime.millisecondsSinceEpoch ~/ 1000);
-              });
+        if (mounted) {
+          showTimePicker(
+            context: context,
+            initialTime: const TimeOfDay(hour: 0, minute: 0),
+          ).then((TimeOfDay? time) async {
+            if (time != null) {
+              int seconds = await showSecondsPickerDialog();
+              DateTime dateTime = DateFormat("yyyy-MM-dd HH:mm:ss")
+                  .parse(
+                  "${date.year}-${date.month}-${date.day} ${time.hour}:${time
+                      .minute}:$seconds",
+                  pickUtc
+              );
+              if (mounted) {
+                setState(() {
+                  updateTime(dateTime.millisecondsSinceEpoch ~/ 1000);
+                });
+              }
             }
-          }
-        });
+          });
+        }
       }
     });
+  }
+
+  Future<int> showSecondsPickerDialog() async {
+    int seconds = 0;
+    if (mounted) {
+      await showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: Text(t.tools.timestampconverter.select_seconds),
+            content: StatefulBuilder(
+              builder: (BuildContext context, StateSetter setState) =>
+                  Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      const SizedBox(height: 8),
+                      NumberPicker(
+                        value: seconds,
+                        minValue: 0,
+                        maxValue: 59,
+                        onChanged: (value) {
+                          if (mounted) {
+                            setState(() {
+                              seconds = value;
+                            });
+                          }
+                        },
+                        axis: Axis.horizontal,
+                        infiniteLoop: true,
+                      ),
+                    ],
+                  ),
+            ),
+            actions: [
+              TextButton(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+                child: Text(t.generic.cancel),
+              ),
+              TextButton(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+                child: Text(t.generic.ok),
+              ),
+            ],
+          );
+        },
+      );
+    }
+    return seconds;
   }
 
   @override

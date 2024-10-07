@@ -375,6 +375,7 @@
       "unix_timestamp": "Unix timestamp",
       "convert_timestamp_to_date": "Convert timestamp to date",
       "tap_the_date_to_change_it": "Tap the date to change it",
+      "select_seconds": "Select seconds",
       "error": {
         "invalid_timestamp": "Invalid timestamp"
       }

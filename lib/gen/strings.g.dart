@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 616 (308 per locale)
+/// Strings: 618 (309 per locale)
 ///
-/// Built on 2024-10-06 at 16:46 UTC
+/// Built on 2024-10-07 at 14:49 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -738,6 +738,7 @@ class _StringsToolsTimestampconverterEn {
 	String get unix_timestamp => 'Unix timestamp';
 	String get convert_timestamp_to_date => 'Convert timestamp to date';
 	String get tap_the_date_to_change_it => 'Tap the date to change it';
+	String get select_seconds => 'Select seconds';
 	late final _StringsToolsTimestampconverterErrorEn error = _StringsToolsTimestampconverterErrorEn._(_root);
 }
 
@@ -1652,6 +1653,7 @@ class _StringsToolsTimestampconverterFr implements _StringsToolsTimestampconvert
 	@override String get unix_timestamp => 'Timestamp Unix';
 	@override String get convert_timestamp_to_date => 'Convertir le timestamp en date';
 	@override String get tap_the_date_to_change_it => 'Appuyez sur la date pour la modifier';
+	@override String get select_seconds => 'Sélectionner les secondes';
 	@override late final _StringsToolsTimestampconverterErrorFr error = _StringsToolsTimestampconverterErrorFr._(_root);
 }
 
@@ -2234,6 +2236,7 @@ extension on Translations {
 			case 'tools.timestampconverter.unix_timestamp': return 'Unix timestamp';
 			case 'tools.timestampconverter.convert_timestamp_to_date': return 'Convert timestamp to date';
 			case 'tools.timestampconverter.tap_the_date_to_change_it': return 'Tap the date to change it';
+			case 'tools.timestampconverter.select_seconds': return 'Select seconds';
 			case 'tools.timestampconverter.error.invalid_timestamp': return 'Invalid timestamp';
 			case 'tools.urlshortener.title': return 'URL shortener';
 			case 'tools.urlshortener.url': return 'URL';
@@ -2550,6 +2553,7 @@ extension on _StringsFr {
 			case 'tools.timestampconverter.unix_timestamp': return 'Timestamp Unix';
 			case 'tools.timestampconverter.convert_timestamp_to_date': return 'Convertir le timestamp en date';
 			case 'tools.timestampconverter.tap_the_date_to_change_it': return 'Appuyez sur la date pour la modifier';
+			case 'tools.timestampconverter.select_seconds': return 'Sélectionner les secondes';
 			case 'tools.timestampconverter.error.invalid_timestamp': return 'Timestamp invalide';
 			case 'tools.urlshortener.title': return 'Raccourcisseur d\'URL';
 			case 'tools.urlshortener.url': return 'L\'URL';
