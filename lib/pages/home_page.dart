@@ -22,6 +22,7 @@ class _HomePage extends State<HomePage> {
   List<dynamic> hierarchy = [];
   List<dynamic> hierarchyFiltered = [];
   List<String> favoriteTools = [];
+  String searchQuery = "";
 
   @override
   void initState() {
@@ -40,12 +41,12 @@ class _HomePage extends State<HomePage> {
     widget.content.sort((a, b) => a.name.toLowerCase().compareTo(b.name.toLowerCase()));
   }
 
-  void filterSearchResults(String query) {
-    query = query.trim();
+  void filterSearchResults() {
+    searchQuery = searchQuery.trim();
     hierarchyFiltered = [];
-    if (query.isNotEmpty) {
+    if (searchQuery.isNotEmpty) {
       for (var tile in !isRootPage() ? hierarchy : Hierarchy.getFlatHierarchy()) {
-        if (tile.name.toLowerCase().contains(query.toLowerCase())) {
+        if (tile.name.toLowerCase().contains(searchQuery.toLowerCase())) {
           hierarchyFiltered.add(tile);
         }
       }
@@ -84,9 +85,9 @@ class _HomePage extends State<HomePage> {
             TextButton(
               onPressed: () async {
                 String key = Hierarchy.findToolIdByInstance(tool);
-                !favoriteTools.contains(key)
-                    ? await Hierarchy.addFavoriteTool(key)
-                    : await Hierarchy.removeFavoriteTool(key);
+                favoriteTools.contains(key)
+                    ? await Hierarchy.removeFavoriteTool(key)
+                    : await Hierarchy.addFavoriteTool(key);
                 if (mounted) {
                   Navigator.pop(this.context);
                 }
@@ -134,7 +135,9 @@ class _HomePage extends State<HomePage> {
       widget.content.insertAll(0, favoriteToolsObjects);
     }
     if (mounted) {
-      setState(() {});
+      setState(() {
+        filterSearchResults();
+      });
     }
   }
 
@@ -186,7 +189,10 @@ class _HomePage extends State<HomePage> {
                       padding: const EdgeInsets.all(8.0),
                       child: TextField(
                         onChanged: (value) {
-                          filterSearchResults(value);
+                          setState(() {
+                            searchQuery = value;
+                            filterSearchResults();
+                          });
                         },
                         decoration: InputDecoration(
                           labelText: isRootPage() && isFolderView()
