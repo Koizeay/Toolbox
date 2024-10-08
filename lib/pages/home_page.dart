@@ -107,7 +107,17 @@ class _HomePage extends State<HomePage> {
       widget.content.removeWhere((element) => element.runtimeType == Folder && (element as Folder).isFavoriteFolder);
       if (favoriteToolsObjects.isNotEmpty) {
         favoriteToolsObjects.sort((a, b) => a.name.toLowerCase().compareTo(b.name.toLowerCase()));
-        widget.content.insert(0, Folder(t.homepage.favorites, "assets/images/folders/folder.png", favoriteToolsObjects, isFavoriteFolder: true));
+        if (mounted) {
+          widget.content.insert(
+              0,
+              Folder(
+                  t.homepage.favorites,
+                  "assets/images/folders/folder_favorite.png",
+                  favoriteToolsObjects,
+                  isFavoriteFolder: true
+              )
+          );
+        }
       } else {
         widget.content.removeWhere((element) => element.runtimeType == Folder && (element as Folder).isFavoriteFolder);
       }
