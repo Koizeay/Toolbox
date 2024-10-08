@@ -1,4 +1,6 @@
 
+import 'dart:async';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
@@ -19,7 +21,8 @@ class _SpeedometerPage extends State<SpeedometerPage> {
   double _maxSpeedMps = 0.0;
   double traveledDistanceMeters = 0.0;
   late LocationSettings _locationSettings;
-  late Stream<Position>? _positionStream;
+  Stream<Position>? _positionStream;
+  StreamSubscription<Position>? _positionStreamSubscription;
 
   @override
   void initState() {
@@ -35,6 +38,7 @@ class _SpeedometerPage extends State<SpeedometerPage> {
 
   @override
   void dispose() {
+    _positionStreamSubscription?.cancel();
     _positionStream = null;
     super.dispose();
   }
@@ -93,16 +97,16 @@ class _SpeedometerPage extends State<SpeedometerPage> {
   void initLocationSettings() {
     if (defaultTargetPlatform == TargetPlatform.android) {
       _locationSettings = AndroidSettings(
-          accuracy: LocationAccuracy.high,
-          intervalDuration: const Duration(seconds: 1),
+        accuracy: LocationAccuracy.high,
+        intervalDuration: const Duration(seconds: 1),
       );
     } else if (defaultTargetPlatform == TargetPlatform.iOS) {
       _locationSettings = AppleSettings(
-          accuracy: LocationAccuracy.high,
+        accuracy: LocationAccuracy.high,
       );
     } else {
       _locationSettings = const LocationSettings(
-          accuracy: LocationAccuracy.high,
+        accuracy: LocationAccuracy.high,
       );
     }
   }
@@ -111,7 +115,7 @@ class _SpeedometerPage extends State<SpeedometerPage> {
     _positionStream = Geolocator.getPositionStream(
         locationSettings: _locationSettings
     );
-    _positionStream?.listen((position) {
+    _positionStreamSubscription = _positionStream?.listen((position) {
       if (mounted) {
         setState(() {
           traveledDistanceMeters += position.speed * 1;
