@@ -48,7 +48,6 @@ dependencies:
   flutter_native_splash: ^2.2.19
   slang: ^3.17.0
   slang_flutter: ^3.17.0
-  icons_launcher: ^2.1.3
   url_launcher: ^6.1.11
   noise_meter: ^5.0.2
   gauges: ^1.0.0
@@ -81,6 +80,7 @@ dependencies:
   map_launcher: ^3.5.0
 
 dev_dependencies:
+  flutter_launcher_icons: ^0.14.1
   flutter_test:
     sdk: flutter
 
@@ -96,18 +96,6 @@ dependency_overrides:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
-
-# flutter pub run icons_launcher:create
-icons_launcher:
-  image_path: "assets/images/icons/icon.png"
-  platforms:
-    android:
-      enable: true
-      adaptive_icon_background: 'assets/images/icons/icon_back.png'
-      adaptive_icon_foreground: 'assets/images/icons/icon_fore.png'
-    ios:
-      enable: true
-      image_path: "assets/images/icons/icon.png"
 
 # The following section is specific to Flutter packages.
 flutter:
