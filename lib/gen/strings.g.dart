@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 618 (309 per locale)
+/// Strings: 622 (311 per locale)
 ///
-/// Built on 2024-10-07 at 15:04 UTC
+/// Built on 2024-10-08 at 09:40 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -551,6 +551,7 @@ class _StringsToolsNearbypublictransportstopsEn {
 	String get arrival => 'Arrival';
 	String get platform => 'Platform';
 	String get show_on_map => 'Map';
+	String get map_marker_title => 'Stop';
 	late final _StringsToolsNearbypublictransportstopsErrorEn error = _StringsToolsNearbypublictransportstopsErrorEn._(_root);
 }
 
@@ -908,6 +909,7 @@ class _StringsToolsNearbypublictransportstopsErrorEn {
 	String get api_empty_response => 'The API returned an empty response';
 	String api_error_xxx({required Object errorCode}) => 'The API returned an error: ${errorCode}';
 	String get no_stops_found => 'No stops found for this search';
+	String get no_maps_app => 'No maps app found on your device';
 }
 
 // Path: tools.fileencryption.error
@@ -1466,6 +1468,7 @@ class _StringsToolsNearbypublictransportstopsFr implements _StringsToolsNearbypu
 	@override String get arrival => 'Arrivée';
 	@override String get platform => 'Voie';
 	@override String get show_on_map => 'Plan';
+	@override String get map_marker_title => 'Arrêt de transport';
 	@override late final _StringsToolsNearbypublictransportstopsErrorFr error = _StringsToolsNearbypublictransportstopsErrorFr._(_root);
 }
 
@@ -1823,6 +1826,7 @@ class _StringsToolsNearbypublictransportstopsErrorFr implements _StringsToolsNea
 	@override String get api_empty_response => 'L\'API a renvoyé une réponse vide';
 	@override String api_error_xxx({required Object errorCode}) => 'L\'API a renvoyé une erreur ${errorCode}';
 	@override String get no_stops_found => 'Aucun arrêt trouvé avec cette recherche';
+	@override String get no_maps_app => 'Aucune application de cartographie n\'est installée sur votre appareil';
 }
 
 // Path: tools.fileencryption.error
@@ -2120,11 +2124,13 @@ extension on Translations {
 			case 'tools.nearbypublictransportstops.arrival': return 'Arrival';
 			case 'tools.nearbypublictransportstops.platform': return 'Platform';
 			case 'tools.nearbypublictransportstops.show_on_map': return 'Map';
+			case 'tools.nearbypublictransportstops.map_marker_title': return 'Stop';
 			case 'tools.nearbypublictransportstops.error.location_permission_denied': return 'Location permission denied or disabled, please enable it in settings in order to see nearby stops.';
 			case 'tools.nearbypublictransportstops.error.check_internet_connection': return 'Please check your internet connection and try again.';
 			case 'tools.nearbypublictransportstops.error.api_empty_response': return 'The API returned an empty response';
 			case 'tools.nearbypublictransportstops.error.api_error_xxx': return ({required Object errorCode}) => 'The API returned an error: ${errorCode}';
 			case 'tools.nearbypublictransportstops.error.no_stops_found': return 'No stops found for this search';
+			case 'tools.nearbypublictransportstops.error.no_maps_app': return 'No maps app found on your device';
 			case 'tools.fileencryption.title': return 'File encryption';
 			case 'tools.fileencryption.home_hint': return 'Pick a file to encrypt it. If you want to decrypt a file, pick an encrypted file with the .aes extension';
 			case 'tools.fileencryption.no_file_selected': return 'No file selected';
@@ -2437,11 +2443,13 @@ extension on _StringsFr {
 			case 'tools.nearbypublictransportstops.arrival': return 'Arrivée';
 			case 'tools.nearbypublictransportstops.platform': return 'Voie';
 			case 'tools.nearbypublictransportstops.show_on_map': return 'Plan';
+			case 'tools.nearbypublictransportstops.map_marker_title': return 'Arrêt de transport';
 			case 'tools.nearbypublictransportstops.error.location_permission_denied': return 'La permission de localisation a été refusée ou désactivée, veuillez l\'activer dans les paramètres afin de voir les arrêts de transport public à proximité.';
 			case 'tools.nearbypublictransportstops.error.check_internet_connection': return 'Vérifiez votre connexion internet et réessayez.';
 			case 'tools.nearbypublictransportstops.error.api_empty_response': return 'L\'API a renvoyé une réponse vide';
 			case 'tools.nearbypublictransportstops.error.api_error_xxx': return ({required Object errorCode}) => 'L\'API a renvoyé une erreur ${errorCode}';
 			case 'tools.nearbypublictransportstops.error.no_stops_found': return 'Aucun arrêt trouvé avec cette recherche';
+			case 'tools.nearbypublictransportstops.error.no_maps_app': return 'Aucune application de cartographie n\'est installée sur votre appareil';
 			case 'tools.fileencryption.title': return 'Chiffrement de fichiers';
 			case 'tools.fileencryption.home_hint': return 'Choisissez un fichier pour le chiffrer. Si vous souhaitez déchiffrer un fichier, choisissez un fichier chiffré ayant l\'extension .aes.';
 			case 'tools.fileencryption.no_file_selected': return 'Aucun fichier sélectionné';

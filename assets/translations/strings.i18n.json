@@ -221,12 +221,14 @@
       "arrival": "Arrival",
       "platform": "Platform",
       "show_on_map": "Map",
+      "map_marker_title": "Stop",
       "error": {
         "location_permission_denied": "Location permission denied or disabled, please enable it in settings in order to see nearby stops.",
         "check_internet_connection": "Please check your internet connection and try again.",
         "api_empty_response": "The API returned an empty response",
         "api_error_xxx": "The API returned an error: $errorCode",
-        "no_stops_found": "No stops found for this search"
+        "no_stops_found": "No stops found for this search",
+        "no_maps_app": "No maps app found on your device"
       }
     },
     "fileencryption": {
