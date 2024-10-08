@@ -297,14 +297,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.3.1"
-  fast_csv:
-    dependency: "direct main"
-    description:
-      name: fast_csv
-      sha256: "2165aa6b76daa0de168a712a157a78e60fd786257228935dd9d2809fe2ef7d8a"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.2.11"
   ffi:
     dependency: transitive
     description:
@@ -677,14 +669,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.4.0"
-  maps_launcher:
+  map_launcher:
     dependency: "direct main"
     description:
-      name: maps_launcher
-      sha256: "57ba3c31db96e30f58c23fcb22a1fac6accc5683535b2cf344c534bbb9f8f910"
+      name: map_launcher
+      sha256: "7436d6ef9ae57ff15beafcedafe0a8f0604006cbecd2d26024c4cfb0158c2b9a"
       url: "https://pub.dev"
     source: hosted
-    version: "2.2.1"
+    version: "3.5.0"
   matcher:
     dependency: transitive
     description:
@@ -737,18 +729,18 @@ packages:
     dependency: "direct main"
     description:
       name: network_info_plus
-      sha256: a0ab54a63b10ba06f5adf8b68171911ca19f607d2224e36d2c827c031cc174d7
+      sha256: "6a31fa47c1f6e240f1b60de0a57d65a092ac1af7515247660f03643576984eb8"
       url: "https://pub.dev"
     source: hosted
-    version: "3.0.5"
+    version: "6.0.1"
   network_info_plus_platform_interface:
     dependency: transitive
     description:
       name: network_info_plus_platform_interface
-      sha256: "881f5029c5edaf19c616c201d3d8b366c5b1384afd5c1da5a49e4345de82fb8b"
+      sha256: b7f35f4a7baef511159e524499f3c15464a49faa5ec10e92ee0bce265e664906
       url: "https://pub.dev"
     source: hosted
-    version: "1.1.3"
+    version: "2.0.1"
   nm:
     dependency: transitive
     description:
@@ -1001,18 +993,18 @@ packages:
     dependency: "direct main"
     description:
       name: share_plus
-      sha256: b1f15232d41e9701ab2f04181f21610c36c83a12ae426b79b4bd011c567934b1
+      sha256: "468c43f285207c84bcabf5737f33b914ceb8eb38398b91e5e3ad1698d1b72a52"
       url: "https://pub.dev"
     source: hosted
-    version: "6.3.4"
+    version: "10.0.2"
   share_plus_platform_interface:
     dependency: transitive
     description:
       name: share_plus_platform_interface
-      sha256: "251eb156a8b5fa9ce033747d73535bf53911071f8d3b6f4f0b578505ce0d4496"
+      sha256: "6ababf341050edff57da8b6990f11f4e99eaba837865e2e6defe16d039619db5"
       url: "https://pub.dev"
     source: hosted
-    version: "3.4.0"
+    version: "5.0.0"
   shared_preferences:
     dependency: "direct main"
     description:

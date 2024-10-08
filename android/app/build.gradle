@@ -23,12 +23,15 @@ if (flutterVersionName == null) {
 }
 
 android {
+    namespace 'com.koizeay.toolbox'
+
     compileSdkVersion 34
     ndkVersion flutter.ndkVersion
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+        coreLibraryDesugaringEnabled true
     }
 
     kotlinOptions {
@@ -57,10 +60,16 @@ android {
             signingConfig signingConfigs.debug
         }
     }
+
+    ndkVersion "27.0.12077973"
 }
 
 flutter {
     source '../..'
 }
 
-dependencies {}
+dependencies {
+    implementation 'androidx.window:window:1.3.0'
+    implementation 'androidx.window:window-java:1.3.0'
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.1.2'
+}

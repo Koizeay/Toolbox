@@ -5,7 +5,7 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
-import 'package:maps_launcher/maps_launcher.dart';
+import 'package:map_launcher/map_launcher.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:toolbox/core/dialogs.dart';
@@ -124,8 +124,22 @@ class _NearbyPublicTransportStopsPage extends State<NearbyPublicTransportStopsPa
     }
   }
 
-  void openMaps(double lat, double lon) {
-    MapsLauncher.launchCoordinates(lat, lon);
+  Future<void> openMaps(double lat, double lon) async {
+    final availableMaps = await MapLauncher.installedMaps;
+    if (availableMaps.isEmpty) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text(t.tools.nearbypublictransportstops.error.no_maps_app),
+            )
+        );
+      }
+      return;
+    }
+    await availableMaps.first.showMarker(
+      coords: Coords(lat, lon),
+      title: t.tools.nearbypublictransportstops.map_marker_title,
+    );
   }
 
   Future<void> showInitDialog() async {

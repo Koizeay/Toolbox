@@ -228,12 +228,14 @@
       "arrival": "Arrivée",
       "platform": "Voie",
       "show_on_map": "Plan",
+      "map_marker_title": "Arrêt de transport",
       "error": {
         "location_permission_denied": "La permission de localisation a été refusée ou désactivée, veuillez l'activer dans les paramètres afin de voir les arrêts de transport public à proximité.",
         "check_internet_connection": "Vérifiez votre connexion internet et réessayez.",
         "api_empty_response": "L'API a renvoyé une réponse vide",
         "api_error_xxx": "L'API a renvoyé une erreur $errorCode",
-        "no_stops_found": "Aucun arrêt trouvé avec cette recherche"
+        "no_stops_found": "Aucun arrêt trouvé avec cette recherche",
+        "no_maps_app": "Aucune application de cartographie n'est installée sur votre appareil"
       }
     },
     "fileencryption": {
