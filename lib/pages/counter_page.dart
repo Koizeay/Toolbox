@@ -13,7 +13,7 @@ class CounterPage extends StatefulWidget {
 
 class _CounterPage extends State<CounterPage> {
   final int maxNumberInButton = 100000;
-  final int minNumberInButton = -100000;
+  final int minNumberInButton = 1;
 
   bool isLoading = true;
 
@@ -140,6 +140,15 @@ class _CounterPage extends State<CounterPage> {
                       context,
                       t.generic.error,
                       t.tools.counter.error.the_number_must_be_between_x_and_y(minNumberLimit: minNumberInButton, maxNumberLimit: maxNumberInButton),
+                  );
+                  return;
+                }
+                if (buttonIncrements.contains(int.parse(controller.text))) {
+                  Navigator.of(context).pop();
+                  showOkTextDialog(
+                      context,
+                      t.generic.error,
+                      t.tools.counter.error.this_button_already_exists,
                   );
                   return;
                 }
