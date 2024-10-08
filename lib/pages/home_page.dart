@@ -4,14 +4,16 @@ import 'package:toolbox/core/shared_preferences.dart';
 import 'package:toolbox/gen/strings.g.dart';
 import 'package:toolbox/hierarchy.dart';
 import 'package:toolbox/models/home_folder.dart';
+import 'package:toolbox/models/home_tool.dart';
 import 'package:toolbox/pages/credits_page.dart';
 import 'package:toolbox/widgets/home_tilecard.dart';
 
 
 class HomePage extends StatefulWidget {
   final List<dynamic> content;
+  final bool isFavoriteFolderShown;
 
-  const HomePage({ super.key, required this.content });
+  const HomePage({ super.key, required this.content, this.isFavoriteFolderShown = false });
   @override
   State<HomePage> createState() => _HomePage();
 }
@@ -19,12 +21,14 @@ class HomePage extends StatefulWidget {
 class _HomePage extends State<HomePage> {
   List<dynamic> hierarchy = [];
   List<dynamic> hierarchyFiltered = [];
+  List<String> favoriteTools = [];
 
   @override
   void initState() {
     super.initState();
     initTools();
     sortTools();
+    refreshFavoritesInContent();
     hierarchyFiltered = hierarchy;
   }
 
@@ -33,7 +37,7 @@ class _HomePage extends State<HomePage> {
   }
 
   void sortTools() {
-    hierarchy.sort((a, b) => a.name.toLowerCase().compareTo(b.name.toLowerCase()));
+    widget.content.sort((a, b) => a.name.toLowerCase().compareTo(b.name.toLowerCase()));
   }
 
   void filterSearchResults(String query) {
@@ -61,6 +65,69 @@ class _HomePage extends State<HomePage> {
     return widget.content.toSet().containsAll(Hierarchy.hierarchy);
   }
 
+  void showFavoriteDialog(Tool tool) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text(tool.name),
+          content: Text(favoriteTools.contains(Hierarchy.findToolIdByInstance(tool))
+                ? t.homepage.would_you_like_to_remove_this_tool_from_favorites
+                : t.homepage.would_you_like_to_add_this_tool_to_favorites),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text(t.generic.no),
+            ),
+            TextButton(
+              onPressed: () async {
+                String key = Hierarchy.findToolIdByInstance(tool);
+                !favoriteTools.contains(key)
+                    ? await Hierarchy.addFavoriteTool(key)
+                    : await Hierarchy.removeFavoriteTool(key);
+                if (mounted) {
+                  Navigator.pop(this.context);
+                }
+                refreshFavoritesInContent();
+              },
+              child: Text(t.generic.yes),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  Future<void> refreshFavoritesInContent() async {
+    favoriteTools = await Hierarchy.getFavoriteTools();
+    if (isFolderView()) {
+      List<Tool> favoriteToolsObjects = favoriteTools.map((toolId) => Hierarchy.toolMap[toolId]).toList().whereType<Tool>().toList();
+      widget.content.removeWhere((element) => element.runtimeType == Folder && (element as Folder).isFavoriteFolder);
+      if (favoriteToolsObjects.isNotEmpty) {
+        favoriteToolsObjects.sort((a, b) => a.name.toLowerCase().compareTo(b.name.toLowerCase()));
+        widget.content.insert(0, Folder(t.homepage.favorites, "assets/images/folders/folder.png", favoriteToolsObjects, isFavoriteFolder: true));
+      } else {
+        widget.content.removeWhere((element) => element.runtimeType == Folder && (element as Folder).isFavoriteFolder);
+      }
+    } else {
+      List<Tool> favoriteToolsObjects = favoriteTools.map((toolId) => Hierarchy.toolMap[toolId]).toList().whereType<Tool>().toList();
+      if (widget.isFavoriteFolderShown) {
+        widget.content.clear();
+      } else {
+        favoriteToolsObjects.removeWhere((element) => !widget.content.contains(element));
+      }
+      favoriteToolsObjects.sort((a, b) => a.name.toLowerCase().compareTo(b.name.toLowerCase()));
+      sortTools();
+      widget.content.removeWhere((element) => favoriteToolsObjects.contains(element));
+      widget.content.insertAll(0, favoriteToolsObjects);
+    }
+    if (mounted) {
+      setState(() {});
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -78,8 +145,9 @@ class _HomePage extends State<HomePage> {
                     context,
                     PageRouteBuilder(
                       pageBuilder: (context, animation1, animation2) =>
-                          HomePage(content: isFolderView() ? Hierarchy
-                              .getFlatHierarchy() : Hierarchy.hierarchy),
+                          HomePage(content: isFolderView()
+                              ? Hierarchy.getFlatHierarchy()
+                              : Hierarchy.hierarchy),
                     ),
                   );
                   SharedPreferences prefs = await SharedPreferences.getInstance();
@@ -139,14 +207,24 @@ class _HomePage extends State<HomePage> {
                           return TileCard(
                               title: hierarchyFiltered[index].name,
                               imageAssetPath: hierarchyFiltered[index].image,
-                              onTap: () {
-                                Navigator.push(
+                              isFavorite: isFolderView() ? false : favoriteTools.contains(
+                                  Hierarchy.toolMap.entries
+                                      .firstWhere((entry) => entry.value == hierarchyFiltered[index])
+                                      .key),
+                              onTap: () async {
+                                await Navigator.push(
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) =>
                                       hierarchyFiltered[index].page
                                   ),
                                 );
+                                refreshFavoritesInContent();
+                              },
+                              onLongPress: () {
+                                if (hierarchyFiltered[index].runtimeType == Tool) {
+                                  showFavoriteDialog(hierarchyFiltered[index]);
+                                }
                               }
                           );
                         },

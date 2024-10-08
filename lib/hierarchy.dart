@@ -1,3 +1,5 @@
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:toolbox/core/shared_preferences.dart';
 import 'package:toolbox/models/home_folder.dart';
 import 'package:toolbox/pages/clock_page.dart';
 import 'package:toolbox/pages/counter_page.dart';
@@ -121,7 +123,6 @@ class Hierarchy {
     ]),
   ];
 
-
   static List<Tool> getFlatHierarchy() {
     List<Tool> uniqueItems = [];
     Set<String> uniqueNames = {};
@@ -143,5 +144,37 @@ class Hierarchy {
       }
     }
     return uniqueItems;
+  }
+
+  static String findToolIdByInstance(Tool tool) {
+    return Hierarchy.toolMap.entries
+        .firstWhere((entry) => entry.value == tool)
+        .key;
+  }
+
+  static Future<List<String>> getFavoriteTools() async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    return prefs.getStringList(SHARED_PREFERENCES_CORE_HOMEPAGE_FAVORITES) ?? [];
+  }
+
+  static Future<void> setFavoriteTools(List<String> favoriteTools) async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setStringList(SHARED_PREFERENCES_CORE_HOMEPAGE_FAVORITES, favoriteTools);
+  }
+
+  static Future<void> addFavoriteTool(String toolId) async {
+    List<String> favoriteTools = await getFavoriteTools();
+    if (!favoriteTools.contains(toolId)) {
+      favoriteTools.add(toolId);
+      await setFavoriteTools(favoriteTools);
+    }
+  }
+
+  static Future<void> removeFavoriteTool(String toolId) async {
+    List<String> favoriteTools = await getFavoriteTools();
+    if (favoriteTools.contains(toolId)) {
+      favoriteTools.remove(toolId);
+      await setFavoriteTools(favoriteTools);
+    }
   }
 }
