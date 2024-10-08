@@ -113,7 +113,11 @@ class _HomePage extends State<HomePage> {
       }
     } else {
       List<Tool> favoriteToolsObjects = favoriteTools.map((toolId) => Hierarchy.toolMap[toolId]).toList().whereType<Tool>().toList();
-      favoriteToolsObjects.removeWhere((element) => !widget.content.contains(element));
+      if (widget.isFavoriteFolderShown) {
+        widget.content.clear();
+      } else {
+        favoriteToolsObjects.removeWhere((element) => !widget.content.contains(element));
+      }
       favoriteToolsObjects.sort((a, b) => a.name.toLowerCase().compareTo(b.name.toLowerCase()));
       sortTools();
       widget.content.removeWhere((element) => favoriteToolsObjects.contains(element));
@@ -141,8 +145,9 @@ class _HomePage extends State<HomePage> {
                     context,
                     PageRouteBuilder(
                       pageBuilder: (context, animation1, animation2) =>
-                          HomePage(content: isFolderView() ? Hierarchy
-                              .getFlatHierarchy() : Hierarchy.hierarchy),
+                          HomePage(content: isFolderView()
+                              ? Hierarchy.getFlatHierarchy()
+                              : Hierarchy.hierarchy),
                     ),
                   );
                   SharedPreferences prefs = await SharedPreferences.getInstance();
@@ -206,15 +211,15 @@ class _HomePage extends State<HomePage> {
                                   Hierarchy.toolMap.entries
                                       .firstWhere((entry) => entry.value == hierarchyFiltered[index])
                                       .key),
-                              onTap: () {
-                                refreshFavoritesInContent();
-                                Navigator.push(
+                              onTap: () async {
+                                await Navigator.push(
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) =>
                                       hierarchyFiltered[index].page
                                   ),
                                 );
+                                refreshFavoritesInContent();
                               },
                               onLongPress: () {
                                 if (hierarchyFiltered[index].runtimeType == Tool) {
