@@ -416,7 +416,8 @@
       "error": {
         "invalid_number": "The number you entered is invalid",
         "the_number_must_be_between_x_and_y": "The number must be between $minNumberLimit and $maxNumberLimit",
-        "you_must_have_at_least_one_button": "You must have at least one button"
+        "you_must_have_at_least_one_button": "You must have at least one button",
+        "this_button_already_exists": "This button already exists"
       }
     }
   },

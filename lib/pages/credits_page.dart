@@ -1,10 +1,7 @@
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:toolbox/core/url.dart';
 import 'package:toolbox/gen/strings.g.dart';
-import 'package:url_launcher/url_launcher.dart';
-import 'package:yaru/yaru.dart';
 
 class CreditsPage extends StatefulWidget {
   const CreditsPage({ super.key });

@@ -124,7 +124,7 @@ class _NearbyPublicTransportStopsPage extends State<NearbyPublicTransportStopsPa
     }
   }
 
-  Future<void> openMaps(double lat, double lon) async {
+  Future<void> openMaps(String stopName, double lat, double lon) async {
     final availableMaps = await MapLauncher.installedMaps;
     if (availableMaps.isEmpty) {
       if (mounted) {
@@ -138,7 +138,7 @@ class _NearbyPublicTransportStopsPage extends State<NearbyPublicTransportStopsPa
     }
     await availableMaps.first.showMarker(
       coords: Coords(lat, lon),
-      title: t.tools.nearbypublictransportstops.map_marker_title,
+      title: stopName,
     );
   }
 
@@ -475,7 +475,10 @@ class _NearbyPublicTransportStopsPage extends State<NearbyPublicTransportStopsPa
                 child: Text(t.tools.nearbypublictransportstops.show_on_map),
                 onPressed: () {
                   openMaps(
-                      station.coordinate?.x ?? 0, station.coordinate?.y ?? 0
+                      station.name
+                          ?? t.tools.nearbypublictransportstops.map_marker_title,
+                      station.coordinate?.x ?? 0,
+                      station.coordinate?.y ?? 0
                   );
                 },
               ),
