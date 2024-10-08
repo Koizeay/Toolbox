@@ -223,7 +223,7 @@ class _HomePage extends State<HomePage> {
                           return TileCard(
                               title: hierarchyFiltered[index].name,
                               imageAssetPath: hierarchyFiltered[index].image,
-                              isFavorite: isFolderView() ? false : favoriteTools.contains(
+                              isFavorite: (isFolderView() && searchQuery.isEmpty) ? false : favoriteTools.contains(
                                   Hierarchy.toolMap.entries
                                       .firstWhere((entry) => entry.value == hierarchyFiltered[index])
                                       .key),
