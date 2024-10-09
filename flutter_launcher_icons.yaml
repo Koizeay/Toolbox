@@ -9,4 +9,6 @@ flutter_launcher_icons:
   adaptive_icon_monochrome: "assets/images/icons/icon_mono.png"
   ios: true
   image_path_ios: "assets/images/icons/icon.png"
+  image_path_ios_dark_transparent: "assets/images/icons/icon_fore.png"
+  image_path_ios_tinted_grayscale: "assets/images/icons/icon_tinted.png"
   remove_alpha_ios: true
