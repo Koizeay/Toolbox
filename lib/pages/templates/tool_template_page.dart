@@ -1,10 +1,11 @@
-// Note: This is a template for creating new tools
+// TODO Remove this comment - Note: This is a template for creating new tools
 
 import 'package:flutter/material.dart';
 import 'package:toolbox/gen/strings.g.dart';
 
 class ToolTemplate extends StatefulWidget {
-  const ToolTemplate({ super.key });
+  const ToolTemplate({super.key});
+
   @override
   State<ToolTemplate> createState() => _ToolTemplate();
 }
@@ -30,14 +31,14 @@ class _ToolTemplate extends State<ToolTemplate> {
       },
       child: Scaffold(
           appBar: AppBar(
-            // TODO: Replace this with the app name + tool's name
+            // TODO: Replace this with the translated tool name
             title: const Text("REPLACE THIS WITH THE TRANSLATED TOOL NAME"),
           ),
           body: SafeArea(
-            // TODO: Replace this with the tool's page content
-            child: Container(),
-          )
-      ),
+            child: SingleChildScrollView(
+                // TODO: Replace this with the tool's page content
+                child: Container()),
+          )),
     );
   }
 }
