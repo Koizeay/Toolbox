@@ -51,9 +51,33 @@ You can write your code as you want but please respect these rules:
 - Please use the `PascalCase` notation for the classes.
 - Please use the `snake_case` notation for the files.
 - Please use the `FilledButton` widget for the buttons.
+- Please always use a `OutlineInputBorder` for the text fields border.
 - Please keep the `SafeArea` widget in the pages.
+- Please keep the `SingleChildScrollView` widget in the pages to avoid overflow.
+- Please keep the `GestureDetector` widget as the root of the pages if there is at least one text field in the page.
+- Please do not add more than 3 actions in the `AppBar`.
+- Please do not add actions in the `AppBar` if there are not `IconButton`.
+- Please always add a tooltip to the `IconButton` in the `AppBar`.
+- Please do not import the `flutter/cupertino.dart` file.
+- Please always use localized strings (see the "Translate the app" section).
+- If you want to use an API or resources hosted on the internet
+  - Please add a fallback in case the user doesn't have an internet connection.
+  - Please add an action button in the `AppBar` opening an `AlertDialog` showing the data sources and licenses.
+    - Please use the `Icons.copyright` icon for the action button.
+- Please never change the key of a tool in the `hierarchy.dart` file.
+- Please avoid using `SnackBar` and `BottomSheet`, prefer using `AlertDialog`.
 - Please respect the naming of the shared preferences keys (can be found in `lib/core/shared_preferences.dart`).
-- Please don't change the color of the app widgets, a theme is already defined.
+  - Please never rename a key.
+- Please use the files in the `lib/core` folder to do some actions, you can add new files or functions if needed.
+  - Please use the `lib/core/dialogs.dart` file to create dialogs.
+    - You can still use the `showDialog` function if you need to create a custom dialog.
+  - Please use the `lib/core/http_requests.dart` file to make HTTP requests.
+  - Please use the `lib/core/online_file`file to download files or get its content from the internet.
+  - Please use the `lib/core/shared_preferences.dart` file to define the shared preferences keys.
+  - Please use the `lib/core/url.dart` file to open URLs outside the app or check if an URL is valid.
+- Please avoid using custom fonts, prefer using the default ones.
+- Please do not use custom colors, a theme is already defined.
+- Please do not use custom icons, you can use the `Icons` class.
 - Please respect the assets structure.
 - **Have fun**.
 
