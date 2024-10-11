@@ -91,7 +91,12 @@
       "copied_to_clipboard": "Copié dans le presse-papiers",
       "wifi": "WiFi",
       "wifi_ssid": "SSID",
-      "wifi_password": "Mot de passe"
+      "wifi_password": "Mot de passe",
+      "scan_from_image": "Scanner à partir d'une image",
+      "error": {
+        "no_qr_code_found": "Aucun QR code trouvé",
+        "no_qr_code_found_description": "Aucun QR code n'a été trouvé dans l'image. Veuillez réessayer avec une autre image."
+      }
     },
     "timer": {
       "title": "Minuteur",

@@ -1,6 +1,9 @@
 
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 import 'package:toolbox/core/dialogs.dart';
 import 'package:toolbox/core/url.dart';
@@ -46,6 +49,41 @@ class _QrReaderPage extends State<QrReaderPage> {
         }));
   }
 
+  void scanFromImageFile() async {
+    setState(() {
+      _controller.stop();
+    });
+    final image = await ImagePicker().pickImage(source: ImageSource.gallery);
+    if (image != null) {
+      final barcodeCapture = await getBarcodeCaptureFromImageFile(image.path);
+      if (barcodeCapture != null) {
+        onScanned(barcodeCapture);
+      } else {
+        if (mounted) {
+          showCustomActionOkTextDialog(
+            context,
+            t.tools.qrreader.error.no_qr_code_found,
+            t.tools.qrreader.error.no_qr_code_found_description,
+            () {
+                setState(() {
+                  _controller.start();
+                });
+              },
+            barrierDismissible: false,
+          );
+        }
+      }
+    } else {
+      setState(() {
+        _controller.start();
+      });
+    }
+  }
+
+  Future<BarcodeCapture?> getBarcodeCaptureFromImageFile(String imageFilePath) async {
+    return await MobileScannerPlatform.instance.analyzeImage(imageFilePath);
+  }
+
   void onScanned(BarcodeCapture capture) {
     if (capture.barcodes.first.format == BarcodeFormat.qrCode) {
       _controller.stop();
@@ -69,7 +107,7 @@ class _QrReaderPage extends State<QrReaderPage> {
             ),
           ];
           showCustomButtonsTextDialog(context, t.tools.qrreader.scanned,
-              capture.barcodes.first.rawValue ?? "", buttons);
+              capture.barcodes.first.rawValue ?? "", buttons, barrierDismissible: false);
           break;
         case BarcodeType.wifi:
           var ssid = capture.barcodes.first.wifi?.ssid ?? "";
@@ -78,10 +116,12 @@ class _QrReaderPage extends State<QrReaderPage> {
             TextButton(
                 onPressed: () {
                   Clipboard.setData(ClipboardData(text: password)).then((value) {
-                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                      content: Text(t.tools.qrreader.copied_to_clipboard),
-                      duration: const Duration(seconds: 2),
-                    ));
+                    if (mounted) {
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                        content: Text(t.tools.qrreader.copied_to_clipboard),
+                        duration: const Duration(seconds: 2),
+                      ));
+                    }
                   });
                 },
                 child: Text(t.tools.qrreader.copy_password)
@@ -115,6 +155,15 @@ class _QrReaderPage extends State<QrReaderPage> {
     return Scaffold(
         appBar: AppBar(
           title: Text(t.tools.qrreader.title),
+          actions: [
+            IconButton(
+              onPressed: () {
+                scanFromImageFile();
+              },
+              icon: const Icon(Icons.image_search),
+              tooltip: t.tools.qrreader.scan_from_image,
+            ),
+          ],
         ),
         body: SafeArea(
           child: SingleChildScrollView(

@@ -91,7 +91,12 @@
       "copied_to_clipboard": "Copied to clipboard",
       "wifi": "WiFi",
       "wifi_ssid": "SSID",
-      "wifi_password": "Password"
+      "wifi_password": "Password",
+      "scan_from_image": "Scan from image",
+      "error": {
+        "no_qr_code_found": "No QR code found",
+        "no_qr_code_found_description": "No QR code found in the image.\nPlease try again with another image."
+      }
     },
     "timer": {
       "title": "Timer",
