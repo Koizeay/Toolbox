@@ -419,6 +419,18 @@
         "you_must_have_at_least_one_button": "You must have at least one button",
         "this_button_already_exists": "This button already exists"
       }
+    },
+    "bitwisecalculator": {
+      "title": "Bitwise calculator",
+      "first_number": "First number",
+      "second_number": "Second number",
+      "enter_a_binary_number": "Enter a binary number",
+      "and": "AND",
+      "or": "OR",
+      "xor": "XOR",
+      "error": {
+        "invalid_input": "Invalid input"
+      }
     }
   },
   "credits": {

@@ -419,6 +419,18 @@
         "you_must_have_at_least_one_button": "Vous devez avoir au moins un bouton",
         "this_button_already_exists": "Ce bouton existe déjà"
       }
+    },
+    "bitwisecalculator": {
+      "title": "Calculatrice binaire",
+      "first_number": "Premier nombre",
+      "second_number": "Deuxième nombre",
+      "enter_a_binary_number": "Entrez un nombre binaire",
+      "and": "ET",
+      "or": "OU",
+      "xor": "OU exclusif",
+      "error": {
+        "invalid_input": "Saisie invalide"
+      }
     }
   },
   "credits": {

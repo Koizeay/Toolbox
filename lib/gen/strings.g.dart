@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 624 (312 per locale)
+/// Strings: 654 (327 per locale)
 ///
-/// Built on 2024-10-08 at 11:44 UTC
+/// Built on 2024-10-11 at 13:43 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -245,6 +245,7 @@ class _StringsToolsEn {
 	late final _StringsToolsTimestampconverterEn timestampconverter = _StringsToolsTimestampconverterEn._(_root);
 	late final _StringsToolsUrlshortenerEn urlshortener = _StringsToolsUrlshortenerEn._(_root);
 	late final _StringsToolsCounterEn counter = _StringsToolsCounterEn._(_root);
+	late final _StringsToolsBitwisecalculatorEn bitwisecalculator = _StringsToolsBitwisecalculatorEn._(_root);
 }
 
 // Path: credits
@@ -786,6 +787,23 @@ class _StringsToolsCounterEn {
 	late final _StringsToolsCounterErrorEn error = _StringsToolsCounterErrorEn._(_root);
 }
 
+// Path: tools.bitwisecalculator
+class _StringsToolsBitwisecalculatorEn {
+	_StringsToolsBitwisecalculatorEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'Bitwise calculator';
+	String get first_number => 'First number';
+	String get second_number => 'Second number';
+	String get enter_a_binary_number => 'Enter a binary number';
+	String get and => 'AND';
+	String get or => 'OR';
+	String get xor => 'XOR';
+	late final _StringsToolsBitwisecalculatorErrorEn error = _StringsToolsBitwisecalculatorErrorEn._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsEn._(this._root);
@@ -1049,6 +1067,16 @@ class _StringsToolsCounterErrorEn {
 	String get this_button_already_exists => 'This button already exists';
 }
 
+// Path: tools.bitwisecalculator.error
+class _StringsToolsBitwisecalculatorErrorEn {
+	_StringsToolsBitwisecalculatorErrorEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get invalid_input => 'Invalid input';
+}
+
 // Path: <root>
 class _StringsFr implements Translations {
 	/// You can call this constructor and build your own translation instance of this locale.
@@ -1170,6 +1198,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsTimestampconverterFr timestampconverter = _StringsToolsTimestampconverterFr._(_root);
 	@override late final _StringsToolsUrlshortenerFr urlshortener = _StringsToolsUrlshortenerFr._(_root);
 	@override late final _StringsToolsCounterFr counter = _StringsToolsCounterFr._(_root);
+	@override late final _StringsToolsBitwisecalculatorFr bitwisecalculator = _StringsToolsBitwisecalculatorFr._(_root);
 }
 
 // Path: credits
@@ -1711,6 +1740,23 @@ class _StringsToolsCounterFr implements _StringsToolsCounterEn {
 	@override late final _StringsToolsCounterErrorFr error = _StringsToolsCounterErrorFr._(_root);
 }
 
+// Path: tools.bitwisecalculator
+class _StringsToolsBitwisecalculatorFr implements _StringsToolsBitwisecalculatorEn {
+	_StringsToolsBitwisecalculatorFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Calculatrice binaire';
+	@override String get first_number => 'Premier nombre';
+	@override String get second_number => 'Deuxième nombre';
+	@override String get enter_a_binary_number => 'Entrez un nombre binaire';
+	@override String get and => 'ET';
+	@override String get or => 'OU';
+	@override String get xor => 'OU exclusif';
+	@override late final _StringsToolsBitwisecalculatorErrorFr error = _StringsToolsBitwisecalculatorErrorFr._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsFr implements _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsFr._(this._root);
@@ -1972,6 +2018,16 @@ class _StringsToolsCounterErrorFr implements _StringsToolsCounterErrorEn {
 	@override String the_number_must_be_between_x_and_y({required Object minNumberLimit, required Object maxNumberLimit}) => 'Le nombre doit être compris entre ${minNumberLimit} et ${maxNumberLimit}';
 	@override String get you_must_have_at_least_one_button => 'Vous devez avoir au moins un bouton';
 	@override String get this_button_already_exists => 'Ce bouton existe déjà';
+}
+
+// Path: tools.bitwisecalculator.error
+class _StringsToolsBitwisecalculatorErrorFr implements _StringsToolsBitwisecalculatorErrorEn {
+	_StringsToolsBitwisecalculatorErrorFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get invalid_input => 'Saisie invalide';
 }
 
 /// Flat map(s) containing all translations.
@@ -2290,6 +2346,14 @@ extension on Translations {
 			case 'tools.counter.error.the_number_must_be_between_x_and_y': return ({required Object minNumberLimit, required Object maxNumberLimit}) => 'The number must be between ${minNumberLimit} and ${maxNumberLimit}';
 			case 'tools.counter.error.you_must_have_at_least_one_button': return 'You must have at least one button';
 			case 'tools.counter.error.this_button_already_exists': return 'This button already exists';
+			case 'tools.bitwisecalculator.title': return 'Bitwise calculator';
+			case 'tools.bitwisecalculator.first_number': return 'First number';
+			case 'tools.bitwisecalculator.second_number': return 'Second number';
+			case 'tools.bitwisecalculator.enter_a_binary_number': return 'Enter a binary number';
+			case 'tools.bitwisecalculator.and': return 'AND';
+			case 'tools.bitwisecalculator.or': return 'OR';
+			case 'tools.bitwisecalculator.xor': return 'XOR';
+			case 'tools.bitwisecalculator.error.invalid_input': return 'Invalid input';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -2617,6 +2681,14 @@ extension on _StringsFr {
 			case 'tools.counter.error.the_number_must_be_between_x_and_y': return ({required Object minNumberLimit, required Object maxNumberLimit}) => 'Le nombre doit être compris entre ${minNumberLimit} et ${maxNumberLimit}';
 			case 'tools.counter.error.you_must_have_at_least_one_button': return 'Vous devez avoir au moins un bouton';
 			case 'tools.counter.error.this_button_already_exists': return 'Ce bouton existe déjà';
+			case 'tools.bitwisecalculator.title': return 'Calculatrice binaire';
+			case 'tools.bitwisecalculator.first_number': return 'Premier nombre';
+			case 'tools.bitwisecalculator.second_number': return 'Deuxième nombre';
+			case 'tools.bitwisecalculator.enter_a_binary_number': return 'Entrez un nombre binaire';
+			case 'tools.bitwisecalculator.and': return 'ET';
+			case 'tools.bitwisecalculator.or': return 'OU';
+			case 'tools.bitwisecalculator.xor': return 'OU exclusif';
+			case 'tools.bitwisecalculator.error.invalid_input': return 'Saisie invalide';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';

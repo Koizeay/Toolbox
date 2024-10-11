@@ -1,6 +1,7 @@
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:toolbox/core/shared_preferences.dart';
 import 'package:toolbox/models/home_folder.dart';
+import 'package:toolbox/pages/bitwisecalculator_page.dart';
 import 'package:toolbox/pages/clock_page.dart';
 import 'package:toolbox/pages/counter_page.dart';
 import 'package:toolbox/pages/fileencryption_page.dart';
@@ -38,6 +39,7 @@ import 'package:toolbox/gen/strings.g.dart';
 
 class Hierarchy {
   static final Map<String, Tool> toolMap = {
+    "bitwisecalculator": Tool(t.tools.bitwisecalculator.title, "assets/images/tools/bitwisecalculator.png", const BitwiseCalculatorPage()),
     "clock": Tool(t.tools.clock.title, "assets/images/tools/clock.png", const ClockPage()),
     "counter": Tool(t.tools.counter.title, "assets/images/tools/counter.png", const CounterPage()),
     "fileencryption": Tool(t.tools.fileencryption.title, "assets/images/tools/fileencryption.png", const FileEncryptionPage()),
@@ -90,6 +92,7 @@ class Hierarchy {
       toolMap["speedometer"],
     ]),
     Folder(t.folders.miscellaneous, "assets/images/folders/folder.png", [
+      toolMap["bitwisecalculator"],
       toolMap["counter"],
       toolMap["fileencryption"],
       toolMap["qrreader"],
