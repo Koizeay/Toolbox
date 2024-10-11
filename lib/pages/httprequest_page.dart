@@ -288,19 +288,23 @@ class _HttpRequestPage extends State<HttpRequestPage> {
                     children: <Widget>[
                       Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: DropdownButton<String>(
-                            items: methods.map((String value) {
-                              return DropdownMenuItem<String>(
+                          child: DropdownMenu<String>(
+                            dropdownMenuEntries: methods.map((String value) {
+                              return DropdownMenuEntry<String>(
                                 value: value,
-                                child: Text(value),
+                                label: value,
                               );
                             }).toList(),
-                            value: _method,
-                            onChanged: (_) {
+                            onSelected: (String? value) {
                               setState(() {
-                                _method = _ ?? "GET";
+                                _method = value ?? _method;
                               });
                             },
+                            label: Text(t.tools.httprequest.method),
+                            width: double.infinity,
+                            initialSelection: _method,
+                            enableSearch: false,
+                            enableFilter: false,
                           )
                       ),
                       _method == "..." ? Padding(
@@ -309,7 +313,7 @@ class _HttpRequestPage extends State<HttpRequestPage> {
                           controller: methodController,
                           decoration: InputDecoration(
                             border: const OutlineInputBorder(),
-                            labelText: t.tools.httprequest.method,
+                            labelText: t.tools.httprequest.custom_method,
                           ),
                         ),
                       ) : Container(),

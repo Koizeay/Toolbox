@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 660 (330 per locale)
+/// Strings: 662 (331 per locale)
 ///
-/// Built on 2024-10-11 at 18:17 UTC
+/// Built on 2024-10-11 at 19:24 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -626,6 +626,7 @@ class _StringsToolsHttprequestEn {
 	// Translations
 	String get title => 'HTTP request';
 	String get method => 'Method';
+	String get custom_method => 'Custom method';
 	String get url => 'URL';
 	String get headers => 'Headers';
 	String get body => 'Body';
@@ -1592,6 +1593,7 @@ class _StringsToolsHttprequestFr implements _StringsToolsHttprequestEn {
 	// Translations
 	@override String get title => 'Requête HTTP';
 	@override String get method => 'Méthode';
+	@override String get custom_method => 'Méthode personnalisée';
 	@override String get url => 'URL';
 	@override String get headers => 'En-têtes (headers)';
 	@override String get body => 'Corps (body)';
@@ -2270,6 +2272,7 @@ extension on Translations {
 			case 'tools.nationalanthems.error.failed_to_play_anthem': return 'Impossible to play the anthem. Please check your internet connection and try again.';
 			case 'tools.httprequest.title': return 'HTTP request';
 			case 'tools.httprequest.method': return 'Method';
+			case 'tools.httprequest.custom_method': return 'Custom method';
 			case 'tools.httprequest.url': return 'URL';
 			case 'tools.httprequest.headers': return 'Headers';
 			case 'tools.httprequest.body': return 'Body';
@@ -2608,6 +2611,7 @@ extension on _StringsFr {
 			case 'tools.nationalanthems.error.failed_to_play_anthem': return 'Impossible de jouer l\'hymne. Veuillez vérifier votre connexion internet et réessayer.';
 			case 'tools.httprequest.title': return 'Requête HTTP';
 			case 'tools.httprequest.method': return 'Méthode';
+			case 'tools.httprequest.custom_method': return 'Méthode personnalisée';
 			case 'tools.httprequest.url': return 'URL';
 			case 'tools.httprequest.headers': return 'En-têtes (headers)';
 			case 'tools.httprequest.body': return 'Corps (body)';

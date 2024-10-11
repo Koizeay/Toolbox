@@ -287,6 +287,7 @@
     "httprequest": {
       "title": "HTTP request",
       "method": "Method",
+      "custom_method": "Custom method",
       "url": "URL",
       "headers": "Headers",
       "body": "Body",
