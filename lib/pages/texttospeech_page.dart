@@ -20,7 +20,7 @@ class _TextToSpeechPage extends State<TextToSpeechPage> {
   FlutterTts flutterTts = FlutterTts();
   bool isPlaying = false;
   String? currentLanguage;
-  List<DropdownMenuItem<dynamic>> languages = [];
+  List<DropdownMenuEntry<dynamic>> languages = [];
   double currentPitch = 1.0;
   double currentSpeechRate = 0.5;
 
@@ -53,17 +53,17 @@ class _TextToSpeechPage extends State<TextToSpeechPage> {
 
   Future<void> initLanguages() async {
     List<dynamic> tempLanguages = await flutterTts.getLanguages;
-    languages.add(DropdownMenuItem(
+    languages.add(DropdownMenuEntry(
       value: defaultLanguageString,
-      child: Text(defaultLanguageString),
+      label: defaultLanguageString,
     ));
     for (var element in tempLanguages) {
-      languages.add(DropdownMenuItem(
+      languages.add(DropdownMenuEntry(
         value: element,
-        child: Text(element),
+        label: element,
       ));
     }
-    languages.sort((a, b) => a.child.toString().compareTo(b.child.toString()));
+    languages.sort((a, b) => a.label.toString().compareTo(b.label.toString()));
     currentLanguage = languages[0].value;
   }
 
@@ -211,12 +211,16 @@ class _TextToSpeechPage extends State<TextToSpeechPage> {
                     ),
                     const SizedBox(height: 8,),
                     SizedBox(
-                      child: DropdownButton(
-                        value: currentLanguage,
-                        items: languages,
-                        onChanged: (value) {
+                      child: DropdownMenu(
+                        initialSelection: currentLanguage,
+                        dropdownMenuEntries: languages,
+                        width: double.infinity,
+                        enableFilter: false,
+                        enableSearch: false,
+                        menuHeight: 300,
+                        onSelected: (value) {
                           loading = true;
-                          changeLanguage(value.toString()).then((value) =>
+                          changeLanguage((value ?? "").toString()).then((value) =>
                           loading = false);
                         },
                       ),
