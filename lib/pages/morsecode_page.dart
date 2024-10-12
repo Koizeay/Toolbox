@@ -150,9 +150,7 @@ class _MorseCodePage extends State<MorseCodePage> {
                       readOnly: _isMorsePlayingAudio,
                       decoration: InputDecoration(
                         labelText: t.tools.morsecode.alphabet_field,
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
+                        border: const OutlineInputBorder(),
                       ),
                     ),
                     const SizedBox(height: 10),
@@ -164,9 +162,7 @@ class _MorseCodePage extends State<MorseCodePage> {
                       decoration: InputDecoration(
                         labelText: t.tools.morsecode.morse_field,
                         hintText: "",
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
+                        border: const OutlineInputBorder(),
                       ),
                     ),
                     Text(
