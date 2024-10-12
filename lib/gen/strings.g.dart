@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 662 (331 per locale)
+/// Strings: 698 (349 per locale)
 ///
-/// Built on 2024-10-11 at 19:24 UTC
+/// Built on 2024-10-12 at 18:08 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -246,6 +246,7 @@ class _StringsToolsEn {
 	late final _StringsToolsUrlshortenerEn urlshortener = _StringsToolsUrlshortenerEn._(_root);
 	late final _StringsToolsCounterEn counter = _StringsToolsCounterEn._(_root);
 	late final _StringsToolsBitwisecalculatorEn bitwisecalculator = _StringsToolsBitwisecalculatorEn._(_root);
+	late final _StringsToolsMusicsearchEn musicsearch = _StringsToolsMusicsearchEn._(_root);
 }
 
 // Path: credits
@@ -807,6 +808,32 @@ class _StringsToolsBitwisecalculatorEn {
 	late final _StringsToolsBitwisecalculatorErrorEn error = _StringsToolsBitwisecalculatorErrorEn._(_root);
 }
 
+// Path: tools.musicsearch
+class _StringsToolsMusicsearchEn {
+	_StringsToolsMusicsearchEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'Music search';
+	String get unknown_title => 'Unknown title';
+	String get unknown_artist => 'Unknown artist';
+	String get unknown_album => 'Unknown album';
+	String get loading => 'Loading';
+	String get loading_audio_preview => 'Loading audio preview...';
+	String get stop_audio_preview => 'Stop audio preview';
+	String get data_source => 'Data source';
+	String this_tool_uses_the_x_api({required Object service}) => 'This tool uses the "${service}" API to search for music.\nThe audio previews are provided by "${service}".';
+	String go_to_x({required Object service}) => 'Go to ${service}';
+	String get search_for_music => 'Search for music';
+	String get use_the_searchbar_to_search_music => 'Use the search bar to find music.\nIf your search returns no results, try a different search term.';
+	String get artist => 'Artist';
+	String get album => 'Album';
+	String open_in_x({required Object service}) => 'Open in ${service}';
+	String get play_preview => 'Play preview';
+	late final _StringsToolsMusicsearchErrorEn error = _StringsToolsMusicsearchErrorEn._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsEn._(this._root);
@@ -1091,6 +1118,17 @@ class _StringsToolsBitwisecalculatorErrorEn {
 	String get invalid_input => 'Invalid input';
 }
 
+// Path: tools.musicsearch.error
+class _StringsToolsMusicsearchErrorEn {
+	_StringsToolsMusicsearchErrorEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get error_playing_audio_preview => 'Error playing audio preview. Please try again later.';
+	String get unable_to_connect_to_the_api => 'Unable to connect to the API, please check your internet connection and try again.';
+}
+
 // Path: <root>
 class _StringsFr implements Translations {
 	/// You can call this constructor and build your own translation instance of this locale.
@@ -1213,6 +1251,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsUrlshortenerFr urlshortener = _StringsToolsUrlshortenerFr._(_root);
 	@override late final _StringsToolsCounterFr counter = _StringsToolsCounterFr._(_root);
 	@override late final _StringsToolsBitwisecalculatorFr bitwisecalculator = _StringsToolsBitwisecalculatorFr._(_root);
+	@override late final _StringsToolsMusicsearchFr musicsearch = _StringsToolsMusicsearchFr._(_root);
 }
 
 // Path: credits
@@ -1774,6 +1813,32 @@ class _StringsToolsBitwisecalculatorFr implements _StringsToolsBitwisecalculator
 	@override late final _StringsToolsBitwisecalculatorErrorFr error = _StringsToolsBitwisecalculatorErrorFr._(_root);
 }
 
+// Path: tools.musicsearch
+class _StringsToolsMusicsearchFr implements _StringsToolsMusicsearchEn {
+	_StringsToolsMusicsearchFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Recherche de musique';
+	@override String get unknown_title => 'Titre inconnu';
+	@override String get unknown_artist => 'Artiste inconnu';
+	@override String get unknown_album => 'Album inconnu';
+	@override String get loading => 'Chargement';
+	@override String get loading_audio_preview => 'Chargement de l\'échantillon audio...';
+	@override String get stop_audio_preview => 'Arrêter l\'échantillon audio';
+	@override String get data_source => 'Source des données';
+	@override String this_tool_uses_the_x_api({required Object service}) => 'Cet outil utilise l\'API "${service}" pour rechercher de la musique.\nLes échantillons audio sont fournis par "${service}".';
+	@override String go_to_x({required Object service}) => 'Aller sur ${service}';
+	@override String get search_for_music => 'Rechercher de la musique';
+	@override String get use_the_searchbar_to_search_music => 'Utilisez la barre de recherche pour trouver de la musique.\nSi votre recherche ne donne aucun résultat, essayez un autre terme de recherche.';
+	@override String get artist => 'Artiste';
+	@override String get album => 'Album';
+	@override String open_in_x({required Object service}) => 'Ouvrir dans ${service}';
+	@override String get play_preview => 'Lire l\'échantillon';
+	@override late final _StringsToolsMusicsearchErrorFr error = _StringsToolsMusicsearchErrorFr._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsFr implements _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsFr._(this._root);
@@ -2056,6 +2121,17 @@ class _StringsToolsBitwisecalculatorErrorFr implements _StringsToolsBitwisecalcu
 
 	// Translations
 	@override String get invalid_input => 'Saisie invalide';
+}
+
+// Path: tools.musicsearch.error
+class _StringsToolsMusicsearchErrorFr implements _StringsToolsMusicsearchErrorEn {
+	_StringsToolsMusicsearchErrorFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get error_playing_audio_preview => 'Erreur lors de la lecture de l\'échantillon audio. Veuillez réessayer plus tard.';
+	@override String get unable_to_connect_to_the_api => 'Impossible de se connecter à l\'API, veuillez vérifier votre connexion internet et réessayer.';
 }
 
 /// Flat map(s) containing all translations.
@@ -2386,6 +2462,24 @@ extension on Translations {
 			case 'tools.bitwisecalculator.or': return 'OR';
 			case 'tools.bitwisecalculator.xor': return 'XOR';
 			case 'tools.bitwisecalculator.error.invalid_input': return 'Invalid input';
+			case 'tools.musicsearch.title': return 'Music search';
+			case 'tools.musicsearch.unknown_title': return 'Unknown title';
+			case 'tools.musicsearch.unknown_artist': return 'Unknown artist';
+			case 'tools.musicsearch.unknown_album': return 'Unknown album';
+			case 'tools.musicsearch.loading': return 'Loading';
+			case 'tools.musicsearch.loading_audio_preview': return 'Loading audio preview...';
+			case 'tools.musicsearch.stop_audio_preview': return 'Stop audio preview';
+			case 'tools.musicsearch.data_source': return 'Data source';
+			case 'tools.musicsearch.this_tool_uses_the_x_api': return ({required Object service}) => 'This tool uses the "${service}" API to search for music.\nThe audio previews are provided by "${service}".';
+			case 'tools.musicsearch.go_to_x': return ({required Object service}) => 'Go to ${service}';
+			case 'tools.musicsearch.search_for_music': return 'Search for music';
+			case 'tools.musicsearch.use_the_searchbar_to_search_music': return 'Use the search bar to find music.\nIf your search returns no results, try a different search term.';
+			case 'tools.musicsearch.artist': return 'Artist';
+			case 'tools.musicsearch.album': return 'Album';
+			case 'tools.musicsearch.open_in_x': return ({required Object service}) => 'Open in ${service}';
+			case 'tools.musicsearch.play_preview': return 'Play preview';
+			case 'tools.musicsearch.error.error_playing_audio_preview': return 'Error playing audio preview. Please try again later.';
+			case 'tools.musicsearch.error.unable_to_connect_to_the_api': return 'Unable to connect to the API, please check your internet connection and try again.';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -2725,6 +2819,24 @@ extension on _StringsFr {
 			case 'tools.bitwisecalculator.or': return 'OU';
 			case 'tools.bitwisecalculator.xor': return 'OU exclusif';
 			case 'tools.bitwisecalculator.error.invalid_input': return 'Saisie invalide';
+			case 'tools.musicsearch.title': return 'Recherche de musique';
+			case 'tools.musicsearch.unknown_title': return 'Titre inconnu';
+			case 'tools.musicsearch.unknown_artist': return 'Artiste inconnu';
+			case 'tools.musicsearch.unknown_album': return 'Album inconnu';
+			case 'tools.musicsearch.loading': return 'Chargement';
+			case 'tools.musicsearch.loading_audio_preview': return 'Chargement de l\'échantillon audio...';
+			case 'tools.musicsearch.stop_audio_preview': return 'Arrêter l\'échantillon audio';
+			case 'tools.musicsearch.data_source': return 'Source des données';
+			case 'tools.musicsearch.this_tool_uses_the_x_api': return ({required Object service}) => 'Cet outil utilise l\'API "${service}" pour rechercher de la musique.\nLes échantillons audio sont fournis par "${service}".';
+			case 'tools.musicsearch.go_to_x': return ({required Object service}) => 'Aller sur ${service}';
+			case 'tools.musicsearch.search_for_music': return 'Rechercher de la musique';
+			case 'tools.musicsearch.use_the_searchbar_to_search_music': return 'Utilisez la barre de recherche pour trouver de la musique.\nSi votre recherche ne donne aucun résultat, essayez un autre terme de recherche.';
+			case 'tools.musicsearch.artist': return 'Artiste';
+			case 'tools.musicsearch.album': return 'Album';
+			case 'tools.musicsearch.open_in_x': return ({required Object service}) => 'Ouvrir dans ${service}';
+			case 'tools.musicsearch.play_preview': return 'Lire l\'échantillon';
+			case 'tools.musicsearch.error.error_playing_audio_preview': return 'Erreur lors de la lecture de l\'échantillon audio. Veuillez réessayer plus tard.';
+			case 'tools.musicsearch.error.unable_to_connect_to_the_api': return 'Impossible de se connecter à l\'API, veuillez vérifier votre connexion internet et réessayer.';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';

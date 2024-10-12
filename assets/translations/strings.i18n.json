@@ -437,6 +437,28 @@
       "error": {
         "invalid_input": "Invalid input"
       }
+    },
+    "musicsearch": {
+      "title": "Music search",
+      "unknown_title": "Unknown title",
+      "unknown_artist": "Unknown artist",
+      "unknown_album": "Unknown album",
+      "loading": "Loading",
+      "loading_audio_preview": "Loading audio preview...",
+      "stop_audio_preview": "Stop audio preview",
+      "data_source": "Data source",
+      "this_tool_uses_the_x_api": "This tool uses the \"$service\" API to search for music.\nThe audio previews are provided by \"$service\".",
+      "go_to_x": "Go to $service",
+      "search_for_music": "Search for music",
+      "use_the_searchbar_to_search_music": "Use the search bar to find music.\nIf your search returns no results, try a different search term.",
+      "artist": "Artist",
+      "album": "Album",
+      "open_in_x": "Open in $service",
+      "play_preview": "Play preview",
+      "error": {
+        "error_playing_audio_preview": "Error playing audio preview. Please try again later.",
+        "unable_to_connect_to_the_api": "Unable to connect to the API, please check your internet connection and try again."
+      }
     }
   },
   "credits": {

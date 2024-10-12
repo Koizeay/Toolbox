@@ -437,6 +437,28 @@
       "error": {
         "invalid_input": "Saisie invalide"
       }
+    },
+    "musicsearch": {
+      "title": "Recherche de musique",
+      "unknown_title": "Titre inconnu",
+      "unknown_artist": "Artiste inconnu",
+      "unknown_album": "Album inconnu",
+      "loading": "Chargement",
+      "loading_audio_preview": "Chargement de l'échantillon audio...",
+      "stop_audio_preview": "Arrêter l'échantillon audio",
+      "data_source": "Source des données",
+      "this_tool_uses_the_x_api": "Cet outil utilise l'API \"$service\" pour rechercher de la musique.\nLes échantillons audio sont fournis par \"$service\".",
+      "go_to_x": "Aller sur $service",
+      "search_for_music": "Rechercher de la musique",
+      "use_the_searchbar_to_search_music": "Utilisez la barre de recherche pour trouver de la musique.\nSi votre recherche ne donne aucun résultat, essayez un autre terme de recherche.",
+      "artist": "Artiste",
+      "album": "Album",
+      "open_in_x": "Ouvrir dans $service",
+      "play_preview": "Lire l'échantillon",
+      "error": {
+        "error_playing_audio_preview": "Erreur lors de la lecture de l'échantillon audio. Veuillez réessayer plus tard.",
+        "unable_to_connect_to_the_api": "Impossible de se connecter à l'API, veuillez vérifier votre connexion internet et réessayer."
+      }
     }
   },
   "credits": {
