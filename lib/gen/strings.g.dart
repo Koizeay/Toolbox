@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 694 (347 per locale)
+/// Strings: 688 (344 per locale)
 ///
-/// Built on 2024-10-13 at 09:41 UTC
+/// Built on 2024-10-13 at 13:44 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -214,6 +214,7 @@ class _StringsToolsEn {
 	final Translations _root; // ignore: unused_field
 
 	// Translations
+	late final _StringsToolsBaseconverterEn baseconverter = _StringsToolsBaseconverterEn._(_root);
 	late final _StringsToolsClockEn clock = _StringsToolsClockEn._(_root);
 	late final _StringsToolsMetronomeEn metronome = _StringsToolsMetronomeEn._(_root);
 	late final _StringsToolsMegaphoneEn megaphone = _StringsToolsMegaphoneEn._(_root);
@@ -263,6 +264,28 @@ class _StringsCreditsEn {
 	String get view_licenses => 'View licenses';
 	String get contribute_on_github => 'Contribute on GitHub';
 	late final _StringsCreditsTranslationsEn translations = _StringsCreditsTranslationsEn._(_root);
+}
+
+// Path: tools.baseconverter
+class _StringsToolsBaseconverterEn {
+	_StringsToolsBaseconverterEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'Base converter';
+	String get enter_a_dec_number => 'Enter a decimal number';
+	String get enter_a_hex_number => 'Enter a hexadecimal number';
+	String get enter_a_bin_number => 'Enter a binary number';
+	String get enter_a_oct_number => 'Enter an octal number';
+	String get hexadecimal => 'Hexadecimal';
+	String get binary => 'Binary';
+	String get octal => 'Octal';
+	String get decimal => 'Decimal';
+	String get incompatible_number => 'Incompatible number';
+	String get too_big_number => 'Too big number';
+	String the_number_you_entered_is_not_a_valid_x_number({required Object base}) => 'The number you entered is not a valid ${base} number';
+	String get the_number_you_entered_is_too_big_to_be_abble_to_convert_it => 'The number you entered is too big to be able to convert it';
 }
 
 // Path: tools.clock
@@ -1217,6 +1240,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override final _StringsFr _root; // ignore: unused_field
 
 	// Translations
+	@override late final _StringsToolsBaseconverterFr baseconverter = _StringsToolsBaseconverterFr._(_root);
 	@override late final _StringsToolsClockFr clock = _StringsToolsClockFr._(_root);
 	@override late final _StringsToolsMetronomeFr metronome = _StringsToolsMetronomeFr._(_root);
 	@override late final _StringsToolsMegaphoneFr megaphone = _StringsToolsMegaphoneFr._(_root);
@@ -1266,6 +1290,28 @@ class _StringsCreditsFr implements _StringsCreditsEn {
 	@override String get view_licenses => 'Voir les licences';
 	@override String get contribute_on_github => 'Contribuez sur GitHub';
 	@override late final _StringsCreditsTranslationsFr translations = _StringsCreditsTranslationsFr._(_root);
+}
+
+// Path: tools.baseconverter
+class _StringsToolsBaseconverterFr implements _StringsToolsBaseconverterEn {
+	_StringsToolsBaseconverterFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Convertisseur de base';
+	@override String get enter_a_dec_number => 'Entrez un nombre décimal';
+	@override String get enter_a_hex_number => 'Entrez un nombre hexadécimal';
+	@override String get enter_a_bin_number => 'Entrez un nombre binaire';
+	@override String get enter_a_oct_number => 'Entrez un nombre octal';
+	@override String get hexadecimal => 'Hexadécimal';
+	@override String get binary => 'Binaire';
+	@override String get octal => 'Octal';
+	@override String get decimal => 'Décimal';
+	@override String get incompatible_number => 'Nombre incompatible';
+	@override String get too_big_number => 'Nombre trop grand';
+	@override String the_number_you_entered_is_not_a_valid_x_number({required Object base}) => 'Le nombre que vous avez entré n\'est pas un nombre ${base} valide';
+	@override String get the_number_you_entered_is_too_big_to_be_abble_to_convert_it => 'Le nombre que vous avez entré est trop grand pour être converti';
 }
 
 // Path: tools.clock
@@ -2161,6 +2207,19 @@ extension on Translations {
 			case 'folders.random': return 'Random';
 			case 'folders.time': return 'Time';
 			case 'folders.web': return 'Web';
+			case 'tools.baseconverter.title': return 'Base converter';
+			case 'tools.baseconverter.enter_a_dec_number': return 'Enter a decimal number';
+			case 'tools.baseconverter.enter_a_hex_number': return 'Enter a hexadecimal number';
+			case 'tools.baseconverter.enter_a_bin_number': return 'Enter a binary number';
+			case 'tools.baseconverter.enter_a_oct_number': return 'Enter an octal number';
+			case 'tools.baseconverter.hexadecimal': return 'Hexadecimal';
+			case 'tools.baseconverter.binary': return 'Binary';
+			case 'tools.baseconverter.octal': return 'Octal';
+			case 'tools.baseconverter.decimal': return 'Decimal';
+			case 'tools.baseconverter.incompatible_number': return 'Incompatible number';
+			case 'tools.baseconverter.too_big_number': return 'Too big number';
+			case 'tools.baseconverter.the_number_you_entered_is_not_a_valid_x_number': return ({required Object base}) => 'The number you entered is not a valid ${base} number';
+			case 'tools.baseconverter.the_number_you_entered_is_too_big_to_be_abble_to_convert_it': return 'The number you entered is too big to be able to convert it';
 			case 'tools.clock.title': return 'Clock';
 			case 'tools.clock.loading': return 'Loading';
 			case 'tools.clock.change_timezone': return 'Change timezone';
@@ -2516,6 +2575,19 @@ extension on _StringsFr {
 			case 'folders.random': return 'Aléatoire';
 			case 'folders.time': return 'Temps';
 			case 'folders.web': return 'Web';
+			case 'tools.baseconverter.title': return 'Convertisseur de base';
+			case 'tools.baseconverter.enter_a_dec_number': return 'Entrez un nombre décimal';
+			case 'tools.baseconverter.enter_a_hex_number': return 'Entrez un nombre hexadécimal';
+			case 'tools.baseconverter.enter_a_bin_number': return 'Entrez un nombre binaire';
+			case 'tools.baseconverter.enter_a_oct_number': return 'Entrez un nombre octal';
+			case 'tools.baseconverter.hexadecimal': return 'Hexadécimal';
+			case 'tools.baseconverter.binary': return 'Binaire';
+			case 'tools.baseconverter.octal': return 'Octal';
+			case 'tools.baseconverter.decimal': return 'Décimal';
+			case 'tools.baseconverter.incompatible_number': return 'Nombre incompatible';
+			case 'tools.baseconverter.too_big_number': return 'Nombre trop grand';
+			case 'tools.baseconverter.the_number_you_entered_is_not_a_valid_x_number': return ({required Object base}) => 'Le nombre que vous avez entré n\'est pas un nombre ${base} valide';
+			case 'tools.baseconverter.the_number_you_entered_is_too_big_to_be_abble_to_convert_it': return 'Le nombre que vous avez entré est trop grand pour être converti';
 			case 'tools.clock.title': return 'Horloge';
 			case 'tools.clock.loading': return 'Chargement';
 			case 'tools.clock.change_timezone': return 'Changer le fuseau horaire';
