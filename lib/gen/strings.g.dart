@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 698 (349 per locale)
+/// Strings: 694 (347 per locale)
 ///
-/// Built on 2024-10-12 at 18:08 UTC
+/// Built on 2024-10-13 at 09:41 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -827,8 +827,6 @@ class _StringsToolsMusicsearchEn {
 	String go_to_x({required Object service}) => 'Go to ${service}';
 	String get search_for_music => 'Search for music';
 	String get use_the_searchbar_to_search_music => 'Use the search bar to find music.\nIf your search returns no results, try a different search term.';
-	String get artist => 'Artist';
-	String get album => 'Album';
 	String open_in_x({required Object service}) => 'Open in ${service}';
 	String get play_preview => 'Play preview';
 	late final _StringsToolsMusicsearchErrorEn error = _StringsToolsMusicsearchErrorEn._(_root);
@@ -1832,8 +1830,6 @@ class _StringsToolsMusicsearchFr implements _StringsToolsMusicsearchEn {
 	@override String go_to_x({required Object service}) => 'Aller sur ${service}';
 	@override String get search_for_music => 'Rechercher de la musique';
 	@override String get use_the_searchbar_to_search_music => 'Utilisez la barre de recherche pour trouver de la musique.\nSi votre recherche ne donne aucun résultat, essayez un autre terme de recherche.';
-	@override String get artist => 'Artiste';
-	@override String get album => 'Album';
 	@override String open_in_x({required Object service}) => 'Ouvrir dans ${service}';
 	@override String get play_preview => 'Lire l\'échantillon';
 	@override late final _StringsToolsMusicsearchErrorFr error = _StringsToolsMusicsearchErrorFr._(_root);
@@ -2474,8 +2470,6 @@ extension on Translations {
 			case 'tools.musicsearch.go_to_x': return ({required Object service}) => 'Go to ${service}';
 			case 'tools.musicsearch.search_for_music': return 'Search for music';
 			case 'tools.musicsearch.use_the_searchbar_to_search_music': return 'Use the search bar to find music.\nIf your search returns no results, try a different search term.';
-			case 'tools.musicsearch.artist': return 'Artist';
-			case 'tools.musicsearch.album': return 'Album';
 			case 'tools.musicsearch.open_in_x': return ({required Object service}) => 'Open in ${service}';
 			case 'tools.musicsearch.play_preview': return 'Play preview';
 			case 'tools.musicsearch.error.error_playing_audio_preview': return 'Error playing audio preview. Please try again later.';
@@ -2831,8 +2825,6 @@ extension on _StringsFr {
 			case 'tools.musicsearch.go_to_x': return ({required Object service}) => 'Aller sur ${service}';
 			case 'tools.musicsearch.search_for_music': return 'Rechercher de la musique';
 			case 'tools.musicsearch.use_the_searchbar_to_search_music': return 'Utilisez la barre de recherche pour trouver de la musique.\nSi votre recherche ne donne aucun résultat, essayez un autre terme de recherche.';
-			case 'tools.musicsearch.artist': return 'Artiste';
-			case 'tools.musicsearch.album': return 'Album';
 			case 'tools.musicsearch.open_in_x': return ({required Object service}) => 'Ouvrir dans ${service}';
 			case 'tools.musicsearch.play_preview': return 'Lire l\'échantillon';
 			case 'tools.musicsearch.error.error_playing_audio_preview': return 'Erreur lors de la lecture de l\'échantillon audio. Veuillez réessayer plus tard.';

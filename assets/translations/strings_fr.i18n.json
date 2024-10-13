@@ -451,8 +451,6 @@
       "go_to_x": "Aller sur $service",
       "search_for_music": "Rechercher de la musique",
       "use_the_searchbar_to_search_music": "Utilisez la barre de recherche pour trouver de la musique.\nSi votre recherche ne donne aucun résultat, essayez un autre terme de recherche.",
-      "artist": "Artiste",
-      "album": "Album",
       "open_in_x": "Ouvrir dans $service",
       "play_preview": "Lire l'échantillon",
       "error": {

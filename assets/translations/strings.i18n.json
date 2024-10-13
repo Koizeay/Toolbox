@@ -451,8 +451,6 @@
       "go_to_x": "Go to $service",
       "search_for_music": "Search for music",
       "use_the_searchbar_to_search_music": "Use the search bar to find music.\nIf your search returns no results, try a different search term.",
-      "artist": "Artist",
-      "album": "Album",
       "open_in_x": "Open in $service",
       "play_preview": "Play preview",
       "error": {

@@ -124,6 +124,98 @@ class _MusicSearchPage extends State<MusicSearchPage> {
     await audioPlayer.stop();
   }
 
+  void showMusicInfoDialog(BuildContext context, String title, String artist, String artistPictureUrl, String album, String albumPictureUrl, String deezerUrl) {
+    showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: Text(title),
+            content: SingleChildScrollView(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Row(
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(100.0),
+                        child: SizedBox(
+                          width: 50,
+                          height: 50,
+                          child: Image(
+                            width: 50,
+                            height: 50,
+                            image: NetworkImage(artistPictureUrl),
+                            errorBuilder: (BuildContext context, Object error,
+                                StackTrace? stackTrace) {
+                              return const Icon(Icons.person, size: 40);
+                            },
+                          ),
+                        ),
+                      ),
+                      const SizedBox(width: 4),
+                      Expanded(
+                          child: Text(
+                            artist,
+                            style: const TextStyle(fontSize: 16),
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 2,
+                          )
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 8),
+                  Row(
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(8.0),
+                        child: SizedBox(
+                          width: 50,
+                          height: 50,
+                          child: Image(
+                            width: 50,
+                            height: 50,
+                            image: NetworkImage(albumPictureUrl),
+                            errorBuilder: (BuildContext context, Object error,
+                                StackTrace? stackTrace) {
+                              return const Icon(Icons.album, size: 40);
+                            },
+                          ),
+                        ),
+                      ),
+                      const SizedBox(width: 4),
+                      Expanded(
+                          child: Text(
+                              album,
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis
+                          )
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            actions: [
+              TextButton(
+                onPressed: () {
+                  launchUrlInBrowser(deezerUrl);
+                  Navigator.of(context).pop();
+                },
+                child: Text(
+                    t.tools.musicsearch.open_in_x(service: serviceName)),
+              ),
+              TextButton(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+                child: Text(t.generic.ok),
+              ),
+            ],
+          );
+        }
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -203,25 +295,14 @@ class _MusicSearchPage extends State<MusicSearchPage> {
                       itemBuilder: (BuildContext context, int index) {
                         return GestureDetector(
                           onTap: () {
-                            showCustomButtonsTextDialog(
+                            showMusicInfoDialog(
                                 context,
                                 musicList[index].title,
-                                "${t.tools.musicsearch.artist} ${musicList[index].artist}\n${t.tools.musicsearch.album} ${musicList[index].album}",
-                                [
-                                  TextButton(
-                                    onPressed: () {
-                                      launchUrlInBrowser(musicList[index].deezerUrl);
-                                      Navigator.of(context).pop();
-                                    },
-                                    child: Text(t.tools.musicsearch.open_in_x(service: serviceName)),
-                                  ),
-                                  TextButton(
-                                    onPressed: () {
-                                      Navigator.of(context).pop();
-                                    },
-                                    child: Text(t.generic.ok),
-                                  ),
-                                ]
+                                musicList[index].artist,
+                                musicList[index].artistPictureUrl,
+                                musicList[index].album,
+                                musicList[index].albumPictureUrl,
+                                musicList[index].deezerUrl
                             );
                           },
                           child: Card(
