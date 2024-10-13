@@ -307,8 +307,8 @@ class _MusicSearchPage extends State<MusicSearchPage> {
                           },
                           child: Card(
                             child: ListTile(
-                              title: Text(musicList[index].title),
-                              subtitle: Text(musicList[index].artist),
+                              title: Text(musicList[index].title, maxLines: 2, overflow: TextOverflow.ellipsis),
+                              subtitle: Text(musicList[index].artist, maxLines: 2, overflow: TextOverflow.ellipsis),
                               leading: ClipRRect(
                                 borderRadius: BorderRadius.circular(8.0),
                                 child: Image(
