@@ -54,7 +54,8 @@ class _MusicSearchPage extends State<MusicSearchPage> {
         return;
       }
     }
-    Response response = await httpGet(deezerSearchApiUrl + query, {}).onError((
+    String urlEncodedQuery = Uri.encodeComponent(query);
+    Response response = await httpGet(deezerSearchApiUrl + urlEncodedQuery, {}).onError((
         error, stackTrace) {
       if (kDebugMode) {
         print("Error searching music: $error");
