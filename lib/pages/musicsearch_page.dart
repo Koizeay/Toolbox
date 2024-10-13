@@ -25,6 +25,8 @@ class _MusicSearchPage extends State<MusicSearchPage> {
   final String deezerSearchApiUrl = "https://api.deezer.com/search?limit=15&q=";
   List<MusicSearchMusic> musicList = [];
 
+  double lastSearchTimestamp = 0;
+
   bool isSearching = false;
   bool hasApiError = false;
 
@@ -37,16 +39,20 @@ class _MusicSearchPage extends State<MusicSearchPage> {
 
   Future<void> searchMusic(String query) async {
     query = query.trim();
+    double currentSearchTimestamp = DateTime.now().millisecondsSinceEpoch / 1000;
+    lastSearchTimestamp = currentSearchTimestamp;
     setState(() {
       isSearching = true;
       hasApiError = false;
     });
     if (query.isEmpty) {
-      setState(() {
-        musicList = [];
-        isSearching = false;
-      });
-      return;
+      if (currentSearchTimestamp == lastSearchTimestamp) {
+        setState(() {
+          musicList = [];
+          isSearching = false;
+        });
+        return;
+      }
     }
     Response response = await httpGet(deezerSearchApiUrl + query, {}).onError((
         error, stackTrace) {
@@ -75,14 +81,14 @@ class _MusicSearchPage extends State<MusicSearchPage> {
           }
         }
       }
-      if (mounted) {
+      if (mounted && currentSearchTimestamp == lastSearchTimestamp) {
         setState(() {
           this.musicList = musicList;
           isSearching = false;
         });
       }
     } else {
-      if (mounted) {
+      if (mounted && currentSearchTimestamp == lastSearchTimestamp) {
         setState(() {
           isSearching = false;
           hasApiError = true;
