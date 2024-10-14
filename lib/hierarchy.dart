@@ -30,7 +30,7 @@ import 'package:toolbox/pages/stopwatch_page.dart';
 import 'package:toolbox/pages/texttospeech_page.dart';
 import 'package:toolbox/pages/timer_page.dart';
 import 'package:toolbox/pages/timestampconverter_page.dart';
-import 'package:toolbox/pages/url_shortener_page.dart';
+import 'package:toolbox/pages/urlshortener_page.dart';
 import 'package:toolbox/pages/uuidgenerator_page.dart';
 import 'package:toolbox/pages/whiteboard_page.dart';
 import 'package:toolbox/pages/youtubethumbnail_page.dart';
