@@ -31,6 +31,21 @@
     "web": "Web"
   },
   "tools": {
+    "baseconverter": {
+      "title": "Base converter",
+      "enter_a_dec_number": "Enter a decimal number",
+      "enter_a_hex_number": "Enter a hexadecimal number",
+      "enter_a_bin_number": "Enter a binary number",
+      "enter_a_oct_number": "Enter an octal number",
+      "hexadecimal": "Hexadecimal",
+      "binary": "Binary",
+      "octal": "Octal",
+      "decimal": "Decimal",
+      "incompatible_number": "Incompatible number",
+      "too_big_number": "Too big number",
+      "the_number_you_entered_is_not_a_valid_x_number": "The number you entered is not a valid $base number",
+      "the_number_you_entered_is_too_big_to_be_abble_to_convert_it": "The number you entered is too big to be able to convert it"
+    },
     "clock": {
       "title": "Clock",
       "loading": "Loading",

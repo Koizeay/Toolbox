@@ -31,6 +31,21 @@
     "web": "Web"
   },
   "tools": {
+    "baseconverter": {
+      "title": "Convertisseur de base",
+      "enter_a_dec_number": "Entrez un nombre décimal",
+      "enter_a_hex_number": "Entrez un nombre hexadécimal",
+      "enter_a_bin_number": "Entrez un nombre binaire",
+      "enter_a_oct_number": "Entrez un nombre octal",
+      "hexadecimal": "Hexadécimal",
+      "binary": "Binaire",
+      "octal": "Octal",
+      "decimal": "Décimal",
+      "incompatible_number": "Nombre incompatible",
+      "too_big_number": "Nombre trop grand",
+      "the_number_you_entered_is_not_a_valid_x_number": "Le nombre que vous avez entré n'est pas un nombre $base valide",
+      "the_number_you_entered_is_too_big_to_be_abble_to_convert_it": "Le nombre que vous avez entré est trop grand pour être converti"
+    },
     "clock": {
       "title": "Horloge",
       "loading": "Chargement",
