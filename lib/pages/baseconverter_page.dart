@@ -3,7 +3,7 @@ import 'package:toolbox/core/dialogs.dart';
 import 'package:toolbox/gen/strings.g.dart';
 import 'package:toolbox/widgets/baseconverter_keyboard.dart';
 import 'package:toolbox/widgets/generic_customkeyboard.dart';
-import 'package:toolbox/widgets/generic_sliverappaaraelegate.dart';
+import 'package:toolbox/widgets/generic_sliverappbardelegate.dart';
 
 class BaseConverterPage extends StatefulWidget {
   const BaseConverterPage({ super.key });
