@@ -20,6 +20,7 @@ class GenericCustomKeyboard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.builder(
       shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
       itemCount: keys.length,
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 5,
@@ -33,7 +34,10 @@ class GenericCustomKeyboard extends StatelessWidget {
           padding: const EdgeInsets.all(4.0),
           child: FilledButton(
             onPressed: isKeyEnabled(keys[index]) ? () => onKeyTap(keys[index]) : null,
-            child: _buildKeyChild(keys[index]),
+            child: FittedBox(
+              fit: BoxFit.contain,
+              child: _buildKeyChild(keys[index]),
+            ),
           ),
         );
       },

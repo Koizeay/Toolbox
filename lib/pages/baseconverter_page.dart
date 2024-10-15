@@ -3,6 +3,7 @@ import 'package:toolbox/core/dialogs.dart';
 import 'package:toolbox/gen/strings.g.dart';
 import 'package:toolbox/widgets/baseconverter_keyboard.dart';
 import 'package:toolbox/widgets/generic_customkeyboard.dart';
+import 'package:toolbox/widgets/generic_sliverappaaraelegate.dart';
 
 class BaseConverterPage extends StatefulWidget {
   const BaseConverterPage({ super.key });
@@ -34,7 +35,8 @@ class _BaseConverterPage extends State<BaseConverterPage> {
         if (_controller.text.isNotEmpty) {
           if (mounted) {
             setState(() {
-              _controller.text = _controller.text.substring(0, _controller.text.length - 1);
+              _controller.text =
+                  _controller.text.substring(0, _controller.text.length - 1);
             });
           }
         }
@@ -84,7 +86,8 @@ class _BaseConverterPage extends State<BaseConverterPage> {
   }
 
   String _getConvertedValue(String mode) {
-    final int? parsedValue = int.tryParse(_controller.text, radix: _getRadix(currentBase));
+    final int? parsedValue = int.tryParse(
+        _controller.text, radix: _getRadix(currentBase));
     if (parsedValue == null) return ''; // Return empty string if parsing fails
 
     switch (mode) {
@@ -103,21 +106,25 @@ class _BaseConverterPage extends State<BaseConverterPage> {
 
   void checkInputIsValid(String? base) {
     if (_controller.text.isNotEmpty) {
-      final int? parsedValue = int.tryParse(_controller.text, radix: _getRadix(base ?? 'DEC'));
+      final int? parsedValue = int.tryParse(
+          _controller.text, radix: _getRadix(base ?? 'DEC'));
       if (parsedValue == null) {
         showCustomActionOkTextDialog(
-          context,
-          t.tools.baseconverter.incompatible_number,
-          t.tools.baseconverter.the_number_you_entered_is_not_a_valid_x_number(base: (outputLabel[base] ?? t.tools.baseconverter.decimal).toLowerCase()),
-          () {
-            if (mounted) {
-              setState(() {
-                _controller.text = '';
-                _controller.clear();
-              });
-            }
-          },
-          barrierDismissible: false
+            context,
+            t.tools.baseconverter.incompatible_number,
+            t.tools.baseconverter
+                .the_number_you_entered_is_not_a_valid_x_number(
+                base: (outputLabel[base] ?? t.tools.baseconverter.decimal)
+                    .toLowerCase()),
+                () {
+              if (mounted) {
+                setState(() {
+                  _controller.text = '';
+                  _controller.clear();
+                });
+              }
+            },
+            barrierDismissible: false
         );
       }
     }
@@ -138,6 +145,82 @@ class _BaseConverterPage extends State<BaseConverterPage> {
     super.dispose();
   }
 
+  Widget inputTextBaseDropdown() {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Row(
+        children: [
+          Expanded(
+            child: TextField(
+              controller: _controller,
+              readOnly: true,
+              onChanged: _onKeyTap,
+              decoration: InputDecoration(
+                  labelText: inputLabel[currentBase],
+                  border: const OutlineInputBorder()
+              ),
+            ),
+          ),
+          const SizedBox(width: 8.0),
+          DropdownMenu(
+            initialSelection: currentBase,
+            dropdownMenuEntries: listBases.map((String mode) {
+              return DropdownMenuEntry(
+                value: mode,
+                label: mode,
+              );
+            }).toList(),
+            onSelected: checkInputIsValid,
+            enableFilter: false,
+            enableSearch: false,
+          )
+        ],
+      ),
+    );
+  }
+
+  Widget outputTextBaseList() {
+    return SizedBox(
+      height: 180,
+      child: ListView(
+        physics: const NeverScrollableScrollPhysics(),
+        children: [
+          ...outputLabel.entries.map((entry) {
+            final mode = entry.key;
+            final title = entry.value;
+            if (currentBase != mode) {
+              return ListTile(
+                title: Row(
+                  children: [
+                    Text(title),
+                    const SizedBox(width: 32.0),
+                    Expanded(
+                      child: Text(
+                        _getConvertedValue(mode),
+                        textAlign: TextAlign.right,
+                      ),
+                    ),
+                  ],
+                ),
+              );
+            }
+            return const SizedBox.shrink();
+          }),
+        ],
+      ),
+    );
+  }
+
+  Widget baseConverterKeyboard() {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: BaseConverterKeyboard(
+        inputMode: currentBase,
+        onKeyTap: _onKeyTap,
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -145,79 +228,47 @@ class _BaseConverterPage extends State<BaseConverterPage> {
         FocusManager.instance.primaryFocus?.unfocus();
       },
       child: Scaffold(
-        appBar: AppBar(
-          title: Text(t.tools.baseconverter.title),
-        ),
-        body: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: TextField(
-                      controller: _controller,
-                      readOnly: true,
-                      onChanged: _onKeyTap,
-                      decoration: InputDecoration(
-                        labelText: inputLabel[currentBase],
-                        border: const OutlineInputBorder()
+          appBar: AppBar(
+            title: Text(t.tools.baseconverter.title),
+          ),
+          body: LayoutBuilder(
+              builder: (context, constraints) {
+                if (constraints.maxHeight < 500) {
+                  return CustomScrollView(
+                    slivers: [
+                      // Ele1 pinned at the top
+                      SliverPersistentHeader(
+                        pinned: true,
+                        delegate: GenericSliverAppBarDelegate(
+                          minHeight: 72,
+                          maxHeight: 72,
+                          child: inputTextBaseDropdown(),
+                        ),
                       ),
-                    ),
-                  ),
-                  const SizedBox(width: 8.0),
-                  DropdownMenu(
-                    initialSelection: currentBase,
-                    dropdownMenuEntries: listBases.map((String mode) {
-                      return DropdownMenuEntry(
-                        value: mode,
-                        label: mode,
-                      );
-                    }).toList(),
-                    onSelected: checkInputIsValid,
-                    enableFilter: false,
-                    enableSearch: false,
-                  )
-                ],
-              ),
-            ),
-            Expanded(
-              child: ListView(
-                children: [
-                  // Define a map where the key is the mode and the value is the title
-                  ...outputLabel.entries.map((entry) {
-                    final mode = entry.key;
-                    final title = entry.value;
-                    if (currentBase != mode) {
-                      return ListTile(
-                        title: Row(
+                      // Scrollable package of Ele2 and Ele3
+                      SliverToBoxAdapter(
+                        child: Column(
                           children: [
-                            Text(title),
-                            const SizedBox(width: 32.0),
-                            Expanded(
-                              child: Text(
-                                _getConvertedValue(mode),
-                                textAlign: TextAlign.right,
-                              ),
-                            ),
+                            outputTextBaseList(),
+                            const SizedBox(height: 20),
+                            baseConverterKeyboard(),
                           ],
                         ),
-                      );
-                    }
-                    return const SizedBox.shrink(); // Return an empty widget if the mode matches selectedMode
-                  }),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: BaseConverterKeyboard(
-                inputMode: currentBase,
-                onKeyTap: _onKeyTap,
-              ),
-            ),
-          ],
-        ),
+                      ),
+                    ],
+                  );
+                } else {
+                  return Column(
+                    children: [
+                      inputTextBaseDropdown(),
+                      outputTextBaseList(),
+                      const Spacer(),
+                      baseConverterKeyboard(),
+                    ],
+                  );
+                }
+              }
+          )
       ),
     );
   }
