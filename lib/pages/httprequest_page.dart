@@ -52,6 +52,13 @@ class _HttpRequestPage extends State<HttpRequestPage> {
     setWebViewSettings();
   }
 
+  void resetWebView() {
+    htmlWebViewLoaded = Platform.isAndroid;
+    webViewController.clearCache();
+    webViewController.clearLocalStorage();
+    webViewController.loadRequest(Uri.parse("about:blank"));
+  }
+
   void setWebViewSettings() {
     webViewController
       ..setJavaScriptMode(JavaScriptMode.disabled)
@@ -94,6 +101,7 @@ class _HttpRequestPage extends State<HttpRequestPage> {
     responseStatusCode = "";
     responseHeaders = "";
     responseBody = "";
+    resetWebView();
 
     if (urlController.text.isEmpty) {
       showDialog(
