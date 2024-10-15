@@ -19,7 +19,10 @@ class GenericSliverAppBarDelegate extends SliverPersistentHeaderDelegate {
 
   @override
   Widget build(BuildContext context, double shrinkOffset, bool overlapsContent) {
-    return SizedBox.expand(child: child);
+    return Container(
+      color: Theme.of(context).colorScheme.surface, // Background adapts to light/dark theme
+      child: SizedBox.expand(child: child), // Display Ele1 fully
+    );
   }
 
   @override
