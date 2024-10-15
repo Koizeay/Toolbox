@@ -28,6 +28,7 @@ import 'package:toolbox/pages/sshclient_page.dart';
 import 'package:toolbox/pages/soundmeter_page.dart';
 import 'package:toolbox/pages/speedometer_page.dart';
 import 'package:toolbox/pages/stopwatch_page.dart';
+import 'package:toolbox/pages/musicanalyser_page.dart';
 import 'package:toolbox/pages/texttospeech_page.dart';
 import 'package:toolbox/pages/timer_page.dart';
 import 'package:toolbox/pages/timestampconverter_page.dart';
@@ -53,6 +54,7 @@ class Hierarchy {
     "megaphone": Tool(t.tools.megaphone.title, "assets/images/tools/megaphone.png", const MegaphonePage()),
     "metronome": Tool(t.tools.metronome.title, "assets/images/tools/metronome.png", const MetronomePage()),
     "morsecode": Tool(t.tools.morsecode.title, "assets/images/tools/morsecode.png", const MorseCodePage()),
+    "musicanalyser": Tool(t.tools.musicanalyser.title, "assets/images/tools/musicanalyser.png", const MusicAnalyserPage()),
     "musicsearch": Tool(t.tools.musicsearch.title, "assets/images/tools/musicsearch.png", const MusicSearchPage()),
     "nationalanthems": Tool(t.tools.nationalanthems.title, "assets/images/tools/nationalanthems.png", const NationalAnthemsPage()),
     "nearbypublictransportstops": Tool(t.tools.nearbypublictransportstops.title, "assets/images/tools/nearbypublictransportstops.png", const NearbyPublicTransportStopsPage()),
@@ -81,6 +83,7 @@ class Hierarchy {
     Folder(t.folders.audio, "assets/images/folders/folder.png", [
       toolMap["metronome"],
       toolMap["morsecode"],
+      toolMap["musicanalyser"],
       toolMap["musicsearch"],
       toolMap["nationalanthems"],
       toolMap["soundmeter"],

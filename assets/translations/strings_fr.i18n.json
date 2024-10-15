@@ -472,6 +472,25 @@
         "error_playing_audio_preview": "Erreur lors de la lecture de l'échantillon audio. Veuillez réessayer plus tard.",
         "unable_to_connect_to_the_api": "Impossible de se connecter à l'API, veuillez vérifier votre connexion internet et réessayer."
       }
+    },
+    "musicanalyser": {
+      "title": "Analyse de musique",
+      "press_the_button_to_start_music_analysis": "Appuyez sur le bouton pour démarrer l'analyse de la musique",
+      "loading": "Chargement...",
+      "analyzing_music": "Analyse de la musique... (${remainingSeconds}s)",
+      "getting_results": "Récupération des résultats...",
+      "unknown": "Inconnu",
+      "api_used": "API utilisée",
+      "this_tool_uses_the_x_api": "Cet outil utilise l'API \"$service\" via un serveur dorsal Koizeay. \"$service\" est une marque déposée de \"$company\" et n'est pas affiliée à cet outil.",
+      "start_analyzing_music": "Démarrer l'analyse de la musique",
+      "clear": "Effacer",
+      "error": {
+        "permission_denied": "Permission refusée",
+        "permission_denied_description": "L'autorisation du microphone est nécessaire pour analyser la musique. Veuillez accorder cette autorisation et réessayer.",
+        "no_match_found": "Aucune correspondance trouvée",
+        "no_match_found_description": "Aucune correspondance musicale n'a été trouvée. Veuillez réessayer.",
+        "error_occurred": "Une erreur s'est produite lors de l'analyse de la musique. Veuillez vérifier votre connexion internet et réessayer."
+      }
     }
   },
   "credits": {

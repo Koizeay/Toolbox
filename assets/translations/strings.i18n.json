@@ -472,6 +472,25 @@
         "error_playing_audio_preview": "Error playing audio preview. Please try again later.",
         "unable_to_connect_to_the_api": "Unable to connect to the API, please check your internet connection and try again."
       }
+    },
+    "musicanalyser": {
+      "title": "Music analyser",
+      "press_the_button_to_start_music_analysis": "Press the button to start music analysis",
+      "loading": "Loading...",
+      "analyzing_music": "Analyzing music... (${remainingSeconds}s)",
+      "getting_results": "Getting results...",
+      "unknown": "Unknown",
+      "api_used": "API used",
+      "this_tool_uses_the_x_api": "This tool uses the \"$service\" API via a Koizeay backend server. \"$service\" is a registered trademark of \"$company\" and is not affiliated with this tool.",
+      "start_analyzing_music": "Start analyzing music",
+      "clear": "Clear",
+      "error": {
+        "permission_denied": "Permission denied",
+        "permission_denied_description": "The microphone permission is required to analyze music. Please grant the permission and try again.",
+        "no_match_found": "No match found",
+        "no_match_found_description": "No music match was found. Please try again.",
+        "error_occurred": "An error occurred while analyzing the music. Please check your internet connection and try again."
+      }
     }
   },
   "credits": {

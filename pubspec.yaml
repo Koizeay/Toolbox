@@ -79,6 +79,8 @@ dependencies:
   wakelock_plus: ^1.2.8
   map_launcher: ^3.5.0
   image_picker: ^1.0.0
+  record: ^5.1.2
+  http_parser: ^4.0.0
 
 dev_dependencies:
   flutter_launcher_icons: ^0.14.1

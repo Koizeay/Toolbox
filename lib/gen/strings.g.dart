@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 688 (344 per locale)
+/// Strings: 750 (375 per locale)
 ///
-/// Built on 2024-10-13 at 13:44 UTC
+/// Built on 2024-10-15 at 16:48 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -248,6 +248,7 @@ class _StringsToolsEn {
 	late final _StringsToolsCounterEn counter = _StringsToolsCounterEn._(_root);
 	late final _StringsToolsBitwisecalculatorEn bitwisecalculator = _StringsToolsBitwisecalculatorEn._(_root);
 	late final _StringsToolsMusicsearchEn musicsearch = _StringsToolsMusicsearchEn._(_root);
+	late final _StringsToolsMusicanalyserEn musicanalyser = _StringsToolsMusicanalyserEn._(_root);
 }
 
 // Path: credits
@@ -855,6 +856,26 @@ class _StringsToolsMusicsearchEn {
 	late final _StringsToolsMusicsearchErrorEn error = _StringsToolsMusicsearchErrorEn._(_root);
 }
 
+// Path: tools.musicanalyser
+class _StringsToolsMusicanalyserEn {
+	_StringsToolsMusicanalyserEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'Music analyser';
+	String get press_the_button_to_start_music_analysis => 'Press the button to start music analysis';
+	String get loading => 'Loading...';
+	String analyzing_music({required Object remainingSeconds}) => 'Analyzing music... (${remainingSeconds}s)';
+	String get getting_results => 'Getting results...';
+	String get unknown => 'Unknown';
+	String get api_used => 'API used';
+	String this_tool_uses_the_x_api({required Object service, required Object company}) => 'This tool uses the "${service}" API via a Koizeay backend server. "${service}" is a registered trademark of "${company}" and is not affiliated with this tool.';
+	String get start_analyzing_music => 'Start analyzing music';
+	String get clear => 'Clear';
+	late final _StringsToolsMusicanalyserErrorEn error = _StringsToolsMusicanalyserErrorEn._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsEn._(this._root);
@@ -1150,6 +1171,20 @@ class _StringsToolsMusicsearchErrorEn {
 	String get unable_to_connect_to_the_api => 'Unable to connect to the API, please check your internet connection and try again.';
 }
 
+// Path: tools.musicanalyser.error
+class _StringsToolsMusicanalyserErrorEn {
+	_StringsToolsMusicanalyserErrorEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get permission_denied => 'Permission denied';
+	String get permission_denied_description => 'The microphone permission is required to analyze music. Please grant the permission and try again.';
+	String get no_match_found => 'No match found';
+	String get no_match_found_description => 'No music match was found. Please try again.';
+	String get error_occurred => 'An error occurred while analyzing the music. Please check your internet connection and try again.';
+}
+
 // Path: <root>
 class _StringsFr implements Translations {
 	/// You can call this constructor and build your own translation instance of this locale.
@@ -1274,6 +1309,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsCounterFr counter = _StringsToolsCounterFr._(_root);
 	@override late final _StringsToolsBitwisecalculatorFr bitwisecalculator = _StringsToolsBitwisecalculatorFr._(_root);
 	@override late final _StringsToolsMusicsearchFr musicsearch = _StringsToolsMusicsearchFr._(_root);
+	@override late final _StringsToolsMusicanalyserFr musicanalyser = _StringsToolsMusicanalyserFr._(_root);
 }
 
 // Path: credits
@@ -1881,6 +1917,26 @@ class _StringsToolsMusicsearchFr implements _StringsToolsMusicsearchEn {
 	@override late final _StringsToolsMusicsearchErrorFr error = _StringsToolsMusicsearchErrorFr._(_root);
 }
 
+// Path: tools.musicanalyser
+class _StringsToolsMusicanalyserFr implements _StringsToolsMusicanalyserEn {
+	_StringsToolsMusicanalyserFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Analyse de musique';
+	@override String get press_the_button_to_start_music_analysis => 'Appuyez sur le bouton pour démarrer l\'analyse de la musique';
+	@override String get loading => 'Chargement...';
+	@override String analyzing_music({required Object remainingSeconds}) => 'Analyse de la musique... (${remainingSeconds}s)';
+	@override String get getting_results => 'Récupération des résultats...';
+	@override String get unknown => 'Inconnu';
+	@override String get api_used => 'API utilisée';
+	@override String this_tool_uses_the_x_api({required Object service, required Object company}) => 'Cet outil utilise l\'API "${service}" via un serveur dorsal Koizeay. "${service}" est une marque déposée de "${company}" et n\'est pas affiliée à cet outil.';
+	@override String get start_analyzing_music => 'Démarrer l\'analyse de la musique';
+	@override String get clear => 'Effacer';
+	@override late final _StringsToolsMusicanalyserErrorFr error = _StringsToolsMusicanalyserErrorFr._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsFr implements _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsFr._(this._root);
@@ -2174,6 +2230,20 @@ class _StringsToolsMusicsearchErrorFr implements _StringsToolsMusicsearchErrorEn
 	// Translations
 	@override String get error_playing_audio_preview => 'Erreur lors de la lecture de l\'échantillon audio. Veuillez réessayer plus tard.';
 	@override String get unable_to_connect_to_the_api => 'Impossible de se connecter à l\'API, veuillez vérifier votre connexion internet et réessayer.';
+}
+
+// Path: tools.musicanalyser.error
+class _StringsToolsMusicanalyserErrorFr implements _StringsToolsMusicanalyserErrorEn {
+	_StringsToolsMusicanalyserErrorFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get permission_denied => 'Permission refusée';
+	@override String get permission_denied_description => 'L\'autorisation du microphone est nécessaire pour analyser la musique. Veuillez accorder cette autorisation et réessayer.';
+	@override String get no_match_found => 'Aucune correspondance trouvée';
+	@override String get no_match_found_description => 'Aucune correspondance musicale n\'a été trouvée. Veuillez réessayer.';
+	@override String get error_occurred => 'Une erreur s\'est produite lors de l\'analyse de la musique. Veuillez vérifier votre connexion internet et réessayer.';
 }
 
 /// Flat map(s) containing all translations.
@@ -2533,6 +2603,21 @@ extension on Translations {
 			case 'tools.musicsearch.play_preview': return 'Play preview';
 			case 'tools.musicsearch.error.error_playing_audio_preview': return 'Error playing audio preview. Please try again later.';
 			case 'tools.musicsearch.error.unable_to_connect_to_the_api': return 'Unable to connect to the API, please check your internet connection and try again.';
+			case 'tools.musicanalyser.title': return 'Music analyser';
+			case 'tools.musicanalyser.press_the_button_to_start_music_analysis': return 'Press the button to start music analysis';
+			case 'tools.musicanalyser.loading': return 'Loading...';
+			case 'tools.musicanalyser.analyzing_music': return ({required Object remainingSeconds}) => 'Analyzing music... (${remainingSeconds}s)';
+			case 'tools.musicanalyser.getting_results': return 'Getting results...';
+			case 'tools.musicanalyser.unknown': return 'Unknown';
+			case 'tools.musicanalyser.api_used': return 'API used';
+			case 'tools.musicanalyser.this_tool_uses_the_x_api': return ({required Object service, required Object company}) => 'This tool uses the "${service}" API via a Koizeay backend server. "${service}" is a registered trademark of "${company}" and is not affiliated with this tool.';
+			case 'tools.musicanalyser.start_analyzing_music': return 'Start analyzing music';
+			case 'tools.musicanalyser.clear': return 'Clear';
+			case 'tools.musicanalyser.error.permission_denied': return 'Permission denied';
+			case 'tools.musicanalyser.error.permission_denied_description': return 'The microphone permission is required to analyze music. Please grant the permission and try again.';
+			case 'tools.musicanalyser.error.no_match_found': return 'No match found';
+			case 'tools.musicanalyser.error.no_match_found_description': return 'No music match was found. Please try again.';
+			case 'tools.musicanalyser.error.error_occurred': return 'An error occurred while analyzing the music. Please check your internet connection and try again.';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -2901,6 +2986,21 @@ extension on _StringsFr {
 			case 'tools.musicsearch.play_preview': return 'Lire l\'échantillon';
 			case 'tools.musicsearch.error.error_playing_audio_preview': return 'Erreur lors de la lecture de l\'échantillon audio. Veuillez réessayer plus tard.';
 			case 'tools.musicsearch.error.unable_to_connect_to_the_api': return 'Impossible de se connecter à l\'API, veuillez vérifier votre connexion internet et réessayer.';
+			case 'tools.musicanalyser.title': return 'Analyse de musique';
+			case 'tools.musicanalyser.press_the_button_to_start_music_analysis': return 'Appuyez sur le bouton pour démarrer l\'analyse de la musique';
+			case 'tools.musicanalyser.loading': return 'Chargement...';
+			case 'tools.musicanalyser.analyzing_music': return ({required Object remainingSeconds}) => 'Analyse de la musique... (${remainingSeconds}s)';
+			case 'tools.musicanalyser.getting_results': return 'Récupération des résultats...';
+			case 'tools.musicanalyser.unknown': return 'Inconnu';
+			case 'tools.musicanalyser.api_used': return 'API utilisée';
+			case 'tools.musicanalyser.this_tool_uses_the_x_api': return ({required Object service, required Object company}) => 'Cet outil utilise l\'API "${service}" via un serveur dorsal Koizeay. "${service}" est une marque déposée de "${company}" et n\'est pas affiliée à cet outil.';
+			case 'tools.musicanalyser.start_analyzing_music': return 'Démarrer l\'analyse de la musique';
+			case 'tools.musicanalyser.clear': return 'Effacer';
+			case 'tools.musicanalyser.error.permission_denied': return 'Permission refusée';
+			case 'tools.musicanalyser.error.permission_denied_description': return 'L\'autorisation du microphone est nécessaire pour analyser la musique. Veuillez accorder cette autorisation et réessayer.';
+			case 'tools.musicanalyser.error.no_match_found': return 'Aucune correspondance trouvée';
+			case 'tools.musicanalyser.error.no_match_found_description': return 'Aucune correspondance musicale n\'a été trouvée. Veuillez réessayer.';
+			case 'tools.musicanalyser.error.error_occurred': return 'Une erreur s\'est produite lors de l\'analyse de la musique. Veuillez vérifier votre connexion internet et réessayer.';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';
