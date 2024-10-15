@@ -18,8 +18,19 @@ You can also help by translating the app in your language.\
 
 ### Download and build the project
 To build this project you need to have [Flutter](https://flutter.dev/) installed on your computer (it's very easy).\
-Then you can clone this repository and open the Flutter project with your IDE (e.g. *Android Studio*).\
+Then you can clone this repository and open the Flutter project with your IDE (e.g. *Android Studio* or *Visual Studio Code*).\
+Now, you have to create a new file called `api_keys.dart` in the `lib/secret` folder (create it if it doesn't exist) and add the following code:
+```dart
+const MUSICANALYSER_API_KEY = 'YOUR_API_KEY';
+```
+Before running the project, you need to run this command in the terminal (in the project folder):
+```bash
+flutter pub get
+```
 Finally you can run the project on your device, on an emulator or on a simulator.
+
+
+*Warning*, some tools require an API key to work, if you want to use them while developing, you need to add your own API key in the `api_keys.dart` file.
 
 ### Add a new tool
 **Warning**, if you want to add a new tool, you need to have some knowledge in Flutter and Dart.\
