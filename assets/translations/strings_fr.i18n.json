@@ -489,7 +489,8 @@
         "permission_denied_description": "L'autorisation du microphone est nécessaire pour analyser la musique. Veuillez accorder cette autorisation et réessayer.",
         "no_match_found": "Aucune correspondance trouvée",
         "no_match_found_description": "Aucune correspondance musicale n'a été trouvée. Veuillez réessayer.",
-        "error_occurred": "Une erreur s'est produite lors de l'analyse de la musique. Veuillez vérifier votre connexion internet et réessayer."
+        "error_occurred": "Une erreur s'est produite lors de l'analyse de la musique. Veuillez vérifier votre connexion internet et réessayer.",
+        "please_update_the_app_and_try_again": "Veuillez mettre à jour l'application et réessayer. Si le problème persiste avec la dernière version, réessayez plus tard."
       }
     }
   },

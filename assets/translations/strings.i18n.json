@@ -489,7 +489,8 @@
         "permission_denied_description": "The microphone permission is required to analyze music. Please grant the permission and try again.",
         "no_match_found": "No match found",
         "no_match_found_description": "No music match was found. Please try again.",
-        "error_occurred": "An error occurred while analyzing the music. Please check your internet connection and try again."
+        "error_occurred": "An error occurred while analyzing the music. Please check your internet connection and try again.",
+        "please_update_the_app_and_try_again": "Please update the app and try again. If the problem persists with the latest version, please try again later."
       }
     }
   },

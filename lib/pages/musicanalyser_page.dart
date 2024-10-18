@@ -11,7 +11,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:toolbox/core/dialogs.dart';
 import 'package:toolbox/gen/strings.g.dart';
-import 'package:toolbox/secret/api_keys.dart';
+import 'package:toolbox/secret/musicanalyzer.dart';
 
 class MusicAnalyserPage extends StatefulWidget {
   const MusicAnalyserPage({super.key});
@@ -104,12 +104,13 @@ class _MusicAnalyserPage extends State<MusicAnalyserPage> {
   Future<StreamedResponse> getAudioData() async {
     var request = MultipartRequest('POST', Uri.parse(apiEndpoint));
 
-    request.headers["ApiKey"] = MUSICANALYSER_API_KEY;
     request.files.add(await MultipartFile.fromPath(
       'file',
       await getAudioPath(),
       contentType: MediaType('audio', 'mp4'),
     ));
+    request.headers["Authorization-Token"] = await getMusicAnalyzerApiToken(await getAudioPath());
+    request.headers["Authorization-Key"] = await getMusicAnalyzerApiKey();
     return await request.send().onError((error, stackTrace) {
       if (kDebugMode) {
         print("HTTP error: $error");
@@ -160,6 +161,16 @@ class _MusicAnalyserPage extends State<MusicAnalyserPage> {
               context,
               t.tools.musicanalyser.error.no_match_found,
               t.tools.musicanalyser.error.no_match_found_description
+          );
+        });
+      }
+    } else if (response.statusCode == 401) {
+      if (mounted) {
+        setState(() {
+          showOkTextDialog(
+              context,
+              t.generic.error,
+              t.tools.musicanalyser.error.please_update_the_app_and_try_again
           );
         });
       }

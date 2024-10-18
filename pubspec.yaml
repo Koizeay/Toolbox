@@ -81,6 +81,8 @@ dependencies:
   image_picker: ^1.0.0
   record: ^5.1.2
   http_parser: ^4.0.0
+  crypto: ^3.0.6
+  encrypt: ^5.0.3
 
 dev_dependencies:
   flutter_launcher_icons: ^0.14.1

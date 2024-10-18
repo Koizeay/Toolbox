@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 750 (375 per locale)
+/// Strings: 752 (376 per locale)
 ///
-/// Built on 2024-10-15 at 16:48 UTC
+/// Built on 2024-10-18 at 11:32 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1183,6 +1183,7 @@ class _StringsToolsMusicanalyserErrorEn {
 	String get no_match_found => 'No match found';
 	String get no_match_found_description => 'No music match was found. Please try again.';
 	String get error_occurred => 'An error occurred while analyzing the music. Please check your internet connection and try again.';
+	String get please_update_the_app_and_try_again => 'Please update the app and try again. If the problem persists with the latest version, please try again later.';
 }
 
 // Path: <root>
@@ -2244,6 +2245,7 @@ class _StringsToolsMusicanalyserErrorFr implements _StringsToolsMusicanalyserErr
 	@override String get no_match_found => 'Aucune correspondance trouvée';
 	@override String get no_match_found_description => 'Aucune correspondance musicale n\'a été trouvée. Veuillez réessayer.';
 	@override String get error_occurred => 'Une erreur s\'est produite lors de l\'analyse de la musique. Veuillez vérifier votre connexion internet et réessayer.';
+	@override String get please_update_the_app_and_try_again => 'Veuillez mettre à jour l\'application et réessayer. Si le problème persiste avec la dernière version, réessayez plus tard.';
 }
 
 /// Flat map(s) containing all translations.
@@ -2618,6 +2620,7 @@ extension on Translations {
 			case 'tools.musicanalyser.error.no_match_found': return 'No match found';
 			case 'tools.musicanalyser.error.no_match_found_description': return 'No music match was found. Please try again.';
 			case 'tools.musicanalyser.error.error_occurred': return 'An error occurred while analyzing the music. Please check your internet connection and try again.';
+			case 'tools.musicanalyser.error.please_update_the_app_and_try_again': return 'Please update the app and try again. If the problem persists with the latest version, please try again later.';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -3001,6 +3004,7 @@ extension on _StringsFr {
 			case 'tools.musicanalyser.error.no_match_found': return 'Aucune correspondance trouvée';
 			case 'tools.musicanalyser.error.no_match_found_description': return 'Aucune correspondance musicale n\'a été trouvée. Veuillez réessayer.';
 			case 'tools.musicanalyser.error.error_occurred': return 'Une erreur s\'est produite lors de l\'analyse de la musique. Veuillez vérifier votre connexion internet et réessayer.';
+			case 'tools.musicanalyser.error.please_update_the_app_and_try_again': return 'Veuillez mettre à jour l\'application et réessayer. Si le problème persiste avec la dernière version, réessayez plus tard.';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';
