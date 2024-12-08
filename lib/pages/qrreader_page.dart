@@ -94,6 +94,21 @@ class _QrReaderPage extends State<QrReaderPage> {
                 onPressed: () {
                   Navigator.pop(context);
                   _controller.start();
+                  Clipboard.setData(ClipboardData(text: capture.barcodes.first.rawValue ?? "")).then((value) {
+                    if (mounted) {
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                        content: Text(t.tools.qrreader.copied_to_clipboard),
+                        duration: const Duration(seconds: 2),
+                      ));
+                    }
+                  });
+                },
+                child: Text(t.tools.qrreader.copy)
+            ),
+            TextButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                  _controller.start();
                   launchUrlInBrowser(capture.barcodes.first.rawValue ?? "");
                 },
                 child: Text(t.tools.qrreader.openurl)
@@ -135,16 +150,44 @@ class _QrReaderPage extends State<QrReaderPage> {
             ),
           ];
           showCustomButtonsTextDialog(
-            context, "${t.tools.qrreader.scanned} (${t.tools.qrreader.wifi})",
-            "${t.tools.qrreader.wifi_ssid}\n$ssid\n\n${t.tools.qrreader
-                .wifi_password}\n$password", buttons, barrierDismissible: false,);
+            context,
+            "${t.tools.qrreader.scanned} (${t.tools.qrreader.wifi})",
+            "${t.tools.qrreader.wifi_ssid}\n$ssid\n\n${t.tools.qrreader.wifi_password}\n$password",
+            buttons,
+            barrierDismissible: false,
+          );
           break;
         default:
-          showCustomActionOkTextDialog(
+          List<TextButton> buttons = [
+            TextButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                  _controller.start();f
+                  Clipboard.setData(ClipboardData(text: capture.barcodes.first.rawValue ?? "")).then((value) {
+                    if (mounted) {
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                        content: Text(t.tools.qrreader.copied_to_clipboard),
+                        duration: const Duration(seconds: 2),
+                      ));
+                    }
+                  });
+                },
+                child: Text(t.tools.qrreader.copy)
+            ),
+            TextButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                  _controller.start();
+                },
+                child: Text(t.generic.ok)
+            ),
+          ];
+          showCustomButtonsTextDialog(
             context, t.tools.qrreader.scanned,
-            capture.barcodes.first.rawValue ?? "", () {
-            _controller.start();
-          }, barrierDismissible: false,);
+            capture.barcodes.first.rawValue ?? "",
+            buttons,
+            barrierDismissible: false,
+          );
           break;
       }
     }

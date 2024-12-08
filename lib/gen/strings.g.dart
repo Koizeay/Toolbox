@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 752 (376 per locale)
+/// Strings: 754 (377 per locale)
 ///
-/// Built on 2024-12-08 at 19:03 UTC
+/// Built on 2024-12-08 at 19:34 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -380,6 +380,7 @@ class _StringsToolsQrreaderEn {
 	String get scanned => 'Scanned';
 	String get openurl => 'Open link';
 	String get copy_password => 'Copy password';
+	String get copy => 'Copy';
 	String get copied_to_clipboard => 'Copied to clipboard';
 	String get wifi => 'WiFi';
 	String get wifi_ssid => 'SSID';
@@ -1441,7 +1442,8 @@ class _StringsToolsQrreaderFr implements _StringsToolsQrreaderEn {
 	@override String get title => 'Lecteur de QR';
 	@override String get scanned => 'Scanné';
 	@override String get openurl => 'Ouvrir le lien';
-	@override String get copy_password => 'Copy password';
+	@override String get copy_password => 'Copier le MDP';
+	@override String get copy => 'Copier';
 	@override String get copied_to_clipboard => 'Copié dans le presse-papiers';
 	@override String get wifi => 'WiFi';
 	@override String get wifi_ssid => 'SSID';
@@ -2328,6 +2330,7 @@ extension on Translations {
 			case 'tools.qrreader.scanned': return 'Scanned';
 			case 'tools.qrreader.openurl': return 'Open link';
 			case 'tools.qrreader.copy_password': return 'Copy password';
+			case 'tools.qrreader.copy': return 'Copy';
 			case 'tools.qrreader.copied_to_clipboard': return 'Copied to clipboard';
 			case 'tools.qrreader.wifi': return 'WiFi';
 			case 'tools.qrreader.wifi_ssid': return 'SSID';
@@ -2711,7 +2714,8 @@ extension on _StringsFr {
 			case 'tools.qrreader.title': return 'Lecteur de QR';
 			case 'tools.qrreader.scanned': return 'Scanné';
 			case 'tools.qrreader.openurl': return 'Ouvrir le lien';
-			case 'tools.qrreader.copy_password': return 'Copy password';
+			case 'tools.qrreader.copy_password': return 'Copier le MDP';
+			case 'tools.qrreader.copy': return 'Copier';
 			case 'tools.qrreader.copied_to_clipboard': return 'Copié dans le presse-papiers';
 			case 'tools.qrreader.wifi': return 'WiFi';
 			case 'tools.qrreader.wifi_ssid': return 'SSID';
