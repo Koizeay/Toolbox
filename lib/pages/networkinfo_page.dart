@@ -13,6 +13,8 @@ class NetworkInfoPage extends StatefulWidget {
 }
 
 class _NetworkInfoPage extends State<NetworkInfoPage> {
+  final String apiEndpoint = "https://toolbox.koizeay.com/networkinfo/ip";
+  
   String publicIpAddress = "Loading...";
   String localIpAddress = "Loading...";
   String localSubmask = "Loading...";
@@ -53,7 +55,7 @@ class _NetworkInfoPage extends State<NetworkInfoPage> {
 
   Future<void> getIpAddress() async {
     try {
-      http.Response response = await http.get(Uri.parse("https://jsonip.com/"));
+      http.Response response = await http.get(Uri.parse(apiEndpoint));
       var json = jsonDecode(response.body);
       publicIpAddress = json["ip"];
     } catch (e) {
