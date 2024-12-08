@@ -6,7 +6,7 @@
 /// Locales: 2
 /// Strings: 752 (376 per locale)
 ///
-/// Built on 2024-10-18 at 11:32 UTC
+/// Built on 2024-12-08 at 19:03 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1932,7 +1932,7 @@ class _StringsToolsMusicanalyserFr implements _StringsToolsMusicanalyserEn {
 	@override String get getting_results => 'Récupération des résultats...';
 	@override String get unknown => 'Inconnu';
 	@override String get api_used => 'API utilisée';
-	@override String this_tool_uses_the_x_api({required Object service, required Object company}) => 'Cet outil utilise l\'API "${service}" via un serveur dorsal Koizeay. "${service}" est une marque déposée de "${company}" et n\'est pas affiliée à cet outil.';
+	@override String this_tool_uses_the_x_api({required Object service, required Object company}) => 'Cet outil utilise l\'API "${service}" via un serveur backend de Koizeay. "${service}" est une marque déposée de "${company}" et n\'est pas affiliée à cet outil.';
 	@override String get start_analyzing_music => 'Démarrer l\'analyse de la musique';
 	@override String get clear => 'Effacer';
 	@override late final _StringsToolsMusicanalyserErrorFr error = _StringsToolsMusicanalyserErrorFr._(_root);
@@ -2996,7 +2996,7 @@ extension on _StringsFr {
 			case 'tools.musicanalyser.getting_results': return 'Récupération des résultats...';
 			case 'tools.musicanalyser.unknown': return 'Inconnu';
 			case 'tools.musicanalyser.api_used': return 'API utilisée';
-			case 'tools.musicanalyser.this_tool_uses_the_x_api': return ({required Object service, required Object company}) => 'Cet outil utilise l\'API "${service}" via un serveur dorsal Koizeay. "${service}" est une marque déposée de "${company}" et n\'est pas affiliée à cet outil.';
+			case 'tools.musicanalyser.this_tool_uses_the_x_api': return ({required Object service, required Object company}) => 'Cet outil utilise l\'API "${service}" via un serveur backend de Koizeay. "${service}" est une marque déposée de "${company}" et n\'est pas affiliée à cet outil.';
 			case 'tools.musicanalyser.start_analyzing_music': return 'Démarrer l\'analyse de la musique';
 			case 'tools.musicanalyser.clear': return 'Effacer';
 			case 'tools.musicanalyser.error.permission_denied': return 'Permission refusée';
