@@ -162,7 +162,7 @@ class _QrReaderPage extends State<QrReaderPage> {
             TextButton(
                 onPressed: () {
                   Navigator.pop(context);
-                  _controller.start();f
+                  _controller.start();
                   Clipboard.setData(ClipboardData(text: capture.barcodes.first.rawValue ?? "")).then((value) {
                     if (mounted) {
                       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
