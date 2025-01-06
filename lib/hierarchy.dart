@@ -29,6 +29,7 @@ import 'package:toolbox/pages/soundmeter_page.dart';
 import 'package:toolbox/pages/speedometer_page.dart';
 import 'package:toolbox/pages/stopwatch_page.dart';
 import 'package:toolbox/pages/musicanalyser_page.dart';
+import 'package:toolbox/pages/textdifferences_page.dart';
 import 'package:toolbox/pages/texttospeech_page.dart';
 import 'package:toolbox/pages/timer_page.dart';
 import 'package:toolbox/pages/timestampconverter_page.dart';
@@ -70,6 +71,7 @@ class Hierarchy {
     "speedometer": Tool(t.tools.speedometer.title, "assets/images/tools/speedometer.png", const SpeedometerPage()),
     "sshclient": Tool(t.tools.sshclient.title, "assets/images/tools/sshclient.png", const SshClientPage()),
     "stopwatch": Tool(t.tools.stopwatch.title, "assets/images/tools/stopwatch.png", const StopwatchPage()),
+    "textdifferences": Tool(t.tools.textdifferences.title, "assets/images/tools/textdifferences.png", const TextDifferencesPage()),
     "texttospeech": Tool(t.tools.texttospeech.title, "assets/images/tools/texttospeech.png", const TextToSpeechPage()),
     "timer": Tool(t.tools.timer.title, "assets/images/tools/timer.png", const TimerPage()),
     "timestampconverter": Tool(t.tools.timestampconverter.title, "assets/images/tools/timestampconverter.png", const TimestampConverterPage()),
@@ -105,6 +107,7 @@ class Hierarchy {
       toolMap["counter"],
       toolMap["fileencryption"],
       toolMap["qrreader"],
+      toolMap["textdifferences"],
       toolMap["whiteboard"],
     ]),
     Folder(t.folders.network, "assets/images/folders/folder.png", [

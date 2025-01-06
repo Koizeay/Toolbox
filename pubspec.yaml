@@ -83,6 +83,7 @@ dependencies:
   http_parser: ^4.0.0
   crypto: ^3.0.6
   encrypt: ^5.0.3
+  pretty_diff_text: ^2.0.0
 
 dev_dependencies:
   flutter_launcher_icons: ^0.14.1

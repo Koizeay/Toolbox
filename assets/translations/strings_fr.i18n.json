@@ -493,6 +493,12 @@
         "error_occurred": "Une erreur s'est produite lors de l'analyse de la musique. Veuillez vérifier votre connexion internet et réessayer.",
         "please_update_the_app_and_try_again": "Veuillez mettre à jour l'application et réessayer. Si le problème persiste avec la dernière version, réessayez plus tard."
       }
+    },
+    "textdifferences": {
+      "title": "Différences de texte",
+      "old_text": "Ancien texte",
+      "new_text": "Nouveau texte",
+      "no_text_hint": "Entrez du texte ci-dessus pour voir les différences"
     }
   },
   "credits": {

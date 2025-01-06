@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 754 (377 per locale)
+/// Strings: 762 (381 per locale)
 ///
-/// Built on 2024-12-08 at 19:34 UTC
+/// Built on 2025-01-06 at 20:00 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -249,6 +249,7 @@ class _StringsToolsEn {
 	late final _StringsToolsBitwisecalculatorEn bitwisecalculator = _StringsToolsBitwisecalculatorEn._(_root);
 	late final _StringsToolsMusicsearchEn musicsearch = _StringsToolsMusicsearchEn._(_root);
 	late final _StringsToolsMusicanalyserEn musicanalyser = _StringsToolsMusicanalyserEn._(_root);
+	late final _StringsToolsTextdifferencesEn textdifferences = _StringsToolsTextdifferencesEn._(_root);
 }
 
 // Path: credits
@@ -877,6 +878,19 @@ class _StringsToolsMusicanalyserEn {
 	late final _StringsToolsMusicanalyserErrorEn error = _StringsToolsMusicanalyserErrorEn._(_root);
 }
 
+// Path: tools.textdifferences
+class _StringsToolsTextdifferencesEn {
+	_StringsToolsTextdifferencesEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'Text differences';
+	String get old_text => 'Old text';
+	String get new_text => 'New text';
+	String get no_text_hint => 'Enter text in the fields above to see the differences';
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsEn._(this._root);
@@ -1312,6 +1326,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsBitwisecalculatorFr bitwisecalculator = _StringsToolsBitwisecalculatorFr._(_root);
 	@override late final _StringsToolsMusicsearchFr musicsearch = _StringsToolsMusicsearchFr._(_root);
 	@override late final _StringsToolsMusicanalyserFr musicanalyser = _StringsToolsMusicanalyserFr._(_root);
+	@override late final _StringsToolsTextdifferencesFr textdifferences = _StringsToolsTextdifferencesFr._(_root);
 }
 
 // Path: credits
@@ -1938,6 +1953,19 @@ class _StringsToolsMusicanalyserFr implements _StringsToolsMusicanalyserEn {
 	@override String get start_analyzing_music => 'Démarrer l\'analyse de la musique';
 	@override String get clear => 'Effacer';
 	@override late final _StringsToolsMusicanalyserErrorFr error = _StringsToolsMusicanalyserErrorFr._(_root);
+}
+
+// Path: tools.textdifferences
+class _StringsToolsTextdifferencesFr implements _StringsToolsTextdifferencesEn {
+	_StringsToolsTextdifferencesFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Différences de texte';
+	@override String get old_text => 'Ancien texte';
+	@override String get new_text => 'Nouveau texte';
+	@override String get no_text_hint => 'Entrez du texte ci-dessus pour voir les différences';
 }
 
 // Path: credits.translations
@@ -2624,6 +2652,10 @@ extension on Translations {
 			case 'tools.musicanalyser.error.no_match_found_description': return 'No music match was found. Please try again.';
 			case 'tools.musicanalyser.error.error_occurred': return 'An error occurred while analyzing the music. Please check your internet connection and try again.';
 			case 'tools.musicanalyser.error.please_update_the_app_and_try_again': return 'Please update the app and try again. If the problem persists with the latest version, please try again later.';
+			case 'tools.textdifferences.title': return 'Text differences';
+			case 'tools.textdifferences.old_text': return 'Old text';
+			case 'tools.textdifferences.new_text': return 'New text';
+			case 'tools.textdifferences.no_text_hint': return 'Enter text in the fields above to see the differences';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -3009,6 +3041,10 @@ extension on _StringsFr {
 			case 'tools.musicanalyser.error.no_match_found_description': return 'Aucune correspondance musicale n\'a été trouvée. Veuillez réessayer.';
 			case 'tools.musicanalyser.error.error_occurred': return 'Une erreur s\'est produite lors de l\'analyse de la musique. Veuillez vérifier votre connexion internet et réessayer.';
 			case 'tools.musicanalyser.error.please_update_the_app_and_try_again': return 'Veuillez mettre à jour l\'application et réessayer. Si le problème persiste avec la dernière version, réessayez plus tard.';
+			case 'tools.textdifferences.title': return 'Différences de texte';
+			case 'tools.textdifferences.old_text': return 'Ancien texte';
+			case 'tools.textdifferences.new_text': return 'Nouveau texte';
+			case 'tools.textdifferences.no_text_hint': return 'Entrez du texte ci-dessus pour voir les différences';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';
