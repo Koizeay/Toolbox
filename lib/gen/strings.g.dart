@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 762 (381 per locale)
+/// Strings: 770 (385 per locale)
 ///
-/// Built on 2025-01-06 at 20:00 UTC
+/// Built on 2025-01-14 at 09:32 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -250,6 +250,7 @@ class _StringsToolsEn {
 	late final _StringsToolsMusicsearchEn musicsearch = _StringsToolsMusicsearchEn._(_root);
 	late final _StringsToolsMusicanalyserEn musicanalyser = _StringsToolsMusicanalyserEn._(_root);
 	late final _StringsToolsTextdifferencesEn textdifferences = _StringsToolsTextdifferencesEn._(_root);
+	late final _StringsToolsCharacterscopyEn characterscopy = _StringsToolsCharacterscopyEn._(_root);
 }
 
 // Path: credits
@@ -891,6 +892,19 @@ class _StringsToolsTextdifferencesEn {
 	String get no_text_hint => 'Enter text in the fields above to see the differences';
 }
 
+// Path: tools.characterscopy
+class _StringsToolsCharacterscopyEn {
+	_StringsToolsCharacterscopyEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'Characters copy';
+	String get important => 'Important';
+	String get important_description => 'Some characters may not be displayed correctly on all devices depending on your operating system. Also, some characters may not be supported by all apps and fonts. Just click on the character you want to copy and it will be copied to your clipboard.';
+	String get copied_to_clipboard => 'Copied to clipboard';
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsEn._(this._root);
@@ -1327,6 +1341,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsMusicsearchFr musicsearch = _StringsToolsMusicsearchFr._(_root);
 	@override late final _StringsToolsMusicanalyserFr musicanalyser = _StringsToolsMusicanalyserFr._(_root);
 	@override late final _StringsToolsTextdifferencesFr textdifferences = _StringsToolsTextdifferencesFr._(_root);
+	@override late final _StringsToolsCharacterscopyFr characterscopy = _StringsToolsCharacterscopyFr._(_root);
 }
 
 // Path: credits
@@ -1966,6 +1981,19 @@ class _StringsToolsTextdifferencesFr implements _StringsToolsTextdifferencesEn {
 	@override String get old_text => 'Ancien texte';
 	@override String get new_text => 'Nouveau texte';
 	@override String get no_text_hint => 'Entrez du texte ci-dessus pour voir les différences';
+}
+
+// Path: tools.characterscopy
+class _StringsToolsCharacterscopyFr implements _StringsToolsCharacterscopyEn {
+	_StringsToolsCharacterscopyFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Copie de caractères';
+	@override String get important => 'Important';
+	@override String get important_description => 'Certains caractères peuvent ne pas s\'afficher correctement sur tous les appareils en fonction de votre système d\'exploitation. De même, certains caractères peuvent ne pas être pris en charge par toutes les applications et polices. Cliquez simplement sur le caractère que vous souhaitez copier et il sera copié dans votre presse-papiers.';
+	@override String get copied_to_clipboard => 'Copié dans le presse-papiers';
 }
 
 // Path: credits.translations
@@ -2656,6 +2684,10 @@ extension on Translations {
 			case 'tools.textdifferences.old_text': return 'Old text';
 			case 'tools.textdifferences.new_text': return 'New text';
 			case 'tools.textdifferences.no_text_hint': return 'Enter text in the fields above to see the differences';
+			case 'tools.characterscopy.title': return 'Characters copy';
+			case 'tools.characterscopy.important': return 'Important';
+			case 'tools.characterscopy.important_description': return 'Some characters may not be displayed correctly on all devices depending on your operating system. Also, some characters may not be supported by all apps and fonts. Just click on the character you want to copy and it will be copied to your clipboard.';
+			case 'tools.characterscopy.copied_to_clipboard': return 'Copied to clipboard';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -3045,6 +3077,10 @@ extension on _StringsFr {
 			case 'tools.textdifferences.old_text': return 'Ancien texte';
 			case 'tools.textdifferences.new_text': return 'Nouveau texte';
 			case 'tools.textdifferences.no_text_hint': return 'Entrez du texte ci-dessus pour voir les différences';
+			case 'tools.characterscopy.title': return 'Copie de caractères';
+			case 'tools.characterscopy.important': return 'Important';
+			case 'tools.characterscopy.important_description': return 'Certains caractères peuvent ne pas s\'afficher correctement sur tous les appareils en fonction de votre système d\'exploitation. De même, certains caractères peuvent ne pas être pris en charge par toutes les applications et polices. Cliquez simplement sur le caractère que vous souhaitez copier et il sera copié dans votre presse-papiers.';
+			case 'tools.characterscopy.copied_to_clipboard': return 'Copié dans le presse-papiers';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';

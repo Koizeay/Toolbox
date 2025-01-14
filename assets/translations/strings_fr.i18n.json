@@ -499,6 +499,12 @@
       "old_text": "Ancien texte",
       "new_text": "Nouveau texte",
       "no_text_hint": "Entrez du texte ci-dessus pour voir les différences"
+    },
+    "characterscopy": {
+      "title": "Copie de caractères",
+      "important": "Important",
+      "important_description": "Certains caractères peuvent ne pas s'afficher correctement sur tous les appareils en fonction de votre système d'exploitation. De même, certains caractères peuvent ne pas être pris en charge par toutes les applications et polices. Cliquez simplement sur le caractère que vous souhaitez copier et il sera copié dans votre presse-papiers.",
+      "copied_to_clipboard": "Copié dans le presse-papiers"
     }
   },
   "credits": {

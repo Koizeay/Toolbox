@@ -499,6 +499,12 @@
       "old_text": "Old text",
       "new_text": "New text",
       "no_text_hint": "Enter text in the fields above to see the differences"
+    },
+    "characterscopy": {
+      "title": "Characters copy",
+      "important": "Important",
+      "important_description": "Some characters may not be displayed correctly on all devices depending on your operating system. Also, some characters may not be supported by all apps and fonts. Just click on the character you want to copy and it will be copied to your clipboard.",
+      "copied_to_clipboard": "Copied to clipboard"
     }
   },
   "credits": {
