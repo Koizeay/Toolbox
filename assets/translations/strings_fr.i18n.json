@@ -505,6 +505,18 @@
       "important": "Important",
       "important_description": "Certains caractères peuvent ne pas s'afficher correctement sur tous les appareils en fonction de votre système d'exploitation. De même, certains caractères peuvent ne pas être pris en charge par toutes les applications et polices. Cliquez simplement sur le caractère que vous souhaitez copier et il sera copié dans votre presse-papiers.",
       "copied_to_clipboard": "Copié dans le presse-papiers"
+    },
+    "whoisdomain": {
+      "title": "Whois de domaine",
+      "domain_name": "Nom de domaine",
+      "whois_lookup": "Recherche Whois",
+      "disclaimer": "Avertissement",
+      "disclaimer_text": "Toolbox fournit une fonction de recherche WHOIS à des fins d'information uniquement. Les données récupérées peuvent ne pas être exactes, complètes ou à jour, et sont soumises aux conditions générales des registres de domaines respectifs. Il est interdit aux utilisateurs d'utiliser les données WHOIS à des fins de spam, à des fins illégales ou de collecter des données de manière automatisée. En utilisant cet outil, vous acceptez de vous conformer aux lois applicables et aux conditions de service du registre. Toolbox et/ou Koizeay n'assument aucune responsabilité en cas d'erreurs, d'omissions ou d'utilisation abusive des données.",
+      "loading": "Chargement...",
+      "no_result": "Aucun résultat",
+      "error": {
+        "impossible_to_get_whois_information": "Impossible d'obtenir les informations whois, veuillez vérifier votre saisie et votre connexion internet puis réessayez"
+      }
     }
   },
   "credits": {

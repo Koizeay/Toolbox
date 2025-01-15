@@ -505,6 +505,18 @@
       "important": "Important",
       "important_description": "Some characters may not be displayed correctly on all devices depending on your operating system. Also, some characters may not be supported by all apps and fonts. Just click on the character you want to copy and it will be copied to your clipboard.",
       "copied_to_clipboard": "Copied to clipboard"
+    },
+    "whoisdomain": {
+      "title": "Whois domain",
+      "domain_name": "Domain name",
+      "whois_lookup": "Whois lookup",
+      "disclaimer": "Disclaimer",
+      "disclaimer_text": "Toolbox provides WHOIS query functionality for informational purposes only. The data retrieved may not be accurate, complete, or up-to-date, and is subject to the terms and conditions of the respective domain registries. Users are prohibited from using WHOIS data for spam, unlawful purposes, or automated data collection. By using this tool, you agree to comply with applicable laws and the registry's terms of service. Toolbox and/or Koizeay assumes no responsibility for errors, omissions, or misuse of the data.",
+      "loading": "Loading...",
+      "no_result": "No result",
+      "error": {
+        "impossible_to_get_whois_information": "Impossible to get the whois information, please check your input and your internet connection then try again"
+      }
     }
   },
   "credits": {

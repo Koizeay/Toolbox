@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 770 (385 per locale)
+/// Strings: 786 (393 per locale)
 ///
-/// Built on 2025-01-14 at 09:32 UTC
+/// Built on 2025-01-15 at 13:04 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -251,6 +251,7 @@ class _StringsToolsEn {
 	late final _StringsToolsMusicanalyserEn musicanalyser = _StringsToolsMusicanalyserEn._(_root);
 	late final _StringsToolsTextdifferencesEn textdifferences = _StringsToolsTextdifferencesEn._(_root);
 	late final _StringsToolsCharacterscopyEn characterscopy = _StringsToolsCharacterscopyEn._(_root);
+	late final _StringsToolsWhoisdomainEn whoisdomain = _StringsToolsWhoisdomainEn._(_root);
 }
 
 // Path: credits
@@ -905,6 +906,23 @@ class _StringsToolsCharacterscopyEn {
 	String get copied_to_clipboard => 'Copied to clipboard';
 }
 
+// Path: tools.whoisdomain
+class _StringsToolsWhoisdomainEn {
+	_StringsToolsWhoisdomainEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'Whois domain';
+	String get domain_name => 'Domain name';
+	String get whois_lookup => 'Whois lookup';
+	String get disclaimer => 'Disclaimer';
+	String get disclaimer_text => 'Toolbox provides WHOIS query functionality for informational purposes only. The data retrieved may not be accurate, complete, or up-to-date, and is subject to the terms and conditions of the respective domain registries. Users are prohibited from using WHOIS data for spam, unlawful purposes, or automated data collection. By using this tool, you agree to comply with applicable laws and the registry\'s terms of service. Toolbox and/or Koizeay assumes no responsibility for errors, omissions, or misuse of the data.';
+	String get loading => 'Loading...';
+	String get no_result => 'No result';
+	late final _StringsToolsWhoisdomainErrorEn error = _StringsToolsWhoisdomainErrorEn._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsEn._(this._root);
@@ -1215,6 +1233,16 @@ class _StringsToolsMusicanalyserErrorEn {
 	String get please_update_the_app_and_try_again => 'Please update the app and try again. If the problem persists with the latest version, please try again later.';
 }
 
+// Path: tools.whoisdomain.error
+class _StringsToolsWhoisdomainErrorEn {
+	_StringsToolsWhoisdomainErrorEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get impossible_to_get_whois_information => 'Impossible to get the whois information, please check your input and your internet connection then try again';
+}
+
 // Path: <root>
 class _StringsFr implements Translations {
 	/// You can call this constructor and build your own translation instance of this locale.
@@ -1342,6 +1370,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsMusicanalyserFr musicanalyser = _StringsToolsMusicanalyserFr._(_root);
 	@override late final _StringsToolsTextdifferencesFr textdifferences = _StringsToolsTextdifferencesFr._(_root);
 	@override late final _StringsToolsCharacterscopyFr characterscopy = _StringsToolsCharacterscopyFr._(_root);
+	@override late final _StringsToolsWhoisdomainFr whoisdomain = _StringsToolsWhoisdomainFr._(_root);
 }
 
 // Path: credits
@@ -1996,6 +2025,23 @@ class _StringsToolsCharacterscopyFr implements _StringsToolsCharacterscopyEn {
 	@override String get copied_to_clipboard => 'Copié dans le presse-papiers';
 }
 
+// Path: tools.whoisdomain
+class _StringsToolsWhoisdomainFr implements _StringsToolsWhoisdomainEn {
+	_StringsToolsWhoisdomainFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Whois de domaine';
+	@override String get domain_name => 'Nom de domaine';
+	@override String get whois_lookup => 'Recherche Whois';
+	@override String get disclaimer => 'Avertissement';
+	@override String get disclaimer_text => 'Toolbox fournit une fonction de recherche WHOIS à des fins d\'information uniquement. Les données récupérées peuvent ne pas être exactes, complètes ou à jour, et sont soumises aux conditions générales des registres de domaines respectifs. Il est interdit aux utilisateurs d\'utiliser les données WHOIS à des fins de spam, à des fins illégales ou de collecter des données de manière automatisée. En utilisant cet outil, vous acceptez de vous conformer aux lois applicables et aux conditions de service du registre. Toolbox et/ou Koizeay n\'assument aucune responsabilité en cas d\'erreurs, d\'omissions ou d\'utilisation abusive des données.';
+	@override String get loading => 'Chargement...';
+	@override String get no_result => 'Aucun résultat';
+	@override late final _StringsToolsWhoisdomainErrorFr error = _StringsToolsWhoisdomainErrorFr._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsFr implements _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsFr._(this._root);
@@ -2304,6 +2350,16 @@ class _StringsToolsMusicanalyserErrorFr implements _StringsToolsMusicanalyserErr
 	@override String get no_match_found_description => 'Aucune correspondance musicale n\'a été trouvée. Veuillez réessayer.';
 	@override String get error_occurred => 'Une erreur s\'est produite lors de l\'analyse de la musique. Veuillez vérifier votre connexion internet et réessayer.';
 	@override String get please_update_the_app_and_try_again => 'Veuillez mettre à jour l\'application et réessayer. Si le problème persiste avec la dernière version, réessayez plus tard.';
+}
+
+// Path: tools.whoisdomain.error
+class _StringsToolsWhoisdomainErrorFr implements _StringsToolsWhoisdomainErrorEn {
+	_StringsToolsWhoisdomainErrorFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get impossible_to_get_whois_information => 'Impossible d\'obtenir les informations whois, veuillez vérifier votre saisie et votre connexion internet puis réessayez';
 }
 
 /// Flat map(s) containing all translations.
@@ -2688,6 +2744,14 @@ extension on Translations {
 			case 'tools.characterscopy.important': return 'Important';
 			case 'tools.characterscopy.important_description': return 'Some characters may not be displayed correctly on all devices depending on your operating system. Also, some characters may not be supported by all apps and fonts. Just click on the character you want to copy and it will be copied to your clipboard.';
 			case 'tools.characterscopy.copied_to_clipboard': return 'Copied to clipboard';
+			case 'tools.whoisdomain.title': return 'Whois domain';
+			case 'tools.whoisdomain.domain_name': return 'Domain name';
+			case 'tools.whoisdomain.whois_lookup': return 'Whois lookup';
+			case 'tools.whoisdomain.disclaimer': return 'Disclaimer';
+			case 'tools.whoisdomain.disclaimer_text': return 'Toolbox provides WHOIS query functionality for informational purposes only. The data retrieved may not be accurate, complete, or up-to-date, and is subject to the terms and conditions of the respective domain registries. Users are prohibited from using WHOIS data for spam, unlawful purposes, or automated data collection. By using this tool, you agree to comply with applicable laws and the registry\'s terms of service. Toolbox and/or Koizeay assumes no responsibility for errors, omissions, or misuse of the data.';
+			case 'tools.whoisdomain.loading': return 'Loading...';
+			case 'tools.whoisdomain.no_result': return 'No result';
+			case 'tools.whoisdomain.error.impossible_to_get_whois_information': return 'Impossible to get the whois information, please check your input and your internet connection then try again';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -3081,6 +3145,14 @@ extension on _StringsFr {
 			case 'tools.characterscopy.important': return 'Important';
 			case 'tools.characterscopy.important_description': return 'Certains caractères peuvent ne pas s\'afficher correctement sur tous les appareils en fonction de votre système d\'exploitation. De même, certains caractères peuvent ne pas être pris en charge par toutes les applications et polices. Cliquez simplement sur le caractère que vous souhaitez copier et il sera copié dans votre presse-papiers.';
 			case 'tools.characterscopy.copied_to_clipboard': return 'Copié dans le presse-papiers';
+			case 'tools.whoisdomain.title': return 'Whois de domaine';
+			case 'tools.whoisdomain.domain_name': return 'Nom de domaine';
+			case 'tools.whoisdomain.whois_lookup': return 'Recherche Whois';
+			case 'tools.whoisdomain.disclaimer': return 'Avertissement';
+			case 'tools.whoisdomain.disclaimer_text': return 'Toolbox fournit une fonction de recherche WHOIS à des fins d\'information uniquement. Les données récupérées peuvent ne pas être exactes, complètes ou à jour, et sont soumises aux conditions générales des registres de domaines respectifs. Il est interdit aux utilisateurs d\'utiliser les données WHOIS à des fins de spam, à des fins illégales ou de collecter des données de manière automatisée. En utilisant cet outil, vous acceptez de vous conformer aux lois applicables et aux conditions de service du registre. Toolbox et/ou Koizeay n\'assument aucune responsabilité en cas d\'erreurs, d\'omissions ou d\'utilisation abusive des données.';
+			case 'tools.whoisdomain.loading': return 'Chargement...';
+			case 'tools.whoisdomain.no_result': return 'Aucun résultat';
+			case 'tools.whoisdomain.error.impossible_to_get_whois_information': return 'Impossible d\'obtenir les informations whois, veuillez vérifier votre saisie et votre connexion internet puis réessayez';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';

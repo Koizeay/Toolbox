@@ -37,6 +37,7 @@ import 'package:toolbox/pages/timestampconverter_page.dart';
 import 'package:toolbox/pages/urlshortener_page.dart';
 import 'package:toolbox/pages/uuidgenerator_page.dart';
 import 'package:toolbox/pages/whiteboard_page.dart';
+import 'package:toolbox/pages/whoisdomain_page.dart';
 import 'package:toolbox/pages/youtubethumbnail_page.dart';
 
 import 'models/home_tool.dart';
@@ -80,6 +81,7 @@ class Hierarchy {
     "urlshortener": Tool(t.tools.urlshortener.title, "assets/images/tools/urlshortener.png", const UrlShortenerPage()),
     "uuidgenerator": Tool(t.tools.uuidgenerator.title, "assets/images/tools/uuidgenerator.png", const UuidGeneratorPage()),
     "whiteboard": Tool(t.tools.whiteboard.title, "assets/images/tools/whiteboard.png", const WhiteBoardPage()),
+    "whoisdomain": Tool(t.tools.whoisdomain.title, "assets/images/tools/whoisdomain.png", const WhoisDomainPage()),
     "youtubethumbnail": Tool(t.tools.youtubethumbnail.title, "assets/images/tools/youtubethumbnail.png", const YouTubeThumbnailPage())
   };
 
@@ -120,6 +122,7 @@ class Hierarchy {
       toolMap["nslookup"],
       toolMap["ping"],
       toolMap["sshclient"],
+      toolMap["whoisdomain"],
     ]),
     Folder(t.folders.random, "assets/images/folders/folder.png", [
       toolMap["flipcoins"],
