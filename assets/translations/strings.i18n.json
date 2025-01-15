@@ -514,8 +514,12 @@
       "disclaimer_text": "Toolbox provides WHOIS query functionality for informational purposes only. The data retrieved may not be accurate, complete, or up-to-date, and is subject to the terms and conditions of the respective domain registries. Users are prohibited from using WHOIS data for spam, unlawful purposes, or automated data collection. By using this tool, you agree to comply with applicable laws and the registry's terms of service. Toolbox and/or Koizeay assumes no responsibility for errors, omissions, or misuse of the data.",
       "loading": "Loading...",
       "no_result": "No result",
+      "unsupported_tld": "Unsupported TLD",
+      "unsupported_tlds_description": "The TLD of the domain you entered may not be supported by this tool. Please try again with a different domain\n\nHere is some unsupported TLDs at the moment:\n$unsupportedTlds",
+      "may_not_support_tld": "The TLD may not be supported",
       "error": {
-        "impossible_to_get_whois_information": "Impossible to get the whois information, please check your input and your internet connection then try again"
+        "impossible_to_get_whois_information": "Impossible to get the whois information, please check your input and your internet connection then try again",
+        "impossible_to_get_unsupported_tlds": "Impossible to get the list of unsupported TLDs, please check your internet connection and try again"
       }
     }
   },

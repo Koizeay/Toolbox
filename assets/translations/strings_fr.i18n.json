@@ -514,8 +514,12 @@
       "disclaimer_text": "Toolbox fournit une fonction de recherche WHOIS à des fins d'information uniquement. Les données récupérées peuvent ne pas être exactes, complètes ou à jour, et sont soumises aux conditions générales des registres de domaines respectifs. Il est interdit aux utilisateurs d'utiliser les données WHOIS à des fins de spam, à des fins illégales ou de collecter des données de manière automatisée. En utilisant cet outil, vous acceptez de vous conformer aux lois applicables et aux conditions de service du registre. Toolbox et/ou Koizeay n'assument aucune responsabilité en cas d'erreurs, d'omissions ou d'utilisation abusive des données.",
       "loading": "Chargement...",
       "no_result": "Aucun résultat",
+      "unsupported_tld": "TLD non pris en charge",
+      "unsupported_tlds_description": "Le TLD du domaine que vous avez saisi peut ne pas être pris en charge par cet outil. Veuillez réessayer avec un autre domaine\n\nVoici quelques TLD non pris en charge actuellement :\n$unsupportedTlds",
+      "may_not_support_tld": "Le TLD peut ne pas être pris en charge",
       "error": {
-        "impossible_to_get_whois_information": "Impossible d'obtenir les informations whois, veuillez vérifier votre saisie et votre connexion internet puis réessayez"
+        "impossible_to_get_whois_information": "Impossible d'obtenir les informations whois, veuillez vérifier votre saisie et votre connexion internet puis réessayez",
+        "impossible_to_get_unsupported_tlds": "Impossible d'obtenir la liste des TLD non pris en charge, veuillez vérifier votre connexion internet et réessayer"
       }
     }
   },

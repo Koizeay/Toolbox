@@ -17,6 +17,7 @@ class _WhoisDomainPage extends State<WhoisDomainPage> {
 
   final TextEditingController _domainController = TextEditingController();
   final String _whoisServerApi = "https://toolbox.koizeay.com/whoisdomain/query?domain=";
+  final String _whoisServerApiUnsupportedTldsEndpoint = "https://toolbox.koizeay.com/whoisdomain/unsupportedtlds";
   List<Map<String, String>>? whoisResult;
   bool isLoading = false;
 
@@ -80,6 +81,34 @@ class _WhoisDomainPage extends State<WhoisDomainPage> {
     }
   }
 
+  Future<void> showUnsupportedTldsDialog() async {
+    http.Response response = await http.get(
+        Uri.parse(_whoisServerApiUnsupportedTldsEndpoint)).onError((error,
+        stackTrace) {
+      return http.Response("Error", 500);
+    });
+    if (response.statusCode == 200) {
+      List<dynamic> jsonBody = jsonDecode(response.body);
+      String unsupportedTlds = jsonBody.join(", ");
+      if (mounted) {
+        showOkTextDialog(
+            context,
+            t.tools.whoisdomain.unsupported_tld,
+            t.tools.whoisdomain.unsupported_tlds_description(
+                unsupportedTlds: unsupportedTlds)
+        );
+      }
+    } else {
+      if (mounted) {
+        showOkTextDialog(
+            context,
+            t.generic.error,
+            t.tools.whoisdomain.error.impossible_to_get_unsupported_tlds
+        );
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -132,9 +161,25 @@ class _WhoisDomainPage extends State<WhoisDomainPage> {
                           child: SizedBox(
                             width: double.infinity,
                             child: whoisResult == null
-                                ? Text(isLoading ? t.tools.whoisdomain.loading : "")
+                                ? Text(
+                                isLoading ? t.tools.whoisdomain.loading : "")
                                 : whoisResult!.isEmpty
-                                ? Text(t.tools.whoisdomain.no_result, style: TextStyle(fontWeight: FontWeight.bold))
+                                ? Column(
+                              children: [
+                                Text(
+                                    t.tools.whoisdomain.no_result,
+                                    style: const TextStyle(
+                                        fontWeight: FontWeight.bold)
+                                ),
+                                TextButton(
+                                  onPressed: () {
+                                    showUnsupportedTldsDialog();
+                                  },
+                                  child: Text(
+                                      t.tools.whoisdomain.may_not_support_tld),
+                                )
+                              ],
+                            )
                                 : Column(
                               children: [
                                 const Divider(
