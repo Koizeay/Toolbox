@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 794 (397 per locale)
+/// Strings: 790 (395 per locale)
 ///
-/// Built on 2025-01-15 at 19:21 UTC
+/// Built on 2025-01-16 at 18:33 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -917,12 +917,11 @@ class _StringsToolsWhoisdomainEn {
 	String get domain_name => 'Domain name';
 	String get whois_lookup => 'Whois lookup';
 	String get disclaimer => 'Disclaimer';
-	String get disclaimer_text => 'Toolbox provides WHOIS query functionality for informational purposes only. The data retrieved may not be accurate, complete, or up-to-date, and is subject to the terms and conditions of the respective domain registries. Users are prohibited from using WHOIS data for spam, unlawful purposes, or automated data collection. By using this tool, you agree to comply with applicable laws and the registry\'s terms of service. Toolbox and/or Koizeay assumes no responsibility for errors, omissions, or misuse of the data.';
+	String get disclaimer_text => 'Toolbox provides WHOIS query functionality for informational purposes only. The data retrieved may not be accurate, complete, or up-to-date, and is subject to the terms and conditions of the respective domain registries. Users are prohibited from using WHOIS data for spam, unlawful purposes, or automated data collection. By using this tool, you agree to comply with applicable laws and the registry\'s terms of service. Toolbox and/or Koizeay assumes no responsibility for errors, omissions, or misuse of the data. Please note that some TLDs may not be supported by this tool.';
 	String get loading => 'Loading...';
-	String get no_result => 'No result';
-	String get unsupported_tld => 'Unsupported TLD';
-	String unsupported_tlds_description({required Object unsupportedTlds}) => 'The TLD of the domain you entered may not be supported by this tool. Please try again with a different domain\n\nHere is some unsupported TLDs at the moment:\n${unsupportedTlds}';
-	String get may_not_support_tld => 'The TLD may not be supported';
+	String get no_result => 'No valid result found';
+	String get view_pretty => 'View pretty';
+	String get view_raw => 'View raw';
 	late final _StringsToolsWhoisdomainErrorEn error = _StringsToolsWhoisdomainErrorEn._(_root);
 }
 
@@ -1244,7 +1243,6 @@ class _StringsToolsWhoisdomainErrorEn {
 
 	// Translations
 	String get impossible_to_get_whois_information => 'Impossible to get the whois information, please check your input and your internet connection then try again';
-	String get impossible_to_get_unsupported_tlds => 'Impossible to get the list of unsupported TLDs, please check your internet connection and try again';
 }
 
 // Path: <root>
@@ -2040,12 +2038,11 @@ class _StringsToolsWhoisdomainFr implements _StringsToolsWhoisdomainEn {
 	@override String get domain_name => 'Nom de domaine';
 	@override String get whois_lookup => 'Recherche Whois';
 	@override String get disclaimer => 'Avertissement';
-	@override String get disclaimer_text => 'Toolbox fournit une fonction de recherche WHOIS à des fins d\'information uniquement. Les données récupérées peuvent ne pas être exactes, complètes ou à jour, et sont soumises aux conditions générales des registres de domaines respectifs. Il est interdit aux utilisateurs d\'utiliser les données WHOIS à des fins de spam, à des fins illégales ou de collecter des données de manière automatisée. En utilisant cet outil, vous acceptez de vous conformer aux lois applicables et aux conditions de service du registre. Toolbox et/ou Koizeay n\'assument aucune responsabilité en cas d\'erreurs, d\'omissions ou d\'utilisation abusive des données.';
+	@override String get disclaimer_text => 'Toolbox fournit une fonction de recherche WHOIS à des fins d\'information uniquement. Les données récupérées peuvent ne pas être exactes, complètes ou à jour, et sont soumises aux conditions générales des registres de domaines respectifs. Il est interdit aux utilisateurs d\'utiliser les données WHOIS à des fins de spam, à des fins illégales ou de collecter des données de manière automatisée. En utilisant cet outil, vous acceptez de vous conformer aux lois applicables et aux conditions de service du registre. Toolbox et/ou Koizeay n\'assument aucune responsabilité en cas d\'erreurs, d\'omissions ou d\'utilisation abusive des données. Veuillez noter que certains TLD peuvent ne pas être pris en charge par cet outil.';
 	@override String get loading => 'Chargement...';
-	@override String get no_result => 'Aucun résultat';
-	@override String get unsupported_tld => 'TLD non pris en charge';
-	@override String unsupported_tlds_description({required Object unsupportedTlds}) => 'Le TLD du domaine que vous avez saisi peut ne pas être pris en charge par cet outil. Veuillez réessayer avec un autre domaine\n\nVoici quelques TLD non pris en charge actuellement :\n${unsupportedTlds}';
-	@override String get may_not_support_tld => 'Le TLD peut ne pas être pris en charge';
+	@override String get no_result => 'Aucun résultat valide trouvé';
+	@override String get view_pretty => 'Vue formatée';
+	@override String get view_raw => 'Vue brute';
 	@override late final _StringsToolsWhoisdomainErrorFr error = _StringsToolsWhoisdomainErrorFr._(_root);
 }
 
@@ -2367,7 +2364,6 @@ class _StringsToolsWhoisdomainErrorFr implements _StringsToolsWhoisdomainErrorEn
 
 	// Translations
 	@override String get impossible_to_get_whois_information => 'Impossible d\'obtenir les informations whois, veuillez vérifier votre saisie et votre connexion internet puis réessayez';
-	@override String get impossible_to_get_unsupported_tlds => 'Impossible d\'obtenir la liste des TLD non pris en charge, veuillez vérifier votre connexion internet et réessayer';
 }
 
 /// Flat map(s) containing all translations.
@@ -2756,14 +2752,12 @@ extension on Translations {
 			case 'tools.whoisdomain.domain_name': return 'Domain name';
 			case 'tools.whoisdomain.whois_lookup': return 'Whois lookup';
 			case 'tools.whoisdomain.disclaimer': return 'Disclaimer';
-			case 'tools.whoisdomain.disclaimer_text': return 'Toolbox provides WHOIS query functionality for informational purposes only. The data retrieved may not be accurate, complete, or up-to-date, and is subject to the terms and conditions of the respective domain registries. Users are prohibited from using WHOIS data for spam, unlawful purposes, or automated data collection. By using this tool, you agree to comply with applicable laws and the registry\'s terms of service. Toolbox and/or Koizeay assumes no responsibility for errors, omissions, or misuse of the data.';
+			case 'tools.whoisdomain.disclaimer_text': return 'Toolbox provides WHOIS query functionality for informational purposes only. The data retrieved may not be accurate, complete, or up-to-date, and is subject to the terms and conditions of the respective domain registries. Users are prohibited from using WHOIS data for spam, unlawful purposes, or automated data collection. By using this tool, you agree to comply with applicable laws and the registry\'s terms of service. Toolbox and/or Koizeay assumes no responsibility for errors, omissions, or misuse of the data. Please note that some TLDs may not be supported by this tool.';
 			case 'tools.whoisdomain.loading': return 'Loading...';
-			case 'tools.whoisdomain.no_result': return 'No result';
-			case 'tools.whoisdomain.unsupported_tld': return 'Unsupported TLD';
-			case 'tools.whoisdomain.unsupported_tlds_description': return ({required Object unsupportedTlds}) => 'The TLD of the domain you entered may not be supported by this tool. Please try again with a different domain\n\nHere is some unsupported TLDs at the moment:\n${unsupportedTlds}';
-			case 'tools.whoisdomain.may_not_support_tld': return 'The TLD may not be supported';
+			case 'tools.whoisdomain.no_result': return 'No valid result found';
+			case 'tools.whoisdomain.view_pretty': return 'View pretty';
+			case 'tools.whoisdomain.view_raw': return 'View raw';
 			case 'tools.whoisdomain.error.impossible_to_get_whois_information': return 'Impossible to get the whois information, please check your input and your internet connection then try again';
-			case 'tools.whoisdomain.error.impossible_to_get_unsupported_tlds': return 'Impossible to get the list of unsupported TLDs, please check your internet connection and try again';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -3161,14 +3155,12 @@ extension on _StringsFr {
 			case 'tools.whoisdomain.domain_name': return 'Nom de domaine';
 			case 'tools.whoisdomain.whois_lookup': return 'Recherche Whois';
 			case 'tools.whoisdomain.disclaimer': return 'Avertissement';
-			case 'tools.whoisdomain.disclaimer_text': return 'Toolbox fournit une fonction de recherche WHOIS à des fins d\'information uniquement. Les données récupérées peuvent ne pas être exactes, complètes ou à jour, et sont soumises aux conditions générales des registres de domaines respectifs. Il est interdit aux utilisateurs d\'utiliser les données WHOIS à des fins de spam, à des fins illégales ou de collecter des données de manière automatisée. En utilisant cet outil, vous acceptez de vous conformer aux lois applicables et aux conditions de service du registre. Toolbox et/ou Koizeay n\'assument aucune responsabilité en cas d\'erreurs, d\'omissions ou d\'utilisation abusive des données.';
+			case 'tools.whoisdomain.disclaimer_text': return 'Toolbox fournit une fonction de recherche WHOIS à des fins d\'information uniquement. Les données récupérées peuvent ne pas être exactes, complètes ou à jour, et sont soumises aux conditions générales des registres de domaines respectifs. Il est interdit aux utilisateurs d\'utiliser les données WHOIS à des fins de spam, à des fins illégales ou de collecter des données de manière automatisée. En utilisant cet outil, vous acceptez de vous conformer aux lois applicables et aux conditions de service du registre. Toolbox et/ou Koizeay n\'assument aucune responsabilité en cas d\'erreurs, d\'omissions ou d\'utilisation abusive des données. Veuillez noter que certains TLD peuvent ne pas être pris en charge par cet outil.';
 			case 'tools.whoisdomain.loading': return 'Chargement...';
-			case 'tools.whoisdomain.no_result': return 'Aucun résultat';
-			case 'tools.whoisdomain.unsupported_tld': return 'TLD non pris en charge';
-			case 'tools.whoisdomain.unsupported_tlds_description': return ({required Object unsupportedTlds}) => 'Le TLD du domaine que vous avez saisi peut ne pas être pris en charge par cet outil. Veuillez réessayer avec un autre domaine\n\nVoici quelques TLD non pris en charge actuellement :\n${unsupportedTlds}';
-			case 'tools.whoisdomain.may_not_support_tld': return 'Le TLD peut ne pas être pris en charge';
+			case 'tools.whoisdomain.no_result': return 'Aucun résultat valide trouvé';
+			case 'tools.whoisdomain.view_pretty': return 'Vue formatée';
+			case 'tools.whoisdomain.view_raw': return 'Vue brute';
 			case 'tools.whoisdomain.error.impossible_to_get_whois_information': return 'Impossible d\'obtenir les informations whois, veuillez vérifier votre saisie et votre connexion internet puis réessayez';
-			case 'tools.whoisdomain.error.impossible_to_get_unsupported_tlds': return 'Impossible d\'obtenir la liste des TLD non pris en charge, veuillez vérifier votre connexion internet et réessayer';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';

@@ -1,8 +1,8 @@
 
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
 import 'package:toolbox/core/dialogs.dart';
 import 'package:toolbox/gen/strings.g.dart';
 
@@ -16,32 +16,108 @@ class WhoisDomainPage extends StatefulWidget {
 class _WhoisDomainPage extends State<WhoisDomainPage> {
 
   final TextEditingController _domainController = TextEditingController();
-  final String _whoisServerApi = "https://toolbox.koizeay.com/whoisdomain/query?domain=";
-  final String _whoisServerApiUnsupportedTldsEndpoint = "https://toolbox.koizeay.com/whoisdomain/unsupportedtlds";
-  List<Map<String, String>>? whoisResult;
-  bool isLoading = false;
 
-  List<Map<String, String>> cleanupWhoisResult(String result) {
-    Map<String, dynamic> json = jsonDecode(result);
-    if (json["result"] == null) {
-      return [];
-    } else {
-      List<Map<String, String>> whoisResult = [];
-      json["result"].forEach((key, value) {
-        if (value is List) {
-          value = value.join("\n");
-        }
-        if (value == null) {
-          return;
-        }
-        whoisResult.add(
-            {key.toString().replaceAll("_", " ").toUpperCase(): value});
-      });
-      return whoisResult;
+  final String ianaWhoisServer = 'whois.iana.org';
+
+  List<Map<String, String>>? whoisResult;
+  String whoisResultRawString = "";
+
+  bool isLoading = false;
+  bool isRawView = false;
+
+  Future<String?> getWhoisServer(String tld) async {
+    final Socket socket = await Socket.connect(ianaWhoisServer, 43);
+    socket.write('$tld\r\n');
+
+    final StringBuffer responseBuffer = StringBuffer();
+    await socket.listen((List<int> data) {
+      responseBuffer.write(utf8.decode(data));
+    }).asFuture();
+    socket.destroy();
+
+    final String response = responseBuffer.toString();
+    final List<String> lines = response.split('\n');
+
+    for (final String line in lines) {
+      if (line.startsWith('whois:')) {
+        return line.split(':')[1].trim();
+      }
     }
+
+    return null;
   }
 
-  Future<void> whoisLookup() async {
+  Future<String> whois(String domain, {int port = 43}) async {
+    final String tld = domain.split('.').last;
+    final String? server = await getWhoisServer(tld);
+    if (server == null) {
+      return '';
+    }
+
+    final Socket socket = await Socket.connect(server, port);
+    socket.write('$domain\r\n');
+
+    final StringBuffer responseBuffer = StringBuffer();
+
+    await socket.listen((List<int> data) {
+      responseBuffer.write(utf8.decode(data));
+    }).asFuture();
+
+    socket.destroy();
+
+    return responseBuffer.toString();
+  }
+
+  List<Map<String, String>> cleanupWhoisResult(String result) {
+    result = result.replaceAll("\r", "");
+    final List<String> lines = result.split('\n');
+    final List<Map<String, String>> cleanedResult = [];
+
+    String currentKey = "";
+    String currentValue = "";
+
+    for (int i = 0; i < lines.length; i++) {
+      lines[i] = lines[i].trim();
+      if (lines[i].startsWith(">>>")) {
+        break;
+      }
+      if (lines[i].isEmpty || lines[i].startsWith('%') ||
+          lines[i].startsWith('#')) {
+        continue;
+      } else {
+        currentKey = lines[i]
+            .split(": ")
+            .first
+            .trim();
+        currentValue = lines[i].split(": ").sublist(1).join(": ").trim();
+        if (currentValue.isEmpty) {
+          if (lines[i].endsWith(":")) {
+            currentKey = lines[i].substring(0, lines[i].length - 1);
+            currentValue = "";
+            while (i + 1 < lines.length &&
+                (lines[i + 1].isEmpty || !lines[i + 1].contains(":"))) {
+              currentValue += "${lines[i + 1].trim()}\n";
+              i++;
+            }
+          }
+        }
+      }
+      if (currentValue.endsWith("\n")) {
+        currentValue =
+            currentValue.substring(0, currentValue.length - 1).trim();
+      }
+      if (currentValue
+          .trim()
+          .isEmpty) {
+        continue;
+      }
+      currentKey = currentKey[0].toUpperCase() + currentKey.substring(1);
+      cleanedResult.add({currentKey: currentValue});
+    }
+    return cleanedResult;
+  }
+
+  Future<void> whoisLookupButtonPressed() async {
     final String domain = _domainController.text.trim();
     if (domain.isEmpty) {
       return;
@@ -50,62 +126,30 @@ class _WhoisDomainPage extends State<WhoisDomainPage> {
     if (mounted) {
       setState(() {
         whoisResult = null;
+        whoisResultRawString = "";
         isLoading = true;
       });
     }
 
-    final String url = "$_whoisServerApi$domain";
-    http.Response response = await http.get(Uri.parse(url)).onError((error,
-        stackTrace) {
-      return http.Response("Error", 500);
-    });
-    if (response.statusCode == 200) {
+    try {
+      whoisResultRawString = await whois(domain);
       if (mounted) {
         setState(() {
-          whoisResult = cleanupWhoisResult(response.body);
+          whoisResult = cleanupWhoisResult(whoisResultRawString);
         });
       }
-    } else {
+    } catch (e) {
       if (mounted) {
-        showOkTextDialog(
-            context,
-            t.generic.error,
-            t.tools.whoisdomain.error.impossible_to_get_whois_information
-        );
+        setState(() {
+          whoisResult = [];
+        });
       }
     }
+
     if (mounted) {
       setState(() {
         isLoading = false;
       });
-    }
-  }
-
-  Future<void> showUnsupportedTldsDialog() async {
-    http.Response response = await http.get(
-        Uri.parse(_whoisServerApiUnsupportedTldsEndpoint)).onError((error,
-        stackTrace) {
-      return http.Response("Error", 500);
-    });
-    if (response.statusCode == 200) {
-      List<dynamic> jsonBody = jsonDecode(response.body);
-      String unsupportedTlds = jsonBody.join(", ");
-      if (mounted) {
-        showOkTextDialog(
-            context,
-            t.tools.whoisdomain.unsupported_tld,
-            t.tools.whoisdomain.unsupported_tlds_description(
-                unsupportedTlds: unsupportedTlds)
-        );
-      }
-    } else {
-      if (mounted) {
-        showOkTextDialog(
-            context,
-            t.generic.error,
-            t.tools.whoisdomain.error.impossible_to_get_unsupported_tlds
-        );
-      }
     }
   }
 
@@ -129,6 +173,19 @@ class _WhoisDomainPage extends State<WhoisDomainPage> {
                       t.tools.whoisdomain.disclaimer_text
                   );
                 },
+              ),
+              IconButton(
+                icon: Icon(isRawView ? Icons.table_rows_outlined : Icons
+                    .notes_outlined),
+                tooltip: isRawView ? t.tools.whoisdomain.view_pretty : t.tools
+                    .whoisdomain.view_raw,
+                onPressed: () {
+                  if (mounted) {
+                    setState(() {
+                      isRawView = !isRawView;
+                    });
+                  }
+                },
               )
             ],
           ),
@@ -151,33 +208,34 @@ class _WhoisDomainPage extends State<WhoisDomainPage> {
                           width: double.infinity,
                           child: FilledButton(
                               onPressed: () {
-                                whoisLookup();
+                                whoisLookupButtonPressed();
                               },
                               child: Text(t.tools.whoisdomain.whois_lookup)
                           ),
                         ),
-                        Padding(
+                        !isRawView ? Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: SizedBox(
                             width: double.infinity,
                             child: whoisResult == null
                                 ? Text(
-                                isLoading ? t.tools.whoisdomain.loading : "")
+                                isLoading ? t.tools.whoisdomain.loading : "",
+                                textAlign: TextAlign.center,
+                                style: const TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                )
+                            )
                                 : whoisResult!.isEmpty
                                 ? Column(
                               children: [
-                                Text(
-                                    t.tools.whoisdomain.no_result,
-                                    style: const TextStyle(
-                                        fontWeight: FontWeight.bold)
-                                ),
-                                TextButton(
-                                  onPressed: () {
-                                    showUnsupportedTldsDialog();
-                                  },
+                                SizedBox(
                                   child: Text(
-                                      t.tools.whoisdomain.may_not_support_tld),
-                                )
+                                      t.tools.whoisdomain.no_result,
+                                      style: const TextStyle(
+                                          fontWeight: FontWeight.bold
+                                      )
+                                  ),
+                                ),
                               ],
                             )
                                 : Column(
@@ -228,6 +286,50 @@ class _WhoisDomainPage extends State<WhoisDomainPage> {
                                       }).toList(),
                                     );
                                   }).toList(),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ) : Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: SizedBox(
+                            width: double.infinity,
+                            child: whoisResult == null
+                                ? Text(
+                                isLoading ? t.tools.whoisdomain.loading : "",
+                                textAlign: TextAlign.center,
+                                style: const TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                )
+                            )
+                                : whoisResultRawString.isEmpty
+                                ? Column(
+                              children: [
+                                SizedBox(
+                                  child: Text(
+                                      t.tools.whoisdomain.no_result,
+                                      style: const TextStyle(
+                                          fontWeight: FontWeight.bold
+                                      )
+                                  ),
+                                ),
+                              ],
+                            )
+                                : Column(
+                              children: [
+                                const Divider(
+                                  thickness: 0.5,
+                                  color: Colors.grey,
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.fromLTRB(
+                                      0, 16, 0, 0),
+                                  child: Text(
+                                    whoisResultRawString,
+                                    style: const TextStyle(
+                                        color: Colors.grey
+                                    ),
+                                  ),
                                 ),
                               ],
                             ),
