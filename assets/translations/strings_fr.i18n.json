@@ -519,6 +519,21 @@
       "error": {
         "impossible_to_get_whois_information": "Impossible d'obtenir les informations whois, veuillez vérifier votre saisie et votre connexion internet puis réessayez"
       }
+    },
+    "textcounter": {
+      "title": "Compteur de texte",
+      "clear": "Effacer",
+      "enter_text_here": "Entrez du texte",
+      "length": "Longueur",
+      "trimmed_length": "Longueur tronquée",
+      "raw_length": "Longueur brute",
+      "letters": "Lettres",
+      "words": "Mots",
+      "spaces": "Espaces",
+      "digits": "Chiffres",
+      "lines": "Lignes",
+      "empty_lines": "Lignes vides",
+      "total_lines": "Total de lignes"
     }
   },
   "credits": {

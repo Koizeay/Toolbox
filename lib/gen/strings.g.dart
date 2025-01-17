@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 790 (395 per locale)
+/// Strings: 816 (408 per locale)
 ///
-/// Built on 2025-01-16 at 18:33 UTC
+/// Built on 2025-01-17 at 16:56 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -252,6 +252,7 @@ class _StringsToolsEn {
 	late final _StringsToolsTextdifferencesEn textdifferences = _StringsToolsTextdifferencesEn._(_root);
 	late final _StringsToolsCharacterscopyEn characterscopy = _StringsToolsCharacterscopyEn._(_root);
 	late final _StringsToolsWhoisdomainEn whoisdomain = _StringsToolsWhoisdomainEn._(_root);
+	late final _StringsToolsTextcounterEn textcounter = _StringsToolsTextcounterEn._(_root);
 }
 
 // Path: credits
@@ -925,6 +926,28 @@ class _StringsToolsWhoisdomainEn {
 	late final _StringsToolsWhoisdomainErrorEn error = _StringsToolsWhoisdomainErrorEn._(_root);
 }
 
+// Path: tools.textcounter
+class _StringsToolsTextcounterEn {
+	_StringsToolsTextcounterEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'Text counter';
+	String get clear => 'Clear';
+	String get enter_text_here => 'Enter text here';
+	String get length => 'Length';
+	String get trimmed_length => 'Trimmed length';
+	String get raw_length => 'Raw length';
+	String get letters => 'Letters';
+	String get words => 'Words';
+	String get spaces => 'Spaces';
+	String get digits => 'Digits';
+	String get lines => 'Lines';
+	String get empty_lines => 'Empty lines';
+	String get total_lines => 'Total lines';
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsEn._(this._root);
@@ -1373,6 +1396,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsTextdifferencesFr textdifferences = _StringsToolsTextdifferencesFr._(_root);
 	@override late final _StringsToolsCharacterscopyFr characterscopy = _StringsToolsCharacterscopyFr._(_root);
 	@override late final _StringsToolsWhoisdomainFr whoisdomain = _StringsToolsWhoisdomainFr._(_root);
+	@override late final _StringsToolsTextcounterFr textcounter = _StringsToolsTextcounterFr._(_root);
 }
 
 // Path: credits
@@ -2044,6 +2068,28 @@ class _StringsToolsWhoisdomainFr implements _StringsToolsWhoisdomainEn {
 	@override String get view_pretty => 'Vue formatée';
 	@override String get view_raw => 'Vue brute';
 	@override late final _StringsToolsWhoisdomainErrorFr error = _StringsToolsWhoisdomainErrorFr._(_root);
+}
+
+// Path: tools.textcounter
+class _StringsToolsTextcounterFr implements _StringsToolsTextcounterEn {
+	_StringsToolsTextcounterFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Compteur de texte';
+	@override String get clear => 'Effacer';
+	@override String get enter_text_here => 'Entrez du texte';
+	@override String get length => 'Longueur';
+	@override String get trimmed_length => 'Longueur tronquée';
+	@override String get raw_length => 'Longueur brute';
+	@override String get letters => 'Lettres';
+	@override String get words => 'Mots';
+	@override String get spaces => 'Espaces';
+	@override String get digits => 'Chiffres';
+	@override String get lines => 'Lignes';
+	@override String get empty_lines => 'Lignes vides';
+	@override String get total_lines => 'Total de lignes';
 }
 
 // Path: credits.translations
@@ -2758,6 +2804,19 @@ extension on Translations {
 			case 'tools.whoisdomain.view_pretty': return 'View pretty';
 			case 'tools.whoisdomain.view_raw': return 'View raw';
 			case 'tools.whoisdomain.error.impossible_to_get_whois_information': return 'Impossible to get the whois information, please check your input and your internet connection then try again';
+			case 'tools.textcounter.title': return 'Text counter';
+			case 'tools.textcounter.clear': return 'Clear';
+			case 'tools.textcounter.enter_text_here': return 'Enter text here';
+			case 'tools.textcounter.length': return 'Length';
+			case 'tools.textcounter.trimmed_length': return 'Trimmed length';
+			case 'tools.textcounter.raw_length': return 'Raw length';
+			case 'tools.textcounter.letters': return 'Letters';
+			case 'tools.textcounter.words': return 'Words';
+			case 'tools.textcounter.spaces': return 'Spaces';
+			case 'tools.textcounter.digits': return 'Digits';
+			case 'tools.textcounter.lines': return 'Lines';
+			case 'tools.textcounter.empty_lines': return 'Empty lines';
+			case 'tools.textcounter.total_lines': return 'Total lines';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -3161,6 +3220,19 @@ extension on _StringsFr {
 			case 'tools.whoisdomain.view_pretty': return 'Vue formatée';
 			case 'tools.whoisdomain.view_raw': return 'Vue brute';
 			case 'tools.whoisdomain.error.impossible_to_get_whois_information': return 'Impossible d\'obtenir les informations whois, veuillez vérifier votre saisie et votre connexion internet puis réessayez';
+			case 'tools.textcounter.title': return 'Compteur de texte';
+			case 'tools.textcounter.clear': return 'Effacer';
+			case 'tools.textcounter.enter_text_here': return 'Entrez du texte';
+			case 'tools.textcounter.length': return 'Longueur';
+			case 'tools.textcounter.trimmed_length': return 'Longueur tronquée';
+			case 'tools.textcounter.raw_length': return 'Longueur brute';
+			case 'tools.textcounter.letters': return 'Lettres';
+			case 'tools.textcounter.words': return 'Mots';
+			case 'tools.textcounter.spaces': return 'Espaces';
+			case 'tools.textcounter.digits': return 'Chiffres';
+			case 'tools.textcounter.lines': return 'Lignes';
+			case 'tools.textcounter.empty_lines': return 'Lignes vides';
+			case 'tools.textcounter.total_lines': return 'Total de lignes';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';

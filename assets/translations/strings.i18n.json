@@ -519,6 +519,21 @@
       "error": {
         "impossible_to_get_whois_information": "Impossible to get the whois information, please check your input and your internet connection then try again"
       }
+    },
+    "textcounter": {
+      "title": "Text counter",
+      "clear": "Clear",
+      "enter_text_here": "Enter text here",
+      "length": "Length",
+      "trimmed_length": "Trimmed length",
+      "raw_length": "Raw length",
+      "letters": "Letters",
+      "words": "Words",
+      "spaces": "Spaces",
+      "digits": "Digits",
+      "lines": "Lines",
+      "empty_lines": "Empty lines",
+      "total_lines": "Total lines"
     }
   },
   "credits": {
