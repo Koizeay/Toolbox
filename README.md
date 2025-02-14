@@ -114,7 +114,10 @@ If you have any question, you can contact me by email at [me@koizeay.com](mailto
 </p>
 
 ## License
-This project is under the [GNU GPLv3 License](https://www.gnu.org/licenses/gpl-3.0.en.html)
+**This project is under the [Mozilla Public License 2.0](https://www.mozilla.org/en-US/MPL/2.0/).**
+
+_This project was (up to and including version 1.18.0) under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.html)._\
+_You can read the declaration of the license change [here](https://koizeay.com/static/toolbox/license_change_from_gpl-3.0_to_mpl-2.0.pdf)._
 
 ## Credits
 - [Koizeay](https://koizeay.com) - Developer

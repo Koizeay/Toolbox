@@ -37,7 +37,7 @@ class _CreditsPage extends State<CreditsPage> {
                   child: Padding(
                     padding: const EdgeInsets.all(10),
                     child: Text(
-                      t.credits.app_license(license: "GNU GPLv3"),
+                      t.credits.app_license(license: "Mozilla Public License 2.0"),
                       style: const TextStyle(fontSize: 20),
                       textAlign: TextAlign.center,
                     ),
@@ -116,7 +116,7 @@ class _CreditsPage extends State<CreditsPage> {
                   showLicensePage(
                     context: context,
                     applicationName: t.generic.app_name,
-                    applicationLegalese: t.credits.app_license(license: "GNU GPLv3"),
+                    applicationLegalese: t.credits.app_license(license: "Mozilla Public License 2.0"),
                     applicationIcon: const Padding(
                       padding: EdgeInsets.all(4.0),
                       child: Image(image: AssetImage("assets/images/icons/icon_rounded.png"), width: 50, height: 50),
