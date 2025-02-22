@@ -359,6 +359,10 @@
       "about_traveled_distance_description": "La distance parcourue est calculée à partir de la vitesse détectée par le GPS.\nCela signifie que la distance n'est pas exacte à 100%.",
       "kmh": "km/h",
       "km": "km",
+      "mph": "mph",
+      "mi": "mi",
+      "change_speed_unit": "Changer d'unité de vitesse",
+      "change_speed_unit_description": "Choisissez l'unité de vitesse que vous souhaitez utiliser avec le compteur de vitesse",
       "traveled_distance": "Distance parcourue",
       "error": {
         "location_permission_denied_title": "Position requise",

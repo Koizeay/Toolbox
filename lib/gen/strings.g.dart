@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 834 (417 per locale)
+/// Strings: 842 (421 per locale)
 ///
-/// Built on 2025-02-22 at 19:07 UTC
+/// Built on 2025-02-22 at 19:54 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -729,6 +729,10 @@ class _StringsToolsSpeedometerEn {
 	String get about_traveled_distance_description => 'Traveled distance is calculated using the speed detected by the GPS.\nThis means that the distance is not 100% accurate.';
 	String get kmh => 'km/h';
 	String get km => 'km';
+	String get mph => 'mph';
+	String get mi => 'mi';
+	String get change_speed_unit => 'Change speed unit';
+	String get change_speed_unit_description => 'Choose the speed unit you want to use with the speedometer';
 	String get traveled_distance => 'Traveled distance';
 	late final _StringsToolsSpeedometerErrorEn error = _StringsToolsSpeedometerErrorEn._(_root);
 }
@@ -1902,6 +1906,10 @@ class _StringsToolsSpeedometerFr implements _StringsToolsSpeedometerEn {
 	@override String get about_traveled_distance_description => 'La distance parcourue est calculée à partir de la vitesse détectée par le GPS.\nCela signifie que la distance n\'est pas exacte à 100%.';
 	@override String get kmh => 'km/h';
 	@override String get km => 'km';
+	@override String get mph => 'mph';
+	@override String get mi => 'mi';
+	@override String get change_speed_unit => 'Changer d\'unité de vitesse';
+	@override String get change_speed_unit_description => 'Choisissez l\'unité de vitesse que vous souhaitez utiliser avec le compteur de vitesse';
 	@override String get traveled_distance => 'Distance parcourue';
 	@override late final _StringsToolsSpeedometerErrorFr error = _StringsToolsSpeedometerErrorFr._(_root);
 }
@@ -2130,7 +2138,7 @@ class _StringsToolsRomannumeralFr implements _StringsToolsRomannumeralEn {
 
 	// Translations
 	@override String get title => 'Chiffres romains';
-	@override String get change_to => 'Changer en';
+	@override String get change_to => 'Passer en';
 	@override String get roman_numeral => 'chiffre romain';
 	@override String get number => 'nombre';
 	@override String get number_input_hint => 'Nombre';
@@ -2740,6 +2748,10 @@ extension on Translations {
 			case 'tools.speedometer.about_traveled_distance_description': return 'Traveled distance is calculated using the speed detected by the GPS.\nThis means that the distance is not 100% accurate.';
 			case 'tools.speedometer.kmh': return 'km/h';
 			case 'tools.speedometer.km': return 'km';
+			case 'tools.speedometer.mph': return 'mph';
+			case 'tools.speedometer.mi': return 'mi';
+			case 'tools.speedometer.change_speed_unit': return 'Change speed unit';
+			case 'tools.speedometer.change_speed_unit_description': return 'Choose the speed unit you want to use with the speedometer';
 			case 'tools.speedometer.traveled_distance': return 'Traveled distance';
 			case 'tools.speedometer.error.location_permission_denied_title': return 'Location required';
 			case 'tools.speedometer.error.location_permission_denied_description': return 'This tool requires location permission to determine your speed.';
@@ -3165,6 +3177,10 @@ extension on _StringsFr {
 			case 'tools.speedometer.about_traveled_distance_description': return 'La distance parcourue est calculée à partir de la vitesse détectée par le GPS.\nCela signifie que la distance n\'est pas exacte à 100%.';
 			case 'tools.speedometer.kmh': return 'km/h';
 			case 'tools.speedometer.km': return 'km';
+			case 'tools.speedometer.mph': return 'mph';
+			case 'tools.speedometer.mi': return 'mi';
+			case 'tools.speedometer.change_speed_unit': return 'Changer d\'unité de vitesse';
+			case 'tools.speedometer.change_speed_unit_description': return 'Choisissez l\'unité de vitesse que vous souhaitez utiliser avec le compteur de vitesse';
 			case 'tools.speedometer.traveled_distance': return 'Distance parcourue';
 			case 'tools.speedometer.error.location_permission_denied_title': return 'Position requise';
 			case 'tools.speedometer.error.location_permission_denied_description': return 'Cet outil nécessite l\'accès à la position pour déterminer votre vitesse.';
@@ -3301,7 +3317,7 @@ extension on _StringsFr {
 			case 'tools.textcounter.empty_lines': return 'Lignes vides';
 			case 'tools.textcounter.total_lines': return 'Total de lignes';
 			case 'tools.romannumeral.title': return 'Chiffres romains';
-			case 'tools.romannumeral.change_to': return 'Changer en';
+			case 'tools.romannumeral.change_to': return 'Passer en';
 			case 'tools.romannumeral.roman_numeral': return 'chiffre romain';
 			case 'tools.romannumeral.number': return 'nombre';
 			case 'tools.romannumeral.number_input_hint': return 'Nombre';

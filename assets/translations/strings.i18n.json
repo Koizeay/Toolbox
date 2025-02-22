@@ -359,6 +359,10 @@
       "about_traveled_distance_description": "Traveled distance is calculated using the speed detected by the GPS.\nThis means that the distance is not 100% accurate.",
       "kmh": "km/h",
       "km": "km",
+      "mph": "mph",
+      "mi": "mi",
+      "change_speed_unit": "Change speed unit",
+      "change_speed_unit_description": "Choose the speed unit you want to use with the speedometer",
       "traveled_distance": "Traveled distance",
       "error": {
         "location_permission_denied_title": "Location required",

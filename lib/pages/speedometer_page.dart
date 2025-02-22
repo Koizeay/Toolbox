@@ -5,9 +5,11 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:syncfusion_flutter_gauges/gauges.dart';
 import 'package:toolbox/core/dialogs.dart';
 import 'package:toolbox/gen/strings.g.dart';
+import 'package:toolbox/core/shared_preferences.dart';
 
 class SpeedometerPage extends StatefulWidget {
   const SpeedometerPage({ super.key });
@@ -16,6 +18,7 @@ class SpeedometerPage extends StatefulWidget {
 }
 
 class _SpeedometerPage extends State<SpeedometerPage> {
+  bool _isUsingMpH = false;
   bool _isLoading = true;
   double _speedMps = 0.0;
   double _maxSpeedMps = 0.0;
@@ -44,10 +47,16 @@ class _SpeedometerPage extends State<SpeedometerPage> {
   }
 
   Future<void> initTool() async {
+    await initSharedPreferences();
     await initLocationPermission();
     await initLocationServices();
     initLocationSettings();
     initSpeedometer();
+  }
+
+  Future<void> initSharedPreferences() async {
+    final prefs = await SharedPreferences.getInstance();
+    _isUsingMpH = prefs.getBool(SHARED_PREFERENCES_TOOL_SPEEDOMETER_ISUSINGMPH) ?? true;
   }
 
   Future<void> initLocationPermission() async {
@@ -63,6 +72,18 @@ class _SpeedometerPage extends State<SpeedometerPage> {
       }
       return;
     }
+  }
+
+  double convertMpsToUnit(double mps) {
+    return _isUsingMpH ? mps * 2.23694 : mps * 3.6;
+  }
+
+  String getSpeedUnit() {
+    return _isUsingMpH ? t.tools.speedometer.mph : t.tools.speedometer.kmh;
+  }
+
+  String getDistanceUnit() {
+    return _isUsingMpH ? t.tools.speedometer.mi : t.tools.speedometer.km;
   }
 
   Future<void> initLocationServices() async {
@@ -163,6 +184,69 @@ class _SpeedometerPage extends State<SpeedometerPage> {
       child: Scaffold(
         appBar: AppBar(
           title: Text(t.tools.speedometer.title),
+          actions: [
+            IconButton(
+              icon: const Icon(Icons.speed_outlined),
+              tooltip: t.tools.speedometer.change_speed_unit,
+              onPressed: () async {
+                final prefs = await SharedPreferences.getInstance();
+                if (mounted) {
+                  showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return AlertDialog(
+                        title: Text(t.tools.speedometer.change_speed_unit, textAlign: TextAlign.center,),
+                        content: SizedBox(
+                          height: 120,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(t.tools.speedometer.change_speed_unit_description, textAlign: TextAlign.center,),
+                              const SizedBox(height: 16,),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  FilledButton(
+                                      onPressed : () {
+                                        Navigator.of(context).pop();
+                                        prefs.setBool(SHARED_PREFERENCES_TOOL_SPEEDOMETER_ISUSINGMPH, false);
+                                        setState(() {
+                                          _isUsingMpH = false;
+                                        });
+                                      },
+                                      child: Text(t.tools.speedometer.kmh)
+                                  ),
+                                  const SizedBox(width: 16,),
+                                  FilledButton(
+                                      onPressed : () {
+                                        Navigator.of(context).pop();
+                                        prefs.setBool(SHARED_PREFERENCES_TOOL_SPEEDOMETER_ISUSINGMPH, true);
+                                        setState(() {
+                                          _isUsingMpH = true;
+                                        });
+                                      },
+                                      child: Text(t.tools.speedometer.mph)
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                        actions: [
+                          TextButton(
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                            child: Text(t.generic.cancel),
+                          ),
+                        ],
+                      );
+                    },
+                  );
+                }
+              }
+            ),
+          ],
         ),
         body: SafeArea(
             child: Center(
@@ -201,11 +285,11 @@ class _SpeedometerPage extends State<SpeedometerPage> {
                                 minorTicksPerInterval: 3,
                                 labelOffset: 25,
                                 radiusFactor: 0.95,
-                                maximum: 240,
+                                maximum: _isUsingMpH ? 160 : 240,
                                 pointers: <GaugePointer>[
                                   NeedlePointer(
                                       needleLength: 0.7,
-                                      value: _speedMps * 3.6,
+                                      value: convertMpsToUnit(_speedMps),
                                       animationDuration: 800,
                                       enableAnimation: true,
                                       animationType: AnimationType.ease,
@@ -226,14 +310,12 @@ class _SpeedometerPage extends State<SpeedometerPage> {
                         ),
                         const SizedBox(height: 16,),
                         Text(
-                          "${(_speedMps * 3.6).round()} ${t.tools.speedometer
-                              .kmh}",
+                          "${convertMpsToUnit(_speedMps).round()} ${getSpeedUnit()}",
                           style: const TextStyle(
                               fontSize: 24, fontWeight: FontWeight.bold),
                         ),
                         Text(
-                          "${(_maxSpeedMps * 3.6).round()} ${t.tools.speedometer
-                              .kmh}",
+                          "${convertMpsToUnit(_maxSpeedMps).round()} ${getSpeedUnit()}",
                           style: const TextStyle(fontSize: 16),
                         ),
                         const SizedBox(height: 16,),
@@ -245,9 +327,7 @@ class _SpeedometerPage extends State<SpeedometerPage> {
                                 style: const TextStyle(fontSize: 18),
                               ),
                               Text(
-                                "${(traveledDistanceMeters / 1000)
-                                    .toStringAsFixed(2)} ${t.tools.speedometer
-                                    .km}",
+                                "${(traveledDistanceMeters / 1000).toStringAsFixed(2)} ${getDistanceUnit()}",
                                 style: const TextStyle(fontSize: 18),
                               ),
                             ],
