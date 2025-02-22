@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 816 (408 per locale)
+/// Strings: 834 (417 per locale)
 ///
-/// Built on 2025-01-17 at 16:56 UTC
+/// Built on 2025-02-22 at 19:07 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -253,6 +253,7 @@ class _StringsToolsEn {
 	late final _StringsToolsCharacterscopyEn characterscopy = _StringsToolsCharacterscopyEn._(_root);
 	late final _StringsToolsWhoisdomainEn whoisdomain = _StringsToolsWhoisdomainEn._(_root);
 	late final _StringsToolsTextcounterEn textcounter = _StringsToolsTextcounterEn._(_root);
+	late final _StringsToolsRomannumeralEn romannumeral = _StringsToolsRomannumeralEn._(_root);
 }
 
 // Path: credits
@@ -948,6 +949,24 @@ class _StringsToolsTextcounterEn {
 	String get total_lines => 'Total lines';
 }
 
+// Path: tools.romannumeral
+class _StringsToolsRomannumeralEn {
+	_StringsToolsRomannumeralEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'Roman numeral';
+	String get change_to => 'Change to';
+	String get roman_numeral => 'roman numeral';
+	String get number => 'number';
+	String get number_input_hint => 'Number';
+	String get roman_numeral_input_hint => 'Roman numeral';
+	String get tap_to_copy => 'Tap to copy';
+	String get copied_to_clipboard => 'Copied to clipboard';
+	late final _StringsToolsRomannumeralErrorEn error = _StringsToolsRomannumeralErrorEn._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsEn._(this._root);
@@ -1268,6 +1287,16 @@ class _StringsToolsWhoisdomainErrorEn {
 	String get impossible_to_get_whois_information => 'Impossible to get the whois information, please check your input and your internet connection then try again';
 }
 
+// Path: tools.romannumeral.error
+class _StringsToolsRomannumeralErrorEn {
+	_StringsToolsRomannumeralErrorEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get invalid_roman_numeral => 'Invalid or unsupported roman numeral';
+}
+
 // Path: <root>
 class _StringsFr implements Translations {
 	/// You can call this constructor and build your own translation instance of this locale.
@@ -1397,6 +1426,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsCharacterscopyFr characterscopy = _StringsToolsCharacterscopyFr._(_root);
 	@override late final _StringsToolsWhoisdomainFr whoisdomain = _StringsToolsWhoisdomainFr._(_root);
 	@override late final _StringsToolsTextcounterFr textcounter = _StringsToolsTextcounterFr._(_root);
+	@override late final _StringsToolsRomannumeralFr romannumeral = _StringsToolsRomannumeralFr._(_root);
 }
 
 // Path: credits
@@ -2092,6 +2122,24 @@ class _StringsToolsTextcounterFr implements _StringsToolsTextcounterEn {
 	@override String get total_lines => 'Total de lignes';
 }
 
+// Path: tools.romannumeral
+class _StringsToolsRomannumeralFr implements _StringsToolsRomannumeralEn {
+	_StringsToolsRomannumeralFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Chiffres romains';
+	@override String get change_to => 'Changer en';
+	@override String get roman_numeral => 'chiffre romain';
+	@override String get number => 'nombre';
+	@override String get number_input_hint => 'Nombre';
+	@override String get roman_numeral_input_hint => 'Chiffre romains';
+	@override String get tap_to_copy => 'Cliquez pour copier';
+	@override String get copied_to_clipboard => 'Copié dans le presse-papiers';
+	@override late final _StringsToolsRomannumeralErrorFr error = _StringsToolsRomannumeralErrorFr._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsFr implements _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsFr._(this._root);
@@ -2410,6 +2458,16 @@ class _StringsToolsWhoisdomainErrorFr implements _StringsToolsWhoisdomainErrorEn
 
 	// Translations
 	@override String get impossible_to_get_whois_information => 'Impossible d\'obtenir les informations whois, veuillez vérifier votre saisie et votre connexion internet puis réessayez';
+}
+
+// Path: tools.romannumeral.error
+class _StringsToolsRomannumeralErrorFr implements _StringsToolsRomannumeralErrorEn {
+	_StringsToolsRomannumeralErrorFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get invalid_roman_numeral => 'Chiffre romain invalide ou non pris en charge';
 }
 
 /// Flat map(s) containing all translations.
@@ -2817,6 +2875,15 @@ extension on Translations {
 			case 'tools.textcounter.lines': return 'Lines';
 			case 'tools.textcounter.empty_lines': return 'Empty lines';
 			case 'tools.textcounter.total_lines': return 'Total lines';
+			case 'tools.romannumeral.title': return 'Roman numeral';
+			case 'tools.romannumeral.change_to': return 'Change to';
+			case 'tools.romannumeral.roman_numeral': return 'roman numeral';
+			case 'tools.romannumeral.number': return 'number';
+			case 'tools.romannumeral.number_input_hint': return 'Number';
+			case 'tools.romannumeral.roman_numeral_input_hint': return 'Roman numeral';
+			case 'tools.romannumeral.tap_to_copy': return 'Tap to copy';
+			case 'tools.romannumeral.copied_to_clipboard': return 'Copied to clipboard';
+			case 'tools.romannumeral.error.invalid_roman_numeral': return 'Invalid or unsupported roman numeral';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -3233,6 +3300,15 @@ extension on _StringsFr {
 			case 'tools.textcounter.lines': return 'Lignes';
 			case 'tools.textcounter.empty_lines': return 'Lignes vides';
 			case 'tools.textcounter.total_lines': return 'Total de lignes';
+			case 'tools.romannumeral.title': return 'Chiffres romains';
+			case 'tools.romannumeral.change_to': return 'Changer en';
+			case 'tools.romannumeral.roman_numeral': return 'chiffre romain';
+			case 'tools.romannumeral.number': return 'nombre';
+			case 'tools.romannumeral.number_input_hint': return 'Nombre';
+			case 'tools.romannumeral.roman_numeral_input_hint': return 'Chiffre romains';
+			case 'tools.romannumeral.tap_to_copy': return 'Cliquez pour copier';
+			case 'tools.romannumeral.copied_to_clipboard': return 'Copié dans le presse-papiers';
+			case 'tools.romannumeral.error.invalid_roman_numeral': return 'Chiffre romain invalide ou non pris en charge';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';

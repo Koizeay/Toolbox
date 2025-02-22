@@ -24,6 +24,7 @@ import 'package:toolbox/pages/ping_page.dart';
 import 'package:toolbox/pages/qrreader_page.dart';
 import 'package:toolbox/pages/randomcolor_page.dart';
 import 'package:toolbox/pages/randomnumber_page.dart';
+import 'package:toolbox/pages/romannumeral_page.dart';
 import 'package:toolbox/pages/roulette_page.dart';
 import 'package:toolbox/pages/sshclient_page.dart';
 import 'package:toolbox/pages/soundmeter_page.dart';
@@ -70,6 +71,7 @@ class Hierarchy {
     "qrreader": Tool(t.tools.qrreader.title, "assets/images/tools/qrreader.png", const QrReaderPage()),
     "randomcolor": Tool(t.tools.randomcolor.title, "assets/images/tools/randomcolor.png", const RandomColorPage()),
     "randomnumber": Tool(t.tools.randomnumber.title, "assets/images/tools/randomnumber.png", const RandomNumberPage()),
+    "romannumeral": Tool(t.tools.romannumeral.title, "assets/images/tools/romannumeral.png", const RomanNumeralPage()),
     "roulette": Tool(t.tools.roulette.title, "assets/images/tools/roulette.png", const RoulettePage()),
     "soundmeter": Tool(t.tools.soundmeter.title, "assets/images/tools/soundmeter.png", const SoundMeterPage()),
     "speedometer": Tool(t.tools.speedometer.title, "assets/images/tools/speedometer.png", const SpeedometerPage()),
@@ -114,6 +116,7 @@ class Hierarchy {
       toolMap["counter"],
       toolMap["fileencryption"],
       toolMap["qrreader"],
+      toolMap["romannumeral"],
       toolMap["textcounter"],
       toolMap["textdifferences"],
       toolMap["whiteboard"],

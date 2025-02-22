@@ -534,6 +534,19 @@
       "lines": "Lines",
       "empty_lines": "Empty lines",
       "total_lines": "Total lines"
+    },
+    "romannumeral": {
+      "title": "Roman numeral",
+      "change_to": "Change to",
+      "roman_numeral": "roman numeral",
+      "number": "number",
+      "number_input_hint": "Number",
+      "roman_numeral_input_hint": "Roman numeral",
+      "tap_to_copy": "Tap to copy",
+      "copied_to_clipboard": "Copied to clipboard",
+      "error": {
+        "invalid_roman_numeral": "Invalid or unsupported roman numeral"
+      }
     }
   },
   "credits": {

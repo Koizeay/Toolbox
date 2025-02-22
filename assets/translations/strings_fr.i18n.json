@@ -534,6 +534,19 @@
       "lines": "Lignes",
       "empty_lines": "Lignes vides",
       "total_lines": "Total de lignes"
+    },
+    "romannumeral": {
+      "title": "Chiffres romains",
+      "change_to": "Passer en",
+      "roman_numeral": "chiffre romain",
+      "number": "nombre",
+      "number_input_hint": "Nombre",
+      "roman_numeral_input_hint": "Chiffre romains",
+      "tap_to_copy": "Cliquez pour copier",
+      "copied_to_clipboard": "Copié dans le presse-papiers",
+      "error": {
+        "invalid_roman_numeral": "Chiffre romain invalide ou non pris en charge"
+      }
     }
   },
   "credits": {
