@@ -270,7 +270,7 @@ class _MusicSearchPage extends State<MusicSearchPage> {
                   TextField(
                     decoration: InputDecoration(
                       border: const OutlineInputBorder(),
-                      hintText: t.tools.musicsearch.search_for_music,
+                      labelText: t.tools.musicsearch.search_for_music,
                       suffixIcon: const Icon(Icons.search),
                     ),
                     onChanged: (String value) async {
