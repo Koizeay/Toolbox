@@ -6,6 +6,8 @@ import 'package:flippy/controllers/flipperController.dart';
 import 'package:flippy/flipper/regularFlipper.dart';
 import 'package:flutter/material.dart';
 import 'package:toolbox/gen/strings.g.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:toolbox/core/shared_preferences.dart';
 
 class FlipCoinsPage extends StatefulWidget {
   const FlipCoinsPage({ super.key });
@@ -23,6 +25,14 @@ class _FlipCoinsPage extends State<FlipCoinsPage> {
   @override
   void initState() {
     setCoinAsset("kz");
+    SharedPreferences.getInstance().then((prefs) {
+      String coinCode = prefs.getString(SHARED_PREFERENCES_TOOL_FLIPCOINS_CURRENTCOIN) ?? "kz";
+      if (mounted) {
+        setState(() {
+          setCoinAsset(coinCode);
+        });
+      }
+    });
     super.initState();
   }
 
@@ -47,10 +57,61 @@ class _FlipCoinsPage extends State<FlipCoinsPage> {
         frontAsset = "assets/images/specific/flipcoins_2eur_front.png";
         backAsset = "assets/images/specific/flipcoins_2eur_back.png";
         break;
+      case "gbp":
+        frontAsset = "assets/images/specific/flipcoins_2gbp_front.png";
+        backAsset = "assets/images/specific/flipcoins_2gbp_back.png";
+        break;
       default:
         frontAsset = "assets/images/specific/flipcoins_kz_front.png";
         backAsset = "assets/images/specific/flipcoins_kz_back.png";
         break;
+    }
+  }
+
+  Future<void> showChangeCoinsDialog(BuildContext context) async {
+    String? coinCode = await showDialog<String>(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text(t.tools.flipcoins.change_coin_currency),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              ListTile(
+                title: const Text("KZ (Generic)"),
+                onTap: () {
+                  Navigator.of(context).pop("kz");
+                },
+              ),
+              ListTile(
+                title: const Text("CHF (Fr.)"),
+                onTap: () {
+                  Navigator.of(context).pop("chf");
+                },
+              ),
+              ListTile(
+                title: const Text("EUR (€)"),
+                onTap: () {
+                  Navigator.of(context).pop("eur");
+                },
+              ),
+              ListTile(
+                title: const Text("GBP (£)"),
+                onTap: () {
+                  Navigator.of(context).pop("gbp");
+                },
+              ),
+            ],
+          ),
+        );
+      },
+    );
+    if (coinCode != null) {
+      SharedPreferences prefs = await SharedPreferences.getInstance();
+      prefs.setString(SHARED_PREFERENCES_TOOL_FLIPCOINS_CURRENTCOIN, coinCode);
+      setState(() {
+        setCoinAsset(coinCode);
+      });
     }
   }
 
@@ -84,6 +145,15 @@ class _FlipCoinsPage extends State<FlipCoinsPage> {
     return Scaffold(
         appBar: AppBar(
           title: Text(t.tools.flipcoins.title),
+          actions: [
+            IconButton(
+              onPressed: () {
+                showChangeCoinsDialog(context);
+              },
+              icon: const Icon(Icons.currency_exchange_outlined),
+              tooltip: t.tools.flipcoins.change_coin_currency,
+            ),
+          ],
         ),
         body: SafeArea(
           child: Center(
@@ -115,48 +185,6 @@ class _FlipCoinsPage extends State<FlipCoinsPage> {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 20),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Expanded(
-                          child: FilledButton(
-                              onPressed: () {
-                                setState(() {
-                                  setCoinAsset("kz");
-                                });
-                              },
-                              child: const Text("KZ", textAlign: TextAlign.center,)
-                          ),
-                        ),
-                        const SizedBox(width: 4),
-                        Expanded(
-                          child: FilledButton(
-                              onPressed: () {
-                                setState(() {
-                                  setCoinAsset("chf");
-                                });
-                              },
-                              child: const Text("CHF", textAlign: TextAlign.center,)
-                          ),
-                        ),
-                        const SizedBox(width: 4),
-                        Expanded(
-                          child: FilledButton(
-                              onPressed: () {
-                                setState(() {
-                                  setCoinAsset("eur");
-                                });
-                              },
-                              child: const Text("€", textAlign: TextAlign.center,)
-                          ),
-                        ),
-                      ],
-                    ),
-                  )
                 ],
               ),
             ),

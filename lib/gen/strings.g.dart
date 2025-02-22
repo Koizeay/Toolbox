@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 842 (421 per locale)
+/// Strings: 844 (422 per locale)
 ///
-/// Built on 2025-02-22 at 19:54 UTC
+/// Built on 2025-02-22 at 20:35 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -449,6 +449,7 @@ class _StringsToolsFlipcoinsEn {
 
 	// Translations
 	String get title => 'Flip a coin';
+	String get change_coin_currency => 'Change coin currency';
 }
 
 // Path: tools.randomnumber
@@ -1626,6 +1627,7 @@ class _StringsToolsFlipcoinsFr implements _StringsToolsFlipcoinsEn {
 
 	// Translations
 	@override String get title => 'Pile ou face';
+	@override String get change_coin_currency => 'Changer la devise de la pièce';
 }
 
 // Path: tools.randomnumber
@@ -2589,6 +2591,7 @@ extension on Translations {
 			case 'tools.roulette.warning.you_must_have_at_least_x_items': return ({required Object numberOfItems}) => 'You must have at least ${numberOfItems} items in the roulette.';
 			case 'tools.roulette.warning.you_must_enter_an_item_name': return 'You must enter an item name.';
 			case 'tools.flipcoins.title': return 'Flip a coin';
+			case 'tools.flipcoins.change_coin_currency': return 'Change coin currency';
 			case 'tools.randomnumber.title': return 'Random number';
 			case 'tools.randomnumber.min': return 'Min';
 			case 'tools.randomnumber.max': return 'Max';
@@ -3018,6 +3021,7 @@ extension on _StringsFr {
 			case 'tools.roulette.warning.you_must_have_at_least_x_items': return ({required Object numberOfItems}) => 'Vous devez avoir au moins ${numberOfItems} items dans la roulette';
 			case 'tools.roulette.warning.you_must_enter_an_item_name': return 'Vous devez entrer un nom d\'item';
 			case 'tools.flipcoins.title': return 'Pile ou face';
+			case 'tools.flipcoins.change_coin_currency': return 'Changer la devise de la pièce';
 			case 'tools.randomnumber.title': return 'Nombre aléatoire';
 			case 'tools.randomnumber.min': return 'Min';
 			case 'tools.randomnumber.max': return 'Max';

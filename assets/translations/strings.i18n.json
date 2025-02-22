@@ -145,7 +145,8 @@
       }
     },
     "flipcoins": {
-      "title": "Flip a coin"
+      "title": "Flip a coin",
+      "change_coin_currency": "Change coin currency"
     },
     "randomnumber": {
       "title": "Random number",

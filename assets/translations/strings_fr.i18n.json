@@ -145,7 +145,8 @@
       }
     },
     "flipcoins": {
-      "title": "Pile ou face"
+      "title": "Pile ou face",
+      "change_coin_currency": "Changer la devise de la pièce"
     },
     "randomnumber": {
       "title": "Nombre aléatoire",
