@@ -38,6 +38,9 @@ class _TimerPage extends State<TimerPage> {
   }
 
   void startTimer() {
+    if (_seconds == 0) {
+      return;
+    }
     if (Platform.isIOS) {
       showIosAlert();
     }
