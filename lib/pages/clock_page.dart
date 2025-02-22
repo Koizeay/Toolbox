@@ -59,7 +59,7 @@ class _ClockPage extends State<ClockPage> {
   String getDateTime(int timeZone) {
     DateTime now = DateTime.now().toUtc();
     now = now.add(Duration(seconds: timeZone));
-    return DateFormat('kk:mm:ss').format(now);
+    return DateFormat('HH:mm:ss').format(now);
   }
 
   void changeTimeZone(int newTimeZone) {
