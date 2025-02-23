@@ -187,10 +187,8 @@
     },
     "whiteboard": {
       "title": "Tableau blanc",
-      "clear": "Effacer",
-      "undo": "Annuler",
-      "share": "Partager",
-      "share_success": "Votre tableau blanc a été partagé avec succès"
+      "share_success": "Votre tableau blanc a été partagé avec succès",
+      "save_success": "Votre tableau blanc a été enregistré avec succès"
     },
     "networkinfo": {
       "title": "Informations réseau",

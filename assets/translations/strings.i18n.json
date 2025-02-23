@@ -187,10 +187,8 @@
     },
     "whiteboard": {
       "title": "Whiteboard",
-      "clear": "Clear",
-      "undo": "Undo",
-      "share": "Share",
-      "share_success": "Your whiteboard has been shared successfully"
+      "share_success": "Your whiteboard has been shared successfully",
+      "save_success": "Your whiteboard has been saved successfully"
     },
     "networkinfo": {
       "title": "Network info",

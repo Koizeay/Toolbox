@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 844 (422 per locale)
+/// Strings: 840 (420 per locale)
 ///
-/// Built on 2025-02-22 at 20:35 UTC
+/// Built on 2025-02-23 at 16:31 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -507,10 +507,8 @@ class _StringsToolsWhiteboardEn {
 
 	// Translations
 	String get title => 'Whiteboard';
-	String get clear => 'Clear';
-	String get undo => 'Undo';
-	String get share => 'Share';
 	String get share_success => 'Your whiteboard has been shared successfully';
+	String get save_success => 'Your whiteboard has been saved successfully';
 }
 
 // Path: tools.networkinfo
@@ -1685,10 +1683,8 @@ class _StringsToolsWhiteboardFr implements _StringsToolsWhiteboardEn {
 
 	// Translations
 	@override String get title => 'Tableau blanc';
-	@override String get clear => 'Effacer';
-	@override String get undo => 'Annuler';
-	@override String get share => 'Partager';
 	@override String get share_success => 'Votre tableau blanc a été partagé avec succès';
+	@override String get save_success => 'Votre tableau blanc a été enregistré avec succès';
 }
 
 // Path: tools.networkinfo
@@ -2620,10 +2616,8 @@ extension on Translations {
 			case 'tools.sshclient.error.connection_failed': return 'Could not connect to host';
 			case 'tools.sshclient.error.unknown_error': return 'An unknown error occurred. Please try again';
 			case 'tools.whiteboard.title': return 'Whiteboard';
-			case 'tools.whiteboard.clear': return 'Clear';
-			case 'tools.whiteboard.undo': return 'Undo';
-			case 'tools.whiteboard.share': return 'Share';
 			case 'tools.whiteboard.share_success': return 'Your whiteboard has been shared successfully';
+			case 'tools.whiteboard.save_success': return 'Your whiteboard has been saved successfully';
 			case 'tools.networkinfo.title': return 'Network info';
 			case 'tools.networkinfo.loading': return 'Loading...';
 			case 'tools.networkinfo.location_permission_required': return 'Location permission is required to get some WiFi info (this is an OS limitation).\nYou could get incorrect info if you don\'t grant it.';
@@ -3050,10 +3044,8 @@ extension on _StringsFr {
 			case 'tools.sshclient.error.connection_failed': return 'Impossible de se connecter à l\'hôte';
 			case 'tools.sshclient.error.unknown_error': return 'Une erreur inconnue s\'est produite, veuillez réessayer';
 			case 'tools.whiteboard.title': return 'Tableau blanc';
-			case 'tools.whiteboard.clear': return 'Effacer';
-			case 'tools.whiteboard.undo': return 'Annuler';
-			case 'tools.whiteboard.share': return 'Partager';
 			case 'tools.whiteboard.share_success': return 'Votre tableau blanc a été partagé avec succès';
+			case 'tools.whiteboard.save_success': return 'Votre tableau blanc a été enregistré avec succès';
 			case 'tools.networkinfo.title': return 'Informations réseau';
 			case 'tools.networkinfo.loading': return 'Chargement...';
 			case 'tools.networkinfo.location_permission_required': return 'La permission de localisation est nécessaire pour obtenir certaines informations sur le WiFi (il s\'agit d\'une limitation du système d\'exploitation).\nVous risquez d\'obtenir des informations erronées si vous ne l\'autorisez pas.';
