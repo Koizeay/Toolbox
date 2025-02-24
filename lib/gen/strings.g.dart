@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 918 (459 per locale)
+/// Strings: 920 (460 per locale)
 ///
-/// Built on 2025-02-23 at 20:59 UTC
+/// Built on 2025-02-24 at 17:19 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -198,6 +198,7 @@ class _StringsFoldersEn {
 
 	// Translations
 	String get audio => 'Audio';
+	String get calculations => 'Calculations';
 	String get games => 'Games';
 	String get geography => 'Geography';
 	String get miscellaneous => 'Miscellaneous';
@@ -1453,6 +1454,7 @@ class _StringsFoldersFr implements _StringsFoldersEn {
 
 	// Translations
 	@override String get audio => 'Audio';
+	@override String get calculations => 'Calculs';
 	@override String get games => 'Jeux';
 	@override String get geography => 'Géographie';
 	@override String get miscellaneous => 'Divers';
@@ -2658,6 +2660,7 @@ extension on Translations {
 			case 'homepage.would_you_like_to_add_this_tool_to_favorites': return 'Would you like to add this tool to favorites?';
 			case 'homepage.would_you_like_to_remove_this_tool_from_favorites': return 'Would you like to remove this tool from favorites?';
 			case 'folders.audio': return 'Audio';
+			case 'folders.calculations': return 'Calculations';
 			case 'folders.games': return 'Games';
 			case 'folders.geography': return 'Geography';
 			case 'folders.miscellaneous': return 'Miscellaneous';
@@ -3125,6 +3128,7 @@ extension on _StringsFr {
 			case 'homepage.would_you_like_to_add_this_tool_to_favorites': return 'Voulez-vous ajouter cet outil aux favoris ?';
 			case 'homepage.would_you_like_to_remove_this_tool_from_favorites': return 'Voulez-vous retirer cet outils des favoris ?';
 			case 'folders.audio': return 'Audio';
+			case 'folders.calculations': return 'Calculs';
 			case 'folders.games': return 'Jeux';
 			case 'folders.geography': return 'Géographie';
 			case 'folders.miscellaneous': return 'Divers';
