@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 840 (420 per locale)
+/// Strings: 918 (459 per locale)
 ///
-/// Built on 2025-02-23 at 16:31 UTC
+/// Built on 2025-02-23 at 20:59 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -254,6 +254,7 @@ class _StringsToolsEn {
 	late final _StringsToolsWhoisdomainEn whoisdomain = _StringsToolsWhoisdomainEn._(_root);
 	late final _StringsToolsTextcounterEn textcounter = _StringsToolsTextcounterEn._(_root);
 	late final _StringsToolsRomannumeralEn romannumeral = _StringsToolsRomannumeralEn._(_root);
+	late final _StringsToolsAreacalculatorEn areacalculator = _StringsToolsAreacalculatorEn._(_root);
 }
 
 // Path: credits
@@ -970,6 +971,22 @@ class _StringsToolsRomannumeralEn {
 	late final _StringsToolsRomannumeralErrorEn error = _StringsToolsRomannumeralErrorEn._(_root);
 }
 
+// Path: tools.areacalculator
+class _StringsToolsAreacalculatorEn {
+	_StringsToolsAreacalculatorEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'Area calculator';
+	String get select_a_shape => 'Select a shape';
+	String get area => 'Area';
+	String get calculate => 'Calculate';
+	late final _StringsToolsAreacalculatorShapesEn shapes = _StringsToolsAreacalculatorShapesEn._(_root);
+	late final _StringsToolsAreacalculatorInputsEn inputs = _StringsToolsAreacalculatorInputsEn._(_root);
+	late final _StringsToolsAreacalculatorErrorEn error = _StringsToolsAreacalculatorErrorEn._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsEn._(this._root);
@@ -1300,6 +1317,68 @@ class _StringsToolsRomannumeralErrorEn {
 	String get invalid_roman_numeral => 'Invalid or unsupported roman numeral';
 }
 
+// Path: tools.areacalculator.shapes
+class _StringsToolsAreacalculatorShapesEn {
+	_StringsToolsAreacalculatorShapesEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get circle => 'Circle';
+	String get ellipse => 'Ellipse';
+	String get equilateral_triangle => 'Equilateral triangle';
+	String get kite => 'Kite';
+	String get parallelogram => 'Parallelogram';
+	String get rectangle => 'Rectangle';
+	String get rhombus => 'Rhombus';
+	String get regular_hexagon => 'Regular hexagon';
+	String get regular_octagon => 'Regular octagon';
+	String get regular_pentagon => 'Regular pentagon';
+	String get regular_polygon => 'Regular polygon';
+	String get square => 'Square';
+	String get trapezoid => 'Trapezoid';
+	String get triangle => 'Triangle';
+}
+
+// Path: tools.areacalculator.inputs
+class _StringsToolsAreacalculatorInputsEn {
+	_StringsToolsAreacalculatorInputsEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get radius => 'Radius';
+	String get major_axis => 'Major axis';
+	String get minor_axis => 'Minor axis';
+	String get side => 'Side';
+	String get base => 'Base';
+	String get height => 'Height';
+	String get diagonal_1 => 'Diagonal 1';
+	String get diagonal_2 => 'Diagonal 2';
+	String get length => 'Length';
+	String get width => 'Width';
+	String get number_of_sides => 'Number of sides';
+	String get side_length => 'Side length';
+	String get apothem => 'Apothem';
+	String get base_1 => 'Base 1';
+	String get base_2 => 'Base 2';
+}
+
+// Path: tools.areacalculator.error
+class _StringsToolsAreacalculatorErrorEn {
+	_StringsToolsAreacalculatorErrorEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get invalid_input => 'Invalid input';
+	String get please_enter_a_value_for => 'Please enter a value for';
+	String get please_enter_a_valid_number_for => 'Please enter a valid number for';
+	String get please_enter_a_positive_number_for => 'Please enter a positive number for';
+	String get please_try_again_with_different_values => 'Please try again with different values';
+	String get the_area_of_the_shape_is_zero => 'The area of the shape is zero';
+}
+
 // Path: <root>
 class _StringsFr implements Translations {
 	/// You can call this constructor and build your own translation instance of this locale.
@@ -1430,6 +1509,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsWhoisdomainFr whoisdomain = _StringsToolsWhoisdomainFr._(_root);
 	@override late final _StringsToolsTextcounterFr textcounter = _StringsToolsTextcounterFr._(_root);
 	@override late final _StringsToolsRomannumeralFr romannumeral = _StringsToolsRomannumeralFr._(_root);
+	@override late final _StringsToolsAreacalculatorFr areacalculator = _StringsToolsAreacalculatorFr._(_root);
 }
 
 // Path: credits
@@ -2146,6 +2226,22 @@ class _StringsToolsRomannumeralFr implements _StringsToolsRomannumeralEn {
 	@override late final _StringsToolsRomannumeralErrorFr error = _StringsToolsRomannumeralErrorFr._(_root);
 }
 
+// Path: tools.areacalculator
+class _StringsToolsAreacalculatorFr implements _StringsToolsAreacalculatorEn {
+	_StringsToolsAreacalculatorFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Calculateur d\'aire';
+	@override String get select_a_shape => 'Sélectionnez une forme';
+	@override String get calculate => 'Calculer';
+	@override String get area => 'Aire';
+	@override late final _StringsToolsAreacalculatorShapesFr shapes = _StringsToolsAreacalculatorShapesFr._(_root);
+	@override late final _StringsToolsAreacalculatorInputsFr inputs = _StringsToolsAreacalculatorInputsFr._(_root);
+	@override late final _StringsToolsAreacalculatorErrorFr error = _StringsToolsAreacalculatorErrorFr._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsFr implements _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsFr._(this._root);
@@ -2474,6 +2570,68 @@ class _StringsToolsRomannumeralErrorFr implements _StringsToolsRomannumeralError
 
 	// Translations
 	@override String get invalid_roman_numeral => 'Chiffre romain invalide ou non pris en charge';
+}
+
+// Path: tools.areacalculator.shapes
+class _StringsToolsAreacalculatorShapesFr implements _StringsToolsAreacalculatorShapesEn {
+	_StringsToolsAreacalculatorShapesFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get circle => 'Cercle';
+	@override String get ellipse => 'Ellipse';
+	@override String get equilateral_triangle => 'Triangle équilatéral';
+	@override String get kite => 'Cerf-volant';
+	@override String get parallelogram => 'Parallélogramme';
+	@override String get rectangle => 'Rectangle';
+	@override String get rhombus => 'Losange';
+	@override String get regular_hexagon => 'Hexagone régulier';
+	@override String get regular_octagon => 'Octogone régulier';
+	@override String get regular_pentagon => 'Pentagone régulier';
+	@override String get regular_polygon => 'Polygone régulier';
+	@override String get square => 'Carré';
+	@override String get trapezoid => 'Trapèze';
+	@override String get triangle => 'Triangle';
+}
+
+// Path: tools.areacalculator.inputs
+class _StringsToolsAreacalculatorInputsFr implements _StringsToolsAreacalculatorInputsEn {
+	_StringsToolsAreacalculatorInputsFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get radius => 'Rayon';
+	@override String get major_axis => 'Grand axe';
+	@override String get minor_axis => 'Petit axe';
+	@override String get side => 'Côté';
+	@override String get base => 'Base';
+	@override String get height => 'Hauteur';
+	@override String get diagonal_1 => 'Diagonale 1';
+	@override String get diagonal_2 => 'Diagonale 2';
+	@override String get length => 'Longueur';
+	@override String get width => 'Largeur';
+	@override String get number_of_sides => 'Nombre de côtés';
+	@override String get side_length => 'Longueur du côté';
+	@override String get apothem => 'Apotème';
+	@override String get base_1 => 'Base 1';
+	@override String get base_2 => 'Base 2';
+}
+
+// Path: tools.areacalculator.error
+class _StringsToolsAreacalculatorErrorFr implements _StringsToolsAreacalculatorErrorEn {
+	_StringsToolsAreacalculatorErrorFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get invalid_input => 'Entrée invalide';
+	@override String get please_enter_a_value_for => 'Veuillez entrer une valeur pour';
+	@override String get please_enter_a_valid_number_for => 'Veuillez entrer un nombre valide pour';
+	@override String get please_enter_a_positive_number_for => 'Veuillez entrer un nombre positif pour';
+	@override String get please_try_again_with_different_values => 'Veuillez réessayer avec des valeurs différentes';
+	@override String get the_area_of_the_shape_is_zero => 'L\'aire de la forme est de zéro';
 }
 
 /// Flat map(s) containing all translations.
@@ -2893,6 +3051,45 @@ extension on Translations {
 			case 'tools.romannumeral.tap_to_copy': return 'Tap to copy';
 			case 'tools.romannumeral.copied_to_clipboard': return 'Copied to clipboard';
 			case 'tools.romannumeral.error.invalid_roman_numeral': return 'Invalid or unsupported roman numeral';
+			case 'tools.areacalculator.title': return 'Area calculator';
+			case 'tools.areacalculator.select_a_shape': return 'Select a shape';
+			case 'tools.areacalculator.area': return 'Area';
+			case 'tools.areacalculator.calculate': return 'Calculate';
+			case 'tools.areacalculator.shapes.circle': return 'Circle';
+			case 'tools.areacalculator.shapes.ellipse': return 'Ellipse';
+			case 'tools.areacalculator.shapes.equilateral_triangle': return 'Equilateral triangle';
+			case 'tools.areacalculator.shapes.kite': return 'Kite';
+			case 'tools.areacalculator.shapes.parallelogram': return 'Parallelogram';
+			case 'tools.areacalculator.shapes.rectangle': return 'Rectangle';
+			case 'tools.areacalculator.shapes.rhombus': return 'Rhombus';
+			case 'tools.areacalculator.shapes.regular_hexagon': return 'Regular hexagon';
+			case 'tools.areacalculator.shapes.regular_octagon': return 'Regular octagon';
+			case 'tools.areacalculator.shapes.regular_pentagon': return 'Regular pentagon';
+			case 'tools.areacalculator.shapes.regular_polygon': return 'Regular polygon';
+			case 'tools.areacalculator.shapes.square': return 'Square';
+			case 'tools.areacalculator.shapes.trapezoid': return 'Trapezoid';
+			case 'tools.areacalculator.shapes.triangle': return 'Triangle';
+			case 'tools.areacalculator.inputs.radius': return 'Radius';
+			case 'tools.areacalculator.inputs.major_axis': return 'Major axis';
+			case 'tools.areacalculator.inputs.minor_axis': return 'Minor axis';
+			case 'tools.areacalculator.inputs.side': return 'Side';
+			case 'tools.areacalculator.inputs.base': return 'Base';
+			case 'tools.areacalculator.inputs.height': return 'Height';
+			case 'tools.areacalculator.inputs.diagonal_1': return 'Diagonal 1';
+			case 'tools.areacalculator.inputs.diagonal_2': return 'Diagonal 2';
+			case 'tools.areacalculator.inputs.length': return 'Length';
+			case 'tools.areacalculator.inputs.width': return 'Width';
+			case 'tools.areacalculator.inputs.number_of_sides': return 'Number of sides';
+			case 'tools.areacalculator.inputs.side_length': return 'Side length';
+			case 'tools.areacalculator.inputs.apothem': return 'Apothem';
+			case 'tools.areacalculator.inputs.base_1': return 'Base 1';
+			case 'tools.areacalculator.inputs.base_2': return 'Base 2';
+			case 'tools.areacalculator.error.invalid_input': return 'Invalid input';
+			case 'tools.areacalculator.error.please_enter_a_value_for': return 'Please enter a value for';
+			case 'tools.areacalculator.error.please_enter_a_valid_number_for': return 'Please enter a valid number for';
+			case 'tools.areacalculator.error.please_enter_a_positive_number_for': return 'Please enter a positive number for';
+			case 'tools.areacalculator.error.please_try_again_with_different_values': return 'Please try again with different values';
+			case 'tools.areacalculator.error.the_area_of_the_shape_is_zero': return 'The area of the shape is zero';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -3321,6 +3518,45 @@ extension on _StringsFr {
 			case 'tools.romannumeral.tap_to_copy': return 'Cliquez pour copier';
 			case 'tools.romannumeral.copied_to_clipboard': return 'Copié dans le presse-papiers';
 			case 'tools.romannumeral.error.invalid_roman_numeral': return 'Chiffre romain invalide ou non pris en charge';
+			case 'tools.areacalculator.title': return 'Calculateur d\'aire';
+			case 'tools.areacalculator.select_a_shape': return 'Sélectionnez une forme';
+			case 'tools.areacalculator.calculate': return 'Calculer';
+			case 'tools.areacalculator.area': return 'Aire';
+			case 'tools.areacalculator.shapes.circle': return 'Cercle';
+			case 'tools.areacalculator.shapes.ellipse': return 'Ellipse';
+			case 'tools.areacalculator.shapes.equilateral_triangle': return 'Triangle équilatéral';
+			case 'tools.areacalculator.shapes.kite': return 'Cerf-volant';
+			case 'tools.areacalculator.shapes.parallelogram': return 'Parallélogramme';
+			case 'tools.areacalculator.shapes.rectangle': return 'Rectangle';
+			case 'tools.areacalculator.shapes.rhombus': return 'Losange';
+			case 'tools.areacalculator.shapes.regular_hexagon': return 'Hexagone régulier';
+			case 'tools.areacalculator.shapes.regular_octagon': return 'Octogone régulier';
+			case 'tools.areacalculator.shapes.regular_pentagon': return 'Pentagone régulier';
+			case 'tools.areacalculator.shapes.regular_polygon': return 'Polygone régulier';
+			case 'tools.areacalculator.shapes.square': return 'Carré';
+			case 'tools.areacalculator.shapes.trapezoid': return 'Trapèze';
+			case 'tools.areacalculator.shapes.triangle': return 'Triangle';
+			case 'tools.areacalculator.inputs.radius': return 'Rayon';
+			case 'tools.areacalculator.inputs.major_axis': return 'Grand axe';
+			case 'tools.areacalculator.inputs.minor_axis': return 'Petit axe';
+			case 'tools.areacalculator.inputs.side': return 'Côté';
+			case 'tools.areacalculator.inputs.base': return 'Base';
+			case 'tools.areacalculator.inputs.height': return 'Hauteur';
+			case 'tools.areacalculator.inputs.diagonal_1': return 'Diagonale 1';
+			case 'tools.areacalculator.inputs.diagonal_2': return 'Diagonale 2';
+			case 'tools.areacalculator.inputs.length': return 'Longueur';
+			case 'tools.areacalculator.inputs.width': return 'Largeur';
+			case 'tools.areacalculator.inputs.number_of_sides': return 'Nombre de côtés';
+			case 'tools.areacalculator.inputs.side_length': return 'Longueur du côté';
+			case 'tools.areacalculator.inputs.apothem': return 'Apotème';
+			case 'tools.areacalculator.inputs.base_1': return 'Base 1';
+			case 'tools.areacalculator.inputs.base_2': return 'Base 2';
+			case 'tools.areacalculator.error.invalid_input': return 'Entrée invalide';
+			case 'tools.areacalculator.error.please_enter_a_value_for': return 'Veuillez entrer une valeur pour';
+			case 'tools.areacalculator.error.please_enter_a_valid_number_for': return 'Veuillez entrer un nombre valide pour';
+			case 'tools.areacalculator.error.please_enter_a_positive_number_for': return 'Veuillez entrer un nombre positif pour';
+			case 'tools.areacalculator.error.please_try_again_with_different_values': return 'Veuillez réessayer avec des valeurs différentes';
+			case 'tools.areacalculator.error.the_area_of_the_shape_is_zero': return 'L\'aire de la forme est de zéro';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';

@@ -550,6 +550,53 @@
       "error": {
         "invalid_roman_numeral": "Chiffre romain invalide ou non pris en charge"
       }
+    },
+    "areacalculator": {
+      "title": "Calculateur d'aire",
+      "select_a_shape": "Sélectionnez une forme",
+      "calculate": "Calculer",
+      "area": "Aire",
+      "shapes": {
+        "circle": "Cercle",
+        "ellipse": "Ellipse",
+        "equilateral_triangle": "Triangle équilatéral",
+        "kite": "Cerf-volant",
+        "parallelogram": "Parallélogramme",
+        "rectangle": "Rectangle",
+        "rhombus": "Losange",
+        "regular_hexagon": "Hexagone régulier",
+        "regular_octagon": "Octogone régulier",
+        "regular_pentagon": "Pentagone régulier",
+        "regular_polygon": "Polygone régulier",
+        "square": "Carré",
+        "trapezoid": "Trapèze",
+        "triangle": "Triangle"
+      },
+      "inputs" : {
+        "radius": "Rayon",
+        "major_axis": "Grand axe",
+        "minor_axis": "Petit axe",
+        "side": "Côté",
+        "base": "Base",
+        "height": "Hauteur",
+        "diagonal_1": "Diagonale 1",
+        "diagonal_2": "Diagonale 2",
+        "length": "Longueur",
+        "width": "Largeur",
+        "number_of_sides": "Nombre de côtés",
+        "side_length": "Longueur du côté",
+        "apothem": "Apotème",
+        "base_1": "Base 1",
+        "base_2": "Base 2"
+      },
+      "error": {
+        "invalid_input": "Entrée invalide",
+        "please_enter_a_value_for": "Veuillez entrer une valeur pour",
+        "please_enter_a_valid_number_for": "Veuillez entrer un nombre valide pour",
+        "please_enter_a_positive_number_for": "Veuillez entrer un nombre positif pour",
+        "please_try_again_with_different_values": "Veuillez réessayer avec des valeurs différentes",
+        "the_area_of_the_shape_is_zero": "L'aire de la forme est de zéro"
+      }
     }
   },
   "credits": {

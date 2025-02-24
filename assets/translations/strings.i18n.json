@@ -550,6 +550,53 @@
       "error": {
         "invalid_roman_numeral": "Invalid or unsupported roman numeral"
       }
+    },
+    "areacalculator": {
+      "title": "Area calculator",
+      "select_a_shape": "Select a shape",
+      "area": "Area",
+      "calculate": "Calculate",
+      "shapes": {
+        "circle": "Circle",
+        "ellipse": "Ellipse",
+        "equilateral_triangle": "Equilateral triangle",
+        "kite": "Kite",
+        "parallelogram": "Parallelogram",
+        "rectangle": "Rectangle",
+        "rhombus": "Rhombus",
+        "regular_hexagon": "Regular hexagon",
+        "regular_octagon": "Regular octagon",
+        "regular_pentagon": "Regular pentagon",
+        "regular_polygon": "Regular polygon",
+        "square": "Square",
+        "trapezoid": "Trapezoid",
+        "triangle": "Triangle"
+      },
+      "inputs" : {
+        "radius": "Radius",
+        "major_axis": "Major axis",
+        "minor_axis": "Minor axis",
+        "side": "Side",
+        "base": "Base",
+        "height": "Height",
+        "diagonal_1": "Diagonal 1",
+        "diagonal_2": "Diagonal 2",
+        "length": "Length",
+        "width": "Width",
+        "number_of_sides": "Number of sides",
+        "side_length": "Side length",
+        "apothem": "Apothem",
+        "base_1": "Base 1",
+        "base_2": "Base 2"
+      },
+      "error": {
+        "invalid_input": "Invalid input",
+        "please_enter_a_value_for": "Please enter a value for",
+        "please_enter_a_valid_number_for": "Please enter a valid number for",
+        "please_enter_a_positive_number_for": "Please enter a positive number for",
+        "please_try_again_with_different_values": "Please try again with different values",
+        "the_area_of_the_shape_is_zero": "The area of the shape is zero"
+      }
     }
   },
   "credits": {
