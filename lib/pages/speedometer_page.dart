@@ -56,7 +56,7 @@ class _SpeedometerPage extends State<SpeedometerPage> {
 
   Future<void> initSharedPreferences() async {
     final prefs = await SharedPreferences.getInstance();
-    _isUsingMpH = prefs.getBool(SHARED_PREFERENCES_TOOL_SPEEDOMETER_ISUSINGMPH) ?? true;
+    _isUsingMpH = prefs.getBool(SHARED_PREFERENCES_TOOL_SPEEDOMETER_ISUSINGMPH) ?? false;
   }
 
   Future<void> initLocationPermission() async {
