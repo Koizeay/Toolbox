@@ -149,9 +149,7 @@ class _RomanNumeralPage extends State<RomanNumeralPage> {
                                 style: TextStyle(
                                     fontSize: 20,
                                     fontWeight: FontWeight.bold,
-                                    color: Theme
-                                        .of(context)
-                                        .primaryColor
+                                    color: Theme.of(context).colorScheme.primary
                                 ),
                                 textAlign: TextAlign.center,
                               ),
@@ -159,9 +157,7 @@ class _RomanNumeralPage extends State<RomanNumeralPage> {
                                   romanNumber.isEmpty ? "" : t.tools.romannumeral.tap_to_copy,
                                   style: TextStyle(
                                     fontSize: 14,
-                                    color: Theme
-                                        .of(context)
-                                        .primaryColor,
+                                    color: Theme.of(context).colorScheme.primary,
                                     fontStyle: FontStyle.italic,
                                   ),
                                   textAlign: TextAlign.center,
