@@ -598,6 +598,20 @@
         "please_try_again_with_different_values": "Please try again with different values",
         "the_area_of_the_shape_is_zero": "The area of the shape is zero"
       }
+    },
+    "mathtex": {
+      "title": "MathTeX",
+      "enter_a_mathematical_expression_in_tex_format": "Enter a mathematical expression in TeX format",
+      "export_to_image": "Export to image",
+      "edit_pixel_ratio": "Edit pixel ratio",
+      "new_pixel_ratio": "New pixel ratio",
+      "get_help": "Get help",
+      "close_help": "Close help",
+      "copied_to_clipboard": "Copied to clipboard",
+      "error": {
+        "an_error_occurred_while_rendering_the_mathtex": "An error occurred while rendering the MathTeX",
+        "an_error_occurred_while_exporting_the_image": "An error occurred while exporting the image"
+      }
     }
   },
   "credits": {

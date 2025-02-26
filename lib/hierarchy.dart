@@ -11,6 +11,7 @@ import 'package:toolbox/pages/fileencryption_page.dart';
 import 'package:toolbox/pages/flipcoins_page.dart';
 import 'package:toolbox/pages/gameoflife_page.dart';
 import 'package:toolbox/pages/httprequest_page.dart';
+import 'package:toolbox/pages/mathtex_page.dart';
 import 'package:toolbox/pages/mcserverping_page.dart';
 import 'package:toolbox/pages/megaphone_page.dart';
 import 'package:toolbox/pages/metronome_page.dart';
@@ -58,6 +59,7 @@ class Hierarchy {
     "flipcoins": Tool(t.tools.flipcoins.title, "assets/images/tools/flipcoins.png", const FlipCoinsPage()),
     "gameoflife": Tool(t.tools.gameoflife.title, "assets/images/tools/gameoflife.png", const GameOfLifePage()),
     "httprequest": Tool(t.tools.httprequest.title, "assets/images/tools/httprequest.png", const HttpRequestPage()),
+    "mathtex": Tool(t.tools.mathtex.title, "assets/images/tools/mathtex.png", const MathTexPage()),
     "mcserverping": Tool(t.tools.mc_server_ping.title, "assets/images/tools/mcserverping.png", const McServerPingPage()),
     "megaphone": Tool(t.tools.megaphone.title, "assets/images/tools/megaphone.png", const MegaphonePage()),
     "metronome": Tool(t.tools.metronome.title, "assets/images/tools/metronome.png", const MetronomePage()),
@@ -105,6 +107,7 @@ class Hierarchy {
       toolMap["areacalculator"],
       toolMap["baseconverter"],
       toolMap["bitwisecalculator"],
+      toolMap["mathtex"],
       toolMap["romannumeral"],
       toolMap["textcounter"],
     ]),

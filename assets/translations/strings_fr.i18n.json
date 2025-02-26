@@ -598,6 +598,20 @@
         "please_try_again_with_different_values": "Veuillez réessayer avec des valeurs différentes",
         "the_area_of_the_shape_is_zero": "L'aire de la forme est de zéro"
       }
+    },
+    "mathtex": {
+      "title": "MathTeX",
+      "enter_a_mathematical_expression_in_tex_format": "Entrez une expression mathématique au format TeX",
+      "export_to_image": "Exporter en image",
+      "edit_pixel_ratio": "Modifier le ratio de pixels",
+      "new_pixel_ratio": "Nouveau ratio de pixels",
+      "get_help": "Obtenir de l'aide",
+      "close_help": "Fermer l'aide",
+      "copied_to_clipboard": "Copié dans le presse-papiers",
+      "error": {
+        "an_error_occurred_while_rendering_the_mathtex": "Une erreur s'est produite lors du rendu de MathTeX",
+        "an_error_occurred_while_exporting_the_image": "Une erreur s'est produite lors de l'exportation de l'image"
+      }
     }
   },
   "credits": {

@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 920 (460 per locale)
+/// Strings: 940 (470 per locale)
 ///
-/// Built on 2025-02-24 at 17:19 UTC
+/// Built on 2025-02-26 at 13:40 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -256,6 +256,7 @@ class _StringsToolsEn {
 	late final _StringsToolsTextcounterEn textcounter = _StringsToolsTextcounterEn._(_root);
 	late final _StringsToolsRomannumeralEn romannumeral = _StringsToolsRomannumeralEn._(_root);
 	late final _StringsToolsAreacalculatorEn areacalculator = _StringsToolsAreacalculatorEn._(_root);
+	late final _StringsToolsMathtexEn mathtex = _StringsToolsMathtexEn._(_root);
 }
 
 // Path: credits
@@ -988,6 +989,24 @@ class _StringsToolsAreacalculatorEn {
 	late final _StringsToolsAreacalculatorErrorEn error = _StringsToolsAreacalculatorErrorEn._(_root);
 }
 
+// Path: tools.mathtex
+class _StringsToolsMathtexEn {
+	_StringsToolsMathtexEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'MathTeX';
+	String get enter_a_mathematical_expression_in_tex_format => 'Enter a mathematical expression in TeX format';
+	String get export_to_image => 'Export to image';
+	String get edit_pixel_ratio => 'Edit pixel ratio';
+	String get new_pixel_ratio => 'New pixel ratio';
+	String get get_help => 'Get help';
+	String get close_help => 'Close help';
+	String get copied_to_clipboard => 'Copied to clipboard';
+	late final _StringsToolsMathtexErrorEn error = _StringsToolsMathtexErrorEn._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsEn._(this._root);
@@ -1380,6 +1399,17 @@ class _StringsToolsAreacalculatorErrorEn {
 	String get the_area_of_the_shape_is_zero => 'The area of the shape is zero';
 }
 
+// Path: tools.mathtex.error
+class _StringsToolsMathtexErrorEn {
+	_StringsToolsMathtexErrorEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get an_error_occurred_while_rendering_the_mathtex => 'An error occurred while rendering the MathTeX';
+	String get an_error_occurred_while_exporting_the_image => 'An error occurred while exporting the image';
+}
+
 // Path: <root>
 class _StringsFr implements Translations {
 	/// You can call this constructor and build your own translation instance of this locale.
@@ -1512,6 +1542,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsTextcounterFr textcounter = _StringsToolsTextcounterFr._(_root);
 	@override late final _StringsToolsRomannumeralFr romannumeral = _StringsToolsRomannumeralFr._(_root);
 	@override late final _StringsToolsAreacalculatorFr areacalculator = _StringsToolsAreacalculatorFr._(_root);
+	@override late final _StringsToolsMathtexFr mathtex = _StringsToolsMathtexFr._(_root);
 }
 
 // Path: credits
@@ -2244,6 +2275,24 @@ class _StringsToolsAreacalculatorFr implements _StringsToolsAreacalculatorEn {
 	@override late final _StringsToolsAreacalculatorErrorFr error = _StringsToolsAreacalculatorErrorFr._(_root);
 }
 
+// Path: tools.mathtex
+class _StringsToolsMathtexFr implements _StringsToolsMathtexEn {
+	_StringsToolsMathtexFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'MathTeX';
+	@override String get enter_a_mathematical_expression_in_tex_format => 'Entrez une expression mathématique au format TeX';
+	@override String get export_to_image => 'Exporter en image';
+	@override String get edit_pixel_ratio => 'Modifier le ratio de pixels';
+	@override String get new_pixel_ratio => 'Nouveau ratio de pixels';
+	@override String get get_help => 'Obtenir de l\'aide';
+	@override String get close_help => 'Fermer l\'aide';
+	@override String get copied_to_clipboard => 'Copié dans le presse-papiers';
+	@override late final _StringsToolsMathtexErrorFr error = _StringsToolsMathtexErrorFr._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsFr implements _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsFr._(this._root);
@@ -2634,6 +2683,17 @@ class _StringsToolsAreacalculatorErrorFr implements _StringsToolsAreacalculatorE
 	@override String get please_enter_a_positive_number_for => 'Veuillez entrer un nombre positif pour';
 	@override String get please_try_again_with_different_values => 'Veuillez réessayer avec des valeurs différentes';
 	@override String get the_area_of_the_shape_is_zero => 'L\'aire de la forme est de zéro';
+}
+
+// Path: tools.mathtex.error
+class _StringsToolsMathtexErrorFr implements _StringsToolsMathtexErrorEn {
+	_StringsToolsMathtexErrorFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get an_error_occurred_while_rendering_the_mathtex => 'Une erreur s\'est produite lors du rendu de MathTeX';
+	@override String get an_error_occurred_while_exporting_the_image => 'Une erreur s\'est produite lors de l\'exportation de l\'image';
 }
 
 /// Flat map(s) containing all translations.
@@ -3093,6 +3153,16 @@ extension on Translations {
 			case 'tools.areacalculator.error.please_enter_a_positive_number_for': return 'Please enter a positive number for';
 			case 'tools.areacalculator.error.please_try_again_with_different_values': return 'Please try again with different values';
 			case 'tools.areacalculator.error.the_area_of_the_shape_is_zero': return 'The area of the shape is zero';
+			case 'tools.mathtex.title': return 'MathTeX';
+			case 'tools.mathtex.enter_a_mathematical_expression_in_tex_format': return 'Enter a mathematical expression in TeX format';
+			case 'tools.mathtex.export_to_image': return 'Export to image';
+			case 'tools.mathtex.edit_pixel_ratio': return 'Edit pixel ratio';
+			case 'tools.mathtex.new_pixel_ratio': return 'New pixel ratio';
+			case 'tools.mathtex.get_help': return 'Get help';
+			case 'tools.mathtex.close_help': return 'Close help';
+			case 'tools.mathtex.copied_to_clipboard': return 'Copied to clipboard';
+			case 'tools.mathtex.error.an_error_occurred_while_rendering_the_mathtex': return 'An error occurred while rendering the MathTeX';
+			case 'tools.mathtex.error.an_error_occurred_while_exporting_the_image': return 'An error occurred while exporting the image';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -3561,6 +3631,16 @@ extension on _StringsFr {
 			case 'tools.areacalculator.error.please_enter_a_positive_number_for': return 'Veuillez entrer un nombre positif pour';
 			case 'tools.areacalculator.error.please_try_again_with_different_values': return 'Veuillez réessayer avec des valeurs différentes';
 			case 'tools.areacalculator.error.the_area_of_the_shape_is_zero': return 'L\'aire de la forme est de zéro';
+			case 'tools.mathtex.title': return 'MathTeX';
+			case 'tools.mathtex.enter_a_mathematical_expression_in_tex_format': return 'Entrez une expression mathématique au format TeX';
+			case 'tools.mathtex.export_to_image': return 'Exporter en image';
+			case 'tools.mathtex.edit_pixel_ratio': return 'Modifier le ratio de pixels';
+			case 'tools.mathtex.new_pixel_ratio': return 'Nouveau ratio de pixels';
+			case 'tools.mathtex.get_help': return 'Obtenir de l\'aide';
+			case 'tools.mathtex.close_help': return 'Fermer l\'aide';
+			case 'tools.mathtex.copied_to_clipboard': return 'Copié dans le presse-papiers';
+			case 'tools.mathtex.error.an_error_occurred_while_rendering_the_mathtex': return 'Une erreur s\'est produite lors du rendu de MathTeX';
+			case 'tools.mathtex.error.an_error_occurred_while_exporting_the_image': return 'Une erreur s\'est produite lors de l\'exportation de l\'image';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';
