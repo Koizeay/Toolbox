@@ -149,6 +149,24 @@ class _CreditsPage extends State<CreditsPage> {
                   ),
                 ),
               ),
+              SizedBox(
+                width: double.infinity,
+                child: Card(
+                  child: Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: GestureDetector(
+                      onTap: () {
+                        launchUrlInBrowser("https://koizeay.com");
+                      },
+                      child: const Text(
+                        "https://koizeay.com",
+                        style: TextStyle(fontSize: 14, fontStyle: FontStyle.italic),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
               GestureDetector(
                 onTap: () {
                   showLicensePage(
