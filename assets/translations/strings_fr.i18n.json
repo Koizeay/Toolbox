@@ -612,6 +612,12 @@
         "an_error_occurred_while_rendering_the_mathtex": "Une erreur s'est produite lors du rendu de MathTeX",
         "an_error_occurred_while_exporting_the_image": "Une erreur s'est produite lors de l'exportation de l'image"
       }
+    },
+    "compass": {
+      "title": "Boussole",
+      "error": {
+        "please_grant_location_permission": "Veuillez autoriser la permission de localisation pour utiliser la boussole. Cette autorisation est obligatoire pour accéder aux capteurs de l'appareil."
+      }
     }
   },
   "credits": {

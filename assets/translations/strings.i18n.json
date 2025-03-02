@@ -612,6 +612,12 @@
         "an_error_occurred_while_rendering_the_mathtex": "An error occurred while rendering the MathTeX",
         "an_error_occurred_while_exporting_the_image": "An error occurred while exporting the image"
       }
+    },
+    "compass": {
+      "title": "Compass",
+      "error": {
+        "please_grant_location_permission": "Please grant location permission to use the compass. It is mandatory to access the device's sensors."
+      }
     }
   },
   "credits": {

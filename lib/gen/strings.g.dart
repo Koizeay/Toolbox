@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 940 (470 per locale)
+/// Strings: 944 (472 per locale)
 ///
-/// Built on 2025-02-26 at 13:40 UTC
+/// Built on 2025-03-02 at 10:45 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -257,6 +257,7 @@ class _StringsToolsEn {
 	late final _StringsToolsRomannumeralEn romannumeral = _StringsToolsRomannumeralEn._(_root);
 	late final _StringsToolsAreacalculatorEn areacalculator = _StringsToolsAreacalculatorEn._(_root);
 	late final _StringsToolsMathtexEn mathtex = _StringsToolsMathtexEn._(_root);
+	late final _StringsToolsCompassEn compass = _StringsToolsCompassEn._(_root);
 }
 
 // Path: credits
@@ -1007,6 +1008,17 @@ class _StringsToolsMathtexEn {
 	late final _StringsToolsMathtexErrorEn error = _StringsToolsMathtexErrorEn._(_root);
 }
 
+// Path: tools.compass
+class _StringsToolsCompassEn {
+	_StringsToolsCompassEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'Compass';
+	late final _StringsToolsCompassErrorEn error = _StringsToolsCompassErrorEn._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsEn._(this._root);
@@ -1410,6 +1422,16 @@ class _StringsToolsMathtexErrorEn {
 	String get an_error_occurred_while_exporting_the_image => 'An error occurred while exporting the image';
 }
 
+// Path: tools.compass.error
+class _StringsToolsCompassErrorEn {
+	_StringsToolsCompassErrorEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get please_grant_location_permission => 'Please grant location permission to use the compass. It is mandatory to access the device\'s sensors.';
+}
+
 // Path: <root>
 class _StringsFr implements Translations {
 	/// You can call this constructor and build your own translation instance of this locale.
@@ -1543,6 +1565,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsRomannumeralFr romannumeral = _StringsToolsRomannumeralFr._(_root);
 	@override late final _StringsToolsAreacalculatorFr areacalculator = _StringsToolsAreacalculatorFr._(_root);
 	@override late final _StringsToolsMathtexFr mathtex = _StringsToolsMathtexFr._(_root);
+	@override late final _StringsToolsCompassFr compass = _StringsToolsCompassFr._(_root);
 }
 
 // Path: credits
@@ -2293,6 +2316,17 @@ class _StringsToolsMathtexFr implements _StringsToolsMathtexEn {
 	@override late final _StringsToolsMathtexErrorFr error = _StringsToolsMathtexErrorFr._(_root);
 }
 
+// Path: tools.compass
+class _StringsToolsCompassFr implements _StringsToolsCompassEn {
+	_StringsToolsCompassFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Boussole';
+	@override late final _StringsToolsCompassErrorFr error = _StringsToolsCompassErrorFr._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsFr implements _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsFr._(this._root);
@@ -2694,6 +2728,16 @@ class _StringsToolsMathtexErrorFr implements _StringsToolsMathtexErrorEn {
 	// Translations
 	@override String get an_error_occurred_while_rendering_the_mathtex => 'Une erreur s\'est produite lors du rendu de MathTeX';
 	@override String get an_error_occurred_while_exporting_the_image => 'Une erreur s\'est produite lors de l\'exportation de l\'image';
+}
+
+// Path: tools.compass.error
+class _StringsToolsCompassErrorFr implements _StringsToolsCompassErrorEn {
+	_StringsToolsCompassErrorFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get please_grant_location_permission => 'Veuillez autoriser la permission de localisation pour utiliser la boussole. Cette autorisation est obligatoire pour accéder aux capteurs de l\'appareil.';
 }
 
 /// Flat map(s) containing all translations.
@@ -3163,6 +3207,8 @@ extension on Translations {
 			case 'tools.mathtex.copied_to_clipboard': return 'Copied to clipboard';
 			case 'tools.mathtex.error.an_error_occurred_while_rendering_the_mathtex': return 'An error occurred while rendering the MathTeX';
 			case 'tools.mathtex.error.an_error_occurred_while_exporting_the_image': return 'An error occurred while exporting the image';
+			case 'tools.compass.title': return 'Compass';
+			case 'tools.compass.error.please_grant_location_permission': return 'Please grant location permission to use the compass. It is mandatory to access the device\'s sensors.';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -3641,6 +3687,8 @@ extension on _StringsFr {
 			case 'tools.mathtex.copied_to_clipboard': return 'Copié dans le presse-papiers';
 			case 'tools.mathtex.error.an_error_occurred_while_rendering_the_mathtex': return 'Une erreur s\'est produite lors du rendu de MathTeX';
 			case 'tools.mathtex.error.an_error_occurred_while_exporting_the_image': return 'Une erreur s\'est produite lors de l\'exportation de l\'image';
+			case 'tools.compass.title': return 'Boussole';
+			case 'tools.compass.error.please_grant_location_permission': return 'Veuillez autoriser la permission de localisation pour utiliser la boussole. Cette autorisation est obligatoire pour accéder aux capteurs de l\'appareil.';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';
