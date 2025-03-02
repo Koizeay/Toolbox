@@ -111,6 +111,8 @@ If you have any question, you can contact me by email at [me@koizeay.com](mailto
   <img src="https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot06.jpg" alt="Screenshot 06" height="400">
   <img src="https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot07.jpg" alt="Screenshot 07" height="400">
   <img src="https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot08.jpg" alt="Screenshot 08" height="400">
+  <img src="https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot09.jpg" alt="Screenshot 09" height="400">
+  <img src="https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot10.jpg" alt="Screenshot 19" height="400">
 </p>
 
 ## License
