@@ -1,5 +1,7 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:toolbox/core/dialogs.dart';
 import 'package:toolbox/core/url.dart';
 import 'package:toolbox/gen/strings.g.dart';
 
@@ -22,6 +24,7 @@ class _CreditsPage extends State<CreditsPage> {
 
   @override
   Widget build(BuildContext context) {
+    String imagesPrefix =  Theme.of(context).brightness == Brightness.dark ? "_white" : "";
     return Scaffold(
       appBar: AppBar(
         title: Text(t.credits.title),
@@ -108,6 +111,41 @@ class _CreditsPage extends State<CreditsPage> {
                         ),
                       ],
                     ),
+                  ),
+                ),
+              ),
+              SizedBox(
+                width: double.infinity,
+                child: Card(
+                  child: Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        IconButton(
+                          onPressed: () {
+                            Clipboard.setData(const ClipboardData(text: "me@koizeay.com"));
+                            ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(content: Text(t.credits.email_copied_to_clipboard))
+                            );
+                          },
+                          icon: Image.asset("assets/images/specific/credits_email$imagesPrefix.png", width: 20, height: 20,)
+                        ),
+                        IconButton(
+                          onPressed: () {
+                            launchUrlInBrowser("https://instagram.com/koizeay.dev");
+                          },
+                          icon: Image.asset("assets/images/specific/credits_instagram$imagesPrefix.png", width: 20, height: 20,)
+                        ),
+                        IconButton(
+                          onPressed: () {
+                            launchUrlInBrowser("https://jtu.me/discord");
+                          },
+                          icon: Image.asset("assets/images/specific/credits_discord$imagesPrefix.png", width: 20, height: 20,)
+                        ),
+                      ],
+                    )
                   ),
                 ),
               ),

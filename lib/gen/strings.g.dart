@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 944 (472 per locale)
+/// Strings: 946 (473 per locale)
 ///
-/// Built on 2025-03-02 at 10:45 UTC
+/// Built on 2025-03-02 at 12:03 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -273,6 +273,7 @@ class _StringsCreditsEn {
 	String tools_icons({required Object author}) => 'Tools icons by ${author}';
 	String get view_licenses => 'View licenses';
 	String get contribute_on_github => 'Contribute on GitHub';
+	String get email_copied_to_clipboard => 'Email copied to clipboard';
 	late final _StringsCreditsTranslationsEn translations = _StringsCreditsTranslationsEn._(_root);
 }
 
@@ -1581,6 +1582,7 @@ class _StringsCreditsFr implements _StringsCreditsEn {
 	@override String tools_icons({required Object author}) => 'Icônes des outils par ${author}';
 	@override String get view_licenses => 'Voir les licences';
 	@override String get contribute_on_github => 'Contribuez sur GitHub';
+	@override String get email_copied_to_clipboard => 'Email copié dans le presse-papiers';
 	@override late final _StringsCreditsTranslationsFr translations = _StringsCreditsTranslationsFr._(_root);
 }
 
@@ -3215,6 +3217,7 @@ extension on Translations {
 			case 'credits.tools_icons': return ({required Object author}) => 'Tools icons by ${author}';
 			case 'credits.view_licenses': return 'View licenses';
 			case 'credits.contribute_on_github': return 'Contribute on GitHub';
+			case 'credits.email_copied_to_clipboard': return 'Email copied to clipboard';
 			case 'credits.translations.title': return 'Translations';
 			case 'credits.translations.english': return ({required Object author}) => 'English by ${author}';
 			case 'credits.translations.french': return ({required Object author}) => 'French by ${author}';
@@ -3695,6 +3698,7 @@ extension on _StringsFr {
 			case 'credits.tools_icons': return ({required Object author}) => 'Icônes des outils par ${author}';
 			case 'credits.view_licenses': return 'Voir les licences';
 			case 'credits.contribute_on_github': return 'Contribuez sur GitHub';
+			case 'credits.email_copied_to_clipboard': return 'Email copié dans le presse-papiers';
 			case 'credits.translations.title': return 'Traductions';
 			case 'credits.translations.english': return ({required Object author}) => 'Anglais par ${author}';
 			case 'credits.translations.french': return ({required Object author}) => 'Français par ${author}';

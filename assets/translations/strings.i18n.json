@@ -627,6 +627,7 @@
     "tools_icons": "Tools icons by $author",
     "view_licenses": "View licenses",
     "contribute_on_github": "Contribute on GitHub",
+    "email_copied_to_clipboard": "Email copied to clipboard",
     "translations": {
       "title": "Translations",
       "english": "English by $author",
