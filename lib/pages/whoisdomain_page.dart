@@ -25,6 +25,26 @@ class _WhoisDomainPage extends State<WhoisDomainPage> {
   bool isLoading = false;
   bool isRawView = false;
 
+  bool isDomainAnIpAddress(String domain) {
+    final List<String> parts = domain.split('.');
+    if (parts.length != 4) {
+      return false;
+    }
+
+    for (final String part in parts) {
+      if (part.isEmpty) {
+        return false;
+      }
+
+      final int number = int.tryParse(part) ?? -1;
+      if (number < 0 || number > 255) {
+        return false;
+      }
+    }
+
+    return true;
+  }
+
   Future<String?> getWhoisServer(String tld) async {
     final Socket socket = await Socket.connect(ianaWhoisServer, 43);
     socket.write('$tld\r\n');
@@ -48,6 +68,15 @@ class _WhoisDomainPage extends State<WhoisDomainPage> {
   }
 
   Future<String> whois(String domain, {int port = 43}) async {
+    if (isDomainAnIpAddress(domain)) {
+      showOkTextDialog(
+          context,
+          t.tools.whoisdomain.ip_address_not_supported,
+          t.tools.whoisdomain.ip_address_not_supported_description
+      );
+      return '';
+    }
+
     final String tld = domain.split('.').last;
     final String? server = await getWhoisServer(tld);
     if (server == null) {

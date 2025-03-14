@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 946 (473 per locale)
+/// Strings: 950 (475 per locale)
 ///
-/// Built on 2025-03-02 at 12:03 UTC
+/// Built on 2025-03-14 at 21:41 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -929,6 +929,8 @@ class _StringsToolsWhoisdomainEn {
 	String get disclaimer => 'Disclaimer';
 	String get disclaimer_text => 'Toolbox provides WHOIS query functionality for informational purposes only. The data retrieved may not be accurate, complete, or up-to-date, and is subject to the terms and conditions of the respective domain registries. Users are prohibited from using WHOIS data for spam, unlawful purposes, or automated data collection. By using this tool, you agree to comply with applicable laws and the registry\'s terms of service. Toolbox and/or Koizeay assumes no responsibility for errors, omissions, or misuse of the data. Please note that some TLDs may not be supported by this tool.';
 	String get loading => 'Loading...';
+	String get ip_address_not_supported => 'IP address not supported';
+	String get ip_address_not_supported_description => 'This tool only supports domain names, not IP addresses';
 	String get no_result => 'No valid result found';
 	String get view_pretty => 'View pretty';
 	String get view_raw => 'View raw';
@@ -2238,6 +2240,8 @@ class _StringsToolsWhoisdomainFr implements _StringsToolsWhoisdomainEn {
 	@override String get disclaimer => 'Avertissement';
 	@override String get disclaimer_text => 'Toolbox fournit une fonction de recherche WHOIS à des fins d\'information uniquement. Les données récupérées peuvent ne pas être exactes, complètes ou à jour, et sont soumises aux conditions générales des registres de domaines respectifs. Il est interdit aux utilisateurs d\'utiliser les données WHOIS à des fins de spam, à des fins illégales ou de collecter des données de manière automatisée. En utilisant cet outil, vous acceptez de vous conformer aux lois applicables et aux conditions de service du registre. Toolbox et/ou Koizeay n\'assument aucune responsabilité en cas d\'erreurs, d\'omissions ou d\'utilisation abusive des données. Veuillez noter que certains TLD peuvent ne pas être pris en charge par cet outil.';
 	@override String get loading => 'Chargement...';
+	@override String get ip_address_not_supported => 'Adresse IP non prise en charge';
+	@override String get ip_address_not_supported_description => 'Cet outil supporte uniquement les recherches de domaine, pas les recherches d\'adresse IP';
 	@override String get no_result => 'Aucun résultat valide trouvé';
 	@override String get view_pretty => 'Vue formatée';
 	@override String get view_raw => 'Vue brute';
@@ -3134,6 +3138,8 @@ extension on Translations {
 			case 'tools.whoisdomain.disclaimer': return 'Disclaimer';
 			case 'tools.whoisdomain.disclaimer_text': return 'Toolbox provides WHOIS query functionality for informational purposes only. The data retrieved may not be accurate, complete, or up-to-date, and is subject to the terms and conditions of the respective domain registries. Users are prohibited from using WHOIS data for spam, unlawful purposes, or automated data collection. By using this tool, you agree to comply with applicable laws and the registry\'s terms of service. Toolbox and/or Koizeay assumes no responsibility for errors, omissions, or misuse of the data. Please note that some TLDs may not be supported by this tool.';
 			case 'tools.whoisdomain.loading': return 'Loading...';
+			case 'tools.whoisdomain.ip_address_not_supported': return 'IP address not supported';
+			case 'tools.whoisdomain.ip_address_not_supported_description': return 'This tool only supports domain names, not IP addresses';
 			case 'tools.whoisdomain.no_result': return 'No valid result found';
 			case 'tools.whoisdomain.view_pretty': return 'View pretty';
 			case 'tools.whoisdomain.view_raw': return 'View raw';
@@ -3615,6 +3621,8 @@ extension on _StringsFr {
 			case 'tools.whoisdomain.disclaimer': return 'Avertissement';
 			case 'tools.whoisdomain.disclaimer_text': return 'Toolbox fournit une fonction de recherche WHOIS à des fins d\'information uniquement. Les données récupérées peuvent ne pas être exactes, complètes ou à jour, et sont soumises aux conditions générales des registres de domaines respectifs. Il est interdit aux utilisateurs d\'utiliser les données WHOIS à des fins de spam, à des fins illégales ou de collecter des données de manière automatisée. En utilisant cet outil, vous acceptez de vous conformer aux lois applicables et aux conditions de service du registre. Toolbox et/ou Koizeay n\'assument aucune responsabilité en cas d\'erreurs, d\'omissions ou d\'utilisation abusive des données. Veuillez noter que certains TLD peuvent ne pas être pris en charge par cet outil.';
 			case 'tools.whoisdomain.loading': return 'Chargement...';
+			case 'tools.whoisdomain.ip_address_not_supported': return 'Adresse IP non prise en charge';
+			case 'tools.whoisdomain.ip_address_not_supported_description': return 'Cet outil supporte uniquement les recherches de domaine, pas les recherches d\'adresse IP';
 			case 'tools.whoisdomain.no_result': return 'Aucun résultat valide trouvé';
 			case 'tools.whoisdomain.view_pretty': return 'Vue formatée';
 			case 'tools.whoisdomain.view_raw': return 'Vue brute';

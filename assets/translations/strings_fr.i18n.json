@@ -517,6 +517,8 @@
       "disclaimer": "Avertissement",
       "disclaimer_text": "Toolbox fournit une fonction de recherche WHOIS à des fins d'information uniquement. Les données récupérées peuvent ne pas être exactes, complètes ou à jour, et sont soumises aux conditions générales des registres de domaines respectifs. Il est interdit aux utilisateurs d'utiliser les données WHOIS à des fins de spam, à des fins illégales ou de collecter des données de manière automatisée. En utilisant cet outil, vous acceptez de vous conformer aux lois applicables et aux conditions de service du registre. Toolbox et/ou Koizeay n'assument aucune responsabilité en cas d'erreurs, d'omissions ou d'utilisation abusive des données. Veuillez noter que certains TLD peuvent ne pas être pris en charge par cet outil.",
       "loading": "Chargement...",
+      "ip_address_not_supported": "Adresse IP non prise en charge",
+      "ip_address_not_supported_description": "Cet outil supporte uniquement les recherches de domaine, pas les recherches d'adresse IP",
       "no_result": "Aucun résultat valide trouvé",
       "view_pretty": "Vue formatée",
       "view_raw": "Vue brute",

@@ -517,6 +517,8 @@
       "disclaimer": "Disclaimer",
       "disclaimer_text": "Toolbox provides WHOIS query functionality for informational purposes only. The data retrieved may not be accurate, complete, or up-to-date, and is subject to the terms and conditions of the respective domain registries. Users are prohibited from using WHOIS data for spam, unlawful purposes, or automated data collection. By using this tool, you agree to comply with applicable laws and the registry's terms of service. Toolbox and/or Koizeay assumes no responsibility for errors, omissions, or misuse of the data. Please note that some TLDs may not be supported by this tool.",
       "loading": "Loading...",
+      "ip_address_not_supported": "IP address not supported",
+      "ip_address_not_supported_description": "This tool only supports domain names, not IP addresses",
       "no_result": "No valid result found",
       "view_pretty": "View pretty",
       "view_raw": "View raw",
