@@ -87,6 +87,7 @@ class _RomanNumeralPage extends State<RomanNumeralPage> {
                   romanNumber = "";
                   digitNumber = 0;
                 });
+                FocusManager.instance.primaryFocus?.unfocus();
               },
               icon: isNumberToRoman
                   ? const Icon(Icons.format_list_numbered_outlined)
