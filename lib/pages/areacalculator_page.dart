@@ -247,7 +247,7 @@ class _AreaCalculatorPage extends State<AreaCalculatorPage> {
                                     .key,
                                 border: const OutlineInputBorder(),
                               ),
-                              keyboardType: TextInputType.number,
+                              keyboardType: const TextInputType.numberWithOptions(decimal: true),
                               onChanged: (value) {
                                 selectedShape.inputs[selectedShape.inputs.entries.elementAt(i).key] = value;
                               },
