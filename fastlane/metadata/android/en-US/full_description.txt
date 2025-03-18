@@ -1,0 +1,57 @@
+Toolbox
+
+It's a toolbox (as the name suggests) that brings together several tools in a single mobile application!
+
+Here is the list of tools available in this app
+- Area calculator
+- Base converter
+- Bitwise calculator
+- Characters copy
+- Clock
+- Compass
+- Counter
+- File encryption
+- Flip a coin
+- Game of life
+- HTTP request
+- Map (OSM)
+- MathTeX
+- MC server ping
+- Metronome
+- Morse code
+- Music analyzer
+- Music search
+- National anthems
+- Nearby transport stops
+- Network info
+- NSLookup
+- Ping
+- QR reader
+- Random color
+- Random number
+- Roman numeral
+- Roulette
+- Sound meter
+- Speedometer
+- SSH client
+- Stopwatch
+- Text counter
+- Text differences
+- Text to speech
+- Timer
+- Timestamp converter
+- URL shortener
+- UUID generator
+- Whiteboard
+- Whois domain
+- YouTube thumbnail
+
+The application is totally free and open source.
+
+Are you familiar with app development in Flutter?
+Then you can contribute to this application: https://github.com/Koizeay/Toolbox
+
+Icons provided by Icons8
+https://www.icons8.com
+
+Toolbox is an app created by Koizeay.
