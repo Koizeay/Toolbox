@@ -6,7 +6,7 @@ The goal of this project is to create a toolbox mobile app with a lot of tools t
 The app is developed to support both Android and iOS, no web or desktop support is planned.
 
 ## Download
-Youn can download **Toolbox** on Android and iOS via the following links
+You can download **Toolbox** on Android and iOS via the following links
 
 - [Play Store (Android)](https://play.google.com/store/apps/details?id=com.koizeay.toolbox)
 - [App Store (iOS)](https://apps.apple.com/app/toolbox-by-koizeay/id6466197390)
@@ -36,7 +36,7 @@ flutter pub get
 Finally you can run the project on your device, on an emulator or on a simulator.
 
 
-*Warning*, some tools require an API key to work, if you want to use them while developing, you need to add your own API key in the `api_keys.dart` file.
+*Warning*, some tools require an API key and/or token to work, if you want to use them while developing, you need to add your own API key and/or token in the corresponding .dart file (in the `lib/secret` folder).
 
 ### Add a new tool
 **Warning**, if you want to add a new tool, you need to have some knowledge in Flutter and Dart.\
@@ -122,5 +122,5 @@ _This project was (up to and including version 1.18.0) under the [GNU General Pu
 _You can read the declaration of the license change [here](https://koizeay.com/static/toolbox/license_change_from_gpl-3.0_to_mpl-2.0.pdf)._
 
 ## Credits
-- [Koizeay](https://koizeay.com) - Developer
+- [Koizeay](https://koizeay.com) - Main developer
 - [Icons8](https://www.icons8.com/) - Tools icons + App icon
