@@ -51,7 +51,6 @@ dependencies:
   url_launcher: ^6.1.11
   noise_meter: ^5.0.2
   gauges: ^1.0.0
-  mobile_scanner: ^5.1.1
   timer_count_down: ^2.2.2
   vibration: ^1.7.7
   flippy: ^0.1.1
@@ -86,6 +85,7 @@ dependencies:
   flutter_math_fork: ^0.7.3
   screenshot: ^3.0.0
   flutter_compass: ^0.8.1
+  flutter_zxing: ^1.8.2
 
 dev_dependencies:
   flutter_launcher_icons: ^0.14.1

@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 950 (475 per locale)
+/// Strings: 944 (472 per locale)
 ///
-/// Built on 2025-03-14 at 21:41 UTC
+/// Built on 2025-03-29 at 14:17 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -395,8 +395,6 @@ class _StringsToolsQrreaderEn {
 	String get wifi => 'WiFi';
 	String get wifi_ssid => 'SSID';
 	String get wifi_password => 'Password';
-	String get scan_from_image => 'Scan from image';
-	late final _StringsToolsQrreaderErrorEn error = _StringsToolsQrreaderErrorEn._(_root);
 }
 
 // Path: tools.timer
@@ -1080,17 +1078,6 @@ class _StringsToolsSoundmeterErrorEn {
 	String get no_sound_detected => 'No sound detected, check that the application has access to the microphone in the settings of your device.';
 }
 
-// Path: tools.qrreader.error
-class _StringsToolsQrreaderErrorEn {
-	_StringsToolsQrreaderErrorEn._(this._root);
-
-	final Translations _root; // ignore: unused_field
-
-	// Translations
-	String get no_qr_code_found => 'No QR code found';
-	String get no_qr_code_found_description => 'No QR code found in the image.\nPlease try again with another image.';
-}
-
 // Path: tools.roulette.warning
 class _StringsToolsRouletteWarningEn {
 	_StringsToolsRouletteWarningEn._(this._root);
@@ -1706,8 +1693,6 @@ class _StringsToolsQrreaderFr implements _StringsToolsQrreaderEn {
 	@override String get wifi => 'WiFi';
 	@override String get wifi_ssid => 'SSID';
 	@override String get wifi_password => 'Mot de passe';
-	@override String get scan_from_image => 'Scanner à partir d\'une image';
-	@override late final _StringsToolsQrreaderErrorFr error = _StringsToolsQrreaderErrorFr._(_root);
 }
 
 // Path: tools.timer
@@ -2391,17 +2376,6 @@ class _StringsToolsSoundmeterErrorFr implements _StringsToolsSoundmeterErrorEn {
 	@override String get no_sound_detected => 'Aucun son détecté, vérifiez que l\'application a accès au micro dans les paramètres de votre appareil.';
 }
 
-// Path: tools.qrreader.error
-class _StringsToolsQrreaderErrorFr implements _StringsToolsQrreaderErrorEn {
-	_StringsToolsQrreaderErrorFr._(this._root);
-
-	@override final _StringsFr _root; // ignore: unused_field
-
-	// Translations
-	@override String get no_qr_code_found => 'Aucun QR code trouvé';
-	@override String get no_qr_code_found_description => 'Aucun QR code n\'a été trouvé dans l\'image. Veuillez réessayer avec une autre image.';
-}
-
 // Path: tools.roulette.warning
 class _StringsToolsRouletteWarningFr implements _StringsToolsRouletteWarningEn {
 	_StringsToolsRouletteWarningFr._(this._root);
@@ -2832,9 +2806,6 @@ extension on Translations {
 			case 'tools.qrreader.wifi': return 'WiFi';
 			case 'tools.qrreader.wifi_ssid': return 'SSID';
 			case 'tools.qrreader.wifi_password': return 'Password';
-			case 'tools.qrreader.scan_from_image': return 'Scan from image';
-			case 'tools.qrreader.error.no_qr_code_found': return 'No QR code found';
-			case 'tools.qrreader.error.no_qr_code_found_description': return 'No QR code found in the image.\nPlease try again with another image.';
 			case 'tools.timer.title': return 'Timer';
 			case 'tools.timer.start': return 'Start';
 			case 'tools.timer.stop': return 'Stop';
@@ -3315,9 +3286,6 @@ extension on _StringsFr {
 			case 'tools.qrreader.wifi': return 'WiFi';
 			case 'tools.qrreader.wifi_ssid': return 'SSID';
 			case 'tools.qrreader.wifi_password': return 'Mot de passe';
-			case 'tools.qrreader.scan_from_image': return 'Scanner à partir d\'une image';
-			case 'tools.qrreader.error.no_qr_code_found': return 'Aucun QR code trouvé';
-			case 'tools.qrreader.error.no_qr_code_found_description': return 'Aucun QR code n\'a été trouvé dans l\'image. Veuillez réessayer avec une autre image.';
 			case 'tools.timer.title': return 'Minuteur';
 			case 'tools.timer.start': return 'Démarrer';
 			case 'tools.timer.stop': return 'Arrêter';
