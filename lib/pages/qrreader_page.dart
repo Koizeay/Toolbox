@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_zxing/flutter_zxing.dart';
 import 'package:toolbox/core/dialogs.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:toolbox/core/url.dart';
 import 'package:toolbox/gen/strings.g.dart';
 
@@ -16,22 +17,24 @@ class _QrReaderPage extends State<QrReaderPage> {
   bool isResultDialogOpen = false;
 
   @override
-  Future<void> initState() async {
-    super.initState();
-  }
-
-  @override
   void dispose() {
     zx.stopCameraProcessing();
     super.dispose();
   }
 
-  void onScanned(Code capture) {
+  void onScanned(Code capture, { bool showErrorIfNoResult = false }) {
     if (isResultDialogOpen) {
       return;
     }
     String? value = capture.text;
     if (value == null || value.isEmpty) {
+      if (showErrorIfNoResult) {
+        showOkTextDialog(
+          context,
+          t.tools.qrreader.error.no_qr_code,
+          t.tools.qrreader.error.error_no_result,
+        );
+      }
       return;
     }
 
@@ -155,17 +158,39 @@ class _QrReaderPage extends State<QrReaderPage> {
     }
   }
 
+  Future<void> searchQrOnImage() async {
+    final image = await ImagePicker().pickImage(source: ImageSource.gallery);
+    if (image != null) {
+      Code resultFromPath = await zx.readBarcodeImagePath(
+          image,
+          DecodeParams(
+            imageFormat: ImageFormat.rgb,
+            format: Format.qrCode
+          )
+      );
+      onScanned(resultFromPath, showErrorIfNoResult: true);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           title: Text(t.tools.qrreader.title),
+          actions: [
+            IconButton(
+              icon: const Icon(Icons.image_search),
+              onPressed: () async {
+                await searchQrOnImage();
+              },
+            ),
+          ],
         ),
         body: SafeArea(
           child: ReaderWidget(
             codeFormat: Format.qrCode,
             showToggleCamera: false,
-            galleryIcon: const Icon(Icons.image_search),
+            showGallery: false,
             onScan: (result) async {
               onScanned(result);
             },

@@ -108,7 +108,11 @@
       "copied_to_clipboard": "Copié dans le presse-papiers",
       "wifi": "WiFi",
       "wifi_ssid": "SSID",
-      "wifi_password": "Mot de passe"
+      "wifi_password": "Mot de passe",
+      "error":{
+        "no_qr_code": "Aucun code QR",
+        "error_no_result": "Aucun résultat trouvé"
+      }
     },
     "timer": {
       "title": "Minuteur",

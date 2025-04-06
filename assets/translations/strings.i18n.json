@@ -108,7 +108,11 @@
       "copied_to_clipboard": "Copied to clipboard",
       "wifi": "WiFi",
       "wifi_ssid": "SSID",
-      "wifi_password": "Password"
+      "wifi_password": "Password",
+      "error":{
+        "no_qr_code": "No QR code",
+        "error_no_result": "No result found"
+      }
     },
     "timer": {
       "title": "Timer",
