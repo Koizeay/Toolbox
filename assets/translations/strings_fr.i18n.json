@@ -615,6 +615,23 @@
       "error": {
         "please_grant_location_permission": "Veuillez autoriser la permission de localisation pour utiliser la boussole. Cette autorisation est obligatoire pour accéder aux capteurs de l'appareil."
       }
+    },
+    "qrcreator": {
+      "title": "Créateur de QR",
+      "ecc_low": "Bas",
+      "ecc_medium": "Moyen",
+      "ecc_quartile": "Quartile",
+      "ecc_high": "Haut",
+      "saved_successfully": "QR code enregistré avec succès",
+      "shared_successfully": "QR code partagé avec succès",
+      "enter_text_or_url": "Entrez du texte ou une URL",
+      "error_correction_level": "Niveau de correction d'erreur",
+      "create": "Créer",
+      "save": "Enregistrer",
+      "share": "Partager",
+      "error": {
+        "failed_to_create_qr_code": "Échec de la création du QR code, veuillez vérifier votre saisie et réessayer"
+      }
     }
   },
   "credits": {

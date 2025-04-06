@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 944 (472 per locale)
+/// Strings: 970 (485 per locale)
 ///
-/// Built on 2025-03-29 at 14:17 UTC
+/// Built on 2025-04-06 at 15:00 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -258,6 +258,7 @@ class _StringsToolsEn {
 	late final _StringsToolsAreacalculatorEn areacalculator = _StringsToolsAreacalculatorEn._(_root);
 	late final _StringsToolsMathtexEn mathtex = _StringsToolsMathtexEn._(_root);
 	late final _StringsToolsCompassEn compass = _StringsToolsCompassEn._(_root);
+	late final _StringsToolsQrcreatorEn qrcreator = _StringsToolsQrcreatorEn._(_root);
 }
 
 // Path: credits
@@ -1020,6 +1021,28 @@ class _StringsToolsCompassEn {
 	late final _StringsToolsCompassErrorEn error = _StringsToolsCompassErrorEn._(_root);
 }
 
+// Path: tools.qrcreator
+class _StringsToolsQrcreatorEn {
+	_StringsToolsQrcreatorEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'QR creator';
+	String get ecc_low => 'Low';
+	String get ecc_medium => 'Medium';
+	String get ecc_quartile => 'Quartile';
+	String get ecc_high => 'High';
+	String get saved_successfully => 'QR code saved successfully';
+	String get shared_successfully => 'QR code shared successfully';
+	String get enter_text_or_url => 'Enter text or URL';
+	String get error_correction_level => 'Error correction level';
+	String get create => 'Create';
+	String get save => 'Save';
+	String get share => 'Share';
+	late final _StringsToolsQrcreatorErrorEn error = _StringsToolsQrcreatorErrorEn._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsEn._(this._root);
@@ -1422,6 +1445,16 @@ class _StringsToolsCompassErrorEn {
 	String get please_grant_location_permission => 'Please grant location permission to use the compass. It is mandatory to access the device\'s sensors.';
 }
 
+// Path: tools.qrcreator.error
+class _StringsToolsQrcreatorErrorEn {
+	_StringsToolsQrcreatorErrorEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get failed_to_create_qr_code => 'Failed to create QR code, please check your input and try again';
+}
+
 // Path: <root>
 class _StringsFr implements Translations {
 	/// You can call this constructor and build your own translation instance of this locale.
@@ -1556,6 +1589,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsAreacalculatorFr areacalculator = _StringsToolsAreacalculatorFr._(_root);
 	@override late final _StringsToolsMathtexFr mathtex = _StringsToolsMathtexFr._(_root);
 	@override late final _StringsToolsCompassFr compass = _StringsToolsCompassFr._(_root);
+	@override late final _StringsToolsQrcreatorFr qrcreator = _StringsToolsQrcreatorFr._(_root);
 }
 
 // Path: credits
@@ -2318,6 +2352,28 @@ class _StringsToolsCompassFr implements _StringsToolsCompassEn {
 	@override late final _StringsToolsCompassErrorFr error = _StringsToolsCompassErrorFr._(_root);
 }
 
+// Path: tools.qrcreator
+class _StringsToolsQrcreatorFr implements _StringsToolsQrcreatorEn {
+	_StringsToolsQrcreatorFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Créateur de QR';
+	@override String get ecc_low => 'Bas';
+	@override String get ecc_medium => 'Moyen';
+	@override String get ecc_quartile => 'Quartile';
+	@override String get ecc_high => 'Haut';
+	@override String get saved_successfully => 'QR code enregistré avec succès';
+	@override String get shared_successfully => 'QR code partagé avec succès';
+	@override String get enter_text_or_url => 'Entrez du texte ou une URL';
+	@override String get error_correction_level => 'Niveau de correction d\'erreur';
+	@override String get create => 'Créer';
+	@override String get save => 'Enregistrer';
+	@override String get share => 'Partager';
+	@override late final _StringsToolsQrcreatorErrorFr error = _StringsToolsQrcreatorErrorFr._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsFr implements _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsFr._(this._root);
@@ -2718,6 +2774,16 @@ class _StringsToolsCompassErrorFr implements _StringsToolsCompassErrorEn {
 
 	// Translations
 	@override String get please_grant_location_permission => 'Veuillez autoriser la permission de localisation pour utiliser la boussole. Cette autorisation est obligatoire pour accéder aux capteurs de l\'appareil.';
+}
+
+// Path: tools.qrcreator.error
+class _StringsToolsQrcreatorErrorFr implements _StringsToolsQrcreatorErrorEn {
+	_StringsToolsQrcreatorErrorFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get failed_to_create_qr_code => 'Échec de la création du QR code, veuillez vérifier votre saisie et réessayer';
 }
 
 /// Flat map(s) containing all translations.
@@ -3188,6 +3254,19 @@ extension on Translations {
 			case 'tools.mathtex.error.an_error_occurred_while_exporting_the_image': return 'An error occurred while exporting the image';
 			case 'tools.compass.title': return 'Compass';
 			case 'tools.compass.error.please_grant_location_permission': return 'Please grant location permission to use the compass. It is mandatory to access the device\'s sensors.';
+			case 'tools.qrcreator.title': return 'QR creator';
+			case 'tools.qrcreator.ecc_low': return 'Low';
+			case 'tools.qrcreator.ecc_medium': return 'Medium';
+			case 'tools.qrcreator.ecc_quartile': return 'Quartile';
+			case 'tools.qrcreator.ecc_high': return 'High';
+			case 'tools.qrcreator.saved_successfully': return 'QR code saved successfully';
+			case 'tools.qrcreator.shared_successfully': return 'QR code shared successfully';
+			case 'tools.qrcreator.enter_text_or_url': return 'Enter text or URL';
+			case 'tools.qrcreator.error_correction_level': return 'Error correction level';
+			case 'tools.qrcreator.create': return 'Create';
+			case 'tools.qrcreator.save': return 'Save';
+			case 'tools.qrcreator.share': return 'Share';
+			case 'tools.qrcreator.error.failed_to_create_qr_code': return 'Failed to create QR code, please check your input and try again';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -3668,6 +3747,19 @@ extension on _StringsFr {
 			case 'tools.mathtex.error.an_error_occurred_while_exporting_the_image': return 'Une erreur s\'est produite lors de l\'exportation de l\'image';
 			case 'tools.compass.title': return 'Boussole';
 			case 'tools.compass.error.please_grant_location_permission': return 'Veuillez autoriser la permission de localisation pour utiliser la boussole. Cette autorisation est obligatoire pour accéder aux capteurs de l\'appareil.';
+			case 'tools.qrcreator.title': return 'Créateur de QR';
+			case 'tools.qrcreator.ecc_low': return 'Bas';
+			case 'tools.qrcreator.ecc_medium': return 'Moyen';
+			case 'tools.qrcreator.ecc_quartile': return 'Quartile';
+			case 'tools.qrcreator.ecc_high': return 'Haut';
+			case 'tools.qrcreator.saved_successfully': return 'QR code enregistré avec succès';
+			case 'tools.qrcreator.shared_successfully': return 'QR code partagé avec succès';
+			case 'tools.qrcreator.enter_text_or_url': return 'Entrez du texte ou une URL';
+			case 'tools.qrcreator.error_correction_level': return 'Niveau de correction d\'erreur';
+			case 'tools.qrcreator.create': return 'Créer';
+			case 'tools.qrcreator.save': return 'Enregistrer';
+			case 'tools.qrcreator.share': return 'Partager';
+			case 'tools.qrcreator.error.failed_to_create_qr_code': return 'Échec de la création du QR code, veuillez vérifier votre saisie et réessayer';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';

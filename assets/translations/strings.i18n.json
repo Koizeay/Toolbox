@@ -615,6 +615,23 @@
       "error": {
         "please_grant_location_permission": "Please grant location permission to use the compass. It is mandatory to access the device's sensors."
       }
+    },
+    "qrcreator": {
+      "title": "QR creator",
+      "ecc_low": "Low",
+      "ecc_medium": "Medium",
+      "ecc_quartile": "Quartile",
+      "ecc_high": "High",
+      "saved_successfully": "QR code saved successfully",
+      "shared_successfully": "QR code shared successfully",
+      "enter_text_or_url": "Enter text or URL",
+      "error_correction_level": "Error correction level",
+      "create": "Create",
+      "save": "Save",
+      "share": "Share",
+      "error": {
+        "failed_to_create_qr_code": "Failed to create QR code, please check your input and try again"
+      }
     }
   },
   "credits": {

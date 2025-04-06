@@ -24,6 +24,7 @@ import 'package:toolbox/pages/nearbypublictransportstops_page.dart';
 import 'package:toolbox/pages/nslookup_page.dart';
 import 'package:toolbox/pages/osm_page.dart';
 import 'package:toolbox/pages/ping_page.dart';
+import 'package:toolbox/pages/qrcreator_page.dart';
 import 'package:toolbox/pages/qrreader_page.dart';
 import 'package:toolbox/pages/randomcolor_page.dart';
 import 'package:toolbox/pages/randomnumber_page.dart';
@@ -74,6 +75,7 @@ class Hierarchy {
     "nslookup": Tool(t.tools.nslookup.title, "assets/images/tools/nslookup.png", const NslookupPage()),
     "osm": Tool(t.tools.osm.title, "assets/images/tools/osm.png", const OsmPage()),
     "ping": Tool(t.tools.ping.title, "assets/images/tools/ping.png", const PingPage()),
+    "qrcreator": Tool(t.tools.qrcreator.title, "assets/images/tools/qrcreator.png", const QrCreatorPage()),
     "qrreader": Tool(t.tools.qrreader.title, "assets/images/tools/qrreader.png", const QrReaderPage()),
     "randomcolor": Tool(t.tools.randomcolor.title, "assets/images/tools/randomcolor.png", const RandomColorPage()),
     "randomnumber": Tool(t.tools.randomnumber.title, "assets/images/tools/randomnumber.png", const RandomNumberPage()),
@@ -128,6 +130,7 @@ class Hierarchy {
       toolMap["characterscopy"],
       toolMap["counter"],
       toolMap["fileencryption"],
+      toolMap["qrcreator"],
       toolMap["qrreader"],
       toolMap["textdifferences"],
       toolMap["whiteboard"],
