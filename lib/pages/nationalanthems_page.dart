@@ -72,8 +72,7 @@ class _NationalAnthemsPage extends State<NationalAnthemsPage> {
   void filterList(String filter) {
     setState(() {
       filteredAnthemsList = anthemsList.where((anthem) =>
-      anthem.name.toLowerCase().contains(filter.toLowerCase()) ||
-          anthem.code.toLowerCase().contains(filter.toLowerCase())).toList();
+      anthem.name.toLowerCase().contains(filter.toLowerCase())).toList();
     });
   }
 
