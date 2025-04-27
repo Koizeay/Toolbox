@@ -112,6 +112,30 @@ class _UrlShortenerPage extends State<UrlShortenerPage> {
     );
   }
 
+  void showMoreFeaturesDialog(BuildContext context) {
+    List<TextButton> actions = [
+      TextButton(
+        onPressed: () {
+          Navigator.pop(context);
+        },
+        child: Text(t.generic.cancel),
+      ),
+      TextButton(
+        onPressed: () {
+          launchUrlInBrowser(serverUrl);
+          Navigator.pop(context);
+        },
+        child: Text(t.tools.urlshortener.open),
+      ),
+    ];
+    showCustomButtonsTextDialog(
+        context,
+        t.tools.urlshortener.more_features,
+        t.tools.urlshortener.more_features_message,
+        actions
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -258,7 +282,20 @@ class _UrlShortenerPage extends State<UrlShortenerPage> {
                                         child: Text(t.tools.urlshortener.shorten),
                                       ),
                                     ),
-                                  ]),
+                                    TextButton(
+                                      onPressed: () {
+                                        showMoreFeaturesDialog(context);
+                                      },
+                                      child: Text(
+                                          t.tools.pastebin.more_features,
+                                          style: const TextStyle(
+                                            fontStyle: FontStyle.italic,
+                                            fontSize: 12,
+                                          )
+                                      ),
+                                    ),
+                                  ]
+                              ),
                             ),
                           )
                     : SizedBox(

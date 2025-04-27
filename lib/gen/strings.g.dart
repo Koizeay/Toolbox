@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 974 (487 per locale)
+/// Strings: 1020 (510 per locale)
 ///
-/// Built on 2025-04-06 at 15:21 UTC
+/// Built on 2025-04-27 at 17:52 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -259,6 +259,7 @@ class _StringsToolsEn {
 	late final _StringsToolsMathtexEn mathtex = _StringsToolsMathtexEn._(_root);
 	late final _StringsToolsCompassEn compass = _StringsToolsCompassEn._(_root);
 	late final _StringsToolsQrcreatorEn qrcreator = _StringsToolsQrcreatorEn._(_root);
+	late final _StringsToolsPastebinEn pastebin = _StringsToolsPastebinEn._(_root);
 }
 
 // Path: credits
@@ -812,6 +813,9 @@ class _StringsToolsUrlshortenerEn {
 	String by_clicking_you_accept({required Object url}) => 'By clicking the shorten button, you agree to the terms of service of "${url}" available via the link below.';
 	String get terms_of_service => 'Terms of service';
 	String get shorten => 'Shorten';
+	String get more_features => 'More features';
+	String get more_features_message => 'Use additional features such as text sharing, custom links, and more via the official JTU.ME website';
+	String get open => 'Open';
 	late final _StringsToolsUrlshortenerErrorEn error = _StringsToolsUrlshortenerErrorEn._(_root);
 }
 
@@ -1042,6 +1046,33 @@ class _StringsToolsQrcreatorEn {
 	String get save => 'Save';
 	String get share => 'Share';
 	late final _StringsToolsQrcreatorErrorEn error = _StringsToolsQrcreatorErrorEn._(_root);
+}
+
+// Path: tools.pastebin
+class _StringsToolsPastebinEn {
+	_StringsToolsPastebinEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'Pastebin';
+	String get url => 'URL';
+	String get qr_code => 'QR code';
+	String get share => 'Share';
+	String get share_dialog_message => 'What do you want to share?';
+	String get your_short_link_is => 'Your short link is';
+	String get copy_to_clipboard => 'Copy to clipboard';
+	String get copied_to_clipboard => 'Short link copied to clipboard';
+	String get paste_another_text => 'Paste another text';
+	String get text_to_paste => 'Text to paste';
+	String get text_paste_field_hint => 'Paste your text, source code or other content here';
+	String by_clicking_you_accept({required Object url}) => 'By clicking the send button, you agree to the terms of service of "${url}" available via the link below.';
+	String get terms_of_service => 'Terms of service';
+	String get send => 'Send';
+	String get more_features => 'More features';
+	String get more_features_message => 'Use additional features such as URL shortening, custom links, and more via the official JTU.ME website';
+	String get open => 'Open';
+	late final _StringsToolsPastebinErrorEn error = _StringsToolsPastebinErrorEn._(_root);
 }
 
 // Path: credits.translations
@@ -1467,6 +1498,18 @@ class _StringsToolsQrcreatorErrorEn {
 	String get failed_to_create_qr_code => 'Failed to create QR code, please check your input and try again';
 }
 
+// Path: tools.pastebin.error
+class _StringsToolsPastebinErrorEn {
+	_StringsToolsPastebinErrorEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get failed_to_obtain_short_link => 'Failed to obtain short link, please check your internet connection and try again';
+	String get impossible_to_connect_to_the_server => 'Impossible to connect to the server';
+	String get impossible_to_connect_to_the_server_message => 'Failed to connect to the server, please check your internet connection and try again.';
+}
+
 // Path: <root>
 class _StringsFr implements Translations {
 	/// You can call this constructor and build your own translation instance of this locale.
@@ -1602,6 +1645,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsMathtexFr mathtex = _StringsToolsMathtexFr._(_root);
 	@override late final _StringsToolsCompassFr compass = _StringsToolsCompassFr._(_root);
 	@override late final _StringsToolsQrcreatorFr qrcreator = _StringsToolsQrcreatorFr._(_root);
+	@override late final _StringsToolsPastebinFr pastebin = _StringsToolsPastebinFr._(_root);
 }
 
 // Path: credits
@@ -2155,6 +2199,9 @@ class _StringsToolsUrlshortenerFr implements _StringsToolsUrlshortenerEn {
 	@override String by_clicking_you_accept({required Object url}) => 'En cliquant sur le bouton « raccourcir », vous acceptez les conditions d\'utilisation de "${url}" disponibles via le lien ci-dessous.';
 	@override String get terms_of_service => 'Conditions d\'utilisation (ToS)';
 	@override String get shorten => 'Raccourcir';
+	@override String get more_features => 'Plus de fonctionnalités';
+	@override String get more_features_message => 'Utiliser des fonctions supplémentaires telles que le partage de texte, des liens personnalisés, et plus via le site officiel JTU.ME';
+	@override String get open => 'Ouvrir';
 	@override late final _StringsToolsUrlshortenerErrorFr error = _StringsToolsUrlshortenerErrorFr._(_root);
 }
 
@@ -2385,6 +2432,33 @@ class _StringsToolsQrcreatorFr implements _StringsToolsQrcreatorEn {
 	@override String get save => 'Enregistrer';
 	@override String get share => 'Partager';
 	@override late final _StringsToolsQrcreatorErrorFr error = _StringsToolsQrcreatorErrorFr._(_root);
+}
+
+// Path: tools.pastebin
+class _StringsToolsPastebinFr implements _StringsToolsPastebinEn {
+	_StringsToolsPastebinFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Pastebin';
+	@override String get url => 'L\'URL';
+	@override String get qr_code => 'Le code QR';
+	@override String get share => 'Partager';
+	@override String get share_dialog_message => 'Que souhaitez-vous partager ?';
+	@override String get your_short_link_is => 'Votre lien court est';
+	@override String get copy_to_clipboard => 'Copier dans le presse-papiers';
+	@override String get copied_to_clipboard => 'Lien court copié dans le presse-papiers';
+	@override String get paste_another_text => 'Coller un autre texte';
+	@override String get text_to_paste => 'Texte à coller';
+	@override String get text_paste_field_hint => 'Collez votre texte, code source ou autre contenu ici';
+	@override String by_clicking_you_accept({required Object url}) => 'En cliquant sur le bouton « envoyer », vous acceptez les conditions d\'utilisation de "${url}" disponibles via le lien ci-dessous.';
+	@override String get terms_of_service => 'Conditions d\'utilisation (ToS)';
+	@override String get send => 'Envoyer';
+	@override String get more_features => 'Plus de fonctionnalités';
+	@override String get more_features_message => 'Utiliser des fonctions supplémentaires telles que le raccourcissement d\'URL, des liens personnalisés, et plus via le site officiel JTU.ME';
+	@override String get open => 'Ouvrir';
+	@override late final _StringsToolsPastebinErrorFr error = _StringsToolsPastebinErrorFr._(_root);
 }
 
 // Path: credits.translations
@@ -2810,6 +2884,18 @@ class _StringsToolsQrcreatorErrorFr implements _StringsToolsQrcreatorErrorEn {
 	@override String get failed_to_create_qr_code => 'Échec de la création du QR code, veuillez vérifier votre saisie et réessayer';
 }
 
+// Path: tools.pastebin.error
+class _StringsToolsPastebinErrorFr implements _StringsToolsPastebinErrorEn {
+	_StringsToolsPastebinErrorFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get failed_to_obtain_short_link => 'Impossible d\'obtenir un lien court, veuillez vérifier votre connexion internet puis réessayer';
+	@override String get impossible_to_connect_to_the_server => 'Impossible de se connecter au serveur';
+	@override String get impossible_to_connect_to_the_server_message => 'Échec de la connexion au serveur, veuillez vérifier votre connexion internet et réessayer.';
+}
+
 /// Flat map(s) containing all translations.
 /// Only for edge cases! For simple maps, use the map function of this library.
 
@@ -3136,6 +3222,9 @@ extension on Translations {
 			case 'tools.urlshortener.by_clicking_you_accept': return ({required Object url}) => 'By clicking the shorten button, you agree to the terms of service of "${url}" available via the link below.';
 			case 'tools.urlshortener.terms_of_service': return 'Terms of service';
 			case 'tools.urlshortener.shorten': return 'Shorten';
+			case 'tools.urlshortener.more_features': return 'More features';
+			case 'tools.urlshortener.more_features_message': return 'Use additional features such as text sharing, custom links, and more via the official JTU.ME website';
+			case 'tools.urlshortener.open': return 'Open';
 			case 'tools.urlshortener.error.failed_to_shorten_url': return 'Failed to shorten the URL, please check your input and your internet connection.';
 			case 'tools.urlshortener.error.impossible_to_connect_to_the_server': return 'Impossible to connect to the server';
 			case 'tools.urlshortener.error.impossible_to_connect_to_the_server_message': return 'Failed to connect to the server, please check your internet connection and try again.';
@@ -3293,6 +3382,26 @@ extension on Translations {
 			case 'tools.qrcreator.save': return 'Save';
 			case 'tools.qrcreator.share': return 'Share';
 			case 'tools.qrcreator.error.failed_to_create_qr_code': return 'Failed to create QR code, please check your input and try again';
+			case 'tools.pastebin.title': return 'Pastebin';
+			case 'tools.pastebin.url': return 'URL';
+			case 'tools.pastebin.qr_code': return 'QR code';
+			case 'tools.pastebin.share': return 'Share';
+			case 'tools.pastebin.share_dialog_message': return 'What do you want to share?';
+			case 'tools.pastebin.your_short_link_is': return 'Your short link is';
+			case 'tools.pastebin.copy_to_clipboard': return 'Copy to clipboard';
+			case 'tools.pastebin.copied_to_clipboard': return 'Short link copied to clipboard';
+			case 'tools.pastebin.paste_another_text': return 'Paste another text';
+			case 'tools.pastebin.text_to_paste': return 'Text to paste';
+			case 'tools.pastebin.text_paste_field_hint': return 'Paste your text, source code or other content here';
+			case 'tools.pastebin.by_clicking_you_accept': return ({required Object url}) => 'By clicking the send button, you agree to the terms of service of "${url}" available via the link below.';
+			case 'tools.pastebin.terms_of_service': return 'Terms of service';
+			case 'tools.pastebin.send': return 'Send';
+			case 'tools.pastebin.more_features': return 'More features';
+			case 'tools.pastebin.more_features_message': return 'Use additional features such as URL shortening, custom links, and more via the official JTU.ME website';
+			case 'tools.pastebin.open': return 'Open';
+			case 'tools.pastebin.error.failed_to_obtain_short_link': return 'Failed to obtain short link, please check your internet connection and try again';
+			case 'tools.pastebin.error.impossible_to_connect_to_the_server': return 'Impossible to connect to the server';
+			case 'tools.pastebin.error.impossible_to_connect_to_the_server_message': return 'Failed to connect to the server, please check your internet connection and try again.';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -3631,6 +3740,9 @@ extension on _StringsFr {
 			case 'tools.urlshortener.by_clicking_you_accept': return ({required Object url}) => 'En cliquant sur le bouton « raccourcir », vous acceptez les conditions d\'utilisation de "${url}" disponibles via le lien ci-dessous.';
 			case 'tools.urlshortener.terms_of_service': return 'Conditions d\'utilisation (ToS)';
 			case 'tools.urlshortener.shorten': return 'Raccourcir';
+			case 'tools.urlshortener.more_features': return 'Plus de fonctionnalités';
+			case 'tools.urlshortener.more_features_message': return 'Utiliser des fonctions supplémentaires telles que le partage de texte, des liens personnalisés, et plus via le site officiel JTU.ME';
+			case 'tools.urlshortener.open': return 'Ouvrir';
 			case 'tools.urlshortener.error.failed_to_shorten_url': return 'Le raccourcissement de l\'URL a échoué, veuillez vérifier votre saisie et votre connexion internet.';
 			case 'tools.urlshortener.error.impossible_to_connect_to_the_server': return 'Impossible de se connecter au serveur';
 			case 'tools.urlshortener.error.impossible_to_connect_to_the_server_message': return 'Échec de la connexion au serveur, veuillez vérifier votre connexion internet et réessayer.';
@@ -3788,6 +3900,26 @@ extension on _StringsFr {
 			case 'tools.qrcreator.save': return 'Enregistrer';
 			case 'tools.qrcreator.share': return 'Partager';
 			case 'tools.qrcreator.error.failed_to_create_qr_code': return 'Échec de la création du QR code, veuillez vérifier votre saisie et réessayer';
+			case 'tools.pastebin.title': return 'Pastebin';
+			case 'tools.pastebin.url': return 'L\'URL';
+			case 'tools.pastebin.qr_code': return 'Le code QR';
+			case 'tools.pastebin.share': return 'Partager';
+			case 'tools.pastebin.share_dialog_message': return 'Que souhaitez-vous partager ?';
+			case 'tools.pastebin.your_short_link_is': return 'Votre lien court est';
+			case 'tools.pastebin.copy_to_clipboard': return 'Copier dans le presse-papiers';
+			case 'tools.pastebin.copied_to_clipboard': return 'Lien court copié dans le presse-papiers';
+			case 'tools.pastebin.paste_another_text': return 'Coller un autre texte';
+			case 'tools.pastebin.text_to_paste': return 'Texte à coller';
+			case 'tools.pastebin.text_paste_field_hint': return 'Collez votre texte, code source ou autre contenu ici';
+			case 'tools.pastebin.by_clicking_you_accept': return ({required Object url}) => 'En cliquant sur le bouton « envoyer », vous acceptez les conditions d\'utilisation de "${url}" disponibles via le lien ci-dessous.';
+			case 'tools.pastebin.terms_of_service': return 'Conditions d\'utilisation (ToS)';
+			case 'tools.pastebin.send': return 'Envoyer';
+			case 'tools.pastebin.more_features': return 'Plus de fonctionnalités';
+			case 'tools.pastebin.more_features_message': return 'Utiliser des fonctions supplémentaires telles que le raccourcissement d\'URL, des liens personnalisés, et plus via le site officiel JTU.ME';
+			case 'tools.pastebin.open': return 'Ouvrir';
+			case 'tools.pastebin.error.failed_to_obtain_short_link': return 'Impossible d\'obtenir un lien court, veuillez vérifier votre connexion internet puis réessayer';
+			case 'tools.pastebin.error.impossible_to_connect_to_the_server': return 'Impossible de se connecter au serveur';
+			case 'tools.pastebin.error.impossible_to_connect_to_the_server_message': return 'Échec de la connexion au serveur, veuillez vérifier votre connexion internet et réessayer.';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';

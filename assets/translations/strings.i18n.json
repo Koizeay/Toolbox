@@ -427,6 +427,9 @@
       "by_clicking_you_accept": "By clicking the shorten button, you agree to the terms of service of \"$url\" available via the link below.",
       "terms_of_service": "Terms of service",
       "shorten": "Shorten",
+      "more_features": "More features",
+      "more_features_message": "Use additional features such as text sharing, custom links, and more via the official JTU.ME website",
+      "open": "Open",
       "error": {
         "failed_to_shorten_url": "Failed to shorten the URL, please check your input and your internet connection.",
         "impossible_to_connect_to_the_server": "Impossible to connect to the server",
@@ -635,6 +638,30 @@
       "share": "Share",
       "error": {
         "failed_to_create_qr_code": "Failed to create QR code, please check your input and try again"
+      }
+    },
+    "pastebin": {
+      "title": "Pastebin",
+      "url": "URL",
+      "qr_code": "QR code",
+      "share": "Share",
+      "share_dialog_message": "What do you want to share?",
+      "your_short_link_is": "Your short link is",
+      "copy_to_clipboard": "Copy to clipboard",
+      "copied_to_clipboard": "Short link copied to clipboard",
+      "paste_another_text": "Paste another text",
+      "text_to_paste": "Text to paste",
+      "text_paste_field_hint": "Paste your text, source code or other content here",
+      "by_clicking_you_accept": "By clicking the send button, you agree to the terms of service of \"$url\" available via the link below.",
+      "terms_of_service": "Terms of service",
+      "send": "Send",
+      "more_features": "More features",
+      "more_features_message": "Use additional features such as URL shortening, custom links, and more via the official JTU.ME website",
+      "open": "Open",
+      "error": {
+        "failed_to_obtain_short_link": "Failed to obtain short link, please check your internet connection and try again",
+        "impossible_to_connect_to_the_server": "Impossible to connect to the server",
+        "impossible_to_connect_to_the_server_message": "Failed to connect to the server, please check your internet connection and try again."
       }
     }
   },

@@ -427,6 +427,9 @@
       "by_clicking_you_accept": "En cliquant sur le bouton « raccourcir », vous acceptez les conditions d'utilisation de \"$url\" disponibles via le lien ci-dessous.",
       "terms_of_service": "Conditions d'utilisation (ToS)",
       "shorten": "Raccourcir",
+      "more_features": "Plus de fonctionnalités",
+      "more_features_message": "Utiliser des fonctions supplémentaires telles que le partage de texte, des liens personnalisés, et plus via le site officiel JTU.ME",
+      "open": "Ouvrir",
       "error": {
         "failed_to_shorten_url": "Le raccourcissement de l'URL a échoué, veuillez vérifier votre saisie et votre connexion internet.",
         "impossible_to_connect_to_the_server": "Impossible de se connecter au serveur",
@@ -635,6 +638,30 @@
       "share": "Partager",
       "error": {
         "failed_to_create_qr_code": "Échec de la création du QR code, veuillez vérifier votre saisie et réessayer"
+      }
+    },
+    "pastebin": {
+      "title": "Pastebin",
+      "url": "L'URL",
+      "qr_code": "Le code QR",
+      "share": "Partager",
+      "share_dialog_message": "Que souhaitez-vous partager ?",
+      "your_short_link_is": "Votre lien court est",
+      "copy_to_clipboard": "Copier dans le presse-papiers",
+      "copied_to_clipboard": "Lien court copié dans le presse-papiers",
+      "paste_another_text": "Coller un autre texte",
+      "text_to_paste": "Texte à coller",
+      "text_paste_field_hint": "Collez votre texte, code source ou autre contenu ici",
+      "by_clicking_you_accept": "En cliquant sur le bouton « envoyer », vous acceptez les conditions d'utilisation de \"$url\" disponibles via le lien ci-dessous.",
+      "terms_of_service": "Conditions d'utilisation (ToS)",
+      "send": "Envoyer",
+      "more_features": "Plus de fonctionnalités",
+      "more_features_message": "Utiliser des fonctions supplémentaires telles que le raccourcissement d'URL, des liens personnalisés, et plus via le site officiel JTU.ME",
+      "open": "Ouvrir",
+      "error": {
+        "failed_to_obtain_short_link": "Impossible d'obtenir un lien court, veuillez vérifier votre connexion internet puis réessayer",
+        "impossible_to_connect_to_the_server": "Impossible de se connecter au serveur",
+        "impossible_to_connect_to_the_server_message": "Échec de la connexion au serveur, veuillez vérifier votre connexion internet et réessayer."
       }
     }
   },
