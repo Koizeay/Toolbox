@@ -52,13 +52,13 @@ dependencies:
   noise_meter: ^5.0.2
   gauges: ^1.0.0
   timer_count_down: ^2.2.2
-  vibration: ^1.7.7
+  vibration: ^3.1.3
   flippy: ^0.1.1
   dartssh2: ^2.8.2
   xterm: ^4.0.0
   shared_preferences: ^2.2.0
   flutter_fortune_wheel: ^1.3.0
-  file_picker: ^5.2.10
+  file_picker: ^10.1.2
   reliable_interval_timer: ^1.0.2
   http: ^1.2.0
   network_info_plus: ^6.0.1
