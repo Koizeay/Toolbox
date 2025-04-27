@@ -87,6 +87,7 @@ dependencies:
   flutter_compass: ^0.8.1
   flutter_zxing: ^1.8.2
   image: 4.3.0
+  package_info_plus: ^8.3.0
 
 dev_dependencies:
   flutter_launcher_icons: ^0.14.1
