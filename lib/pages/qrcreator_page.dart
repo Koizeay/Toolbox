@@ -66,11 +66,11 @@ class _QrCreatorPage extends State<QrCreatorPage> {
         final imglib.Image image = imglib.Image.fromBytes(
           width: 1200,
           height: 1200,
+          numChannels: 1,
           bytes: result.data!.buffer,
-          numChannels: 4,
         );
         _codeImageBytes = Uint8List.fromList(
-          imglib.encodeJpg(image),
+          imglib.encodePng(image),
         );
       } catch (e) {
         if (kDebugMode) {
@@ -95,7 +95,7 @@ class _QrCreatorPage extends State<QrCreatorPage> {
       String cleanedText = _textController.text.replaceAll(RegExp(r'[^a-zA-Z0-9]'), '_');
       final result = await FlutterFileDialog.saveFile(
           params: SaveFileDialogParams(
-            fileName: "qr_code_$cleanedText.jpg",
+            fileName: "qr_code_$cleanedText.png",
             data: data,
           )
       );
@@ -113,7 +113,7 @@ class _QrCreatorPage extends State<QrCreatorPage> {
     if (_codeImageBytes != null) {
       Uint8List data = _codeImageBytes ?? Uint8List(0);
       final result = await Share.shareXFiles(
-          [XFile.fromData(data, name: "qr_code.jpg", mimeType: "image/jpeg")],
+          [XFile.fromData(data, name: "qr_code.png", mimeType: "image/png")],
           sharePositionOrigin: Rect.fromLTWH(MediaQuery
               .of(context)
               .size
