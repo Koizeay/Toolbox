@@ -10,6 +10,7 @@ You can download **Toolbox** on Android and iOS via the following links
 
 - [Play Store (Android)](https://play.google.com/store/apps/details?id=com.koizeay.toolbox)
 - [App Store (iOS)](https://apps.apple.com/app/toolbox-by-koizeay/id6466197390)
+- [GitHub Releases (Android APK)](https://github.com/Koizeay/Toolbox/releases)
 
 ## Contribute
 If you want to contribute to this project, you can do it by adding new tools or by improving the existing ones.
@@ -103,20 +104,22 @@ If you have any question, you can contact me by email at [me@koizeay.com](mailto
 
 ## Screenshots
 <p float="left">
-  <img src="https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot01.jpg" alt="Screenshot 01" height="400">
-  <img src="https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot02.jpg" alt="Screenshot 02" height="400">
-  <img src="https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot03.jpg" alt="Screenshot 03" height="400">
-  <img src="https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot04.jpg" alt="Screenshot 04" height="400">
-  <img src="https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot05.jpg" alt="Screenshot 05" height="400">
-  <img src="https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot06.jpg" alt="Screenshot 06" height="400">
-  <img src="https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot07.jpg" alt="Screenshot 07" height="400">
-  <img src="https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot08.jpg" alt="Screenshot 08" height="400">
-  <img src="https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot09.jpg" alt="Screenshot 09" height="400">
-  <img src="https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot10.jpg" alt="Screenshot 19" height="400">
+  <img src="https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot01.png" alt="Screenshot 01" height="400">
+  <img src="https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot02.png" alt="Screenshot 02" height="400">
+  <img src="https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot03.png" alt="Screenshot 03" height="400">
+  <img src="https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot04.png" alt="Screenshot 04" height="400">
+  <img src="https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot05.png" alt="Screenshot 05" height="400">
+  <img src="https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot06.png" alt="Screenshot 06" height="400">
+  <img src="https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot07.png" alt="Screenshot 07" height="400">
+  <img src="https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot08.png" alt="Screenshot 08" height="400">
+  <img src="https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot09.png" alt="Screenshot 09" height="400">
+  <img src="https://raw.githubusercontent.com/Koizeay/Toolbox/main/.github/screenshot10.png" alt="Screenshot 19" height="400">
 </p>
 
 ## License
 **This project is under the [Mozilla Public License 2.0](https://www.mozilla.org/en-US/MPL/2.0/).**
+
+_Please note that icons, images and other assets are not included in the license._
 
 _This project was (up to and including version 1.18.0) under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.html)._\
 _You can read the declaration of the license change [here](https://koizeay.com/static/toolbox/license_change_from_gpl-3.0_to_mpl-2.0.pdf)._
