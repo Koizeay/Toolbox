@@ -12,6 +12,8 @@
     "no": "No"
   },
   "homepage": {
+    "update_available": "Update available",
+    "update_available_message": "A new version of Toolbox is available. Update it now to get the latest features and improvements.",
     "switch_view": "Switch view",
     "search_all_folders": "Search in all folders",
     "add": "Add",

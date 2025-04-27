@@ -12,6 +12,8 @@
     "no": "Non"
   },
   "homepage": {
+    "update_available": "Mise à jour disponible",
+    "update_available_message": "Une nouvelle version de Toolbox est disponible. Mettez à jour dès maintenant pour bénéficier des dernières fonctionnalités et améliorations.",
     "switch_view": "Changer de vue",
     "search_all_folders": "Rechercher dans tous les dossiers",
     "add": "Ajouter",

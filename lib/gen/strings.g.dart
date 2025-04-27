@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 1020 (510 per locale)
+/// Strings: 1024 (512 per locale)
 ///
-/// Built on 2025-04-27 at 17:52 UTC
+/// Built on 2025-04-27 at 19:23 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -181,6 +181,8 @@ class _StringsHomepageEn {
 	final Translations _root; // ignore: unused_field
 
 	// Translations
+	String get update_available => 'Update available';
+	String get update_available_message => 'A new version of Toolbox is available. Update it now to get the latest features and improvements.';
 	String get switch_view => 'Switch view';
 	String get search_all_folders => 'Search in all folders';
 	String get add => 'Add';
@@ -1567,6 +1569,8 @@ class _StringsHomepageFr implements _StringsHomepageEn {
 	@override final _StringsFr _root; // ignore: unused_field
 
 	// Translations
+	@override String get update_available => 'Mise à jour disponible';
+	@override String get update_available_message => 'Une nouvelle version de Toolbox est disponible. Mettez à jour dès maintenant pour bénéficier des dernières fonctionnalités et améliorations.';
 	@override String get switch_view => 'Changer de vue';
 	@override String get search_all_folders => 'Rechercher dans tous les dossiers';
 	@override String get add => 'Ajouter';
@@ -2912,6 +2916,8 @@ extension on Translations {
 			case 'generic.reset': return 'Reset';
 			case 'generic.yes': return 'Yes';
 			case 'generic.no': return 'No';
+			case 'homepage.update_available': return 'Update available';
+			case 'homepage.update_available_message': return 'A new version of Toolbox is available. Update it now to get the latest features and improvements.';
 			case 'homepage.switch_view': return 'Switch view';
 			case 'homepage.search_all_folders': return 'Search in all folders';
 			case 'homepage.add': return 'Add';
@@ -3430,6 +3436,8 @@ extension on _StringsFr {
 			case 'generic.reset': return 'Réinitialiser';
 			case 'generic.yes': return 'Oui';
 			case 'generic.no': return 'Non';
+			case 'homepage.update_available': return 'Mise à jour disponible';
+			case 'homepage.update_available_message': return 'Une nouvelle version de Toolbox est disponible. Mettez à jour dès maintenant pour bénéficier des dernières fonctionnalités et améliorations.';
 			case 'homepage.switch_view': return 'Changer de vue';
 			case 'homepage.search_all_folders': return 'Rechercher dans tous les dossiers';
 			case 'homepage.add': return 'Ajouter';

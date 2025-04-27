@@ -1,5 +1,9 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'package:package_info_plus/package_info_plus.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:toolbox/core/http_requests.dart';
 import 'package:toolbox/core/shared_preferences.dart';
 import 'package:toolbox/gen/strings.g.dart';
 import 'package:toolbox/hierarchy.dart';
@@ -12,8 +16,9 @@ import 'package:toolbox/widgets/home_tilecard.dart';
 class HomePage extends StatefulWidget {
   final List<dynamic> content;
   final bool isFavoriteFolderShown;
+  final bool checkForUpdate;
 
-  const HomePage({ super.key, required this.content, this.isFavoriteFolderShown = false });
+  const HomePage({ super.key, required this.content, this.isFavoriteFolderShown = false, this.checkForUpdate = true });
   @override
   State<HomePage> createState() => _HomePage();
 }
@@ -29,6 +34,7 @@ class _HomePage extends State<HomePage> {
     super.initState();
     initTools();
     sortTools();
+    checkForAppUpdate();
     refreshFavoritesInContent();
     hierarchyFiltered = hierarchy;
   }
@@ -141,6 +147,40 @@ class _HomePage extends State<HomePage> {
     }
   }
 
+  Future<void> checkForAppUpdate() async {
+    if (!widget.checkForUpdate) return;
+    PackageInfo packageInfo = await PackageInfo.fromPlatform();
+    const String versionCheckEndpoint = "https://toolbox.koizeay.com/general/version";
+    final String currentVersion = packageInfo.version;
+    final http.Response latestVersionResponse = await httpGet(versionCheckEndpoint, {});
+    if (latestVersionResponse.statusCode == 200) {
+      final String latestVersion = latestVersionResponse.body;
+      if (currentVersion != latestVersion && mounted) {
+        showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return AlertDialog(
+              title: Text(t.homepage.update_available),
+              content: Text(t.homepage.update_available_message),
+              actions: [
+                TextButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: Text(t.generic.ok),
+                ),
+              ],
+            );
+          },
+        );
+      }
+    } else {
+      if (kDebugMode) {
+        print("Error: ${latestVersionResponse.statusCode}");
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -160,7 +200,8 @@ class _HomePage extends State<HomePage> {
                       pageBuilder: (context, animation1, animation2) =>
                           HomePage(content: isFolderView()
                               ? Hierarchy.getFlatHierarchy()
-                              : Hierarchy.hierarchy),
+                              : Hierarchy.hierarchy,
+                            checkForUpdate: false),
                     ),
                   );
                   SharedPreferences prefs = await SharedPreferences.getInstance();
