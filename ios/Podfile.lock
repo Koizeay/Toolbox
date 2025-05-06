@@ -68,6 +68,13 @@ PODS:
   - geolocator_apple (1.2.0):
     - Flutter
     - FlutterMacOS
+  - Google-Mobile-Ads-SDK (12.2.0):
+    - GoogleUserMessagingPlatform (>= 1.1)
+  - google_mobile_ads (6.0.0):
+    - Flutter
+    - Google-Mobile-Ads-SDK (~> 12.2.0)
+    - webview_flutter_wkwebview
+  - GoogleUserMessagingPlatform (3.0.0)
   - image_picker_ios (0.0.1):
     - Flutter
   - map_launcher (0.0.1):
@@ -121,6 +128,7 @@ DEPENDENCIES:
   - flutter_tts (from `.symlinks/plugins/flutter_tts/ios`)
   - flutter_zxing (from `.symlinks/plugins/flutter_zxing/ios`)
   - geolocator_apple (from `.symlinks/plugins/geolocator_apple/darwin`)
+  - google_mobile_ads (from `.symlinks/plugins/google_mobile_ads/ios`)
   - image_picker_ios (from `.symlinks/plugins/image_picker_ios/ios`)
   - map_launcher (from `.symlinks/plugins/map_launcher/ios`)
   - network_info_plus (from `.symlinks/plugins/network_info_plus/ios`)
@@ -141,6 +149,8 @@ SPEC REPOS:
     - DKImagePickerController
     - DKPhotoGallery
     - flutter_sound_core
+    - Google-Mobile-Ads-SDK
+    - GoogleUserMessagingPlatform
     - OSMFlutterFramework
     - Polyline
     - SDWebImage
@@ -178,6 +188,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/flutter_zxing/ios"
   geolocator_apple:
     :path: ".symlinks/plugins/geolocator_apple/darwin"
+  google_mobile_ads:
+    :path: ".symlinks/plugins/google_mobile_ads/ios"
   image_picker_ios:
     :path: ".symlinks/plugins/image_picker_ios/ios"
   map_launcher:
@@ -225,6 +237,9 @@ SPEC CHECKSUMS:
   flutter_tts: 0f492aab6accf87059b72354fcb4ba934304771d
   flutter_zxing: d527c3ff9c7f3606dd29a7ec8c4055f7daa088c5
   geolocator_apple: 66b711889fd333205763b83c9dcf0a57a28c7afd
+  Google-Mobile-Ads-SDK: 1dfb0c3cb46c7e2b00b0f4de74a1e06d9ea25d67
+  google_mobile_ads: cab27248050510554aa646195eacc393ce7406ad
+  GoogleUserMessagingPlatform: f8d0cdad3ca835406755d0a69aa634f00e76d576
   image_picker_ios: c560581cceedb403a6ff17f2f816d7fea1421fc1
   map_launcher: 5fde49ac9a52672bf99da746599f507b4490d7b5
   network_info_plus: 6613d9d7cdeb0e6f366ed4dbe4b3c51c52d567a9

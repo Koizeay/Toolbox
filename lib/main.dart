@@ -20,7 +20,9 @@ import 'package:yaru/yaru.dart';
 Future<void> main() async {
   final SharedPreferences prefs;
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
-  MobileAds.instance.initialize();
+  if (Platform.isAndroid) {
+    MobileAds.instance.initialize();
+  }
   WakelockPlus.enable();
   LocaleSettings.useDeviceLocale();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
