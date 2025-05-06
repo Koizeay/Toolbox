@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -150,12 +152,21 @@ class _HomePage extends State<HomePage> {
   Future<void> checkForAppUpdate() async {
     if (!widget.checkForUpdate) return;
     PackageInfo packageInfo = await PackageInfo.fromPlatform();
-    const String versionCheckEndpoint = "https://toolbox.koizeay.com/general/version";
-    final String currentVersion = packageInfo.version;
+    String osEndpoint = Platform.isAndroid ? "android" : "ios";
+    String versionCheckEndpoint = "https://toolbox.koizeay.com/general/version/$osEndpoint";
+    final String currentVersion = packageInfo.buildNumber;
     final http.Response latestVersionResponse = await httpGet(versionCheckEndpoint, {});
     if (latestVersionResponse.statusCode == 200) {
       final String latestVersion = latestVersionResponse.body;
-      if (currentVersion != latestVersion && mounted) {
+      int? currentVersionInt = int.tryParse(currentVersion);
+      int? latestVersionInt = int.tryParse(latestVersion);
+      if (currentVersionInt == null || latestVersionInt == null) {
+        if (kDebugMode) {
+          print("Error: Unable to parse version numbers");
+        }
+        return;
+      }
+      if (currentVersionInt < latestVersionInt && mounted) {
         showDialog(
           context: context,
           builder: (BuildContext context) {
