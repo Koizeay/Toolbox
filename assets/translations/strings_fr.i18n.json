@@ -672,6 +672,7 @@
     "app_icon": "Icône de l'application par $author",
     "app_license": "Application sous licence $license",
     "tools_icons": "Icônes des outils par $author",
+    "ads_disclaimer": "Les publicités sont là pour m'aider à payer les coûts de serveur et à soutenir le développement de cette application. Seule une petite bannière est affichée en bas de l'écran, rien qui ne bloque votre expérience avec Toolbox.",
     "view_licenses": "Voir les licences",
     "contribute_on_github": "Contribuez sur GitHub",
     "email_copied_to_clipboard": "Email copié dans le presse-papiers",

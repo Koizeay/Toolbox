@@ -134,7 +134,7 @@ class _WhiteBoardPage extends State<WhiteBoardPage> {
                         height: MediaQuery
                             .of(context)
                             .size
-                            .height - 290 - MediaQuery
+                            .height - 340 - MediaQuery
                             .of(context)
                             .padding
                             .top - MediaQuery

@@ -223,6 +223,7 @@ class _HomePage extends State<HomePage> {
             ],
           ),
           body: SafeArea(
+            bottom: false,
             child: Center(
                 child: Column(
                   children: [

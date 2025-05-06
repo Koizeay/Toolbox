@@ -1,4 +1,6 @@
 
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:toolbox/core/dialogs.dart';
@@ -163,6 +165,20 @@ class _CreditsPage extends State<CreditsPage> {
                         style: TextStyle(fontSize: 14, fontStyle: FontStyle.italic),
                         textAlign: TextAlign.center,
                       ),
+                    ),
+                  ),
+                ),
+              ),
+              if (Platform.isAndroid)
+              SizedBox(
+                width: double.infinity,
+                child: Card(
+                  child: Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Text(
+                      t.credits.ads_disclaimer,
+                      style: const TextStyle(fontSize: 12, fontStyle: FontStyle.italic),
+                      textAlign: TextAlign.center,
                     ),
                   ),
                 ),

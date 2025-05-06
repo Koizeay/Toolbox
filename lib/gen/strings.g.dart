@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 1024 (512 per locale)
+/// Strings: 1026 (513 per locale)
 ///
-/// Built on 2025-04-27 at 19:23 UTC
+/// Built on 2025-05-06 at 16:27 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -275,6 +275,7 @@ class _StringsCreditsEn {
 	String app_icon({required Object author}) => 'App icon by ${author}';
 	String app_license({required Object license}) => 'The app is licensed under the ${license} license';
 	String tools_icons({required Object author}) => 'Tools icons by ${author}';
+	String get ads_disclaimer => 'Ads are there to help me pay server costs and support the development of this app.\nOnly a small banner is displayed at the bottom of the screen, nothing to block your Toolbox experience.';
 	String get view_licenses => 'View licenses';
 	String get contribute_on_github => 'Contribute on GitHub';
 	String get email_copied_to_clipboard => 'Email copied to clipboard';
@@ -1664,6 +1665,7 @@ class _StringsCreditsFr implements _StringsCreditsEn {
 	@override String app_license({required Object license}) => 'Application sous licence ${license}';
 	@override String tools_icons({required Object author}) => 'Icônes des outils par ${author}';
 	@override String get view_licenses => 'Voir les licences';
+	@override String get ads_disclaimer => 'Les publicités sont là pour m\'aider à payer les coûts de serveur et à soutenir le développement de cette application. Seule une petite bannière est affichée en bas de l\'écran, rien qui ne bloque votre expérience avec Toolbox.';
 	@override String get contribute_on_github => 'Contribuez sur GitHub';
 	@override String get email_copied_to_clipboard => 'Email copié dans le presse-papiers';
 	@override late final _StringsCreditsTranslationsFr translations = _StringsCreditsTranslationsFr._(_root);
@@ -3412,6 +3414,7 @@ extension on Translations {
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
 			case 'credits.tools_icons': return ({required Object author}) => 'Tools icons by ${author}';
+			case 'credits.ads_disclaimer': return 'Ads are there to help me pay server costs and support the development of this app.\nOnly a small banner is displayed at the bottom of the screen, nothing to block your Toolbox experience.';
 			case 'credits.view_licenses': return 'View licenses';
 			case 'credits.contribute_on_github': return 'Contribute on GitHub';
 			case 'credits.email_copied_to_clipboard': return 'Email copied to clipboard';
@@ -3933,6 +3936,7 @@ extension on _StringsFr {
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';
 			case 'credits.tools_icons': return ({required Object author}) => 'Icônes des outils par ${author}';
 			case 'credits.view_licenses': return 'Voir les licences';
+			case 'credits.ads_disclaimer': return 'Les publicités sont là pour m\'aider à payer les coûts de serveur et à soutenir le développement de cette application. Seule une petite bannière est affichée en bas de l\'écran, rien qui ne bloque votre expérience avec Toolbox.';
 			case 'credits.contribute_on_github': return 'Contribuez sur GitHub';
 			case 'credits.email_copied_to_clipboard': return 'Email copié dans le presse-papiers';
 			case 'credits.translations.title': return 'Traductions';
