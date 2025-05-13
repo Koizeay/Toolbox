@@ -18,6 +18,7 @@ class RoulettePage extends StatefulWidget {
 }
 
 class _RoulettePage extends State<RoulettePage> with TickerProviderStateMixin {
+  bool isLoading = true;
   bool isSpinning = false;
   StreamController<int> selected = StreamController<int>();
 
@@ -37,8 +38,13 @@ class _RoulettePage extends State<RoulettePage> with TickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      initSavedRouletteUnits();
+    initSavedRouletteUnits().then((_) {
+      if (mounted) {
+        setState(() {
+          isLoading = false;
+        });
+        rollRoulette();
+      }
     });
   }
 
@@ -226,7 +232,8 @@ class _RoulettePage extends State<RoulettePage> with TickerProviderStateMixin {
             child: Padding(
               padding: const EdgeInsets.all(16.0),
               child: Center(
-                child: GestureDetector(
+                child: isLoading ? const CircularProgressIndicator()
+                    : GestureDetector(
                   onTap: () {
                     rollRoulette();
                   },
