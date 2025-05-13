@@ -24,6 +24,14 @@ class _CreditsPage extends State<CreditsPage> {
     super.dispose();
   }
 
+  void showSwissDialog(BuildContext context) {
+    showOkTextDialog(
+      context,
+      t.credits.made_with_love_in_switzerland,
+      t.credits.made_with_love_in_switzerland_description
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     String imagesPrefix =  Theme.of(context).brightness == Brightness.dark ? "_white" : "";
@@ -222,6 +230,37 @@ class _CreditsPage extends State<CreditsPage> {
                         t.credits.contribute_on_github,
                         style: TextStyle(fontSize: 20, color: Theme.of(context).colorScheme.primary, fontWeight: FontWeight.bold),
                         textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  showSwissDialog(context);
+                },
+                child: SizedBox(
+                  width: double.infinity,
+                  child: Card(
+                    child: Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Column(
+                        children: [
+                          Text(
+                            t.credits.made_with_love_in_switzerland,
+                            style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                            textAlign: TextAlign.center,
+                          ),
+                          const SizedBox(height: 8,),
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(5),
+                            child: Image.asset(
+                              "assets/images/specific/credits_swiss_flag.png",
+                              width: 25,
+                              height: 25,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ),

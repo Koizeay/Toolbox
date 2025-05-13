@@ -677,6 +677,8 @@
     "view_licenses": "View licenses",
     "contribute_on_github": "Contribute on GitHub",
     "email_copied_to_clipboard": "Email copied to clipboard",
+    "made_with_love_in_switzerland": "Made with love in Switzerland",
+    "made_with_love_in_switzerland_description": "Made in Switzerland, used worldwide.\nThank you for using Toolbox.\nIf you like it, please consider leaving a review on the Play Store or App Store.\nIt helps me a lot and motivates me to keep improving the app.",
     "translations": {
       "title": "Translations",
       "english": "English by $author",
