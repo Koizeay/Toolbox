@@ -54,7 +54,7 @@ dependencies:
   timer_count_down: ^2.2.2
   vibration: ^3.1.3
   flippy: ^0.1.1
-  dartssh2: ^2.8.2
+  dartssh2: ^2.12.0
   xterm: ^4.0.0
   shared_preferences: ^2.2.0
   flutter_fortune_wheel: ^1.3.0
