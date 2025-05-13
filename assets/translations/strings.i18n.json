@@ -51,7 +51,6 @@
     },
     "clock": {
       "title": "Clock",
-      "loading": "Loading",
       "change_timezone": "Change timezone",
       "timezone": "Timezone",
       "choose_a_timezone": "Choose a timezone",

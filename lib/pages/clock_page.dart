@@ -13,7 +13,7 @@ class ClockPage extends StatefulWidget {
 }
 
 class _ClockPage extends State<ClockPage> {
-  String formattedTime = t.tools.clock.loading;
+  String? formattedTime;
   int timeZoneSeconds = 0;
   bool isFullscreen = false;
 
@@ -45,6 +45,9 @@ class _ClockPage extends State<ClockPage> {
       }
     });
     changeTimeZone(DateTime.now().timeZoneOffset.inSeconds);
+    setState(() {
+      formattedTime = getDateTime(timeZoneSeconds);
+    });
     super.initState();
   }
 
@@ -154,7 +157,7 @@ class _ClockPage extends State<ClockPage> {
               child: Padding(
                 padding: const EdgeInsets.all(100.0),
                 child: Text(
-                    formattedTime,
+                    formattedTime ?? "",
                     style: const TextStyle(
                         fontSize: 1000
                     )

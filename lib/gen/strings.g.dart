@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 1028 (514 per locale)
+/// Strings: 1026 (513 per locale)
 ///
-/// Built on 2025-05-13 at 16:18 UTC
+/// Built on 2025-05-13 at 16:33 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -312,7 +312,6 @@ class _StringsToolsClockEn {
 
 	// Translations
 	String get title => 'Clock';
-	String get loading => 'Loading';
 	String get change_timezone => 'Change timezone';
 	String get timezone => 'Timezone';
 	String get choose_a_timezone => 'Choose a timezone';
@@ -1702,7 +1701,6 @@ class _StringsToolsClockFr implements _StringsToolsClockEn {
 
 	// Translations
 	@override String get title => 'Horloge';
-	@override String get loading => 'Chargement';
 	@override String get change_timezone => 'Changer le fuseau horaire';
 	@override String get timezone => 'Fuseau horaire';
 	@override String get choose_a_timezone => 'Choisissez un fuseau horaire';
@@ -2952,7 +2950,6 @@ extension on Translations {
 			case 'tools.baseconverter.the_number_you_entered_is_not_a_valid_x_number': return ({required Object base}) => 'The number you entered is not a valid ${base} number';
 			case 'tools.baseconverter.the_number_you_entered_is_too_big_to_be_abble_to_convert_it': return 'The number you entered is too big to be able to convert it';
 			case 'tools.clock.title': return 'Clock';
-			case 'tools.clock.loading': return 'Loading';
 			case 'tools.clock.change_timezone': return 'Change timezone';
 			case 'tools.clock.timezone': return 'Timezone';
 			case 'tools.clock.choose_a_timezone': return 'Choose a timezone';
@@ -3474,7 +3471,6 @@ extension on _StringsFr {
 			case 'tools.baseconverter.the_number_you_entered_is_not_a_valid_x_number': return ({required Object base}) => 'Le nombre que vous avez entré n\'est pas un nombre ${base} valide';
 			case 'tools.baseconverter.the_number_you_entered_is_too_big_to_be_abble_to_convert_it': return 'Le nombre que vous avez entré est trop grand pour être converti';
 			case 'tools.clock.title': return 'Horloge';
-			case 'tools.clock.loading': return 'Chargement';
 			case 'tools.clock.change_timezone': return 'Changer le fuseau horaire';
 			case 'tools.clock.timezone': return 'Fuseau horaire';
 			case 'tools.clock.choose_a_timezone': return 'Choisissez un fuseau horaire';

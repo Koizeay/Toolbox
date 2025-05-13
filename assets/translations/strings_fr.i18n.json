@@ -51,7 +51,6 @@
     },
     "clock": {
       "title": "Horloge",
-      "loading": "Chargement",
       "change_timezone": "Changer le fuseau horaire",
       "timezone": "Fuseau horaire",
       "choose_a_timezone": "Choisissez un fuseau horaire",
