@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io' show Platform;
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'package:toolbox/core/http_requests.dart';
 import 'package:toolbox/gen/strings.g.dart';
 import 'package:http/http.dart' as http;
 import 'package:network_info_plus/network_info_plus.dart';
@@ -55,7 +56,8 @@ class _NetworkInfoPage extends State<NetworkInfoPage> {
 
   Future<void> getIpAddress() async {
     try {
-      http.Response response = await http.get(Uri.parse(apiEndpoint));
+      http.Response response = await httpGet(apiEndpoint, {})
+          .timeout(const Duration(seconds: 5));
       var json = jsonDecode(response.body);
       publicIpAddress = json["ip"];
     } catch (e) {
