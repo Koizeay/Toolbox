@@ -81,7 +81,7 @@ PODS:
     - Flutter
   - network_info_plus (0.0.1):
     - Flutter
-  - OSMFlutterFramework (0.8.2)
+  - OSMFlutterFramework (0.8.3)
   - package_info_plus (0.4.5):
     - Flutter
   - path_provider_foundation (0.0.1):
@@ -243,7 +243,7 @@ SPEC CHECKSUMS:
   image_picker_ios: c560581cceedb403a6ff17f2f816d7fea1421fc1
   map_launcher: 5fde49ac9a52672bf99da746599f507b4490d7b5
   network_info_plus: 6613d9d7cdeb0e6f366ed4dbe4b3c51c52d567a9
-  OSMFlutterFramework: f36e9c16bcadaf99d9edd4c46c25c00aeaceb975
+  OSMFlutterFramework: 5d962974e5e27d957d6134d2f7d0b5491d160d11
   package_info_plus: c0502532a26c7662a62a356cebe2692ec5fe4ec4
   path_provider_foundation: 2b6b4c569c0fb62ec74538f866245ac84301af46
   permission_handler_apple: 9878588469a2b0d0fc1e048d9f43605f92e6cec2
