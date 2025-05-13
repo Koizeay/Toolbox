@@ -168,6 +168,7 @@
     },
     "sshclient": {
       "title": "SSH client",
+      "backspace": "Backspace",
       "use_password": "Use password",
       "use_ssh_key": "Use SSH key",
       "host": "Host",

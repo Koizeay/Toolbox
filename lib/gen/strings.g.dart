@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 1026 (513 per locale)
+/// Strings: 1028 (514 per locale)
 ///
-/// Built on 2025-05-06 at 16:27 UTC
+/// Built on 2025-05-13 at 16:18 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -495,6 +495,7 @@ class _StringsToolsSshclientEn {
 
 	// Translations
 	String get title => 'SSH client';
+	String get backspace => 'Backspace';
 	String get use_password => 'Use password';
 	String get use_ssh_key => 'Use SSH key';
 	String get host => 'Host';
@@ -1664,8 +1665,8 @@ class _StringsCreditsFr implements _StringsCreditsEn {
 	@override String app_icon({required Object author}) => 'Icône de l\'application par ${author}';
 	@override String app_license({required Object license}) => 'Application sous licence ${license}';
 	@override String tools_icons({required Object author}) => 'Icônes des outils par ${author}';
-	@override String get view_licenses => 'Voir les licences';
 	@override String get ads_disclaimer => 'Les publicités sont là pour m\'aider à payer les coûts de serveur et à soutenir le développement de cette application. Seule une petite bannière est affichée en bas de l\'écran, rien qui ne bloque votre expérience avec Toolbox.';
+	@override String get view_licenses => 'Voir les licences';
 	@override String get contribute_on_github => 'Contribuez sur GitHub';
 	@override String get email_copied_to_clipboard => 'Email copié dans le presse-papiers';
 	@override late final _StringsCreditsTranslationsFr translations = _StringsCreditsTranslationsFr._(_root);
@@ -1884,6 +1885,7 @@ class _StringsToolsSshclientFr implements _StringsToolsSshclientEn {
 
 	// Translations
 	@override String get title => 'Client SSH';
+	@override String get backspace => 'Effacer';
 	@override String get use_password => 'Utiliser un mot de passe';
 	@override String get use_ssh_key => 'Utiliser une clé SSH';
 	@override String get host => 'Hôte';
@@ -3027,6 +3029,7 @@ extension on Translations {
 			case 'tools.randomcolor.tap_to_copy': return 'Tap to copy';
 			case 'tools.randomcolor.copied_to_clipboard': return 'Copied to clipboard';
 			case 'tools.sshclient.title': return 'SSH client';
+			case 'tools.sshclient.backspace': return 'Backspace';
 			case 'tools.sshclient.use_password': return 'Use password';
 			case 'tools.sshclient.use_ssh_key': return 'Use SSH key';
 			case 'tools.sshclient.host': return 'Host';
@@ -3548,6 +3551,7 @@ extension on _StringsFr {
 			case 'tools.randomcolor.tap_to_copy': return 'Cliquez pour copier';
 			case 'tools.randomcolor.copied_to_clipboard': return 'Copié dans le presse-papier';
 			case 'tools.sshclient.title': return 'Client SSH';
+			case 'tools.sshclient.backspace': return 'Effacer';
 			case 'tools.sshclient.use_password': return 'Utiliser un mot de passe';
 			case 'tools.sshclient.use_ssh_key': return 'Utiliser une clé SSH';
 			case 'tools.sshclient.host': return 'Hôte';
@@ -3935,8 +3939,8 @@ extension on _StringsFr {
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';
 			case 'credits.tools_icons': return ({required Object author}) => 'Icônes des outils par ${author}';
-			case 'credits.view_licenses': return 'Voir les licences';
 			case 'credits.ads_disclaimer': return 'Les publicités sont là pour m\'aider à payer les coûts de serveur et à soutenir le développement de cette application. Seule une petite bannière est affichée en bas de l\'écran, rien qui ne bloque votre expérience avec Toolbox.';
+			case 'credits.view_licenses': return 'Voir les licences';
 			case 'credits.contribute_on_github': return 'Contribuez sur GitHub';
 			case 'credits.email_copied_to_clipboard': return 'Email copié dans le presse-papiers';
 			case 'credits.translations.title': return 'Traductions';

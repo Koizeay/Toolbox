@@ -1,5 +1,4 @@
 import 'dart:io';
-import 'dart:typed_data';
 
 import 'package:dartssh2/dartssh2.dart';
 import 'package:file_picker/file_picker.dart';
@@ -220,8 +219,19 @@ class _SshClientPage extends State<SshClientPage> {
       child: Scaffold(
           appBar: AppBar(
             title: Text(t.tools.sshclient.title),
-            actions: [ isConnected || loading
-                ? Container()
+            actions: [ loading ? Container()
+                : isConnected
+                ? IconButton(
+                  icon: const Icon(Icons.backspace_outlined),
+                  tooltip: t.tools.sshclient.backspace,
+                  onPressed: () {
+                    if (mounted) {
+                      setState(() {
+                        shell?.stdin.add(Uint8List.fromList("\x7F".codeUnits));
+                      });
+                    }
+                  },
+                )
                 : IconButton(
                 icon: Icon(usingSshKey ? Icons.password : Icons.key),
                 tooltip: usingSshKey ? t.tools.sshclient.use_password : t.tools.sshclient.use_ssh_key,
