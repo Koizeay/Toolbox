@@ -317,6 +317,7 @@
         "url_cannot_be_empty": "L'URL ne peut pas être vide",
         "invalid_url": "URL invalide",
         "invalid_headers": "En-têtes invalides",
+        "timeout": "La requête a dépassé le temps de réponse.\nVeuillez vérifier votre saisie et votre connexion internet, puis réessayez.",
         "other_error": "Une erreur s'est produite lors de l'envoi de la requête.\nVeuillez vérifier votre saisie et votre connexion internet, puis réessayez."
       }
     },

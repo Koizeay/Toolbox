@@ -1,4 +1,5 @@
 
+import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
@@ -188,7 +189,8 @@ class _HttpRequestPage extends State<HttpRequestPage> {
       method = methodController.text;
     }
     try {
-      response = await sendRequest(method, url, bodyController.text, headers);
+      response = await sendRequest(method, url, bodyController.text, headers)
+          .timeout(const Duration(seconds: 10));
     } on FormatException catch (e) {
       if (mounted) {
         showDialog(
@@ -197,6 +199,29 @@ class _HttpRequestPage extends State<HttpRequestPage> {
             return AlertDialog(
               title: Text(t.generic.error),
               content: Text(t.tools.httprequest.error.invalid_url),
+              actions: [
+                TextButton(
+                  child: Text(t.generic.ok),
+                  onPressed: () {
+                    if (mounted) {
+                      Navigator.of(context).pop();
+                    }
+                  },
+                ),
+              ],
+            );
+          },
+        );
+      }
+      return;
+    } on TimeoutException catch (e) {
+      if (mounted) {
+        showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return AlertDialog(
+              title: Text(t.generic.error),
+              content: Text(t.tools.httprequest.error.timeout),
               actions: [
                 TextButton(
                   child: Text(t.generic.ok),

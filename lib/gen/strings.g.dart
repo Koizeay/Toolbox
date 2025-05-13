@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 1026 (513 per locale)
+/// Strings: 1028 (514 per locale)
 ///
-/// Built on 2025-05-13 at 16:33 UTC
+/// Built on 2025-05-13 at 16:54 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1266,6 +1266,7 @@ class _StringsToolsHttprequestErrorEn {
 	String get url_cannot_be_empty => 'The URL cannot be empty';
 	String get invalid_url => 'Invalid URL';
 	String get invalid_headers => 'Invalid headers';
+	String get timeout => 'The request timed out.\nPlease check your input and your internet connection then try again.';
 	String get other_error => 'An error occurred while sending the request.\nPlease check your input and your internet connection then try again.';
 }
 
@@ -2655,6 +2656,7 @@ class _StringsToolsHttprequestErrorFr implements _StringsToolsHttprequestErrorEn
 	@override String get url_cannot_be_empty => 'L\'URL ne peut pas être vide';
 	@override String get invalid_url => 'URL invalide';
 	@override String get invalid_headers => 'En-têtes invalides';
+	@override String get timeout => 'La requête a dépassé le temps de réponse.\nVeuillez vérifier votre saisie et votre connexion internet, puis réessayez.';
 	@override String get other_error => 'Une erreur s\'est produite lors de l\'envoi de la requête.\nVeuillez vérifier votre saisie et votre connexion internet, puis réessayez.';
 }
 
@@ -3143,6 +3145,7 @@ extension on Translations {
 			case 'tools.httprequest.error.url_cannot_be_empty': return 'The URL cannot be empty';
 			case 'tools.httprequest.error.invalid_url': return 'Invalid URL';
 			case 'tools.httprequest.error.invalid_headers': return 'Invalid headers';
+			case 'tools.httprequest.error.timeout': return 'The request timed out.\nPlease check your input and your internet connection then try again.';
 			case 'tools.httprequest.error.other_error': return 'An error occurred while sending the request.\nPlease check your input and your internet connection then try again.';
 			case 'tools.morsecode.title': return 'Morse code';
 			case 'tools.morsecode.alphabet_field': return 'Alphabet (A-Z, 0-9)';
@@ -3664,6 +3667,7 @@ extension on _StringsFr {
 			case 'tools.httprequest.error.url_cannot_be_empty': return 'L\'URL ne peut pas être vide';
 			case 'tools.httprequest.error.invalid_url': return 'URL invalide';
 			case 'tools.httprequest.error.invalid_headers': return 'En-têtes invalides';
+			case 'tools.httprequest.error.timeout': return 'La requête a dépassé le temps de réponse.\nVeuillez vérifier votre saisie et votre connexion internet, puis réessayez.';
 			case 'tools.httprequest.error.other_error': return 'Une erreur s\'est produite lors de l\'envoi de la requête.\nVeuillez vérifier votre saisie et votre connexion internet, puis réessayez.';
 			case 'tools.morsecode.title': return 'Code morse';
 			case 'tools.morsecode.alphabet_field': return 'Alphabet (A-Z, 0-9)';

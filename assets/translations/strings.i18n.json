@@ -317,6 +317,7 @@
         "url_cannot_be_empty": "The URL cannot be empty",
         "invalid_url": "Invalid URL",
         "invalid_headers": "Invalid headers",
+        "timeout": "The request timed out.\nPlease check your input and your internet connection then try again.",
         "other_error": "An error occurred while sending the request.\nPlease check your input and your internet connection then try again."
       }
     },
