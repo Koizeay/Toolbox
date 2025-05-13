@@ -266,6 +266,25 @@ class _CreditsPage extends State<CreditsPage> {
                   ),
                 ),
               ),
+              GestureDetector(
+                onTap: () {
+                  launchUrlInBrowser("https://jtu.me/projects");
+                },
+                child: SizedBox(
+                  width: double.infinity,
+                  child: Card(
+                    color: Theme.of(context).colorScheme.primary,
+                    child: Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Text(
+                        t.credits.more_apps_and_services,
+                        style: const TextStyle(fontSize: 18, color: Colors.white, fontWeight: FontWeight.bold),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),

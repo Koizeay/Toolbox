@@ -674,6 +674,7 @@
     "app_license": "The app is licensed under the $license license",
     "tools_icons": "Tools icons by $author",
     "ads_disclaimer": "Ads are there to help me pay server costs and support the development of this app.\\nOnly a small banner is displayed at the bottom of the screen, nothing to block your Toolbox experience.",
+    "more_apps_and_services": "More apps and services",
     "view_licenses": "View licenses",
     "contribute_on_github": "Contribute on GitHub",
     "email_copied_to_clipboard": "Email copied to clipboard",
