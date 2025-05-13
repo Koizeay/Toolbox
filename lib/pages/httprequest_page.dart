@@ -286,8 +286,22 @@ class _HttpRequestPage extends State<HttpRequestPage> {
                 : renderHtml
                 ? Padding(
               padding: const EdgeInsets.all(8.0),
-              child: WebViewWidget(
-                controller: webViewController, key: webViewKey,),
+              child: Stack(
+                children: [
+                  WebViewWidget(
+                    controller: webViewController,
+                    key: webViewKey
+                  ),
+                  Positioned.fill(
+                    child: GestureDetector(
+                      behavior: HitTestBehavior.translucent,
+                      onTap: () {},
+                      onLongPress: () {},
+                      onDoubleTap: () {},
+                    ),
+                  ),
+                ],
+              ),
             )
                 : SingleChildScrollView(
               child: Center(
