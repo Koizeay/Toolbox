@@ -35,7 +35,7 @@ class _RandomColorPage extends State<RandomColorPage> {
             child: Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(4.0),
+                  padding: const EdgeInsets.fromLTRB(4.0, 4.0, 4.0, 0.0),
                   child: Text(t.tools.randomcolor.hint, style: const TextStyle(fontSize: 20), textAlign: TextAlign.center,),
                 ),
                 Padding(
@@ -61,13 +61,30 @@ class _RandomColorPage extends State<RandomColorPage> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Clipboard.setData(ClipboardData(text: "#${_color.value.toRadixString(16).toUpperCase().substring(2)}"));
+                    Clipboard.setData(ClipboardData(text: "#${_color.toARGB32().toRadixString(16).toUpperCase().substring(2)}"));
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(content: Text(t.tools.randomcolor.copied_to_clipboard)),
                     );
                   },
                   child: Text(
-                    "#${_color.value.toRadixString(16).toUpperCase().substring(2)}",
+                    "#${_color.toARGB32().toRadixString(16).toUpperCase().substring(2)}",
+                    style: const TextStyle(fontSize: 24),
+                  ),
+                ),
+                Text(
+                  t.tools.randomcolor.tap_to_copy,
+                  style: const TextStyle(fontSize: 14, fontStyle: FontStyle.italic),
+                ),
+                const SizedBox(height: 16),
+                GestureDetector(
+                  onTap: () {
+                    Clipboard.setData(ClipboardData(text: "rgb(${(_color.r * 255).toInt()}, ${(_color.g * 255).toInt()}, ${(_color.b * 255).toInt()})"));
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(content: Text(t.tools.randomcolor.copied_to_clipboard)),
+                    );
+                  },
+                  child: Text(
+                    "R: ${(_color.r * 255).toInt()}\nG: ${(_color.g * 255).toInt()}\nB: ${(_color.b * 255).toInt()}",
                     style: const TextStyle(fontSize: 24),
                   ),
                 ),
