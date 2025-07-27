@@ -37,18 +37,18 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
-  yaru: ^5.1.0
+  yaru: ^8.1.0
   dart_ping: ^9.0.1
   dart_ping_ios: ^4.0.2
   intl: any
   auto_size_text: ^3.0.0
   flutter_sound: ^9.2.13
-  audioplayers: ^6.1.0
+  audioplayers: ^6.5.0
   numberpicker: ^2.1.2
   flutter_native_splash: ^2.2.19
   slang: ^3.17.0
   slang_flutter: ^3.17.0
-  url_launcher: ^6.1.11
+  url_launcher: ^6.3.2
   noise_meter: ^5.0.2
   gauges: ^1.0.0
   timer_count_down: ^2.2.2
@@ -57,35 +57,35 @@ dependencies:
   dartssh2: ^2.12.0
   xterm: ^4.0.0
   shared_preferences: ^2.2.0
-  flutter_fortune_wheel: ^1.3.0
+  flutter_fortune_wheel: ^1.3.2
   file_picker: ^10.1.2
   reliable_interval_timer: ^1.0.2
   http: ^1.2.0
   network_info_plus: ^6.0.1
-  permission_handler: ^11.2.0
+  permission_handler: ^12.0.1
   uuid: ^4.5.0
-  flutter_tts: ^4.0.2
+  flutter_tts: ^4.2.3
   share_plus: ^10.0.2
   geolocator: ^12.0.0
   path_provider: ^2.1.1
   aes_crypt_null_safe: ^3.0.0
   flutter_file_dialog: ^3.0.2
-  syncfusion_flutter_gauges: ^26.2.13
+  syncfusion_flutter_gauges: ^30.1.41
   webview_flutter: ^4.9.0
-  flutter_osm_plugin: ^1.3.3+1
-  wakelock_plus: ^1.2.8
+  flutter_osm_plugin: ^1.4.1
+  wakelock_plus: ^1.3.2
   map_launcher: ^3.5.0
   image_picker: ^1.0.0
-  record: ^5.1.2
+  record: ^6.0.0
   http_parser: ^4.0.0
   crypto: ^3.0.6
   encrypt: ^5.0.3
   pretty_diff_text: ^2.0.0
   flutter_drawing_board: ^0.9.5
-  flutter_math_fork: ^0.7.3
+  flutter_math_fork: ^0.7.4
   screenshot: ^3.0.0
   flutter_compass: ^0.8.1
-  flutter_zxing: ^2.0.0
+  flutter_zxing: ^2.0.2
   image: ^4.5.4
   package_info_plus: ^8.3.0
   google_mobile_ads: ^6.0.0
@@ -101,9 +101,6 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^4.0.0
-
-dependency_overrides:
-  win32: ^5.5.4
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

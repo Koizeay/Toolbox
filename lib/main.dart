@@ -5,6 +5,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
@@ -48,19 +49,73 @@ class MyApp extends StatelessWidget {
             supportedLocales: AppLocaleUtils.supportedLocales,
             localizationsDelegates: GlobalMaterialLocalizations.delegates,
             theme: yaru.theme?.copyWith(
-              cardTheme: CardTheme(
+              cardTheme: CardThemeData(
                 color: Colors.grey[100],
+              ),
+              filledButtonTheme: FilledButtonThemeData(
+                style: TextButton.styleFrom(
+                  backgroundColor: Colors.deepOrange[800],
+                  disabledBackgroundColor: Colors.grey[300],
+                  foregroundColor: Colors.white,
+                  disabledForegroundColor: Colors.grey[700],
+                ),
+              ),
+              textButtonTheme: TextButtonThemeData(
+                style: TextButton.styleFrom(
+                  foregroundColor: Colors.deepOrange[800],
+                  disabledForegroundColor: Colors.grey[700],
+                ),
+              ),
+              inputDecorationTheme: const InputDecorationTheme(),
+              dropdownMenuTheme: const DropdownMenuThemeData(),
+              listTileTheme: const ListTileThemeData(),
+              dialogTheme: const YaruThemeData().theme?.dialogTheme.copyWith(
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(32)),
+                ),
               ),
               appBarTheme: yaru.theme?.appBarTheme.copyWith(
                 backgroundColor: Colors.grey[100],
+                systemOverlayStyle: SystemUiOverlayStyle.light.copyWith(
+                  statusBarColor: Colors.transparent,
+                  statusBarIconBrightness: Brightness.dark,
+                  statusBarBrightness: Brightness.light,
+                ),
               ),
             ),
             darkTheme: yaru.darkTheme?.copyWith(
-              cardTheme: CardTheme(
+              cardTheme: CardThemeData(
                 color: Colors.grey[900],
+              ),
+              filledButtonTheme: FilledButtonThemeData(
+                style: TextButton.styleFrom(
+                  backgroundColor: Colors.deepOrange[800],
+                  disabledBackgroundColor: Colors.grey[300],
+                  foregroundColor: Colors.white,
+                  disabledForegroundColor: Colors.grey[700],
+                ),
+              ),
+              textButtonTheme: TextButtonThemeData(
+                style: TextButton.styleFrom(
+                  foregroundColor: Colors.deepOrange[800],
+                  disabledForegroundColor: Colors.grey[700],
+                ),
+              ),
+              inputDecorationTheme: const InputDecorationTheme(),
+              dropdownMenuTheme: const DropdownMenuThemeData(),
+              listTileTheme: const ListTileThemeData(),
+              dialogTheme: const YaruThemeData().darkTheme?.dialogTheme.copyWith(
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(32)),
+                ),
               ),
               appBarTheme: yaru.darkTheme?.appBarTheme.copyWith(
                 backgroundColor: Colors.grey[900],
+                systemOverlayStyle: SystemUiOverlayStyle.dark.copyWith(
+                  statusBarColor: Colors.transparent,
+                  statusBarIconBrightness: Brightness.light,
+                  statusBarBrightness: Brightness.dark,
+                ),
               ),
             ),
             debugShowCheckedModeBanner: false,
