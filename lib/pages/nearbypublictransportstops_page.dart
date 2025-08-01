@@ -451,7 +451,8 @@ class _NearbyPublicTransportStopsPage extends State<NearbyPublicTransportStopsPa
                                     textAlign: TextAlign.left
                                 ),
                               ),
-                            if (board.stop?.platform != null)
+                            if (board.stop?.platform != null &&
+                                board.stop!.platform!.isNotEmpty)
                               SizedBox(
                                   width: double.maxFinite,
                                   child: Text(
@@ -570,7 +571,8 @@ class _NearbyPublicTransportStopsPage extends State<NearbyPublicTransportStopsPa
                                       textAlign: TextAlign.left
                                   ),
                                 ),
-                              if (board.passList?[i].platform != null)
+                              if (board.passList?[i].platform != null &&
+                                  board.passList![i].platform!.isNotEmpty)
                                 SizedBox(
                                     width: double.maxFinite,
                                     child: Text(
