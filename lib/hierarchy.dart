@@ -24,6 +24,7 @@ import 'package:toolbox/pages/nearbypublictransportstops_page.dart';
 import 'package:toolbox/pages/nslookup_page.dart';
 import 'package:toolbox/pages/osm_page.dart';
 import 'package:toolbox/pages/pastebin_page.dart';
+import 'package:toolbox/pages/percentagecalculator_page.dart';
 import 'package:toolbox/pages/ping_page.dart';
 import 'package:toolbox/pages/qrcreator_page.dart';
 import 'package:toolbox/pages/qrreader_page.dart';
@@ -76,6 +77,7 @@ class Hierarchy {
     "nslookup": Tool(t.tools.nslookup.title, "assets/images/tools/nslookup.png", const NslookupPage()),
     "osm": Tool(t.tools.osm.title, "assets/images/tools/osm.png", const OsmPage()),
     "pastebin": Tool(t.tools.pastebin.title, "assets/images/tools/pastebin.png", const PastebinPage()),
+    "percentagecalculator": Tool(t.tools.percentagecalculator.title, "assets/images/tools/percentagecalculator.png", const PercentageCalculatorPage()),
     "ping": Tool(t.tools.ping.title, "assets/images/tools/ping.png", const PingPage()),
     "qrcreator": Tool(t.tools.qrcreator.title, "assets/images/tools/qrcreator.png", const QrCreatorPage()),
     "qrreader": Tool(t.tools.qrreader.title, "assets/images/tools/qrreader.png", const QrReaderPage()),
@@ -114,6 +116,7 @@ class Hierarchy {
       toolMap["baseconverter"],
       toolMap["bitwisecalculator"],
       toolMap["mathtex"],
+      toolMap["percentagecalculator"],
       toolMap["romannumeral"],
       toolMap["textcounter"],
     ]),

@@ -666,6 +666,27 @@
         "impossible_to_connect_to_the_server": "Impossible de se connecter au serveur",
         "impossible_to_connect_to_the_server_message": "Échec de la connexion au serveur, veuillez vérifier votre connexion internet et réessayer."
       }
+    },
+    "percentagecalculator": {
+      "title": "Calculateur de pourcentage",
+      "result": "Résultat",
+      "percentage": "Pourcentage",
+      "eg": "ex.",
+      "total": "Total",
+      "first_value": "Première valeur",
+      "second_value": "Seconde valeur",
+      "what_is": "Quel est",
+      "of": "de",
+      "is_what_percentage_of": "est quel pourcentage de",
+      "what_is_the_percentage_difference": "Quelle est la différence en pourcentage",
+      "from": "de",
+      "to": "à",
+      "calculate": "Calculer",
+      "error": {
+        "please_enter_valid_numbers_for_both_fields": "Veuillez entrer des nombres valides pour les deux champs",
+        "total_cannot_be_zero": "Le total ne peut pas être zéro",
+        "first_value_cannot_be_zero": "La première valeur ne peut pas être zéro"
+      }
     }
   },
   "credits": {

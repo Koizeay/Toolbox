@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 1034 (517 per locale)
+/// Strings: 1068 (534 per locale)
 ///
-/// Built on 2025-05-13 at 17:54 UTC
+/// Built on 2025-08-01 at 12:17 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -262,6 +262,7 @@ class _StringsToolsEn {
 	late final _StringsToolsCompassEn compass = _StringsToolsCompassEn._(_root);
 	late final _StringsToolsQrcreatorEn qrcreator = _StringsToolsQrcreatorEn._(_root);
 	late final _StringsToolsPastebinEn pastebin = _StringsToolsPastebinEn._(_root);
+	late final _StringsToolsPercentagecalculatorEn percentagecalculator = _StringsToolsPercentagecalculatorEn._(_root);
 }
 
 // Path: credits
@@ -1081,6 +1082,30 @@ class _StringsToolsPastebinEn {
 	late final _StringsToolsPastebinErrorEn error = _StringsToolsPastebinErrorEn._(_root);
 }
 
+// Path: tools.percentagecalculator
+class _StringsToolsPercentagecalculatorEn {
+	_StringsToolsPercentagecalculatorEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'Percentage calculator';
+	String get result => 'Result';
+	String get percentage => 'Percentage';
+	String get eg => 'e.g.';
+	String get total => 'Total';
+	String get first_value => 'First value';
+	String get second_value => 'Second value';
+	String get what_is => 'What is';
+	String get of => 'of';
+	String get is_what_percentage_of => 'is what percentage of';
+	String get what_is_the_percentage_difference => 'What is the percentage difference';
+	String get from => 'from';
+	String get to => 'to';
+	String get calculate => 'Calculate';
+	late final _StringsToolsPercentagecalculatorErrorEn error = _StringsToolsPercentagecalculatorErrorEn._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsEn._(this._root);
@@ -1517,6 +1542,18 @@ class _StringsToolsPastebinErrorEn {
 	String get impossible_to_connect_to_the_server_message => 'Failed to connect to the server, please check your internet connection and try again.';
 }
 
+// Path: tools.percentagecalculator.error
+class _StringsToolsPercentagecalculatorErrorEn {
+	_StringsToolsPercentagecalculatorErrorEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get please_enter_valid_numbers_for_both_fields => 'Please enter valid numbers for both fields';
+	String get total_cannot_be_zero => 'Total cannot be zero';
+	String get first_value_cannot_be_zero => 'First value cannot be zero';
+}
+
 // Path: <root>
 class _StringsFr implements Translations {
 	/// You can call this constructor and build your own translation instance of this locale.
@@ -1655,6 +1692,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsCompassFr compass = _StringsToolsCompassFr._(_root);
 	@override late final _StringsToolsQrcreatorFr qrcreator = _StringsToolsQrcreatorFr._(_root);
 	@override late final _StringsToolsPastebinFr pastebin = _StringsToolsPastebinFr._(_root);
+	@override late final _StringsToolsPercentagecalculatorFr percentagecalculator = _StringsToolsPercentagecalculatorFr._(_root);
 }
 
 // Path: credits
@@ -2474,6 +2512,30 @@ class _StringsToolsPastebinFr implements _StringsToolsPastebinEn {
 	@override late final _StringsToolsPastebinErrorFr error = _StringsToolsPastebinErrorFr._(_root);
 }
 
+// Path: tools.percentagecalculator
+class _StringsToolsPercentagecalculatorFr implements _StringsToolsPercentagecalculatorEn {
+	_StringsToolsPercentagecalculatorFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Calculateur de pourcentage';
+	@override String get result => 'Résultat';
+	@override String get percentage => 'Pourcentage';
+	@override String get eg => 'ex.';
+	@override String get total => 'Total';
+	@override String get first_value => 'Première valeur';
+	@override String get second_value => 'Seconde valeur';
+	@override String get what_is => 'Quel est';
+	@override String get of => 'de';
+	@override String get is_what_percentage_of => 'est quel pourcentage de';
+	@override String get what_is_the_percentage_difference => 'Quelle est la différence en pourcentage';
+	@override String get from => 'de';
+	@override String get to => 'à';
+	@override String get calculate => 'Calculer';
+	@override late final _StringsToolsPercentagecalculatorErrorFr error = _StringsToolsPercentagecalculatorErrorFr._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsFr implements _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsFr._(this._root);
@@ -2908,6 +2970,18 @@ class _StringsToolsPastebinErrorFr implements _StringsToolsPastebinErrorEn {
 	@override String get failed_to_obtain_short_link => 'Impossible d\'obtenir un lien court, veuillez vérifier votre connexion internet puis réessayer';
 	@override String get impossible_to_connect_to_the_server => 'Impossible de se connecter au serveur';
 	@override String get impossible_to_connect_to_the_server_message => 'Échec de la connexion au serveur, veuillez vérifier votre connexion internet et réessayer.';
+}
+
+// Path: tools.percentagecalculator.error
+class _StringsToolsPercentagecalculatorErrorFr implements _StringsToolsPercentagecalculatorErrorEn {
+	_StringsToolsPercentagecalculatorErrorFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get please_enter_valid_numbers_for_both_fields => 'Veuillez entrer des nombres valides pour les deux champs';
+	@override String get total_cannot_be_zero => 'Le total ne peut pas être zéro';
+	@override String get first_value_cannot_be_zero => 'La première valeur ne peut pas être zéro';
 }
 
 /// Flat map(s) containing all translations.
@@ -3419,6 +3493,23 @@ extension on Translations {
 			case 'tools.pastebin.error.failed_to_obtain_short_link': return 'Failed to obtain short link, please check your internet connection and try again';
 			case 'tools.pastebin.error.impossible_to_connect_to_the_server': return 'Impossible to connect to the server';
 			case 'tools.pastebin.error.impossible_to_connect_to_the_server_message': return 'Failed to connect to the server, please check your internet connection and try again.';
+			case 'tools.percentagecalculator.title': return 'Percentage calculator';
+			case 'tools.percentagecalculator.result': return 'Result';
+			case 'tools.percentagecalculator.percentage': return 'Percentage';
+			case 'tools.percentagecalculator.eg': return 'e.g.';
+			case 'tools.percentagecalculator.total': return 'Total';
+			case 'tools.percentagecalculator.first_value': return 'First value';
+			case 'tools.percentagecalculator.second_value': return 'Second value';
+			case 'tools.percentagecalculator.what_is': return 'What is';
+			case 'tools.percentagecalculator.of': return 'of';
+			case 'tools.percentagecalculator.is_what_percentage_of': return 'is what percentage of';
+			case 'tools.percentagecalculator.what_is_the_percentage_difference': return 'What is the percentage difference';
+			case 'tools.percentagecalculator.from': return 'from';
+			case 'tools.percentagecalculator.to': return 'to';
+			case 'tools.percentagecalculator.calculate': return 'Calculate';
+			case 'tools.percentagecalculator.error.please_enter_valid_numbers_for_both_fields': return 'Please enter valid numbers for both fields';
+			case 'tools.percentagecalculator.error.total_cannot_be_zero': return 'Total cannot be zero';
+			case 'tools.percentagecalculator.error.first_value_cannot_be_zero': return 'First value cannot be zero';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -3944,6 +4035,23 @@ extension on _StringsFr {
 			case 'tools.pastebin.error.failed_to_obtain_short_link': return 'Impossible d\'obtenir un lien court, veuillez vérifier votre connexion internet puis réessayer';
 			case 'tools.pastebin.error.impossible_to_connect_to_the_server': return 'Impossible de se connecter au serveur';
 			case 'tools.pastebin.error.impossible_to_connect_to_the_server_message': return 'Échec de la connexion au serveur, veuillez vérifier votre connexion internet et réessayer.';
+			case 'tools.percentagecalculator.title': return 'Calculateur de pourcentage';
+			case 'tools.percentagecalculator.result': return 'Résultat';
+			case 'tools.percentagecalculator.percentage': return 'Pourcentage';
+			case 'tools.percentagecalculator.eg': return 'ex.';
+			case 'tools.percentagecalculator.total': return 'Total';
+			case 'tools.percentagecalculator.first_value': return 'Première valeur';
+			case 'tools.percentagecalculator.second_value': return 'Seconde valeur';
+			case 'tools.percentagecalculator.what_is': return 'Quel est';
+			case 'tools.percentagecalculator.of': return 'de';
+			case 'tools.percentagecalculator.is_what_percentage_of': return 'est quel pourcentage de';
+			case 'tools.percentagecalculator.what_is_the_percentage_difference': return 'Quelle est la différence en pourcentage';
+			case 'tools.percentagecalculator.from': return 'de';
+			case 'tools.percentagecalculator.to': return 'à';
+			case 'tools.percentagecalculator.calculate': return 'Calculer';
+			case 'tools.percentagecalculator.error.please_enter_valid_numbers_for_both_fields': return 'Veuillez entrer des nombres valides pour les deux champs';
+			case 'tools.percentagecalculator.error.total_cannot_be_zero': return 'Le total ne peut pas être zéro';
+			case 'tools.percentagecalculator.error.first_value_cannot_be_zero': return 'La première valeur ne peut pas être zéro';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';
