@@ -253,7 +253,10 @@ class _WhiteBoardPage extends State<WhiteBoardPage> {
                         children: [
                           for (final color in colors)
                             IconButton(
-                              icon: const Icon(Icons.circle_rounded),
+                              icon: Icon(
+                                Icons.circle_rounded,
+                                color: color,
+                              ),
                               color: color,
                               onPressed: () {
                                 drawingController.setStyle(color: color);
