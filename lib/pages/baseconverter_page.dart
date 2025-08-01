@@ -3,7 +3,6 @@ import 'package:toolbox/core/dialogs.dart';
 import 'package:toolbox/gen/strings.g.dart';
 import 'package:toolbox/widgets/baseconverter_keyboard.dart';
 import 'package:toolbox/widgets/generic_customkeyboard.dart';
-import 'package:toolbox/widgets/generic_sliverappbardelegate.dart';
 
 class BaseConverterPage extends StatefulWidget {
   const BaseConverterPage({ super.key });
@@ -214,9 +213,14 @@ class _BaseConverterPage extends State<BaseConverterPage> {
   Widget baseConverterKeyboard() {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: BaseConverterKeyboard(
-        inputMode: currentBase,
-        onKeyTap: _onKeyTap,
+      child: Center(
+        child: SizedBox(
+          width: 400,
+          child: BaseConverterKeyboard(
+            inputMode: currentBase,
+            onKeyTap: _onKeyTap,
+          ),
+        ),
       ),
     );
   }
@@ -224,52 +228,36 @@ class _BaseConverterPage extends State<BaseConverterPage> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        FocusManager.instance.primaryFocus?.unfocus();
-      },
-      child: Scaffold(
+        onTap: () {
+          FocusManager.instance.primaryFocus?.unfocus();
+        },
+        child: Scaffold(
           appBar: AppBar(
             title: Text(t.tools.baseconverter.title),
           ),
-          body: LayoutBuilder(
-              builder: (context, constraints) {
-                if (constraints.maxHeight < 500) {
-                  return CustomScrollView(
-                    slivers: [
-                      // Ele1 pinned at the top
-                      SliverPersistentHeader(
-                        pinned: true,
-                        delegate: GenericSliverAppBarDelegate(
-                          minHeight: 72,
-                          maxHeight: 72,
-                          child: inputTextBaseDropdown(),
-                        ),
-                      ),
-                      // Scrollable package of Ele2 and Ele3
-                      SliverToBoxAdapter(
+          body: SafeArea(
+              child: Padding(padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                      child: SingleChildScrollView(
                         child: Column(
                           children: [
+                            inputTextBaseDropdown(),
+                            const SizedBox(height: 8.0),
                             outputTextBaseList(),
-                            const SizedBox(height: 20),
-                            baseConverterKeyboard(),
                           ],
                         ),
                       ),
-                    ],
-                  );
-                } else {
-                  return Column(
-                    children: [
-                      inputTextBaseDropdown(),
-                      outputTextBaseList(),
-                      const Spacer(),
-                      baseConverterKeyboard(),
-                    ],
-                  );
-                }
-              }
-          )
-      ),
+                    ),
+                    baseConverterKeyboard(),
+                  ],
+                ),
+              )
+          ),
+        )
     );
   }
 }

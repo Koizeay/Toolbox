@@ -22,9 +22,9 @@ class GenericCustomKeyboard extends StatelessWidget {
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
       itemCount: keys.length,
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 5,
-        childAspectRatio: MediaQuery.of(context).size.width / (MediaQuery.of(context).size.height / 4),
+        childAspectRatio: 2,
       ),
       itemBuilder: (context, index) {
         if (keys[index] == noButton) {
