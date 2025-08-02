@@ -3,6 +3,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:toolbox/core/dialogs.dart';
 import 'package:toolbox/core/url.dart';
 import 'package:toolbox/gen/strings.g.dart';
@@ -34,7 +35,6 @@ class _CreditsPage extends State<CreditsPage> {
 
   @override
   Widget build(BuildContext context) {
-    String imagesPrefix =  Theme.of(context).brightness == Brightness.dark ? "_white" : "";
     return Scaffold(
       appBar: AppBar(
         title: Text(t.credits.title),
@@ -140,19 +140,65 @@ class _CreditsPage extends State<CreditsPage> {
                                 SnackBar(content: Text(t.credits.email_copied_to_clipboard))
                             );
                           },
-                          icon: Image.asset("assets/images/specific/credits_email$imagesPrefix.png", width: 20, height: 20,)
+                          icon: SvgPicture.asset(
+                            "assets/images/specific/credits_email.svg",
+                            colorFilter: ColorFilter.mode(
+                                Theme.of(context).brightness == Brightness.dark
+                                    ? Colors.white
+                                    : Colors.black,
+                                BlendMode.srcIn
+                            ),
+                            width: 25,
+                            height: 25,
+                          )
                         ),
                         IconButton(
                           onPressed: () {
                             launchUrlInBrowser("https://instagram.com/koizeay.dev");
                           },
-                          icon: Image.asset("assets/images/specific/credits_instagram$imagesPrefix.png", width: 20, height: 20,)
+                          icon: SvgPicture.asset(
+                            "assets/images/specific/credits_instagram.svg",
+                            colorFilter: ColorFilter.mode(
+                                Theme.of(context).brightness == Brightness.dark
+                                    ? Colors.white
+                                    : Colors.black,
+                                BlendMode.srcIn
+                            ),
+                            width: 25,
+                            height: 25,
+                          )
+                        ),
+                        IconButton(
+                          onPressed: () {
+                            launchUrlInBrowser("https://bsky.app/profile/koizeay.dev");
+                          },
+                          icon: SvgPicture.asset(
+                            "assets/images/specific/credits_bluesky.svg",
+                            colorFilter: ColorFilter.mode(
+                                Theme.of(context).brightness == Brightness.dark
+                                    ? Colors.white
+                                    : Colors.black,
+                                BlendMode.srcIn
+                            ),
+                            width: 25,
+                            height: 25,
+                          )
                         ),
                         IconButton(
                           onPressed: () {
                             launchUrlInBrowser("https://jtu.me/discord");
                           },
-                          icon: Image.asset("assets/images/specific/credits_discord$imagesPrefix.png", width: 20, height: 20,)
+                          icon: SvgPicture.asset(
+                            "assets/images/specific/credits_discord.svg",
+                            colorFilter: ColorFilter.mode(
+                                Theme.of(context).brightness == Brightness.dark
+                                    ? Colors.white
+                                    : Colors.black,
+                                BlendMode.srcIn
+                            ),
+                            width: 25,
+                            height: 25,
+                          )
                         ),
                       ],
                     )
