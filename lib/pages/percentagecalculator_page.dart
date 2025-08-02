@@ -310,6 +310,14 @@ class _PercentageCalculatorPage extends State<PercentageCalculatorPage> {
                               ),
                             ),
                           ),
+                          const SizedBox(width: 8),
+                          const Text(
+                            "?",
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
                         ],
                       ),
                       const SizedBox(height: 4),
