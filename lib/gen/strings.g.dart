@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 1068 (534 per locale)
+/// Strings: 1088 (544 per locale)
 ///
-/// Built on 2025-08-01 at 12:17 UTC
+/// Built on 2025-08-02 at 10:46 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -263,6 +263,7 @@ class _StringsToolsEn {
 	late final _StringsToolsQrcreatorEn qrcreator = _StringsToolsQrcreatorEn._(_root);
 	late final _StringsToolsPastebinEn pastebin = _StringsToolsPastebinEn._(_root);
 	late final _StringsToolsPercentagecalculatorEn percentagecalculator = _StringsToolsPercentagecalculatorEn._(_root);
+	late final _StringsToolsPasswordgeneratorEn passwordgenerator = _StringsToolsPasswordgeneratorEn._(_root);
 }
 
 // Path: credits
@@ -1106,6 +1107,23 @@ class _StringsToolsPercentagecalculatorEn {
 	late final _StringsToolsPercentagecalculatorErrorEn error = _StringsToolsPercentagecalculatorErrorEn._(_root);
 }
 
+// Path: tools.passwordgenerator
+class _StringsToolsPasswordgeneratorEn {
+	_StringsToolsPasswordgeneratorEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'Password generator';
+	String get password_length => 'Password length';
+	String get number_of_digits => 'Number of digits';
+	String get number_of_special_characters => 'Number of special characters';
+	String get generate_password => 'Generate password';
+	String get password_copied_to_clipboard => 'Password copied to clipboard';
+	String get tap_to_copy => 'Tap to copy';
+	late final _StringsToolsPasswordgeneratorErrorEn error = _StringsToolsPasswordgeneratorErrorEn._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsEn._(this._root);
@@ -1554,6 +1572,18 @@ class _StringsToolsPercentagecalculatorErrorEn {
 	String get first_value_cannot_be_zero => 'First value cannot be zero';
 }
 
+// Path: tools.passwordgenerator.error
+class _StringsToolsPasswordgeneratorErrorEn {
+	_StringsToolsPasswordgeneratorErrorEn._(this._root);
+
+	final Translations _root; // ignore: unused_field
+
+	// Translations
+	String get password_length_must_be_greater_than_0 => 'Password length must be greater than 0';
+	String password_length_cannot_exceed_x_characters({required Object maxLength}) => 'Password length cannot exceed ${maxLength} characters';
+	String get password_length_cannot_be_less_than_the_sum_of_digits_and_special_characters => 'Password length cannot be less than the sum of digits and special characters';
+}
+
 // Path: <root>
 class _StringsFr implements Translations {
 	/// You can call this constructor and build your own translation instance of this locale.
@@ -1693,6 +1723,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsQrcreatorFr qrcreator = _StringsToolsQrcreatorFr._(_root);
 	@override late final _StringsToolsPastebinFr pastebin = _StringsToolsPastebinFr._(_root);
 	@override late final _StringsToolsPercentagecalculatorFr percentagecalculator = _StringsToolsPercentagecalculatorFr._(_root);
+	@override late final _StringsToolsPasswordgeneratorFr passwordgenerator = _StringsToolsPasswordgeneratorFr._(_root);
 }
 
 // Path: credits
@@ -2536,6 +2567,23 @@ class _StringsToolsPercentagecalculatorFr implements _StringsToolsPercentagecalc
 	@override late final _StringsToolsPercentagecalculatorErrorFr error = _StringsToolsPercentagecalculatorErrorFr._(_root);
 }
 
+// Path: tools.passwordgenerator
+class _StringsToolsPasswordgeneratorFr implements _StringsToolsPasswordgeneratorEn {
+	_StringsToolsPasswordgeneratorFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'Générateur de mot de passe';
+	@override String get password_length => 'Longueur du mot de passe';
+	@override String get number_of_digits => 'Nombre de chiffres';
+	@override String get number_of_special_characters => 'Nombre de caractères spéciaux';
+	@override String get generate_password => 'Générer un mot de passe';
+	@override String get password_copied_to_clipboard => 'Mot de passe copié dans le presse-papiers';
+	@override String get tap_to_copy => 'Cliquez pour copier';
+	@override late final _StringsToolsPasswordgeneratorErrorFr error = _StringsToolsPasswordgeneratorErrorFr._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsFr implements _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsFr._(this._root);
@@ -2982,6 +3030,18 @@ class _StringsToolsPercentagecalculatorErrorFr implements _StringsToolsPercentag
 	@override String get please_enter_valid_numbers_for_both_fields => 'Veuillez entrer des nombres valides pour les deux champs';
 	@override String get total_cannot_be_zero => 'Le total ne peut pas être zéro';
 	@override String get first_value_cannot_be_zero => 'La première valeur ne peut pas être zéro';
+}
+
+// Path: tools.passwordgenerator.error
+class _StringsToolsPasswordgeneratorErrorFr implements _StringsToolsPasswordgeneratorErrorEn {
+	_StringsToolsPasswordgeneratorErrorFr._(this._root);
+
+	@override final _StringsFr _root; // ignore: unused_field
+
+	// Translations
+	@override String get password_length_must_be_greater_than_0 => 'La longueur du mot de passe doit être supérieure à 0';
+	@override String password_length_cannot_exceed_x_characters({required Object maxLength}) => 'La longueur du mot de passe ne peut pas dépasser ${maxLength} caractères';
+	@override String get password_length_cannot_be_less_than_the_sum_of_digits_and_special_characters => 'La longueur du mot de passe ne peut pas être inférieure à la somme du nombre de chiffres et de caractères spéciaux';
 }
 
 /// Flat map(s) containing all translations.
@@ -3510,6 +3570,16 @@ extension on Translations {
 			case 'tools.percentagecalculator.error.please_enter_valid_numbers_for_both_fields': return 'Please enter valid numbers for both fields';
 			case 'tools.percentagecalculator.error.total_cannot_be_zero': return 'Total cannot be zero';
 			case 'tools.percentagecalculator.error.first_value_cannot_be_zero': return 'First value cannot be zero';
+			case 'tools.passwordgenerator.title': return 'Password generator';
+			case 'tools.passwordgenerator.password_length': return 'Password length';
+			case 'tools.passwordgenerator.number_of_digits': return 'Number of digits';
+			case 'tools.passwordgenerator.number_of_special_characters': return 'Number of special characters';
+			case 'tools.passwordgenerator.generate_password': return 'Generate password';
+			case 'tools.passwordgenerator.password_copied_to_clipboard': return 'Password copied to clipboard';
+			case 'tools.passwordgenerator.tap_to_copy': return 'Tap to copy';
+			case 'tools.passwordgenerator.error.password_length_must_be_greater_than_0': return 'Password length must be greater than 0';
+			case 'tools.passwordgenerator.error.password_length_cannot_exceed_x_characters': return ({required Object maxLength}) => 'Password length cannot exceed ${maxLength} characters';
+			case 'tools.passwordgenerator.error.password_length_cannot_be_less_than_the_sum_of_digits_and_special_characters': return 'Password length cannot be less than the sum of digits and special characters';
 			case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
@@ -4052,6 +4122,16 @@ extension on _StringsFr {
 			case 'tools.percentagecalculator.error.please_enter_valid_numbers_for_both_fields': return 'Veuillez entrer des nombres valides pour les deux champs';
 			case 'tools.percentagecalculator.error.total_cannot_be_zero': return 'Le total ne peut pas être zéro';
 			case 'tools.percentagecalculator.error.first_value_cannot_be_zero': return 'La première valeur ne peut pas être zéro';
+			case 'tools.passwordgenerator.title': return 'Générateur de mot de passe';
+			case 'tools.passwordgenerator.password_length': return 'Longueur du mot de passe';
+			case 'tools.passwordgenerator.number_of_digits': return 'Nombre de chiffres';
+			case 'tools.passwordgenerator.number_of_special_characters': return 'Nombre de caractères spéciaux';
+			case 'tools.passwordgenerator.generate_password': return 'Générer un mot de passe';
+			case 'tools.passwordgenerator.password_copied_to_clipboard': return 'Mot de passe copié dans le presse-papiers';
+			case 'tools.passwordgenerator.tap_to_copy': return 'Cliquez pour copier';
+			case 'tools.passwordgenerator.error.password_length_must_be_greater_than_0': return 'La longueur du mot de passe doit être supérieure à 0';
+			case 'tools.passwordgenerator.error.password_length_cannot_exceed_x_characters': return ({required Object maxLength}) => 'La longueur du mot de passe ne peut pas dépasser ${maxLength} caractères';
+			case 'tools.passwordgenerator.error.password_length_cannot_be_less_than_the_sum_of_digits_and_special_characters': return 'La longueur du mot de passe ne peut pas être inférieure à la somme du nombre de chiffres et de caractères spéciaux';
 			case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';

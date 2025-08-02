@@ -687,6 +687,20 @@
         "total_cannot_be_zero": "Total cannot be zero",
         "first_value_cannot_be_zero": "First value cannot be zero"
       }
+    },
+    "passwordgenerator": {
+      "title": "Password generator",
+      "password_length": "Password length",
+      "number_of_digits": "Number of digits",
+      "number_of_special_characters": "Number of special characters",
+      "generate_password": "Generate password",
+      "password_copied_to_clipboard": "Password copied to clipboard",
+      "tap_to_copy": "Tap to copy",
+      "error": {
+        "password_length_must_be_greater_than_0": "Password length must be greater than 0",
+        "password_length_cannot_exceed_x_characters": "Password length cannot exceed $maxLength characters",
+        "password_length_cannot_be_less_than_the_sum_of_digits_and_special_characters": "Password length cannot be less than the sum of digits and special characters"
+      }
     }
   },
   "credits": {

@@ -23,6 +23,7 @@ import 'package:toolbox/pages/nationalanthems_page.dart';
 import 'package:toolbox/pages/nearbypublictransportstops_page.dart';
 import 'package:toolbox/pages/nslookup_page.dart';
 import 'package:toolbox/pages/osm_page.dart';
+import 'package:toolbox/pages/passwordgenerator_page.dart';
 import 'package:toolbox/pages/pastebin_page.dart';
 import 'package:toolbox/pages/percentagecalculator_page.dart';
 import 'package:toolbox/pages/ping_page.dart';
@@ -76,6 +77,7 @@ class Hierarchy {
     "networkinfo": Tool(t.tools.networkinfo.title, "assets/images/tools/networkinfo.png", const NetworkInfoPage()),
     "nslookup": Tool(t.tools.nslookup.title, "assets/images/tools/nslookup.png", const NslookupPage()),
     "osm": Tool(t.tools.osm.title, "assets/images/tools/osm.png", const OsmPage()),
+    "passwordgenerator": Tool(t.tools.passwordgenerator.title, "assets/images/tools/passwordgenerator.png", const PasswordGeneratorPage()),
     "pastebin": Tool(t.tools.pastebin.title, "assets/images/tools/pastebin.png", const PastebinPage()),
     "percentagecalculator": Tool(t.tools.percentagecalculator.title, "assets/images/tools/percentagecalculator.png", const PercentageCalculatorPage()),
     "ping": Tool(t.tools.ping.title, "assets/images/tools/ping.png", const PingPage()),
@@ -151,6 +153,7 @@ class Hierarchy {
     ]),
     Folder(t.folders.random, "assets/images/folders/folder.png", [
       toolMap["flipcoins"],
+      toolMap["passwordgenerator"],
       toolMap["randomcolor"],
       toolMap["randomnumber"],
       toolMap["roulette"],
