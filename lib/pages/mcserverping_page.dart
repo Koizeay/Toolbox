@@ -53,6 +53,7 @@ class _McServerPing extends State<McServerPingPage> {
       if (mounted) {
         setState(() {
           favoriteServers = prefs.getStringList(SHARED_PREFERENCES_TOOL_MCSERVERPING_FAVORITES) ?? [];
+          favoriteServers.sort((a, b) => a.toLowerCase().compareTo(b.toLowerCase()));
         });
       }
     });
@@ -151,6 +152,7 @@ class _McServerPing extends State<McServerPingPage> {
         t.tools.mc_server_ping.added_to_favorites,
         t.tools.mc_server_ping.added_to_favorites_description
     );
+    favoriteServers.sort((a, b) => a.toLowerCase().compareTo(b.toLowerCase()));
   }
 
   void removeFromFavorites(String ip) {
@@ -166,51 +168,35 @@ class _McServerPing extends State<McServerPingPage> {
     );
   }
 
-  bool isFavorite(String ip) {
-    return favoriteServers.contains(ip);
+  Future<void> showConfirmRemoveFavoriteDialog(String ip) async {
+    List<TextButton> buttons = [
+      TextButton(
+        onPressed: () {
+          Navigator.pop(context);
+          removeFromFavorites(ip);
+          if (mounted) {
+            setState(() {});
+          }
+        },
+        child: Text(t.generic.yes),
+      ),
+      TextButton(
+        onPressed: () {
+          Navigator.pop(context);
+        },
+        child: Text(t.generic.no),
+      )
+    ];
+    showCustomButtonsTextDialog(
+        context,
+        t.tools.mc_server_ping.remove_from_favorites,
+        t.tools.mc_server_ping.remove_from_favorites_description,
+        buttons
+    );
   }
 
-  void showPickFromFavoritesDialog() {
-    if (favoriteServers.isEmpty) {
-      showOkTextDialog(
-          context,
-          t.tools.mc_server_ping.no_favorites,
-          t.tools.mc_server_ping.no_favorites_description
-      );
-      return;
-    }
-    showDialog(
-      context: context,
-      builder: (context) {
-        return AlertDialog(
-          title: Text(t.tools.mc_server_ping.pick_from_favorites),
-          content: SizedBox(
-            width: double.maxFinite,
-            height: 150,
-            child: ListView.builder(
-              itemCount: favoriteServers.length,
-              itemBuilder: (context, index) {
-                return ListTile(
-                  title: Text(favoriteServers[index]),
-                  onTap: () {
-                    ipController.text = favoriteServers[index];
-                    Navigator.pop(context);
-                  },
-                );
-              },
-            ),
-          ),
-          actions: [
-            TextButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              child: Text(t.generic.cancel),
-            )
-          ],
-        );
-      }
-    );
+  bool isFavorite(String ip) {
+    return favoriteServers.contains(ip);
   }
 
   @override
@@ -396,29 +382,12 @@ class _McServerPing extends State<McServerPingPage> {
                       ],
                     ),
                     const SizedBox(height: 4),
-                    Row(
-                      children: [
-                        Expanded(
-                          flex: 9,
-                          child: TextField(
-                            controller: ipController,
-                            decoration: InputDecoration(
-                              labelText: t.tools.mc_server_ping.server_ip,
-                              border: const OutlineInputBorder(),
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          flex: 1,
-                          child: IconButton(
-                            icon: const Icon(Icons.star_outline),
-                            tooltip: t.tools.mc_server_ping.from_favorites,
-                            onPressed: () {
-                              showPickFromFavoritesDialog();
-                            },
-                          ),
-                        )
-                      ],
+                    TextField(
+                      controller: ipController,
+                      decoration: InputDecoration(
+                        labelText: t.tools.mc_server_ping.server_ip,
+                        border: const OutlineInputBorder(),
+                      ),
                     ),
                     const SizedBox(height: 8),
                     SizedBox(
@@ -430,6 +399,28 @@ class _McServerPing extends State<McServerPingPage> {
                         child: Text(t.tools.mc_server_ping.ping),
                       ),
                     ),
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Divider(height: 1,),
+                    ),
+                    for (var favorite in favoriteServers)
+                      ListTile(
+                        title: Text(favorite),
+                        trailing: IconButton(
+                          icon: const Icon(Icons.delete_outline),
+                          tooltip: t.tools.mc_server_ping.remove_from_favorites,
+                          onPressed: () async {
+                            await showConfirmRemoveFavoriteDialog(favorite);
+                            if (mounted) {
+                              setState(() {});
+                            }
+                          },
+                        ),
+                        onTap: () {
+                          ipController.text = favorite;
+                          pingServer();
+                        },
+                      ),
                   ],
                 ),
               ),

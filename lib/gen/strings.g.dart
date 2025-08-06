@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 1094 (547 per locale)
+/// Strings: 1096 (548 per locale)
 ///
-/// Built on 2025-08-06 at 14:58 UTC
+/// Built on 2025-08-06 at 15:22 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -766,16 +766,17 @@ class _StringsToolsMcServerPingEn {
 	String get ping_another_server => 'Ping another server';
 	String get api_used => 'API used';
 	String get about_the_api => 'About the API';
-	String about_the_api_description({required Object source, required Object website}) => 'This tool uses the "${source}" from "${website}" to ping Minecraft servers.';
+	String about_the_api_description({required Object source, required Object website}) => 'This tool uses the "${source}" from "${website}" to ping Minecraft servers';
 	String get about_open => 'Open';
 	String the_server_id_is({required Object id}) => 'The server ID is "${id}"';
 	String x_y_players_online({required Object playersOnline, required Object playersMax}) => '${playersOnline}/${playersMax} player(s) online';
 	String get added_to_favorites => 'Added to favorites';
-	String get added_to_favorites_description => 'The server has been added to your favorites.';
+	String get added_to_favorites_description => 'The server has been added to your favorites';
 	String get removed_from_favorites => 'Removed from favorites';
-	String get removed_from_favorites_description => 'The server has been removed from your favorites.';
+	String get removed_from_favorites_description => 'The server has been removed from your favorites';
 	String get add_to_favorites => 'Add to favorite';
 	String get remove_from_favorites => 'Remove from favorite';
+	String get remove_from_favorites_description => 'Are you sure you want to remove this server from your favorites?';
 	String get from_favorites => 'From favorites';
 	String get pick_from_favorites => 'Pick from favorites';
 	String get no_favorites => 'No favorites';
@@ -2229,16 +2230,17 @@ class _StringsToolsMcServerPingFr implements _StringsToolsMcServerPingEn {
 	@override String get ping_another_server => 'Ping un autre serveur';
 	@override String get api_used => 'API utilisée';
 	@override String get about_the_api => 'À propos de l\'API';
-	@override String about_the_api_description({required Object source, required Object website}) => 'Cet outil utilise "${source}" du site "${website}" pour ping les serveurs Minecraft.';
+	@override String about_the_api_description({required Object source, required Object website}) => 'Cet outil utilise "${source}" du site "${website}" pour ping les serveurs Minecraft';
 	@override String get about_open => 'Ouvrir';
 	@override String the_server_id_is({required Object id}) => 'L\'ID du serveur est "${id}"';
 	@override String x_y_players_online({required Object playersOnline, required Object playersMax}) => '${playersOnline}/${playersMax} joueur(s) en ligne';
 	@override String get added_to_favorites => 'Ajouté aux favoris';
-	@override String get added_to_favorites_description => 'Le serveur a été ajouté aux favoris.';
+	@override String get added_to_favorites_description => 'Le serveur a été ajouté aux favoris';
 	@override String get removed_from_favorites => 'Retiré des favoris';
-	@override String get removed_from_favorites_description => 'Le serveur a été retiré des favoris.';
+	@override String get removed_from_favorites_description => 'Le serveur a été retiré des favoris';
 	@override String get add_to_favorites => 'Ajouter aux favoris';
 	@override String get remove_from_favorites => 'Retirer des favoris';
+	@override String get remove_from_favorites_description => 'Êtes-vous sûr de vouloir retirer ce serveur de vos favoris ?';
 	@override String get from_favorites => 'Depuis les favoris';
 	@override String get pick_from_favorites => 'Choisir depuis les favoris';
 	@override String get no_favorites => 'Aucun favori';
@@ -3340,16 +3342,17 @@ extension on Translations {
 			case 'tools.mc_server_ping.ping_another_server': return 'Ping another server';
 			case 'tools.mc_server_ping.api_used': return 'API used';
 			case 'tools.mc_server_ping.about_the_api': return 'About the API';
-			case 'tools.mc_server_ping.about_the_api_description': return ({required Object source, required Object website}) => 'This tool uses the "${source}" from "${website}" to ping Minecraft servers.';
+			case 'tools.mc_server_ping.about_the_api_description': return ({required Object source, required Object website}) => 'This tool uses the "${source}" from "${website}" to ping Minecraft servers';
 			case 'tools.mc_server_ping.about_open': return 'Open';
 			case 'tools.mc_server_ping.the_server_id_is': return ({required Object id}) => 'The server ID is "${id}"';
 			case 'tools.mc_server_ping.x_y_players_online': return ({required Object playersOnline, required Object playersMax}) => '${playersOnline}/${playersMax} player(s) online';
 			case 'tools.mc_server_ping.added_to_favorites': return 'Added to favorites';
-			case 'tools.mc_server_ping.added_to_favorites_description': return 'The server has been added to your favorites.';
+			case 'tools.mc_server_ping.added_to_favorites_description': return 'The server has been added to your favorites';
 			case 'tools.mc_server_ping.removed_from_favorites': return 'Removed from favorites';
-			case 'tools.mc_server_ping.removed_from_favorites_description': return 'The server has been removed from your favorites.';
+			case 'tools.mc_server_ping.removed_from_favorites_description': return 'The server has been removed from your favorites';
 			case 'tools.mc_server_ping.add_to_favorites': return 'Add to favorite';
 			case 'tools.mc_server_ping.remove_from_favorites': return 'Remove from favorite';
+			case 'tools.mc_server_ping.remove_from_favorites_description': return 'Are you sure you want to remove this server from your favorites?';
 			case 'tools.mc_server_ping.from_favorites': return 'From favorites';
 			case 'tools.mc_server_ping.pick_from_favorites': return 'Pick from favorites';
 			case 'tools.mc_server_ping.no_favorites': return 'No favorites';
@@ -3895,16 +3898,17 @@ extension on _StringsFr {
 			case 'tools.mc_server_ping.ping_another_server': return 'Ping un autre serveur';
 			case 'tools.mc_server_ping.api_used': return 'API utilisée';
 			case 'tools.mc_server_ping.about_the_api': return 'À propos de l\'API';
-			case 'tools.mc_server_ping.about_the_api_description': return ({required Object source, required Object website}) => 'Cet outil utilise "${source}" du site "${website}" pour ping les serveurs Minecraft.';
+			case 'tools.mc_server_ping.about_the_api_description': return ({required Object source, required Object website}) => 'Cet outil utilise "${source}" du site "${website}" pour ping les serveurs Minecraft';
 			case 'tools.mc_server_ping.about_open': return 'Ouvrir';
 			case 'tools.mc_server_ping.the_server_id_is': return ({required Object id}) => 'L\'ID du serveur est "${id}"';
 			case 'tools.mc_server_ping.x_y_players_online': return ({required Object playersOnline, required Object playersMax}) => '${playersOnline}/${playersMax} joueur(s) en ligne';
 			case 'tools.mc_server_ping.added_to_favorites': return 'Ajouté aux favoris';
-			case 'tools.mc_server_ping.added_to_favorites_description': return 'Le serveur a été ajouté aux favoris.';
+			case 'tools.mc_server_ping.added_to_favorites_description': return 'Le serveur a été ajouté aux favoris';
 			case 'tools.mc_server_ping.removed_from_favorites': return 'Retiré des favoris';
-			case 'tools.mc_server_ping.removed_from_favorites_description': return 'Le serveur a été retiré des favoris.';
+			case 'tools.mc_server_ping.removed_from_favorites_description': return 'Le serveur a été retiré des favoris';
 			case 'tools.mc_server_ping.add_to_favorites': return 'Ajouter aux favoris';
 			case 'tools.mc_server_ping.remove_from_favorites': return 'Retirer des favoris';
+			case 'tools.mc_server_ping.remove_from_favorites_description': return 'Êtes-vous sûr de vouloir retirer ce serveur de vos favoris ?';
 			case 'tools.mc_server_ping.from_favorites': return 'Depuis les favoris';
 			case 'tools.mc_server_ping.pick_from_favorites': return 'Choisir depuis les favoris';
 			case 'tools.mc_server_ping.no_favorites': return 'Aucun favori';
