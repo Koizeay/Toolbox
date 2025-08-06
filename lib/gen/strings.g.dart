@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 1096 (548 per locale)
+/// Strings: 1100 (550 per locale)
 ///
-/// Built on 2025-08-06 at 15:22 UTC
+/// Built on 2025-08-06 at 16:06 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -417,6 +417,8 @@ class _StringsToolsTimerEn {
 	String get title => 'Timer';
 	String get start => 'Start';
 	String get stop => 'Stop';
+	String get pause => 'Pause';
+	String get please_stop_the_timer_first => 'Please stop the timer first';
 	String get ios_warning_message => 'For the timer to ring on iOS, you must not quit the application or switch off your iPhone screen. Otherwise iOS will prevent the timer from ringing when it reaches zero.';
 }
 
@@ -1881,6 +1883,8 @@ class _StringsToolsTimerFr implements _StringsToolsTimerEn {
 	@override String get title => 'Minuteur';
 	@override String get start => 'Démarrer';
 	@override String get stop => 'Arrêter';
+	@override String get pause => 'Pause';
+	@override String get please_stop_the_timer_first => 'Veuillez d\'abord arrêter le minuteur';
 	@override String get ios_warning_message => 'Pour que le minuteur sonne sur iOS, vous ne devez pas quitter l\'application ni éteindre l\'écran de votre iPhone. Sinon, iOS empêchera le minuteur de sonner lorsqu\'il atteindra zéro.';
 }
 
@@ -3144,6 +3148,8 @@ extension on Translations {
 			case 'tools.timer.title': return 'Timer';
 			case 'tools.timer.start': return 'Start';
 			case 'tools.timer.stop': return 'Stop';
+			case 'tools.timer.pause': return 'Pause';
+			case 'tools.timer.please_stop_the_timer_first': return 'Please stop the timer first';
 			case 'tools.timer.ios_warning_message': return 'For the timer to ring on iOS, you must not quit the application or switch off your iPhone screen. Otherwise iOS will prevent the timer from ringing when it reaches zero.';
 			case 'tools.stopwatch.title': return 'Stopwatch';
 			case 'tools.stopwatch.start': return 'Start';
@@ -3700,6 +3706,8 @@ extension on _StringsFr {
 			case 'tools.timer.title': return 'Minuteur';
 			case 'tools.timer.start': return 'Démarrer';
 			case 'tools.timer.stop': return 'Arrêter';
+			case 'tools.timer.pause': return 'Pause';
+			case 'tools.timer.please_stop_the_timer_first': return 'Veuillez d\'abord arrêter le minuteur';
 			case 'tools.timer.ios_warning_message': return 'Pour que le minuteur sonne sur iOS, vous ne devez pas quitter l\'application ni éteindre l\'écran de votre iPhone. Sinon, iOS empêchera le minuteur de sonner lorsqu\'il atteindra zéro.';
 			case 'tools.stopwatch.title': return 'Chronomètre';
 			case 'tools.stopwatch.start': return 'Go';

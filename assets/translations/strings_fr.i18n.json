@@ -119,6 +119,8 @@
       "title": "Minuteur",
       "start": "Démarrer",
       "stop": "Arrêter",
+      "pause": "Pause",
+      "please_stop_the_timer_first": "Veuillez d'abord arrêter le minuteur",
       "ios_warning_message": "Pour que le minuteur sonne sur iOS, vous ne devez pas quitter l'application ni éteindre l'écran de votre iPhone. Sinon, iOS empêchera le minuteur de sonner lorsqu'il atteindra zéro."
     },
     "stopwatch": {

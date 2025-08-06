@@ -22,6 +22,8 @@ class _TimerPage extends State<TimerPage> {
   final CountdownController controller = CountdownController(autoStart: false);
   int _seconds = 60;
   bool isCounting = false;
+  bool isPaused = false;
+  bool isFinished = false;
 
   @override
   Future<void> dispose() async {
@@ -41,7 +43,7 @@ class _TimerPage extends State<TimerPage> {
     if (_seconds == 0) {
       return;
     }
-    if (Platform.isIOS) {
+    if (Platform.isIOS && !isPaused) {
       showIosAlert();
     }
     if (!isCounting) {
@@ -49,6 +51,8 @@ class _TimerPage extends State<TimerPage> {
       controller.start();
       setState(() {
         isCounting = true;
+        isPaused = false;
+        isFinished = false;
       });
     }
   }
@@ -62,8 +66,27 @@ class _TimerPage extends State<TimerPage> {
     });
   }
 
+  void pauseTimer() {
+    if (isCounting) {
+      controller.pause();
+      setState(() {
+        isCounting = false;
+        isPaused = true;
+      });
+    }
+  }
+
   void addTime(int seconds) {
-    if (!isCounting && _seconds + seconds >= 0 && _seconds + seconds < 3600) {
+    if (isCounting || isPaused) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(t.tools.timer.please_stop_the_timer_first),
+          duration: const Duration(seconds: 2),
+        ),
+      );
+      return;
+    }
+    if (_seconds + seconds >= 0 && _seconds + seconds < 3600) {
       setState(() {
         _seconds += seconds;
       });
@@ -72,6 +95,9 @@ class _TimerPage extends State<TimerPage> {
 
   void onFinish() {
     controller.pause();
+    setState(() {
+      isFinished = true;
+    });
     playAlarm();
     startVibration();
   }
@@ -204,17 +230,37 @@ class _TimerPage extends State<TimerPage> {
                         width: double.infinity,
                         child: Padding(
                           padding: const EdgeInsets.all(4.0),
-                          child: FilledButton(
-                              onPressed: () {
-                                if (isCounting) {
-                                  stopTimer();
-                                  return;
-                                }
-                                startTimer();
-                              },
-                              child: Text(
-                                  isCounting ? t.tools.timer.stop : t.tools
-                                      .timer.start)
+                          child: Row(
+                            children: [
+                              if (isCounting && !isFinished) ...[
+                              Expanded(
+                                child: FilledButton(
+                                    onPressed: () {
+                                      pauseTimer();
+                                    },
+                                    child: Text(t.tools.timer.pause)
+                                ),
+                              ),
+                              const SizedBox(width: 8),
+                              ] else
+                                const SizedBox(width: 0),
+                              Expanded(
+                                child: FilledButton(
+                                    onPressed: () {
+                                      if (isCounting) {
+                                        stopTimer();
+                                        return;
+                                      }
+                                      startTimer();
+                                    },
+                                    child: Text(
+                                        isCounting
+                                            ? t.tools.timer.stop
+                                            : t.tools.timer.start
+                                    )
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
