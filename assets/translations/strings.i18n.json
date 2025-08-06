@@ -386,6 +386,7 @@
       "about_the_api_description": "This tool uses the \"$source\" from \"$website\" to ping Minecraft servers.",
       "about_open": "Open",
       "the_server_id_is": "The server ID is \"$id\"",
+      "x_y_players_online": "$playersOnline/$playersMax player(s) online",
       "added_to_favorites": "Added to favorites",
       "added_to_favorites_description": "The server has been added to your favorites.",
       "removed_from_favorites": "Removed from favorites",
@@ -396,6 +397,8 @@
       "pick_from_favorites": "Pick from favorites",
       "no_favorites": "No favorites",
       "no_favorites_description": "You don't have any favorite servers yet.",
+      "online_players": "Online players",
+      "online_players_description_no_players_to_show": "The server has online players, but no player names are available to show",
       "error": {
         "please_enter_a_server_ip": "Please enter a server IP or domain",
         "server_offline_or_does_not_exist": "The server is offline or does not exist",

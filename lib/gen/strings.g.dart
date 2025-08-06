@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 1088 (544 per locale)
+/// Strings: 1094 (547 per locale)
 ///
-/// Built on 2025-08-02 at 10:46 UTC
+/// Built on 2025-08-06 at 14:58 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -769,6 +769,7 @@ class _StringsToolsMcServerPingEn {
 	String about_the_api_description({required Object source, required Object website}) => 'This tool uses the "${source}" from "${website}" to ping Minecraft servers.';
 	String get about_open => 'Open';
 	String the_server_id_is({required Object id}) => 'The server ID is "${id}"';
+	String x_y_players_online({required Object playersOnline, required Object playersMax}) => '${playersOnline}/${playersMax} player(s) online';
 	String get added_to_favorites => 'Added to favorites';
 	String get added_to_favorites_description => 'The server has been added to your favorites.';
 	String get removed_from_favorites => 'Removed from favorites';
@@ -779,6 +780,8 @@ class _StringsToolsMcServerPingEn {
 	String get pick_from_favorites => 'Pick from favorites';
 	String get no_favorites => 'No favorites';
 	String get no_favorites_description => 'You don\'t have any favorite servers yet.';
+	String get online_players => 'Online players';
+	String get online_players_description_no_players_to_show => 'The server has online players, but no player names are available to show';
 	late final _StringsToolsMcServerPingErrorEn error = _StringsToolsMcServerPingErrorEn._(_root);
 }
 
@@ -2229,6 +2232,7 @@ class _StringsToolsMcServerPingFr implements _StringsToolsMcServerPingEn {
 	@override String about_the_api_description({required Object source, required Object website}) => 'Cet outil utilise "${source}" du site "${website}" pour ping les serveurs Minecraft.';
 	@override String get about_open => 'Ouvrir';
 	@override String the_server_id_is({required Object id}) => 'L\'ID du serveur est "${id}"';
+	@override String x_y_players_online({required Object playersOnline, required Object playersMax}) => '${playersOnline}/${playersMax} joueur(s) en ligne';
 	@override String get added_to_favorites => 'Ajouté aux favoris';
 	@override String get added_to_favorites_description => 'Le serveur a été ajouté aux favoris.';
 	@override String get removed_from_favorites => 'Retiré des favoris';
@@ -2239,6 +2243,8 @@ class _StringsToolsMcServerPingFr implements _StringsToolsMcServerPingEn {
 	@override String get pick_from_favorites => 'Choisir depuis les favoris';
 	@override String get no_favorites => 'Aucun favori';
 	@override String get no_favorites_description => 'Vous n\'avez pas encore ajouté de serveurs aux favoris.';
+	@override String get online_players => 'Joueur(s) en ligne';
+	@override String get online_players_description_no_players_to_show => 'Le serveur a des joueurs en ligne, mais aucun nom de joueur n\'est visible';
 	@override late final _StringsToolsMcServerPingErrorFr error = _StringsToolsMcServerPingErrorFr._(_root);
 }
 
@@ -3337,6 +3343,7 @@ extension on Translations {
 			case 'tools.mc_server_ping.about_the_api_description': return ({required Object source, required Object website}) => 'This tool uses the "${source}" from "${website}" to ping Minecraft servers.';
 			case 'tools.mc_server_ping.about_open': return 'Open';
 			case 'tools.mc_server_ping.the_server_id_is': return ({required Object id}) => 'The server ID is "${id}"';
+			case 'tools.mc_server_ping.x_y_players_online': return ({required Object playersOnline, required Object playersMax}) => '${playersOnline}/${playersMax} player(s) online';
 			case 'tools.mc_server_ping.added_to_favorites': return 'Added to favorites';
 			case 'tools.mc_server_ping.added_to_favorites_description': return 'The server has been added to your favorites.';
 			case 'tools.mc_server_ping.removed_from_favorites': return 'Removed from favorites';
@@ -3347,6 +3354,8 @@ extension on Translations {
 			case 'tools.mc_server_ping.pick_from_favorites': return 'Pick from favorites';
 			case 'tools.mc_server_ping.no_favorites': return 'No favorites';
 			case 'tools.mc_server_ping.no_favorites_description': return 'You don\'t have any favorite servers yet.';
+			case 'tools.mc_server_ping.online_players': return 'Online players';
+			case 'tools.mc_server_ping.online_players_description_no_players_to_show': return 'The server has online players, but no player names are available to show';
 			case 'tools.mc_server_ping.error.please_enter_a_server_ip': return 'Please enter a server IP or domain';
 			case 'tools.mc_server_ping.error.server_offline_or_does_not_exist': return 'The server is offline or does not exist';
 			case 'tools.mc_server_ping.error.please_check_your_internet_connection': return 'Please check your internet connection and try again';
@@ -3889,6 +3898,7 @@ extension on _StringsFr {
 			case 'tools.mc_server_ping.about_the_api_description': return ({required Object source, required Object website}) => 'Cet outil utilise "${source}" du site "${website}" pour ping les serveurs Minecraft.';
 			case 'tools.mc_server_ping.about_open': return 'Ouvrir';
 			case 'tools.mc_server_ping.the_server_id_is': return ({required Object id}) => 'L\'ID du serveur est "${id}"';
+			case 'tools.mc_server_ping.x_y_players_online': return ({required Object playersOnline, required Object playersMax}) => '${playersOnline}/${playersMax} joueur(s) en ligne';
 			case 'tools.mc_server_ping.added_to_favorites': return 'Ajouté aux favoris';
 			case 'tools.mc_server_ping.added_to_favorites_description': return 'Le serveur a été ajouté aux favoris.';
 			case 'tools.mc_server_ping.removed_from_favorites': return 'Retiré des favoris';
@@ -3899,6 +3909,8 @@ extension on _StringsFr {
 			case 'tools.mc_server_ping.pick_from_favorites': return 'Choisir depuis les favoris';
 			case 'tools.mc_server_ping.no_favorites': return 'Aucun favori';
 			case 'tools.mc_server_ping.no_favorites_description': return 'Vous n\'avez pas encore ajouté de serveurs aux favoris.';
+			case 'tools.mc_server_ping.online_players': return 'Joueur(s) en ligne';
+			case 'tools.mc_server_ping.online_players_description_no_players_to_show': return 'Le serveur a des joueurs en ligne, mais aucun nom de joueur n\'est visible';
 			case 'tools.mc_server_ping.error.please_enter_a_server_ip': return 'Veuillez entrer une adresse IP ou un nom de domaine valide';
 			case 'tools.mc_server_ping.error.server_offline_or_does_not_exist': return 'Le serveur est hors ligne ou n\'existe pas';
 			case 'tools.mc_server_ping.error.please_check_your_internet_connection': return 'Veuillez vérifier votre connexion internet et réessayer';

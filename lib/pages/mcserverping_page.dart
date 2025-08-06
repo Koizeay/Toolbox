@@ -37,6 +37,9 @@ class _McServerPing extends State<McServerPingPage> {
   String? serverSoftware;
   String? serverId;
   String? serverIconUrl;
+  int? serverPlayersOnline;
+  int? serverPlayersMax;
+  List<String> serverPlayersNameList = [];
 
   List<String> favoriteServers = [];
 
@@ -92,6 +95,19 @@ class _McServerPing extends State<McServerPingPage> {
           serverSoftware = jsonResponse["software"];
           serverId = jsonResponse["serverid"];
           serverIconUrl = apiIconEndpoint + ipInput.toString();
+          try {
+            serverPlayersOnline = jsonResponse["players"]["online"];
+            serverPlayersMax = jsonResponse["players"]["max"];
+          } catch (e) {
+            serverPlayersOnline = null;
+            serverPlayersMax = null;
+          }
+          serverPlayersNameList = [];
+          if (jsonResponse["players"]["list"] != null) {
+            jsonResponse["players"]["list"].forEach((element) {
+              serverPlayersNameList.add(element["name"].toString());
+            });
+          }
           if (mounted) {
             setState(() {});
           }
@@ -266,6 +282,32 @@ class _McServerPing extends State<McServerPingPage> {
                       Text("$serverSoftware", style: const TextStyle(fontSize: 12)),
                     if (serverId != null)
                       Text(t.tools.mc_server_ping.the_server_id_is(id: serverId ?? ""), style: const TextStyle(fontSize: 14)),
+                    if (serverPlayersOnline != null && serverPlayersMax != null)
+                      Row(
+                        children: [
+                          Text(
+                            t.tools.mc_server_ping.x_y_players_online(playersOnline: serverPlayersOnline.toString(), playersMax: serverPlayersMax.toString()),
+                            style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: ((serverPlayersOnline ?? 0) > 0) ? Colors.green : Colors.deepOrange),
+                          ),
+                          const SizedBox(width: 4),
+                          if (serverPlayersOnline != null && serverPlayersOnline! > 0)
+                            GestureDetector(
+                              onTap: () {
+                                if (serverPlayersOnline == null || serverPlayersOnline == 0) {
+                                  return;
+                                }
+                                showOkTextDialog(
+                                    context,
+                                    t.tools.mc_server_ping.online_players,
+                                    serverPlayersNameList.isNotEmpty
+                                        ? serverPlayersNameList.join(", ")
+                                        : t.tools.mc_server_ping.online_players_description_no_players_to_show
+                                );
+                              },
+                              child: const Text(" [?]", style: TextStyle(fontSize: 10)),
+                            )
+                        ],
+                      ),
                     const SizedBox(height: 8),
                     if (serverMotd != null)
                       Text("$serverMotd", style: const TextStyle(fontSize: 14, color: Colors.grey)),
