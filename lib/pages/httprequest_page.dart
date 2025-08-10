@@ -1,7 +1,7 @@
 
 import 'dart:async';
 import 'dart:convert';
-import 'dart:io';
+import 'dart:io' as io;
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -17,8 +17,9 @@ class HttpRequestPage extends StatefulWidget {
 class _HttpRequestPage extends State<HttpRequestPage> {
   bool isLoading = false;
   bool renderHtml = false;
-  bool htmlWebViewLoaded = Platform.isAndroid;
+  bool htmlWebViewLoaded = io.Platform.isAndroid;
 
+  bool allowBadCertificates = false;
   TextEditingController methodController = TextEditingController();
   TextEditingController urlController = TextEditingController();
   TextEditingController bodyController = TextEditingController();
@@ -54,7 +55,7 @@ class _HttpRequestPage extends State<HttpRequestPage> {
   }
 
   void resetWebView() {
-    htmlWebViewLoaded = Platform.isAndroid;
+    htmlWebViewLoaded = io.Platform.isAndroid;
     webViewController.clearCache();
     webViewController.clearLocalStorage();
     webViewController.loadRequest(Uri.parse("about:blank"));
@@ -83,8 +84,12 @@ class _HttpRequestPage extends State<HttpRequestPage> {
 
   Future<HttpClientResponse> sendRequest(String method, Uri url, String body,
       Map<String, String> headers) async {
-    HttpClient client = HttpClient();
-    HttpClientRequest request = await client.openUrl(method, url);
+    io.HttpClient client = io.HttpClient();
+    if (allowBadCertificates) {
+      client.badCertificateCallback =
+          (io.X509Certificate cert, String host, int port) => true;
+    }
+    io.HttpClientRequest request = await client.openUrl(method, url);
 
     for (String key in headers.keys) {
       request.headers.set(key, headers[key] ?? "", preserveHeaderCase: true);
@@ -279,6 +284,50 @@ class _HttpRequestPage extends State<HttpRequestPage> {
     }
   }
 
+
+
+  void allowBadCertificatesChanged(bool shouldAllow) {
+    if (shouldAllow) {
+      showAllowBadCertificatesDialog();
+    } else {
+      setState(() {
+        allowBadCertificates = false;
+      });
+    }
+  }
+
+  void showAllowBadCertificatesDialog() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text(t.tools.httprequest.allow_bad_certificates),
+          content: Text(t.tools.httprequest.allow_bad_certificates_description),
+          actions: [
+            TextButton(
+              child: Text(t.tools.httprequest.i_know_what_i_am_doing),
+              onPressed: () {
+                setState(() {
+                  allowBadCertificates = true;
+                });
+                Navigator.of(context).pop();
+              },
+            ),
+            TextButton(
+              child: Text(t.generic.cancel),
+              onPressed: () {
+                setState(() {
+                  allowBadCertificates = false;
+                });
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -397,6 +446,26 @@ class _HttpRequestPage extends State<HttpRequestPage> {
                               border: const OutlineInputBorder(),
                               labelText: t.tools.httprequest.body,
                               hintText: "\n"
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(4.0),
+                        child: GestureDetector(
+                          onTap: () {
+                            allowBadCertificatesChanged(!allowBadCertificates);
+                          },
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Checkbox(
+                                value: allowBadCertificates,
+                                onChanged: (bool? value) {
+                                  allowBadCertificatesChanged(value ?? false);
+                                },
+                              ),
+                              Text(t.tools.httprequest.allow_bad_certificates),
+                            ],
                           ),
                         ),
                       ),

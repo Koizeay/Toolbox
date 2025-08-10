@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 1100 (550 per locale)
+/// Strings: 1106 (553 per locale)
 ///
-/// Built on 2025-08-06 at 16:06 UTC
+/// Built on 2025-08-10 at 15:40 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -676,6 +676,9 @@ class _StringsToolsHttprequestEn {
 	String get url => 'URL';
 	String get headers => 'Headers';
 	String get body => 'Body';
+	String get allow_bad_certificates => 'Allow bad certificates';
+	String get allow_bad_certificates_description => 'Enabling this option allows the "HTTP request" tool to send HTTPS requests to servers with invalid, expired or self-signed SSL/TLS certificates. This disables important security controls and may expose your data to interception or tampering by third parties. Only use this function if you fully understand the risks involved, and only when sending requests to servers you trust and control. It is not recommended for general use. Please consider requests made with this option enabled as unencrypted requests (such as HTTP) that can be manipulated and viewed by third parties.';
+	String get i_know_what_i_am_doing => 'I know what I\'m doing';
 	String get render_html => 'Render HTML';
 	String get back_to_details => 'Back to details';
 	String get send_request => 'Send request';
@@ -2142,6 +2145,9 @@ class _StringsToolsHttprequestFr implements _StringsToolsHttprequestEn {
 	@override String get url => 'URL';
 	@override String get headers => 'En-têtes (headers)';
 	@override String get body => 'Corps (body)';
+	@override String get allow_bad_certificates => 'Autoriser les certificats non valides';
+	@override String get allow_bad_certificates_description => 'L\'activation de cette option permet à l\'outil "Requête HTTP" d\'envoyer des requêtes HTTPS à des serveurs disposant de certificats SSL/TLS invalides, expirés ou auto-signés. Cela désactive d\'importants contrôles de sécurité et peut exposer vos données à l\'interception ou à la falsification par des tiers. N\'utilisez cette fonction que si vous comprenez parfaitement les risques encourus, et uniquement lorsque vous envoyez des requêtes à des serveurs que vous contrôlez et en lesquels vous avez confiance. Son utilisation générale n\'est pas recommandée. Veuillez considérer les requêtes effectuées avec cette option activée comme des requêtes non chiffrées (telles que HTTP) pouvant être manipulées et consultées par des tiers.';
+	@override String get i_know_what_i_am_doing => 'Je sais ce que je fais';
 	@override String get send_request => 'Envoyer la requête';
 	@override String get response => 'Réponse';
 	@override String get render_html => 'Rendre le HTML';
@@ -3291,6 +3297,9 @@ extension on Translations {
 			case 'tools.httprequest.url': return 'URL';
 			case 'tools.httprequest.headers': return 'Headers';
 			case 'tools.httprequest.body': return 'Body';
+			case 'tools.httprequest.allow_bad_certificates': return 'Allow bad certificates';
+			case 'tools.httprequest.allow_bad_certificates_description': return 'Enabling this option allows the "HTTP request" tool to send HTTPS requests to servers with invalid, expired or self-signed SSL/TLS certificates. This disables important security controls and may expose your data to interception or tampering by third parties. Only use this function if you fully understand the risks involved, and only when sending requests to servers you trust and control. It is not recommended for general use. Please consider requests made with this option enabled as unencrypted requests (such as HTTP) that can be manipulated and viewed by third parties.';
+			case 'tools.httprequest.i_know_what_i_am_doing': return 'I know what I\'m doing';
 			case 'tools.httprequest.render_html': return 'Render HTML';
 			case 'tools.httprequest.back_to_details': return 'Back to details';
 			case 'tools.httprequest.send_request': return 'Send request';
@@ -3849,6 +3858,9 @@ extension on _StringsFr {
 			case 'tools.httprequest.url': return 'URL';
 			case 'tools.httprequest.headers': return 'En-têtes (headers)';
 			case 'tools.httprequest.body': return 'Corps (body)';
+			case 'tools.httprequest.allow_bad_certificates': return 'Autoriser les certificats non valides';
+			case 'tools.httprequest.allow_bad_certificates_description': return 'L\'activation de cette option permet à l\'outil "Requête HTTP" d\'envoyer des requêtes HTTPS à des serveurs disposant de certificats SSL/TLS invalides, expirés ou auto-signés. Cela désactive d\'importants contrôles de sécurité et peut exposer vos données à l\'interception ou à la falsification par des tiers. N\'utilisez cette fonction que si vous comprenez parfaitement les risques encourus, et uniquement lorsque vous envoyez des requêtes à des serveurs que vous contrôlez et en lesquels vous avez confiance. Son utilisation générale n\'est pas recommandée. Veuillez considérer les requêtes effectuées avec cette option activée comme des requêtes non chiffrées (telles que HTTP) pouvant être manipulées et consultées par des tiers.';
+			case 'tools.httprequest.i_know_what_i_am_doing': return 'Je sais ce que je fais';
 			case 'tools.httprequest.send_request': return 'Envoyer la requête';
 			case 'tools.httprequest.response': return 'Réponse';
 			case 'tools.httprequest.render_html': return 'Rendre le HTML';
