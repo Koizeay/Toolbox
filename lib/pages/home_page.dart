@@ -29,6 +29,7 @@ class _HomePage extends State<HomePage> {
   List<dynamic> hierarchy = [];
   List<dynamic> hierarchyFiltered = [];
   List<String> favoriteTools = [];
+  TextEditingController searchController = TextEditingController();
   String searchQuery = "";
 
   @override
@@ -241,6 +242,7 @@ class _HomePage extends State<HomePage> {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: TextField(
+                        controller: searchController,
                         onChanged: (value) {
                           setState(() {
                             searchQuery = value;
@@ -252,6 +254,19 @@ class _HomePage extends State<HomePage> {
                               ? t.homepage.search_all_folders
                               : t.generic.search,
                           prefixIcon: const Icon(Icons.search),
+                          suffixIcon: searchQuery.isNotEmpty
+                              ? IconButton(
+                                  tooltip: t.homepage.clear_search,
+                                  icon: const Icon(Icons.clear),
+                                  onPressed: () {
+                                    setState(() {
+                                      searchQuery = "";
+                                      searchController.clear();
+                                      filterSearchResults();
+                                    });
+                                  },
+                                )
+                              : null,
                           border: const OutlineInputBorder(),
                         ),
                       ),

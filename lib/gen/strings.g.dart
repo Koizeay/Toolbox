@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 1106 (553 per locale)
+/// Strings: 1108 (554 per locale)
 ///
-/// Built on 2025-08-10 at 15:40 UTC
+/// Built on 2025-08-10 at 15:48 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -185,6 +185,7 @@ class _StringsHomepageEn {
 	String get update_available_message => 'A new version of Toolbox is available. Update it now to get the latest features and improvements.';
 	String get switch_view => 'Switch view';
 	String get search_all_folders => 'Search in all folders';
+	String get clear_search => 'Clear search';
 	String get add => 'Add';
 	String get remove => 'Remove';
 	String get favorites => 'Favorites';
@@ -1654,6 +1655,7 @@ class _StringsHomepageFr implements _StringsHomepageEn {
 	@override String get update_available_message => 'Une nouvelle version de Toolbox est disponible. Mettez à jour dès maintenant pour bénéficier des dernières fonctionnalités et améliorations.';
 	@override String get switch_view => 'Changer de vue';
 	@override String get search_all_folders => 'Rechercher dans tous les dossiers';
+	@override String get clear_search => 'Effacer la recherche';
 	@override String get add => 'Ajouter';
 	@override String get remove => 'Supprimer';
 	@override String get favorites => 'Favoris';
@@ -3082,6 +3084,7 @@ extension on Translations {
 			case 'homepage.update_available_message': return 'A new version of Toolbox is available. Update it now to get the latest features and improvements.';
 			case 'homepage.switch_view': return 'Switch view';
 			case 'homepage.search_all_folders': return 'Search in all folders';
+			case 'homepage.clear_search': return 'Clear search';
 			case 'homepage.add': return 'Add';
 			case 'homepage.remove': return 'Remove';
 			case 'homepage.favorites': return 'Favorites';
@@ -3643,6 +3646,7 @@ extension on _StringsFr {
 			case 'homepage.update_available_message': return 'Une nouvelle version de Toolbox est disponible. Mettez à jour dès maintenant pour bénéficier des dernières fonctionnalités et améliorations.';
 			case 'homepage.switch_view': return 'Changer de vue';
 			case 'homepage.search_all_folders': return 'Rechercher dans tous les dossiers';
+			case 'homepage.clear_search': return 'Effacer la recherche';
 			case 'homepage.add': return 'Ajouter';
 			case 'homepage.remove': return 'Supprimer';
 			case 'homepage.favorites': return 'Favoris';
