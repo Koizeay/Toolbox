@@ -4,10 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart';
 import 'package:share_plus/share_plus.dart';
+import 'package:toolbox/core/colors.dart';
 import 'package:toolbox/core/dialogs.dart';
 import 'package:toolbox/core/http_requests.dart';
 import 'package:toolbox/core/url.dart';
 import 'package:toolbox/gen/strings.g.dart';
+import 'package:toolbox/models/urlshortener_result.dart';
 
 class UrlShortenerPage extends StatefulWidget {
   const UrlShortenerPage({super.key});
@@ -23,9 +25,9 @@ class _UrlShortenerPage extends State<UrlShortenerPage> {
   String serverUrl = "https://jtu.me";
   String serverShortenApiEndpoint = "/_/api/shorten";
   String serverTosEndpoint = "/_/tos";
+  String serverStatisticsEndpoint = "/_/statistics";
 
-  String? shortUrl;
-  String? qrBase64;
+  UrlShortenerResult? result;
 
   TextEditingController urlController = TextEditingController();
 
@@ -62,11 +64,14 @@ class _UrlShortenerPage extends State<UrlShortenerPage> {
     });
     if (response.statusCode == 200) {
       var json = jsonDecode(response.body);
-      shortUrl = json["short_url"];
-      qrBase64 = json["qr_base64"];
+      result = UrlShortenerResult(
+        shortUrl: json["short_url"] ?? "",
+        qrBase64: json["qr_base64"] ?? "",
+        shortPath: json["short_path"] ?? "",
+        managementPassword: json["management_password"] ?? "",
+      );
     } else {
-      shortUrl = null;
-      qrBase64 = null;
+      result = null;
       if (mounted) {
         showOkTextDialog(
           context,
@@ -136,6 +141,30 @@ class _UrlShortenerPage extends State<UrlShortenerPage> {
     );
   }
 
+  void showViewStatisticsDialog(BuildContext context) {
+    List<TextButton> actions = [
+      TextButton(
+        onPressed: () {
+          Navigator.pop(context);
+        },
+        child: Text(t.generic.cancel),
+      ),
+      TextButton(
+        onPressed: () {
+          launchUrlInBrowser("$serverUrl$serverStatisticsEndpoint");
+          Navigator.pop(context);
+        },
+        child: Text(t.tools.pastebin.open),
+      ),
+    ];
+    showCustomButtonsTextDialog(
+        context,
+        t.tools.pastebin.view_statistics_of_a_link,
+        t.tools.pastebin.view_statistics_of_a_link_message,
+        actions
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -153,7 +182,7 @@ class _UrlShortenerPage extends State<UrlShortenerPage> {
                     child: CircularProgressIndicator(),
                   )
                 : isServerAvailable
-                    ? shortUrl != null && qrBase64 != null
+                    ? result != null
                         ? Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: SingleChildScrollView(
@@ -163,27 +192,26 @@ class _UrlShortenerPage extends State<UrlShortenerPage> {
                                   Column(
                                     children: [
                                       Text(
-                                          t.tools.urlshortener
-                                              .your_shortened_url_is,
+                                          t.tools.urlshortener.your_shortened_url_is,
                                           style: const TextStyle(
                                               fontSize: 20,
-                                              fontWeight: FontWeight.bold)),
-                                      Text(shortUrl ?? "",
-                                          style: const TextStyle(
-                                              fontStyle: FontStyle.italic)),
+                                              fontWeight: FontWeight.bold)
+                                      ),
+                                      Text(
+                                          result?.shortUrl ?? "",
+                                          style: const TextStyle(fontStyle: FontStyle.italic)
+                                      ),
                                       Image.memory(
-                                        base64Decode(qrBase64 ?? ""),
+                                        base64Decode(result?.qrBase64 ?? ""),
                                         width: 200,
                                         height: 200,
                                       ),
                                       Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
+                                        mainAxisAlignment: MainAxisAlignment.center,
                                         children: [
                                           IconButton(
                                               onPressed: () {
-                                                Clipboard.setData(ClipboardData(
-                                                    text: shortUrl ?? ""));
+                                                Clipboard.setData(ClipboardData(text: result?.shortUrl ?? ""));
                                               },
                                               icon: const Icon(Icons.copy),
                                               tooltip: t.tools.urlshortener
@@ -191,13 +219,99 @@ class _UrlShortenerPage extends State<UrlShortenerPage> {
                                           const SizedBox(width: 8),
                                           IconButton(
                                               onPressed: () {
-                                                showShareDialog(shortUrl ?? "",
-                                                    qrBase64 ?? "");
+                                                showShareDialog(
+                                                    result?.shortUrl ?? "",
+                                                    result?.qrBase64 ?? ""
+                                                );
                                               },
                                               icon: const Icon(Icons.share),
-                                              tooltip:
-                                                  t.tools.urlshortener.share),
+                                              tooltip: t.tools.urlshortener.share
+                                          ),
                                         ],
+                                      ),
+                                      const Padding(
+                                        padding: EdgeInsets.all(16.0),
+                                        child: Divider(),
+                                      ),
+                                      FittedBox(
+                                        fit: BoxFit.scaleDown,
+                                        child: Column(
+                                          children: [
+                                            Row(
+                                              mainAxisAlignment: MainAxisAlignment.center,
+                                              children: [
+                                                Text(
+                                                    t.tools.urlshortener.the_link_id_is,
+                                                    style: const TextStyle(fontStyle: FontStyle.italic, fontSize: 13)
+                                                ),
+                                                const SizedBox(width: 4),
+                                                GestureDetector(
+                                                  onTap: () {
+                                                    Clipboard.setData(ClipboardData(text: result?.shortPath ?? ""));
+                                                    ScaffoldMessenger.of(context).showSnackBar(
+                                                      SnackBar(
+                                                        content: Text(t.tools.urlshortener.link_id_copied_to_clipboard)
+                                                      ),
+                                                    );
+                                                  },
+                                                  child: ClipRRect(
+                                                    borderRadius: BorderRadius.circular(4),
+                                                    child: Container(
+                                                      padding: const EdgeInsets.symmetric(vertical: 2, horizontal: 4),
+                                                      color: CustomColors.getLightGreyOnSurface(context),
+                                                      child: Text(
+                                                          result?.shortPath ?? "",
+                                                          style: const TextStyle(fontStyle: FontStyle.italic, fontSize: 13)
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                            const SizedBox(height: 2),
+                                            Row(
+                                              mainAxisAlignment: MainAxisAlignment.center,
+                                              children: [
+                                                Text(
+                                                    t.tools.urlshortener.the_link_password_is,
+                                                    style: const TextStyle(fontStyle: FontStyle.italic, fontSize: 13)
+                                                ),
+                                                const SizedBox(width: 4),
+                                                GestureDetector(
+                                                  onTap: () {
+                                                    Clipboard.setData(ClipboardData(text: result?.managementPassword ?? ""));
+                                                    ScaffoldMessenger.of(context).showSnackBar(
+                                                      SnackBar(
+                                                        content: Text(t.tools.urlshortener.link_password_copied_to_clipboard)
+                                                      ),
+                                                    );
+                                                  },
+                                                  child: ClipRRect(
+                                                    borderRadius: BorderRadius.circular(4),
+                                                    child: Container(
+                                                      padding: const EdgeInsets.symmetric(vertical: 2, horizontal: 4),
+                                                      color: CustomColors.getLightGreyOnSurface(context),
+                                                      child: Text(
+                                                          result?.managementPassword ?? "",
+                                                          style: const TextStyle(fontStyle: FontStyle.italic, fontSize: 13)
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                            const SizedBox(height: 4),
+                                            Text(
+                                                t.tools.urlshortener.link_password_hint_text,
+                                                style: const TextStyle(fontStyle: FontStyle.italic, fontSize: 12),
+                                                textAlign: TextAlign.center
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      const Padding(
+                                        padding: EdgeInsets.all(16.0),
+                                        child: Divider(),
                                       ),
                                     ],
                                   ),
@@ -206,8 +320,7 @@ class _UrlShortenerPage extends State<UrlShortenerPage> {
                                     child: FilledButton(
                                       onPressed: () {
                                         setState(() {
-                                          shortUrl = null;
-                                          qrBase64 = null;
+                                          result = null;
                                           urlController.clear();
                                         });
                                       },
@@ -266,8 +379,7 @@ class _UrlShortenerPage extends State<UrlShortenerPage> {
                                             return;
                                           }
                                           setState(() {
-                                            shortUrl = null;
-                                            qrBase64 = null;
+                                            result = null;
                                             isLoading = true;
                                           });
                                           shortenUrl(urlController.text.trim())
@@ -284,10 +396,21 @@ class _UrlShortenerPage extends State<UrlShortenerPage> {
                                     ),
                                     TextButton(
                                       onPressed: () {
+                                        showViewStatisticsDialog(context);
+                                      },
+                                      child: Text(
+                                          t.tools.urlshortener.view_statistics_of_a_link,
+                                          style: const TextStyle(
+                                            fontSize: 13,
+                                          )
+                                      ),
+                                    ),
+                                    TextButton(
+                                      onPressed: () {
                                         showMoreFeaturesDialog(context);
                                       },
                                       child: Text(
-                                          t.tools.pastebin.more_features,
+                                          t.tools.urlshortener.more_features,
                                           style: const TextStyle(
                                             fontStyle: FontStyle.italic,
                                             fontSize: 12,

@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 1108 (554 per locale)
+/// Strings: 1136 (568 per locale)
 ///
-/// Built on 2025-08-10 at 15:48 UTC
+/// Built on 2025-09-20 at 11:10 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -826,11 +826,18 @@ class _StringsToolsUrlshortenerEn {
 	String get share_dialog_message => 'What do you want to share?';
 	String get your_shortened_url_is => 'Your shortened URL is';
 	String get copy_to_clipboard => 'Copy to clipboard';
+	String get the_link_id_is => 'The link ID is';
+	String get link_id_copied_to_clipboard => 'Link ID copied to clipboard';
+	String get the_link_password_is => 'The link password is';
+	String get link_password_copied_to_clipboard => 'Link password copied to clipboard';
+	String get link_password_hint_text => 'Tap the password to copy it\nYou will need it to view statistics about this link';
 	String get shorten_another_url => 'Shorten another URL';
 	String get url_to_shorten => 'URL to shorten';
 	String by_clicking_you_accept({required Object url}) => 'By clicking the shorten button, you agree to the terms of service of "${url}" available via the link below.';
 	String get terms_of_service => 'Terms of service';
 	String get shorten => 'Shorten';
+	String get view_statistics_of_a_link => 'View statistics of a link';
+	String get view_statistics_of_a_link_message => 'You can view the statistics of a link (total hits, creation date, last access date, etc.) on the statistics page from the JTU.ME website';
 	String get more_features => 'More features';
 	String get more_features_message => 'Use additional features such as text sharing, custom links, and more via the official JTU.ME website';
 	String get open => 'Open';
@@ -1081,12 +1088,19 @@ class _StringsToolsPastebinEn {
 	String get your_short_link_is => 'Your short link is';
 	String get copy_to_clipboard => 'Copy to clipboard';
 	String get copied_to_clipboard => 'Short link copied to clipboard';
+	String get the_link_id_is => 'The link ID is';
+	String get link_id_copied_to_clipboard => 'Link ID copied to clipboard';
+	String get the_link_password_is => 'The link password is';
+	String get link_password_copied_to_clipboard => 'Link password copied to clipboard';
+	String get link_password_hint_text => 'Tap the password to copy it\nYou will need it to view statistics about this link';
 	String get paste_another_text => 'Paste another text';
 	String get text_to_paste => 'Text to paste';
 	String get text_paste_field_hint => 'Paste your text, source code or other content here';
 	String by_clicking_you_accept({required Object url}) => 'By clicking the send button, you agree to the terms of service of "${url}" available via the link below.';
 	String get terms_of_service => 'Terms of service';
 	String get send => 'Send';
+	String get view_statistics_of_a_link => 'View statistics of a link';
+	String get view_statistics_of_a_link_message => 'You can view the statistics of a link (total hits, creation date, last access date, etc.) on the statistics page from the JTU.ME website';
 	String get more_features => 'More features';
 	String get more_features_message => 'Use additional features such as URL shortening, custom links, and more via the official JTU.ME website';
 	String get open => 'Open';
@@ -2296,11 +2310,18 @@ class _StringsToolsUrlshortenerFr implements _StringsToolsUrlshortenerEn {
 	@override String get share_dialog_message => 'Que souhaitez-vous partager ?';
 	@override String get your_shortened_url_is => 'Votre URL raccourcie est';
 	@override String get copy_to_clipboard => 'Copier dans le presse-papiers';
+	@override String get the_link_id_is => 'L\'ID du lien est';
+	@override String get link_id_copied_to_clipboard => 'ID du lien copié dans le presse-papiers';
+	@override String get the_link_password_is => 'Le mot de passe du lien est';
+	@override String get link_password_copied_to_clipboard => 'Mot de passe du lien copié dans le presse-papiers';
+	@override String get link_password_hint_text => 'Tapez le mot de passe pour le copier\nVous en aurez besoin pour voir les statistiques de ce lien';
 	@override String get shorten_another_url => 'Raccourcir une autre URL';
 	@override String get url_to_shorten => 'URL à raccourcir';
 	@override String by_clicking_you_accept({required Object url}) => 'En cliquant sur le bouton « raccourcir », vous acceptez les conditions d\'utilisation de "${url}" disponibles via le lien ci-dessous.';
 	@override String get terms_of_service => 'Conditions d\'utilisation (ToS)';
 	@override String get shorten => 'Raccourcir';
+	@override String get view_statistics_of_a_link => 'Voir les statistiques d\'un lien';
+	@override String get view_statistics_of_a_link_message => 'Vous pouvez consulter les statistiques d\'un lien (nombre total de visites, date de création, date de dernier accès, etc.) sur la page des statistiques de JTU.ME';
 	@override String get more_features => 'Plus de fonctionnalités';
 	@override String get more_features_message => 'Utiliser des fonctions supplémentaires telles que le partage de texte, des liens personnalisés, et plus via le site officiel JTU.ME';
 	@override String get open => 'Ouvrir';
@@ -2551,12 +2572,19 @@ class _StringsToolsPastebinFr implements _StringsToolsPastebinEn {
 	@override String get your_short_link_is => 'Votre lien court est';
 	@override String get copy_to_clipboard => 'Copier dans le presse-papiers';
 	@override String get copied_to_clipboard => 'Lien court copié dans le presse-papiers';
+	@override String get the_link_id_is => 'The link ID is';
+	@override String get link_id_copied_to_clipboard => 'Link ID copied to clipboard';
+	@override String get the_link_password_is => 'The link password is';
+	@override String get link_password_copied_to_clipboard => 'Link password copied to clipboard';
+	@override String get link_password_hint_text => 'Tap the password to copy it\nYou will need it to view statistics about this link';
 	@override String get paste_another_text => 'Coller un autre texte';
 	@override String get text_to_paste => 'Texte à coller';
 	@override String get text_paste_field_hint => 'Collez votre texte, code source ou autre contenu ici';
 	@override String by_clicking_you_accept({required Object url}) => 'En cliquant sur le bouton « envoyer », vous acceptez les conditions d\'utilisation de "${url}" disponibles via le lien ci-dessous.';
 	@override String get terms_of_service => 'Conditions d\'utilisation (ToS)';
 	@override String get send => 'Envoyer';
+	@override String get view_statistics_of_a_link => 'Voir les statistiques d\'un lien';
+	@override String get view_statistics_of_a_link_message => 'Vous pouvez consulter les statistiques d\'un lien (nombre total de visites, date de création, date de dernier accès, etc.) sur la page des statistiques de JTU.ME';
 	@override String get more_features => 'Plus de fonctionnalités';
 	@override String get more_features_message => 'Utiliser des fonctions supplémentaires telles que le raccourcissement d\'URL, des liens personnalisés, et plus via le site officiel JTU.ME';
 	@override String get open => 'Ouvrir';
@@ -3398,11 +3426,18 @@ extension on Translations {
 			case 'tools.urlshortener.share_dialog_message': return 'What do you want to share?';
 			case 'tools.urlshortener.your_shortened_url_is': return 'Your shortened URL is';
 			case 'tools.urlshortener.copy_to_clipboard': return 'Copy to clipboard';
+			case 'tools.urlshortener.the_link_id_is': return 'The link ID is';
+			case 'tools.urlshortener.link_id_copied_to_clipboard': return 'Link ID copied to clipboard';
+			case 'tools.urlshortener.the_link_password_is': return 'The link password is';
+			case 'tools.urlshortener.link_password_copied_to_clipboard': return 'Link password copied to clipboard';
+			case 'tools.urlshortener.link_password_hint_text': return 'Tap the password to copy it\nYou will need it to view statistics about this link';
 			case 'tools.urlshortener.shorten_another_url': return 'Shorten another URL';
 			case 'tools.urlshortener.url_to_shorten': return 'URL to shorten';
 			case 'tools.urlshortener.by_clicking_you_accept': return ({required Object url}) => 'By clicking the shorten button, you agree to the terms of service of "${url}" available via the link below.';
 			case 'tools.urlshortener.terms_of_service': return 'Terms of service';
 			case 'tools.urlshortener.shorten': return 'Shorten';
+			case 'tools.urlshortener.view_statistics_of_a_link': return 'View statistics of a link';
+			case 'tools.urlshortener.view_statistics_of_a_link_message': return 'You can view the statistics of a link (total hits, creation date, last access date, etc.) on the statistics page from the JTU.ME website';
 			case 'tools.urlshortener.more_features': return 'More features';
 			case 'tools.urlshortener.more_features_message': return 'Use additional features such as text sharing, custom links, and more via the official JTU.ME website';
 			case 'tools.urlshortener.open': return 'Open';
@@ -3571,12 +3606,19 @@ extension on Translations {
 			case 'tools.pastebin.your_short_link_is': return 'Your short link is';
 			case 'tools.pastebin.copy_to_clipboard': return 'Copy to clipboard';
 			case 'tools.pastebin.copied_to_clipboard': return 'Short link copied to clipboard';
+			case 'tools.pastebin.the_link_id_is': return 'The link ID is';
+			case 'tools.pastebin.link_id_copied_to_clipboard': return 'Link ID copied to clipboard';
+			case 'tools.pastebin.the_link_password_is': return 'The link password is';
+			case 'tools.pastebin.link_password_copied_to_clipboard': return 'Link password copied to clipboard';
+			case 'tools.pastebin.link_password_hint_text': return 'Tap the password to copy it\nYou will need it to view statistics about this link';
 			case 'tools.pastebin.paste_another_text': return 'Paste another text';
 			case 'tools.pastebin.text_to_paste': return 'Text to paste';
 			case 'tools.pastebin.text_paste_field_hint': return 'Paste your text, source code or other content here';
 			case 'tools.pastebin.by_clicking_you_accept': return ({required Object url}) => 'By clicking the send button, you agree to the terms of service of "${url}" available via the link below.';
 			case 'tools.pastebin.terms_of_service': return 'Terms of service';
 			case 'tools.pastebin.send': return 'Send';
+			case 'tools.pastebin.view_statistics_of_a_link': return 'View statistics of a link';
+			case 'tools.pastebin.view_statistics_of_a_link_message': return 'You can view the statistics of a link (total hits, creation date, last access date, etc.) on the statistics page from the JTU.ME website';
 			case 'tools.pastebin.more_features': return 'More features';
 			case 'tools.pastebin.more_features_message': return 'Use additional features such as URL shortening, custom links, and more via the official JTU.ME website';
 			case 'tools.pastebin.open': return 'Open';
@@ -3960,11 +4002,18 @@ extension on _StringsFr {
 			case 'tools.urlshortener.share_dialog_message': return 'Que souhaitez-vous partager ?';
 			case 'tools.urlshortener.your_shortened_url_is': return 'Votre URL raccourcie est';
 			case 'tools.urlshortener.copy_to_clipboard': return 'Copier dans le presse-papiers';
+			case 'tools.urlshortener.the_link_id_is': return 'L\'ID du lien est';
+			case 'tools.urlshortener.link_id_copied_to_clipboard': return 'ID du lien copié dans le presse-papiers';
+			case 'tools.urlshortener.the_link_password_is': return 'Le mot de passe du lien est';
+			case 'tools.urlshortener.link_password_copied_to_clipboard': return 'Mot de passe du lien copié dans le presse-papiers';
+			case 'tools.urlshortener.link_password_hint_text': return 'Tapez le mot de passe pour le copier\nVous en aurez besoin pour voir les statistiques de ce lien';
 			case 'tools.urlshortener.shorten_another_url': return 'Raccourcir une autre URL';
 			case 'tools.urlshortener.url_to_shorten': return 'URL à raccourcir';
 			case 'tools.urlshortener.by_clicking_you_accept': return ({required Object url}) => 'En cliquant sur le bouton « raccourcir », vous acceptez les conditions d\'utilisation de "${url}" disponibles via le lien ci-dessous.';
 			case 'tools.urlshortener.terms_of_service': return 'Conditions d\'utilisation (ToS)';
 			case 'tools.urlshortener.shorten': return 'Raccourcir';
+			case 'tools.urlshortener.view_statistics_of_a_link': return 'Voir les statistiques d\'un lien';
+			case 'tools.urlshortener.view_statistics_of_a_link_message': return 'Vous pouvez consulter les statistiques d\'un lien (nombre total de visites, date de création, date de dernier accès, etc.) sur la page des statistiques de JTU.ME';
 			case 'tools.urlshortener.more_features': return 'Plus de fonctionnalités';
 			case 'tools.urlshortener.more_features_message': return 'Utiliser des fonctions supplémentaires telles que le partage de texte, des liens personnalisés, et plus via le site officiel JTU.ME';
 			case 'tools.urlshortener.open': return 'Ouvrir';
@@ -4133,12 +4182,19 @@ extension on _StringsFr {
 			case 'tools.pastebin.your_short_link_is': return 'Votre lien court est';
 			case 'tools.pastebin.copy_to_clipboard': return 'Copier dans le presse-papiers';
 			case 'tools.pastebin.copied_to_clipboard': return 'Lien court copié dans le presse-papiers';
+			case 'tools.pastebin.the_link_id_is': return 'The link ID is';
+			case 'tools.pastebin.link_id_copied_to_clipboard': return 'Link ID copied to clipboard';
+			case 'tools.pastebin.the_link_password_is': return 'The link password is';
+			case 'tools.pastebin.link_password_copied_to_clipboard': return 'Link password copied to clipboard';
+			case 'tools.pastebin.link_password_hint_text': return 'Tap the password to copy it\nYou will need it to view statistics about this link';
 			case 'tools.pastebin.paste_another_text': return 'Coller un autre texte';
 			case 'tools.pastebin.text_to_paste': return 'Texte à coller';
 			case 'tools.pastebin.text_paste_field_hint': return 'Collez votre texte, code source ou autre contenu ici';
 			case 'tools.pastebin.by_clicking_you_accept': return ({required Object url}) => 'En cliquant sur le bouton « envoyer », vous acceptez les conditions d\'utilisation de "${url}" disponibles via le lien ci-dessous.';
 			case 'tools.pastebin.terms_of_service': return 'Conditions d\'utilisation (ToS)';
 			case 'tools.pastebin.send': return 'Envoyer';
+			case 'tools.pastebin.view_statistics_of_a_link': return 'Voir les statistiques d\'un lien';
+			case 'tools.pastebin.view_statistics_of_a_link_message': return 'Vous pouvez consulter les statistiques d\'un lien (nombre total de visites, date de création, date de dernier accès, etc.) sur la page des statistiques de JTU.ME';
 			case 'tools.pastebin.more_features': return 'Plus de fonctionnalités';
 			case 'tools.pastebin.more_features_message': return 'Utiliser des fonctions supplémentaires telles que le raccourcissement d\'URL, des liens personnalisés, et plus via le site officiel JTU.ME';
 			case 'tools.pastebin.open': return 'Ouvrir';

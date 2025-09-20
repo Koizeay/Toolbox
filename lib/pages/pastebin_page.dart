@@ -4,10 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart';
 import 'package:share_plus/share_plus.dart';
+import 'package:toolbox/core/colors.dart';
 import 'package:toolbox/core/dialogs.dart';
 import 'package:toolbox/core/http_requests.dart';
 import 'package:toolbox/core/url.dart';
 import 'package:toolbox/gen/strings.g.dart';
+import 'package:toolbox/models/pastebin_result.dart';
 
 class PastebinPage extends StatefulWidget {
   const PastebinPage({super.key});
@@ -25,9 +27,9 @@ class _PastebinPage extends State<PastebinPage> {
   String serverUrl = "https://jtu.me";
   String serverPasteApiEndpoint = "/_/api/paste";
   String serverTosEndpoint = "/_/tos";
+  String serverStatisticsEndpoint = "/_/statistics";
 
-  String? shortUrl;
-  String? qrBase64;
+  PastebinResult? result;
 
   TextEditingController textPasteController = TextEditingController();
 
@@ -64,11 +66,14 @@ class _PastebinPage extends State<PastebinPage> {
     });
     if (response.statusCode == 200) {
       var json = jsonDecode(response.body);
-      shortUrl = json["short_url"];
-      qrBase64 = json["qr_base64"];
+      result = PastebinResult(
+        shortUrl: json["short_url"] ?? "",
+        qrBase64: json["qr_base64"] ?? "",
+        shortPath: json["short_path"] ?? "",
+        managementPassword: json["management_password"] ?? "",
+      );
     } else {
-      shortUrl = null;
-      qrBase64 = null;
+      result = null;
       if (mounted) {
         showOkTextDialog(
           context,
@@ -145,6 +150,30 @@ class _PastebinPage extends State<PastebinPage> {
     );
   }
 
+  void showViewStatisticsDialog(BuildContext context) {
+    List<TextButton> actions = [
+      TextButton(
+        onPressed: () {
+          Navigator.pop(context);
+        },
+        child: Text(t.generic.cancel),
+      ),
+      TextButton(
+        onPressed: () {
+          launchUrlInBrowser("$serverUrl$serverStatisticsEndpoint");
+          Navigator.pop(context);
+        },
+        child: Text(t.tools.pastebin.open),
+      ),
+    ];
+    showCustomButtonsTextDialog(
+        context,
+        t.tools.pastebin.view_statistics_of_a_link,
+        t.tools.pastebin.view_statistics_of_a_link_message,
+        actions
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -162,7 +191,7 @@ class _PastebinPage extends State<PastebinPage> {
               child: CircularProgressIndicator(),
             )
                 : isServerAvailable
-                ? shortUrl != null && qrBase64 != null
+                ? result != null
                 ? Padding(
               padding: const EdgeInsets.all(8.0),
               child: SingleChildScrollView(
@@ -179,11 +208,11 @@ class _PastebinPage extends State<PastebinPage> {
                             )
                         ),
                         Text(
-                            shortUrl ?? "",
+                            result?.shortUrl ?? "",
                             style: const TextStyle(fontStyle: FontStyle.italic)
                         ),
                         Image.memory(
-                          base64Decode(qrBase64 ?? ""),
+                          base64Decode(result?.qrBase64 ?? ""),
                           width: 200,
                           height: 200,
                         ),
@@ -193,8 +222,7 @@ class _PastebinPage extends State<PastebinPage> {
                           children: [
                             IconButton(
                                 onPressed: () {
-                                  Clipboard.setData(ClipboardData(
-                                      text: shortUrl ?? "")
+                                  Clipboard.setData(ClipboardData(text: result?.shortUrl ?? "")
                                   );
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(
@@ -208,14 +236,97 @@ class _PastebinPage extends State<PastebinPage> {
                             const SizedBox(width: 8),
                             IconButton(
                                 onPressed: () {
-                                  showShareDialog(shortUrl ?? "",
-                                      qrBase64 ?? "");
+                                  showShareDialog(result?.shortUrl ?? "", result?.qrBase64 ?? "");
                                 },
                                 icon: const Icon(Icons.share),
                                 tooltip:
                                 t.tools.pastebin.share
                             ),
                           ],
+                        ),
+                        const Padding(
+                          padding: EdgeInsets.all(16.0),
+                          child: Divider(),
+                        ),
+                        FittedBox(
+                          fit: BoxFit.scaleDown,
+                          child: Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                      t.tools.pastebin.the_link_id_is,
+                                      style: const TextStyle(fontStyle: FontStyle.italic, fontSize: 13)
+                                  ),
+                                  const SizedBox(width: 4),
+                                  GestureDetector(
+                                    onTap: () {
+                                      Clipboard.setData(ClipboardData(text: result?.shortPath ?? ""));
+                                      ScaffoldMessenger.of(context).showSnackBar(
+                                        SnackBar(
+                                            content: Text(t.tools.pastebin.link_id_copied_to_clipboard)
+                                        ),
+                                      );
+                                    },
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(4),
+                                      child: Container(
+                                        padding: const EdgeInsets.symmetric(vertical: 2, horizontal: 4),
+                                        color: CustomColors.getLightGreyOnSurface(context),
+                                        child: Text(
+                                            result?.shortPath ?? "",
+                                            style: const TextStyle(fontStyle: FontStyle.italic, fontSize: 13)
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(height: 2),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                      t.tools.pastebin.the_link_password_is,
+                                      style: const TextStyle(fontStyle: FontStyle.italic, fontSize: 13)
+                                  ),
+                                  const SizedBox(width: 4),
+                                  GestureDetector(
+                                    onTap: () {
+                                      Clipboard.setData(ClipboardData(text: result?.managementPassword ?? ""));
+                                      ScaffoldMessenger.of(context).showSnackBar(
+                                        SnackBar(
+                                            content: Text(t.tools.pastebin.link_password_copied_to_clipboard)
+                                        ),
+                                      );
+                                    },
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(4),
+                                      child: Container(
+                                        padding: const EdgeInsets.symmetric(vertical: 2, horizontal: 4),
+                                        color: CustomColors.getLightGreyOnSurface(context),
+                                        child: Text(
+                                            result?.managementPassword ?? "",
+                                            style: const TextStyle(fontStyle: FontStyle.italic, fontSize: 13)
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(height: 4),
+                              Text(
+                                  t.tools.pastebin.link_password_hint_text,
+                                  style: const TextStyle(fontStyle: FontStyle.italic, fontSize: 12),
+                                  textAlign: TextAlign.center
+                              ),
+                            ],
+                          ),
+                        ),
+                        const Padding(
+                          padding: EdgeInsets.all(16.0),
+                          child: Divider(),
                         ),
                       ],
                     ),
@@ -224,8 +335,7 @@ class _PastebinPage extends State<PastebinPage> {
                       child: FilledButton(
                         onPressed: () {
                           setState(() {
-                            shortUrl = null;
-                            qrBase64 = null;
+                            result = null;
                             textPasteController.clear();
                           });
                         },
@@ -284,8 +394,7 @@ class _PastebinPage extends State<PastebinPage> {
                               return;
                             }
                             setState(() {
-                              shortUrl = null;
-                              qrBase64 = null;
+                              result = null;
                               isLoading = true;
                             });
                             sendText(textPasteController.text.trim())
@@ -298,6 +407,17 @@ class _PastebinPage extends State<PastebinPage> {
                             });
                           },
                           child: Text(t.tools.pastebin.send),
+                        ),
+                      ),
+                      TextButton(
+                        onPressed: () {
+                          showViewStatisticsDialog(context);
+                        },
+                        child: Text(
+                            t.tools.pastebin.view_statistics_of_a_link,
+                            style: const TextStyle(
+                              fontSize: 13,
+                            )
                         ),
                       ),
                       TextButton(
