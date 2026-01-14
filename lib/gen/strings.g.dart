@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 1136 (568 per locale)
+/// Strings: 1140 (570 per locale)
 ///
-/// Built on 2025-09-20 at 11:10 UTC
+/// Built on 2025-11-23 at 20:29 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -163,6 +163,8 @@ class _StringsGenericEn {
 
 	// Translations
 	String get app_name => 'Toolbox';
+	String get tools => 'Tools';
+	String get categories => 'Categories';
 	String get error => 'Error';
 	String get warning => 'Warning';
 	String get ok => 'OK';
@@ -1647,6 +1649,8 @@ class _StringsGenericFr implements _StringsGenericEn {
 
 	// Translations
 	@override String get app_name => 'Toolbox';
+	@override String get tools => 'Tools';
+	@override String get categories => 'Categories';
 	@override String get error => 'Erreur';
 	@override String get warning => 'Attention';
 	@override String get ok => 'OK';
@@ -3099,6 +3103,8 @@ extension on Translations {
 	dynamic _flatMapFunction(String path) {
 		switch (path) {
 			case 'generic.app_name': return 'Toolbox';
+			case 'generic.tools': return 'Tools';
+			case 'generic.categories': return 'Categories';
 			case 'generic.error': return 'Error';
 			case 'generic.warning': return 'Warning';
 			case 'generic.ok': return 'OK';
@@ -3675,6 +3681,8 @@ extension on _StringsFr {
 	dynamic _flatMapFunction(String path) {
 		switch (path) {
 			case 'generic.app_name': return 'Toolbox';
+			case 'generic.tools': return 'Tools';
+			case 'generic.categories': return 'Categories';
 			case 'generic.error': return 'Erreur';
 			case 'generic.warning': return 'Attention';
 			case 'generic.ok': return 'OK';

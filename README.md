@@ -43,12 +43,12 @@ Finally you can run the project on your device, on an emulator or on a simulator
 **Warning**, if you want to add a new tool, you need to have some knowledge in Flutter and Dart.\
 Be sure to respect the code style of the project (see below).\
 To add a new tool, please follow these steps:
-1. Create a new file in the `lib/pages` folder with the name of your tool finished by `_page.dart` (e.g. `my_tool_page.dart`). You can copy/paste the content of the `lib/pages/templates/tool_template_page.dart` file to start.
+1. Create a new file in the `lib/tools` folder with the name of your tool finished by `_page.dart` (e.g. `my_tool_page.dart`). You can copy/paste the content of the `lib/tools/templates/tool_template_page.dart` file to start.
 2. Code your tool in the new file, you can install packages if needed (via [pub.dev](https://pub.dev)).
 3. Add your tool to the `lib/hierarchy.dart` file by importing it and adding it to the `toolMap` map and in the correct folder (using the `hierarchy` list).
 
 ### Improve an existing tool
-If you want to improve an existing tool, you can do it by editing the corresponding file in the `lib/pages` folder.\
+If you want to improve an existing tool, you can do it by editing the corresponding file in the `lib/tools` folder.\
 Please respect the code style of the project (see below).
 
 ### Translate the app

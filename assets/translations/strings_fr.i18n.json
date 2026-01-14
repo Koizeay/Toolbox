@@ -1,6 +1,8 @@
 {
   "generic": {
     "app_name": "Toolbox",
+    "tools": "Tools",
+    "categories": "Categories",
     "error": "Erreur",
     "warning": "Attention",
     "ok": "OK",

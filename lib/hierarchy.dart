@@ -1,53 +1,54 @@
+import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:toolbox/core/shared_preferences.dart';
 import 'package:toolbox/models/home_folder.dart';
-import 'package:toolbox/pages/areacalculator_page.dart';
-import 'package:toolbox/pages/baseconverter_page.dart';
-import 'package:toolbox/pages/bitwisecalculator_page.dart';
-import 'package:toolbox/pages/characterscopy_page.dart';
-import 'package:toolbox/pages/clock_page.dart';
-import 'package:toolbox/pages/compass_page.dart';
-import 'package:toolbox/pages/counter_page.dart';
-import 'package:toolbox/pages/fileencryption_page.dart';
-import 'package:toolbox/pages/flipcoins_page.dart';
-import 'package:toolbox/pages/gameoflife_page.dart';
-import 'package:toolbox/pages/httprequest_page.dart';
-import 'package:toolbox/pages/mathtex_page.dart';
-import 'package:toolbox/pages/mcserverping_page.dart';
-import 'package:toolbox/pages/megaphone_page.dart';
-import 'package:toolbox/pages/metronome_page.dart';
-import 'package:toolbox/pages/morsecode_page.dart';
-import 'package:toolbox/pages/musicsearch_page.dart';
-import 'package:toolbox/pages/networkinfo_page.dart';
-import 'package:toolbox/pages/nationalanthems_page.dart';
-import 'package:toolbox/pages/nearbypublictransportstops_page.dart';
-import 'package:toolbox/pages/nslookup_page.dart';
-import 'package:toolbox/pages/osm_page.dart';
-import 'package:toolbox/pages/passwordgenerator_page.dart';
-import 'package:toolbox/pages/pastebin_page.dart';
-import 'package:toolbox/pages/percentagecalculator_page.dart';
-import 'package:toolbox/pages/ping_page.dart';
-import 'package:toolbox/pages/qrcreator_page.dart';
-import 'package:toolbox/pages/qrreader_page.dart';
-import 'package:toolbox/pages/randomcolor_page.dart';
-import 'package:toolbox/pages/randomnumber_page.dart';
-import 'package:toolbox/pages/romannumeral_page.dart';
-import 'package:toolbox/pages/roulette_page.dart';
-import 'package:toolbox/pages/sshclient_page.dart';
-import 'package:toolbox/pages/soundmeter_page.dart';
-import 'package:toolbox/pages/speedometer_page.dart';
-import 'package:toolbox/pages/stopwatch_page.dart';
-import 'package:toolbox/pages/musicanalyser_page.dart';
-import 'package:toolbox/pages/textcounter_page.dart';
-import 'package:toolbox/pages/textdifferences_page.dart';
-import 'package:toolbox/pages/texttospeech_page.dart';
-import 'package:toolbox/pages/timer_page.dart';
-import 'package:toolbox/pages/timestampconverter_page.dart';
-import 'package:toolbox/pages/urlshortener_page.dart';
-import 'package:toolbox/pages/uuidgenerator_page.dart';
-import 'package:toolbox/pages/whiteboard_page.dart';
-import 'package:toolbox/pages/whoisdomain_page.dart';
-import 'package:toolbox/pages/youtubethumbnail_page.dart';
+import 'package:toolbox/tools/areacalculator_page.dart';
+import 'package:toolbox/tools/baseconverter_page.dart';
+import 'package:toolbox/tools/bitwisecalculator_page.dart';
+import 'package:toolbox/tools/characterscopy_page.dart';
+import 'package:toolbox/tools/clock_page.dart';
+import 'package:toolbox/tools/compass_page.dart';
+import 'package:toolbox/tools/counter_page.dart';
+import 'package:toolbox/tools/fileencryption_page.dart';
+import 'package:toolbox/tools/flipcoins_page.dart';
+import 'package:toolbox/tools/gameoflife_page.dart';
+import 'package:toolbox/tools/httprequest_page.dart';
+import 'package:toolbox/tools/mathtex_page.dart';
+import 'package:toolbox/tools/mcserverping_page.dart';
+import 'package:toolbox/tools/megaphone_page.dart';
+import 'package:toolbox/tools/metronome_page.dart';
+import 'package:toolbox/tools/morsecode_page.dart';
+import 'package:toolbox/tools/musicsearch_page.dart';
+import 'package:toolbox/tools/networkinfo_page.dart';
+import 'package:toolbox/tools/nationalanthems_page.dart';
+import 'package:toolbox/tools/nearbypublictransportstops_page.dart';
+import 'package:toolbox/tools/nslookup_page.dart';
+import 'package:toolbox/tools/osm_page.dart';
+import 'package:toolbox/tools/passwordgenerator_page.dart';
+import 'package:toolbox/tools/pastebin_page.dart';
+import 'package:toolbox/tools/percentagecalculator_page.dart';
+import 'package:toolbox/tools/ping_page.dart';
+import 'package:toolbox/tools/qrcreator_page.dart';
+import 'package:toolbox/tools/qrreader_page.dart';
+import 'package:toolbox/tools/randomcolor_page.dart';
+import 'package:toolbox/tools/randomnumber_page.dart';
+import 'package:toolbox/tools/romannumeral_page.dart';
+import 'package:toolbox/tools/roulette_page.dart';
+import 'package:toolbox/tools/sshclient_page.dart';
+import 'package:toolbox/tools/soundmeter_page.dart';
+import 'package:toolbox/tools/speedometer_page.dart';
+import 'package:toolbox/tools/stopwatch_page.dart';
+import 'package:toolbox/tools/musicanalyser_page.dart';
+import 'package:toolbox/tools/textcounter_page.dart';
+import 'package:toolbox/tools/textdifferences_page.dart';
+import 'package:toolbox/tools/texttospeech_page.dart';
+import 'package:toolbox/tools/timer_page.dart';
+import 'package:toolbox/tools/timestampconverter_page.dart';
+import 'package:toolbox/tools/urlshortener_page.dart';
+import 'package:toolbox/tools/uuidgenerator_page.dart';
+import 'package:toolbox/tools/whiteboard_page.dart';
+import 'package:toolbox/tools/whoisdomain_page.dart';
+import 'package:toolbox/tools/youtubethumbnail_page.dart';
 
 import 'models/home_tool.dart';
 import 'package:toolbox/gen/strings.g.dart';
@@ -104,7 +105,7 @@ class Hierarchy {
   };
 
   static final List<dynamic> hierarchy = [
-    Folder(t.folders.audio, "assets/images/folders/folder.png", [
+    Folder(t.folders.audio, "assets/images/folders/audio.png", [
       toolMap["metronome"],
       toolMap["morsecode"],
       toolMap["musicanalyser"],
@@ -113,7 +114,7 @@ class Hierarchy {
       toolMap["soundmeter"],
       toolMap["texttospeech"],
     ]),
-    Folder(t.folders.calculations, "assets/images/folders/folder.png", [
+    Folder(t.folders.calculations, "assets/images/folders/calculations.png", [
       toolMap["areacalculator"],
       toolMap["baseconverter"],
       toolMap["bitwisecalculator"],
@@ -122,18 +123,18 @@ class Hierarchy {
       toolMap["romannumeral"],
       toolMap["textcounter"],
     ]),
-    Folder(t.folders.games, "assets/images/folders/folder.png", [
+    Folder(t.folders.games, "assets/images/folders/games.png", [
       toolMap["gameoflife"],
       toolMap["mcserverping"],
     ]),
-    Folder(t.folders.geography, "assets/images/folders/folder.png", [
+    Folder(t.folders.geography, "assets/images/folders/geography.png", [
       toolMap["compass"],
       toolMap["osm"],
       toolMap["nearbypublictransportstops"],
       toolMap["nationalanthems"],
       toolMap["speedometer"],
     ]),
-    Folder(t.folders.miscellaneous, "assets/images/folders/folder.png", [
+    Folder(t.folders.miscellaneous, "assets/images/folders/miscellaneous.png", [
       toolMap["characterscopy"],
       toolMap["counter"],
       toolMap["fileencryption"],
@@ -142,7 +143,7 @@ class Hierarchy {
       toolMap["textdifferences"],
       toolMap["whiteboard"],
     ]),
-    Folder(t.folders.network, "assets/images/folders/folder.png", [
+    Folder(t.folders.network, "assets/images/folders/network.png", [
       toolMap["httprequest"],
       toolMap["mcserverping"],
       toolMap["networkinfo"],
@@ -151,7 +152,7 @@ class Hierarchy {
       toolMap["sshclient"],
       toolMap["whoisdomain"],
     ]),
-    Folder(t.folders.random, "assets/images/folders/folder.png", [
+    Folder(t.folders.random, "assets/images/folders/random.png", [
       toolMap["flipcoins"],
       toolMap["passwordgenerator"],
       toolMap["randomcolor"],
@@ -159,13 +160,13 @@ class Hierarchy {
       toolMap["roulette"],
       toolMap["uuidgenerator"],
     ]),
-    Folder(t.folders.time, "assets/images/folders/folder.png", [
+    Folder(t.folders.time, "assets/images/folders/time.png", [
       toolMap["clock"],
       toolMap["stopwatch"],
       toolMap["timer"],
       toolMap["timestampconverter"],
     ]),
-    Folder(t.folders.web, "assets/images/folders/folder.png", [
+    Folder(t.folders.web, "assets/images/folders/web.png", [
       toolMap["pastebin"],
       toolMap["httprequest"],
       toolMap["urlshortener"],
