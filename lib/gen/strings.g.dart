@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 2
-/// Strings: 1140 (570 per locale)
+/// Strings: 1154 (577 per locale)
 ///
-/// Built on 2025-11-23 at 20:29 UTC
+/// Built on 2025-09-30 at 12:08 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -267,6 +267,7 @@ class _StringsToolsEn {
 	late final _StringsToolsPastebinEn pastebin = _StringsToolsPastebinEn._(_root);
 	late final _StringsToolsPercentagecalculatorEn percentagecalculator = _StringsToolsPercentagecalculatorEn._(_root);
 	late final _StringsToolsPasswordgeneratorEn passwordgenerator = _StringsToolsPasswordgeneratorEn._(_root);
+  late final _StringsToolsPortscannerEn portscanner = _StringsToolsPortscannerEn._(_root);
 }
 
 // Path: credits
@@ -1150,6 +1151,23 @@ class _StringsToolsPasswordgeneratorEn {
 	late final _StringsToolsPasswordgeneratorErrorEn error = _StringsToolsPasswordgeneratorErrorEn._(_root);
 }
 
+// Path: tools.portscanner
+class _StringsToolsPortscannerEn {
+  _StringsToolsPortscannerEn._(this._root);
+
+  final Translations _root; // ignore: unused_field
+
+  // Translations
+  String get title => 'Port scanner';
+  String get host_to_scan => 'Host to scan';
+  String get start_port => 'Start port';
+  String get end_port => 'End port';
+  String get start_scan => 'Start scan';
+  String get stop_scan => 'Stop scan';
+  String get port => 'Port';
+  late final _StringsToolsPortscannerErrorEn error = _StringsToolsPortscannerErrorEn._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsEn._(this._root);
@@ -1610,6 +1628,17 @@ class _StringsToolsPasswordgeneratorErrorEn {
 	String get password_length_cannot_be_less_than_the_sum_of_digits_and_special_characters => 'Password length cannot be less than the sum of digits and special characters';
 }
 
+// Path: tools.portscanner.error
+class _StringsToolsPortscannerErrorEn {
+  _StringsToolsPortscannerErrorEn._(this._root);
+
+  final Translations _root; // ignore: unused_field
+
+  // Translations
+  String get please_enter_a_valid_host => 'Please enter a valid host';
+  String get please_enter_a_valid_port_number => 'Please enter a valid port number (1-65535) for both fields';
+}
+
 // Path: <root>
 class _StringsFr implements Translations {
 	/// You can call this constructor and build your own translation instance of this locale.
@@ -1753,6 +1782,7 @@ class _StringsToolsFr implements _StringsToolsEn {
 	@override late final _StringsToolsPastebinFr pastebin = _StringsToolsPastebinFr._(_root);
 	@override late final _StringsToolsPercentagecalculatorFr percentagecalculator = _StringsToolsPercentagecalculatorFr._(_root);
 	@override late final _StringsToolsPasswordgeneratorFr passwordgenerator = _StringsToolsPasswordgeneratorFr._(_root);
+  @override late final _StringsToolsPortscannerFr portscanner = _StringsToolsPortscannerFr._(_root);
 }
 
 // Path: credits
@@ -2636,6 +2666,23 @@ class _StringsToolsPasswordgeneratorFr implements _StringsToolsPasswordgenerator
 	@override late final _StringsToolsPasswordgeneratorErrorFr error = _StringsToolsPasswordgeneratorErrorFr._(_root);
 }
 
+// Path: tools.portscanner
+class _StringsToolsPortscannerFr implements _StringsToolsPortscannerEn {
+  _StringsToolsPortscannerFr._(this._root);
+
+  @override final _StringsFr _root; // ignore: unused_field
+
+  // Translations
+  @override String get title => 'Scanner de ports';
+  @override String get host_to_scan => 'Hôte à scanner';
+  @override String get start_port => 'Port de départ';
+  @override String get end_port => 'Port de fin';
+  @override String get start_scan => 'Démarrer le scan';
+  @override String get stop_scan => 'Arrêter le scan';
+  @override String get port => 'Port';
+  @override late final _StringsToolsPortscannerErrorFr error = _StringsToolsPortscannerErrorFr._(_root);
+}
+
 // Path: credits.translations
 class _StringsCreditsTranslationsFr implements _StringsCreditsTranslationsEn {
 	_StringsCreditsTranslationsFr._(this._root);
@@ -3094,6 +3141,17 @@ class _StringsToolsPasswordgeneratorErrorFr implements _StringsToolsPasswordgene
 	@override String get password_length_must_be_greater_than_0 => 'La longueur du mot de passe doit être supérieure à 0';
 	@override String password_length_cannot_exceed_x_characters({required Object maxLength}) => 'La longueur du mot de passe ne peut pas dépasser ${maxLength} caractères';
 	@override String get password_length_cannot_be_less_than_the_sum_of_digits_and_special_characters => 'La longueur du mot de passe ne peut pas être inférieure à la somme du nombre de chiffres et de caractères spéciaux';
+}
+
+// Path: tools.portscanner.error
+class _StringsToolsPortscannerErrorFr implements _StringsToolsPortscannerErrorEn {
+  _StringsToolsPortscannerErrorFr._(this._root);
+
+  @override final _StringsFr _root; // ignore: unused_field
+
+  // Translations
+  @override String get please_enter_a_valid_host => 'Veuillez entrer un hôte valide';
+  @override String get please_enter_a_valid_port_number => 'Veuillez saisir un numéro de port valide (1-65535) dans les deux champs';
 }
 
 /// Flat map(s) containing all translations.
@@ -3658,7 +3716,16 @@ extension on Translations {
 			case 'tools.passwordgenerator.error.password_length_must_be_greater_than_0': return 'Password length must be greater than 0';
 			case 'tools.passwordgenerator.error.password_length_cannot_exceed_x_characters': return ({required Object maxLength}) => 'Password length cannot exceed ${maxLength} characters';
 			case 'tools.passwordgenerator.error.password_length_cannot_be_less_than_the_sum_of_digits_and_special_characters': return 'Password length cannot be less than the sum of digits and special characters';
-			case 'credits.title': return 'Credits';
+      case 'tools.portscanner.title': return 'Port scanner';
+      case 'tools.portscanner.host_to_scan': return 'Host to scan';
+      case 'tools.portscanner.start_port': return 'Start port';
+      case 'tools.portscanner.end_port': return 'End port';
+      case 'tools.portscanner.start_scan': return 'Start scan';
+      case 'tools.portscanner.stop_scan': return 'Stop scan';
+      case 'tools.portscanner.port': return 'Port';
+      case 'tools.portscanner.error.please_enter_a_valid_host': return 'Please enter a valid host';
+      case 'tools.portscanner.error.please_enter_a_valid_port_number': return 'Please enter a valid port number (1-65535) for both fields';
+      case 'credits.title': return 'Credits';
 			case 'credits.app_icon': return ({required Object author}) => 'App icon by ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'The app is licensed under the ${license} license';
 			case 'credits.tools_icons': return ({required Object author}) => 'Tools icons by ${author}';
@@ -4236,7 +4303,16 @@ extension on _StringsFr {
 			case 'tools.passwordgenerator.error.password_length_must_be_greater_than_0': return 'La longueur du mot de passe doit être supérieure à 0';
 			case 'tools.passwordgenerator.error.password_length_cannot_exceed_x_characters': return ({required Object maxLength}) => 'La longueur du mot de passe ne peut pas dépasser ${maxLength} caractères';
 			case 'tools.passwordgenerator.error.password_length_cannot_be_less_than_the_sum_of_digits_and_special_characters': return 'La longueur du mot de passe ne peut pas être inférieure à la somme du nombre de chiffres et de caractères spéciaux';
-			case 'credits.title': return 'Crédits';
+      case 'tools.portscanner.title': return 'Scanner de ports';
+      case 'tools.portscanner.host_to_scan': return 'Hôte à scanner';
+      case 'tools.portscanner.start_port': return 'Port de départ';
+      case 'tools.portscanner.end_port': return 'Port de fin';
+      case 'tools.portscanner.start_scan': return 'Démarrer le scan';
+      case 'tools.portscanner.stop_scan': return 'Arrêter le scan';
+      case 'tools.portscanner.port': return 'Port';
+      case 'tools.portscanner.error.please_enter_a_valid_host': return 'Veuillez entrer un hôte valide';
+      case 'tools.portscanner.error.please_enter_a_valid_port_number': return 'Veuillez saisir un numéro de port valide (1-65535) dans les deux champs';
+      case 'credits.title': return 'Crédits';
 			case 'credits.app_icon': return ({required Object author}) => 'Icône de l\'application par ${author}';
 			case 'credits.app_license': return ({required Object license}) => 'Application sous licence ${license}';
 			case 'credits.tools_icons': return ({required Object author}) => 'Icônes des outils par ${author}';

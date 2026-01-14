@@ -727,6 +727,19 @@
         "password_length_cannot_exceed_x_characters": "La longueur du mot de passe ne peut pas dépasser $maxLength caractères",
         "password_length_cannot_be_less_than_the_sum_of_digits_and_special_characters": "La longueur du mot de passe ne peut pas être inférieure à la somme du nombre de chiffres et de caractères spéciaux"
       }
+    },
+    "portscanner": {
+      "title": "Scanner de ports",
+      "host_to_scan": "Hôte à scanner",
+      "start_port": "Port de départ",
+      "end_port": "Port de fin",
+      "start_scan": "Démarrer le scan",
+      "stop_scan": "Arrêter le scan",
+      "port": "Port",
+      "error": {
+        "please_enter_a_valid_host": "Veuillez entrer un hôte valide",
+        "please_enter_a_valid_port_number": "Veuillez saisir un numéro de port valide (1-65535) dans les deux champs"
+      }
     }
   },
   "credits": {

@@ -727,6 +727,19 @@
         "password_length_cannot_exceed_x_characters": "Password length cannot exceed $maxLength characters",
         "password_length_cannot_be_less_than_the_sum_of_digits_and_special_characters": "Password length cannot be less than the sum of digits and special characters"
       }
+    },
+    "portscanner": {
+      "title": "Port scanner",
+      "host_to_scan": "Host to scan",
+      "start_port": "Start port",
+      "end_port": "End port",
+      "start_scan": "Start scan",
+      "stop_scan": "Stop scan",
+      "port": "Port",
+      "error": {
+        "please_enter_a_valid_host": "Please enter a valid host",
+        "please_enter_a_valid_port_number": "Please enter a valid port number (1-65535) for both fields"
+      }
     }
   },
   "credits": {
