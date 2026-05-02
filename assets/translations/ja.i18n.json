@@ -1,0 +1,890 @@
+{
+  "generic": {
+    "app_name": "Toolbox",
+    "tools": "ツール",
+    "categories": "カテゴリ",
+    "error": "エラー",
+    "warning": "警告",
+    "ok": "OK",
+    "cancel": "キャンセル",
+    "search": "検索",
+    "enable": "有効化",
+    "reset": "リセット",
+    "yes": "はい",
+    "no": "いいえ",
+    "copy": "コピー",
+    "share": "共有",
+    "generate": "生成"
+  },
+  "homepage": {
+    "update_available": "アップデートあり",
+    "update_available_message": "Toolboxの新しいバージョンが利用可能です。今すぐアップデートして最新の機能と改善を入手してください。",
+    "switch_view": "表示切替",
+    "search_all_categories": "すべてのカテゴリで検索",
+    "clear_search": "検索をクリア",
+    "add": "追加",
+    "remove": "削除",
+    "favorites": "お気に入り",
+    "would_you_like_to_add_this_tool_to_favorites": "このツールをお気に入りに追加しますか？",
+    "would_you_like_to_remove_this_tool_from_favorites": "このツールをお気に入りから削除しますか？"
+  },
+  "categories": {
+    "audio": "オーディオ",
+    "calculations": "計算",
+    "games": "ゲーム",
+    "geography": "地理",
+    "miscellaneous": "その他",
+    "network": "ネットワーク",
+    "random": "ランダム",
+    "time": "時間",
+    "web": "Web"
+  },
+  "tools": {
+    "baseconverter": {
+      "title": "進数変換",
+      "input": "入力",
+      "results": "結果",
+      "enter_a_dec_number": "10進数を入力",
+      "enter_a_hex_number": "16進数を入力",
+      "enter_a_bin_number": "2進数を入力",
+      "enter_a_oct_number": "8進数を入力",
+      "hexadecimal": "16進数",
+      "binary": "2進数",
+      "octal": "8進数",
+      "decimal": "10進数",
+      "incompatible_number": "非対応の数値",
+      "too_big_number": "数値が大きすぎます",
+      "the_number_you_entered_is_not_a_valid_x_number": "入力した数値は有効な $base 進数ではありません",
+      "the_number_you_entered_is_too_big_to_be_abble_to_convert_it": "入力した数値は大きすぎて変換できません"
+    },
+    "clock": {
+      "title": "時計",
+      "change_timezone": "タイムゾーンを変更",
+      "timezone": "タイムゾーン",
+      "choose_a_timezone": "タイムゾーンを選択",
+      "select_local": "現地時間"
+    },
+    "metronome": {
+      "title": "メトロノーム",
+      "bpm": "BPM",
+      "beats_per_measure": "1小節の拍数",
+      "start": "開始",
+      "stop": "停止"
+    },
+    "megaphone": {
+      "title": "メガフォン",
+      "error": {
+        "microphone_permission_denied": "権限が拒否されました。デバイスの設定でアプリのマイクアクセスを許可してください"
+      }
+    },
+    "nslookup": {
+      "title": "NSLookup",
+      "enter_a_domain_name": "ドメイン名を入力",
+      "lookup": "検索",
+      "error": {
+        "please_enter_a_domain_name": "ドメイン名を入力してください",
+        "no_address_associated_with_domain": "ホスト名に関連するアドレスがありません。\n入力内容とインターネット接続を確認して再試行してください。"
+      },
+      "not_supported_by_system_dns": "システムDNS非対応",
+      "no_records_found": "レコードが見つかりません"
+    },
+    "ping": {
+      "title": "Ping",
+      "ping": "Ping",
+      "enter_a_domain_name_or_ip": "ドメイン名またはIPアドレスを入力",
+      "reply_from_host_time_ttl": "$host からの応答: time=${time}ms TTL=$ttl",
+      "x_packets_transmitted_y": "$transmitted パケット送信、$received パケット受信",
+      "error": {
+        "please_enter_a_domain_name_or_ip": "ドメイン名またはIPアドレスを入力してください",
+        "request_timeout": "リクエストタイムアウト",
+        "unkown_host": "不明なホスト",
+        "no_reply": "応答なし",
+        "unkown_error": "不明なエラー"
+      }
+    },
+    "soundmeter": {
+      "title": "騒音計",
+      "decibels": "dB",
+      "error": {
+        "impossible_to_start_the_sound_meter": "騒音計を開始できません",
+        "no_sound_detected": "音が検出されません。デバイスの設定でアプリのマイクアクセスを確認してください。"
+      }
+    },
+    "qrreader": {
+      "title": "QRリーダー",
+      "scanned": "スキャン済み",
+      "openurl": "リンクを開く",
+      "copy_password": "パスワードをコピー",
+      "copy": "コピー",
+      "copied_to_clipboard": "クリップボードにコピーしました",
+      "wifi": "WiFi",
+      "wifi_ssid": "SSID",
+      "wifi_password": "パスワード",
+      "error": {
+        "no_qr_code": "QRコードなし",
+        "error_no_result": "結果が見つかりません"
+      }
+    },
+    "timer": {
+      "title": "タイマー",
+      "start": "開始",
+      "stop": "停止",
+      "pause": "一時停止",
+      "please_stop_the_timer_first": "先にタイマーを停止してください",
+      "ios_warning_message": "iOSでタイマーを鳴らすには、アプリを終了したりiPhoneの画面をオフにしないでください。そうしないと、タイマーがゼロになったときにiOSが鳴らさなくなります。",
+      "adjust_time": "時間を調整"
+    },
+    "stopwatch": {
+      "title": "ストップウォッチ",
+      "controls": "操作",
+      "start": "開始",
+      "stop": "停止",
+      "reset": "リセット",
+      "laps": "ラップ",
+      "lap": "ラップ"
+    },
+    "roulette": {
+      "title": "ルーレット",
+      "tap_to_roll_info": "ホイールをタップして回す",
+      "default_1": "勉強",
+      "default_2": "遊ぶ",
+      "default_3": "寝る",
+      "add": "追加",
+      "remove": "削除",
+      "add_item": "アイテムを追加",
+      "item_name": "アイテム名",
+      "remove_an_item": "アイテムを削除",
+      "warning": {
+        "you_cant_add_more_than_x_items": "ルーレットには $numberOfItems 件以上追加できません。",
+        "you_must_have_at_least_x_items": "ルーレットには最低 $numberOfItems 件必要です。",
+        "you_must_enter_an_item_name": "アイテム名を入力してください。"
+      }
+    },
+    "flipcoins": {
+      "title": "コインを投げる",
+      "change_coin_currency": "コインの通貨を変更"
+    },
+    "randomnumber": {
+      "title": "乱数",
+      "settings": "設定",
+      "min": "最小",
+      "max": "最大",
+      "error": {
+        "invalid_number": "無効な数値です。再試行してください。",
+        "min_must_be_lower_than_max": "最小値は最大値より小さくする必要があります。",
+        "min_and_max_must_be_between_x_and_y": "最小値と最大値は $minNumberLimit から $maxNumberLimit の間にする必要があります。"
+      }
+    },
+    "randomcolor": {
+      "title": "ランダムカラー",
+      "hint": "色をタップして変更",
+      "tap_to_copy": "タップしてコピー",
+      "copied_to_clipboard": "クリップボードにコピーしました"
+    },
+    "sshclient": {
+      "title": "SSHクライアント",
+      "backspace": "バックスペース",
+      "use_password": "パスワードを使用",
+      "use_ssh_key": "SSHキーを使用",
+      "connection": "接続",
+      "host": "ホスト",
+      "port": "ポート",
+      "username": "ユーザー名",
+      "password": "パスワード",
+      "ssh_key": "SSHキー",
+      "connect": "接続",
+      "authentication": "認証",
+      "select_private_key": "秘密鍵を選択",
+      "no_private_key_selected": "秘密鍵が選択されていません",
+      "passphrase": "パスフレーズ（なければ空白のまま）",
+      "error": {
+        "invalid_port": "無効なポート",
+        "invalid_passphrase": "鍵が暗号化されていないのにパスフレーズを入力したか、またはその逆の可能性があります",
+        "invalid_private_key": "指定された鍵は有効な秘密鍵ではありません",
+        "authentication_failed": "認証に失敗しました",
+        "connection_failed": "ホストに接続できませんでした",
+        "unknown_error": "不明なエラーが発生しました。再試行してください"
+      }
+    },
+    "whiteboard": {
+      "title": "ホワイトボード",
+      "share_success": "ホワイトボードを共有しました",
+      "save_success": "ホワイトボードを保存しました"
+    },
+    "networkinfo": {
+      "title": "ネットワーク情報",
+      "loading": "読み込み中...",
+      "unknown": "不明",
+      "location_permission_required": "WiFi情報の一部取得には位置情報の許可が必要です（OS上の制限）。\n許可しない場合、正確な情報が取得できない場合があります。",
+      "public_ip": "パブリックIPアドレス",
+      "local_ip": "ローカルIPアドレス",
+      "local_subnet_mask": "ローカルネットワークサブネットマスク",
+      "local_gateway_ip": "ローカルネットワークゲートウェイIP",
+      "local_broadcast_ip": "ローカルネットワークブロードキャストIP",
+      "wifi_name": "WiFi名",
+      "wifi_bssid": "WiFi BSSID",
+      "not_available_on_ios": "iOSでは利用不可",
+      "note_location_permission": "注意: 正確な位置情報の許可をしていない場合、一部の情報が正確でない場合があります。"
+    },
+    "uuidgenerator": {
+      "title": "UUIDジェネレーター",
+      "generate": "生成",
+      "default_uuid_text": "ボタンを押してUUIDを生成",
+      "tap_to_copy": "タップしてコピー",
+      "copied_to_clipboard": "クリップボードにコピーしました",
+      "v1_uuid": "v1（時刻ベース）",
+      "v4_uuid": "v4（ランダム）",
+      "v5_uuid": "v5（SHA1ベース）",
+      "v5_generate_title": "UUID v5を生成",
+      "v5_namespace": "名前空間（ランダムにする場合は空白）",
+      "v5_name": "名前（なければ空白）",
+      "error": {
+        "invalid_namespace": "名前空間が有効なUUIDではありません"
+      }
+    },
+    "texttospeech": {
+      "title": "テキスト読み上げ",
+      "choose_a_language": "言語を選択",
+      "text_to_speak": "読み上げるテキスト",
+      "pitch": "ピッチ",
+      "rate": "速度",
+      "play": "再生",
+      "stop": "停止",
+      "error": {
+        "please_try_again": "後でもう一度試してください。\nこの言語を初めて使用する場合は、数秒待ってから再試行してください。",
+        "please_select_a_language": "言語を選択してください"
+      }
+    },
+    "nearbypublictransportstops": {
+      "title": "近くの交通機関",
+      "loading": "読み込み中...",
+      "refresh": "更新",
+      "data_source": "データソース",
+      "initial_dialog_title": "案内",
+      "initial_dialog_message": "このツールはスイスでの使用を想定しています。\"$source\" のデータを使用しています",
+      "data_license_dialog_open": "開く",
+      "data_license_dialog_title": "データソース",
+      "data_license_dialog_message": "このツールで使用するデータは \"$source\" から提供されています。\n$url",
+      "no_departures": "出発便なし",
+      "departure": "出発",
+      "arrival": "到着",
+      "platform": "ホーム",
+      "show_on_map": "地図",
+      "map_marker_title": "停留所",
+      "error": {
+        "location_permission_denied": "位置情報の権限が拒否または無効です。設定で有効にして近くの停留所を表示してください。",
+        "check_internet_connection": "インターネット接続を確認して再試行してください。",
+        "api_empty_response": "APIが空のレスポンスを返しました",
+        "api_error_xxx": "APIがエラーを返しました: $errorCode",
+        "no_stops_found": "この検索では停留所が見つかりませんでした",
+        "no_maps_app": "デバイスに地図アプリが見つかりません"
+      }
+    },
+    "fileencryption": {
+      "title": "ファイル暗号化",
+      "home_hint": "暗号化するファイルを選択してください。復号化する場合は .aes 拡張子の暗号化済みファイルを選択してください",
+      "no_file_selected": "ファイルが選択されていません",
+      "enter_password": "パスワードを入力してください",
+      "file_saved_successfully": "ファイルを保存しました",
+      "pick_a_file": "ファイルを選択",
+      "encryption_password": "暗号化パスワード",
+      "encrypt": "暗号化",
+      "decrypt": "復号化",
+      "error": {
+        "failed_to_read_file": "ファイルの読み込みに失敗しました",
+        "failed_to_decrypt_file": "ファイルの復号化に失敗しました。パスワードを確認してください",
+        "please_enter_a_password": "パスワードを入力してください"
+      },
+      "enter_password_hint": "パスワードを入力...",
+      "file_selection": "ファイル選択"
+    },
+    "youtubethumbnail": {
+      "title": "YouTubeサムネイル",
+      "saved": "サムネイルをデバイスに保存しました",
+      "youtube_video_id": "YouTube動画URL",
+      "save_thumbnail": "サムネイルを保存",
+      "please_enter_a_video_url": "YouTubeのサムネイルをダウンロードするためにURL（またはID）を入力してください",
+      "error": {
+        "failed_to_download": "YouTubeからサムネイルのダウンロードに失敗しました",
+        "please_enter_a_valid_video_id": "有効なYouTube動画URLを入力してください\nサムネイルのダウンロードにはインターネット接続も必要です"
+      },
+      "thumbnail_preview": "サムネイルプレビュー"
+    },
+    "nationalanthems": {
+      "title": "国歌",
+      "stop": "国歌を停止",
+      "search": "検索（英語名）",
+      "license": "ライセンス",
+      "license_text": "音声ファイルは \"$source\" により $license ライセンスのもとで提供されています",
+      "open": "開く",
+      "view_license": "ライセンスを見る",
+      "loading_audio_title": "読み込み中",
+      "loading_audio_text": "国歌を読み込んでいます。お待ちください...",
+      "error": {
+        "failed_to_load_list": "国歌リストを読み込めません。インターネット接続を確認して再試行してください。",
+        "failed_to_play_anthem": "国歌を再生できません。インターネット接続を確認して再試行してください。"
+      },
+      "no_anthems_found": "国歌が見つかりません"
+    },
+    "httprequest": {
+      "title": "HTTPリクエスト",
+      "method": "メソッド",
+      "custom_method": "カスタムメソッド",
+      "url": "URL",
+      "headers": "ヘッダー",
+      "body": "ボディ",
+      "allow_bad_certificates": "無効な証明書を許可",
+      "allow_bad_certificates_description": "このオプションを有効にすると、\"HTTPリクエスト\" ツールが無効・期限切れ・自己署名のSSL/TLS証明書を持つサーバーへHTTPSリクエストを送信できるようになります。これにより重要なセキュリティ制御が無効化され、第三者によるデータの傍受や改ざんのリスクがあります。このオプションは関連するリスクを十分理解した上で、信頼できる管理下のサーバーへのリクエストにのみ使用してください。一般的な使用は推奨しません。このオプションを有効にしたリクエストはHTTPと同様に第三者が閲覧・操作できるものとしてご認識ください。",
+      "i_know_what_i_am_doing": "リスクを理解しています",
+      "render_html": "HTMLをレンダリング",
+      "back_to_details": "詳細に戻る",
+      "send_request": "リクエストを送信",
+      "response": "レスポンス",
+      "status_code": "ステータスコード",
+      "error": {
+        "url_cannot_be_empty": "URLを入力してください",
+        "invalid_url": "無効なURL",
+        "invalid_headers": "無効なヘッダー",
+        "timeout": "リクエストがタイムアウトしました。\n入力内容とインターネット接続を確認して再試行してください。",
+        "other_error": "リクエスト送信中にエラーが発生しました。\n入力内容とインターネット接続を確認して再試行してください。"
+      },
+      "example_headers": "key1: value1\nkey2: value2",
+      "request_body_hint": "リクエストボディ（JSON、XMLなど）"
+    },
+    "morsecode": {
+      "title": "モールス信号",
+      "alphabet_field": "アルファベット（A-Z、0-9）",
+      "morse_field": "モールス信号（. と -）",
+      "note_spaces": "注意: 文字間は1スペース、単語間は3スペースを使用してください。",
+      "alphabet_to_morse": "アルファベット → モールス",
+      "morse_to_alphabet": "モールス → アルファベット",
+      "play_audio": "音声を再生",
+      "playing": "再生中...",
+      "enter_text": "テキストを入力..."
+    },
+    "osm": {
+      "title": "地図（OSM）",
+      "go_to_my_location": "現在地へ",
+      "loading_map": "地図を読み込み中...",
+      "error": {
+        "location_permission_denied": "この機能を使用するには位置情報の許可が必要です",
+        "location_services_disabled": "位置情報サービスが無効です"
+      }
+    },
+    "gameoflife": {
+      "title": "ライフゲーム",
+      "grid_size": "グリッドサイズ",
+      "current_size_is_x": "現在のサイズ: $size",
+      "waiting": "待機中",
+      "stop_simulation": "シミュレーション停止",
+      "start_simulation": "シミュレーション開始",
+      "randomize_grid": "グリッドをランダム化",
+      "clear_grid": "グリッドをクリア",
+      "error": {
+        "no_alive_cells": "生存セルなし",
+        "no_alive_cells_description": "生存セルがありません。\nグリッドをタップして追加してください。",
+        "please_stop_simulation": "先にシミュレーションを停止してください"
+      }
+    },
+    "speedometer": {
+      "title": "速度計",
+      "reset": "リセット",
+      "about_traveled_distance_title": "走行距離について",
+      "about_traveled_distance_description": "走行距離はGPSで検出した速度をもとに計算されます。\nそのため距離は100%正確ではありません。",
+      "kmh": "km/h",
+      "km": "km",
+      "mph": "mph",
+      "mi": "mi",
+      "change_speed_unit": "速度単位を変更",
+      "change_speed_unit_description": "速度計で使用する速度の単位を選択してください",
+      "traveled_distance": "走行距離",
+      "error": {
+        "location_permission_denied_title": "位置情報が必要",
+        "location_permission_denied_description": "このツールは速度を測定するために位置情報の許可が必要です。",
+        "location_services_disabled_title": "位置情報サービスが無効",
+        "location_services_disabled_description": "このツールは速度を測定するために位置情報サービスの有効化が必要です。"
+      }
+    },
+    "mc_server_ping": {
+      "title": "MCサーバーPing",
+      "java_edition": "Java Edition",
+      "information_java": "案内",
+      "information_java_description": "サーバーがMinecraftのJava Editionで利用可能な場合はこのチェックボックスを有効にしてください。チェックを外すとBedrock Edition APIを使用します。",
+      "server_ip": "MinecraftサーバーIP（またはドメイン）",
+      "ping": "サーバーをPing",
+      "ping_another_server": "別のサーバーをPing",
+      "api_used": "使用API",
+      "about_the_api": "APIについて",
+      "about_the_api_description": "このツールはMinecraftサーバーをPingするために \"$website\" の \"$source\" を使用しています",
+      "about_open": "開く",
+      "the_server_id_is": "サーバーIDは \"$id\" です",
+      "x_y_players_online": "$playersOnline/$playersMax 人がオンライン",
+      "added_to_favorites": "お気に入りに追加しました",
+      "added_to_favorites_description": "サーバーをお気に入りに追加しました",
+      "removed_from_favorites": "お気に入りから削除しました",
+      "removed_from_favorites_description": "サーバーをお気に入りから削除しました",
+      "add_to_favorites": "お気に入りに追加",
+      "remove_from_favorites": "お気に入りから削除",
+      "remove_from_favorites_description": "このサーバーをお気に入りから削除しますか？",
+      "from_favorites": "お気に入りから",
+      "pick_from_favorites": "お気に入りから選択",
+      "no_favorites": "お気に入りなし",
+      "no_favorites_description": "お気に入りのサーバーがまだありません。",
+      "online_players": "オンラインプレイヤー",
+      "online_players_description_no_players_to_show": "サーバーにオンラインプレイヤーがいますが、プレイヤー名は表示できません",
+      "error": {
+        "please_enter_a_server_ip": "サーバーIPまたはドメインを入力してください",
+        "server_offline_or_does_not_exist": "サーバーはオフラインか存在しません",
+        "please_check_your_internet_connection": "インターネット接続を確認して再試行してください"
+      },
+      "server_id": "サーバーID",
+      "server_info": "サーバー情報"
+    },
+    "timestampconverter": {
+      "title": "タイムスタンプ変換",
+      "now_tooltip": "現在",
+      "utc": "UTC",
+      "local": "ローカル",
+      "local_or_utc_dialog_title": "ローカルまたはUTC",
+      "local_or_utc_dialog_message": "ローカル日時またはUTC日時を選択しますか？",
+      "unix_timestamp": "Unixタイムスタンプ",
+      "convert_timestamp_to_date": "タイムスタンプを日付に変換",
+      "tap_the_date_to_change_it": "日付をタップして変更",
+      "select_seconds": "秒を選択",
+      "error": {
+        "invalid_timestamp": "無効なタイムスタンプ"
+      },
+      "convert": "変換"
+    },
+    "urlshortener": {
+      "title": "URL短縮",
+      "url": "URL",
+      "qr_code": "QRコード",
+      "share": "共有",
+      "share_dialog_message": "何を共有しますか？",
+      "your_shortened_url_is": "短縮URLは",
+      "copy_to_clipboard": "クリップボードにコピー",
+      "the_link_id_is": "リンクIDは",
+      "link_id_copied_to_clipboard": "リンクIDをクリップボードにコピーしました",
+      "the_link_password_is": "リンクパスワードは",
+      "link_password_copied_to_clipboard": "リンクパスワードをクリップボードにコピーしました",
+      "link_password_hint_text": "パスワードをタップしてコピー\nこのリンクの統計を確認するために必要です",
+      "shorten_another_url": "別のURLを短縮",
+      "url_to_shorten": "短縮するURL",
+      "by_clicking_you_accept": "短縮ボタンをタップすると、以下のリンクから利用可能な \"$url\" の利用規約に同意したことになります。",
+      "terms_of_service": "利用規約",
+      "shorten": "短縮",
+      "view_statistics_of_a_link": "リンクの統計を見る",
+      "view_statistics_of_a_link_message": "JTU.MEウェブサイトの統計ページでリンクの統計（総アクセス数、作成日、最終アクセス日など）を確認できます",
+      "more_features": "さらなる機能",
+      "more_features_message": "公式JTU.MEウェブサイトからテキスト共有、カスタムリンクなどの追加機能を使用してください",
+      "open": "開く",
+      "error": {
+        "failed_to_shorten_url": "URLの短縮に失敗しました。入力内容とインターネット接続を確認してください。",
+        "impossible_to_connect_to_the_server": "サーバーに接続できません",
+        "impossible_to_connect_to_the_server_message": "サーバーへの接続に失敗しました。インターネット接続を確認して再試行してください。"
+      },
+      "management_info": "管理情報"
+    },
+    "counter": {
+      "title": "カウンター",
+      "add_button": "ボタンを追加",
+      "remove_button": "ボタンを削除",
+      "enter_number": "数値を入力",
+      "error": {
+        "invalid_number": "入力した数値が無効です",
+        "the_number_must_be_between_x_and_y": "数値は $minNumberLimit から $maxNumberLimit の間にする必要があります",
+        "you_must_have_at_least_one_button": "ボタンが最低1つ必要です",
+        "this_button_already_exists": "このボタンはすでに存在します"
+      }
+    },
+    "bitwisecalculator": {
+      "title": "ビット演算電卓",
+      "binary_values": "2進数値",
+      "first_number": "1つ目の数",
+      "second_number": "2つ目の数",
+      "enter_a_binary_number": "2進数を入力",
+      "operations": "演算",
+      "and": "AND",
+      "or": "OR",
+      "xor": "XOR",
+      "result": "結果",
+      "error": {
+        "invalid_input": "無効な入力"
+      }
+    },
+    "musicsearch": {
+      "title": "音楽検索",
+      "unknown_title": "不明なタイトル",
+      "unknown_artist": "不明なアーティスト",
+      "unknown_album": "不明なアルバム",
+      "loading": "読み込み中",
+      "loading_audio_preview": "音声プレビューを読み込み中...",
+      "stop_audio_preview": "音声プレビューを停止",
+      "data_source": "データソース",
+      "this_tool_uses_the_x_api": "このツールは音楽検索に \"$service\" APIを使用しています。\n音声プレビューは \"$service\" から提供されています。",
+      "go_to_x": "$service へ",
+      "search_for_music": "音楽を検索",
+      "use_the_searchbar_to_search_music": "検索バーを使って音楽を検索してください。\n検索結果が出ない場合は別の検索ワードをお試しください。\nそれでも結果が出ない場合は、インターネット接続と $service がお住まいの国・地域で利用可能かどうかをご確認ください。",
+      "open_in_x": "$service で開く",
+      "play_preview": "プレビューを再生",
+      "error": {
+        "error_playing_audio_preview": "音声プレビューの再生エラー。後でもう一度試してください。",
+        "unable_to_connect_to_the_api": "APIに接続できません。インターネット接続を確認して再試行してください。"
+      }
+    },
+    "musicanalyser": {
+      "title": "音楽認識",
+      "press_the_button_to_start_music_analysis": "ボタンを押して音楽認識を開始",
+      "loading": "読み込み中...",
+      "analyzing_music": "音楽を認識中... (${remainingSeconds}s)",
+      "getting_results": "結果を取得中...",
+      "unknown": "不明",
+      "api_used": "使用API",
+      "this_tool_uses_the_x_api": "このツールはKoizeayバックエンドサーバー経由で \"$service\" APIを使用しています。\"$service\" は \"$company\" の登録商標であり、このツールとは無関係です。",
+      "start_analyzing_music": "音楽認識を開始",
+      "clear": "クリア",
+      "error": {
+        "permission_denied": "権限が拒否されました",
+        "permission_denied_description": "音楽の認識にはマイクの許可が必要です。許可を付与して再試行してください。",
+        "no_match_found": "一致なし",
+        "no_match_found_description": "音楽の一致が見つかりませんでした。再試行してください。",
+        "error_occurred": "音楽の認識中にエラーが発生しました。インターネット接続を確認して再試行してください。",
+        "please_update_the_app_and_try_again": "アプリをアップデートして再試行してください。最新版でも問題が続く場合は、後でもう一度試してください。"
+      }
+    },
+    "textdifferences": {
+      "title": "テキスト比較",
+      "old_text": "旧テキスト",
+      "new_text": "新テキスト",
+      "no_text_hint": "上のフィールドにテキストを入力すると差分が表示されます",
+      "enter_old_text": "旧テキストを入力...",
+      "enter_new_text": "新テキストを入力..."
+    },
+    "characterscopy": {
+      "title": "文字コピー",
+      "important": "重要",
+      "important_description": "OSによっては一部の文字が正しく表示されないことがあります。またアプリやフォントによって対応していない文字もあります。コピーしたい文字をタップするとクリップボードにコピーされます。",
+      "copied_to_clipboard": "クリップボードにコピーしました"
+    },
+    "whoisdomain": {
+      "title": "WHOISドメイン",
+      "domain_name": "ドメイン名",
+      "whois_lookup": "WHOIS検索",
+      "disclaimer": "免責事項",
+      "disclaimer_text": "ToolboxはWHOISクエリ機能を情報提供のみを目的として提供しています。取得したデータは正確・完全・最新でない場合があり、各ドメインレジストリの利用規約に従います。WHOISデータをスパム、不法行為、または自動データ収集に使用することは禁止されています。このツールを使用することで、適用される法律およびレジストリの利用規約を遵守することに同意したものとみなされます。Toolboxおよびまたはkoizeayはデータの誤り、欠落、または不正使用について責任を負いません。一部のTLDはこのツールで対応していない場合があります。",
+      "loading": "読み込み中...",
+      "ip_address_not_supported": "IPアドレスは非対応",
+      "ip_address_not_supported_description": "このツールはドメイン名のみ対応しており、IPアドレスには対応していません",
+      "no_result": "有効な結果が見つかりません",
+      "view_pretty": "整形表示",
+      "view_raw": "生データ表示",
+      "raw_whois_data": "生WHOISデータ",
+      "domain": "ドメイン",
+      "registrar": "レジストラ",
+      "dates": "日付",
+      "status": "ステータス",
+      "name_servers": "ネームサーバー",
+      "contact": "連絡先",
+      "other": "その他",
+      "error": {
+        "impossible_to_get_whois_information": "WHOIS情報を取得できません。入力内容とインターネット接続を確認して再試行してください"
+      }
+    },
+    "textcounter": {
+      "title": "テキストカウンター",
+      "clear": "クリア",
+      "enter_text_here": "テキストを入力",
+      "length": "長さ",
+      "trimmed_length": "トリム後の長さ",
+      "raw_length": "元の長さ",
+      "letters": "文字",
+      "words": "単語",
+      "spaces": "スペース",
+      "digits": "数字",
+      "lines": "行",
+      "empty_lines": "空行",
+      "total_lines": "合計行数",
+      "text_input": "テキスト入力"
+    },
+    "romannumeral": {
+      "title": "ローマ数字",
+      "change_to": "変換先",
+      "roman_numeral": "ローマ数字",
+      "number": "数値",
+      "number_input_hint": "数値",
+      "roman_numeral_input_hint": "ローマ数字",
+      "tap_to_copy": "タップしてコピー",
+      "copied_to_clipboard": "クリップボードにコピーしました",
+      "error": {
+        "invalid_roman_numeral": "無効またはサポートされていないローマ数字"
+      }
+    },
+    "areacalculator": {
+      "title": "面積計算",
+      "select_a_shape": "形状を選択",
+      "values": "値",
+      "area": "面積",
+      "calculate": "計算",
+      "shapes": {
+        "circle": "円",
+        "ellipse": "楕円",
+        "equilateral_triangle": "正三角形",
+        "kite": "凧形",
+        "parallelogram": "平行四辺形",
+        "rectangle": "長方形",
+        "rhombus": "菱形",
+        "regular_hexagon": "正六角形",
+        "regular_octagon": "正八角形",
+        "regular_pentagon": "正五角形",
+        "regular_polygon": "正多角形",
+        "square": "正方形",
+        "trapezoid": "台形",
+        "triangle": "三角形"
+      },
+      "inputs": {
+        "radius": "半径",
+        "major_axis": "長軸",
+        "minor_axis": "短軸",
+        "side": "辺",
+        "base": "底辺",
+        "height": "高さ",
+        "diagonal_1": "対角線1",
+        "diagonal_2": "対角線2",
+        "length": "長さ",
+        "width": "幅",
+        "number_of_sides": "辺の数",
+        "side_length": "辺の長さ",
+        "apothem": "アポテム",
+        "base_1": "底辺1",
+        "base_2": "底辺2"
+      },
+      "error": {
+        "invalid_input": "無効な入力",
+        "please_enter_a_value_for": "値を入力してください",
+        "please_enter_a_valid_number_for": "有効な数値を入力してください",
+        "please_enter_a_positive_number_for": "正の数値を入力してください",
+        "please_try_again_with_different_values": "別の値で再試行してください",
+        "the_area_of_the_shape_is_zero": "この形状の面積はゼロです"
+      }
+    },
+    "mathtex": {
+      "title": "MathTeX",
+      "enter_a_mathematical_expression_in_tex_format": "TeX形式で数式を入力",
+      "texExpression": "TeX式",
+      "export_to_image": "画像として出力",
+      "preview": "プレビュー",
+      "color": "色",
+      "get_help": "ヘルプ",
+      "open_help_website": "ヘルプサイトを開く",
+      "help_content": "TeX形式で数式を入力すると数学的な数式として表示されます。例えば、TeX式 '\\\\frac{a}{b}' は 'a' を 'b' で割った分数として表示されます。サポートされているTeX構文を使って複雑な数式を作成できます。式を入力したらプレビューしてSVGファイルとして出力できます。\nMathJaxのTeX形式に対応しています。",
+      "copied_to_clipboard": "クリップボードにコピーしました",
+      "error": {
+        "an_error_occurred_while_rendering_the_mathtex": "MathTeXのレンダリング中にエラーが発生しました",
+        "please_wait_until_the_preview_is_loaded": "プレビューが読み込まれるまでお待ちください",
+        "an_error_occurred_while_exporting_the_image": "画像の出力中にエラーが発生しました",
+        "could_not_open_help_website": "ヘルプサイトを開けませんでした。設定を確認して再試行してください"
+      }
+    },
+    "compass": {
+      "title": "コンパス",
+      "error": {
+        "please_grant_location_permission": "コンパスを使用するには位置情報の許可が必要です。デバイスのセンサーにアクセスするために必須です。"
+      }
+    },
+    "qrcreator": {
+      "title": "QRコード作成",
+      "qr_code_settings": "QRコード設定",
+      "ecc_low": "低",
+      "ecc_medium": "中",
+      "ecc_quartile": "中高",
+      "ecc_high": "高",
+      "saved_successfully": "QRコードを保存しました",
+      "shared_successfully": "QRコードを共有しました",
+      "enter_text_or_url": "テキストまたはURLを入力",
+      "error_correction_level": "誤り訂正レベル",
+      "create": "作成",
+      "generated_qr_code": "生成したQRコード",
+      "save": "保存",
+      "share": "共有",
+      "error": {
+        "failed_to_create_qr_code": "QRコードの作成に失敗しました。入力内容を確認して再試行してください"
+      }
+    },
+    "pastebin": {
+      "title": "Pastebin",
+      "url": "URL",
+      "qr_code": "QRコード",
+      "share": "共有",
+      "share_dialog_message": "何を共有しますか？",
+      "your_short_link_is": "短縮リンクは",
+      "copy_to_clipboard": "クリップボードにコピー",
+      "copied_to_clipboard": "短縮リンクをクリップボードにコピーしました",
+      "the_link_id_is": "リンクIDは",
+      "link_id_copied_to_clipboard": "リンクIDをクリップボードにコピーしました",
+      "the_link_password_is": "リンクパスワードは",
+      "link_password_copied_to_clipboard": "リンクパスワードをクリップボードにコピーしました",
+      "link_password_hint_text": "パスワードをタップしてコピー\nこのリンクの統計を確認するために必要です",
+      "paste_another_text": "別のテキストを貼り付け",
+      "text_to_paste": "貼り付けるテキスト",
+      "text_paste_field_hint": "テキスト、ソースコード、その他のコンテンツをここに貼り付けてください",
+      "by_clicking_you_accept": "送信ボタンをタップすると、以下のリンクから利用可能な \"$url\" の利用規約に同意したことになります。",
+      "terms_of_service": "利用規約",
+      "send": "送信",
+      "view_statistics_of_a_link": "リンクの統計を見る",
+      "view_statistics_of_a_link_message": "JTU.MEウェブサイトの統計ページでリンクの統計（総アクセス数、作成日、最終アクセス日など）を確認できます",
+      "more_features": "さらなる機能",
+      "more_features_message": "公式JTU.MEウェブサイトからURL短縮、カスタムリンクなどの追加機能を使用してください",
+      "open": "開く",
+      "error": {
+        "failed_to_obtain_short_link": "短縮リンクの取得に失敗しました。インターネット接続を確認して再試行してください",
+        "impossible_to_connect_to_the_server": "サーバーに接続できません",
+        "impossible_to_connect_to_the_server_message": "サーバーへの接続に失敗しました。インターネット接続を確認して再試行してください。"
+      },
+      "management_info": "管理情報"
+    },
+    "percentagecalculator": {
+      "title": "パーセント計算",
+      "result": "結果",
+      "percentage": "パーセント",
+      "eg": "例)",
+      "total": "合計",
+      "first_value": "1つ目の値",
+      "second_value": "2つ目の値",
+      "what_is": "何パーセント？",
+      "of": "の",
+      "is_what_percentage_of": "割合を求める",
+      "what_is_the_percentage_difference": "パーセントの差は",
+      "from": "から",
+      "to": "まで",
+      "calculate": "計算",
+      "error": {
+        "please_enter_valid_numbers_for_both_fields": "両方のフィールドに有効な数値を入力してください",
+        "total_cannot_be_zero": "合計はゼロにできません",
+        "first_value_cannot_be_zero": "1つ目の値はゼロにできません"
+      }
+    },
+    "passwordgenerator": {
+      "title": "パスワードジェネレーター",
+      "password_length": "パスワードの長さ",
+      "number_of_digits": "数字の数",
+      "number_of_special_characters": "特殊文字の数",
+      "generate_password": "パスワードを生成",
+      "password_copied_to_clipboard": "パスワードをクリップボードにコピーしました",
+      "tap_to_copy": "タップしてコピー",
+      "error": {
+        "password_length_must_be_greater_than_0": "パスワードの長さは0より大きくする必要があります",
+        "password_length_cannot_exceed_x_characters": "パスワードの長さは $maxLength 文字を超えることはできません",
+        "password_length_cannot_be_less_than_the_sum_of_digits_and_special_characters": "パスワードの長さは数字と特殊文字の合計より小さくできません"
+      },
+      "generated_password": "生成されたパスワード"
+    },
+    "portscanner": {
+      "title": "ポートスキャナー",
+      "host_to_scan": "スキャンするホスト",
+      "start_port": "開始ポート",
+      "end_port": "終了ポート",
+      "start_scan": "スキャン開始",
+      "stop_scan": "スキャン停止",
+      "port": "ポート",
+      "error": {
+        "please_enter_a_valid_host": "有効なホストを入力してください",
+        "please_enter_a_valid_port_number": "両方のフィールドに有効なポート番号（1-65535）を入力してください"
+      },
+      "example_domain_or_ip": "example.com または 192.168.1.1",
+      "port_range": "ポート範囲",
+      "scan_progress": "スキャン進捗"
+    },
+    "commons": {
+      "title": "Commons",
+      "data_source_and_licensing": "データソースとライセンス",
+      "data_source_and_licensing_description": "すべてのメディアファイルはWikimedia Commonsから提供されており、各ライセンスに従います。メディアファイルを使用・ダウンロードする際は各ライセンスの条件を遵守してください。",
+      "open_wikimedia_commons": "Wikimedia Commonsを開く",
+      "search_files": "ファイルを検索",
+      "enter_search_query_to_find_files": "Wikimedia Commons上のメディアファイルを検索するキーワードを入力してください",
+      "view_on_wikimedia": "Wikimedia Commonsで見る",
+      "previous": "前へ",
+      "next": "次へ",
+      "bytes": "B",
+      "kilobytes": "KB",
+      "megabytes": "MB",
+      "gigabytes": "GB",
+      "no_files_found": "ファイルが見つかりません",
+      "close_preview": "プレビューを閉じる",
+      "view_license_details": "ライセンス詳細を見る",
+      "download_media": "メディアをダウンロード",
+      "close": "閉じる",
+      "file_information": "ファイル情報",
+      "unknown_license": "不明なライセンス",
+      "mime_type": "MIMEタイプ",
+      "file_size": "ファイルサイズ",
+      "dimensions": "縦横サイズ",
+      "duration": "長さ",
+      "file_license": "ファイルライセンス",
+      "file_by": "作成者",
+      "file_downloaded_successfully": "ファイルをダウンロードしました",
+      "downloading": "ダウンロード中...",
+      "error": {
+        "error_downloading_file": "ファイルのダウンロードエラー ($errorCode)",
+        "error_download_file_check_internet": "ファイルのダウンロードエラー。インターネット接続を確認して再試行してください。"
+      }
+    },
+    "crdeck": {
+      "title": "Clash Royaleデッキ",
+      "clear_unlocked_deck_cards": "未固定カードをクリア",
+      "about_and_credits": "概要とクレジット",
+      "about_and_credits_description": "このツールはSupercell（Koizeayバックエンドサーバー経由）が提供する公式Clash Royale APIを使用しています。このツールはSupercellとは一切関係ありません。画像、名前、商標などを含むすべてのClash RoyaleのコンテンツはSupercellの所有物です。",
+      "supercell_website": "Supercellウェブサイト",
+      "no_deck": "デッキなし",
+      "generate_new_deck": "新しいデッキを生成",
+      "open_deck_in_clash_royale": "Clash Royaleでデッキを開く",
+      "share_deck": "デッキを共有",
+      "search_cards": "カードを検索",
+      "import_cards_from_player_profile": "プレイヤープロフィールからカードをインポート",
+      "deselect_all_cards": "すべてのカードの選択を解除",
+      "select_all_cards": "すべてのカードを選択",
+      "x_elixirs": "$elixirs エリクサー",
+      "player_tag": "プレイヤータグ",
+      "import": "インポート",
+      "importing_cards": "カードをインポート中...",
+      "share_deck_text_message": "Toolboxで作ったClash Royaleのデッキをチェックしてね！\nこのリンクからClash Royaleで開いてみて: $url",
+      "error": {
+        "please_check_your_internet_connection": "インターネット接続を確認して再試行してください。",
+        "error_while_loading_cards_from_server": "サーバーからClash Royaleカードの読み込み中にエラーが発生しました。\nネットワーク接続を確認して再試行してください。",
+        "failed_to_load_cards_from_server": "サーバーからのClash Royaleカードの読み込みに失敗しました ($errorCode)",
+        "invalid_tag": "無効なタグ",
+        "please_enter_a_valid_player_tag": "有効なプレイヤータグを入力してください",
+        "failed_to_import_cards_from_player_profile": "プレイヤープロフィールからのカードインポートに失敗しました ($errorCode)。手動でカードをインポートすることもできます",
+        "an_error_occurred_while_importing_cards": "カードのインポート中にエラーが発生しました。手動でカードをインポートすることもできます",
+        "not_enough_cards_selected": "選択したカードが不足しています",
+        "please_select_at_least_x_more_cards": "有効なデッキを作成するにはあと $numberOfCards 枚以上のカードを選択してください",
+        "deck_is_full": "デッキが満杯",
+        "you_can_only_add_up_to_x_cards_to_the_deck": "デッキに追加できるカードは $numberOfCards 枚までです",
+        "card_already_in_deck": "カードはすでにデッキにあります",
+        "this_card_is_already_in_the_deck": "このカードはすでにデッキにあります",
+        "incomplete_deck": "デッキが不完全",
+        "please_add_x_more_cards_to_the_deck_before_opening_it_in_clash_royale": "Clash Royaleで開く前にあと $numberOfCards 枚のカードをデッキに追加してください",
+        "please_add_x_more_cards_to_the_deck_before_sharing_it": "共有する前にあと $numberOfCards 枚のカードをデッキに追加してください"
+      }
+    }
+  },
+  "credits": {
+    "title": "クレジット",
+    "app_icon": "アプリアイコン: $author",
+    "app_license": "このアプリは $license ライセンスの下で提供されています",
+    "tools_icons": "ツールアイコン: $author",
+    "ads_disclaimer": "広告はサーバー費用の支払いとアプリ開発のサポートのために表示しています。\\n画面下部に小さなバナーが表示されるだけで、Toolboxの使用を妨げるものではありません。",
+    "more_apps_and_services": "その他のアプリとサービス",
+    "view_licenses": "ライセンスを見る",
+    "special_thanks": "特別感謝",
+    "contribute_on_github": "GitHubで貢献",
+    "email_copied_to_clipboard": "メールアドレスをクリップボードにコピーしました",
+    "made_with_love_in_switzerland": "スイスから愛を込めて",
+    "made_with_love_in_switzerland_description": "スイスで開発、世界中で使用。\nToolboxをご利用いただきありがとうございます。\n気に入っていただけたら、Play StoreまたはApp Storeにレビューを残していただけると大変励みになります。\nアプリの改善を続けるための大きなモチベーションになります。",
+    "translations": {
+      "title": "翻訳",
+      "english": "英語: $author",
+      "french": "フランス語: $author"
+    }
+  }
+}
