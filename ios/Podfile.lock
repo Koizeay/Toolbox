@@ -46,7 +46,7 @@ PODS:
   - Flutter (1.0.0)
   - flutter_compass (0.0.1):
     - Flutter
-  - flutter_file_dialog (0.0.1):
+  - flutter_file_dialog (3.3.0):
     - Flutter
   - flutter_icmp_ping (0.0.1):
     - Flutter
@@ -64,16 +64,16 @@ PODS:
   - flutter_sound_core (9.28.0)
   - flutter_tts (0.0.1):
     - Flutter
-  - flutter_zxing (0.0.1):
+  - flutter_zxing (3.0.1):
     - Flutter
   - geolocator_apple (1.2.0):
     - Flutter
     - FlutterMacOS
-  - Google-Mobile-Ads-SDK (12.2.0):
+  - Google-Mobile-Ads-SDK (13.9.0):
     - GoogleUserMessagingPlatform (>= 1.1)
-  - google_mobile_ads (6.0.0):
+  - google_mobile_ads (9.1.0):
     - Flutter
-    - Google-Mobile-Ads-SDK (~> 12.2.0)
+    - Google-Mobile-Ads-SDK (~> 13.7)
     - webview_flutter_wkwebview
   - GoogleUserMessagingPlatform (3.1.0)
   - image_picker_ios (0.0.1):
@@ -116,7 +116,7 @@ PODS:
 DEPENDENCIES:
   - audio_streamer (from `.symlinks/plugins/audio_streamer/ios`)
   - audioplayers_darwin (from `.symlinks/plugins/audioplayers_darwin/darwin`)
-  - camera_avfoundation (from `.symlinks/plugins/camera_avfoundation/ios`)
+  - camera_avfoundation (from `.symlinks/plugins/camera_avfoundation/darwin`)
   - device_info_plus (from `.symlinks/plugins/device_info_plus/ios`)
   - file_picker (from `.symlinks/plugins/file_picker/ios`)
   - Flutter (from `Flutter`)
@@ -164,7 +164,7 @@ EXTERNAL SOURCES:
   audioplayers_darwin:
     :path: ".symlinks/plugins/audioplayers_darwin/darwin"
   camera_avfoundation:
-    :path: ".symlinks/plugins/camera_avfoundation/ios"
+    :path: ".symlinks/plugins/camera_avfoundation/darwin"
   device_info_plus:
     :path: ".symlinks/plugins/device_info_plus/ios"
   file_picker:
@@ -220,46 +220,46 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: eec6cd8f73b242b59e34153a606a909eb9864b14
-  audio_streamer: 7a5aa15f0b48a7a0cb44eb23b5bbfcbfc2eb8171
-  audioplayers_darwin: 4027b33a8f471d996c13f71cb77f0b1583b5d923
-  camera_avfoundation: 281867ff09f1da66f031a184ecfbc6f2e625c9f5
-  device_info_plus: bf2e3232933866d73fe290f2942f2156cdd10342
+  audio_streamer: 85e5b27e443525fcfe375052132327539c89d19a
+  audioplayers_darwin: 4f9ca89d92d3d21cec7ec580e78ca888e5fb68bd
+  camera_avfoundation: 968a9a5323c79a99c166ad9d7866bfd2047b5a9b
+  device_info_plus: 21fcca2080fbcd348be798aa36c3e5ed849eefbe
   DKImagePickerController: 946cec48c7873164274ecc4624d19e3da4c1ef3c
   DKPhotoGallery: b3834fecb755ee09a593d7c9e389d8b5d6deed60
-  file_picker: b159e0c068aef54932bb15dc9fd1571818edaf49
-  Flutter: cabc95a1d2626b1b06e7179b784ebcf0c0cde467
-  flutter_compass: cbbd285cea1584c7ac9c4e0c3e1f17cbea55e855
-  flutter_file_dialog: 4c014a45b105709a27391e266c277d7e588e9299
-  flutter_icmp_ping: 2b159955eee0c487c766ad83fec224ae35e7c935
-  flutter_native_splash: df59bb2e1421aa0282cb2e95618af4dcb0c56c29
-  flutter_osm_plugin: 60be722901333b6107275c9c51ffb79167b6d99d
-  flutter_sound: 82aba29055d6feba684d08906e0623217b87bcd3
+  file_picker: a0560bc09d61de87f12d246fc47d2119e6ef37be
+  Flutter: 71a624a5bc0c04062bf19101d501e466baf2fb47
+  flutter_compass: b236ab69b61545cce89fd58527f401a7587d5cc1
+  flutter_file_dialog: a8b3b3d17ebb81045e4722bb127b8c2ddd27fcfe
+  flutter_icmp_ping: 47c1df3440c18ddd39fc457e607bb3b42d4a339f
+  flutter_native_splash: c32d145d68aeda5502d5f543ee38c192065986cf
+  flutter_osm_plugin: 10e3da6f02c314759e4e8d8af33f5d7e6039e042
+  flutter_sound: b9236a5875299aaa4cef1690afd2f01d52a3f890
   flutter_sound_core: 427465f72d07ab8c3edbe8ffdde709ddacd3763c
-  flutter_tts: 0f492aab6accf87059b72354fcb4ba934304771d
-  flutter_zxing: d527c3ff9c7f3606dd29a7ec8c4055f7daa088c5
-  geolocator_apple: 66b711889fd333205763b83c9dcf0a57a28c7afd
-  Google-Mobile-Ads-SDK: 1dfb0c3cb46c7e2b00b0f4de74a1e06d9ea25d67
-  google_mobile_ads: cab27248050510554aa646195eacc393ce7406ad
+  flutter_tts: b88dbc8655d3dc961bc4a796e4e16a4cc1795833
+  flutter_zxing: f3a9ba9f546fa9d84a8e14734efee8899ab361dc
+  geolocator_apple: ab36aa0e8b7d7a2d7639b3b4e48308394e8cef5e
+  Google-Mobile-Ads-SDK: cec761d0da669c462bcc19cd16c747498b9f39f7
+  google_mobile_ads: 6b1c16497394528f4a59e76e2fc947cb32b101e2
   GoogleUserMessagingPlatform: befe603da6501006420c206222acd449bba45a9c
-  image_picker_ios: 4f2f91b01abdb52842a8e277617df877e40f905b
-  map_launcher: 8a4e484aaddff55680a7da9bc9e25f512067fb87
-  network_info_plus: 6613d9d7cdeb0e6f366ed4dbe4b3c51c52d567a9
+  image_picker_ios: e0ece4aa2a75771a7de3fa735d26d90817041326
+  map_launcher: 8051ad5783913cafce93f2414c6858f2904fd8df
+  network_info_plus: cf61925ab5205dce05a4f0895989afdb6aade5fc
   OSMFlutterFramework: 2f1260ac2854d3398b92403f2d5e012b4ca2c620
-  package_info_plus: c0502532a26c7662a62a356cebe2692ec5fe4ec4
-  path_provider_foundation: 0b743cbb62d8e47eab856f09262bb8c1ddcfe6ba
-  permission_handler_apple: 9878588469a2b0d0fc1e048d9f43605f92e6cec2
+  package_info_plus: af8e2ca6888548050f16fa2f1938db7b5a5df499
+  path_provider_foundation: bb55f6dbba17d0dccd6737fe6f7f34fbd0376880
+  permission_handler_apple: 4ed2196e43d0651e8ff7ca3483a069d469701f2d
   Polyline: 2a1f29f87f8d9b7de868940f4f76deb8c678a5b1
-  record_ios: 840d21cce013c5a3b2168b74a54ebdb4136359e2
+  record_ios: f75fa1d57f840012775c0e93a38a7f3ceea1a374
   SDWebImage: e9fc87c1aab89a8ab1bbd74eba378c6f53be8abf
-  share_plus: 8b6f8b3447e494cca5317c8c3073de39b3600d1f
-  shared_preferences_foundation: 5086985c1d43c5ba4d5e69a4e8083a389e2909e6
+  share_plus: 50da8cb520a8f0f65671c6c6a99b3617ed10a58a
+  shared_preferences_foundation: 7036424c3d8ec98dfe75ff1667cb0cd531ec82bb
   SwiftyGif: 706c60cf65fa2bc5ee0313beece843c8eb8194d4
-  url_launcher_ios: bb13df5870e8c4234ca12609d04010a21be43dfa
-  vibration: 3797858f8cbf53d841e189ef8bd533d96e4ca93c
-  wakelock_plus: 76957ab028e12bfa4e66813c99e46637f367fc7e
-  webview_flutter_wkwebview: 29eb20d43355b48fe7d07113835b9128f84e3af4
+  url_launcher_ios: 7a95fa5b60cc718a708b8f2966718e93db0cef1b
+  vibration: 69774ad57825b11c951ee4c46155f455d7a592ce
+  wakelock_plus: e29112ab3ef0b318e58cfa5c32326458be66b556
+  webview_flutter_wkwebview: 8ebf4fded22593026f7dbff1fbff31ea98573c8d
   Yams: e10dae147f517ed57ecae37c5e8681bdf8fcab65
 
 PODFILE CHECKSUM: 7030cafc7f74081f8aec5c028babe5e060ecf8bc
 
-COCOAPODS: 1.16.2
+COCOAPODS: 1.17.0
