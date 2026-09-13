@@ -8,3 +8,7 @@
  -keep class com.google.firebase.** { *; }
  -dontwarn io.flutter.embedding.**
  -ignorewarnings
+
+-keep class * extends androidx.room.RoomDatabase {
+    <init>();
+}
