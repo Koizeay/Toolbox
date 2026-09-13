@@ -8,6 +8,11 @@ The app is developed to support both Android and iOS, no web or desktop support 
 ## Download
 You can download **Toolbox** on Android and iOS via the following links
 
+**Official download page**
+- [Toolbox on JTU.ME](https://jtu.me/@toolbox)
+
+**Other links**
+
 - [Play Store (Android)](https://play.google.com/store/apps/details?id=com.koizeay.toolbox)
 - [App Store (iOS)](https://apps.apple.com/app/toolbox-by-koizeay/id6466197390)
 - [GitHub Releases (Android APK)](https://github.com/Koizeay/Toolbox/releases)
