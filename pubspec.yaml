@@ -19,7 +19,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.23.0+29
 
 environment:
-  sdk: '>=2.19.6 <3.0.0'
+  sdk: '>=3.10.0 <4.0.0'
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -53,7 +53,7 @@ dependencies:
   gauges: ^1.0.0
   vibration: ^3.1.4
   flippy: ^0.1.1
-  dartssh2: ^2.13.0
+  dartssh2: ^4.1.0
   xterm: ^4.0.0
   shared_preferences: ^2.5.3
   flutter_fortune_wheel: ^1.3.2
@@ -67,10 +67,10 @@ dependencies:
   geolocator: ^14.0.1
   path_provider: ^2.1.5
   aes_crypt_null_safe: ^3.1.1
-  flutter_file_dialog: ^3.0.2
+  flutter_file_dialog: ^3.3.2
   syncfusion_flutter_gauges: ^31.2.5
   webview_flutter: ^4.13.0
-  flutter_osm_plugin: ^1.4.3
+  flutter_osm_plugin: ^1.4.6
   wakelock_plus: ^1.4.0
   map_launcher: ^4.4.2
   image_picker: ^1.2.0
@@ -82,10 +82,10 @@ dependencies:
   flutter_drawing_board: ^0.9.8
   flutter_tex: ^5.2.6
   flutter_compass: ^0.8.1
-  flutter_zxing: ^2.2.1
+  flutter_zxing: ^3.0.1
   image: ^4.5.4
   package_info_plus: ^9.0.0
-  google_mobile_ads: ^6.0.0
+  google_mobile_ads: ^9.1.0
   flutter_svg: ^2.2.4
 
 dev_dependencies:
@@ -147,3 +147,6 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+dependency_overrides:
+  pointycastle: ^4.0.0
