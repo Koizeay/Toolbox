@@ -758,10 +758,8 @@ class _TranslationsToolsUrlshortenerJa implements TranslationsToolsUrlshortenerE
 	@override String by_clicking_you_accept({required Object url}) => '短縮ボタンをタップすると、以下のリンクから利用可能な "${url}" の利用規約に同意したことになります。';
 	@override String get terms_of_service => '利用規約';
 	@override String get shorten => '短縮';
-	@override String get view_statistics_of_a_link => 'リンクの統計を見る';
-	@override String get view_statistics_of_a_link_message => 'JTU.MEウェブサイトの統計ページでリンクの統計（総アクセス数、作成日、最終アクセス日など）を確認できます';
 	@override String get more_features => 'さらなる機能';
-	@override String get more_features_message => '公式JTU.MEウェブサイトからテキスト共有、カスタムリンクなどの追加機能を使用してください';
+	@override String get more_features_message => '公式JTU.MEウェブサイトからテキスト共有、リンクインバイオプロフィールなどの追加機能を使用してください';
 	@override String get open => '開く';
 	@override String get options => 'オプション (任意)';
 	@override String get access_password => 'アクセスパスワード';
@@ -773,6 +771,7 @@ class _TranslationsToolsUrlshortenerJa implements TranslationsToolsUrlshortenerE
 	@override String get no_account_message => '公式JTU.MEウェブサイトで無料アカウントを作成できます。';
 	@override late final _TranslationsToolsUrlshortenerErrorJa error = _TranslationsToolsUrlshortenerErrorJa._(_root);
 	@override String get management_info => '管理情報';
+	@override String get manage_with_account => '統計情報を確認したり、このリンクを管理したりするには、公式サイトでJTU.MEアカウントをご利用ください。';
 }
 
 // Path: tools.counter
@@ -1049,10 +1048,8 @@ class _TranslationsToolsPastebinJa implements TranslationsToolsPastebinEn {
 	@override String by_clicking_you_accept({required Object url}) => '送信ボタンをタップすると、以下のリンクから利用可能な "${url}" の利用規約に同意したことになります。';
 	@override String get terms_of_service => '利用規約';
 	@override String get send => '送信';
-	@override String get view_statistics_of_a_link => 'リンクの統計を見る';
-	@override String get view_statistics_of_a_link_message => 'JTU.MEウェブサイトの統計ページでリンクの統計（総アクセス数、作成日、最終アクセス日など）を確認できます';
 	@override String get more_features => 'さらなる機能';
-	@override String get more_features_message => '公式JTU.MEウェブサイトからURL短縮、カスタムリンクなどの追加機能を使用してください';
+	@override String get more_features_message => '公式JTU.MEウェブサイトからURL短縮、リンクインバイオプロフィールなどの追加機能を使用してください';
 	@override String get open => '開く';
 	@override String get options => 'オプション (任意)';
 	@override String get access_password => 'アクセスパスワード';
@@ -1064,6 +1061,7 @@ class _TranslationsToolsPastebinJa implements TranslationsToolsPastebinEn {
 	@override String get no_account_message => '公式JTU.MEウェブサイトで無料アカウントを作成して、リンクやペーストを管理できます。';
 	@override late final _TranslationsToolsPastebinErrorJa error = _TranslationsToolsPastebinErrorJa._(_root);
 	@override String get management_info => '管理情報';
+	@override String get manage_with_account => '統計情報を確認したり、このリンクを管理したりするには、公式サイトでJTU.MEアカウントをご利用ください。';
 }
 
 // Path: tools.percentagecalculator
@@ -2124,10 +2122,8 @@ extension on TranslationsJa {
 			case 'tools.urlshortener.by_clicking_you_accept': return ({required Object url}) => '短縮ボタンをタップすると、以下のリンクから利用可能な "${url}" の利用規約に同意したことになります。';
 			case 'tools.urlshortener.terms_of_service': return '利用規約';
 			case 'tools.urlshortener.shorten': return '短縮';
-			case 'tools.urlshortener.view_statistics_of_a_link': return 'リンクの統計を見る';
-			case 'tools.urlshortener.view_statistics_of_a_link_message': return 'JTU.MEウェブサイトの統計ページでリンクの統計（総アクセス数、作成日、最終アクセス日など）を確認できます';
 			case 'tools.urlshortener.more_features': return 'さらなる機能';
-			case 'tools.urlshortener.more_features_message': return '公式JTU.MEウェブサイトからテキスト共有、カスタムリンクなどの追加機能を使用してください';
+			case 'tools.urlshortener.more_features_message': return '公式JTU.MEウェブサイトからテキスト共有、リンクインバイオプロフィールなどの追加機能を使用してください';
 			case 'tools.urlshortener.open': return '開く';
 			case 'tools.urlshortener.options': return 'オプション (任意)';
 			case 'tools.urlshortener.access_password': return 'アクセスパスワード';
@@ -2143,6 +2139,7 @@ extension on TranslationsJa {
 			case 'tools.urlshortener.error.unauthorized': return '認証に失敗しました。認証情報を確認してください。';
 			case 'tools.urlshortener.error.invalid_expiration_date': return '有効期限は未来の日付である必要があります。';
 			case 'tools.urlshortener.management_info': return '管理情報';
+			case 'tools.urlshortener.manage_with_account': return '統計情報を確認したり、このリンクを管理したりするには、公式サイトでJTU.MEアカウントをご利用ください。';
 			case 'tools.counter.title': return 'カウンター';
 			case 'tools.counter.add_button': return 'ボタンを追加';
 			case 'tools.counter.remove_button': return 'ボタンを削除';
@@ -2269,13 +2266,13 @@ extension on TranslationsJa {
 			case 'tools.areacalculator.inputs.radius': return '半径';
 			case 'tools.areacalculator.inputs.major_axis': return '長軸';
 			case 'tools.areacalculator.inputs.minor_axis': return '短軸';
+			case 'tools.areacalculator.inputs.side': return '辺';
 			default: return null;
 		}
 	}
 
 	dynamic _flatMapFunction$1(String path) {
 		switch (path) {
-			case 'tools.areacalculator.inputs.side': return '辺';
 			case 'tools.areacalculator.inputs.base': return '底辺';
 			case 'tools.areacalculator.inputs.height': return '高さ';
 			case 'tools.areacalculator.inputs.diagonal_1': return '対角線1';
@@ -2343,10 +2340,8 @@ extension on TranslationsJa {
 			case 'tools.pastebin.by_clicking_you_accept': return ({required Object url}) => '送信ボタンをタップすると、以下のリンクから利用可能な "${url}" の利用規約に同意したことになります。';
 			case 'tools.pastebin.terms_of_service': return '利用規約';
 			case 'tools.pastebin.send': return '送信';
-			case 'tools.pastebin.view_statistics_of_a_link': return 'リンクの統計を見る';
-			case 'tools.pastebin.view_statistics_of_a_link_message': return 'JTU.MEウェブサイトの統計ページでリンクの統計（総アクセス数、作成日、最終アクセス日など）を確認できます';
 			case 'tools.pastebin.more_features': return 'さらなる機能';
-			case 'tools.pastebin.more_features_message': return '公式JTU.MEウェブサイトからURL短縮、カスタムリンクなどの追加機能を使用してください';
+			case 'tools.pastebin.more_features_message': return '公式JTU.MEウェブサイトからURL短縮、リンクインバイオプロフィールなどの追加機能を使用してください';
 			case 'tools.pastebin.open': return '開く';
 			case 'tools.pastebin.options': return 'オプション (任意)';
 			case 'tools.pastebin.access_password': return 'アクセスパスワード';
@@ -2362,6 +2357,7 @@ extension on TranslationsJa {
 			case 'tools.pastebin.error.unauthorized': return '認証に失敗しました。認証情報を確認してください。';
 			case 'tools.pastebin.error.invalid_expiration_date': return '有効期限は未来の日付である必要があります。';
 			case 'tools.pastebin.management_info': return '管理情報';
+			case 'tools.pastebin.manage_with_account': return '統計情報を確認したり、このリンクを管理したりするには、公式サイトでJTU.MEアカウントをご利用ください。';
 			case 'tools.percentagecalculator.title': return 'パーセント計算';
 			case 'tools.percentagecalculator.result': return '結果';
 			case 'tools.percentagecalculator.percentage': return 'パーセント';

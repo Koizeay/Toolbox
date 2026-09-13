@@ -474,10 +474,8 @@
       "by_clicking_you_accept": "短縮ボタンをタップすると、以下のリンクから利用可能な \"$url\" の利用規約に同意したことになります。",
       "terms_of_service": "利用規約",
       "shorten": "短縮",
-      "view_statistics_of_a_link": "リンクの統計を見る",
-      "view_statistics_of_a_link_message": "JTU.MEウェブサイトの統計ページでリンクの統計（総アクセス数、作成日、最終アクセス日など）を確認できます",
       "more_features": "さらなる機能",
-      "more_features_message": "公式JTU.MEウェブサイトからテキスト共有、カスタムリンクなどの追加機能を使用してください",
+      "more_features_message": "公式JTU.MEウェブサイトからテキスト共有、リンクインバイオプロフィールなどの追加機能を使用してください",
       "open": "開く",
       "options": "オプション (任意)",
       "access_password": "アクセスパスワード",
@@ -494,7 +492,8 @@
         "unauthorized": "認証に失敗しました。認証情報を確認してください。",
         "invalid_expiration_date": "有効期限は未来の日付である必要があります。"
       },
-      "management_info": "管理情報"
+      "management_info": "管理情報",
+      "manage_with_account": "統計情報を確認したり、このリンクを管理したりするには、公式サイトでJTU.MEアカウントをご利用ください。"
     },
     "counter": {
       "title": "カウンター",
@@ -741,10 +740,8 @@
       "by_clicking_you_accept": "送信ボタンをタップすると、以下のリンクから利用可能な \"$url\" の利用規約に同意したことになります。",
       "terms_of_service": "利用規約",
       "send": "送信",
-      "view_statistics_of_a_link": "リンクの統計を見る",
-      "view_statistics_of_a_link_message": "JTU.MEウェブサイトの統計ページでリンクの統計（総アクセス数、作成日、最終アクセス日など）を確認できます",
       "more_features": "さらなる機能",
-      "more_features_message": "公式JTU.MEウェブサイトからURL短縮、カスタムリンクなどの追加機能を使用してください",
+      "more_features_message": "公式JTU.MEウェブサイトからURL短縮、リンクインバイオプロフィールなどの追加機能を使用してください",
       "open": "開く",
       "options": "オプション (任意)",
       "access_password": "アクセスパスワード",
@@ -761,7 +758,8 @@
         "unauthorized": "認証に失敗しました。認証情報を確認してください。",
         "invalid_expiration_date": "有効期限は未来の日付である必要があります。"
       },
-      "management_info": "管理情報"
+      "management_info": "管理情報",
+      "manage_with_account": "統計情報を確認したり、このリンクを管理したりするには、公式サイトでJTU.MEアカウントをご利用ください。"
     },
     "percentagecalculator": {
       "title": "パーセント計算",

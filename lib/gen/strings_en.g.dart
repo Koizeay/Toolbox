@@ -1425,17 +1425,11 @@ class TranslationsToolsUrlshortenerEn {
 	/// en: 'Shorten'
 	String get shorten => 'Shorten';
 
-	/// en: 'View statistics of a link'
-	String get view_statistics_of_a_link => 'View statistics of a link';
-
-	/// en: 'You can view the statistics of a link (total hits, creation date, last access date, etc.) on the statistics page from the JTU.ME website'
-	String get view_statistics_of_a_link_message => 'You can view the statistics of a link (total hits, creation date, last access date, etc.) on the statistics page from the JTU.ME website';
-
 	/// en: 'More features'
 	String get more_features => 'More features';
 
-	/// en: 'Use additional features such as text sharing, custom links, and more via the official JTU.ME website'
-	String get more_features_message => 'Use additional features such as text sharing, custom links, and more via the official JTU.ME website';
+	/// en: 'Use additional features such as text sharing, link-in-bio profile, and more via the official JTU.ME website'
+	String get more_features_message => 'Use additional features such as text sharing, link-in-bio profile, and more via the official JTU.ME website';
 
 	/// en: 'Open'
 	String get open => 'Open';
@@ -1468,6 +1462,9 @@ class TranslationsToolsUrlshortenerEn {
 
 	/// en: 'Management info'
 	String get management_info => 'Management info';
+
+	/// en: 'To view statistics and manage this link, use your JTU.ME account on the official website'
+	String get manage_with_account => 'To view statistics and manage this link, use your JTU.ME account on the official website';
 }
 
 // Path: tools.counter
@@ -2031,17 +2028,11 @@ class TranslationsToolsPastebinEn {
 	/// en: 'Send'
 	String get send => 'Send';
 
-	/// en: 'View statistics of a link'
-	String get view_statistics_of_a_link => 'View statistics of a link';
-
-	/// en: 'You can view the statistics of a link (total hits, creation date, last access date, etc.) on the statistics page from the JTU.ME website'
-	String get view_statistics_of_a_link_message => 'You can view the statistics of a link (total hits, creation date, last access date, etc.) on the statistics page from the JTU.ME website';
-
 	/// en: 'More features'
 	String get more_features => 'More features';
 
-	/// en: 'Use additional features such as URL shortening, custom links, and more via the official JTU.ME website'
-	String get more_features_message => 'Use additional features such as URL shortening, custom links, and more via the official JTU.ME website';
+	/// en: 'Use additional features such as URL shortening, link-in-bio profile, and more via the official JTU.ME website'
+	String get more_features_message => 'Use additional features such as URL shortening, link-in-bio profile, and more via the official JTU.ME website';
 
 	/// en: 'Open'
 	String get open => 'Open';
@@ -2074,6 +2065,9 @@ class TranslationsToolsPastebinEn {
 
 	/// en: 'Management info'
 	String get management_info => 'Management info';
+
+	/// en: 'To view statistics and manage this link, use your JTU.ME account on the official website'
+	String get manage_with_account => 'To view statistics and manage this link, use your JTU.ME account on the official website';
 }
 
 // Path: tools.percentagecalculator
@@ -3638,10 +3632,8 @@ extension on Translations {
 			case 'tools.urlshortener.by_clicking_you_accept': return ({required Object url}) => 'By clicking the shorten button, you agree to the terms of service of "${url}" available via the link below.';
 			case 'tools.urlshortener.terms_of_service': return 'Terms of service';
 			case 'tools.urlshortener.shorten': return 'Shorten';
-			case 'tools.urlshortener.view_statistics_of_a_link': return 'View statistics of a link';
-			case 'tools.urlshortener.view_statistics_of_a_link_message': return 'You can view the statistics of a link (total hits, creation date, last access date, etc.) on the statistics page from the JTU.ME website';
 			case 'tools.urlshortener.more_features': return 'More features';
-			case 'tools.urlshortener.more_features_message': return 'Use additional features such as text sharing, custom links, and more via the official JTU.ME website';
+			case 'tools.urlshortener.more_features_message': return 'Use additional features such as text sharing, link-in-bio profile, and more via the official JTU.ME website';
 			case 'tools.urlshortener.open': return 'Open';
 			case 'tools.urlshortener.options': return 'Options (optional)';
 			case 'tools.urlshortener.access_password': return 'Access password';
@@ -3657,6 +3649,7 @@ extension on Translations {
 			case 'tools.urlshortener.error.unauthorized': return 'Unauthorized. Please check your credentials.';
 			case 'tools.urlshortener.error.invalid_expiration_date': return 'The expiration date must be in the future.';
 			case 'tools.urlshortener.management_info': return 'Management info';
+			case 'tools.urlshortener.manage_with_account': return 'To view statistics and manage this link, use your JTU.ME account on the official website';
 			case 'tools.counter.title': return 'Counter';
 			case 'tools.counter.add_button': return 'Add button';
 			case 'tools.counter.remove_button': return 'Remove button';
@@ -3783,13 +3776,13 @@ extension on Translations {
 			case 'tools.areacalculator.inputs.radius': return 'Radius';
 			case 'tools.areacalculator.inputs.major_axis': return 'Major axis';
 			case 'tools.areacalculator.inputs.minor_axis': return 'Minor axis';
+			case 'tools.areacalculator.inputs.side': return 'Side';
 			default: return null;
 		}
 	}
 
 	dynamic _flatMapFunction$1(String path) {
 		switch (path) {
-			case 'tools.areacalculator.inputs.side': return 'Side';
 			case 'tools.areacalculator.inputs.base': return 'Base';
 			case 'tools.areacalculator.inputs.height': return 'Height';
 			case 'tools.areacalculator.inputs.diagonal_1': return 'Diagonal 1';
@@ -3857,10 +3850,8 @@ extension on Translations {
 			case 'tools.pastebin.by_clicking_you_accept': return ({required Object url}) => 'By clicking the send button, you agree to the terms of service of "${url}" available via the link below.';
 			case 'tools.pastebin.terms_of_service': return 'Terms of service';
 			case 'tools.pastebin.send': return 'Send';
-			case 'tools.pastebin.view_statistics_of_a_link': return 'View statistics of a link';
-			case 'tools.pastebin.view_statistics_of_a_link_message': return 'You can view the statistics of a link (total hits, creation date, last access date, etc.) on the statistics page from the JTU.ME website';
 			case 'tools.pastebin.more_features': return 'More features';
-			case 'tools.pastebin.more_features_message': return 'Use additional features such as URL shortening, custom links, and more via the official JTU.ME website';
+			case 'tools.pastebin.more_features_message': return 'Use additional features such as URL shortening, link-in-bio profile, and more via the official JTU.ME website';
 			case 'tools.pastebin.open': return 'Open';
 			case 'tools.pastebin.options': return 'Options (optional)';
 			case 'tools.pastebin.access_password': return 'Access password';
@@ -3876,6 +3867,7 @@ extension on Translations {
 			case 'tools.pastebin.error.unauthorized': return 'Unauthorized. Please check your credentials.';
 			case 'tools.pastebin.error.invalid_expiration_date': return 'The expiration date must be in the future.';
 			case 'tools.pastebin.management_info': return 'Management info';
+			case 'tools.pastebin.manage_with_account': return 'To view statistics and manage this link, use your JTU.ME account on the official website';
 			case 'tools.percentagecalculator.title': return 'Percentage calculator';
 			case 'tools.percentagecalculator.result': return 'Result';
 			case 'tools.percentagecalculator.percentage': return 'Percentage';

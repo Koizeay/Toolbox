@@ -474,10 +474,8 @@
       "by_clicking_you_accept": "En cliquant sur le bouton « raccourcir », vous acceptez les conditions d'utilisation de \"$url\" disponibles via le lien ci-dessous.",
       "terms_of_service": "Conditions d'utilisation (ToS)",
       "shorten": "Raccourcir",
-      "view_statistics_of_a_link": "Voir les statistiques d'un lien",
-      "view_statistics_of_a_link_message": "Vous pouvez consulter les statistiques d'un lien (nombre total de visites, date de création, date de dernier accès, etc.) sur la page des statistiques de JTU.ME",
       "more_features": "Plus de fonctionnalités",
-      "more_features_message": "Utiliser des fonctions supplémentaires telles que le partage de texte, des liens personnalisés, et plus via le site officiel JTU.ME",
+      "more_features_message": "Utiliser des fonctions supplémentaires telles que le partage de texte, le profil link-in-bio, et plus via le site officiel JTU.ME",
       "open": "Ouvrir",
       "options": "Options (optionnel)",
       "access_password": "Mot de passe d'accès",
@@ -494,7 +492,8 @@
         "unauthorized": "Non autorisé. Veuillez vérifier vos identifiants.",
         "invalid_expiration_date": "La date d'expiration doit être dans le futur."
       },
-      "management_info": "Infos de gestion"
+      "management_info": "Infos de gestion",
+      "manage_with_account": "Pour consulter les statistiques et gérer ce lien, utilisez votre compte JTU.ME sur le site officiel"
     },
     "counter": {
       "title": "Compteur",
@@ -741,10 +740,8 @@
       "by_clicking_you_accept": "En cliquant sur le bouton « envoyer », vous acceptez les conditions d'utilisation de \"$url\" disponibles via le lien ci-dessous.",
       "terms_of_service": "Conditions d'utilisation (ToS)",
       "send": "Envoyer",
-      "view_statistics_of_a_link": "Voir les statistiques d'un lien",
-      "view_statistics_of_a_link_message": "Vous pouvez consulter les statistiques d'un lien (nombre total de visites, date de création, date de dernier accès, etc.) sur la page des statistiques de JTU.ME",
       "more_features": "Plus de fonctionnalités",
-      "more_features_message": "Utiliser des fonctions supplémentaires telles que le raccourcissement d'URL, des liens personnalisés, et plus via le site officiel JTU.ME",
+      "more_features_message": "Utiliser des fonctions supplémentaires telles que le raccourcissement d'URL, le profil link-in-bio, et plus via le site officiel JTU.ME",
       "open": "Ouvrir",
       "options": "Options (optionnel)",
       "access_password": "Mot de passe d'accès",
@@ -761,7 +758,8 @@
         "unauthorized": "Non autorisé. Veuillez vérifier vos identifiants.",
         "invalid_expiration_date": "La date d'expiration doit être dans le futur."
       },
-      "management_info": "Infos de gestion"
+      "management_info": "Infos de gestion",
+      "manage_with_account": "Pour consulter les statistiques et gérer ce lien, utilisez votre compte JTU.ME sur le site officiel"
     },
     "percentagecalculator": {
       "title": "Calculateur de pourcentage",

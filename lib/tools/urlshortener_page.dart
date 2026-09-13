@@ -26,7 +26,6 @@ class _UrlShortenerPage extends State<UrlShortenerPage> {
   String serverUrl = "https://jtu.me";
   String serverShortenApiEndpoint = "/_/api/shorten";
   String serverTosEndpoint = "/_/tos";
-  String serverStatisticsEndpoint = "/_/statistics";
 
   UrlShortenerResult? result;
 
@@ -238,29 +237,6 @@ class _UrlShortenerPage extends State<UrlShortenerPage> {
       context,
       t.tools.urlshortener.more_features,
       t.tools.urlshortener.more_features_message,
-      actions,
-    );
-  }
-
-  void showViewStatisticsDialog(BuildContext context) {
-    final actions = [
-      TextButton(
-        onPressed: () => Navigator.pop(context),
-        child: Text(t.generic.cancel),
-      ),
-      TextButton(
-        onPressed: () {
-          launchUrlInBrowser("$serverUrl$serverStatisticsEndpoint");
-          Navigator.pop(context);
-        },
-        child: Text(t.tools.pastebin.open),
-      ),
-    ];
-
-    showCustomButtonsTextDialog(
-      context,
-      t.tools.pastebin.view_statistics_of_a_link,
-      t.tools.pastebin.view_statistics_of_a_link_message,
       actions,
     );
   }
@@ -609,6 +585,9 @@ class _UrlShortenerPage extends State<UrlShortenerPage> {
   }
 
   Widget _managementCard(ColorScheme colorScheme) {
+    final managementPassword = result?.managementPassword ?? "";
+    final hasManagementPassword = managementPassword.isNotEmpty && managementPassword != "-";
+
     return Card(
       elevation: 2,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
@@ -659,60 +638,85 @@ class _UrlShortenerPage extends State<UrlShortenerPage> {
               ),
             ),
             const SizedBox(height: 8),
-            InkWell(
-              borderRadius: BorderRadius.circular(8),
-              onTap: () {
-                Clipboard.setData(ClipboardData(text: result?.managementPassword ?? ""));
-                ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(t.tools.urlshortener.link_password_copied_to_clipboard)),);
-              },
-              child: Container(
-                padding: const EdgeInsets.all(12),
+            if (hasManagementPassword) ...[
+              InkWell(
+                borderRadius: BorderRadius.circular(8),
+                onTap: () {
+                  Clipboard.setData(ClipboardData(text: managementPassword));
+                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(t.tools.urlshortener.link_password_copied_to_clipboard)),);
+                },
+                child: Container(
+                  padding: const EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                    color: colorScheme.primaryContainer,
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        t.tools.urlshortener.the_link_password_is,
+                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                          fontStyle: FontStyle.italic,
+                        ),
+                      ),
+                      Text(
+                        managementPassword,
+                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              const SizedBox(height: 12),
+              Container(
+                padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
-                  color: colorScheme.primaryContainer,
+                  color: colorScheme.primaryContainer.withOpacity(0.5),
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
-                      t.tools.urlshortener.the_link_password_is,
-                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                        fontStyle: FontStyle.italic,
-                      ),
-                    ),
-                    Text(
-                      result?.managementPassword ?? "",
-                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                        fontWeight: FontWeight.bold,
+                    Icon(Icons.info_outlined, size: 16, color: colorScheme.onSurfaceVariant),
+                    const SizedBox(width: 8),
+                    Expanded(
+                      child: Text(
+                        t.tools.urlshortener.link_password_hint_text,
+                        style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                          color: colorScheme.onSurfaceVariant,
+                          fontStyle: FontStyle.italic,
+                        ),
                       ),
                     ),
                   ],
                 ),
               ),
-            ),
-            const SizedBox(height: 12),
-            Container(
-              padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                color: colorScheme.primaryContainer.withOpacity(0.5),
-                borderRadius: BorderRadius.circular(8),
-              ),
-              child: Row(
-                children: [
-                  Icon(Icons.info_outlined, size: 16, color: colorScheme.onSurfaceVariant),
-                  const SizedBox(width: 8),
-                  Expanded(
-                    child: Text(
-                      t.tools.urlshortener.link_password_hint_text,
-                      style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                        color: colorScheme.onSurfaceVariant,
-                        fontStyle: FontStyle.italic,
+            ] else ...[
+              Container(
+                padding: const EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: colorScheme.primaryContainer.withOpacity(0.5),
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Row(
+                  children: [
+                    Icon(Icons.info_outlined, size: 16, color: colorScheme.onSurfaceVariant),
+                    const SizedBox(width: 8),
+                    Expanded(
+                      child: Text(
+                        t.tools.urlshortener.manage_with_account,
+                        style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                          color: colorScheme.onSurfaceVariant,
+                          fontStyle: FontStyle.italic,
+                        ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
+            ],
           ],
         ),
       ),
@@ -797,23 +801,10 @@ class _UrlShortenerPage extends State<UrlShortenerPage> {
                   ),
                 ),
                 const SizedBox(height: 8),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    TextButton.icon(
-                      icon: const Icon(Icons.bar_chart_outlined, size: 18),
-                      label: Text(t.tools.urlshortener.view_statistics_of_a_link),
-                      onPressed: () => showViewStatisticsDialog(context),
-                    ),
-                  ],
-                ),
                 TextButton.icon(
                   icon: const Icon(Icons.more_horiz_outlined,
                       size: 18),
                   label: Text(t.tools.urlshortener.more_features),
-                  style: TextButton.styleFrom(
-                    textStyle: const TextStyle(fontStyle: FontStyle.italic),
-                  ),
                   onPressed: () => showMoreFeaturesDialog(context),
                 ),
               ],

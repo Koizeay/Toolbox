@@ -474,10 +474,8 @@
       "by_clicking_you_accept": "By clicking the shorten button, you agree to the terms of service of \"$url\" available via the link below.",
       "terms_of_service": "Terms of service",
       "shorten": "Shorten",
-      "view_statistics_of_a_link": "View statistics of a link",
-      "view_statistics_of_a_link_message": "You can view the statistics of a link (total hits, creation date, last access date, etc.) on the statistics page from the JTU.ME website",
       "more_features": "More features",
-      "more_features_message": "Use additional features such as text sharing, custom links, and more via the official JTU.ME website",
+      "more_features_message": "Use additional features such as text sharing, link-in-bio profile, and more via the official JTU.ME website",
       "open": "Open",
       "options": "Options (optional)",
       "access_password": "Access password",
@@ -494,7 +492,8 @@
         "unauthorized": "Unauthorized. Please check your credentials.",
         "invalid_expiration_date": "The expiration date must be in the future."
       },
-      "management_info": "Management info"
+      "management_info": "Management info",
+      "manage_with_account": "To view statistics and manage this link, use your JTU.ME account on the official website"
     },
     "counter": {
       "title": "Counter",
@@ -741,10 +740,8 @@
       "by_clicking_you_accept": "By clicking the send button, you agree to the terms of service of \"$url\" available via the link below.",
       "terms_of_service": "Terms of service",
       "send": "Send",
-      "view_statistics_of_a_link": "View statistics of a link",
-      "view_statistics_of_a_link_message": "You can view the statistics of a link (total hits, creation date, last access date, etc.) on the statistics page from the JTU.ME website",
       "more_features": "More features",
-      "more_features_message": "Use additional features such as URL shortening, custom links, and more via the official JTU.ME website",
+      "more_features_message": "Use additional features such as URL shortening, link-in-bio profile, and more via the official JTU.ME website",
       "open": "Open",
       "options": "Options (optional)",
       "access_password": "Access password",
@@ -761,7 +758,8 @@
         "unauthorized": "Unauthorized. Please check your credentials.",
         "invalid_expiration_date": "The expiration date must be in the future."
       },
-      "management_info": "Management info"
+      "management_info": "Management info",
+      "manage_with_account": "To view statistics and manage this link, use your JTU.ME account on the official website"
     },
     "percentagecalculator": {
       "title": "Percentage calculator",

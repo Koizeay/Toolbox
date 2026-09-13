@@ -758,10 +758,8 @@ class _TranslationsToolsUrlshortenerFr implements TranslationsToolsUrlshortenerE
 	@override String by_clicking_you_accept({required Object url}) => 'En cliquant sur le bouton « raccourcir », vous acceptez les conditions d\'utilisation de "${url}" disponibles via le lien ci-dessous.';
 	@override String get terms_of_service => 'Conditions d\'utilisation (ToS)';
 	@override String get shorten => 'Raccourcir';
-	@override String get view_statistics_of_a_link => 'Voir les statistiques d\'un lien';
-	@override String get view_statistics_of_a_link_message => 'Vous pouvez consulter les statistiques d\'un lien (nombre total de visites, date de création, date de dernier accès, etc.) sur la page des statistiques de JTU.ME';
 	@override String get more_features => 'Plus de fonctionnalités';
-	@override String get more_features_message => 'Utiliser des fonctions supplémentaires telles que le partage de texte, des liens personnalisés, et plus via le site officiel JTU.ME';
+	@override String get more_features_message => 'Utiliser des fonctions supplémentaires telles que le partage de texte, le profil link-in-bio, et plus via le site officiel JTU.ME';
 	@override String get open => 'Ouvrir';
 	@override String get options => 'Options (optionnel)';
 	@override String get access_password => 'Mot de passe d\'accès';
@@ -773,6 +771,7 @@ class _TranslationsToolsUrlshortenerFr implements TranslationsToolsUrlshortenerE
 	@override String get no_account_message => 'Vous pouvez créer un compte gratuit sur le site officiel de JTU.ME';
 	@override late final _TranslationsToolsUrlshortenerErrorFr error = _TranslationsToolsUrlshortenerErrorFr._(_root);
 	@override String get management_info => 'Infos de gestion';
+	@override String get manage_with_account => 'Pour consulter les statistiques et gérer ce lien, utilisez votre compte JTU.ME sur le site officiel';
 }
 
 // Path: tools.counter
@@ -1049,10 +1048,8 @@ class _TranslationsToolsPastebinFr implements TranslationsToolsPastebinEn {
 	@override String by_clicking_you_accept({required Object url}) => 'En cliquant sur le bouton « envoyer », vous acceptez les conditions d\'utilisation de "${url}" disponibles via le lien ci-dessous.';
 	@override String get terms_of_service => 'Conditions d\'utilisation (ToS)';
 	@override String get send => 'Envoyer';
-	@override String get view_statistics_of_a_link => 'Voir les statistiques d\'un lien';
-	@override String get view_statistics_of_a_link_message => 'Vous pouvez consulter les statistiques d\'un lien (nombre total de visites, date de création, date de dernier accès, etc.) sur la page des statistiques de JTU.ME';
 	@override String get more_features => 'Plus de fonctionnalités';
-	@override String get more_features_message => 'Utiliser des fonctions supplémentaires telles que le raccourcissement d\'URL, des liens personnalisés, et plus via le site officiel JTU.ME';
+	@override String get more_features_message => 'Utiliser des fonctions supplémentaires telles que le raccourcissement d\'URL, le profil link-in-bio, et plus via le site officiel JTU.ME';
 	@override String get open => 'Ouvrir';
 	@override String get options => 'Options (optionnel)';
 	@override String get access_password => 'Mot de passe d\'accès';
@@ -1064,6 +1061,7 @@ class _TranslationsToolsPastebinFr implements TranslationsToolsPastebinEn {
 	@override String get no_account_message => 'Vous pouvez créer un compte gratuit sur le site officiel de JTU.ME pour gérer vos liens et vos pastes.';
 	@override late final _TranslationsToolsPastebinErrorFr error = _TranslationsToolsPastebinErrorFr._(_root);
 	@override String get management_info => 'Infos de gestion';
+	@override String get manage_with_account => 'Pour consulter les statistiques et gérer ce lien, utilisez votre compte JTU.ME sur le site officiel';
 }
 
 // Path: tools.percentagecalculator
@@ -2124,10 +2122,8 @@ extension on TranslationsFr {
 			case 'tools.urlshortener.by_clicking_you_accept': return ({required Object url}) => 'En cliquant sur le bouton « raccourcir », vous acceptez les conditions d\'utilisation de "${url}" disponibles via le lien ci-dessous.';
 			case 'tools.urlshortener.terms_of_service': return 'Conditions d\'utilisation (ToS)';
 			case 'tools.urlshortener.shorten': return 'Raccourcir';
-			case 'tools.urlshortener.view_statistics_of_a_link': return 'Voir les statistiques d\'un lien';
-			case 'tools.urlshortener.view_statistics_of_a_link_message': return 'Vous pouvez consulter les statistiques d\'un lien (nombre total de visites, date de création, date de dernier accès, etc.) sur la page des statistiques de JTU.ME';
 			case 'tools.urlshortener.more_features': return 'Plus de fonctionnalités';
-			case 'tools.urlshortener.more_features_message': return 'Utiliser des fonctions supplémentaires telles que le partage de texte, des liens personnalisés, et plus via le site officiel JTU.ME';
+			case 'tools.urlshortener.more_features_message': return 'Utiliser des fonctions supplémentaires telles que le partage de texte, le profil link-in-bio, et plus via le site officiel JTU.ME';
 			case 'tools.urlshortener.open': return 'Ouvrir';
 			case 'tools.urlshortener.options': return 'Options (optionnel)';
 			case 'tools.urlshortener.access_password': return 'Mot de passe d\'accès';
@@ -2143,6 +2139,7 @@ extension on TranslationsFr {
 			case 'tools.urlshortener.error.unauthorized': return 'Non autorisé. Veuillez vérifier vos identifiants.';
 			case 'tools.urlshortener.error.invalid_expiration_date': return 'La date d\'expiration doit être dans le futur.';
 			case 'tools.urlshortener.management_info': return 'Infos de gestion';
+			case 'tools.urlshortener.manage_with_account': return 'Pour consulter les statistiques et gérer ce lien, utilisez votre compte JTU.ME sur le site officiel';
 			case 'tools.counter.title': return 'Compteur';
 			case 'tools.counter.add_button': return 'Ajouter un bouton';
 			case 'tools.counter.remove_button': return 'Supprimer un bouton';
@@ -2269,13 +2266,13 @@ extension on TranslationsFr {
 			case 'tools.areacalculator.inputs.radius': return 'Rayon';
 			case 'tools.areacalculator.inputs.major_axis': return 'Grand axe';
 			case 'tools.areacalculator.inputs.minor_axis': return 'Petit axe';
+			case 'tools.areacalculator.inputs.side': return 'Côté';
 			default: return null;
 		}
 	}
 
 	dynamic _flatMapFunction$1(String path) {
 		switch (path) {
-			case 'tools.areacalculator.inputs.side': return 'Côté';
 			case 'tools.areacalculator.inputs.base': return 'Base';
 			case 'tools.areacalculator.inputs.height': return 'Hauteur';
 			case 'tools.areacalculator.inputs.diagonal_1': return 'Diagonale 1';
@@ -2343,10 +2340,8 @@ extension on TranslationsFr {
 			case 'tools.pastebin.by_clicking_you_accept': return ({required Object url}) => 'En cliquant sur le bouton « envoyer », vous acceptez les conditions d\'utilisation de "${url}" disponibles via le lien ci-dessous.';
 			case 'tools.pastebin.terms_of_service': return 'Conditions d\'utilisation (ToS)';
 			case 'tools.pastebin.send': return 'Envoyer';
-			case 'tools.pastebin.view_statistics_of_a_link': return 'Voir les statistiques d\'un lien';
-			case 'tools.pastebin.view_statistics_of_a_link_message': return 'Vous pouvez consulter les statistiques d\'un lien (nombre total de visites, date de création, date de dernier accès, etc.) sur la page des statistiques de JTU.ME';
 			case 'tools.pastebin.more_features': return 'Plus de fonctionnalités';
-			case 'tools.pastebin.more_features_message': return 'Utiliser des fonctions supplémentaires telles que le raccourcissement d\'URL, des liens personnalisés, et plus via le site officiel JTU.ME';
+			case 'tools.pastebin.more_features_message': return 'Utiliser des fonctions supplémentaires telles que le raccourcissement d\'URL, le profil link-in-bio, et plus via le site officiel JTU.ME';
 			case 'tools.pastebin.open': return 'Ouvrir';
 			case 'tools.pastebin.options': return 'Options (optionnel)';
 			case 'tools.pastebin.access_password': return 'Mot de passe d\'accès';
@@ -2362,6 +2357,7 @@ extension on TranslationsFr {
 			case 'tools.pastebin.error.unauthorized': return 'Non autorisé. Veuillez vérifier vos identifiants.';
 			case 'tools.pastebin.error.invalid_expiration_date': return 'La date d\'expiration doit être dans le futur.';
 			case 'tools.pastebin.management_info': return 'Infos de gestion';
+			case 'tools.pastebin.manage_with_account': return 'Pour consulter les statistiques et gérer ce lien, utilisez votre compte JTU.ME sur le site officiel';
 			case 'tools.percentagecalculator.title': return 'Calculateur de pourcentage';
 			case 'tools.percentagecalculator.result': return 'Résultat';
 			case 'tools.percentagecalculator.percentage': return 'Pourcentage';
